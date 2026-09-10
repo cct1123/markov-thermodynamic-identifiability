@@ -1,2 +1,8 @@
 # Preserve the exact script bytes recorded in scientific output checksums.
 *.py text eol=lf
+# Proof notes and new environment pins are hashed as LF source files.
+*.md text eol=lf
+analysis/requirements-*.txt text eol=lf
+# Preserve the Windows bytes of the accepted baseline pins and solver queries.
+analysis/requirements.txt text eol=crlf
+analysis/capabilities/results/*.smt2 text eol=crlf

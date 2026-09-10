@@ -1,0 +1,117 @@
+{
+  "executed_at": "2026-09-10T23:12:18.250035+00:00",
+  "command_from_root": ".\\.venv\\Scripts\\python.exe -B analysis/check_balanced_cone_bound.py",
+  "environment": {
+    "python": "3.9.12",
+    "sympy": "1.14.0",
+    "platform": "Windows-10-10.0.22631-SP0"
+  },
+  "source_sha256": {
+    "check_balanced_cone_bound.py": "f1247b3f17f9b3f641c3d041500009acce74e721ee2aa1cf316517afbadf2c9b",
+    "balanced-cone-bound.md": "0ec3a676775a849833517cdb65e879800548be10f30f09c8c7a5af1418867c6f",
+    "theta-fast-spectral-audit.md": "5e706b1aac5d6f8b98466062b77a9f4d3a70df5e84daf976396e550a8b018590",
+    "theta-family-construction-audit.md": "748c2d46166375327e9b2180a4e37e8c992475e4288a3a82d7e5010d5b1c21a4"
+  },
+  "inputs": "Exact embedded modal constants and symbolic generic envelope; no sampled data",
+  "generic_envelope_identity": "upper-B=(f0+f1*t+f2*t^2)/(J+a*t)^2",
+  "generic_identity_exactly_zero": true,
+  "f_coefficients": [
+    "-9*sqrt(6)*z**3/100 - 19*z**3/100 + 209*z**2/100 + 99*sqrt(6)*z**2/100 - 1899*sqrt(6)*z/4400 - 4009*z/4400",
+    "-7*sqrt(6)*z**3/120 - z**3/10 + 49*z**2/40 + 53*sqrt(6)*z**2/80 - 11*z/8 - 151*sqrt(6)*z/352 - 57/160 - 19*sqrt(6)/320",
+    "-19*sqrt(6)*z**3/1120 - 13*z**3/3360 + 107*z**2/560 + 101*sqrt(6)*z**2/1120 - 17557*z/49280 - 523*sqrt(6)*z/4480 - 171/1408 - 19*sqrt(6)/704"
+  ],
+  "discriminant_factorization": "(-11/1200 - 11*sqrt(6)/4200)*(z + 19/22)**2*(352*z**4 - 3168*z**3 - 4644*z**2 - 11340*z - 7623)/352",
+  "quartic": "352*z**4 - 3168*z**3 - 4644*z**2 - 11340*z - 7623",
+  "positive_root_count_descartes_and_sign_change": 1,
+  "root_isolating_interval": {
+    "rational_endpoints": [
+      "527857483433/50000000000",
+      "1055714966867/100000000000"
+    ],
+    "decimal_endpoints_diagnostic": [
+      10.55714966866,
+      10.55714966867
+    ]
+  },
+  "quartic_at_isolating_endpoints": [
+    "-473814802816706704546571545817899669/195312500000000000000000000000000000000000",
+    "7670447087230065452285163862636831931/3125000000000000000000000000000000000000000"
+  ],
+  "sqrt6_certified_interval": {
+    "rational_endpoints": [
+      "1224744871391589/500000000000000",
+      "2449489742783179/1000000000000000"
+    ],
+    "decimal_endpoints_diagnostic": [
+      2.449489742783178,
+      2.449489742783179
+    ]
+  },
+  "f_coefficient_intervals_at_root_interval": [
+    {
+      "rational_endpoints": [
+        "-26046434856831168284384328803007653468998542901907/50000000000000000000000000000000000000000000000000",
+        "-6511608708240679668495406047277357470999319453863/12500000000000000000000000000000000000000000000000"
+      ],
+      "decimal_endpoints_diagnostic": [
+        -0.5209286971366234,
+        -0.5209286966592543
+      ]
+    },
+    {
+      "rational_endpoints": [
+        "1813847872613097522839297283945791078179900309077971/330000000000000000000000000000000000000000000000000",
+        "54965087051946481500021987248448867988517736627183/10000000000000000000000000000000000000000000000000"
+      ],
+      "decimal_endpoints_diagnostic": [
+        5.496508704888174,
+        5.496508705194648
+      ]
+    },
+    {
+      "rational_endpoints": [
+        "-535879975650889908595973435189140559499669451523911579/36960000000000000000000000000000000000000000000000000",
+        "-4784642639716544113171727131334798695098157281573473/330000000000000000000000000000000000000000000000000"
+      ],
+      "decimal_endpoints_diagnostic": [
+        -14.49891709012148,
+        -14.498917090050133
+      ]
+    }
+  ],
+  "apex_margin_at_21_over_2": {
+    "rational_endpoints": [
+      "588289490258193867/41256125000000000000",
+      "1176578980516389637/82512250000000000000"
+    ],
+    "decimal_endpoints_diagnostic": [
+      0.01425944608850671,
+      0.014259446088506732
+    ]
+  },
+  "apex_d": {
+    "rational_endpoints": [
+      "513781156933716829/1377500000000000000",
+      "256890578466858739/688750000000000000"
+    ],
+    "decimal_endpoints_diagnostic": [
+      0.37298087617692693,
+      0.3729808761769274
+    ]
+  },
+  "old_local_quadratic_at_root_interval": {
+    "rational_endpoints": [
+      "6611952417293560558521/55000000000000000000000",
+      "6611952423343560558521/55000000000000000000000"
+    ],
+    "decimal_endpoints_diagnostic": [
+      0.12021731667806473,
+      0.12021731678806474
+    ]
+  },
+  "proof_status": "Exact supporting algebra; universal inequality argument is in the note. Not formal verification.",
+  "incomplete_attempts": [
+    "Initial nested seven-variable cancel(upper-B-f/(J+a*t)^2) formulation was manually interrupted before producing output; replaced by the identical denominator-cleared polynomial identity. No scientific finding was produced by that attempt."
+  ],
+  "all_checks_passed": true
+}

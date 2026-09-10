@@ -1,0 +1,14 @@
+test_absent_edges_and_one_way_edges (analysis.capabilities.test_tools.CTMCTests) ... ok
+test_conversion_cannot_silently_erase_support (analysis.capabilities.test_tools.CTMCTests) ... ok
+test_exact_inputs_and_precision_context (analysis.capabilities.test_tools.CTMCTests) ... ok
+test_ill_conditioning_has_an_exact_fallback (analysis.capabilities.test_tools.CTMCTests) ... ok
+test_reducibility_is_not_positive_stationarity (analysis.capabilities.test_tools.CTMCTests) ... ok
+test_time_units_and_flux_entropy (analysis.capabilities.test_tools.CTMCTests) ... ok
+test_validation_does_not_hide_small_rates_or_bad_rows (analysis.capabilities.test_tools.CTMCTests) ... ok
+test_atlas_against_independent_labelled_enumeration (analysis.capabilities.test_tools.GraphTests) ... ok
+test_observation_orbits_preserve_non_equivalent_patterns (analysis.capabilities.test_tools.GraphTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.106s
+
+OK

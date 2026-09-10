@@ -1,0 +1,2 @@
+# Optional exact real-polynomial constraint reasoning.
+z3-solver==4.15.4.0

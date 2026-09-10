@@ -1,0 +1,456 @@
+{
+  "created_utc": "2026-09-10T23:02:11.621720+00:00",
+  "command": ".\\.venv\\Scripts\\python.exe -B analysis/check_balanced_boundary_witness.py",
+  "environment": {
+    "python": "3.9.12",
+    "sympy": "1.14.0",
+    "platform": "Windows-10-10.0.22631-SP0"
+  },
+  "assumptions": "row CTMC; five states (x,y,h,k,l); only x<->y observed; exact joint marked waiting kernels; positive bidirected rates",
+  "method": "fixed rational normalized hidden similarity; exact endpoint positivity and affine interpolation; independent full rational transfer identity",
+  "topology": "both targets have all 20 ordered off-diagonal rates positive",
+  "units": "common arbitrary inverse-time unit, Boltzmann constant one",
+  "random_seed": null,
+  "search_bounds": null,
+  "optimizer": null,
+  "witness_U": [
+    [
+      "31297248897/31250000000",
+      "-176804231/50000000000",
+      "506029979/250000000000"
+    ],
+    [
+      "220129579/62500000000",
+      "7792751537/7812500000",
+      "-99427/100000000"
+    ],
+    [
+      "-70035349/31250000000",
+      "176854731/200000000000",
+      "1001356857513/1000000000000"
+    ]
+  ],
+  "det_U": "62522105533100116406027/62500000000000000000000",
+  "certified_balanced_parameter_interval": [
+    "2109/200",
+    "21091/2000"
+  ],
+  "interval_reason": "For this fixed U, every transformed rate is affine in z. Strict endpoint positivity proves strict positivity throughout the interval, including zc.",
+  "cases": [
+    {
+      "z": "2109/200",
+      "source": [
+        [
+          "-11",
+          "1",
+          "2",
+          "0",
+          "8"
+        ],
+        [
+          "2",
+          "-20",
+          "0",
+          "7",
+          "11"
+        ],
+        [
+          "3",
+          "0",
+          "-7",
+          "4",
+          "0"
+        ],
+        [
+          "0",
+          "6",
+          "5",
+          "-11",
+          "0"
+        ],
+        [
+          "2109/200",
+          "2109/200",
+          "0",
+          "0",
+          "-2109/100"
+        ]
+      ],
+      "target": [
+        [
+          "-11",
+          "1",
+          "31017107501/15625000000",
+          "101/50000000",
+          "250465721873/31250000000"
+        ],
+        [
+          "2",
+          "-20",
+          "207/100000000",
+          "6992032387357/1000000000000",
+          "11007965542643/1000000000000"
+        ],
+        [
+          "9297581859069589818206619/3126105276655005820301350",
+          "1213792372985009667/446586468093572260043050",
+          "-340369993617248802734514013201933719/48845394947734465942208593750000000",
+          "1240948210466676834137939533194395421/312610527665500582030135000000000000",
+          "38303565610477160177606756489901903/1563052638327502910150675000000000000"
+        ],
+        [
+          "5418835902318206619/3126105276655005820301350",
+          "2690994672384435485009667/446586468093572260043050",
+          "244522061619656174263137643048066281/48845394947734465942208593750000000",
+          "-3448638683630114197628608029305604579/312610527665500582030135000000000000",
+          "3383558098055085491568989901903/1563052638327502910150675000000000000"
+        ],
+        [
+          "4705845871677807474029517/446586468093572260043050",
+          "4700496828635685485009667/446586468093572260043050",
+          "189694278103869899216627578295183/6977913563962066563172656250000000",
+          "98540773253373735102956342203/44658646809357226004305000000000000",
+          "-4709242059759936583163199597287156871/223293234046786130021525000000000000"
+        ]
+      ],
+      "stationary_source": [
+        "39405/148901",
+        "24642/148901",
+        "30340/148901",
+        "26714/148901",
+        "27800/148901"
+      ],
+      "stationary_target": [
+        "39405/148901",
+        "24642/148901",
+        "950551819619483/4653156250000000",
+        "3320471282980463/18612625000000000",
+        "696814287708321/3722525000000000"
+      ],
+      "minimum_offdiagonal": "5418835902318206619/3126105276655005820301350",
+      "minimum_offdiagonal_approximate": 1.7334143999515166e-06,
+      "minimum_location_zero_based": [
+        3,
+        0
+      ],
+      "transfer_identity": {
+        "common_denominator": "lambda**3 + 3909*lambda**2/100 + 21831*lambda/50 + 120213/100",
+        "common_numerator": [
+          [
+            "2259*lambda**2/25 + 85551*lambda/50 + 310023/50",
+            "2109*lambda**2/25 + 39162*lambda/25 + 145521/25"
+          ],
+          [
+            "23199*lambda**2/200 + 219291*lambda/100 + 1765233/200",
+            "31599*lambda**2/200 + 326769*lambda/100 + 512487/40"
+          ]
+        ],
+        "all_time_identity": true,
+        "method": "independent SymPy determinant/adjugate polynomial identity"
+      }
+    },
+    {
+      "z": "21091/2000",
+      "source": [
+        [
+          "-11",
+          "1",
+          "2",
+          "0",
+          "8"
+        ],
+        [
+          "2",
+          "-20",
+          "0",
+          "7",
+          "11"
+        ],
+        [
+          "3",
+          "0",
+          "-7",
+          "4",
+          "0"
+        ],
+        [
+          "0",
+          "6",
+          "5",
+          "-11",
+          "0"
+        ],
+        [
+          "21091/2000",
+          "21091/2000",
+          "0",
+          "0",
+          "-21091/1000"
+        ]
+      ],
+      "target": [
+        [
+          "-11",
+          "1",
+          "31017107501/15625000000",
+          "101/50000000",
+          "250465721873/31250000000"
+        ],
+        [
+          "2",
+          "-20",
+          "207/100000000",
+          "6992032387357/1000000000000",
+          "11007965542643/1000000000000"
+        ],
+        [
+          "92975787098703457330810031/31261052766550058203013500",
+          "53473473668099420531/31261052766550058203013500",
+          "-3403699938378040708645519714203301681/488453949477344659422085937500000000",
+          "12409482110236276193160177650955992439/3126105276655005820301350000000000000",
+          "383067190827358995740461599725691597/15630526383275029101506750000000000000"
+        ],
+        [
+          "69858709019830810031/31261052766550058203013500",
+          "188369642737260480599420531/31261052766550058203013500",
+          "2445220617294040173598820035796698319/488453949477344659422085937500000000",
+          "-34486386839072517509619244786544007561/3126105276655005820301350000000000000",
+          "18143968551777818701787225691597/15630526383275029101506750000000000000"
+        ],
+        [
+          "47060688611407181404401433/4465864680935722600430500",
+          "47007198180985961514202933/4465864680935722600430500",
+          "1897098952487281702945183685242617/69779135639620665631726562500000000",
+          "591040317744733500209065141777/446586468093572260043050000000000000",
+          "-47094653517877753197463929923253472629/2232932340467861300215250000000000000"
+        ]
+      ],
+      "stationary_source": [
+        "7487305/28292281",
+        "4682202/28292281",
+        "17294620/84876843",
+        "15227702/84876843",
+        "5282000/28292281"
+      ],
+      "stationary_target": [
+        "7487305/28292281",
+        "4682202/28292281",
+        "541840280393978869/2652401343750000000",
+        "236594786339493223/1326200671875000000",
+        "33098680628468979/176826756250000000"
+      ],
+      "minimum_offdiagonal": "18143968551777818701787225691597/15630526383275029101506750000000000000",
+      "minimum_offdiagonal_approximate": 1.1608034244574273e-06,
+      "minimum_location_zero_based": [
+        3,
+        4
+      ],
+      "transfer_identity": {
+        "common_denominator": "lambda**3 + 39091*lambda**2/1000 + 218319*lambda/500 + 1202187/1000",
+        "common_numerator": [
+          [
+            "22591*lambda**2/250 + 855549*lambda/500 + 3100377/500",
+            "21091*lambda**2/250 + 195819*lambda/125 + 1455279/250"
+          ],
+          [
+            "232001*lambda**2/2000 + 2193009*lambda/1000 + 17653167/2000",
+            "316001*lambda**2/2000 + 3267831*lambda/1000 + 5125113/400"
+          ]
+        ],
+        "all_time_identity": true,
+        "method": "independent SymPy determinant/adjugate polynomial identity"
+      }
+    }
+  ],
+  "local_boundary_check": {
+    "zc": "2*sqrt(770)/11 + 11/2",
+    "zc_approximate": 10.54524979109513,
+    "K": [
+      [
+        "56/33 - sqrt(770)/165",
+        "-sqrt(770)/15 - 56/33",
+        "4*sqrt(770)/55"
+      ],
+      [
+        "2*sqrt(770)/33 + 11/6",
+        "-2*sqrt(770)/33 - 5/6",
+        "-1"
+      ],
+      [
+        "-7/6 - 14*sqrt(770)/363",
+        "14/33 + sqrt(770)/60",
+        "53*sqrt(770)/2420 + 49/66"
+      ]
+    ],
+    "L": [
+      [
+        "-1683/100",
+        "1081/100",
+        "301/50"
+      ],
+      [
+        "699/100",
+        "-318/25",
+        "573/100"
+      ],
+      [
+        "-213/50",
+        "-49/20",
+        "671/100"
+      ]
+    ],
+    "missing_rate_order": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "active_zero_first_order_indices": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7
+    ],
+    "positive_first_order_openings": [
+      {
+        "exact": "16*sqrt(770)/55 + 180/11",
+        "certified_positive_lower_bound": "83998873851023/3437500000000",
+        "approximate": 24.43603602938857
+      },
+      {
+        "exact": "4844/363 + 719*sqrt(770)/1452",
+        "certified_positive_lower_bound": "13109146766295179/484000000000000",
+        "approximate": 27.085013979948823
+      }
+    ],
+    "positive_second_order_openings": [
+      {
+        "exact": "101/50",
+        "certified_positive_lower_bound": "101/50",
+        "approximate": 2.02
+      },
+      {
+        "exact": "207/100",
+        "certified_positive_lower_bound": "207/100",
+        "approximate": 2.07
+      },
+      {
+        "exact": "-1170571/36300 + 246799*sqrt(770)/199650",
+        "certified_positive_lower_bound": "410253817558625377/199650000000000000",
+        "approximate": 2.054865101721406
+      },
+      {
+        "exact": "-748961/72600 + 32239*sqrt(770)/72600",
+        "certified_positive_lower_bound": "48544981361043499/24200000000000000",
+        "approximate": 2.005990965332472
+      },
+      {
+        "exact": "-4447/330 + 5069*sqrt(770)/9075",
+        "certified_positive_lower_bound": "18366541550835587/9075000000000000",
+        "approximate": 2.023861327915888
+      },
+      {
+        "exact": "-54199/18150 + 21683*sqrt(770)/119790",
+        "certified_positive_lower_bound": "243965431711731709/119790000000000000",
+        "approximate": 2.0366093305930075
+      }
+    ],
+    "positive_active_dual": [
+      {
+        "exact": "sqrt(770)/22",
+        "certified_positive_lower_bound": "27748873851023/22000000000000",
+        "approximate": 1.2613124477737825
+      },
+      {
+        "exact": "4/11",
+        "certified_positive_lower_bound": "4/11",
+        "approximate": 0.36363636363636365
+      },
+      {
+        "exact": "sqrt(770)/66",
+        "certified_positive_lower_bound": "27748873851023/66000000000000",
+        "approximate": 0.42043748259126085
+      },
+      {
+        "exact": "28/33",
+        "certified_positive_lower_bound": "28/33",
+        "approximate": 0.8484848484848485
+      },
+      {
+        "exact": "14/33 + sqrt(770)/60",
+        "certified_positive_lower_bound": "585237612361253/660000000000000",
+        "approximate": 0.8867236550928111
+      },
+      {
+        "exact": "1",
+        "certified_positive_lower_bound": "1",
+        "approximate": 1.0
+      }
+    ],
+    "active_rank": 5,
+    "dual_curvature": {
+      "exact": "2077*sqrt(770)/11979 + 8869/1815",
+      "certified_positive_lower_bound": "116169810988574771/11979000000000000",
+      "approximate": 9.697788712628368
+    },
+    "status": "exact checks supporting the local analytic construction"
+  },
+  "failed_exploration": [
+    {
+      "attempt": "initial verification run compared unsimplified symbolic matrix expressions structurally",
+      "status": "checker assertion failed; corrected to simplify each exact residual before zero comparison, with no change to the mathematical candidate"
+    },
+    {
+      "attempt": "unrounded algebraic U=I+epsilon K+epsilon^2 L at zc, epsilon=1/100",
+      "status": "inadmissible; a negative off-diagonal detected",
+      "numerical_minimum": -0.0001789484982661008
+    },
+    {
+      "attempt": "same algebraic curve, epsilon=1/50",
+      "status": "inadmissible; a negative off-diagonal detected",
+      "numerical_minimum": -0.002439293210325819
+    },
+    {
+      "attempt": "same algebraic curve, epsilon=1/20",
+      "status": "inadmissible; a negative off-diagonal detected",
+      "numerical_minimum": -0.05684530238957748
+    }
+  ],
+  "limitations": "This is an existence certificate on one small interval and an analytic local opening, not a sharp boundary or global exclusion. Failed larger epsilon choices are not impossibility evidence.",
+  "all_checks_passed": true,
+  "source_sha256": {
+    "analysis\\check_balanced_boundary_witness.py": "5f21e13a8268273fdc2b3a937fed2f078a6736beb02cd7f19c9ad75ec675aa15",
+    "analysis\\theta-family-construction-audit.md": "748c2d46166375327e9b2180a4e37e8c992475e4288a3a82d7e5010d5b1c21a4",
+    "analysis\\theta-fast-spectral-audit.md": "5e706b1aac5d6f8b98466062b77a9f4d3a70df5e84daf976396e550a8b018590"
+  }
+}

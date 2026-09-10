@@ -1,0 +1,105 @@
+{
+  "kind": "capability-test",
+  "automatically_promotes_evidence": false,
+  "executed_at_utc": "2026-09-10T22:08:39.361236+00:00",
+  "command_argv": [
+    "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+    "-m",
+    "analysis.capabilities.counterexample_demo"
+  ],
+  "command_note": "replay invocation; Python 3.9 does not retain original interpreter flags",
+  "working_directory": "C:\\projects\\markov-thermodynamic-identifiability",
+  "python": "3.9.12 (main, Apr  4 2022, 05:22:27) [MSC v.1916 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.22631-SP0",
+  "packages": {
+    "numpy": "2.0.1",
+    "scipy": "1.13.1",
+    "mpmath": "1.3.0",
+    "sympy": "1.14.0",
+    "networkx": "3.2.1",
+    "matplotlib": "3.9.4",
+    "z3-solver": "4.15.4.0"
+  },
+  "git_commit": "621a309d04be125a86aea67a5eca2ebe391afd95",
+  "git_dirty": true,
+  "source_sha256": {
+    "analysis/capabilities/counterexample_demo.py": "68d1da270421c603d3ae180e6be5fc0c86080744d45d77af8356bd60abf083c7",
+    "analysis/research_tools/provenance.py": "8d10b57563809b45b3e08179dc40b4bc25b5c97e2cefa4c14142bb9c58e8d944",
+    "analysis/requirements-research.txt": "55a73a5fdaf43abce7d97d9c359b8a13be8e6903f4afba67d43fb9f57eec955e",
+    "analysis/requirements.txt": "ec9b01d992b1255ad28010e9871bec2d7ca4fdd5c9fbfb2916aa4cc161bde4e3"
+  },
+  "artifact_sha256": {},
+  "settings": {
+    "command": "python -m analysis.capabilities.counterexample_demo",
+    "seed": 20260910,
+    "dps": 80,
+    "samples": 128,
+    "raw_rate_bounds": [
+      1e-06,
+      1000000.0
+    ],
+    "equality_tolerance": 1e-10,
+    "violation_threshold": 1e-06,
+    "rational_max_denominator": 1000,
+    "DE": {
+      "maxiter": 80,
+      "popsize": 12,
+      "tol": 1e-10,
+      "polish": false,
+      "workers": 1
+    },
+    "SLSQP": {
+      "maxiter": 100,
+      "ftol": 1e-12
+    }
+  },
+  "results": {
+    "claim": "x*y <= 1/8 for x>0,y>0,x+y=1 (deliberately false toy)",
+    "searches": [
+      {
+        "method": "log_uniform",
+        "parameters": [
+          0.5105870933705295,
+          0.48941290662947035
+        ],
+        "success": null,
+        "message": "128 samples",
+        "equality_residual": 1.1102230246251565e-16,
+        "violation": 0.12488791345396363,
+        "numerical_candidate": true
+      },
+      {
+        "method": "differential_evolution",
+        "parameters": [
+          0.5000004566161302,
+          0.49999954338386976
+        ],
+        "success": true,
+        "message": "Optimization terminated successfully.",
+        "equality_residual": 0.0,
+        "violation": 0.1249999999997915,
+        "numerical_candidate": true
+      },
+      {
+        "method": "SLSQP",
+        "parameters": [
+          0.4999999999502028,
+          0.5000000000497972
+        ],
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "equality_residual": 0.0,
+        "violation": 0.12499999999999997,
+        "numerical_candidate": true
+      }
+    ],
+    "rational_candidate": [
+      "1/2",
+      "1/2"
+    ],
+    "exact_violation": "1/8",
+    "high_precision_violation": "0.125",
+    "status": "exact toy counterexample checked; no project claim",
+    "limitation": "Search and optimizer success do not certify absence, exact equality or global optima."
+  }
+}

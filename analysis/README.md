@@ -1,6 +1,8 @@
 # Reproducible analysis
 
-The investigation uses exact derivations, small deterministic checks and bounded seeded discovery probes. It does not enumerate graphs or build an inference framework.
+The recorded investigation uses exact derivations, small deterministic checks and bounded seeded discovery probes. Those results do not rely on graph enumeration or a general inference framework.
+
+For new work, the [scientific stack guide](../docs/research-stack.md) adds an isolated Python environment, shared CTMC/high-precision helpers, symbolic mathematics, small graph enumeration and adversarial search. [Capability tests](capabilities/README.md) exercise these tools on generic examples, separately from the scientific results below. Optional [exact constraint tools](../docs/optional-tools.md) and [formal verification](../formal/README.md) are available when justified. The historical scripts, pins and scientific outputs remain unchanged by this infrastructure upgrade.
 
 ## Derivations
 
@@ -24,8 +26,11 @@ The investigation uses exact derivations, small deterministic checks and bounded
 | [theta-fast-case-audit.md](theta-fast-case-audit.md) | Exact local isolation, global coordinates and inconclusive targeted search at theta(100,100) |
 | [theta-fast-hidden-paths.md](theta-fast-hidden-paths.md) | Independent incidence exhaustion and exact polynomial exclusion of potentially bounded hidden paths |
 | [theta-fast-spectral-audit.md](theta-fast-spectral-audit.md) | Global generator uniqueness at theta(100,100), balanced rates z≥40 and an open parameter region |
+| [balanced-boundary-witness.md](balanced-boundary-witness.md) | Exact rational counterexample to the proposed first-order threshold; independent cone and endpoint audits |
+| [balanced-cone-bound.md](balanced-cone-bound.md) | Sharp global balanced-theta exclusion and rigid endpoint triangle |
+| [theta-balanced-boundary.md](theta-balanced-boundary.md) | Exact quartic endpoint, complete two-model fiber and certified differing entropy |
 
-The current synthesis is [REPORT.md](../outputs/REPORT.md). The later proofs resolve the earlier four-state question and several five-state subclasses, while the general five/six-state classification and publication novelty remain unresolved.
+The current synthesis is [REPORT.md](../outputs/REPORT.md). The later proofs resolve the earlier four-state question and several five-state subclasses. The balanced quartic endpoint now proves the existence of a minimal five-state bounded-nonunique entropy fiber; the general five/six-state classification and publication novelty remain unresolved.
 
 ## Reproduce
 
@@ -56,6 +61,14 @@ Accepted runs used Python 3.9.12, NumPy 2.0.1 and SciPy 1.13.1 on Windows. Each 
 | [check_theta_residue_construction.py](check_theta_residue_construction.py) | [theta-residue-checks.json](../outputs/theta-residue-checks.json) | Five exact Q(sqrt(6)) constructions, all-time kernel identities, signs, stationary laws and exceptional ranks; standard library only. [E043](../evidence/RECORDS.md#e043) |
 | [probe_theta_fast_case.py](probe_theta_fast_case.py) | [theta-fast-probe.json](theta-fast-probe.json) | Exact local-isolation certificate and inconclusive thirteen-start search at theta(100,100), seed 20260911. [E042](../evidence/RECORDS.md#e042) |
 | [check_theta_fast_spectral.py](check_theta_fast_spectral.py) | [check_theta_fast_spectral.json](../outputs/check_theta_fast_spectral.json) | Exact modal identities, source ranks, wedge inequalities and polynomial bounds supporting the global proof; standard library only. [E048](../evidence/RECORDS.md#e048) |
+| [probe_balanced_boundary.py](probe_balanced_boundary.py) | [balanced-boundary-probe.json](balanced-boundary-probe.json) | Bounded seeded complete-support discovery near the balanced boundary; failures retained, no exclusion certificate. [E051](../evidence/RECORDS.md#e051) |
+| [derive_balanced_path.py](derive_balanced_path.py) | [balanced-path-polynomial.json](balanced-path-polynomial.json) | Exact parameter-dependent hidden-path elimination and independently recovered quartic discriminant. [E051](../evidence/RECORDS.md#e051) |
+| [check_balanced_boundary_witness.py](check_balanced_boundary_witness.py) | [balanced-boundary-witness.json](../outputs/balanced-boundary-witness.json) | Rational interval witness, exact second-order opening and independent full transfer identities. [E050](../evidence/RECORDS.md#e050) |
+| [check_balanced_cone_bound.py](check_balanced_cone_bound.py) | [balanced-cone-bound-checks.json](balanced-cone-bound-checks.json) | Exact generic envelope, discriminant and root/sign isolation supporting the global proof. [E051](../evidence/RECORDS.md#e051) |
+| [check_balanced_cone_sufficiency.py](check_balanced_cone_sufficiency.py) | [balanced-cone-sufficiency-checks.json](balanced-cone-sufficiency-checks.json) | Exact interval margins supporting complete realizations throughout the remaining subcritical interval. [E052](../evidence/RECORDS.md#e052) |
+| [check_balanced_fold.py](check_balanced_fold.py) | [balanced-fold-checks.json](../outputs/balanced-fold-checks.json) | Exact algebraic endpoint, reciprocal path support, ten marked derivatives, stationary laws and rational entropy enclosures; independent numerical checks. [E051](../evidence/RECORDS.md#e051) |
+
+For the new balanced-boundary scripts use `.venv\Scripts\python.exe -B analysis/<script>.py` from root and the [research environment](../docs/research-stack.md). The accepted run used Python 3.9.12, SymPy 1.14.0, mpmath 1.3.0, NumPy 2.0.1 and SciPy 1.13.1. Exact derivations have no random seed; the bounded discovery script records seed 20260910. Each writes only its listed new output. The number-field certificate uses exact root/sign and log-remainder enclosures; high precision alone is not the proof. The independent endpoint replay is separately preserved in [balanced-fold-independent-replay.json](../outputs/balanced-fold-independent-replay.json).
 
 Inputs and rational or quadratic-algebraic parameter choices are embedded in the scripts and motivated in the linked proofs. No external dataset is used. Exact checks are deterministic; only the separate discovery probes use seeded random starts. Rates and entropy rates have inverse-time units, with Boltzmann's constant one. Numerical tolerances are explicit in each script.
 

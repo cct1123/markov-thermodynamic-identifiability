@@ -1,0 +1,210 @@
+{
+  "kind": "capability-test",
+  "automatically_promotes_evidence": false,
+  "executed_at_utc": "2026-09-10T23:23:37.763812+00:00",
+  "command_argv": [
+    "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+    "-m",
+    "analysis.capabilities.smoke",
+    "--require-z3"
+  ],
+  "command_note": "replay invocation; Python 3.9 does not retain original interpreter flags",
+  "working_directory": "C:\\projects\\markov-thermodynamic-identifiability",
+  "python": "3.9.12 (main, Apr  4 2022, 05:22:27) [MSC v.1916 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.22631-SP0",
+  "packages": {
+    "numpy": "2.0.1",
+    "scipy": "1.13.1",
+    "mpmath": "1.3.0",
+    "sympy": "1.14.0",
+    "networkx": "3.2.1",
+    "matplotlib": "3.9.4",
+    "z3-solver": "4.15.4.0"
+  },
+  "git_commit": "621a309d04be125a86aea67a5eca2ebe391afd95",
+  "git_dirty": true,
+  "source_sha256": {
+    "analysis/capabilities/smoke.py": "6011460480abb44410185d4c8d21760421aeb8a7bbeeedd378296bee5eb390af",
+    "analysis/capabilities/counterexample_demo.py": "68d1da270421c603d3ae180e6be5fc0c86080744d45d77af8356bd60abf083c7",
+    "analysis/research_tools/ctmc.py": "e776985581fb2fb0e61183eac399a31161ec71ab0b5036007f585f29ed5fa83d",
+    "analysis/research_tools/graphs.py": "49748f4cc00518b6684c1627be372afd7bf4a947ed1dabdd6e0ce23ecc7fc0b5",
+    "analysis/research_tools/provenance.py": "8d10b57563809b45b3e08179dc40b4bc25b5c97e2cefa4c14142bb9c58e8d944",
+    "analysis/research_tools/__init__.py": "16b0bbe65a6d24ad2842e8584de4e7f1d3b6d2564a214966a3628e40d125d75a",
+    "analysis/requirements-lock-py39-windows.txt": "c3d6b77edeab4dce80eea7e845004779fe2e35aa7fc22fc85ddafcc59e1afae8",
+    "analysis/requirements-research.txt": "55a73a5fdaf43abce7d97d9c359b8a13be8e6903f4afba67d43fb9f57eec955e",
+    "analysis/requirements-smt.txt": "64c9e2b985e62c9e244fd5d9de9ea1de351c3dd22c66da8aaf2bfef3513e85ca",
+    "analysis/requirements.txt": "ec9b01d992b1255ad28010e9871bec2d7ca4fdd5c9fbfb2916aa4cc161bde4e3"
+  },
+  "artifact_sha256": {
+    "analysis/capabilities/results/sweep.png": "b2429670016eaa6d0a04684f150d52ed25af4c21de39adae33d90a4a799c5782",
+    "analysis/capabilities/results/existence.smt2": "a2e70cbb95f3a1ded79f0e85721c333ba5edcf6ec2d3a1dbfd24c51ee914db86",
+    "analysis/capabilities/results/impossible.smt2": "d6c06b3c4440058af191cba60d8fac3a1b2c8a6cc29da16e47565214a4bf6fb3"
+  },
+  "settings": {
+    "command": "python -m analysis.capabilities.smoke --require-z3",
+    "seed": 20260910,
+    "dps": [
+      50,
+      100
+    ],
+    "rtol": 1e-12,
+    "toy_generator": [
+      [
+        -2,
+        2
+      ],
+      [
+        3,
+        -3
+      ]
+    ],
+    "graph_scope": "connected simple undirected n<=6",
+    "require_z3": true
+  },
+  "results": {
+    "ctmc": {
+      "pi": [
+        0.6,
+        0.4
+      ],
+      "exact_pi": [
+        "3/5",
+        "2/5"
+      ],
+      "diagnostics": {
+        "scaled_residual_inf": 5.551115123125783e-17,
+        "normalization_error": 0.0,
+        "condition_number": 1.2936749891968884,
+        "rate_scale": 3.0,
+        "rtol": 1e-12
+      },
+      "high_precision": [
+        {
+          "dps": 50,
+          "scaled_residual_inf": "4.3502029786656830178068627395043650371341095053721e-56",
+          "normalization_error": "0.0",
+          "pi": [
+            "0.6",
+            "0.4"
+          ]
+        },
+        {
+          "dps": 100,
+          "scaled_residual_inf": "2.092872420560806241850189602609877245090167226848386220486680621144346867505013786026821329089670462e-105",
+          "normalization_error": "0.0",
+          "pi": [
+            "0.6",
+            "0.4"
+          ]
+        }
+      ],
+      "symbolic_pi": "Matrix([[b/(a + b)], [a/(a + b)]])",
+      "eigenvalues": [
+        0.0,
+        -5.0
+      ]
+    },
+    "algebra": {
+      "groebner_elimination": [
+        "y**2 - 2"
+      ],
+      "resultant": "y**2 - 2",
+      "resolvent": "Matrix([[(s + 3)/(s**2 + 5*s), 2/(s**2 + 5*s)], [3/(s**2 + 5*s), (s + 2)/(s**2 + 5*s)]])",
+      "quadrature": 0.6666666666666666,
+      "quadrature_error_estimate": 3.736504967939836e-11,
+      "checks": [
+        "factor",
+        "characteristic polynomial",
+        "Laplace",
+        "limit",
+        "series",
+        "inequality"
+      ]
+    },
+    "graphs": {
+      "connected_counts": {
+        "1": 1,
+        "2": 1,
+        "3": 2,
+        "4": 6,
+        "5": 21,
+        "6": 112
+      },
+      "square_cycle_basis": [
+        [
+          2,
+          1,
+          0,
+          3
+        ]
+      ],
+      "square_two_edge_observation_orbits": 2
+    },
+    "counterexample": {
+      "claim": "x*y <= 1/8 for x>0,y>0,x+y=1 (deliberately false toy)",
+      "searches": [
+        {
+          "method": "log_uniform",
+          "parameters": [
+            0.5105870933705295,
+            0.48941290662947035
+          ],
+          "success": null,
+          "message": "128 samples",
+          "equality_residual": 1.1102230246251565e-16,
+          "violation": 0.12488791345396363,
+          "numerical_candidate": true
+        },
+        {
+          "method": "differential_evolution",
+          "parameters": [
+            0.5000004566161302,
+            0.49999954338386976
+          ],
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "equality_residual": 0.0,
+          "violation": 0.1249999999997915,
+          "numerical_candidate": true
+        },
+        {
+          "method": "SLSQP",
+          "parameters": [
+            0.4999999999502028,
+            0.5000000000497972
+          ],
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "equality_residual": 0.0,
+          "violation": 0.12499999999999997,
+          "numerical_candidate": true
+        }
+      ],
+      "rational_candidate": [
+        "1/2",
+        "1/2"
+      ],
+      "exact_violation": "1/8",
+      "high_precision_violation": "0.125",
+      "status": "exact toy counterexample checked; no project claim",
+      "limitation": "Search and optimizer success do not certify absence, exact equality or global optima."
+    },
+    "constraints": {
+      "status": "solver-checked (trusted Z3, no formal proof)",
+      "sat": "sat",
+      "rational_model": {
+        "x": "1/2",
+        "y": "1/2"
+      },
+      "unsat": "unsat",
+      "unknown": "unknown",
+      "reason_unknown": "max. resource limit exceeded",
+      "linear_qe": "[[]]",
+      "timeout_ms": 5000,
+      "seed": 20260910,
+      "unknown_rlimit": 1
+    },
+    "formal": "not run; Lean is optional",
+    "status": "all requested capability checks passed"
+  }
+}
