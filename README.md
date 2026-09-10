@@ -4,13 +4,15 @@ An agentic scientific research workspace for investigating whether complete, inf
 
 Claims in progress are provisional until supported by recorded evidence, with limitations stated. [STATE.md](STATE.md) holds the latest checkpoint; its status is not a live process indicator.
 
+The [initial frontier assessment](outputs/REPORT.md) includes exact small-network results and a focused next question; publication novelty remains unestablished. See [analysis/README.md](analysis/README.md) to reproduce the checks.
+
 ## Start or resume
 
 Open this repository in a capable research agent and send:
 
 > Read AGENTS.md, PROJECT.md, and STATE.md. Start or resume the research defined in PROJECT.md, following the operating rules and saved handoff. Preserve the human brief, record evidence and reproducible analyses, and checkpoint STATE.md before stopping.
 
-The first research action is to establish the precise mathematical formulation and verify the actual literature frontier before assuming novelty. On subsequent runs, follow the saved handoff and verify existing work before repeating it. The files preserve continuity across interruptions; they do not run an agent or schedule work. No package installation is required for the framework.
+Follow the saved handoff and verify existing work before repeating it. The files preserve continuity across interruptions; they do not run an agent or schedule work. The workspace itself needs no packages; numerical checks use the dependencies listed in [analysis/requirements.txt](analysis/requirements.txt).
 
 ## Files and ownership
 
@@ -22,7 +24,7 @@ The first research action is to establish the precise mathematical formulation a
 | [STATE.md](STATE.md) | Agent | Current understanding, uncertainty, success criteria, and next action. |
 | [evidence/RECORDS.md](evidence/RECORDS.md) | Agent | Stable evidence and decision records with source provenance. |
 | [analysis/](analysis/README.md) | Agent | Reproducible calculations, scripts, symbolic work, and derived artifacts. |
-| [outputs/REPORT.md](outputs/REPORT.md) | Agent | Evidence-backed synthesis, initially an unfinished outline. |
+| [outputs/REPORT.md](outputs/REPORT.md) | Agent | Evidence-backed synthesis, exact findings, limitations, and next question. |
 
 Add `inputs/` for supplied material and `evidence/sources/` for permitted source copies only when needed. Preserve supplied originals. Keep detailed findings in records and artifacts, linked from state and report; add computational infrastructure when actual analysis requires it.
 

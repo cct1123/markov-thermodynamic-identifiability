@@ -1,0 +1,132 @@
+{
+  "executed_at": "2026-09-10T04:36:46.881935+00:00",
+  "environment": {
+    "python": "3.9.12",
+    "numpy": "2.0.1",
+    "scipy": "1.13.1",
+    "platform": "Windows-10-10.0.22631-SP0"
+  },
+  "script_sha256": "9b1b1007d17fa3fa55e50cb94135067cfe02c31b3e63415e0ad7926b9d6e39c4",
+  "inputs": "Exact rational rates embedded in this script; no random sampling.",
+  "checks": {
+    "three_state_cases": 4,
+    "two_state_case": true,
+    "lumped_exact_derivative_orders": [
+      0,
+      6
+    ],
+    "minimal_exact_derivative_orders": [
+      0,
+      7
+    ],
+    "controllability_rank": 4,
+    "observability_rank": 4,
+    "numerical_time_grid_points": 66,
+    "negative_controls": 2
+  },
+  "lumpable_family": [
+    {
+      "u": "1",
+      "entropy": 0.0
+    },
+    {
+      "u": "1/2",
+      "entropy": 0.06866326804175685
+    },
+    {
+      "u": "1/10",
+      "entropy": 0.33124938515622454
+    },
+    {
+      "u": "1/1000",
+      "entropy": 0.9491002415207374
+    }
+  ],
+  "minimal_family": [
+    {
+      "parameter": "0",
+      "entropy": 0.0,
+      "formula_residual": 0.0,
+      "maximum_kernel_residual": 0.0,
+      "mean_interevent_time": 2.0,
+      "vanishing_reverse_rate": "2",
+      "opposing_flux": "1/2"
+    },
+    {
+      "parameter": "1/4",
+      "entropy": 0.07712723934029189,
+      "formula_residual": 0.0,
+      "maximum_kernel_residual": 4.0245584642661925e-16,
+      "mean_interevent_time": 2.000000000000001,
+      "vanishing_reverse_rate": "5/3",
+      "opposing_flux": "3/8"
+    },
+    {
+      "parameter": "1/2",
+      "entropy": 0.35777511011618357,
+      "formula_residual": 0.0,
+      "maximum_kernel_residual": 3.0531133177191805e-16,
+      "mean_interevent_time": 1.9999999999999996,
+      "vanishing_reverse_rate": "1",
+      "opposing_flux": "1/4"
+    },
+    {
+      "parameter": "1997/3000",
+      "entropy": 1.4584195539439502,
+      "formula_residual": 0.0,
+      "maximum_kernel_residual": 3.3306690738754696e-16,
+      "mean_interevent_time": 2.0,
+      "vanishing_reverse_rate": "9/1003",
+      "opposing_flux": "1003/6000"
+    },
+    {
+      "parameter": "1999997/3000000",
+      "entropy": 2.613097152847446,
+      "formula_residual": 8.881784197001252e-16,
+      "maximum_kernel_residual": 2.498001805406602e-16,
+      "mean_interevent_time": 2.0000000000000013,
+      "vanishing_reverse_rate": "9/1000003",
+      "opposing_flux": "1000003/6000000"
+    },
+    {
+      "parameter": "1999999999997/3000000000000",
+      "entropy": 4.915687369247452,
+      "formula_residual": 8.881784197001252e-16,
+      "maximum_kernel_residual": 2.3592239273284576e-16,
+      "mean_interevent_time": 1.9999999999999964,
+      "vanishing_reverse_rate": "9/1000000000003",
+      "opposing_flux": "1000000000003/6000000000000"
+    }
+  ],
+  "fixed_diamond": {
+    "distinct_escape_rates": [
+      4,
+      3
+    ],
+    "identifiable_example_entropy": 0.019682772238260413,
+    "repeated_escape_family": [
+      {
+        "parameter": "0",
+        "entropy": 0.0,
+        "vanishing_reverse_rate": "1"
+      },
+      {
+        "parameter": "1/4",
+        "entropy": 0.05295611627420023,
+        "vanishing_reverse_rate": "2/3"
+      },
+      {
+        "parameter": "499/1000",
+        "entropy": 0.7980252110110211,
+        "vanishing_reverse_rate": "2/501"
+      },
+      {
+        "parameter": "499999999/1000000000",
+        "entropy": 2.5265550216027757,
+        "vanishing_reverse_rate": "2/500000001"
+      }
+    ],
+    "general_equal_escape_factorizations_checked": 2
+  },
+  "limitation": "Finite checks validate the artifacts; all-time equality, minimality, and unboundedness rely on the accompanying exact arguments. No exhaustive topology search or novelty claim."
+}
