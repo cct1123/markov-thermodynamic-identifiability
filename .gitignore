@@ -1,0 +1,30 @@
+# Operating-system and editor residue
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.swp
+*.swo
+*~
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+
+# Human prompt history stays local; PROJECT.md is the research brief.
+/prompt log.txt
+
+# Disposable runtime environments and caches, if used later
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Keep scientific inputs, analysis artifacts, outputs, and dependency lockfiles
+# visible to Git; add narrow exclusions only when a real workflow needs them.
