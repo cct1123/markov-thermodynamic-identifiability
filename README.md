@@ -4,7 +4,7 @@ An agentic scientific research workspace for investigating whether complete, inf
 
 Claims in progress are provisional until supported by recorded evidence, with limitations stated. [STATE.md](STATE.md) holds the latest checkpoint; its status is not a live process indicator.
 
-The [research report](outputs/REPORT.md) gives an exact four-state classification for one observed pair and constructive five-state results, including unbounded parameter regions, exceptional-pole analysis and locally isolated generators with distant divergent alternatives. The next question is exact global feasibility for one unresolved five-state kernel. Publication novelty remains unestablished. See [analysis/README.md](analysis/README.md) to reproduce the checks.
+The [research report](outputs/REPORT.md) gives an exact four-state classification for one observed pair and five-state results covering unbounded regions, exceptional poles, and locally isolated generators with distant divergent alternatives. A global proof now identifies theta(100,100), every balanced theta(z,z) with z≥40, and an explicit open region under a five-state cap. The next question is the remaining parameter boundary. Publication novelty remains unestablished. See [analysis/README.md](analysis/README.md) to reproduce the checks.
 
 ## Start or resume
 

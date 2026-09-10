@@ -22,6 +22,8 @@ The investigation uses exact derivations, small deterministic checks and bounded
 | [theta-family-construction-audit.md](theta-family-construction-audit.md) | Constructive unbounded regions, local-opening criteria, reducible-hidden rigidity and rejected coverage shortcut |
 | [positive-realization-obstructions.md](positive-realization-obstructions.md) | Strict fixed-order cone reduction and the entire slow-coincidence unboundedness proof |
 | [theta-fast-case-audit.md](theta-fast-case-audit.md) | Exact local isolation, global coordinates and inconclusive targeted search at theta(100,100) |
+| [theta-fast-hidden-paths.md](theta-fast-hidden-paths.md) | Independent incidence exhaustion and exact polynomial exclusion of potentially bounded hidden paths |
+| [theta-fast-spectral-audit.md](theta-fast-spectral-audit.md) | Global generator uniqueness at theta(100,100), balanced rates z≥40 and an open parameter region |
 
 The current synthesis is [REPORT.md](../outputs/REPORT.md). The later proofs resolve the earlier four-state question and several five-state subclasses, while the general five/six-state classification and publication novelty remain unresolved.
 
@@ -38,6 +40,7 @@ python analysis/check_five_state_extensions.py
 python analysis/probe_theta_compatibility.py
 python -B analysis/check_theta_residue_construction.py
 python -B analysis/probe_theta_fast_case.py
+python -B analysis/check_theta_fast_spectral.py
 ~~~
 
 Accepted runs used Python 3.9.12, NumPy 2.0.1 and SciPy 1.13.1 on Windows. Each script overwrites only its corresponding generated JSON file. The later scripts import small exact helpers from earlier scripts; importing does not run their checks.
@@ -52,10 +55,11 @@ Accepted runs used Python 3.9.12, NumPy 2.0.1 and SciPy 1.13.1 on Windows. Each 
 | [probe_theta_compatibility.py](probe_theta_compatibility.py) | [theta-compatibility-probe.json](theta-compatibility-probe.json) | Bounded SLSQP discovery search: two models, thirteen starts each, seed 20260910; exact witnesses validated separately. [E036](../evidence/RECORDS.md#e036) |
 | [check_theta_residue_construction.py](check_theta_residue_construction.py) | [theta-residue-checks.json](../outputs/theta-residue-checks.json) | Five exact Q(sqrt(6)) constructions, all-time kernel identities, signs, stationary laws and exceptional ranks; standard library only. [E043](../evidence/RECORDS.md#e043) |
 | [probe_theta_fast_case.py](probe_theta_fast_case.py) | [theta-fast-probe.json](theta-fast-probe.json) | Exact local-isolation certificate and inconclusive thirteen-start search at theta(100,100), seed 20260911. [E042](../evidence/RECORDS.md#e042) |
+| [check_theta_fast_spectral.py](check_theta_fast_spectral.py) | [check_theta_fast_spectral.json](../outputs/check_theta_fast_spectral.json) | Exact modal identities, source ranks, wedge inequalities and polynomial bounds supporting the global proof; standard library only. [E048](../evidence/RECORDS.md#e048) |
 
 Inputs and rational or quadratic-algebraic parameter choices are embedded in the scripts and motivated in the linked proofs. No external dataset is used. Exact checks are deterministic; only the separate discovery probes use seeded random starts. Rates and entropy rates have inverse-time units, with Boltzmann's constant one. Numerical tolerances are explicit in each script.
 
-The sparse, pair, path, theta-strata and theta-construction audit notes also contain executable independent checks and their recorded outputs/provenance. They validate selected identities and examples, without graph enumeration.
+The sparse, pair, path, theta-strata and theta-construction audit notes also contain executable independent checks and their recorded outputs/provenance. The new [hidden-path audit](theta-fast-hidden-paths.md) embeds its exact rational elimination and sign certificates; the [cone frontier](../evidence/three-state-cone-frontier.md) includes the finite-Hankel counterexample calculation. They validate specified identities and support classes without broad graph enumeration.
 
 ## Meaning and limits of the checks
 
@@ -67,4 +71,4 @@ Each JSON records its UTC run time, environment and SHA-256 of its script and im
 
 [E044](../evidence/RECORDS.md#e044) records the maintenance replays: the shared generator validator now rejects disconnected chains despite positive stationary laws, and both seeded probes use the same search routine. All scientific results and 39 optimizer outcomes were unchanged. The five affected deterministic outputs and both probe outputs were regenerated with current provenance.
 
-The scripts validate representative identities and counterexamples. General classifications, nonminimal extensions, pair/path theorems, disconnectedness and theta-region theorems are analytic deductions indexed in [E023–E043](../evidence/RECORDS.md#e023). Neither their proofs nor the computations certify literature novelty. The earlier distant component was found and certified exactly; the latest failed global search proves neither absence of another component nor a finite entropy bound.
+The scripts validate identities and counterexamples. General classifications, nonminimal extensions, pair/path theorems, disconnectedness and theta-region theorems are analytic deductions indexed in [E023–E043](../evidence/RECORDS.md#e023) and [E047–E048](../evidence/RECORDS.md#e047). Neither their proofs nor the computations certify literature novelty. The failed search at theta(100,100) remains inconclusive as numerical evidence; the later invariant-triangle proof establishes global uniqueness independently of that search.

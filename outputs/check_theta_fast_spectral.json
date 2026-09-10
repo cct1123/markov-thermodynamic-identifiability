@@ -1,0 +1,728 @@
+{
+  "executed_at": "2026-09-10T13:56:22.080058+00:00",
+  "environment": {
+    "python": "3.9.12",
+    "platform": "Windows-10-10.0.22631-SP0",
+    "dependencies": "Python standard library only"
+  },
+  "script_sha256": {
+    "check_theta_fast_spectral.py": "192c0c5a37bdd40bf665f6346b639e02ad92cdd424010658d54afde5067c6c9b",
+    "check_theta_residue_construction.py": "df7d9a893580d489ae94902b42e15337560d6926c6a50f681ec2fda9b4347b34"
+  },
+  "inputs": "Embedded exact theta generators at (100,100) and (40,40); no search",
+  "wedge_constants": {
+    "m": {
+      "rational": "7/5",
+      "sqrt6_coefficient": "2/5"
+    },
+    "k_left": {
+      "rational": "3/8",
+      "sqrt6_coefficient": "-1/16"
+    },
+    "k_right": {
+      "rational": "0",
+      "sqrt6_coefficient": "35/88"
+    },
+    "r_y": {
+      "rational": "-4/5",
+      "sqrt6_coefficient": "4/5"
+    },
+    "universal_W_upper_bound": {
+      "rational": "7/8",
+      "sqrt6_coefficient": "0"
+    }
+  },
+  "point_100_coarse_bounds": {
+    "positive_bottom": {
+      "rational": "253/9",
+      "sqrt6_coefficient": "0"
+    },
+    "negative_bottom": {
+      "rational": "1865/1296",
+      "sqrt6_coefficient": "0"
+    }
+  },
+  "balanced_ray_shifted_polynomials": {
+    "coordinate": "t=z-40 >=0; coefficients ascending",
+    "z_squared_minus_37z_minus_36": [
+      84,
+      43,
+      1
+    ],
+    "72z_squared_minus_604z_minus_325": [
+      90715,
+      5156,
+      72
+    ]
+  },
+  "cases": [
+    {
+      "balanced_rate": {
+        "rational": "100",
+        "sqrt6_coefficient": "0"
+      },
+      "source_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "8",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "11",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "4",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "6",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "5",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "100",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "100",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-200",
+            "sqrt6_coefficient": "0"
+          }
+        ]
+      ],
+      "source_stationary": [
+        {
+          "rational": "35500/111741",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "7400/37247",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "82000/335223",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "72200/335223",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "2641/111741",
+          "sqrt6_coefficient": "0"
+        }
+      ],
+      "source_entropy_numeric": 0.07555090243930729,
+      "full_ranks": {
+        "controllability": 5,
+        "observability": 5
+      },
+      "hidden_ranks": [
+        3,
+        3
+      ],
+      "modal_basis": [
+        [
+          {
+            "rational": "3/2",
+            "sqrt6_coefficient": "1/4"
+          },
+          {
+            "rational": "3/2",
+            "sqrt6_coefficient": "-1/4"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "5/8"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "-5/8"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          }
+        ]
+      ],
+      "modal_generator": [
+        [
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "2"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "-2"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-200",
+            "sqrt6_coefficient": "0"
+          }
+        ]
+      ],
+      "modal_entrance": [
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "1/2"
+          },
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "-1/2"
+          },
+          {
+            "rational": "8",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "35/8"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "-35/8"
+          },
+          {
+            "rational": "11",
+            "sqrt6_coefficient": "0"
+          }
+        ]
+      ],
+      "modal_exit": [
+        [
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-4/5",
+            "sqrt6_coefficient": "4/5"
+          }
+        ],
+        [
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-4/5",
+            "sqrt6_coefficient": "-4/5"
+          }
+        ],
+        [
+          {
+            "rational": "100",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "100",
+            "sqrt6_coefficient": "0"
+          }
+        ]
+      ],
+      "inputs": [
+        [
+          1,
+          {
+            "rational": "100",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "-7/5",
+            "sqrt6_coefficient": "-2/5"
+          },
+          {
+            "rational": "25",
+            "sqrt6_coefficient": "25"
+          }
+        ]
+      ],
+      "kappa_minus_one": {
+        "rational": "-1/2",
+        "sqrt6_coefficient": "191/24"
+      },
+      "strict_region_margins": [
+        {
+          "rational": "46319/44",
+          "sqrt6_coefficient": "1898/33"
+        },
+        {
+          "rational": "-19561/280",
+          "sqrt6_coefficient": "1336631/1680"
+        }
+      ],
+      "all_exact_checks_passed": true
+    },
+    {
+      "balanced_rate": {
+        "rational": "40",
+        "sqrt6_coefficient": "0"
+      },
+      "source_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "8",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "11",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "4",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "6",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "5",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "40",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "40",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-80",
+            "sqrt6_coefficient": "0"
+          }
+        ]
+      ],
+      "source_stationary": [
+        {
+          "rational": "14200/46281",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "2960/15427",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "32800/138843",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "28880/138843",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "2641/46281",
+          "sqrt6_coefficient": "0"
+        }
+      ],
+      "source_entropy_numeric": 0.07296413983682837,
+      "full_ranks": {
+        "controllability": 5,
+        "observability": 5
+      },
+      "hidden_ranks": [
+        3,
+        3
+      ],
+      "modal_basis": [
+        [
+          {
+            "rational": "3/2",
+            "sqrt6_coefficient": "1/4"
+          },
+          {
+            "rational": "3/2",
+            "sqrt6_coefficient": "-1/4"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "5/8"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "-5/8"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          }
+        ]
+      ],
+      "modal_generator": [
+        [
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "2"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "-2"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-80",
+            "sqrt6_coefficient": "0"
+          }
+        ]
+      ],
+      "modal_entrance": [
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "1/2"
+          },
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "-1/2"
+          },
+          {
+            "rational": "8",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "35/8"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "-35/8"
+          },
+          {
+            "rational": "11",
+            "sqrt6_coefficient": "0"
+          }
+        ]
+      ],
+      "modal_exit": [
+        [
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-4/5",
+            "sqrt6_coefficient": "4/5"
+          }
+        ],
+        [
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-4/5",
+            "sqrt6_coefficient": "-4/5"
+          }
+        ],
+        [
+          {
+            "rational": "40",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "40",
+            "sqrt6_coefficient": "0"
+          }
+        ]
+      ],
+      "inputs": [
+        [
+          1,
+          {
+            "rational": "40",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "-7/5",
+            "sqrt6_coefficient": "-2/5"
+          },
+          {
+            "rational": "10",
+            "sqrt6_coefficient": "10"
+          }
+        ]
+      ],
+      "kappa_minus_one": {
+        "rational": "-1/2",
+        "sqrt6_coefficient": "71/24"
+      },
+      "strict_region_margins": [
+        {
+          "rational": "2647/22",
+          "sqrt6_coefficient": "-7391/264"
+        },
+        {
+          "rational": "-1123/40",
+          "sqrt6_coefficient": "198431/1680"
+        }
+      ],
+      "all_exact_checks_passed": true
+    }
+  ],
+  "scope": "Exact arithmetic support for the analytic invariant-triangle exclusion; no finite sampling or optimizer-based nonexistence claim.",
+  "all_exact_checks_passed": true
+}

@@ -1,6 +1,6 @@
-# A specific unresolved fast-escape theta kernel
+# Fast-escape theta kernel: local evidence and global coordinates
 
-Date: 2026-09-10 UTC. This note narrows the next exact question; it does not claim a bounded entropy range or global uniqueness.
+Date: 2026-09-10 UTC. This note preserves the earlier local evidence and global coordinates. **Later resolution:** the [spectral-cone proof](theta-fast-spectral-audit.md) establishes global generator uniqueness at theta(100,100). The search below remains inconclusive as numerical evidence and is not used in that proof.
 
 Take the [theta family](theta-parameter-strata-audit.md) at `a=b=100`, so `s=200>beta=9+2sqrt(6)`. The full marked kernel is minimal of dimension five. The [construction audit](theta-family-construction-audit.md) proves that every compatible model with a reducible bidirected hidden block is the source itself up to hidden labels. Thus any distinct compatible five-state model must have a connected hidden block. This is a global exclusion for disconnected hidden blocks, not an exclusion for connected ones.
 
@@ -67,6 +67,6 @@ No start produced a positive complete representative; the best returned source i
 
 **Limit:** neither this bounded search nor a successful optimizer termination proves absence of a complete model. It also does not search all connected sparse hidden supports. No global entropy bound follows.
 
-## Discriminating next action
+## Original discriminating action, now completed
 
-Determine exactly whether any admissible exit-coordinate triangle produces a connected hidden block. Excluding all such realizations would prove full generator uniqueness, since the disconnected-hidden class is already pinned. This requires considering both hidden graph paths and hidden graph triangles; the geometric exit-coordinate triangle does not specify the hidden support. A hidden graph triangle, including a complete generator, would prove unbounded entropy by the comparable-pair theorem in [the construction audit](theta-family-construction-audit.md). A hidden path witness would require further support or boundary analysis before assigning its entropy range.
+The original action was to determine whether any admissible exit-coordinate triangle produces a connected hidden block, covering both paths and triangles. The [spectral-cone proof](theta-fast-spectral-audit.md) now excludes every such realization and completes global uniqueness. The geometric exit-coordinate triangle itself does not specify hidden support. [D012](../evidence/RECORDS.md#d012) records the next parameter-boundary question.

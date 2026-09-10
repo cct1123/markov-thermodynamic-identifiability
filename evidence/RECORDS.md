@@ -521,6 +521,8 @@ Execution dates and hashes identify the runs described in each record. [E044](#e
 
 **Fast-region support exclusion and a precisely narrowed unresolved kernel**
 
+Later resolution: [E048](#e048) proves global uniqueness at theta(100,100) and in a larger parameter region. The local and numerical findings below are retained as historical evidence; their original limitations remain valid.
+
 - Kind: analytic inference plus an explicitly inconclusive numerical probe. Date: 2026-09-10 UTC. Artifacts: [construction audit](../analysis/theta-family-construction-audit.md), sections 5 and following; [fast-case audit](../analysis/theta-fast-case-audit.md); [script](../analysis/probe_theta_fast_case.py), [JSON](../analysis/theta-fast-probe.json).
 - Global exclusion for s>beta: every compatible generator with a reducible bidirected hidden block is Q(a,b) up to hidden labels. Three singleton components cannot supply the signed beta residue. In a 2+1 split, only singleton s is possible: singleton beta has a signed residue, and singleton alpha would leave beta as the pair's dominant pole, also impossible. The residual alpha/beta pair has zero off-diagonal transfer at time zero, forcing opposite singleton visible incidence. Its first two Markov matrices and row sums pin all six rates. The singleton residue fixes its remaining rates.
 - Extension: the same reducible-hidden rigidity holds for alpha<s<beta when a≤35sqrt(6)/88 or b≤sqrt(6)/4. The alternative pair would have zero-time transfer Zs+Zbeta with a negative entry, or one zero off-diagonal and the other positive at a threshold. Both are impossible for reciprocal visible incidence; simultaneous threshold equalities lie below alpha. No connected-hidden exclusion is implied.
@@ -571,3 +573,86 @@ Execution dates and hashes identify the runs described in each record. [E044](#e
 - Scope: review the accumulated uncommitted artifacts, fix concrete validation and presentation issues, remove duplicate probe code and stale research bookkeeping, and preserve the human-owned brief and evidence IDs.
 - Outcome: E044 records the irreducibility fix, exact replays, shared probe implementation, checkout-stable checksums and corrected assumptions. STATE.md and the report are shortened while detailed proofs and historical provenance remain available.
 - Publication action: commit the reviewed state on the existing main branch and push normally to origin after validation. Do not rewrite remote history. The research handoff remains D009's global connected-hidden feasibility question.
+
+## D011
+
+**Resume the global fast-kernel question after the reviewed checkpoint**
+
+- Date: 2026-09-10 UTC. The renewed autonomous-research brief reopens D009's unresolved question. The clean starting checkpoint is commit c4df036, already pushed under D010.
+- Decision: retain the established formulation, frontier map and prior exact findings. Focus new work on global connected-hidden feasibility at theta(100,100), using independent hidden-path, spectral and invariant-cone approaches with a focused primary-literature check.
+- Success criteria: a global exclusion, a certified distinct realization, or a rigorous reduction that removes an entire class of competing supports. Preserve failed approaches and distinguish finite numerical diagnostics from global certificates. Do not repeat the same bounded optimizer search or begin broad graph enumeration.
+- Assignments: hidden paths in analysis/theta-fast-hidden-paths.md; spectral constraints in analysis/theta-fast-spectral-audit.md; fixed-order cone/NMF prior art in evidence/three-state-cone-frontier.md. Root owns global geometry, evidence IDs, checkpoint and synthesis.
+
+## E045
+
+**Primary rank-three factorization topology and rigidity constrain the frontier**
+
+- Kind: primary results with separately identified interpretation. Retrieved 2026-09-10 UTC. Precise source locators, access limits and task mapping: [three-state cone frontier](three-state-cone-frontier.md), sections 1–2 and 4–5.
+- Robert Krone and Kaie Kubjas, *Uniqueness of nonnegative matrix factorizations by rigidity theory*, SIAM J. Matrix Anal. Appl. 42(1), 134–164 (2021), [DOI](https://doi.org/10.1137/19M1279472), [full preprint v3](https://arxiv.org/pdf/1902.02868v3), dated 2 September 2020. Proposition 4.2, preprint p. 12, gives infinitesimal implies local rigidity. Proposition 5.3, pp. 19–20, puts a positive rank-r matrix on the relative nonnegative-rank-r boundary exactly when every size-r factorization contains a zero. Both propositions were inspected by the source auditor and coordinator.
+- David Mond, Jim Smith and Duco van Straten, *Stochastic factorizations, sandwiched simplices and the topology of the space of explanations*, Proc. R. Soc. A 459, 2821–2845 (2003), [DOI](https://doi.org/10.1098/rspa.2003.1150); full author-hosted PDF linked in the memo. Theorem 2.4/Corollary 2.5, p. 2827, identifies factorizations with nested simplices modulo permutations. Theorem 4.9, p. 2842, bounds connected components by total polygon edges; section 5 exhibits eight isolated triangles between squares. Relevant full text was inspected by both auditors.
+- Inference: neither disconnected factorization spaces nor the infinitesimal/local distinction is novel here. Static nesting does not enforce CTMC generator invariance. No inspected theorem supplies E048's quantitative global exclusion; that is not a novelty certification.
+- Access limits: Cantó–Ricarte–Urbano (2006/2007) full realization hypotheses remain unverified beyond primary abstracts. Their algebraic “irreducible transfer matrix” is not hidden-graph irreducibility. The earlier Förster–Nagy strict-order gap remains. Do not infer a general three-state strict matrix theorem from these sources.
+
+## E046
+
+**Finite Hankel positivity cannot replace dynamical invariance**
+
+- Kind: analytic inference and reproduced exact calculation, separated here. Artifact: [three-state cone frontier](three-state-cone-frontier.md), section 3, including the exact reproducer.
+- For theta(100,100), uniformize the hidden block with gamma=218. Every finite block Hankel truncation O_m C_n of this hidden response admits strictly positive factors of inner dimension three. This does not concern the full marked kernel, whose minimal dimension is five. The explicit normalized signed similarity is U_epsilon=((1,epsilon,−epsilon),(epsilon,1,−epsilon),(0,0,1)). It opens the four zero entrance/exit entries; all higher shifted moments were already strictly positive, so sufficiently small epsilon works by continuity for each finite truncation.
+- Every sufficiently large truncation has ordinary rank three, and E045 then places it in the relative interior of the nonnegative-rank-three set. Its static factorization is nonunique, despite global CTMC uniqueness from E048. No fixed positive epsilon in this construction works for all times: the transformed output's third column eventually becomes negative because the singleton mode decays faster.
+- The hidden rate (U_epsilon^−1 H U_epsilon)_{hl}=epsilon(−197+194epsilon)/(1−epsilon²) is negative for 0<epsilon<1. Thus the positive finite factors do not define a physical CTMC.
+- Exact check: the embedded Fraction calculation was executed by the source auditor and rerun by the coordinator at approximately 13:58 UTC, Python 3.9.12 and NumPy 2.0.1. At epsilon=1/100, all entrance/exit entries are positive and the offending hidden rate is −6502/3333. The formulas, rather than this one value, establish the general claim. Helper hashes are retained in the memo.
+- Limit: this rejects static finite-Hankel positivity or rigidity as a substitute for generator constraints. It does not rule out finite derivative methods that explicitly retain the dynamics.
+
+## E047
+
+**Independent hidden-path support and polynomial exclusion at theta(100,100)**
+
+- Kind: analytic inference with reproduced exact elimination. Artifact and embedded standard-library checker: [hidden-path audit](../analysis/theta-fast-hidden-paths.md).
+- Among all 64 visible-incidence assignments on a three-hidden-state path, removing E032's immediately unbounded patterns and using the positive cross moment leaves four patterns up to path reflection. Two have an invisible middle and fail exact first-moment identities. The remaining two reduce to one endpoint exit rate in the nonsingular global exit chart.
+- Exact reverse-edge numerators factor as u(u−3)P_x(u) and u(u−6)P_y(u), with degree-six residuals listed in the note. Descartes' rule excludes roots of P_x on the physical u>1 domain; all seven Bernstein coefficients exclude roots of P_y on 5<u<7. Denominators cannot vanish in a physical candidate. The surviving u=3 and u=6 reconstruct the disconnected source, not a hidden path.
+- Inference: any connected hidden-path alternative would therefore trigger unbounded entropy. Together with the earlier triangle and disconnected-block results, this independently rules out bounded nonuniqueness at this kernel, but does not alone exclude every connected alternative. E048 supplies the stronger exclusion.
+- Reproduction: the embedded checker regenerated the rational elimination, primitive coefficient lists, sign certificates, incidence reduction and source reconstruction. It passed for the auditor and coordinator; coordinator replay 2026-09-10 approximately 13:56:22 UTC, Python 3.9.12, standard library only. Direct rational matrix conjugation at two diagnostic points checks the missing-edge identities. No random or rate-grid input; approximate roots used during derivation were replaced by exact certificates.
+
+## E048
+
+**Global generator uniqueness for fast balanced theta kernels and an open region**
+
+- Kind: analytic inference with focused reproduced exact arithmetic. Full proof: [spectral-cone audit](../analysis/theta-fast-spectral-audit.md), sections 1–8. Calculation: [check_theta_fast_spectral.py](../analysis/check_theta_fast_spectral.py), [JSON](../outputs/check_theta_fast_spectral.json).
+- Result: with only resolved x↔y observed, exact joint kernels, simple bidirected irreducible CTMCs and at most five states, Q(100,100) is globally unique up to hidden labels. The same holds for every Q(z,z), z≥40, and the explicit open two-parameter sufficient region in equation (1). The generator and entropy are both identified. The numerical entropy at (100,100) is approximately 0.0755509024393 in the displayed inverse-time units, with k_B=1.
+- Proof: for s>beta, the hidden transfer has three distinct nonzero rank-one modes and the full kernel has minimal dimension five. Any irreducible three-state hidden realization yields, by strict Perron eigenvectors, a finite invariant triangle in the normalized modal plane. It contains two specified input points, lies in a fixed output wedge, and contains the origin in its interior. Its vertices must have two positive heights and one negative height. Lower-edge invariance and input containment give mutually incompatible upper bounds, according to the sign of the negative vertex's horizontal coordinate. These inequalities exclude all connected hidden graphs, including paths and triangles, even allowing arbitrary nonnegative entrance/exit patterns.
+- E042's disconnected-hidden rigidity then exhausts the admissible class. No local certificate, positive similarity assumption, optimizer failure, or finite sampling is used to prove nonexistence. The five-state cap is essential: one additional hidden state permits E028's unbounded cloning family.
+- Generality: writing r_y=4(sqrt(6)−1)/5, A=a, B=b/r_y, m=(7+2sqrt(6))/5, k_L=(3−sqrt(6)/2)/8, k_R=35sqrt(6)/88 and kappa=(a+b−alpha)/(4sqrt(6)), sufficient conditions are s>beta and both (kappa−1)B>k_R[1+(A+1)/k_L] and (kappa−1)A>k_L[m+(B+1)/k_R]. The balanced z≥40 corollary follows from positive shifted quadratic coefficients, not a parameter sweep. Neither the region nor the constant 40 is asserted sharp.
+- Reproduction: `python -B analysis/check_theta_fast_spectral.py`; coordinator execution 2026-09-10T13:56:22.080058+00:00, Python 3.9.12, standard library only. Script SHA-256 `192c0c5a37bdd40bf665f6346b639e02ad92cdd424010658d54afde5067c6c9b`; the output also records the unchanged quadratic-field helper hash. Modal identities, residues, source constraints/ranks, wedge bounds, strict margins at 100/40 and balanced-ray polynomial coefficients all pass.
+- Entropy cross-check: section 8 of the proof records the exact stationary law and the formula [−11000 log(32/35)+19900 log(16/11)]/111741. At 14:04 UTC, direct Fraction substitution verified normalization, stationarity and both route currents. An independent NumPy 2.0.1 stationary linear solve and edge-flux sum agreed with the cycle-affinity expression to below 10^−13. This verifies the numerical illustration, not the universal uniqueness argument.
+- Quality and limits: the coordinator checked the Perron orientation, exhaustive sign pattern, all lower/upper edge inequalities and the reducible completion. Agreement on this analytic method is not an independent empirical origin. E047 is a separate support-elimination check with a weaker conclusion. The result is an exact special-case theorem; the general five-state entropy classification, sharp theta boundary and publication novelty remain unresolved.
+
+## D012
+
+**Close the fast-kernel feasibility question and move to the remaining parameter boundary**
+
+- Date: 2026-09-10 UTC. Basis: E045–E048. D011's exact target is settled globally; D009's proposed theta(100,100) test must not be repeated as an unresolved problem.
+- Outcome: fast theta kernels supply an open region of global generator uniqueness, beyond the earlier diagonal-hidden and cap-saturating-path cases. Together with E041's unbounded regions this makes a sharper one-parameter classification a concrete next research problem. Static finite-Hankel factorization is an insufficient shortcut because it omits the generator constraint.
+- Single next action: classify connected-hidden feasibility along Q(z,z) between the already proved unbounded interval and the sufficient uniqueness region. Retain the normalized Perron triangle and exact reciprocal-support conditions; eliminate its geometric variables or obtain an exact boundary witness. Any bounded-nonunique claim must still show different entropy values and control the entire compatible set.
+- Stopping rationale: the renewed frontier assessment, exact global target, analytic extension and independent certificates are complete. Closing the remaining parameter gap requires a distinct global parameter-elimination or boundary-construction argument; repeating the completed searches, local tests or static NMF calculations cannot provide it. The full five/six-state program is not claimed complete. All bounded assignments returned artifacts and were incorporated. Preserve the new research locally for review; the earlier maintenance commit/push was already completed.
+- Final consistency review: the new exact checker, embedded path certificate and finite-Hankel algebra passed. Local Markdown links, record anchors, stable IDs and saved source hashes resolve; the human-owned brief and operating instructions are unchanged. The report and state replace the now-settled target with the parameter-boundary action.
+
+## E049
+
+**Maintenance review clarifies the hidden-response scope and preserves the global proof**
+
+- Kind: bounded analytic review and reproduced calculations, 2026-09-10 approximately 21:47–21:50 UTC. Reviewed E045–E048, their proofs, the new checker, report and current handoff; no new scientific investigation.
+- Scope correction: the strict inner-dimension-three factorization result concerns finite block Hankel truncations of the **uniformized hidden response**, not the full marked kernel, whose minimal dimension is five. The report, frontier summary, E046 and STATE now state this explicitly. The detailed O_m C_n calculation was already correct; no mathematical conclusion changed.
+- Analytic review: an independent reviewer checked Perron normalization, the exhaustive triangle vertex pattern, inequalities (9)–(14), the open region, balanced z≥40 bounds and reducible-hidden completion. No additional actionable proof error was found. Stationarity, route currents and edge-flux entropy independently give 0.07555090243930729. This is a bounded review, not a novelty assessment.
+- Reproduction: `python -B analysis/check_theta_fast_spectral.py` was run in an isolated temporary copy of the Python sources. Its JSON is identical to the saved output except execution time; source hashes and scientific values match. The embedded hidden-path certificate and E046's Fraction calculation also passed with their documented commands. Python 3.9.12, NumPy 2.0.1 where used. Existing saved execution metadata was preserved.
+- Pruning: removed three generated bytecode files and their analysis/__pycache__ directory after verifying its resolved path lies inside this repository. Preserved the ignored human prompt history and all reproducibility artifacts. Updated the stale README research target and shortened STATE. Human-owned PROJECT.md and framework instructions are unchanged.
+- Repository checks: 375 local Markdown links, 117 anchors, 62 unique consecutive evidence/decision IDs and 24 saved source hashes pass. All Python sources parse and retain LF bytes; `git diff --check` reports no whitespace errors.
+
+## D013
+
+**Commit and push the reviewed global-uniqueness artifacts**
+
+- Date: 2026-09-10 UTC. The user explicitly requests review, pruning, report cleanup, commit and push. This supersedes D012's instruction to leave the research changes local; the completed research remains finished.
+- Scope: publish E045–E049, the global spectral proof and exact checker/output, independent hidden-path certificate, frontier assessment and updated synthesis. Retain provenance and historical limitations; exclude disposable caches and the human prompt log.
+- Validation: focused replays, bounded proof review and repository consistency checks passed. Verify staged Python bytes before committing. Fetch/prune of origin succeeded, with main and origin/main initially identical at c4df036.
+- Publication action: commit the reviewed artifacts on existing main and push normally to origin without rewriting history. The next scientific action remains D012's parameter-boundary question.
