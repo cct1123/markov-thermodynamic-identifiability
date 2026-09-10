@@ -3,7 +3,7 @@
 Agent-maintained checkpoint, not a live process indicator.
 
 - **Research status:** finished for the saved balanced-theta boundary action. The general five/six-state program is not finished. [Report](outputs/REPORT.md), [D015](evidence/RECORDS.md#d015)
-- **Last checkpoint:** 2026-09-10 23:27:31 UTC. Publication review, exact replays, final repository checks and pruning completed. Commit and push are authorized by the latest request. [E053](evidence/RECORDS.md#e053), [D016](evidence/RECORDS.md#d016)
+- **Last checkpoint:** 2026-09-10 23:29:31 UTC. Review, exact replays, repository checks and pruning completed; changes committed locally as e7a1af4. Automatic approval review rejected the push. [E053](evidence/RECORDS.md#e053), [D016](evidence/RECORDS.md#d016)
 - **Scope:** D014 completed only D012's balanced parameter gap. The current action reviews and publishes that result and the research stack; it does not reopen research. PROJECT.md is preserved.
 
 ## Accepted answer
@@ -32,6 +32,6 @@ Prior results remain accepted: four-state singleton/unbounded classification, st
 
 ## Handoff and resumption condition
 
-All review assignments are complete; no external blocker. Five exact boundary scripts replayed with matching mathematical outputs. The report's historical scope wording was clarified; existing scientific scripts, accepted JSON outputs and failed attempts were preserved. [Publication review](evidence/RECORDS.md#e053), [stack audit](docs/capability-audit.md#subsequent-publication-review-2026-09-10)
+All review assignments are complete. Five exact boundary scripts replayed with matching mathematical outputs; historical scientific artifacts and failed attempts were preserved. Publication alone is blocked: automatic approval review requires explicit confirmation to upload the reviewed research and infrastructure commits to `git@github.com:cct1123/markov-thermodynamic-identifiability.git` on `main`. After confirmation, push normally and verify the remote; do not repeat research. [Publication decision](evidence/RECORDS.md#d016)
 
 The saved boundary question is settled; do not repeat its search. If a new research run is authorized, the single most useful next action is **theorem-level prior-art comparison and further independent review of the exact two-point entropy theorem**, particularly finite positive-realization and aggregate-equivalence results. No new literature search occurred in this scoped continuation. General two-parameter classification and finite-data robustness are separate future scopes. Reopen this boundary only for a concrete proof objection, new contrary evidence or changed model assumptions. [D015](evidence/RECORDS.md#d015)
