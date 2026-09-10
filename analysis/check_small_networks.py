@@ -79,6 +79,16 @@ def check_generator(q, pi, complete=False):
             assert (q[i, j] > 0) == (q[j, i] > 0)
             if complete:
                 assert q[i, j] > 0
+    # A positive stationary law also exists for disconnected closed classes.
+    # Bidirected support makes one reachability traversal sufficient here.
+    reached, pending = {0}, [0]
+    while pending:
+        i = pending.pop()
+        for j in range(n):
+            if i != j and q[i, j] > 0 and j not in reached:
+                reached.add(j)
+                pending.append(j)
+    assert len(reached) == n, "generator must be irreducible"
 
 
 def entropy(q, pi):
@@ -256,6 +266,16 @@ def main():
     wrong[1, 1] += base[1, 0]
     assert not np.array_equal(r0 @ wrong @ b0, reference[1])
 
+    # Positive stationarity must not hide disconnected communicating classes.
+    disconnected = matrix([[-1, 1, 0, 0], [1, -1, 0, 0],
+                           [0, 0, -1, 1], [0, 0, 1, -1]])
+    try:
+        check_generator(disconnected, matrix([[F(1, 4)]*4])[0])
+    except AssertionError as error:
+        assert str(error) == "generator must be irreducible"
+    else:
+        raise AssertionError("disconnected generator was accepted")
+
     result = {
         "executed_at": datetime.now(timezone.utc).isoformat(),
         "environment": {"python": platform.python_version(), "numpy": np.__version__,
@@ -267,6 +287,7 @@ def main():
                    "minimal_exact_derivative_orders": [0, 7],
                    "controllability_rank": ctrb_rank, "observability_rank": obsv_rank,
                    "numerical_time_grid_points": len(times), "negative_controls": 2},
+        "generator_negative_controls": {"disconnected_positive_stationary_rejected": True},
         "lumpable_family": lump_checks,
         "minimal_family": rows,
         "fixed_diamond": {"distinct_escape_rates": [4, 3],

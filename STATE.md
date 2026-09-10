@@ -2,36 +2,29 @@
 
 Agent-maintained checkpoint, not a live process indicator.
 
-- **Status:** finished — initial frontier-assessment run. The general classification and publication novelty remain unresolved.
-- **Last checkpoint:** 2026-09-10 04:38:00 UTC.
-- **Last completed action:** reviewed and pruned the research artifacts; exact and numerical checks passed again.
-- **Current scope:** maintenance only, following the user's request to prune, commit and push. Preserve [PROJECT.md](PROJECT.md); do not restart research or broad N≤6 enumeration.
+- **Research status:** finished for the scoped investigation; the general five-state question remains unresolved. [D009](evidence/RECORDS.md#d009)
+- **Last checkpoint:** 2026-09-10 13:36 UTC.
+- **Maintenance:** user authorized review, fixes, pruning, commit and push. Six deterministic checks and both seeded probes passed; scientific results are unchanged. The shared validator now rejects disconnected generators. [E044](evidence/RECORDS.md#e044), [D010](evidence/RECORDS.md#d010)
+- **Scope:** preserve PROJECT.md and prior evidence. Maintenance does not reopen the research investigation.
 
-## Current answer
+## Accepted answer
 
-The [formulation](analysis/formulation.md) fixes joint waiting kernels for individually resolved, reverse-closed edges with known incidence, finite irreducible simple bidirected CTMCs, and single-channel state-level entropy. Cardinality, topology, minimality and rate restrictions define different compatibility classes. [D001](evidence/RECORDS.md#d001)
+The [formulation](analysis/formulation.md) assumes finite irreducible simple bidirected CTMCs, even states, one channel per ordered pair, known resolved reverse-closed marks, and exact joint next-mark/time kernels. State count, topology and rate restrictions define different admissible classes.
 
-**Exact findings; novelty unestablished:**
+- With **one observed pair**, at most three states identify all rates; exactly four states have only singleton or unbounded entropy fibers, including nonminimal realizations. A third-derivative criterion decides four-state uniqueness. [E030](evidence/RECORDS.md#e030)
+- One spare fully hidden state guarantees unbounded entropy. The unrestricted-cardinality class has an observable unique/unbounded dichotomy. Hidden-pair, distinct-diagonal and cap-saturating-path results cover additional fixed-cap cases. [E028](evidence/RECORDS.md#e028), [report](outputs/REPORT.md)
+- Five states admit a locally isolated generator with a distant unbounded component. The theta family has broad proved unbounded regions, including both repeated-pole lines; minimal points on the slow line have no connected hidden representation despite unbounded entropy. [E035](evidence/RECORDS.md#e035), [E039–E043](evidence/RECORDS.md#e039)
 
-- At most three states: one observed bidirectional edge identifies every rate. [E017](evidence/RECORDS.md#e017)
-- Minimal four-state examples preserve every observed kernel while entropy covers [0,infinity), even on a fixed complete graph or diamond. [E019](evidence/RECORDS.md#e019), [E021](evidence/RECORDS.md#e021)
-- Full-positive fixed diamond: distinct hidden escape rates identify the generator; equal escapes give an unbounded entropy fiber, including nonminimal cases. The data distinguish these strata. [E021](evidence/RECORDS.md#e021)
-- [Reproducible checks](analysis/README.md) confirm the representative calculations. [E020](evidence/RECORDS.md#e020)
+Proofs and exact representative checks are indexed in [analysis/README.md](analysis/README.md). Publication novelty is unestablished. Positive-realization and aggregate-equivalence theory are close prior art; the strict order-three cone question is not settled by the inspected theorem. Förster–Nagy's full strict-realization hypotheses, Larget and original Xiang results remain access gaps. [E040](evidence/RECORDS.md#e040)
 
-## Prior constraints and unresolved risk
+## Single next research action
 
-Compatible-model optimization, hidden similarities and equilibrium/nonequilibrium ambiguity are established prior art. Closest constraints include Ehrich, Wagner–Timmer, Wu–Jia, Siekmann and marked-realization theory. [E004](evidence/RECORDS.md#e004), [E008–E012](evidence/RECORDS.md#e008)
+Decide exact connected-hidden feasibility at theta(100,100), using the rational global coordinates in the [fast-case audit](analysis/theta-fast-case-audit.md). Its disconnected-hidden alternatives are globally excluded and its source is exactly locally isolated. A thirteen-start search found no complete witness, which supplies no global bound.
 
-Exact entropy-range classification is a plausible gap, not a certified open problem. Full theorem hypotheses remain unverified for Larget and the original Xiang reconstruction paper. [E007](evidence/RECORDS.md#e007), [E022](evidence/RECORDS.md#e022)
+Excluding **both hidden paths and hidden triangles** proves uniqueness. A hidden-triangle witness proves unboundedness; a hidden-path witness needs further boundary/component analysis. A bounded-nonunique claim must exhibit different entropy values and control the entire compatible set. [E042](evidence/RECORDS.md#e042)
 
-Minimality and topology alone do not classify entropy. Do not infer a universal unique/unbounded dichotomy from the examples. [D002](evidence/RECORDS.md#d002), [D003](evidence/RECORDS.md#d003)
+## Handoff
 
-## Next research action
+Local isolation, pairwise rigidity and absence of a complete representative are not finite-entropy certificates. Do not assume a connected generator fiber or equate linear with positive realization order. [D007](evidence/RECORDS.md#d007), [D009](evidence/RECORDS.md#d009)
 
-Determine whether any **minimal four-state fixed-graph fiber has a finite non-singleton entropy range without a common positive lower rate cutoff**. Use the two-parameter hidden-similarity reduction in [compatibility-orbit.md](analysis/compatibility-orbit.md), impose generator positivity/support, and analyze boundary stationary fluxes.
-
-The full diamond is already classified; begin with other topologies or other complete-graph fibers. An exact bounded example falsifies a proposed dichotomy; a rigorous divergent-boundary criterion could establish a classification. Numerical failure to find an example proves neither. Compare any prospective theorem with the closest prior art before claiming novelty.
-
-## Resumption
-
-The [report](outputs/REPORT.md) closes the initial frontier assessment with exact exploratory results and a discriminating next question. All bounded assignments are integrated; no worker remains active and no external blocker is pending. Resume at the action above, without repeating completed examples or assuming exhaustive coverage.
+All bounded reviews are complete. No active research assignments or external blockers. Reopen research for new evidence, a global proof approach or renewed user instruction; repeating the same local tests or bounded searches cannot decide the remaining question.

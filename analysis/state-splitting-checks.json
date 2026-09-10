@@ -1,0 +1,201 @@
+{
+  "executed_at": "2026-09-10T13:31:42.862612+00:00",
+  "environment": {
+    "python": "3.9.12",
+    "numpy": "2.0.1",
+    "scipy": "1.13.1",
+    "platform": "Windows-10-10.0.22631-SP0"
+  },
+  "script_sha256": {
+    "check_state_splitting.py": "9d925a943330513022a690111761336ff9cb2835916a026405a373a96653bc27",
+    "check_small_networks.py": "1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6",
+    "check_four_state_classification.py": "cbcc7efb6b46623574758af2706de3249419eca99112203fdc1c50ecb34d3d2c"
+  },
+  "inputs": "Exact rational matrices embedded in the script; theta=1/3, backward clone rate=2; no randomness.",
+  "state_split": {
+    "original_generator": [
+      [
+        "-3",
+        "1",
+        "2",
+        "0"
+      ],
+      [
+        "1",
+        "-9",
+        "3",
+        "5"
+      ],
+      [
+        "1",
+        "1",
+        "-2",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "-1"
+      ]
+    ],
+    "original_stationary": [
+      "1/8",
+      "1/10",
+      "11/40",
+      "1/2"
+    ],
+    "cloned_state": 2,
+    "state_counts": [
+      4,
+      5
+    ],
+    "derivative_orders": [
+      0,
+      8
+    ],
+    "log_divergence_coefficient": "11/60",
+    "samples": [
+      {
+        "forward_rate": "1/1000",
+        "entropy": 1.5299522971955313,
+        "entropy_minus_leading_log": 0.2635304960488063
+      },
+      {
+        "forward_rate": "1/1000000",
+        "entropy": 2.7971328027030316,
+        "entropy_minus_leading_log": 0.2642892004095816
+      },
+      {
+        "forward_rate": "1/1000000000",
+        "entropy": 4.063555995321483,
+        "entropy_minus_leading_log": 0.2642905918813079
+      }
+    ]
+  },
+  "nonminimal_families": [
+    {
+      "name": "full_incidence",
+      "base_generator": [
+        [
+          "-4",
+          "1",
+          "2",
+          "1"
+        ],
+        [
+          "1",
+          "-4",
+          "1",
+          "2"
+        ],
+        [
+          "1",
+          "2",
+          "-3",
+          "0"
+        ],
+        [
+          "1",
+          "2",
+          "0",
+          "-3"
+        ]
+      ],
+      "quotient_generator": [
+        [
+          "-4",
+          "1",
+          "3"
+        ],
+        [
+          "1",
+          "-4",
+          "3"
+        ],
+        [
+          "1",
+          "2",
+          "-3"
+        ]
+      ],
+      "log_divergence_coefficient": "8/25",
+      "samples": [
+        {
+          "forward_rate": "1/1000",
+          "entropy": 2.735676147869544
+        },
+        {
+          "forward_rate": "1/1000000",
+          "entropy": 4.94775222887454
+        },
+        {
+          "forward_rate": "1/1000000000",
+          "entropy": 7.158236920632329
+        }
+      ]
+    },
+    {
+      "name": "one_port_tree",
+      "base_generator": [
+        [
+          "-1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "-4",
+          "2",
+          "1"
+        ],
+        [
+          "0",
+          "3",
+          "-3",
+          "0"
+        ],
+        [
+          "0",
+          "3",
+          "0",
+          "-3"
+        ]
+      ],
+      "quotient_generator": [
+        [
+          "-1",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "-4",
+          "3"
+        ],
+        [
+          "0",
+          "3",
+          "-3"
+        ]
+      ],
+      "log_divergence_coefficient": "2/15",
+      "samples": [
+        {
+          "forward_rate": "1/1000",
+          "entropy": 0.9199290173569492
+        },
+        {
+          "forward_rate": "1/1000000",
+          "entropy": 1.8420658639139893
+        },
+        {
+          "forward_rate": "1/1000000000",
+          "entropy": 2.7631021082771325
+        }
+      ]
+    }
+  ],
+  "limitation": "Exact representative intertwining and derivative certificates; general coverage and divergence use the proofs. Novelty unestablished."
+}

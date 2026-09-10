@@ -1,0 +1,333 @@
+{
+  "executed_at": "2026-09-10T13:31:43.371558+00:00",
+  "environment": {
+    "python": "3.9.12",
+    "numpy": "2.0.1",
+    "scipy": "1.13.1",
+    "platform": "Windows-10-10.0.22631-SP0"
+  },
+  "script_sha256": {
+    "check_observable_criterion.py": "40af86e70e5f3a522d8f2a92196a13e59879b706694a5b84a965c625012af51b",
+    "check_small_networks.py": "1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6",
+    "check_four_state_classification.py": "cbcc7efb6b46623574758af2706de3249419eca99112203fdc1c50ecb34d3d2c"
+  },
+  "inputs": "Embedded rational generators; no randomness or external data.",
+  "cases": [
+    {
+      "case": "opposite_singletons_cycle",
+      "classification": "A",
+      "ranks": [
+        4,
+        4
+      ],
+      "det_M": "120",
+      "generator": [
+        [
+          "-3",
+          "1",
+          "2",
+          "0"
+        ],
+        [
+          "1",
+          "-4",
+          "0",
+          "3"
+        ],
+        [
+          "4",
+          "0",
+          "-5",
+          "1"
+        ],
+        [
+          "0",
+          "5",
+          "2",
+          "-7"
+        ]
+      ]
+    },
+    {
+      "case": "opposite_singletons_equal_pole",
+      "classification": "A",
+      "ranks": [
+        4,
+        4
+      ],
+      "det_M": "96",
+      "generator": [
+        [
+          "-3",
+          "1",
+          "2",
+          "0"
+        ],
+        [
+          "1",
+          "-4",
+          "0",
+          "3"
+        ],
+        [
+          "4",
+          "0",
+          "-4",
+          "0"
+        ],
+        [
+          "0",
+          "4",
+          "0",
+          "-4"
+        ]
+      ]
+    },
+    {
+      "case": "shared_fast",
+      "classification": "B",
+      "ranks": [
+        4,
+        4
+      ],
+      "det_M": "10",
+      "generator": [
+        [
+          "-3",
+          "1",
+          "2",
+          "0"
+        ],
+        [
+          "1",
+          "-9",
+          "3",
+          "5"
+        ],
+        [
+          "1",
+          "1",
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "-1"
+        ]
+      ]
+    },
+    {
+      "case": "shared_fast_swapped_visible",
+      "classification": "B",
+      "ranks": [
+        4,
+        4
+      ],
+      "det_M": "10",
+      "generator": [
+        [
+          "-9",
+          "1",
+          "3",
+          "5"
+        ],
+        [
+          "1",
+          "-3",
+          "2",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "-2",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "-1"
+        ]
+      ]
+    },
+    {
+      "case": "shared_slow_negative_control",
+      "classification": "unbounded",
+      "ranks": [
+        4,
+        4
+      ],
+      "det_M": "40",
+      "generator": [
+        [
+          "-3",
+          "1",
+          "2",
+          "0"
+        ],
+        [
+          "1",
+          "-9",
+          "3",
+          "5"
+        ],
+        [
+          "1",
+          "1",
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "4",
+          "0",
+          "-4"
+        ]
+      ]
+    },
+    {
+      "case": "equal_escapes_negative_control",
+      "classification": "unbounded",
+      "ranks": [
+        4,
+        4
+      ],
+      "det_M": "20",
+      "generator": [
+        [
+          "-3",
+          "1",
+          "2",
+          "0"
+        ],
+        [
+          "1",
+          "-9",
+          "3",
+          "5"
+        ],
+        [
+          "1",
+          "1",
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "2",
+          "0",
+          "-2"
+        ]
+      ]
+    },
+    {
+      "case": "full_diamond_distinct",
+      "classification": "unbounded",
+      "ranks": [
+        4,
+        4
+      ],
+      "det_M": "15",
+      "generator": [
+        [
+          "-4",
+          "1",
+          "2",
+          "1"
+        ],
+        [
+          "1",
+          "-4",
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "1",
+          "-3",
+          "0"
+        ],
+        [
+          "1",
+          "3",
+          "0",
+          "-4"
+        ]
+      ]
+    },
+    {
+      "case": "minimal_singular_M",
+      "classification": "unbounded",
+      "ranks": [
+        4,
+        4
+      ],
+      "det_M": "0",
+      "generator": [
+        [
+          "-1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "-3",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "3",
+          "-7",
+          "4"
+        ],
+        [
+          "0",
+          "0",
+          "5",
+          "-5"
+        ]
+      ]
+    },
+    {
+      "case": "nonminimal_singular_M",
+      "classification": "unbounded",
+      "ranks": [
+        3,
+        4
+      ],
+      "det_M": "0",
+      "generator": [
+        [
+          "-4",
+          "1",
+          "2",
+          "1"
+        ],
+        [
+          "1",
+          "-4",
+          "1",
+          "2"
+        ],
+        [
+          "1",
+          "2",
+          "-7",
+          "4"
+        ],
+        [
+          "1",
+          "2",
+          "5",
+          "-8"
+        ]
+      ]
+    }
+  ],
+  "limitation": "Representative algebraic checks; general coverage uses the analytic classification, not enumeration."
+}

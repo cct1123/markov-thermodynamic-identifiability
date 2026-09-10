@@ -1,0 +1,605 @@
+{
+  "executed_at": "2026-09-10T13:31:42.348309+00:00",
+  "environment": {
+    "python": "3.9.12",
+    "numpy": "2.0.1",
+    "scipy": "1.13.1",
+    "platform": "Windows-10-10.0.22631-SP0"
+  },
+  "script_sha256": "cbcc7efb6b46623574758af2706de3249419eca99112203fdc1c50ecb34d3d2c",
+  "helper_sha256": "1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6",
+  "inputs": "Named exact rational matrices and similarities embedded in this script; no randomness.",
+  "all_time_certificate_derivative_orders": [
+    0,
+    7
+  ],
+  "boundary_witnesses": [
+    {
+      "name": "pendant_triangle_exit",
+      "base_generator": [
+        [
+          "-1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "-8",
+          "2",
+          "5"
+        ],
+        [
+          "0",
+          "3",
+          "-7",
+          "4"
+        ],
+        [
+          "0",
+          "7",
+          "6",
+          "-13"
+        ]
+      ],
+      "base_support": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "interior_support": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "endpoint": "3/7",
+      "disappearing_edge": [
+        2,
+        1
+      ],
+      "boundary_stationary": [
+        "67/233",
+        "67/233",
+        "32/233",
+        "67/233"
+      ],
+      "log_divergence_coefficient": "536/1631",
+      "measured_log_coefficient": 0.32863475624255056,
+      "samples": [
+        {
+          "gap": "1/1000",
+          "entropy": 1.8802683728294347,
+          "entropy_minus_leading_log": -0.389846176241335,
+          "kernel_residual": 1.2663481374630692e-16,
+          "vanishing_rate": "49/4007"
+        },
+        {
+          "gap": "1/1000000",
+          "entropy": 4.156665409109148,
+          "entropy_minus_leading_log": -0.3835636890323917,
+          "kernel_residual": 1.1102230246251565e-16,
+          "vanishing_rate": "49/4000007"
+        },
+        {
+          "gap": "1/1000000000",
+          "entropy": 6.426793881400634,
+          "entropy_minus_leading_log": -0.3835497658116749,
+          "kernel_residual": 2.498001805406602e-16,
+          "vanishing_rate": "49/4000000007"
+        }
+      ]
+    },
+    {
+      "name": "complete_hidden_edge",
+      "base_generator": [
+        [
+          "-6",
+          "1",
+          "2",
+          "3"
+        ],
+        [
+          "1",
+          "-10",
+          "4",
+          "5"
+        ],
+        [
+          "1",
+          "13/2",
+          "-17/2",
+          "1"
+        ],
+        [
+          "2",
+          "1",
+          "2",
+          "-5"
+        ]
+      ],
+      "base_support": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "interior_support": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "endpoint": "1/4",
+      "disappearing_edge": [
+        2,
+        3
+      ],
+      "boundary_stationary": [
+        "327/1672",
+        "43/209",
+        "36/209",
+        "713/1672"
+      ],
+      "log_divergence_coefficient": "2139/3344",
+      "measured_log_coefficient": 0.639654404529526,
+      "samples": [
+        {
+          "gap": "1/1000",
+          "entropy": 5.8607146843182125,
+          "entropy_minus_leading_log": 1.4421475366678562,
+          "kernel_residual": 2.220446049250313e-16,
+          "vanishing_rate": "2249/375500"
+        },
+        {
+          "gap": "1/1000000",
+          "entropy": 10.28459840030748,
+          "entropy_minus_leading_log": 1.4474641050067678,
+          "kernel_residual": 1.8041124150158794e-16,
+          "vanishing_rate": "2249999/375000500000"
+        },
+        {
+          "gap": "1/1000000000",
+          "entropy": 14.703174489920489,
+          "entropy_minus_leading_log": 1.4474730469694208,
+          "kernel_residual": 1.1102230246251565e-16,
+          "vanishing_rate": "2249999999/375000000500000000"
+        }
+      ]
+    },
+    {
+      "name": "unknown_topology_opening",
+      "base_generator": [
+        [
+          "-3",
+          "1",
+          "2",
+          "0"
+        ],
+        [
+          "1",
+          "-9",
+          "3",
+          "5"
+        ],
+        [
+          "1",
+          "1",
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "4",
+          "0",
+          "-4"
+        ]
+      ],
+      "base_support": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "interior_support": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "direction": [
+        -1,
+        -1
+      ],
+      "endpoint": "1/3",
+      "disappearing_edge": [
+        2,
+        1
+      ],
+      "boundary_stationary": [
+        "1/5",
+        "4/25",
+        "17/75",
+        "31/75"
+      ],
+      "log_divergence_coefficient": "4/75",
+      "measured_log_coefficient": 0.053332175364428074,
+      "samples": [
+        {
+          "gap": "1/1000",
+          "entropy": 0.2518169107350408,
+          "entropy_minus_leading_log": -0.11659670414400652,
+          "kernel_residual": 1.1102230246251565e-16,
+          "vanishing_rate": "3/1000"
+        },
+        {
+          "gap": "1/1000000",
+          "entropy": 0.6163816306480056,
+          "entropy_minus_leading_log": -0.12044559911008912,
+          "kernel_residual": 1.6653345369377348e-16,
+          "vanishing_rate": "3/1000000"
+        },
+        {
+          "gap": "1/1000000000",
+          "entropy": 0.9847872465612346,
+          "entropy_minus_leading_log": -0.12045359807590739,
+          "kernel_residual": 5.551115123125783e-17,
+          "vanishing_rate": "3/1000000000"
+        }
+      ]
+    }
+  ],
+  "support_openings": [
+    {
+      "name": "same_hidden_neighbor",
+      "base_support": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "compatible_support": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "one_port_chain",
+      "base_support": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "compatible_support": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "full_diamond_distinct",
+      "base_support": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "compatible_support": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "one_port_tree",
+      "base_support": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "compatible_support": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "sparse_equal_escapes",
+      "base_support": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "compatible_support": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    }
+  ],
+  "global_uniqueness_grid_checks": [
+    {
+      "name": "opposite_singletons",
+      "admissible_grid_points": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "limitation": "Finite falsification check; uniqueness uses the analytic sign proof."
+    },
+    {
+      "name": "singleton_faster_escape",
+      "admissible_grid_points": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "limitation": "Finite falsification check; uniqueness uses the analytic sign proof."
+    }
+  ],
+  "nonminimal_equal_exit_row_ranks": [
+    3,
+    4
+  ],
+  "limitation": "Representative exact and numerical checks; theorem coverage comes from the proofs, not sampling. Novelty unestablished."
+}

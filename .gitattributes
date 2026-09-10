@@ -1,0 +1,2 @@
+# Preserve the exact script bytes recorded in scientific output checksums.
+*.py text eol=lf

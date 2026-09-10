@@ -1,0 +1,3331 @@
+{
+  "executed_at": "2026-09-10T07:00:06.758392+00:00",
+  "environment": {
+    "python": "3.9.12",
+    "platform": "Windows-10-10.0.22631-SP0",
+    "dependencies": "Python standard library only"
+  },
+  "script_sha256": {
+    "check_theta_residue_construction.py": "df7d9a893580d489ae94902b42e15337560d6926c6a50f681ec2fda9b4347b34"
+  },
+  "exact_scalar_encoding": "rational + sqrt6_coefficient * sqrt(6); coefficients are reduced rational strings",
+  "inputs": "Five embedded deterministic algebraic parameter pairs; no external data or numerical search",
+  "alpha": {
+    "rational": "9",
+    "sqrt6_coefficient": "-2"
+  },
+  "beta": {
+    "rational": "9",
+    "sqrt6_coefficient": "2"
+  },
+  "Z_alpha": [
+    [
+      {
+        "rational": "3",
+        "sqrt6_coefficient": "1/2"
+      },
+      {
+        "rational": "0",
+        "sqrt6_coefficient": "2"
+      }
+    ],
+    [
+      {
+        "rational": "0",
+        "sqrt6_coefficient": "35/8"
+      },
+      {
+        "rational": "21",
+        "sqrt6_coefficient": "-7/2"
+      }
+    ]
+  ],
+  "Z_beta": [
+    [
+      {
+        "rational": "3",
+        "sqrt6_coefficient": "-1/2"
+      },
+      {
+        "rational": "0",
+        "sqrt6_coefficient": "-2"
+      }
+    ],
+    [
+      {
+        "rational": "0",
+        "sqrt6_coefficient": "-35/8"
+      },
+      {
+        "rational": "21",
+        "sqrt6_coefficient": "7/2"
+      }
+    ]
+  ],
+  "construction_domain": {
+    "direct": "a+b <= beta, a > 35*sqrt(6)/88, b > sqrt(6)/4",
+    "redistributed": "a+b=alpha, a,b>0; epsilon=min(a,b/r_y)/2"
+  },
+  "cases": [
+    {
+      "name": "theta_3_3",
+      "a": {
+        "rational": "3",
+        "sqrt6_coefficient": "0"
+      },
+      "b": {
+        "rational": "3",
+        "sqrt6_coefficient": "0"
+      },
+      "escape_sum": {
+        "rational": "6",
+        "sqrt6_coefficient": "0"
+      },
+      "source_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "8",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "11",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "4",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "6",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "5",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-6",
+            "sqrt6_coefficient": "0"
+          }
+        ]
+      ],
+      "candidate_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-291604/60897",
+            "sqrt6_coefficient": "45953/20299"
+          },
+          {
+            "rational": "839677/60897",
+            "sqrt6_coefficient": "-112205/40598"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "1/2"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "197957/121794",
+            "sqrt6_coefficient": "261877/81196"
+          },
+          {
+            "rational": "784028/60897",
+            "sqrt6_coefficient": "-665847/162392"
+          },
+          {
+            "rational": "7/2",
+            "sqrt6_coefficient": "7/8"
+          }
+        ],
+        [
+          {
+            "rational": "56289/31055",
+            "sqrt6_coefficient": "-6636/31055"
+          },
+          {
+            "rational": "131511/31055",
+            "sqrt6_coefficient": "21756/31055"
+          },
+          {
+            "rational": "-150214/20299",
+            "sqrt6_coefficient": "-40740/20299"
+          },
+          {
+            "rational": "170548714/126077089",
+            "sqrt6_coefficient": "191651964/126077089"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "453/149",
+            "sqrt6_coefficient": "30/149"
+          },
+          {
+            "rational": "354/149",
+            "sqrt6_coefficient": "-18/149"
+          },
+          {
+            "rational": "6605086/3024551",
+            "sqrt6_coefficient": "-264746/3024551"
+          },
+          {
+            "rational": "-154271/20299",
+            "sqrt6_coefficient": "142/20299"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "-3",
+            "sqrt6_coefficient": "2"
+          },
+          {
+            "rational": "12",
+            "sqrt6_coefficient": "-4"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "2"
+          }
+        ]
+      ],
+      "source_stationary": [
+        {
+          "rational": "1065/5914",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "333/2957",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "410/2957",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "361/2957",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "2641/5914",
+          "sqrt6_coefficient": "0"
+        }
+      ],
+      "candidate_stationary": [
+        {
+          "rational": "1065/5914",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "333/2957",
+          "sqrt6_coefficient": "0"
+        },
+        {
+          "rational": "-1053954/60024143",
+          "sqrt6_coefficient": "48479933/720289716"
+        },
+        {
+          "rational": "35684048/60024143",
+          "sqrt6_coefficient": "-168879223/1440579432"
+        },
+        {
+          "rational": "771/5914",
+          "sqrt6_coefficient": "1181/23656"
+        }
+      ],
+      "construction": {
+        "mode": "direct_residue_reassignment",
+        "epsilon": null,
+        "singleton_residue": [
+          [
+            {
+              "rational": "3",
+              "sqrt6_coefficient": "1/2"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "2"
+            }
+          ],
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "35/8"
+            },
+            {
+              "rational": "21",
+              "sqrt6_coefficient": "-7/2"
+            }
+          ]
+        ],
+        "t_interval": [
+          {
+            "rational": "4/15",
+            "sqrt6_coefficient": "4/15"
+          },
+          {
+            "rational": "16/5",
+            "sqrt6_coefficient": "8/15"
+          }
+        ],
+        "u_interval": [
+          {
+            "rational": "1/3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "44/105"
+          }
+        ],
+        "t": {
+          "rational": "26/15",
+          "sqrt6_coefficient": "2/5"
+        },
+        "u": {
+          "rational": "1/6",
+          "sqrt6_coefficient": "22/105"
+        },
+        "P": [
+          [
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-26/15",
+              "sqrt6_coefficient": "-2/5"
+            },
+            {
+              "rational": "1/6",
+              "sqrt6_coefficient": "22/105"
+            }
+          ]
+        ],
+        "normalizing_d": [
+          {
+            "rational": "-19363/20299",
+            "sqrt6_coefficient": "29624/60897"
+          },
+          {
+            "rational": "39662/20299",
+            "sqrt6_coefficient": "-29624/60897"
+          }
+        ],
+        "normalized_P": [
+          [
+            {
+              "rational": "-19363/20299",
+              "sqrt6_coefficient": "29624/60897"
+            },
+            {
+              "rational": "39662/20299",
+              "sqrt6_coefficient": "-29624/60897"
+            }
+          ],
+          [
+            {
+              "rational": "29590/60897",
+              "sqrt6_coefficient": "-84338/182691"
+            },
+            {
+              "rational": "-87053/304485",
+              "sqrt6_coefficient": "299896/913455"
+            }
+          ]
+        ],
+        "paired_hidden_block": [
+          [
+            {
+              "rational": "-150214/20299",
+              "sqrt6_coefficient": "-40740/20299"
+            },
+            {
+              "rational": "170548714/126077089",
+              "sqrt6_coefficient": "191651964/126077089"
+            }
+          ],
+          [
+            {
+              "rational": "6605086/3024551",
+              "sqrt6_coefficient": "-264746/3024551"
+            },
+            {
+              "rational": "-154271/20299",
+              "sqrt6_coefficient": "142/20299"
+            }
+          ]
+        ]
+      },
+      "source_ranks": {
+        "controllability": 5,
+        "observability": 5
+      },
+      "candidate_ranks": {
+        "controllability": 5,
+        "observability": 5
+      },
+      "minimal_linear_dimension": 5,
+      "equal_markov_parameters_orders": [
+        0,
+        9
+      ],
+      "exact_markov_parameters": [
+        [
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "2",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-40",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-11",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "33",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "950",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "151",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "48",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-1116",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-23320",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-2177",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-1680",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "30099",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "579854",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "32593",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "46560",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-764715",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-14492164",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-506171",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-1207104",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "19110834",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "362932514",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "8184295",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "30598032",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-476118807",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-9096291916",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-138790625",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-769606800",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "11871311982",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "228054953642",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "2489973649",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "19308105984",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-296452313262",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-5718326292352",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-47563418555",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-484061831232",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ]
+      ],
+      "source_entropy_numeric": 0.04282448455937082,
+      "candidate_entropy_numeric": 0.3723131576586089,
+      "all_exact_checks_passed": true
+    },
+    {
+      "name": "slow_coincidence_minimal",
+      "a": {
+        "rational": "1",
+        "sqrt6_coefficient": "0"
+      },
+      "b": {
+        "rational": "8",
+        "sqrt6_coefficient": "-2"
+      },
+      "escape_sum": {
+        "rational": "9",
+        "sqrt6_coefficient": "-2"
+      },
+      "source_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "8",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "11",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "4",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "6",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "5",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "8",
+            "sqrt6_coefficient": "-2"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "2"
+          }
+        ]
+      ],
+      "candidate_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-378009/484810",
+            "sqrt6_coefficient": "349449/484810"
+          },
+          {
+            "rational": "4741299/484810",
+            "sqrt6_coefficient": "-295927/242405"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "1/2"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "2219913/387848",
+            "sqrt6_coefficient": "129339/48481"
+          },
+          {
+            "rational": "3403883/387848",
+            "sqrt6_coefficient": "-1374079/387848"
+          },
+          {
+            "rational": "7/2",
+            "sqrt6_coefficient": "7/8"
+          }
+        ],
+        [
+          {
+            "rational": "949/1005",
+            "sqrt6_coefficient": "-1148/3015"
+          },
+          {
+            "rational": "256/67",
+            "sqrt6_coefficient": "334/603"
+          },
+          {
+            "rational": "-367953/48481",
+            "sqrt6_coefficient": "-71934/48481"
+          },
+          {
+            "rational": "137617256/48723405",
+            "sqrt6_coefficient": "21285992/16241135"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "763/551",
+            "sqrt6_coefficient": "12/551"
+          },
+          {
+            "rational": "3068/551",
+            "sqrt6_coefficient": "-762/551"
+          },
+          {
+            "rational": "92361744/26713031",
+            "sqrt6_coefficient": "-3274884/26713031"
+          },
+          {
+            "rational": "-504705/48481",
+            "sqrt6_coefficient": "71934/48481"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "-3",
+            "sqrt6_coefficient": "2"
+          },
+          {
+            "rational": "12",
+            "sqrt6_coefficient": "-4"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "2"
+          }
+        ]
+      ],
+      "source_stationary": [
+        {
+          "rational": "75077/686251",
+          "sqrt6_coefficient": "-1807/686251"
+        },
+        {
+          "rational": "244451/1372502",
+          "sqrt6_coefficient": "-15012/686251"
+        },
+        {
+          "rational": "624167/4117506",
+          "sqrt6_coefficient": "-29746/2058753"
+        },
+        {
+          "rational": "693649/4117506",
+          "sqrt6_coefficient": "-39476/2058753"
+        },
+        {
+          "rational": "538625/1372502",
+          "sqrt6_coefficient": "39893/686251"
+        }
+      ],
+      "candidate_stationary": [
+        {
+          "rational": "75077/686251",
+          "sqrt6_coefficient": "-1807/686251"
+        },
+        {
+          "rational": "244451/1372502",
+          "sqrt6_coefficient": "-15012/686251"
+        },
+        {
+          "rational": "636256943391/2661610778480",
+          "sqrt6_coefficient": "-3330853863/1330805389240"
+        },
+        {
+          "rational": "930154470409/2661610778480",
+          "sqrt6_coefficient": "-120826729297/7984832335440"
+        },
+        {
+          "rational": "85076/686251",
+          "sqrt6_coefficient": "1388207/32940048"
+        }
+      ],
+      "construction": {
+        "mode": "direct_residue_reassignment",
+        "epsilon": null,
+        "singleton_residue": [
+          [
+            {
+              "rational": "3",
+              "sqrt6_coefficient": "1/2"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "2"
+            }
+          ],
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "35/8"
+            },
+            {
+              "rational": "21",
+              "sqrt6_coefficient": "-7/2"
+            }
+          ]
+        ],
+        "t_interval": [
+          {
+            "rational": "2/5",
+            "sqrt6_coefficient": "1/5"
+          },
+          {
+            "rational": "16/5",
+            "sqrt6_coefficient": "8/15"
+          }
+        ],
+        "u_interval": [
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "44/105"
+          }
+        ],
+        "t": {
+          "rational": "9/5",
+          "sqrt6_coefficient": "11/30"
+        },
+        "u": {
+          "rational": "1/2",
+          "sqrt6_coefficient": "22/105"
+        },
+        "P": [
+          [
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-9/5",
+              "sqrt6_coefficient": "-11/30"
+            },
+            {
+              "rational": "1/2",
+              "sqrt6_coefficient": "22/105"
+            }
+          ]
+        ],
+        "normalizing_d": [
+          {
+            "rational": "-7281/48481",
+            "sqrt6_coefficient": "9051/48481"
+          },
+          {
+            "rational": "55762/48481",
+            "sqrt6_coefficient": "-9051/48481"
+          }
+        ],
+        "normalized_P": [
+          [
+            {
+              "rational": "-7281/48481",
+              "sqrt6_coefficient": "9051/48481"
+            },
+            {
+              "rational": "55762/48481",
+              "sqrt6_coefficient": "-9051/48481"
+            }
+          ],
+          [
+            {
+              "rational": "-34032/242405",
+              "sqrt6_coefficient": "-136221/484810"
+            },
+            {
+              "rational": "82513/242405",
+              "sqrt6_coefficient": "214739/1454430"
+            }
+          ]
+        ],
+        "paired_hidden_block": [
+          [
+            {
+              "rational": "-367953/48481",
+              "sqrt6_coefficient": "-71934/48481"
+            },
+            {
+              "rational": "137617256/48723405",
+              "sqrt6_coefficient": "21285992/16241135"
+            }
+          ],
+          [
+            {
+              "rational": "92361744/26713031",
+              "sqrt6_coefficient": "-3274884/26713031"
+            },
+            {
+              "rational": "-504705/48481",
+              "sqrt6_coefficient": "71934/48481"
+            }
+          ]
+        ]
+      },
+      "source_ranks": {
+        "controllability": 5,
+        "observability": 5
+      },
+      "candidate_ranks": {
+        "controllability": 5,
+        "observability": 5
+      },
+      "minimal_linear_dimension": 5,
+      "equal_markov_parameters_orders": [
+        0,
+        9
+      ],
+      "exact_markov_parameters": [
+        [
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "2",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-40",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-11",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "11",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "1060",
+              "sqrt6_coefficient": "-44"
+            }
+          ],
+          [
+            {
+              "rational": "135",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "128",
+              "sqrt6_coefficient": "-32"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-335",
+              "sqrt6_coefficient": "22"
+            },
+            {
+              "rational": "-29436",
+              "sqrt6_coefficient": "2508"
+            }
+          ],
+          [
+            {
+              "rational": "-1753",
+              "sqrt6_coefficient": "16"
+            },
+            {
+              "rational": "-5408",
+              "sqrt6_coefficient": "1536"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "8814",
+              "sqrt6_coefficient": "-1320"
+            },
+            {
+              "rational": "834284",
+              "sqrt6_coefficient": "-105468"
+            }
+          ],
+          [
+            {
+              "rational": "24385",
+              "sqrt6_coefficient": "-816"
+            },
+            {
+              "rational": "180768",
+              "sqrt6_coefficient": "-55968"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-236932",
+              "sqrt6_coefficient": "54120"
+            },
+            {
+              "rational": "-23954588",
+              "sqrt6_coefficient": "3939436"
+            }
+          ],
+          [
+            {
+              "rational": "-369507",
+              "sqrt6_coefficient": "28560"
+            },
+            {
+              "rational": "-5667136",
+              "sqrt6_coefficient": "1866112"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "6664399",
+              "sqrt6_coefficient": "-1915532"
+            },
+            {
+              "rational": "694874172",
+              "sqrt6_coefficient": "-138354732"
+            }
+          ],
+          [
+            {
+              "rational": "6241655",
+              "sqrt6_coefficient": "-878096"
+            },
+            {
+              "rational": "174135808",
+              "sqrt6_coefficient": "-60010656"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-194217879",
+              "sqrt6_coefficient": "63380298"
+            },
+            {
+              "rational": "-20334487468",
+              "sqrt6_coefficient": "4682133852"
+            }
+          ],
+          [
+            {
+              "rational": "-120384209",
+              "sqrt6_coefficient": "25914336"
+            },
+            {
+              "rational": "-5318671008",
+              "sqrt6_coefficient": "1897323264"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "5785696346",
+              "sqrt6_coefficient": "-2029270044"
+            },
+            {
+              "rational": "599647739404",
+              "sqrt6_coefficient": "-154630357148"
+            }
+          ],
+          [
+            {
+              "rational": "2673196353",
+              "sqrt6_coefficient": "-761826240"
+            },
+            {
+              "rational": "162252539168",
+              "sqrt6_coefficient": "-59450589344"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-174515395220",
+              "sqrt6_coefficient": "63900674404"
+            },
+            {
+              "rational": "-17802268107420",
+              "sqrt6_coefficient": "5020708823244"
+            }
+          ],
+          [
+            {
+              "rational": "-67098107803",
+              "sqrt6_coefficient": "22606546336"
+            },
+            {
+              "rational": "-4951861707200",
+              "sqrt6_coefficient": "1853064703104"
+            }
+          ]
+        ]
+      ],
+      "source_entropy_numeric": 0.4478132174907096,
+      "candidate_entropy_numeric": 3.7079822887045046,
+      "all_exact_checks_passed": true
+    },
+    {
+      "name": "exceptional_nonminimal",
+      "a": {
+        "rational": "-3",
+        "sqrt6_coefficient": "2"
+      },
+      "b": {
+        "rational": "12",
+        "sqrt6_coefficient": "-4"
+      },
+      "escape_sum": {
+        "rational": "9",
+        "sqrt6_coefficient": "-2"
+      },
+      "source_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "8",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "11",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "4",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "6",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "5",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "-3",
+            "sqrt6_coefficient": "2"
+          },
+          {
+            "rational": "12",
+            "sqrt6_coefficient": "-4"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "2"
+          }
+        ]
+      ],
+      "candidate_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-115325/18472",
+            "sqrt6_coefficient": "13115/4618"
+          },
+          {
+            "rational": "281573/18472",
+            "sqrt6_coefficient": "-7712/2309"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "1/2"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "246979/73888",
+            "sqrt6_coefficient": "211071/73888"
+          },
+          {
+            "rational": "824397/73888",
+            "sqrt6_coefficient": "-275723/73888"
+          },
+          {
+            "rational": "7/2",
+            "sqrt6_coefficient": "7/8"
+          }
+        ],
+        [
+          {
+            "rational": "-19743/14645",
+            "sqrt6_coefficient": "11202/14645"
+          },
+          {
+            "rational": "127356/14645",
+            "sqrt6_coefficient": "-22404/14645"
+          },
+          {
+            "rational": "597/2309",
+            "sqrt6_coefficient": "-11384/2309"
+          },
+          {
+            "rational": "-257221482/33815305",
+            "sqrt6_coefficient": "192584098/33815305"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "-237/239",
+            "sqrt6_coefficient": "326/239"
+          },
+          {
+            "rational": "1908/239",
+            "sqrt6_coefficient": "-652/239"
+          },
+          {
+            "rational": "6217662/551851",
+            "sqrt6_coefficient": "-1968042/551851"
+          },
+          {
+            "rational": "-42159/2309",
+            "sqrt6_coefficient": "11384/2309"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "-3",
+            "sqrt6_coefficient": "2"
+          },
+          {
+            "rational": "12",
+            "sqrt6_coefficient": "-4"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "2"
+          }
+        ]
+      ],
+      "source_stationary": [
+        {
+          "rational": "30249/711745",
+          "sqrt6_coefficient": "29051/711745"
+        },
+        {
+          "rational": "313977/1423490",
+          "sqrt6_coefficient": "-71307/1423490"
+        },
+        {
+          "rational": "216143/1423490",
+          "sqrt6_coefficient": "-64079/4270470"
+        },
+        {
+          "rational": "278401/1423490",
+          "sqrt6_coefficient": "-159433/4270470"
+        },
+        {
+          "rational": "554471/1423490",
+          "sqrt6_coefficient": "87709/1423490"
+        }
+      ],
+      "candidate_stationary": [
+        {
+          "rational": "30249/711745",
+          "sqrt6_coefficient": "29051/711745"
+        },
+        {
+          "rational": "313977/1423490",
+          "sqrt6_coefficient": "-71307/1423490"
+        },
+        {
+          "rational": "99023693677/105178829120",
+          "sqrt6_coefficient": "-8236345243/26294707280"
+        },
+        {
+          "rational": "-34472125941/105178829120",
+          "sqrt6_coefficient": "940926333/3286838410"
+        },
+        {
+          "rational": "701497/5693960",
+          "sqrt6_coefficient": "412671/11387920"
+        }
+      ],
+      "construction": {
+        "mode": "direct_residue_reassignment",
+        "epsilon": null,
+        "singleton_residue": [
+          [
+            {
+              "rational": "3",
+              "sqrt6_coefficient": "1/2"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "2"
+            }
+          ],
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "35/8"
+            },
+            {
+              "rational": "21",
+              "sqrt6_coefficient": "-7/2"
+            }
+          ]
+        ],
+        "t_interval": [
+          {
+            "rational": "3/5",
+            "sqrt6_coefficient": "4/15"
+          },
+          {
+            "rational": "16/5",
+            "sqrt6_coefficient": "8/15"
+          }
+        ],
+        "u_interval": [
+          {
+            "rational": "1/5",
+            "sqrt6_coefficient": "2/15"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "44/105"
+          }
+        ],
+        "t": {
+          "rational": "19/10",
+          "sqrt6_coefficient": "2/5"
+        },
+        "u": {
+          "rational": "1/10",
+          "sqrt6_coefficient": "29/105"
+        },
+        "P": [
+          [
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-19/10",
+              "sqrt6_coefficient": "-2/5"
+            },
+            {
+              "rational": "1/10",
+              "sqrt6_coefficient": "29/105"
+            }
+          ]
+        ],
+        "normalizing_d": [
+          {
+            "rational": "-6841/4618",
+            "sqrt6_coefficient": "6517/9236"
+          },
+          {
+            "rational": "11459/4618",
+            "sqrt6_coefficient": "-6517/9236"
+          }
+        ],
+        "normalized_P": [
+          [
+            {
+              "rational": "-6841/4618",
+              "sqrt6_coefficient": "6517/9236"
+            },
+            {
+              "rational": "11459/4618",
+              "sqrt6_coefficient": "-6517/9236"
+            }
+          ],
+          [
+            {
+              "rational": "10355/9236",
+              "sqrt6_coefficient": "-13819/18472"
+            },
+            {
+              "rational": "-42539/46180",
+              "sqrt6_coefficient": "170341/277080"
+            }
+          ]
+        ],
+        "paired_hidden_block": [
+          [
+            {
+              "rational": "597/2309",
+              "sqrt6_coefficient": "-11384/2309"
+            },
+            {
+              "rational": "-257221482/33815305",
+              "sqrt6_coefficient": "192584098/33815305"
+            }
+          ],
+          [
+            {
+              "rational": "6217662/551851",
+              "sqrt6_coefficient": "-1968042/551851"
+            },
+            {
+              "rational": "-42159/2309",
+              "sqrt6_coefficient": "11384/2309"
+            }
+          ]
+        ]
+      },
+      "source_ranks": {
+        "controllability": 4,
+        "observability": 5
+      },
+      "candidate_ranks": {
+        "controllability": 4,
+        "observability": 5
+      },
+      "minimal_linear_dimension": 4,
+      "equal_markov_parameters_orders": [
+        0,
+        9
+      ],
+      "exact_markov_parameters": [
+        [
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "2",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-40",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-11",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-33",
+              "sqrt6_coefficient": "22"
+            },
+            {
+              "rational": "1148",
+              "sqrt6_coefficient": "-88"
+            }
+          ],
+          [
+            {
+              "rational": "103",
+              "sqrt6_coefficient": "16"
+            },
+            {
+              "rational": "192",
+              "sqrt6_coefficient": "-64"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "1689",
+              "sqrt6_coefficient": "-946"
+            },
+            {
+              "rational": "-34276",
+              "sqrt6_coefficient": "4840"
+            }
+          ],
+          [
+            {
+              "rational": "-569",
+              "sqrt6_coefficient": "-544"
+            },
+            {
+              "rational": "-8352",
+              "sqrt6_coefficient": "2944"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-64050",
+              "sqrt6_coefficient": "32340"
+            },
+            {
+              "rational": "1039412",
+              "sqrt6_coefficient": "-201432"
+            }
+          ],
+          [
+            {
+              "rational": "-11039",
+              "sqrt6_coefficient": "15168"
+            },
+            {
+              "rational": "289632",
+              "sqrt6_coefficient": "-106176"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "2228988",
+              "sqrt6_coefficient": "-1052912"
+            },
+            {
+              "rational": "-31962820",
+              "sqrt6_coefficient": "7591112"
+            }
+          ],
+          [
+            {
+              "rational": "685885",
+              "sqrt6_coefficient": "-430016"
+            },
+            {
+              "rational": "-9548736",
+              "sqrt6_coefficient": "3602432"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-75345429",
+              "sqrt6_coefficient": "34065566"
+            },
+            {
+              "rational": "995887364",
+              "sqrt6_coefficient": "-272639000"
+            }
+          ],
+          [
+            {
+              "rational": "-26322761",
+              "sqrt6_coefficient": "12909200"
+            },
+            {
+              "rational": "311805504",
+              "sqrt6_coefficient": "-120127040"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "2517572937",
+              "sqrt6_coefficient": "-1105355058"
+            },
+            {
+              "rational": "-31387213204",
+              "sqrt6_coefficient": "9523904136"
+            }
+          ],
+          [
+            {
+              "rational": "913722223",
+              "sqrt6_coefficient": "-405114144"
+            },
+            {
+              "rational": "-10181403168",
+              "sqrt6_coefficient": "3982775424"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-83651350686",
+              "sqrt6_coefficient": "35996845084"
+            },
+            {
+              "rational": "998642358356",
+              "sqrt6_coefficient": "-326846123416"
+            }
+          ],
+          [
+            {
+              "rational": "-30711846335",
+              "sqrt6_coefficient": "13031766400"
+            },
+            {
+              "rational": "332969630304",
+              "sqrt6_coefficient": "-131706220480"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "2770530106452",
+              "sqrt6_coefficient": "-1175517128368"
+            },
+            {
+              "rational": "-32015910421444",
+              "sqrt6_coefficient": "11083221808648"
+            }
+          ],
+          [
+            {
+              "rational": "1019651953957",
+              "sqrt6_coefficient": "-424241015296"
+            },
+            {
+              "rational": "-10904742637632",
+              "sqrt6_coefficient": "4348614939904"
+            }
+          ]
+        ]
+      ],
+      "source_entropy_numeric": 0.06476235202450442,
+      "candidate_entropy_numeric": 0.37922089521223074,
+      "all_exact_checks_passed": true
+    },
+    {
+      "name": "fast_coincidence",
+      "a": {
+        "rational": "3",
+        "sqrt6_coefficient": "0"
+      },
+      "b": {
+        "rational": "6",
+        "sqrt6_coefficient": "2"
+      },
+      "escape_sum": {
+        "rational": "9",
+        "sqrt6_coefficient": "2"
+      },
+      "source_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "8",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "11",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "4",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "6",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "5",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "6",
+            "sqrt6_coefficient": "2"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "-2"
+          }
+        ]
+      ],
+      "candidate_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-361747/9937",
+            "sqrt6_coefficient": "303439/19874"
+          },
+          {
+            "rational": "451180/9937",
+            "sqrt6_coefficient": "-156688/9937"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "1/2"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-669833/19874",
+            "sqrt6_coefficient": "1406097/79496"
+          },
+          {
+            "rational": "479003/9937",
+            "sqrt6_coefficient": "-184457/9937"
+          },
+          {
+            "rational": "7/2",
+            "sqrt6_coefficient": "7/8"
+          }
+        ],
+        [
+          {
+            "rational": "56289/31055",
+            "sqrt6_coefficient": "-6636/31055"
+          },
+          {
+            "rational": "223206/31055",
+            "sqrt6_coefficient": "68746/31055"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "-2"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "1/4"
+          },
+          {
+            "rational": "6",
+            "sqrt6_coefficient": "7/4"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "-2"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "-3",
+            "sqrt6_coefficient": "2"
+          },
+          {
+            "rational": "12",
+            "sqrt6_coefficient": "-4"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "2"
+          }
+        ]
+      ],
+      "source_stationary": [
+        {
+          "rational": "28944/165793",
+          "sqrt6_coefficient": "-2363/331586"
+        },
+        {
+          "rational": "89385/663172",
+          "sqrt6_coefficient": "19043/663172"
+        },
+        {
+          "rational": "99571/663172",
+          "sqrt6_coefficient": "9869/663172"
+        },
+        {
+          "rational": "93089/663172",
+          "sqrt6_coefficient": "15707/663172"
+        },
+        {
+          "rational": "265351/663172",
+          "sqrt6_coefficient": "-39893/663172"
+        }
+      ],
+      "candidate_stationary": [
+        {
+          "rational": "28944/165793",
+          "sqrt6_coefficient": "-2363/331586"
+        },
+        {
+          "rational": "89385/663172",
+          "sqrt6_coefficient": "19043/663172"
+        },
+        {
+          "rational": "-3130695701/1387355824",
+          "sqrt6_coefficient": "2729795787/2774711648"
+        },
+        {
+          "rational": "957929787/346838956",
+          "sqrt6_coefficient": "-187252495/173419478"
+        },
+        {
+          "rational": "491655/2652688",
+          "sqrt6_coefficient": "394535/5305376"
+        }
+      ],
+      "construction": {
+        "mode": "direct_residue_reassignment",
+        "epsilon": null,
+        "singleton_residue": [
+          [
+            {
+              "rational": "3",
+              "sqrt6_coefficient": "1/2"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "2"
+            }
+          ],
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "35/8"
+            },
+            {
+              "rational": "21",
+              "sqrt6_coefficient": "-7/2"
+            }
+          ]
+        ],
+        "t_interval": [
+          {
+            "rational": "-2/5",
+            "sqrt6_coefficient": "4/15"
+          },
+          {
+            "rational": "16/5",
+            "sqrt6_coefficient": "8/15"
+          }
+        ],
+        "u_interval": [
+          {
+            "rational": "1/3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "44/105"
+          }
+        ],
+        "t": {
+          "rational": "7/5",
+          "sqrt6_coefficient": "2/5"
+        },
+        "u": {
+          "rational": "1/6",
+          "sqrt6_coefficient": "22/105"
+        },
+        "P": [
+          [
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-7/5",
+              "sqrt6_coefficient": "-2/5"
+            },
+            {
+              "rational": "1/6",
+              "sqrt6_coefficient": "22/105"
+            }
+          ]
+        ],
+        "normalizing_d": [
+          {
+            "rational": "-57599/9937",
+            "sqrt6_coefficient": "24584/9937"
+          },
+          {
+            "rational": "67536/9937",
+            "sqrt6_coefficient": "-24584/9937"
+          }
+        ],
+        "normalized_P": [
+          [
+            {
+              "rational": "-57599/9937",
+              "sqrt6_coefficient": "24584/9937"
+            },
+            {
+              "rational": "67536/9937",
+              "sqrt6_coefficient": "-24584/9937"
+            }
+          ],
+          [
+            {
+              "rational": "21637/9937",
+              "sqrt6_coefficient": "-11378/9937"
+            },
+            {
+              "rational": "-98248/49685",
+              "sqrt6_coefficient": "150796/149055"
+            }
+          ]
+        ],
+        "paired_hidden_block": [
+          [
+            {
+              "rational": "-9",
+              "sqrt6_coefficient": "-2"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-9",
+              "sqrt6_coefficient": "-2"
+            }
+          ]
+        ]
+      },
+      "source_ranks": {
+        "controllability": 5,
+        "observability": 5
+      },
+      "candidate_ranks": {
+        "controllability": 5,
+        "observability": 5
+      },
+      "minimal_linear_dimension": 5,
+      "equal_markov_parameters_orders": [
+        0,
+        9
+      ],
+      "exact_markov_parameters": [
+        [
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "2",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-40",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-11",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "33",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "1016",
+              "sqrt6_coefficient": "44"
+            }
+          ],
+          [
+            {
+              "rational": "151",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "96",
+              "sqrt6_coefficient": "32"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-1215",
+              "sqrt6_coefficient": "-66"
+            },
+            {
+              "rational": "-27280",
+              "sqrt6_coefficient": "-2420"
+            }
+          ],
+          [
+            {
+              "rational": "-2249",
+              "sqrt6_coefficient": "-48"
+            },
+            {
+              "rational": "-4128",
+              "sqrt6_coefficient": "-1472"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "36534",
+              "sqrt6_coefficient": "3960"
+            },
+            {
+              "rational": "752312",
+              "sqrt6_coefficient": "99132"
+            }
+          ],
+          [
+            {
+              "rational": "36625",
+              "sqrt6_coefficient": "2448"
+            },
+            {
+              "rational": "139584",
+              "sqrt6_coefficient": "51936"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-1052112",
+              "sqrt6_coefficient": "-166188"
+            },
+            {
+              "rational": "-21094912",
+              "sqrt6_coefficient": "-3617092"
+            }
+          ],
+          [
+            {
+              "rational": "-663347",
+              "sqrt6_coefficient": "-88464"
+            },
+            {
+              "rational": "-4397952",
+              "sqrt6_coefficient": "-1681792"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "30138309",
+              "sqrt6_coefficient": "6059040"
+            },
+            {
+              "rational": "598875560",
+              "sqrt6_coefficient": "124211404"
+            }
+          ],
+          [
+            {
+              "rational": "13551031",
+              "sqrt6_coefficient": "2836464"
+            },
+            {
+              "rational": "135056352",
+              "sqrt6_coefficient": "52581280"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-867509943",
+              "sqrt6_coefficient": "-206022474"
+            },
+            {
+              "rational": "-17174922640",
+              "sqrt6_coefficient": "-4111772916"
+            }
+          ],
+          [
+            {
+              "rational": "-311860625",
+              "sqrt6_coefficient": "-86872320"
+            },
+            {
+              "rational": "-4104789792",
+              "sqrt6_coefficient": "-1617549888"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "25145063250",
+              "sqrt6_coefficient": "6737788752"
+            },
+            {
+              "rational": "496797896312",
+              "sqrt6_coefficient": "132864831260"
+            }
+          ],
+          [
+            {
+              "rational": "7926744769",
+              "sqrt6_coefficient": "2618136960"
+            },
+            {
+              "rational": "124206138816",
+              "sqrt6_coefficient": "49359356768"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-733765911192",
+              "sqrt6_coefficient": "-215218479180"
+            },
+            {
+              "rational": "-14475842658496",
+              "sqrt6_coefficient": "-4221896543396"
+            }
+          ],
+          [
+            {
+              "rational": "-216192763259",
+              "sqrt6_coefficient": "-78586324896"
+            },
+            {
+              "rational": "-3751015613568",
+              "sqrt6_coefficient": "-1499740818944"
+            }
+          ]
+        ]
+      ],
+      "source_entropy_numeric": 0.8521473750593244,
+      "candidate_entropy_numeric": 1.70355394813969,
+      "all_exact_checks_passed": true
+    },
+    {
+      "name": "slow_line_outside_direct_region",
+      "a": {
+        "rational": "1/10",
+        "sqrt6_coefficient": "0"
+      },
+      "b": {
+        "rational": "89/10",
+        "sqrt6_coefficient": "-2"
+      },
+      "escape_sum": {
+        "rational": "9",
+        "sqrt6_coefficient": "-2"
+      },
+      "source_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "8",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "11",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "3",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-7",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "4",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "6",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "5",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "1/10",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "89/10",
+            "sqrt6_coefficient": "-2"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "2"
+          }
+        ]
+      ],
+      "candidate_generator": [
+        [
+          {
+            "rational": "-11",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-608799/23302775",
+            "sqrt6_coefficient": "1827332/69908325"
+          },
+          {
+            "rational": "49078571/23302775",
+            "sqrt6_coefficient": "633704/23302775"
+          },
+          {
+            "rational": "198/25",
+            "sqrt6_coefficient": "-4/75"
+          }
+        ],
+        [
+          {
+            "rational": "2",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-20",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "163563979/23302775",
+            "sqrt6_coefficient": "6767849/93211100"
+          },
+          {
+            "rational": "1695001/18642220",
+            "sqrt6_coefficient": "40579/55926660"
+          },
+          {
+            "rational": "1089/100",
+            "sqrt6_coefficient": "-11/150"
+          }
+        ],
+        [
+          {
+            "rational": "46563/1194359",
+            "sqrt6_coefficient": "-242/1194359"
+          },
+          {
+            "rational": "7073028/1194359",
+            "sqrt6_coefficient": "484/1194359"
+          },
+          {
+            "rational": "-10143423/932111",
+            "sqrt6_coefficient": "-61002/932111"
+          },
+          {
+            "rational": "5478639464256/1113275161849",
+            "sqrt6_coefficient": "72632716856/1113275161849"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "4743/1559",
+            "sqrt6_coefficient": "-62/1559"
+          },
+          {
+            "rational": "-132/1559",
+            "sqrt6_coefficient": "124/1559"
+          },
+          {
+            "rational": "6045338604/1453161049",
+            "sqrt6_coefficient": "-152893000/1453161049"
+          },
+          {
+            "rational": "-6634575/932111",
+            "sqrt6_coefficient": "61002/932111"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          }
+        ],
+        [
+          {
+            "rational": "297/5879",
+            "sqrt6_coefficient": "2/5879"
+          },
+          {
+            "rational": "52614/5879",
+            "sqrt6_coefficient": "-11760/5879"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "0",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "-9",
+            "sqrt6_coefficient": "2"
+          }
+        ]
+      ],
+      "source_stationary": [
+        {
+          "rational": "22541333/278699251",
+          "sqrt6_coefficient": "-1898740/278699251"
+        },
+        {
+          "rational": "54920506/278699251",
+          "sqrt6_coefficient": "-5279220/278699251"
+        },
+        {
+          "rational": "127269844/836097753",
+          "sqrt6_coefficient": "-11923420/836097753"
+        },
+        {
+          "rational": "151128182/836097753",
+          "sqrt6_coefficient": "-14414300/836097753"
+        },
+        {
+          "rational": "108438070/278699251",
+          "sqrt6_coefficient": "15957200/278699251"
+        }
+      ],
+      "candidate_stationary": [
+        {
+          "rational": "22541333/278699251",
+          "sqrt6_coefficient": "-1898740/278699251"
+        },
+        {
+          "rational": "54920506/278699251",
+          "sqrt6_coefficient": "-5279220/278699251"
+        },
+        {
+          "rational": "3621995246926103/19483397816164575",
+          "sqrt6_coefficient": "-680058408055601/38966795632329150"
+        },
+        {
+          "rational": "5971760393485949/38966795632329150",
+          "sqrt6_coefficient": "-424038377950829/38966795632329150"
+        },
+        {
+          "rational": "1067154013/2786992510",
+          "sqrt6_coefficient": "226120613/4180488765"
+        }
+      ],
+      "construction": {
+        "mode": "slow_residue_redistribution",
+        "epsilon": {
+          "rational": "1/20",
+          "sqrt6_coefficient": "0"
+        },
+        "singleton_residue": [
+          [
+            {
+              "rational": "2/5",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "1788/25",
+              "sqrt6_coefficient": "-408/25"
+            }
+          ],
+          [
+            {
+              "rational": "11/20",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "4917/50",
+              "sqrt6_coefficient": "-561/25"
+            }
+          ]
+        ],
+        "t_interval": [
+          {
+            "rational": "7/5",
+            "sqrt6_coefficient": "2/5"
+          },
+          {
+            "rational": "39/25",
+            "sqrt6_coefficient": "32/75"
+          }
+        ],
+        "u_interval": [
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "0"
+          },
+          {
+            "rational": "1",
+            "sqrt6_coefficient": "11/525"
+          }
+        ],
+        "t": {
+          "rational": "37/25",
+          "sqrt6_coefficient": "31/75"
+        },
+        "u": {
+          "rational": "1",
+          "sqrt6_coefficient": "11/1050"
+        },
+        "P": [
+          [
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-37/25",
+              "sqrt6_coefficient": "-31/75"
+            },
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "11/1050"
+            }
+          ]
+        ],
+        "normalizing_d": [
+          {
+            "rational": "-608799/4660555",
+            "sqrt6_coefficient": "1827332/13981665"
+          },
+          {
+            "rational": "308182/932111",
+            "sqrt6_coefficient": "7378/2796333"
+          }
+        ],
+        "normalized_P": [
+          [
+            {
+              "rational": "-608799/4660555",
+              "sqrt6_coefficient": "1827332/13981665"
+            },
+            {
+              "rational": "308182/932111",
+              "sqrt6_coefficient": "7378/2796333"
+            }
+          ],
+          [
+            {
+              "rational": "-9143579/69908325",
+              "sqrt6_coefficient": "-9747703/69908325"
+            },
+            {
+              "rational": "23125244/69908325",
+              "sqrt6_coefficient": "426593/69908325"
+            }
+          ]
+        ],
+        "paired_hidden_block": [
+          [
+            {
+              "rational": "-10143423/932111",
+              "sqrt6_coefficient": "-61002/932111"
+            },
+            {
+              "rational": "5478639464256/1113275161849",
+              "sqrt6_coefficient": "72632716856/1113275161849"
+            }
+          ],
+          [
+            {
+              "rational": "6045338604/1453161049",
+              "sqrt6_coefficient": "-152893000/1453161049"
+            },
+            {
+              "rational": "-6634575/932111",
+              "sqrt6_coefficient": "61002/932111"
+            }
+          ]
+        ]
+      },
+      "source_ranks": {
+        "controllability": 5,
+        "observability": 5
+      },
+      "candidate_ranks": {
+        "controllability": 5,
+        "observability": 5
+      },
+      "minimal_linear_dimension": 5,
+      "equal_markov_parameters_orders": [
+        0,
+        9
+      ],
+      "exact_markov_parameters": [
+        [
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "2",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "1",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "-40",
+              "sqrt6_coefficient": "0"
+            }
+          ],
+          [
+            {
+              "rational": "-11",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "0",
+              "sqrt6_coefficient": "0"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "11/10",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "5399/5",
+              "sqrt6_coefficient": "-44"
+            }
+          ],
+          [
+            {
+              "rational": "639/5",
+              "sqrt6_coefficient": "0"
+            },
+            {
+              "rational": "712/5",
+              "sqrt6_coefficient": "-32"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "61",
+              "sqrt6_coefficient": "11/5"
+            },
+            {
+              "rational": "-152031/5",
+              "sqrt6_coefficient": "12738/5"
+            }
+          ],
+          [
+            {
+              "rational": "-7649/5",
+              "sqrt6_coefficient": "8/5"
+            },
+            {
+              "rational": "-5984",
+              "sqrt6_coefficient": "7824/5"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-374613/100",
+              "sqrt6_coefficient": "-132"
+            },
+            {
+              "rational": "43567183/50",
+              "sqrt6_coefficient": "-541596/5"
+            }
+          ],
+          [
+            {
+              "rational": "470359/25",
+              "sqrt6_coefficient": "-408/5"
+            },
+            {
+              "rational": "4985652/25",
+              "sqrt6_coefficient": "-288912/5"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "13790909/100",
+              "sqrt6_coefficient": "83622/25"
+            },
+            {
+              "rational": "-631475318/25",
+              "sqrt6_coefficient": "102129496/25"
+            }
+          ],
+          [
+            {
+              "rational": "-5800431/25",
+              "sqrt6_coefficient": "33816/25"
+            },
+            {
+              "rational": "-156247996/25",
+              "sqrt6_coefficient": "48738928/25"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-4354117841/1000",
+              "sqrt6_coefficient": "-300566/25"
+            },
+            {
+              "rational": "369585051441/500",
+              "sqrt6_coefficient": "-3620108151/25"
+            }
+          ],
+          [
+            {
+              "rational": "335278204/125",
+              "sqrt6_coefficient": "730696/25"
+            },
+            {
+              "rational": "24048392282/125",
+              "sqrt6_coefficient": "-1585281336/25"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "32391262599/250",
+              "sqrt6_coefficient": "-1716022983/500"
+            },
+            {
+              "rational": "-2181117955693/100",
+              "sqrt6_coefficient": "1236270174243/250"
+            }
+          ],
+          [
+            {
+              "rational": "-2872478968/125",
+              "sqrt6_coefficient": "-392001666/125"
+            },
+            {
+              "rational": "-736961169372/125",
+              "sqrt6_coefficient": "253395890892/125"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "-37706608937767/10000",
+              "sqrt6_coefficient": "57036975189/250"
+            },
+            {
+              "rational": "3241810332730937/5000",
+              "sqrt6_coefficient": "-20598569491174/125"
+            }
+          ],
+          [
+            {
+              "rational": "-138983800257/1250",
+              "sqrt6_coefficient": "19102584042/125"
+            },
+            {
+              "rational": "112904160196367/625",
+              "sqrt6_coefficient": "-8025712010404/125"
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "rational": "1091157805566343/10000",
+              "sqrt6_coefficient": "-6594306748856/625"
+            },
+            {
+              "rational": "-24248916187032939/1250",
+              "sqrt6_coefficient": "3374009958103992/625"
+            }
+          ],
+          [
+            {
+              "rational": "1854297513994/125",
+              "sqrt6_coefficient": "-3738590340398/625"
+            },
+            {
+              "rational": "-3463543489454093/625",
+              "sqrt6_coefficient": "1263871521393036/625"
+            }
+          ]
+        ]
+      ],
+      "source_entropy_numeric": 1.8918506114907785,
+      "candidate_entropy_numeric": 2.2605179000694475,
+      "all_exact_checks_passed": true
+    }
+  ],
+  "scope": "Exact representative validation of the stated residue construction. No full theta-plane or topology classification and no novelty claim.",
+  "all_checks_passed": true
+}

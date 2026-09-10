@@ -1,0 +1,457 @@
+{
+  "executed_at": "2026-09-10T13:32:53.091223+00:00",
+  "seed": 20260910,
+  "environment": {
+    "python": "3.9.12",
+    "numpy": "2.0.1",
+    "scipy": "1.13.1",
+    "platform": "Windows-10-10.0.22631-SP0"
+  },
+  "script_sha256": {
+    "probe_theta_compatibility.py": "26323fcb1b2fc164d282b056e276c5652044ee9cfda31ade3361c6bfd314a31e",
+    "check_five_state_extensions.py": "4f5ba7179e1af63f2115fbfb6bf98d672d6e8105a4730e8ef58c873c2ab0368d",
+    "check_small_networks.py": "1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6",
+    "check_four_state_classification.py": "cbcc7efb6b46623574758af2706de3249419eca99112203fdc1c50ecb34d3d2c"
+  },
+  "parameter_bounds": [
+    -3,
+    3
+  ],
+  "max_iterations_per_start": 400,
+  "results": [
+    {
+      "case": "opening_control",
+      "runs": [
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.02709514619241971,
+          "hidden_determinant": 0.9918200043035521,
+          "parameters": [
+            -0.15304753014014677,
+            0.12498701779453218,
+            0.19355026217632537,
+            -0.04531694398349266,
+            -0.12070515354925768,
+            0.04164877580909148,
+            0.027095146192449193
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.027095146188943882,
+          "hidden_determinant": 0.9918200039407902,
+          "parameters": [
+            -0.1530475311000123,
+            0.1249870189612606,
+            0.19355026380085988,
+            -0.045316944170399366,
+            -0.12070515458299055,
+            0.04164877604914173,
+            0.027095146193020454
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.027095146190907162,
+          "hidden_determinant": 0.9918200029637854,
+          "parameters": [
+            -0.1530475336771911,
+            0.12498702209614346,
+            0.19355026816449913,
+            -0.04531694467135336,
+            -0.12070515735989358,
+            0.04164877669338438,
+            0.027095146192697366
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.02709514619173648,
+          "hidden_determinant": 0.9918200045667253,
+          "parameters": [
+            -0.1530475294461348,
+            0.12498701695027171,
+            0.19355026100117617,
+            -0.045316943848601875,
+            -0.12070515280141203,
+            0.041648775635599246,
+            0.02709514619257903
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.027095146190819704,
+          "hidden_determinant": 0.9918199995176556,
+          "parameters": [
+            -0.15304754277197613,
+            0.12498703315773006,
+            0.19355028356259252,
+            -0.04531694643975978,
+            -0.12070516715863382,
+            0.04164877896708149,
+            0.027095146192732275
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.02709514619111265,
+          "hidden_determinant": 0.9918200036022092,
+          "parameters": [
+            -0.15304753199214274,
+            0.1249870200467538,
+            0.1935502653116127,
+            -0.04531694434370565,
+            -0.12070515554441938,
+            0.04164877627211583,
+            0.02709514619255589
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.027095146192449782,
+          "hidden_determinant": 0.9918200037022135,
+          "parameters": [
+            -0.15304753172719143,
+            0.12498701972477795,
+            0.1935502648632909,
+            -0.045316944292079164,
+            -0.1207051552591437,
+            0.04164877620585418,
+            0.027095146192453547
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.02709514619073327,
+          "hidden_determinant": 0.9918200154528402,
+          "parameters": [
+            -0.15304750071597858,
+            0.12498698200709894,
+            0.19355021235930175,
+            -0.045316938262388626,
+            -0.12070512184751525,
+            0.04164876845307759,
+            0.027095146192522606
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.02709514618682728,
+          "hidden_determinant": 0.9918199884530468,
+          "parameters": [
+            -0.15304757197062394,
+            0.1249870686712966,
+            0.19355033299785224,
+            -0.04531695211635565,
+            -0.12070519861755673,
+            0.041648786266453526,
+            0.027095146191790567
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.02709514619139536,
+          "hidden_determinant": 0.9918200088186464,
+          "parameters": [
+            -0.15304751822404888,
+            0.12498700330148729,
+            0.19355024200186266,
+            -0.0453169416665631,
+            -0.12070514071105848,
+            0.04164877283017224,
+            0.02709514619224569
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.027095146115920198,
+          "hidden_determinant": 0.9918200055794019,
+          "parameters": [
+            1.0280605130704226,
+            -0.15304752673873284,
+            -0.04531694332093135,
+            0.8517666868961052,
+            1.079056374929832,
+            -0.12070514988894065,
+            0.027095146195487026
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.027095146150303735,
+          "hidden_determinant": 0.9918200517801492,
+          "parameters": [
+            -0.15304740484785304,
+            0.12498686540526063,
+            0.19355005005206039,
+            -0.04531691962536228,
+            -0.12070501856003393,
+            0.04164874448747078,
+            0.027095146204079962
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.02709514618696877,
+          "hidden_determinant": 0.9918200031256431,
+          "parameters": [
+            -0.15304753325301668,
+            0.12498702157935203,
+            0.19355026744559728,
+            -0.045316944589160565,
+            -0.12070515690233463,
+            0.0416487765874233,
+            0.02709514619338746
+          ]
+        }
+      ],
+      "best": {
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "minimum_offdiagonal": 0.027095146192449782,
+        "hidden_determinant": 0.9918200037022135,
+        "parameters": [
+          -0.15304753172719143,
+          0.12498701972477795,
+          0.1935502648632909,
+          -0.045316944292079164,
+          -0.1207051552591437,
+          0.04164877620585418,
+          0.027095146192453547
+        ]
+      }
+    },
+    {
+      "case": "isolated_target",
+      "runs": [
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.0,
+          "hidden_determinant": 1.0,
+          "parameters": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": -5.970294538627293e-12,
+          "hidden_determinant": 1.000000000002578,
+          "parameters": [
+            1.5433871783061278e-12,
+            -1.8143440839274817e-12,
+            -9.969557171696759e-13,
+            -1.1368729552216599e-12,
+            9.167231650549436e-14,
+            -2.6495133580212613e-13,
+            0.0
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": -1.1900594249362604e-11,
+          "hidden_determinant": 0.9999999999972767,
+          "parameters": [
+            -2.240301890841927e-12,
+            4.545318684300363e-12,
+            2.0169978682968413e-12,
+            2.0520713920474114e-13,
+            -2.3654163024945902e-12,
+            5.612182181655116e-13,
+            1.2071871423259346e-15
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": -2.2200622386734148e-11,
+          "hidden_determinant": 1.0000000000053204,
+          "parameters": [
+            1.6261157330587404e-12,
+            -5.6026232722423625e-12,
+            1.5684232063183045e-12,
+            -1.1624987948976338e-12,
+            -7.999315805286069e-14,
+            -1.670087720553113e-12,
+            4.440892092022122e-16
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": -1.3051548656646865e-11,
+          "hidden_determinant": 0.9999999999981868,
+          "parameters": [
+            -4.600639999119592e-13,
+            -6.79536354665974e-14,
+            4.401795408985742e-12,
+            -5.1279190120314e-14,
+            -2.8242098954064593e-12,
+            8.149482466265443e-13,
+            0.0
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": -1.4579525937158327e-14,
+          "hidden_determinant": 1.0000000000000013,
+          "parameters": [
+            1.5335004398887281e-15,
+            -4.1300863741764433e-16,
+            -3.839802314050686e-15,
+            5.766942965009171e-16,
+            1.1180991146542248e-15,
+            -5.77719013735794e-16,
+            0.0
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": -7.160599961639577e-12,
+          "hidden_determinant": 0.9999999999983665,
+          "parameters": [
+            1.234766089129418e-12,
+            -8.266552438247446e-14,
+            2.953080196547548e-13,
+            -1.6584551606487256e-14,
+            -1.2922143086522263e-13,
+            3.3189059991370953e-13,
+            5.881448472045062e-12
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": -8.965369415485464e-15,
+          "hidden_determinant": 0.9999999999999978,
+          "parameters": [
+            1.203699192174273e-15,
+            5.810580874799361e-16,
+            2.143167859221639e-16,
+            4.614559260893327e-16,
+            -1.7546748919551268e-16,
+            2.1606584645602457e-17,
+            2.494499936755918e-16
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": -8.84942012592594e-12,
+          "hidden_determinant": 1.000000000011186,
+          "parameters": [
+            -5.292921200843138e-12,
+            -4.25049658318085e-12,
+            3.463226609869394e-12,
+            -3.2749791772913563e-12,
+            -2.2279323021596267e-12,
+            3.9713558112453243e-13,
+            1.2744024493499626e-12
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.28095340174589434,
+          "hidden_determinant": 1.1134066036150834,
+          "parameters": [
+            -0.3902842473786603,
+            0.5194494896116647,
+            0.6229388774348188,
+            -0.4126633472259025,
+            -0.1825895142235121,
+            0.13269023706290203,
+            0.28095340174589745
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": -3.173996219332519e-13,
+          "hidden_determinant": 1.0000000000000018,
+          "parameters": [
+            1.964069820937986e-14,
+            5.127338291428151e-16,
+            -1.2255943048710452e-13,
+            2.1044739038752625e-14,
+            7.932609453330227e-14,
+            -1.9048759994557264e-17,
+            2.742032171337459e-15
+          ]
+        },
+        {
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "minimum_offdiagonal": 0.28095340171052124,
+          "hidden_determinant": 1.1134066046365985,
+          "parameters": [
+            0.8708347577631125,
+            -0.39028424776196186,
+            -0.4126633479348434,
+            0.7897244705028983,
+            1.0498992770303484,
+            -0.18258951422271608,
+            0.2809534017443966
+          ]
+        },
+        {
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "minimum_offdiagonal": -39.997026205025705,
+          "hidden_determinant": 0.0588839389381886,
+          "parameters": [
+            0.08333442593400653,
+            -0.03423223534388895,
+            -0.4643684657580027,
+            -0.021136766716482396,
+            0.2941793846884587,
+            0.6923699688894794,
+            2.0312489832966534e-13
+          ]
+        }
+      ],
+      "best": {
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "minimum_offdiagonal": 0.28095340174589434,
+        "hidden_determinant": 1.1134066036150834,
+        "parameters": [
+          -0.3902842473786603,
+          0.5194494896116647,
+          0.6229388774348188,
+          -0.4126633472259025,
+          -0.1825895142235121,
+          0.13269023706290203,
+          0.28095340174589745
+        ]
+      }
+    }
+  ],
+  "warnings": [
+    "Values in x were outside bounds during a minimize step, clipping to bounds"
+  ],
+  "limitation": "Only a bounded numerical search for complete support; no absence, global uniqueness, or entropy-bound certificate."
+}

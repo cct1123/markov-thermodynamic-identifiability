@@ -1,0 +1,247 @@
+{
+  "executed_at": "2026-09-10T13:32:53.949146+00:00",
+  "input": {
+    "a": 100,
+    "b": 100
+  },
+  "seed": 20260911,
+  "environment": {
+    "python": "3.9.12",
+    "numpy": "2.0.1",
+    "scipy": "1.13.1"
+  },
+  "script_sha256": {
+    "probe_theta_fast_case.py": "9ef133ab1c5fcec6a35df7e07e980a1d3040cbbf15c266218c060069868de9a3",
+    "check_five_state_extensions.py": "4f5ba7179e1af63f2115fbfb6bf98d672d6e8105a4730e8ef58c873c2ab0368d",
+    "check_small_networks.py": "1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6",
+    "check_four_state_classification.py": "cbcc7efb6b46623574758af2706de3249419eca99112203fdc1c50ecb34d3d2c",
+    "probe_theta_compatibility.py": "26323fcb1b2fc164d282b056e276c5652044ee9cfda31ade3361c6bfd314a31e"
+  },
+  "local_lp": {
+    "success": false,
+    "status": 2,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)"
+  },
+  "exact_local_isolation": {
+    "tangent_rank": 6,
+    "positive_left_null_vector": [
+      "3",
+      "1",
+      "1",
+      "53200/109371",
+      "7/3",
+      "133900/109371",
+      "1983/36457",
+      "4577/36457"
+    ],
+    "annihilation_verified": true,
+    "exit_chart_determinant": -882
+  },
+  "search_bounds": [
+    -3,
+    3
+  ],
+  "determinant_floor": 0.0001,
+  "max_iterations": 400,
+  "results": [
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "minimum_offdiagonal": 0.0,
+      "hidden_determinant": 1.0,
+      "parameters": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "minimum_offdiagonal": -1.369970180387109e-07,
+      "hidden_determinant": 1.0000000003606793,
+      "parameters": [
+        -1.6597084109114254e-10,
+        -5.230268103633567e-11,
+        1.4575405376406655e-09,
+        -7.234682780523515e-10,
+        -1.1762474552002223e-09,
+        2.9976931465938035e-10,
+        8.044637359933055e-10
+      ]
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "minimum_offdiagonal": -6.119117900108333e-13,
+      "hidden_determinant": 0.9999999999999847,
+      "parameters": [
+        1.3583107488961062e-14,
+        5.304131450770578e-15,
+        -3.160878216294568e-15,
+        1.015289913209808e-15,
+        -9.196375439275646e-16,
+        -6.594891049901205e-16,
+        0.0
+      ]
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "minimum_offdiagonal": -1.128139575008878e-12,
+      "hidden_determinant": 1.000000000000046,
+      "parameters": [
+        -4.131768413524742e-14,
+        8.686307998660143e-17,
+        -8.835939633668535e-15,
+        -5.45366721383941e-15,
+        5.7405729468916375e-15,
+        4.041799251755869e-15,
+        0.0
+      ]
+    },
+    {
+      "success": false,
+      "message": "Iteration limit reached",
+      "minimum_offdiagonal": -1.85692008546948e-07,
+      "hidden_determinant": 0.9999999982140151,
+      "parameters": [
+        5.713655304431115e-10,
+        -7.612195437192013e-10,
+        9.409783029601877e-10,
+        9.457344265418874e-10,
+        9.853530675169154e-10,
+        -8.962266990656995e-10,
+        5.747390129881482e-08
+      ]
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "minimum_offdiagonal": -2.929460611658406e-11,
+      "hidden_determinant": 1.0000000000003157,
+      "parameters": [
+        -4.296528452398651e-14,
+        -1.5041252054103682e-13,
+        -7.814007008043514e-14,
+        -6.624741304226149e-14,
+        -9.93890221443927e-14,
+        1.2117985033010286e-13,
+        2.6301218450292245e-13
+      ]
+    },
+    {
+      "success": false,
+      "message": "Iteration limit reached",
+      "minimum_offdiagonal": -1.8036215834118886e-06,
+      "hidden_determinant": 1.000000013177789,
+      "parameters": [
+        -7.539913507194305e-09,
+        6.2923923035525475e-09,
+        -1.6783937648346384e-08,
+        -1.0028837586067335e-09,
+        9.437972385462229e-09,
+        -3.581419464647737e-09,
+        6.678195307477595e-08
+      ]
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "minimum_offdiagonal": -3.4459244024514035e-12,
+      "hidden_determinant": 1.0000000000000777,
+      "parameters": [
+        -7.102828834125336e-14,
+        -1.7951574572420516e-14,
+        -5.475255938552546e-15,
+        4.682372506348119e-15,
+        1.0028684876391112e-14,
+        2.207685469121625e-15,
+        0.0
+      ]
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "minimum_offdiagonal": -1.4276099919350576e-11,
+      "hidden_determinant": 1.0000000000009255,
+      "parameters": [
+        -9.823100070537133e-13,
+        -3.383353961926792e-14,
+        2.3449464349053166e-14,
+        -4.6640188707623916e-14,
+        7.29105314616262e-14,
+        4.08734694509053e-14,
+        0.0
+      ]
+    },
+    {
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "minimum_offdiagonal": -4.738691081628607e-07,
+      "hidden_determinant": 1.0000000006886,
+      "parameters": [
+        3.150623740634755e-09,
+        1.0000000006155438,
+        1.0000000015669166,
+        -2.6094235975172875e-09,
+        2.5291549546023573e-09,
+        0.9999999985061397,
+        2.6349036711544755e-08
+      ]
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "minimum_offdiagonal": -2.5981773567780018e-12,
+      "hidden_determinant": 1.0000000000000036,
+      "parameters": [
+        -1.1213573756749512e-15,
+        1.139520571236652e-14,
+        -4.504084764831347e-16,
+        -1.4048430610263875e-14,
+        8.977369304974904e-16,
+        -3.756349154200038e-16,
+        0.0
+      ]
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "minimum_offdiagonal": -6.002512331579833e-13,
+      "hidden_determinant": 1.0000000000000018,
+      "parameters": [
+        -2.7591827545907566e-15,
+        -6.126163880189123e-16,
+        2.621030697254764e-15,
+        -1.8079664095211038e-15,
+        3.1787910407886167e-15,
+        -2.6510875428440486e-15,
+        5.0670842660670664e-15
+      ]
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "minimum_offdiagonal": -1.5161267043799113e-12,
+      "hidden_determinant": 0.9999999999999691,
+      "parameters": [
+        4.667683331305463e-15,
+        4.379925510390617e-17,
+        1.1302123103006443e-14,
+        1.482220335070852e-14,
+        -9.270777162539375e-17,
+        -1.0473729498146561e-16,
+        2.913900246685882e-15
+      ]
+    }
+  ],
+  "warnings": [
+    "Values in x were outside bounds during a minimize step, clipping to bounds"
+  ],
+  "limitation": "Bounded numerical probe; failure does not prove global impossibility, uniqueness or bounded entropy."
+}

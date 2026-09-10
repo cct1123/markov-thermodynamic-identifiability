@@ -248,7 +248,9 @@ Continuity and `sigma(0)=0` show that this particular minimal fixed-diamond fibe
 
 The scalar hidden block should not be described as a repeated pole of the full observed transfer function. In this example the four eigenvalues of the killed generator are `(-7+sqrt(37))/2`, `(-7-sqrt(37))/2`, `(-7+sqrt(5))/2`, and `(-7-sqrt(5))/2`, all distinct. The degeneracy is in the hidden escape block, while the full kernel remains of minimal dimension four.
 
-## What remains unproved
+## Scope at the initial checkpoint
+
+**Follow-up:** the four-state question posed below has since been resolved for fixed and unknown topology, including nonminimal realizations. See [the extension](nonminimal-four-state-audit.md), [the observable criterion](observable-four-state-criterion.md), and [E023–E030](../evidence/RECORDS.md#e023). The following paragraphs preserve the scope and open question of this initial note; they are not the current research queue. Added states are treated separately by [state splitting](state-splitting-audit.md).
 
 The orbit theorem gives a complete parameterization only for minimal models at their fixed dimension, and the diamond classification assumes all five specified undirected links are present with positive rates. It does not classify other four-state topologies, larger cardinalities, unknown observed-edge incidence, nonminimal realizations with additional hidden states, or physically imposed rate bounds and channel constraints.
 

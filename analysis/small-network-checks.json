@@ -1,12 +1,12 @@
 {
-  "executed_at": "2026-09-10T04:36:46.881935+00:00",
+  "executed_at": "2026-09-10T13:31:41.379392+00:00",
   "environment": {
     "python": "3.9.12",
     "numpy": "2.0.1",
     "scipy": "1.13.1",
     "platform": "Windows-10-10.0.22631-SP0"
   },
-  "script_sha256": "9b1b1007d17fa3fa55e50cb94135067cfe02c31b3e63415e0ad7926b9d6e39c4",
+  "script_sha256": "1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6",
   "inputs": "Exact rational rates embedded in this script; no random sampling.",
   "checks": {
     "three_state_cases": 4,
@@ -23,6 +23,9 @@
     "observability_rank": 4,
     "numerical_time_grid_points": 66,
     "negative_controls": 2
+  },
+  "generator_negative_controls": {
+    "disconnected_positive_stationary_rejected": true
   },
   "lumpable_family": [
     {
