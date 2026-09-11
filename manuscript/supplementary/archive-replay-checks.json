@@ -1,0 +1,62 @@
+{
+  "executed_at_utc": "2026-09-11T02:30:00.430519+00:00",
+  "method": "Extracted the complete root-relative archive into a fresh directory, replayed its science and rebuilt its PDF using the same installed environment and cached TeX resources. Separate output directory; not an independently provisioned operating system.",
+  "source_archive_sha256": "bd6a8a8fba373624b50cf12b19bff707480bc42addd6d1d5ae0dc5b38656d1f4",
+  "source_archive_note": "Pre-handoff archive tested before final state, record, map and readiness documentation updates; the listed scientific/TeX source payloads are unchanged in the final archive. Final ZIP integrity and every payload SHA are verified by package.py.",
+  "commands_from_extracted_root": [
+    "python -B manuscript/scripts/reproduce.py",
+    "python -B manuscript/scripts/check_table_bounds.py",
+    "python -B analysis/manuscript-math-independent-check.py",
+    "python -B manuscript/scripts/build.py --tectonic /path/to/tectonic --offline"
+  ],
+  "environment": {
+    "python": "3.9.12",
+    "platform": "Windows-10-10.0.22631-SP0",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "numpy": "2.0.1",
+    "scipy": "1.13.1",
+    "matplotlib": "3.9.4"
+  },
+  "build_engine": "Tectonic 0.17.0",
+  "scientific_replay_count": 15,
+  "all_replay_assertions_passed": true,
+  "all_historical_scientific_payloads_identical": true,
+  "protected_historical_json_count": 22,
+  "historical_outputs_unchanged": true,
+  "all_12_table_bounds_certified": true,
+  "independent_math_checks_passed": true,
+  "build_validation": {
+    "compiled": true,
+    "no_undefined_references_or_citations": true,
+    "no_overfull_boxes": true
+  },
+  "rebuilt_pdf_byte_identical": true,
+  "pdf_sha256": "720e007d87fdf8c9a3ea740d93f6885a5d6c16531db805e371b8578b61754a3b",
+  "unchanged_scientific_and_tex_source_sha256": {
+    "manuscript/scripts/reproduce.py": "c27f1e09b619c2dc70cd45131ec76612a9eacd91ca183a14b9d6c33aee691adf",
+    "manuscript/scripts/check_table_bounds.py": "1ba6657dc734a84bedfc767abb89e3611ebf0479752d91793ea2920c03ae10c8",
+    "manuscript/scripts/build.py": "a1043e66e24499e41a1c96461b803fa43cfefaac78a5e4fec3fc30169ce54796",
+    "analysis/manuscript-math-independent-check.py": "c13ebb957bd22313619b3a6e70a5777ddf35da33365a41cc3a3e3c2a67862f90",
+    "manuscript/main.tex": "e2ccb71f0fab5f6bfb7f10bad5020c4941e62104da19841f4ec7372b99804283",
+    "manuscript/references.bib": "ddcbc047548c952ba5b272a4ad801733260c84dc8500e6cc719fe0f891dd2533",
+    "manuscript/supplementary/proofs.tex": "a1c9143bf6215a1e0cccd12c31003b84f520da5a7001f1c7e262f5f4ac52f7cf",
+    "analysis/check_small_networks.py": "1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6",
+    "analysis/check_four_state_classification.py": "cbcc7efb6b46623574758af2706de3249419eca99112203fdc1c50ecb34d3d2c",
+    "analysis/check_observable_criterion.py": "40af86e70e5f3a522d8f2a92196a13e59879b706694a5b84a965c625012af51b",
+    "analysis/check_state_splitting.py": "9d925a943330513022a690111761336ff9cb2835916a026405a373a96653bc27",
+    "analysis/check_five_state_extensions.py": "4f5ba7179e1af63f2115fbfb6bf98d672d6e8105a4730e8ef58c873c2ab0368d",
+    "analysis/check_theta_residue_construction.py": "df7d9a893580d489ae94902b42e15337560d6926c6a50f681ec2fda9b4347b34",
+    "analysis/check_theta_fast_spectral.py": "192c0c5a37bdd40bf665f6346b639e02ad92cdd424010658d54afde5067c6c9b",
+    "analysis/check_balanced_boundary_witness.py": "5f21e13a8268273fdc2b3a937fed2f078a6736beb02cd7f19c9ad75ec675aa15",
+    "analysis/derive_balanced_path.py": "4fc6839878d804990cfa4a8bfa2346cf8fbf395d9967d33f277b0693310243a5",
+    "analysis/check_balanced_cone_bound.py": "f1247b3f17f9b3f641c3d041500009acce74e721ee2aa1cf316517afbadf2c9b",
+    "analysis/check_balanced_cone_sufficiency.py": "0d27522282f0012ecc76ec3b82b68f5946c7e5d05a8a91c99937303fb23e1e2e",
+    "analysis/check_balanced_fold.py": "74ea7faa7caa6ad20f0df0ce2ba16b197a283a79d4e058639a04a657a2f02c81",
+    "analysis/check_finite_precision_instability.py": "f4aaac3e9e4d6554250a8425c3f43c9cf6f1ec50f138400d1f9ebe92b4930747",
+    "analysis/check_three_state_precision.py": "026f0ea82f3df3e7ef3212bb705fb5ef6e04d128f64316404d416f46565529fd",
+    "analysis/check_publication_audit.py": "60aad165964932f88937dc2f5234b45e7677308bcff08874e701a6d7c233b563"
+  },
+  "all_checks_passed": true,
+  "limitation": "Archive replay verifies packaging and repeatability on the same runtime; it is not additional independent mathematical evidence or formal verification."
+}

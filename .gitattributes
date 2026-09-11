@@ -6,3 +6,18 @@ analysis/requirements-*.txt text eol=lf
 # Preserve the Windows bytes of the accepted baseline pins and solver queries.
 analysis/requirements.txt text eol=crlf
 analysis/capabilities/results/*.smt2 text eol=crlf
+
+# Historical JSON checksums were recorded from Windows CRLF checkouts.
+*.json text eol=crlf
+
+# These new artifacts contain recorded hashes of both LF and CRLF files.
+# Preserve their exact bytes instead of applying checkout conversion.
+knowledge/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+manuscript/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/publication-*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/manuscript-*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Matplotlib emits intentional separators in generated SVG path data.
+knowledge/views/parameter_geometry.svg -whitespace
+manuscript/figures/*.svg -whitespace
+.gitattributes text eol=lf
+.gitignore text eol=lf

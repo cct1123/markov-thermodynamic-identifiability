@@ -1,5 +1,7 @@
 # Theoretical research workflow
 
+The user-requested [knowledge atlas](../knowledge/README.md) is a derived visual interface to the existing claims and evidence. After a consequential theorem, falsification, assumption change or prior-work discovery, update the affected graph nodes and report mapping, review any stale-source warning, and rebuild. Keep proof and evidence records authoritative; scratch calculations do not require graph edits. The [schema](../knowledge/schema.md) and validator distinguish logical support, discovery history, numerical corroboration and saved provenance checks.
+
 Tool choice follows the consequential uncertainty. A small hand derivation may settle a four-state calculation; a polynomial counterexample may need elimination; a graph classification may need systematic support enumeration; a stable theorem may justify Lean. The layers in the [stack guide](research-stack.md) are available routes, not mandatory stages.
 
 ## From structure to a defensible claim

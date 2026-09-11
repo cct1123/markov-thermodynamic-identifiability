@@ -1,0 +1,1668 @@
+{
+  "nodes": [
+    {
+      "id": "theorem_t1",
+      "type": "Theorem",
+      "title": "T1 · Finite certificate and minimal orbit",
+      "status": "analytically_proved",
+      "summary": "Exact kernel equality has a finite certificate; minimal models differ by normalized hidden similarity.",
+      "intuition": "The data pin visible coordinates. Hidden coordinates may change, but physical positivity must still be checked.",
+      "statement": "Finite certificate and minimal orbit. Two models of dimensions n,n' have equal kernels iff R T^k B=R'T'^k B' for 0<=k<n+n'. This follows by Cayley–Hamilton on diag(T,T'). Define linear minimality by full reachability span{T^k Bv} and observability intersection ker(RT^k)={0}. Equivalent minimal realizations have the same dimension and are related by a unique invertible similarity. With the resolved pair fixed, the similarity is S=diag(I_2,U), U1=1, and\n\n\\[\nQ'=S^{-1}QS,\\qquad X'=XU,\\ H'=U^{-1}HU,\\ Y'=U^{-1}Y.\n\\]\n\nU need not be nonnegative. Physical offdiagonal positivity and reciprocal support must still be checked. The hidden block partition is Q=((A,X),(Y,H)). Invertibility of T and T1=-B1 prove normalization. See [compatibility proof](compatibility-orbit.md). This lemma is prior realization theory specialized to the prescribed event maps; semialgebraicity or similarity alone does not count F_C(D).",
+      "why_it_matters": "Turns the inverse problem into constraints on a finite-dimensional orbit without confusing coordinate equivalence with generator uniqueness.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_exact_kernel"
+      ],
+      "evidence": [
+        "proof_legacy_classifications"
+      ],
+      "independent_verification": [
+        "check_legacy_saved"
+      ],
+      "limitations": [
+        "Minimality is required for exhaustive similarity, not finite-jet equality or the forward similarity construction.",
+        "Signed similarities are allowed. Larger nonminimal models need not lie in the orbit.",
+        "Similarity and semialgebraicity alone do not count physical models."
+      ],
+      "falsification_attempts": [
+        "Stochastic-only similarity restrictions omit exact physical counterexamples."
+      ],
+      "novelty": {
+        "status": "established_machinery",
+        "summary": "Prior realization theory specialized to fixed resolved event maps; no broad novelty claim.",
+        "comparisons": [
+          "prior_realization_equivalence",
+          "prior_map_identifiability"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "2-exact-observation-and-realization-lemmas-established-machinery"
+        },
+        {
+          "path": "analysis/compatibility-orbit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e021"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "theorem_t2",
+      "type": "Theorem",
+      "title": "T2 · Three-state recovery from three Laplace arguments",
+      "status": "analytically_proved",
+      "summary": "Every irreducible three-state source has a locally rational rate inverse with no rate priors.",
+      "intuition": "Three bounded transform tests recover the hidden decay, then all physical rates; differentiation need not be continuous in TV.",
+      "statement": "Exact finite-Laplace inverse. For every Q0 in C_3 and any fixed 0<lambda1<lambda2<lambda3, the values of Psi-hat at these three arguments determine Q0 uniquely within C_<=3. On a neighborhood of those values, the inverse restricted to admissible data is rational with nonzero denominators and is locally Lipschitz. Consequently, for Q_n in C_<=3, weak convergence of their row laws to O(Q0) implies eventually N_n=3 and Q_n->Q0 entrywise. Under d_TV convergence the inverse is locally Lipschitz. Neither observed rates, trace, upper rate bounds nor strictly positive triangles are assumed beforehand.\n\nTo specify the inverse, write\n\n\\[\nQ=\\begin{pmatrix}-r-a&r&a\\\\s&-s-c&c\\\\b&d&-b-d\\end{pmatrix},\\quad h=b+d.\n\\]\n\nHere r,s>0, a,b>=0 with a=0 iff b=0, c,d>=0 with c=0 iff d=0, and a+c>0. Let P swap mark rows, F(lambda)=P Psi-hat(lambda), H(lambda)=F(lambda)^-1. Schur complementation gives\n\n\\[\nG_x=\\{(H1)_x-1\\}/\\lambda=1/r+(a/r)/(\\lambda+h),\\quad\nG_y=1/s+(c/s)/(\\lambda+h).\n\\]\n\nChoose a row G=u+v/(lambda+h) with v>0 at Q0. Its three differences give\n\n\\[\nR_0=\\frac{G_1-G_2}{G_2-G_3}\\frac{\\lambda_3-\\lambda_2}{\\lambda_2-\\lambda_1},\\quad\nh=\\frac{\\lambda_3-R_0\\lambda_1}{R_0-1}.\n\\]\n\nFor each row i set v_i=(G_i1-G_i2)(lambda1+h)(lambda2+h)/(lambda2-lambda1), u_i=G_i1-v_i/(lambda1+h). Then r=1/u_x,s=1/u_y,a=v_x/u_x,c=v_y/u_y. Fix the branch using the source entrance: if a0>0 use d=-r H_xy(lambda1)(lambda1+h)/a,b=h-d throughout its neighborhood; otherwise c0>0, and use b=-s H_yx(lambda1)(lambda1+h)/c,d=h-b throughout. Both leaves are covered without dividing by a newly opened entrance tending to zero. Two-state candidates have constant G rows and cannot approach the nonzero source differences. Full proof, including nonsingularity and weak-topology justification: [stability audit, Section 3](publication-stability-audit.md#3-new-exact-finite-laplace-inverse-remove-the-prior-rate-cap).",
+      "why_it_matters": "Separates stability of rate reconstruction from stability of entropy evaluation.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_cap_three"
+      ],
+      "evidence": [
+        "proof_stability"
+      ],
+      "independent_verification": [
+        "check_publication_independent"
+      ],
+      "limitations": [
+        "Both leaf orientations are covered by fixing the inverse branch using a positive source entrance.",
+        "No uniform condition number or minimality of three transform arguments is asserted.",
+        "A higher state cap invalidates the result. Observed rates, trace and upper bounds are recovered rather than assumed."
+      ],
+      "falsification_attempts": [
+        "Independent direct resolvent checks include both leaves, fast hidden exits and unequal scales.",
+        "The earlier sufficient rate cap was removed using bounded Laplace tests, not an invalid differentiation-continuity claim."
+      ],
+      "novelty": {
+        "status": "supporting_result",
+        "summary": "Useful physical-rate inverse; canonical inversion and HMM inverse-learning results are established antecedents.",
+        "comparisons": [
+          "prior_map_identifiability",
+          "prior_hmm_stability"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "3-three-state-identifiability-and-cap-free-continuity"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e060"
+        },
+        {
+          "path": "analysis/publication-stability-audit.md",
+          "anchor": "3-new-exact-finite-laplace-inverse-remove-the-prior-rate-cap"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "theorem_t2a",
+      "type": "Theorem",
+      "title": "T2a · Positive triangles have continuous entropy",
+      "status": "analytically_proved",
+      "summary": "A strictly positive three-state triangle has locally Lipschitz entropy in row TV.",
+      "intuition": "Nearby recovered rates stay positive, so stationary probabilities and logarithms vary smoothly.",
+      "statement": " At every complete Q0 in C_3, thermodynamic entropy is locally Lipschitz in d_TV and continuous under weak row-law convergence among C_<=3. At a tree, the generator inverse has the same regularity but entropy need not be locally bounded. The previous common-rate-cap proof of E058 is valid but its cap is unnecessary for joint-kernel data. For stationary d_H the saved sufficient common cap remains part of the proved positive result; its removal is open.\n\nSmall examples: all six rates one gives a stable equilibrium triangle. The unit tree x-y-h has r=s=c=d=1,a=b=0; its inverse is locally Lipschitz but T4 below defeats every entropy ceiling. C_2 itself has sigma identically zero. A C_2 source under the enlarged cap three is a different boundary; the rare-hidden-state example in [E058](../evidence/RECORDS.md#e058) is unstable. Enlarging the cap above three invalidates T2a by hidden-state splitting. No claim of minimality of the number three Laplace arguments is made.",
+      "why_it_matters": "Provides the stable regime in the all-N local-ceiling classification.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_cap_three",
+        "assume_positive_triangle"
+      ],
+      "evidence": [
+        "theorem_t2",
+        "proof_stability"
+      ],
+      "independent_verification": [
+        "check_publication_independent"
+      ],
+      "limitations": [
+        "At a tree the same rate inverse is regular but entropy can be unbounded nearby.",
+        "Cap-free continuity from a single stationary finite window is open; the saved positive window result assumes a common rate cap.",
+        "Local continuity does not imply a globally honest almost-surely finite upper confidence limit."
+      ],
+      "falsification_attempts": [
+        "The fixed-trace unit-tree sequence defeats extension to paired-zero boundaries.",
+        "Hidden splitting defeats extension to larger admissible state counts."
+      ],
+      "novelty": {
+        "status": "supporting_result",
+        "summary": "Support-stratum regularity is established-type mathematics; the project identifies a concrete observable inverse to which it applies.",
+        "comparisons": [
+          "prior_hmm_stability",
+          "prior_kl_singularity"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "3-three-state-identifiability-and-cap-free-continuity"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e060"
+        },
+        {
+          "path": "analysis/one-hidden-robustness-audit.md"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "theorem_t3",
+      "type": "Theorem",
+      "title": "T3 · Two-point entropy fiber and sharp transition",
+      "status": "analytically_proved",
+      "summary": "The balanced theta family has unbounded, two-point, then singleton entropy fibers across an exact quartic threshold.",
+      "intuition": "A global invariant-triangle constraint leaves one connected model at equality. A separate disconnected model survives with different entropy.",
+      "statement": "Balanced-theta theorem. In C_<=5 consider, in order (x,y,h,k,l),\n\n\\[\nQ(z)=\\begin{pmatrix}-11&1&2&0&8\\\\2&-20&0&7&11\\\\3&0&-7&4&0\\\\0&6&5&-11&0\\\\z&z&0&0&-2z\\end{pmatrix},\\quad z>0.\n\\]\n\nLet z_* be the unique positive root of 352z^4-3168z^3-4644z^2-11340z-7623. Every source has linear minimal order five. For 0<z<z_* the entropy fiber is unbounded. For z>z_* the generator fiber is a singleton. At z=z_* the generator fiber has exactly two elements modulo hidden labels, Q(z_*) and Q_*, and its entropy image has exactly two distinct finite points with certified enclosures\n\n\\[\n\\sigma(Q(z_*))\\in[.062946400236,.062946400237],\\qquad\n\\sigma(Q_*)\\in[.065579685966,.065579685967].\n\\]\n\nQ_* is defined exactly, without rounded entries, by the rational exit-chart formulas (3)–(6) of [the endpoint specification](theta-balanced-boundary.md#independent-path-coordinate-construction). Equivalently the equality-cone construction in [publication endpoint audit, Section 5](publication-endpoint-audit.md#5-exact-cone-construction-independently-matches-the-path-witness) defines it over Q(z_*,sqrt(6)) and all sqrt(6) coefficients cancel. Its seven reciprocal edges differ from the source's six. Thus the two generators cannot be relabelings. This referenced exact algebraic definition is part of the statement.\n\nProof obligations and status: minimality forces all cap-five competitors into T1's orbit; Perron normalization exhausts every connected hidden support by a nondegenerate finite triangle; a global envelope quadratic has discriminant a negative positive-factor multiple of the stated quartic; its equality case forces one triangle; separate residue/reciprocity arguments exhaust disconnected hidden supports as the source. Exact feasibility and rigorous logarithm remainders supply existence and entropy separation. A strict-cone construction below the fold overlaps the earlier subcritical theorem, including separately handled repeated poles. [Fresh independent audit](publication-endpoint-audit.md) verifies all of these, including an independent coefficientwise equality between the cone and path constructions.\n\nThe unique positive quartic root is approximately 10.5571496686650; the numerical value is illustrative. z=0 is excluded because the source ceases to be irreducible. Hidden pole coincidences at 2z=9+-2sqrt(6), the chart zero z=2 and the earlier first-order threshold are not missing cases: the separate constructive covering handles them. The endpoint is away from these degeneracies. The cone proof's right crossover is unique on its physical domain c>=1 beyond its pole; an algebraic root outside that domain does not represent another model.\n\nMinimal assumptions: exact derivatives 0 through 9 can replace all-time equality under the cap; no external rate cap is needed since trace is fixed by similarity. Full-chain irreducibility may be replaced by nonnegative row normalization plus exact data and the cap: minimality gives reachability and return to the visible pair, hence irreducibility. The cap may be replaced by requiring all competitors to be linearly minimal. Removing it while admitting nonminimal models allows a sixth state and unbounded entropy. Reciprocal support, resolved known event incidence and the entropy convention have not been removed. Fixed source topology leaves only the source; fixed path topology leaves only Q_*. The theorem does not classify the general five-state class or prove novelty. The smallest possible cap for bounded nonuniqueness is five by the separate C_<=4 classification in the [legacy audit](publication-legacy-audit.md).",
+      "why_it_matters": "Establishes bounded thermodynamic nonuniqueness after exhausting every admissible support, at the smallest possible cap.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_exact_kernel",
+        "assume_unknown_support",
+        "assume_cap_five"
+      ],
+      "evidence": [
+        "proof_endpoint",
+        "lemma_cone_envelope",
+        "lemma_disconnected_rigidity",
+        "legacy_four_state"
+      ],
+      "independent_verification": [
+        "check_endpoint_independent"
+      ],
+      "limitations": [
+        "Minimal order five is proved for every balanced source; it is not an extra premise.",
+        "Exact derivatives 0–9 suffice under the cap. A separate rate cap is unnecessary because similarity fixes trace.",
+        "The cap can be replaced by a restriction to minimal models; a sixth nonminimal state makes entropy unbounded.",
+        "z=0 is excluded. Pole coincidences, chart singularity and the complete subcritical covering are separately handled.",
+        "The theorem does not classify arbitrary five-state data or the full off-balanced parameter plane."
+      ],
+      "falsification_attempts": [
+        "First-order threshold sharpness at approximately 10.5452497911 was falsified by exact complete witnesses and second-order opening.",
+        "The 26-start probe located candidates but did not establish absence or the fiber count.",
+        "Independent cone and path algebra give the same quartic and the same exact endpoint."
+      ],
+      "novelty": {
+        "status": "candidate_contribution",
+        "summary": "The exhausted physical entropy image and sharp transition remain a primary candidate contribution; finite positive fibers, invariant polytopes and hidden entropy ambiguity are prior art. Novelty is not certified.",
+        "comparisons": [
+          "prior_finite_fibers",
+          "prior_ph_polytopes",
+          "prior_realization_equivalence",
+          "prior_hidden_thermodynamics",
+          "prior_larget_gap"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "4-the-exhaustive-finite-entropy-fiber"
+        },
+        {
+          "path": "analysis/theta-balanced-boundary.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e051"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e052"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e059"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "theorem_t4",
+      "type": "Theorem",
+      "title": "T4 · Generator support controls local entropy boundedness",
+      "status": "analytically_proved",
+      "summary": "In entrywise generator topology, a finite entropy ceiling exists exactly at complete irreducible supports.",
+      "intuition": "Both new reverse rates can vanish while their ratio grows so quickly that a rare current still yields divergent entropy.",
+      "statement": "Generator-topology boundary theorem. On C_N with its entrywise topology, sigma is locally upper-bounded at Q0 iff Q0 has complete support. The same iff holds after fixing source trace and imposing its original maximum offdiagonal rate M0. If Q0 has a missing pair i,j, add rates e,k(e)=exp(-1/e^2) and subtract e+k from one existing positive ordered rate. For small e>0 all source edges remain reciprocal and connected, trace and M0 are retained, and pi(e)->pi0>0. The new edge contributes asymptotically pi_i^0/e; all other edge terms are nonnegative. Full stationary microscopic finite-window laws converge in TV by coupling. If the compensating edge is unobserved, specified observed rates also remain fixed. Under one observed pair and N>=3 such an edge always exists. At complete sources all supported rates have a positive local floor and entropy is smooth. This proves both directions, without a numerical-search premise.",
+      "why_it_matters": "Shows sparse instability of the entropy functional even under full microscopic observation.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_fixed_n",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "proof_stability"
+      ],
+      "independent_verification": [
+        "check_publication_independent"
+      ],
+      "limitations": [
+        "Frozen observed rates are retained only when a positive unobserved rate can compensate; one exists for one observed pair and N≥3.",
+        "Freezing every positive source rate together with trace prevents chord opening. Known support also forbids it.",
+        "Source irreducibility ensures positive limiting stationary masses.",
+        "Complete entrywise stability does not imply observational stability with two hidden states."
+      ],
+      "falsification_attempts": [
+        "Independent chord diagnostics cover three-, four- and five-state sources; the continuum proof supplies divergence.",
+        "The compact singleton tree limit defeats continuity based only on compact irreducible limiting generators."
+      ],
+      "novelty": {
+        "status": "supporting_result",
+        "summary": "The rare reverse-flux/KL singularity is established; the project realizes it with fixed count, trace and original maximum rate.",
+        "comparisons": [
+          "prior_kl_singularity",
+          "prior_hidden_thermodynamics"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "5-sparse-boundaries-hidden-ambiguity-and-sharp-local-ceilings"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e061"
+        },
+        {
+          "path": "analysis/publication-stability-audit.md"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "theorem_t4a",
+      "type": "Theorem",
+      "title": "T4a · Smallest fixed-trace instability witness",
+      "status": "analytically_proved",
+      "summary": "A uniquely identified minimal-three-state tree is approached by same-trace, rate-bounded triangles with divergent entropy.",
+      "intuition": "The rates converge to an equilibrium tree, but the new chord's reverse jump is exponentially rarer.",
+      "statement": "Smallest explicit fixed-trace example. For 0<k<e<1/2 set\n\n\\[\nQ(e,k)=\\begin{pmatrix}-1-e&1&e\\\\1&-2+k&1-k\\\\k&1-e&-1+e-k\\end{pmatrix}.\n\\]\n\nAll rates are <=1, -tr Q=4, and the source Q(0,0) is the unit tree x-y-h. Every kernel is minimal three and uniquely identifies the generator in C_<=3. With Z=3+e+2k-e^2-ek-k^2,\n\n\\[\n\\sigma=\\frac{(e-k)(1-e-k)}{Z}\\log\\frac{e(1-e)}{k(1-k)},\\quad\nd_{TV}<4e,\\quad d_H\\le11e/18+2eH.\n\\]\n\nFor k=exp(-1/e^2) and e->0, e sigma->1/3. For fixed e>0, k->0 has positive logarithmic divergence coefficient, so every positive neighborhood of the tree has infinite entropy supremum under the same count, trace and cap. Three is minimal because every two-state bidirected generator has sigma=0. Proof and boundary checks: [E057](../evidence/RECORDS.md#e057), [fresh audit](publication-stability-audit.md). The exclusions k=e (zero cycle affinity), k=0 (inadmissible one-way triangle) and e=k=0 (valid tree with paired zero) are distinct. The displayed open domain is sufficient; it is not claimed to be the maximal positivity domain.",
+      "why_it_matters": "Demonstrates that exact unique and stable rate recovery need not yield an entropy ceiling, at the smallest possible state count.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_cap_three",
+        "assume_unknown_support",
+        "assume_fixed_trace",
+        "assume_rate_cap"
+      ],
+      "evidence": [
+        "proof_stability",
+        "theorem_t2"
+      ],
+      "independent_verification": [
+        "check_precision_examples",
+        "check_publication_independent"
+      ],
+      "limitations": [
+        "The explicit cap is one and trace is −4; no arbitrary-cap extension follows.",
+        "For e>0, k=0 is an excluded one-way model; e=k=0 is a valid paired-zero tree. k=e gives zero affinity.",
+        "Every actual admitted model has finite entropy. Two-state bidirected models have zero entropy, proving three is minimal."
+      ],
+      "falsification_attempts": [
+        "Exact stationary weights, cycle currents, rate caps, rank minors and coupling bounds were independently checked.",
+        "The distinct two-state-source/three-state-candidate example changes order and trace and is not this theorem."
+      ],
+      "novelty": {
+        "status": "supporting_example",
+        "summary": "A sharp constrained illustration of a known singularity, not a new entropy-divergence mechanism.",
+        "comparisons": [
+          "prior_kl_singularity",
+          "prior_resolved_inference"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "5-sparse-boundaries-hidden-ambiguity-and-sharp-local-ceilings"
+        },
+        {
+          "path": "analysis/three-state-fixed-trace-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e057"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "theorem_t5",
+      "type": "Theorem",
+      "title": "T5 · Every neighborhood is unbounded with two hidden states",
+      "status": "analytically_proved",
+      "summary": "Arbitrarily accurate observed laws permit arbitrarily high entropy at the same count, observed rates and trace.",
+      "intuition": "First make an arbitrarily small completion; then move within its exact observation fiber toward a one-way boundary.",
+      "statement": "General two-hidden-state neighborhood theorem. More generally allow any nonempty reverse-closed set of individually resolved edges on a fixed finite state set. If Q0 has at least two states absent from every observed endpoint, then for every eta>0 and L<infinity there exists a complete bidirected Q with the same N, every observed rate and exact trace, with d_TV(O(Q),O(Q0))<eta and sigma(Q)>L. All its rates are <=tau0. There also exists such a divergent sequence with d_H->0 for each fixed finite H under stationary initialization. No minimality or source sparsity is needed.\n\nProof: first convexly complete the unobserved edges with the same total rate mass and unequal external exit rows for a chosen hidden pair. Integrated Duhamel gives TV->0; then, at each fixed completion size, the exact hidden-pair similarity family reaches an excluded one-way boundary with positive limiting opposing flux. The same stationary observed law is preserved along that family. Take the completion limit after selecting sufficient entropy. This is the two-limit construction in [E055](../evidence/RECORDS.md#e055), independently audited in [Section 2](publication-stability-audit.md#2-exact-audit-of-the-existing-divergence-mechanisms). It does not say the original exact fiber is unbounded or that the high-entropy generators approach Q0 entrywise.",
+      "why_it_matters": "Destroys robust upper ceilings even at complete sources or sources with finite original exact fibers.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_two_hidden",
+        "assume_fixed_n",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "proof_neighborhood",
+        "lemma_hidden_pair"
+      ],
+      "independent_verification": [
+        "proof_stability"
+      ],
+      "limitations": [
+        "Minimality and source sparsity are unnecessary. The original exact fiber is not claimed unbounded.",
+        "The constructed finite rate cap is sufficient; an arbitrary tighter prescribed cap can fail.",
+        "The high-entropy generators need not converge entrywise to the source. Stationary initialization is part of the finite-window consequence.",
+        "Two hidden states means absent from every observed endpoint, not merely joined by an unobserved edge."
+      ],
+      "falsification_attempts": [
+        "Asymmetric fixed-trace completion handles originally equal external exit rows.",
+        "Duhamel and common/excess-clock coupling independently bound row TV.",
+        "Completion size is fixed before taking the exact-family entropy limit."
+      ],
+      "novelty": {
+        "status": "candidate_structural_contribution",
+        "summary": "Known hidden ambiguity is strengthened by every-source/every-tolerance, same-count, fixed-trace quantifiers; novelty remains bounded by source coverage.",
+        "comparisons": [
+          "prior_hidden_thermodynamics",
+          "prior_realization_equivalence",
+          "prior_entropy_upper",
+          "prior_kl_singularity"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "5-sparse-boundaries-hidden-ambiguity-and-sharp-local-ceilings"
+        },
+        {
+          "path": "analysis/entropy-neighborhood-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e055"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "theorem_t6",
+      "type": "Theorem",
+      "title": "T6 · Sharp local-ceiling criterion for every fixed N",
+      "status": "analytically_proved",
+      "summary": "For one resolved pair, a finite local entropy ceiling exists exactly at N=2 or a complete N=3 triangle.",
+      "intuition": "One hidden state permits a stable positive inverse. Two hidden states permit exact ambiguity after arbitrarily small completion.",
+      "statement": "Sharp fixed-count criterion. For one resolved pair, N>=2 and Q0 in C_N, a robust finite upper ceiling in C_N exists iff N=2 or (N=3 and Q0 is complete). The identical criterion holds in C_N(Q0;r,s,tau) and for product weak row topology. Positive cases follow from T2a and sigma=0 for N=2; T4 excludes all three-state trees; T5 excludes every N>=4 source. This is an all-N theorem, not a five-state conjecture. It also shows the distinction between thermodynamic identifiability and local upper stability: exact singleton and two-point fibers can have an infinite local upper envelope.\n\nTargeted falsification limits: the theorem does not survive every additional tight cap. For N=4, tau=12 and q_ij<=1, all twelve rates must be one, so the entire restricted class is a singleton despite two hidden states. A positive floor or known tree topology also excludes the sparse construction. Complete generator support suffices for entrywise entropy continuity (T4) but not observational upper stability for N>=4 (T5). N and a cap on N are different assumptions. These are explicit counterexamples to stronger statements, not merely cautions.",
+      "why_it_matters": "Classifies observational upper stability for all fixed state counts, not just explored small examples.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_fixed_n",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "theorem_t2a",
+        "theorem_t4",
+        "theorem_t5",
+        "proof_stability"
+      ],
+      "independent_verification": [
+        "check_publication_independent",
+        "proof_legacy_classifications"
+      ],
+      "limitations": [
+        "Exactly N and a cap on N are different classes; a two-state source can be unstable under cap three.",
+        "An additional arbitrary tight cap, lower rate floor, or prescribed sparse support changes the result.",
+        "This classifies local boundedness of a set-valued entropy range, not exact generator or entropy uniqueness."
+      ],
+      "falsification_attempts": [
+        "Counterexample to arbitrary extra caps: N=4, trace−12 and every rate≤1 force all twelve rates one.",
+        "Complete source support does not restore observational upper stability for N≥4, by T5."
+      ],
+      "novelty": {
+        "status": "candidate_contribution",
+        "summary": "The precise all-N resolved-pair iff is the central companion candidate to T3; generic inverse instability and entropy singularity are not new.",
+        "comparisons": [
+          "prior_hmm_stability",
+          "prior_hidden_thermodynamics",
+          "prior_entropy_upper",
+          "prior_resolved_inference"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "5-sparse-boundaries-hidden-ambiguity-and-sharp-local-ceilings"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e061"
+        },
+        {
+          "path": "analysis/publication-stability-audit.md"
+        },
+        {
+          "path": "analysis/publication-legacy-audit.md"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "theorem_t7",
+      "type": "Theorem",
+      "title": "T7 · Uniform finite-sample upper limits must be infinite",
+      "status": "analytically_proved",
+      "summary": "TV-indistinguishable divergent sequences force uniformly honest upper limits to be infinite at their limit law.",
+      "intuition": "A finite record cannot reliably separate the source from arbitrarily high-entropy alternatives that honest coverage must include.",
+      "statement": "Uniform upper-confidence obstruction. Let U be a measurable extended-real statistic of a stationary observed record on fixed H>0, possibly with independent randomization, and 0<alpha<1. Suppose P_Q^H{sigma(Q)<=U}>=1-alpha for every Q in a class containing a sequence with sigma(Q_n)->infinity and TV(P_Qn^H,P_Q0^H)->0. Then P_Q0^H{U=+infinity}>=1-alpha. For every finite L, the coverage bound transfers to P_Q0{U>L}; let L increase to infinity. This elementary statistical mechanism has established Gleser–Hwang-type precedents. T4a/T5 supply the physical sequences, including their fixed-trace restrictions. Uniform modelwise finite-sample coverage is essential; the statement does not address pointwise asymptotic coverage, priors or a growing horizon. Positive-triangle local continuity does not imply a globally almost-surely finite honest bound; the separate domination result in E058 proves a weaker positive probability of infinity there.",
+      "why_it_matters": "Translates the structural instability into an explicit limit on upper confidence statements.",
+      "assumptions": [
+        "assume_uniform_coverage",
+        "assume_stationary_window"
+      ],
+      "evidence": [
+        "proof_neighborhood",
+        "theorem_t4a",
+        "theorem_t5"
+      ],
+      "independent_verification": [
+        "check_precision_examples",
+        "proof_stability"
+      ],
+      "limitations": [
+        "The statistical implication is general; CTMC hypotheses enter through the physical sequences.",
+        "Uniform modelwise finite-sample coverage is essential. Pointwise asymptotics, priors and growing horizons are different regimes.",
+        "Known hidden initial states are not covered automatically.",
+        "Positive-triangle domination yields a weaker positive-probability infinity bound, not necessarily 1−α at every triangle. Lower estimators are not invalidated."
+      ],
+      "falsification_attempts": [
+        "Coverage transfers to every finite threshold before letting that threshold grow; large numerical entropy alone is insufficient."
+      ],
+      "novelty": {
+        "status": "established_statistical_mechanism",
+        "summary": "Gleser–Hwang-type confidence impossibility is established; the physical sequences specify where it applies.",
+        "comparisons": [
+          "prior_confidence_impossibility",
+          "prior_hidden_thermodynamics"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "6-statistical-consequence-and-sufficient-regularity-conditions"
+        },
+        {
+          "path": "analysis/finite-precision-instability.md"
+        },
+        {
+          "path": "analysis/entropy-neighborhood-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e056"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "theorem_t8",
+      "type": "Theorem",
+      "title": "T8 · Support-controlled inverse ranges give finite ceilings",
+      "status": "analytically_proved",
+      "summary": "Compact inverse control suffices only when disappearing new edges are also excluded.",
+      "intuition": "A compact positive support stratum is safe; a sequence approaching it through vanishing extra edges may still dissipate without bound.",
+      "statement": "Sufficient regularity and the exact mechanism. Fix a reciprocal graph G and a compact set K of irreducible generators with support exactly G. Suppose every admitted sequence with O(Q_n)->D0 has hidden relabelings with dist(Q_n,K)->0 and support(Q_n)=G eventually. Then continuity of pi and sigma on this support stratum gives a finite local upper ceiling: otherwise choose sigma(Q_n)>n at data distance <1/n and extract a limit in K, contradicting continuity. If sigma is constant on K, entropy converges to that value. The positive minimum of the G-rates over K supplies a uniform floor; eventual equality of the competitors' support forbids newly opening edges that vanish in the limit. This is a sufficient condition, not asserted necessary or novel. T2 verifies it locally for a triangle. T4a falsifies the provisional weaker formulation requiring only a compact irreducible limiting set: its limit is the unit tree with positive present rates, while vanishing new chords carry divergent entropy. T5 shows bounded trace alone does not supply this support-controlled inverse property.\n\nAn explicit uniform bound is simpler: if all supported rates lie in [m,M], m>0, then sigma<=A log(M/m), where A=sum_i pi_i sum_(j!=i)q_ij is stationary activity. A<=(N-1)M and also A<=tau when trace is fixed. This follows from the directed entropy identity; no stationary probability floor is required. A uniform ratio bound q_ij/q_ji<=R together with A<=Amax suffices instead, with sigma<=Amax log R. A lower individual-rate floor is therefore stronger than necessary when trace or activity is controlled. Ratios alone do not bound entropy: a three-cycle with clockwise rates 2c and reverse rates c has pi=(1/3,1/3,1/3), sigma=c log2 and A=3c, diverging as c increases while R=2. This is a coarse established-type bound, not a novel sharp thermodynamic inequality. Trace tau is not activity A.",
+      "why_it_matters": "Identifies what information is missing from a mere trace or rate cap.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_support_control"
+      ],
+      "evidence": [
+        "proof_stability",
+        "lemma_activity_bound"
+      ],
+      "independent_verification": [
+        "proof_legacy_classifications"
+      ],
+      "limitations": [
+        "This is sufficient, not necessary or claimed novel.",
+        "A compact fixed-support limit creates a floor only on its supported edges; eventual support equality is substantive.",
+        "The activity/ratio bound is an alternative sufficient restriction, not an additional premise of the compact-inverse statement."
+      ],
+      "falsification_attempts": [
+        "T4a falsifies the provisional compact-irreducible-limit-only formulation.",
+        "A ratio bound alone fails: a three-cycle with clockwise 2c and reverse c has σ=c log2."
+      ],
+      "novelty": {
+        "status": "established_type_regularity",
+        "summary": "Support-stratum continuity and the coarse activity/ratio bound are elementary; stronger related inequalities are prior work.",
+        "comparisons": [
+          "prior_kl_singularity",
+          "prior_entropy_upper"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "6-statistical-consequence-and-sufficient-regularity-conditions"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e061"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "legacy_four_state",
+      "type": "Theorem",
+      "title": "Legacy · Complete four-state entropy dichotomies",
+      "status": "analytically_proved",
+      "summary": "Every four-state exact entropy fiber is singleton or unbounded; unknown support has only two unique incidence classes.",
+      "intuition": "With two hidden coordinates, reciprocal zeros either pin the model or force an accessible divergent boundary.",
+      "statement": "For exactly four states with one resolved pair, fixed connected bidirected support gives singleton entropy or unbounded entropy, including nonminimal data. With unknown support, generator uniqueness occurs exactly for opposite singleton hidden incidences, or a shared hidden state plus one exclusive state with no hidden edge and the shared state strictly faster. Every other case, including every nonminimal four-state unknown-support fiber, is unbounded. Lower-order reconstruction/splitting then excludes bounded nonuniqueness under cap four.",
+      "why_it_matters": "Makes five the smallest cap for T3's bounded-nonunique phenomenon.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_exact_kernel",
+        "assume_unknown_support",
+        "assume_fixed_n"
+      ],
+      "evidence": [
+        "proof_legacy_classifications",
+        "lemma_hidden_pair"
+      ],
+      "independent_verification": [
+        "check_legacy_saved"
+      ],
+      "limitations": [
+        "The fixed-support variant is a different class: a tree can have nonunique rates but zero entropy; a full diamond with distinct hidden escapes is unique only under prescribed support.",
+        "Nonminimal cases use explicit families and lumping, not exhaustive minimal similarity.",
+        "Finite grids corroborate examples rather than prove coverage."
+      ],
+      "falsification_attempts": [
+        "Equal escapes, equal exit rows, permanent absent rows and empty normalized-diagonalizer strata were included.",
+        "Nonminimal full-incidence and one-port models challenge an unjustified orbit extension."
+      ],
+      "novelty": {
+        "status": "project_classification_novelty_unestablished",
+        "summary": "A physical small-order classification built on established realization and hidden-entropy machinery; no exhaustive separate originality certification.",
+        "comparisons": [
+          "prior_realization_equivalence",
+          "prior_hidden_thermodynamics",
+          "prior_map_identifiability"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-legacy-audit.md"
+        },
+        {
+          "path": "analysis/four-state-classification-audit.md"
+        },
+        {
+          "path": "analysis/unknown-topology-audit.md"
+        },
+        {
+          "path": "analysis/nonminimal-four-state-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e023"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e024"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e027"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "legacy_observable_four",
+      "type": "Theorem",
+      "title": "Legacy · Observable four-state uniqueness criterion",
+      "status": "analytically_proved",
+      "summary": "Derivatives through third order decide uniqueness conditional on admissible exactly-four-state data.",
+      "intuition": "Positive products reveal hidden incidence; residue ordering distinguishes a shared fast state from an exclusive slow state.",
+      "statement": "Recover a=−A1, M=K″(0)−D² and L=K‴(0)−D³−DM−MD. Uniqueness holds iff A: a_x,a_y>0 and M_xy=M_yx=0; or B: M invertible, LM⁻¹ has distinct negative poles with a positive rank-one fast residue and a positive one-coordinate diagonal slow residue. Otherwise entropy is unbounded. Row-sum normalization reconstructs every rate in the unique cases.",
+      "why_it_matters": "Makes the four-state classification operational in exact observable coefficients.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_exact_kernel",
+        "assume_unknown_support",
+        "assume_fixed_n"
+      ],
+      "evidence": [
+        "legacy_four_state",
+        "proof_legacy_classifications"
+      ],
+      "independent_verification": [
+        "check_legacy_saved"
+      ],
+      "limitations": [
+        "Exactly-four-state feasibility is a premise. This is not a feasibility test for arbitrary functions or a finite-sample classifier.",
+        "Singular M need not mean nonminimality; repeated poles can still satisfy A.",
+        "The saved checker intentionally handles selected rational-eigenvalue examples."
+      ],
+      "falsification_attempts": [
+        "Controls include minimal singular M, nonminimality, equal escapes and reversed fast/slow ordering."
+      ],
+      "novelty": {
+        "status": "supporting_classification",
+        "summary": "A finite test specialized to the physical classification; canonical inversion is established.",
+        "comparisons": [
+          "prior_map_identifiability",
+          "prior_realization_equivalence"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/observable-four-state-criterion.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e030"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e031"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "legacy_splitting",
+      "type": "Theorem",
+      "title": "Legacy · One spare hidden state makes entropy unbounded",
+      "status": "analytically_proved",
+      "summary": "Splitting one fully hidden state preserves all kernels but permits unbounded entropy on N+1 states.",
+      "intuition": "The two clones behave identically outside their pair, hiding their internal irreversibility from the marks.",
+      "statement": "Any finite source with a state outside all endpoints of nonempty reverse-closed resolved marks has a bidirected irreducible N+1-state family with identical full kernels, uniformly bounded rates and σ→∞. At unrestricted finite order, zero data-determined visible row deficits force a globally unique fully visible generator; any positive deficit instead implies unbounded entropy by splitting.",
+      "why_it_matters": "Explains why state caps or minimal-model restrictions are substantive for exact finite fibers.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_exact_kernel",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "proof_legacy_classifications"
+      ],
+      "independent_verification": [
+        "check_legacy_saved"
+      ],
+      "limitations": [
+        "Requires at least one fully hidden state; two are not necessary. The enlarged model is nonminimal.",
+        "Source trace and an arbitrary prescribed rate cap are not promised. A finite cap needs one spare state relative to an available hidden-state realization.",
+        "Zero deficits require first-derivative information as well as zero-time rates."
+      ],
+      "falsification_attempts": [
+        "The degree-one hidden boundary stays irreducible via its original neighbor and both clone masses remain positive.",
+        "The fully visible exception prevents an overstatement that every enlargement creates ambiguity."
+      ],
+      "novelty": {
+        "status": "established_mechanism_specialization",
+        "summary": "Strong lumping and hidden irreversible circulation are established mechanisms; no broad novelty claim.",
+        "comparisons": [
+          "prior_realization_equivalence",
+          "prior_hidden_thermodynamics"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/state-splitting-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e028"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e029"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "legacy_path_cap",
+      "type": "Theorem",
+      "title": "Legacy · Maximal path delay forces unique rates",
+      "status": "analytically_proved",
+      "summary": "When the first cross derivative occurs only at the cap distance, every rate is identifiable.",
+      "intuition": "A shortest unobserved route using every allowed state leaves no space for shortcuts or extra branches.",
+      "statement": "For N≥3 assume an admissible realization at cap N, K_xy^(j)(0)=0 for j<N−1 and K_xy^(N−1)(0)>0. Every candidate has exactly N states and killed support a spanning x-to-y path. Its endpoint resolvent determines ordered diagonals and neighboring products; known observed rates and row sums uniquely split all directed rates. Linear minimality N follows. Derivatives through order 2N−1 suffice.",
+      "why_it_matters": "Provides globally unique sources at arbitrary caps and controls for nearby-instability examples.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_exact_kernel",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "proof_legacy_classifications"
+      ],
+      "independent_verification": [
+        "check_legacy_saved"
+      ],
+      "limitations": [
+        "The statement supplies an arbitrary cap N; it does not merely assume an exact fixed count.",
+        "The cap, bidirectionality, exact derivative zeros and single-channel convention matter. This is sufficient, not necessary, for uniqueness.",
+        "N=3 is valid; only the implementation's chord negative control needs N≥4."
+      ],
+      "falsification_attempts": [
+        "Adding a true killed-graph chord lowers the first derivative order in the five-/six-state controls.",
+        "Endpoint Jacobi recovery gives products; CTMC normalization is separately required for the directed rates."
+      ],
+      "novelty": {
+        "status": "prior_machinery_application",
+        "summary": "Endpoint inverse-Jacobi reconstruction is established; cap-forcing and CTMC normalization are audited deductions without a novelty claim.",
+        "comparisons": [
+          "prior_realization_equivalence"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/path-cap-uniqueness-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e034"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e036"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "legacy_sparse_five",
+      "type": "Theorem",
+      "title": "Legacy · Distinct diagonal hidden modes are classified",
+      "status": "analytically_proved",
+      "summary": "This sparse five-state class is unique exactly when the shared hidden state is fastest; otherwise entropy is unbounded.",
+      "intuition": "A bridging hidden component must expose a positive dominant pole, preventing a fastest shared mode from hiding a larger component.",
+      "statement": "Assume a five-state representative with three hidden singleton components, no hidden edges and pairwise distinct positive hidden escapes. At cap five with unknown support, uniqueness holds iff the hidden neighbor sets are {x}, {y}, {x,y} and the shared state is faster than both exclusive states. Otherwise entropy is unbounded. Full linear order five is automatic by Vandermonde reachability/observability.",
+      "why_it_matters": "Demonstrates spectral support exhaustion while making the unclassified five-state cases explicit.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_exact_kernel",
+        "assume_unknown_support",
+        "assume_cap_five"
+      ],
+      "evidence": [
+        "proof_legacy_classifications",
+        "lemma_hidden_pair"
+      ],
+      "independent_verification": [
+        "check_legacy_saved"
+      ],
+      "limitations": [
+        "Repeated escapes, nonminimal sources and general hidden-path/triangle representatives are outside this theorem.",
+        "Equal entropy for two proposed path reassignments does not classify their whole fiber."
+      ],
+      "falsification_attempts": [
+        "Repeated incidence sets and a faster exclusive state permit exact pair opening.",
+        "The unique-case proof excludes arbitrary three-coordinate mixing, not only pairwise motions."
+      ],
+      "novelty": {
+        "status": "project_subclass_novelty_unestablished",
+        "summary": "A restricted physical classification using prior Perron and realization machinery; no separate originality certification.",
+        "comparisons": [
+          "prior_realization_equivalence",
+          "prior_ph_polytopes",
+          "prior_hidden_thermodynamics"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/five-state-sparse-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e033"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "legacy_theta_strata",
+      "type": "Theorem",
+      "title": "Legacy · Theta rank and coincidence strata",
+      "status": "analytically_proved",
+      "summary": "The chart singularity usually loses coordinates, not information; only one positive parameter pair loses linear order.",
+      "intuition": "A repeated hidden pole or singular chart can look like reduced order without reducing the full marked realization.",
+      "statement": "For theta(a,b), a,b>0, full observability is five everywhere and controllability is five except at (2√6−3,12−4√6), where minimal order is four. The chart line 2a+b=6 is otherwise minimal. On a+b=9−2√6 away from the exception, the rank-two dominant residue excludes every irreducible hidden-block realization. The exceptional point has an explicit complete physical four-state realization.",
+      "why_it_matters": "Prevents invalid minimal-orbit use at the exception and invalid dimension reduction elsewhere.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_exact_kernel"
+      ],
+      "evidence": [
+        "proof_legacy_classifications"
+      ],
+      "independent_verification": [
+        "check_legacy_saved"
+      ],
+      "limitations": [
+        "Connected-hidden impossibility does not bound entropy on reducible hidden support.",
+        "Fast coincidence a+b=9+2√6 does not lose rank.",
+        "The intermediate stochastic intertwining representation is algebraic; the final four-state model is separately proved physical."
+      ],
+      "falsification_attempts": [
+        "Generic, chart-line, slow-/fast-coincidence and exceptional cases were checked exactly."
+      ],
+      "novelty": {
+        "status": "supporting_parameter_analysis",
+        "summary": "Exact rank and Perron analysis supports the family theorem, with no independent novelty claim.",
+        "comparisons": [
+          "prior_realization_equivalence",
+          "prior_ph_polytopes"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/theta-parameter-strata-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e039"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "legacy_theta_regions",
+      "type": "Theorem",
+      "title": "Legacy · Constructive theta regions and support reductions",
+      "status": "analytically_proved",
+      "summary": "Large unbounded regions and reducible-support rigidity are proved; the full off-balanced plane remains open.",
+      "intuition": "Residues can be reassigned to a physical pair, but failure of that construction only limits the method.",
+      "statement": "Set s=a+b, α=9−2√6, β=9+2√6. At cap five entropy is unbounded if s≤α; or s≤β with a>35√6/88,b>√6/4; or s≥β with a/b>11(s−11)²/1120 or b/a>14(s−7)²/55. Both coincidence lines are covered. For s>β, and for α<s<β outside the strict coordinate thresholds, every reducible hidden realization is the source; a distinct bounded-fiber alternative would require a hidden path. The fast spectral inequalities separately prove an open off-balanced uniqueness region.",
+      "why_it_matters": "Preserves genuine off-balanced knowledge without displaying an unsupported complete phase diagram.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_exact_kernel",
+        "assume_unknown_support",
+        "assume_cap_five"
+      ],
+      "evidence": [
+        "proof_legacy_classifications",
+        "lemma_hidden_pair",
+        "lemma_disconnected_rigidity"
+      ],
+      "independent_verification": [
+        "check_legacy_saved"
+      ],
+      "limitations": [
+        "Strict thresholds are sufficient constructions, not universal feasibility boundaries.",
+        "Minimal slow-coincidence sources remain unbounded even though connected hidden blocks are impossible.",
+        "Historical balanced/fast unresolved phrases are superseded by later proofs; the general two-parameter plane remains unclassified."
+      ],
+      "falsification_attempts": [
+        "The local-opening coverage shortcut fails throughout α<s≤7 by a positive dual and full-rank tangent.",
+        "An exact distant positive realization at theta(3,3) falsifies local isolation as a global uniqueness test."
+      ],
+      "novelty": {
+        "status": "supporting_family_results",
+        "summary": "The cone/Perron machinery is established; the sharp balanced whole-fiber exhaustion carries the principal novelty case.",
+        "comparisons": [
+          "prior_ph_polytopes",
+          "prior_realization_equivalence",
+          "prior_hidden_thermodynamics"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/theta-family-construction-audit.md"
+        },
+        {
+          "path": "analysis/positive-realization-obstructions.md"
+        },
+        {
+          "path": "analysis/theta-global-audit.md"
+        },
+        {
+          "path": "analysis/theta-fast-spectral-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e041"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e042"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e043"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e048"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "proof_endpoint",
+      "type": "EvidenceRecord",
+      "title": "Global proof of the balanced fiber",
+      "status": "analytically_proved",
+      "summary": "Minimality, two connectivity classes, exact feasibility and entropy separation form a complete proof.",
+      "intuition": "Two examples would not count the fiber; both connected and disconnected hidden supports must be exhausted.",
+      "statement": "Balanced sources have minimal order five, so cap-five competitors lie in the normalized orbit. Perron geometry covers every connected hidden path or triangle; residue/reciprocity covers disconnected blocks. The equality path exists exactly and its entropy lies apart from the source. Strict constructions below equality cover the full subcritical ray.",
+      "why_it_matters": "Makes each logical obligation behind the two-point claim inspectable.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_exact_kernel",
+        "assume_cap_five"
+      ],
+      "evidence": [
+        "lemma_cone_envelope",
+        "lemma_disconnected_rigidity"
+      ],
+      "independent_verification": [
+        "check_endpoint_independent"
+      ],
+      "limitations": [
+        "Conventional proof and exact calculations, not formal verification.",
+        "Successful reproduction alone says nothing decisive about novelty."
+      ],
+      "falsification_attempts": [
+        "Equality, denominator, pole and reciprocal-zero cases were reviewed; an algebraic root outside the physical cone domain is not another model."
+      ],
+      "novelty": {
+        "status": "proof_of_candidate_result",
+        "summary": "Global physical envelope/equality and separate support exhaustion supply the project-specific argument beyond established cone methods.",
+        "comparisons": [
+          "prior_ph_polytopes",
+          "prior_realization_equivalence"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/theta-balanced-boundary.md"
+        },
+        {
+          "path": "analysis/balanced-cone-bound.md"
+        },
+        {
+          "path": "analysis/publication-endpoint-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e059"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "lemma_cone_envelope",
+      "type": "Lemma",
+      "title": "Sharp invariant-triangle envelope",
+      "status": "analytically_proved",
+      "summary": "Every connected hidden realization satisfies a quadratic inequality whose discriminant supplies the exact quartic threshold.",
+      "intuition": "Perron coordinates turn physical rates into a triangle constrained by output walls, input containment and dynamical invariance.",
+      "statement": "For balanced z≥10.5, irreducible hidden support yields a finite nondegenerate Perron triangle with origin interior. Exhausting signs and optimizing its boundaries gives f(t)≥0. Its discriminant is a negative positive-factor multiple of P(z)=352z⁴−3168z³−4644z²−11340z−7623. Above its positive root no triangle exists; at equality strict monotonicities uniquely fix it. Strict perturbations below the root give complete realizations overlapping prior regions.",
+      "why_it_matters": "Supplies universal exclusion and rigidity, rather than a best numerical margin.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_exact_kernel",
+        "assume_cap_five"
+      ],
+      "evidence": [],
+      "independent_verification": [
+        "check_endpoint_independent"
+      ],
+      "limitations": [
+        "The envelope is used only for z≥10.5; smaller parameters use separate exact constructions.",
+        "The right crossover is unique on its physical c≥1 domain beyond its pole, not over all real algebraic roots.",
+        "Disconnected hidden support needs a separate lemma."
+      ],
+      "falsification_attempts": [
+        "Apex, negative-height and degenerate-triangle cases were checked.",
+        "A slow symbolic simplification was replaced by cleared polynomial identities; it was not absence evidence."
+      ],
+      "novelty": {
+        "status": "proof_component",
+        "summary": "Invariant PH triangles are prior mathematics; this specific two-port physical envelope and equality computation support the endpoint claim.",
+        "comparisons": [
+          "prior_ph_polytopes"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/balanced-cone-bound.md"
+        },
+        {
+          "path": "analysis/publication-endpoint-audit.md",
+          "anchor": "4-connected-hidden-support-global-inequality-and-equality-audit"
+        },
+        {
+          "path": "analysis/check_balanced_cone_bound.py"
+        },
+        {
+          "path": "analysis/check_balanced_cone_sufficiency.py"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "lemma_disconnected_rigidity",
+      "type": "Lemma",
+      "title": "Disconnected theta supports are pinned",
+      "status": "analytically_proved",
+      "summary": "Residue signs and reciprocal incidence eliminate every disconnected assignment except the source.",
+      "intuition": "A singleton cannot supply a negative residue, and a connected pair cannot have a negative dominant residue.",
+      "statement": "For theta s>β, a disconnected bidirected three-state hidden block is three singletons or a pair plus singleton. Residue signs leave only the singleton at the s mode. The pair has XY=diag(6,42), forcing disjoint visible incidence. First moments and row sums recover its internal rates 4,5 and all other source rates. The low-coordinate intermediate region has the stated same conclusion.",
+      "why_it_matters": "Closes the connectivity class omitted by the Perron-triangle proof.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_pair",
+        "assume_exact_kernel",
+        "assume_cap_five"
+      ],
+      "evidence": [],
+      "independent_verification": [
+        "check_endpoint_independent",
+        "proof_legacy_classifications"
+      ],
+      "limitations": [
+        "Bidirectionality is structural: a reducible directed matrix can contain one-way intercomponent links.",
+        "Alone this proves uniqueness only among reducible hidden supports."
+      ],
+      "falsification_attempts": [
+        "Coordinate-threshold equalities use the requirement that the two cross entries of XY vanish together."
+      ],
+      "novelty": {
+        "status": "proof_component",
+        "summary": "A physical residue/reciprocity deduction; not a general positive-realization uniqueness theorem.",
+        "comparisons": [
+          "prior_realization_equivalence"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/theta-family-construction-audit.md",
+          "anchor": "5-reducible-hidden-blocks-in-two-residual-regions"
+        },
+        {
+          "path": "analysis/publication-endpoint-audit.md",
+          "anchor": "3-disconnected-hidden-support-is-fully-exhausted"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "check_endpoint_independent",
+      "type": "SymbolicResult",
+      "title": "Independent exact endpoint reconstruction and audit",
+      "status": "independently_verified",
+      "summary": "A separately derived cone generator matches the path witness exactly; certified entropy intervals are reproduced.",
+      "intuition": "Two independent algebraic constructions can expose errors that a rerun of the same optimizer would preserve.",
+      "statement": "The publication audit independently reconstructs the equality-cone generator and compares it coefficientwise with the physical-path witness over the exact real number field. Four endpoint scripts were replayed with writes captured in memory; exact support, ranks, stationarity, derivatives 0–9 and rational logarithm remainders passed. The root separately replayed the embedded cone/path identity.",
+      "why_it_matters": "Checks consequential algebra and existence while leaving universal exhaustion to the proof.",
+      "assumptions": [],
+      "evidence": [],
+      "independent_verification": [],
+      "limitations": [
+        "These are previously executed saved checks inspected by the map; no fresh scientific replay is claimed.",
+        "Routes share the source model and conventions; they are not independent empirical data or formal proof.",
+        "High precision corroborates the rational entropy enclosure but does not create it."
+      ],
+      "falsification_attempts": [
+        "An expression-tree comparison initially failed on factored versus expanded forms; expanding the exact difference resolved it without changing the statement."
+      ],
+      "novelty": {
+        "status": "verification_not_novelty",
+        "summary": "Independent agreement supports correctness, not originality.",
+        "comparisons": [
+          "prior_realization_equivalence"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-endpoint-audit.md"
+        },
+        {
+          "path": "outputs/publication-independent-replays.json"
+        },
+        {
+          "path": "outputs/balanced-fold-checks.json"
+        },
+        {
+          "path": "outputs/balanced-fold-independent-replay.json"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e059"
+        }
+      ],
+      "level": 3
+    },
+    {
+      "id": "lemma_hidden_pair",
+      "type": "Lemma",
+      "title": "Embedded hidden-pair boundary family",
+      "status": "analytically_proved",
+      "summary": "A suitable hidden pair permits exact-kernel motion toward a one-way boundary with positive reverse flux.",
+      "intuition": "Mixing hidden coordinates leaves every resolved event map fixed while driving a microscopic rate to zero.",
+      "statement": "For adjacent fully hidden external twins with unequal full external exit rows, a normalized triangular similarity preserves kernels, observed rates, count and trace. Before the first external/internal rate zero below the singular parameter, rates remain bidirected. Limiting stationary masses stay positive and entropy diverges. Comparable neighborhoods have stated support-opening extensions. Equal exit rows use a separate lumping construction.",
+      "why_it_matters": "Supplies the reusable ambiguity mechanism behind T5 and many legacy unbounded cases.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_two_hidden"
+      ],
+      "evidence": [],
+      "independent_verification": [
+        "proof_stability",
+        "check_legacy_saved"
+      ],
+      "limitations": [
+        "External neighborhoods include every other state, including other hidden states.",
+        "The unequal-row forward construction needs no minimality. Equal-row lumping is not silently asserted trace-preserving.",
+        "Pair incomparability or reverse escape ordering can block this method without proving global uniqueness."
+      ],
+      "falsification_attempts": [
+        "Both internal-rate-first and external-rate-first endpoints were checked.",
+        "Three-coordinate theta mixing defeats isolated-pair incomparability as a global rigidity rule."
+      ],
+      "novelty": {
+        "status": "constructive_lemma",
+        "summary": "Specializes established hidden ambiguity and boundary-dissipation mechanisms; no broad novelty claim.",
+        "comparisons": [
+          "prior_hidden_thermodynamics",
+          "prior_realization_equivalence"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/hidden-pair-boundary-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e032"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "proof_stability",
+      "type": "EvidenceRecord",
+      "title": "Independent proof audit of the stability chain",
+      "status": "independently_verified",
+      "summary": "The rational inverse, sparse limits and fixed-trace neighborhood quantifiers were checked analytically.",
+      "intuition": "Distinct mechanisms require distinct topologies and a careful order of limits.",
+      "statement": "The audit derives the Schur/Laplace inverse on a source-fixed branch, verifies both leaf domains, proves missing-edge asymptotics, checks E055's completion/pair limits and coupling, and challenges stronger compactness/rate-cap variants. Embedded exact identities and rational examples were executed and separately replayed by the root.",
+      "why_it_matters": "Connects the rate inverse, entropy singularity and all-N ceiling criterion with visible counterexamples.",
+      "assumptions": [],
+      "evidence": [],
+      "independent_verification": [],
+      "limitations": [
+        "Conventional proof audit, not formal verification. Source conventions overlap with the root derivation.",
+        "No cap-free positive stationary-window theorem is asserted."
+      ],
+      "falsification_attempts": [
+        "Tight rate caps, unsupported newly opening edges near a compact tree limit and frozen compensating rates defeat stronger formulations."
+      ],
+      "novelty": {
+        "status": "proof_audit",
+        "summary": "Verification of physical theorem statements; originality is assessed separately.",
+        "comparisons": [
+          "prior_kl_singularity",
+          "prior_hmm_stability"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-stability-audit.md"
+        },
+        {
+          "path": "analysis/publication-legacy-audit.md"
+        },
+        {
+          "path": "outputs/publication-independent-replays.json"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e060"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e061"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "proof_neighborhood",
+      "type": "EvidenceRecord",
+      "title": "Fixed-trace completion followed by exact mixing",
+      "status": "analytically_proved",
+      "summary": "Two controlled limits produce arbitrarily high entropy close in observed law.",
+      "intuition": "A small completion supplies the pair; exact mixing supplies entropy without further changing the completed observation.",
+      "statement": "Choose complete unobserved allocation G with the same total rate mass and unequal selected hidden external rows. Pε=(1−ε)Q+εG preserves observed rates and trace. Positive-semigroup Duhamel gives row TV≤εR(−T)⁻¹|G−Q|1/2. At fixed small ε the hidden-pair family preserves that kernel and stationary observed law while entropy diverges. A diagonal sequence yields row-TV and stationary finite-window convergence.",
+      "why_it_matters": "Proves every-source/every-tolerance quantifiers without presuming a uniform divergence coefficient.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_two_hidden",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "lemma_hidden_pair"
+      ],
+      "independent_verification": [
+        "proof_stability"
+      ],
+      "limitations": [
+        "Exact trace bounds each rate but is not stationary activity.",
+        "Stationary observed-law invariance uses transformed stationary rows and marked-path likelihood, not sampled kernel agreement."
+      ],
+      "falsification_attempts": [
+        "Asymmetric completion handles initially equal external exits. A separate coupling checks the weaker hazard bound."
+      ],
+      "novelty": {
+        "status": "proof_component",
+        "summary": "The precise construction supports the fixed-trace neighborhood candidate; the ingredient mechanisms are established.",
+        "comparisons": [
+          "prior_hidden_thermodynamics",
+          "prior_realization_equivalence"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/entropy-neighborhood-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e055"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "check_publication_independent",
+      "type": "SymbolicResult",
+      "title": "Independent transform and chord calculations",
+      "status": "independently_verified",
+      "summary": "Direct high-precision resolvents and exact interpolation corroborate the inverse and instability formulas.",
+      "intuition": "Computing from full matrices can catch orientation and stationary-current errors that copied formulas would preserve.",
+      "statement": "The saved root checker uses 160-digit direct resolvents to recover six models, including both leaves and fast/unequal scales; reconstruction errors are below 10⁻¹²⁵. Three exact reciprocal-cubic interpolations separately recover trace. Twelve chord diagnostics on 3-, 4- and 5-state sources use independent stationary solves and direct edge entropy. All specified checks passed.",
+      "why_it_matters": "Verifies important algebra through a different route from the rational inverse derivation.",
+      "assumptions": [],
+      "evidence": [],
+      "independent_verification": [],
+      "limitations": [
+        "Saved results are inspected, not freshly replayed by the map task.",
+        "Finite cases and arbitrary precision do not prove universal regularity or divergence.",
+        "Exact interpolation/identities are distinct from numerical chord diagnostics; no random optimizer search was used."
+      ],
+      "falsification_attempts": [
+        "Both zero-entrance branches and disparate time scales were deliberate controls."
+      ],
+      "novelty": {
+        "status": "verification_not_novelty",
+        "summary": "Implementation corroboration, not originality evidence.",
+        "comparisons": [
+          "prior_map_identifiability"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/check_publication_audit.py"
+        },
+        {
+          "path": "outputs/publication-audit-checks.json"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e060"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e061"
+        }
+      ],
+      "level": 3
+    },
+    {
+      "id": "check_precision_examples",
+      "type": "EvidenceRecord",
+      "title": "Independent precision-instability witness checks",
+      "status": "independently_verified",
+      "summary": "Small three-/four-state formulas, rate constraints, stationary laws and observation bounds have independent checks.",
+      "intuition": "Explicit examples expose every probability and rate constraint before the statistical conclusion.",
+      "statement": "The fixed-trace three-state proof has exact current, affinity, rank and normalization identities, with fifteen 100-digit stationary checks across three families. The four-state exact-kernel example has twelve rational checks, three semigroup-quadrature diagnostics and a separate algebra replay. Coupling proves the TV bounds; quadrature only corroborates them.",
+      "why_it_matters": "Verifies the physical sequences used by the confidence obstruction.",
+      "assumptions": [],
+      "evidence": [],
+      "independent_verification": [],
+      "limitations": [
+        "The explicit four-state additive example changes trace; general E055 supplies exact trace preservation.",
+        "Numerical slopes/quadrature are not proofs of the continuum or inequalities.",
+        "No fresh scientific replay occurred in the map task."
+      ],
+      "falsification_attempts": [
+        "Expression-representation and matrix-copy scratch failures were retained before successful checks."
+      ],
+      "novelty": {
+        "status": "verification_not_novelty",
+        "summary": "Constrained witnesses of established singularity and confidence mechanisms.",
+        "comparisons": [
+          "prior_kl_singularity",
+          "prior_confidence_impossibility"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/three-state-fixed-trace-audit.md"
+        },
+        {
+          "path": "analysis/check_three_state_precision.py"
+        },
+        {
+          "path": "outputs/three-state-precision-checks.json"
+        },
+        {
+          "path": "analysis/finite-precision-independent-check.md"
+        },
+        {
+          "path": "outputs/finite-precision-checks.json"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e056"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e057"
+        }
+      ],
+      "level": 3
+    },
+    {
+      "id": "proof_legacy_classifications",
+      "type": "EvidenceRecord",
+      "title": "Independent legacy theorem and boundary audit",
+      "status": "independently_verified",
+      "summary": "Earlier classifications were reviewed as a coherent chain with explicit scope differences.",
+      "intuition": "State caps, minimality and support restrictions explain apparently conflicting results.",
+      "statement": "The legacy audit reviews the four-state prescribed/unknown-support chain including nonminimality, the observable criterion, splitting, sparse five-state and all-N path-cap results, theta rank/coincidence/constructive strata and the local/global counterexample. It separates global proofs from examples and flags historical superseded limitations.",
+      "why_it_matters": "Prevents the map from overstating an exhaustive N≤6 classification or omitting exceptional strata.",
+      "assumptions": [],
+      "evidence": [],
+      "independent_verification": [],
+      "limitations": [
+        "Saved checker outputs and hashes were inspected, not scientifically rerun in that audit.",
+        "This inventory did not improve literature access or independently certify novelty."
+      ],
+      "falsification_attempts": [
+        "Equal escapes/exits, chart failures, repeated poles, tight rate caps and forbidden compensation were checked."
+      ],
+      "novelty": {
+        "status": "audit_not_novelty",
+        "summary": "Scope and dependency verification of existing results.",
+        "comparisons": [
+          "prior_realization_equivalence",
+          "prior_hidden_thermodynamics"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-legacy-audit.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e059"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e061"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "check_legacy_saved",
+      "type": "EvidenceRecord",
+      "title": "Saved exact legacy checks and provenance",
+      "status": "independently_verified",
+      "summary": "Deterministic accepted checks corroborate representative constructions and match their saved source manifests.",
+      "intuition": "Examples test formulas; separate proofs establish coverage of all parameters and supports.",
+      "statement": "The suite records three four-state divergent boundaries, five openings, two signed-grid controls; one 4→5 split and two lumped families; nine observable-criterion cases; exact five-state local/distant witnesses and 5-/6-state reconstructions; and five Q(√6) theta constructions. The legacy audit confirmed five source hashes against saved outputs. Embedded sparse-five, path and strata checks are separately recorded.",
+      "why_it_matters": "Provides reproducible corroboration without treating example counts as exhaustive proof.",
+      "assumptions": [],
+      "evidence": [],
+      "independent_verification": [],
+      "limitations": [
+        "No new scientific replay in the legacy inventory or map build. Finite grids are falsification controls only.",
+        "Floating entropy slopes are not rigorous enclosures; the endpoint uses rational log-tail bounds.",
+        "The initial nonsymmetric eigvalsh diagnostic was corrected to eigvals without changing exact tangent results."
+      ],
+      "falsification_attempts": [
+        "Controls include minimal singular M, nonminimality, repeated poles, support openings and true killed-graph chords."
+      ],
+      "novelty": {
+        "status": "verification_not_novelty",
+        "summary": "Accepted calculation provenance, not originality evidence.",
+        "comparisons": [
+          "prior_realization_equivalence"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-legacy-audit.md",
+          "anchor": "inspected-evidence-fresh-execution-and-unresolved-limitations"
+        },
+        {
+          "path": "analysis/four-state-classification-checks.json"
+        },
+        {
+          "path": "analysis/state-splitting-checks.json"
+        },
+        {
+          "path": "analysis/observable-criterion-checks.json"
+        },
+        {
+          "path": "analysis/five-state-extension-checks.json"
+        },
+        {
+          "path": "outputs/theta-residue-checks.json"
+        }
+      ],
+      "level": 3
+    },
+    {
+      "id": "lemma_activity_bound",
+      "type": "Lemma",
+      "title": "Activity and rate-ratio control bound entropy",
+      "status": "analytically_proved",
+      "summary": "A lower individual-rate floor is stronger than necessary; bounded activity and reverse ratios suffice.",
+      "intuition": "Entropy is activity weighted by logarithmic rate ratios, so both factors must be controlled.",
+      "statement": "If all supported reciprocal ratios are ≤R and stationary activity A≤Amax, then σ≤Amax log R. In particular supported rates in [m,M] give σ≤A log(M/m), with A≤(N−1)M and A≤τ at fixed trace. No stationary-probability floor is required.",
+      "why_it_matters": "Clarifies which microscopic restrictions regularize the upper problem.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_activity_ratio"
+      ],
+      "evidence": [],
+      "independent_verification": [
+        "proof_stability"
+      ],
+      "limitations": [
+        "This is a coarse sufficient bound; stronger established inequalities exist.",
+        "Ratios alone do not bound activity; trace is not activity. An individual rate floor is not necessary."
+      ],
+      "falsification_attempts": [
+        "Clockwise rates 2c and reverse c on a three-cycle keep ratio two while σ=c log2 diverges."
+      ],
+      "novelty": {
+        "status": "established_type_bound",
+        "summary": "An elementary inequality weaker than established microscopic activity/rate-ratio upper bounds.",
+        "comparisons": [
+          "prior_entropy_upper",
+          "prior_kl_singularity"
+        ]
+      },
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "6-statistical-consequence-and-sufficient-regularity-conditions"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e061"
+        },
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md"
+        }
+      ],
+      "level": 2
+    }
+  ],
+  "edges": [
+    {
+      "source": "theorem_t3",
+      "target": "concept_fiber",
+      "relation": "explains",
+      "explanation": "The entire entropy image can contain exactly two points under exact observations."
+    },
+    {
+      "source": "theorem_t6",
+      "target": "concept_stability",
+      "relation": "explains",
+      "explanation": "A finite exact fiber and a finite local upper envelope are different properties."
+    },
+    {
+      "source": "theorem_t2",
+      "target": "theorem_t4a",
+      "relation": "distinguished_from",
+      "explanation": "Stable generator recovery coexists with divergent entropy at a missing-edge boundary."
+    },
+    {
+      "source": "theorem_t4",
+      "target": "theorem_t5",
+      "relation": "distinguished_from",
+      "explanation": "Entrywise entropy singularity and hidden observational ambiguity are distinct instability mechanisms."
+    },
+    {
+      "source": "legacy_splitting",
+      "target": "theorem_t3",
+      "relation": "limits",
+      "explanation": "A sixth nonminimal state changes the endpoint's entropy fiber from two-point to unbounded."
+    },
+    {
+      "source": "theorem_t5",
+      "target": "theorem_t3",
+      "relation": "limits",
+      "explanation": "The exact two-point result does not supply a robust observational upper ceiling."
+    },
+    {
+      "source": "theorem_t2",
+      "target": "concept_weak",
+      "relation": "explains",
+      "explanation": "Finitely many bounded Laplace tests give a locally continuous inverse for weak joint-row convergence."
+    },
+    {
+      "source": "theorem_t7",
+      "target": "concept_window",
+      "relation": "depends_on",
+      "explanation": "The physical confidence consequence concerns stationary finite-window records; row TV is a different experiment."
+    },
+    {
+      "source": "theorem_t8",
+      "target": "theorem_t4a",
+      "relation": "distinguished_from",
+      "explanation": "Eventual support equality is precisely the condition violated by the divergent chord sequence."
+    },
+    {
+      "source": "assume_prescribed_support",
+      "target": "legacy_four_state",
+      "relation": "limits",
+      "explanation": "The fixed-support and unknown-support classifications differ: trees can have nonunique rates with zero entropy, and the distinct-escape diamond is unique only on prescribed support."
+    },
+    {
+      "source": "assume_rate_floor",
+      "target": "theorem_t6",
+      "relation": "limits",
+      "explanation": "Adding a common positive floor together with a finite upper cap excludes the divergent boundary mechanisms."
+    },
+    {
+      "source": "assume_rate_cap",
+      "target": "theorem_t6",
+      "relation": "limits",
+      "explanation": "An arbitrary extra tight cap can reduce the entire class to a singleton, so it is not implicit in the iff theorem."
+    }
+  ]
+}

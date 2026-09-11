@@ -1,0 +1,785 @@
+{
+  "papers": [
+    {
+      "id": "paper_vanluyten_2008",
+      "group_id": "prior_realization_equivalence",
+      "title": "Equivalence of state representations for hidden Markov models",
+      "authors": "B. Vanluyten; J. C. Willems; B. De Moor",
+      "year": "2008",
+      "setting": "Discrete-time positive and quasi Mealy/Moore hidden Markov models",
+      "observation": "All output-string probabilities",
+      "quantity": "Complete same-order equivalent representation sets",
+      "result_kind": "Normalized-similarity characterization and semialgebraicity",
+      "assumptions": [
+        "For Proposition 2/Theorem 2, positive model is minimal as a quasi-Mealy model",
+        "Common invertible transformation T with T1=1",
+        "Transformed transition matrices and initial law nonnegative"
+      ],
+      "difference": "T1 specializes this established machinery to fixed rank-one microscopic event maps. It does not itself count all bidirected CTMC supports or their entropy values.",
+      "access": "Full 2008 journal PDF obtained and relevant Sections 2–5 plus Appendix inspected; closes the older slides/abstract-only gap.",
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 1: Proposition 2 and Theorem 2, p. 414; Appendix p. 419",
+          "url": "https://homes.esat.kuleuven.be/~sistawww/smc/jwillems/Articles/JournalArticles/2008.3.pdf"
+        }
+      ]
+    },
+    {
+      "id": "paper_telek_horvath_2007",
+      "group_id": "prior_realization_equivalence",
+      "title": "A minimal representation of Markov arrival processes and a moments matching method",
+      "authors": "M. Telek; G. Horváth",
+      "year": "2007; inspected preprint dated 6 June 2007",
+      "setting": "Continuous-time Markov arrival processes",
+      "observation": "Stated joint interarrival transform and moments",
+      "quantity": "Equivalent representations and parameter count",
+      "result_kind": "Normalized simultaneous similarity and moment representation",
+      "assumptions": [
+        "Two nonredundant irreducible MAPs in Theorem 3",
+        "Marginal initial/terminal vectors expose the relevant modes",
+        "Nonsingular normalized transformation"
+      ],
+      "difference": "Marked-system minimality cannot be substituted for the paper's marginal nonredundancy without proof. No full physical entropy count or inverse-stability theorem is supplied.",
+      "access": "Full author-uploaded preprint obtained; Sections 2–3 and 6–7 inspected. Numerical searches are not feasibility certificates. Author order corrected to Telek first using the later saved manuscript citation audit.",
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 2: Theorem 3 p. 8, Theorem 4 p. 9, Sections 6–7",
+          "url": "https://www.researchgate.net/publication/222578381_A_minimal_representation_of_Markov_arrival_processes_and_a_moments_matching_method"
+        },
+        {
+          "path": "analysis/manuscript-referee-literature.md",
+          "label": "Checks that pass: corrected 2007 bibliography lists Telek first"
+        }
+      ]
+    },
+    {
+      "id": "paper_buchholz_telek_2013",
+      "group_id": "prior_realization_equivalence",
+      "title": "On minimal representations of Rational Arrival Processes",
+      "authors": "P. Buchholz; M. Telek",
+      "year": "2013 journal; inspected preprint 15 September 2011",
+      "setting": "Rational and marked arrival-process representations",
+      "observation": "Every joint marked interarrival density",
+      "quantity": "Law-preserving transformations and rational minimality",
+      "result_kind": "Normalized similarity/intertwining; generalized reachability/observability",
+      "assumptions": [
+        "Unique stationary event-epoch vector under the stated theorem hypotheses",
+        "D_k V=V C_k for each mark and no-arrival matrix",
+        "V1=1 and compatible stationary vectors"
+      ],
+      "difference": "General marks can pool microscopic edges. The repository separately proves the resolved-edge specialization; rational order can differ from minimal positive order.",
+      "access": "Full author-uploaded 2011 preprint theorem passages read; journal version differences not asserted checked.",
+      "provenance": [
+        {
+          "path": "evidence/realization-frontier.md",
+          "label": "Buchholz and Telek — E012: Sections 3, 4 Theorem 5, 7 Theorems 7–8",
+          "url": "https://www.researchgate.net/publication/227072004_On_minimal_representations_of_Rational_Arrival_Processes"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e012",
+          "label": "Source record"
+        }
+      ]
+    },
+    {
+      "id": "paper_ramirez_cobo_map_2010",
+      "group_id": "prior_map_identifiability",
+      "title": "Nonidentifiability of the Two-State Markovian Arrival Process",
+      "authors": "P. Ramírez-Cobo; R. E. Lillo; M. P. Wiper",
+      "year": "2010",
+      "setting": "Stationary two-phase MAP",
+      "observation": "All joint interarrival-time laws",
+      "quantity": "Parameter identifiability",
+      "result_kind": "Explicit continuous same-law families",
+      "assumptions": [
+        "General arrival matrix may include self-arrivals and multiple transitions per event mark",
+        "Displayed transformations satisfy denominator and positivity inequalities",
+        "Stationary law comparison"
+      ],
+      "difference": "T2's physical x↔y events have known rank-one resets and single-channel incidence. MAP phase count is not the count of fully hidden physical states.",
+      "access": "Full journal PDF inspected: definitions, Propositions 4.1–4.4, Theorems 4.1–4.2, discussion and Appendix D.",
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 3: pp. 631–633, 637–641 and Appendix D",
+          "url": "https://doi.org/10.1239/jap/1285335400"
+        }
+      ]
+    },
+    {
+      "id": "paper_rodriguez_bmap_preprint_2012",
+      "group_id": "prior_map_identifiability",
+      "title": "On the identifiability of the two-state BMAP",
+      "authors": "J. Rodríguez; R. E. Lillo; P. Ramírez-Cobo",
+      "year": "May 2012 working paper",
+      "setting": "Stationary two-phase BMAP with maximum batch size two",
+      "observation": "All joint waiting times and batch-size marks",
+      "quantity": "Marked parameter identifiability",
+      "result_kind": "Constructed continuous equivalent family for BMAP2(2)",
+      "assumptions": [
+        "General nonnegative D1,D2 arrival matrices",
+        "Definition 1 all-length marked-law equality",
+        "Positivity conditions in Proposition 2"
+      ],
+      "difference": "Batch marks do not fix physical event endpoints; this is not a two-point unrestricted stationary entropy fiber.",
+      "access": "Full author-uploaded working-paper text read. Proposition 1 omits about 43 pages of rational expressions; calculations were not reproduced. Cover says 12-02 while institutional series metadata says 12-01.",
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 4: Definition 1/Eq. (7), Proposition 2 and Theorem 1; proof omissions",
+          "url": "https://www.researchgate.net/publication/254401538_On_the_identifiability_of_the_two-state_BMAP"
+        }
+      ]
+    },
+    {
+      "id": "paper_rodriguez_bmap_journal_2016",
+      "group_id": "prior_map_identifiability",
+      "title": "Nonidentifiability of the Two-State BMAP",
+      "authors": "J. Rodríguez; R. E. Lillo; P. Ramírez-Cobo",
+      "year": "2016 journal issue; online 23 April 2014",
+      "setting": "Stationary two-phase BMAP with maximum batch size k≥2",
+      "observation": "Interarrival times and batch sizes",
+      "quantity": "Marked parameter identifiability",
+      "result_kind": "Abstract-reported nonidentifiability for all k≥2",
+      "assumptions": [
+        "Stationary BMAP2(k)",
+        "Both waiting times and batch sizes observed",
+        "Full proof hypotheses beyond abstract remain uninspected"
+      ],
+      "difference": "The successor extends the abstract's scope beyond the k=2 preprint; no unread proof is attributed to the earlier working paper. Batch marks still differ from fixed microscopic resets.",
+      "access": "Journal abstract and primary references only; full journal proof not obtained. Distinct version from the May 2012 full-text preprint.",
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 4: journal successor and explicit access limitation",
+          "url": "https://doi.org/10.1007/s11009-014-9401-z"
+        }
+      ]
+    },
+    {
+      "id": "paper_bodrog_2008",
+      "group_id": "prior_map_canonical",
+      "title": "A Markovian canonical form of second-order matrix-exponential processes",
+      "authors": "L. Bodrog; A. Heindl; G. Horváth; M. Telek",
+      "year": "2008",
+      "setting": "Second-order matrix-exponential processes and MAP2",
+      "observation": "Stationary interarrival moments and lag-one correlation",
+      "quantity": "Canonical representation parameters",
+      "result_kind": "Markovian canonical forms and explicit reconstruction",
+      "assumptions": [
+        "Second-order process",
+        "Canonical positivity and correlation-regime conditions",
+        "Three interarrival moments and lag-one correlation supplied"
+      ],
+      "difference": "Canonical uniqueness selects a representative; T2 identifies actual six-rate generators because the resolved reset geometry is stronger. Neither result supplies a uniform condition number at degeneracy.",
+      "access": "Full author-uploaded preprint Definition 1, Theorem 3 and Section 6 inspected; uploaded version date unspecified.",
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 5: Definition 1 pp. 8–9, Theorem 3 p. 13, Section 6 pp. 14–16",
+          "url": "https://doi.org/10.1016/j.ejor.2007.06.020"
+        }
+      ]
+    },
+    {
+      "id": "paper_van_den_hof_1997",
+      "group_id": "prior_ph_polytopes",
+      "title": "Realization of continuous-time positive linear systems",
+      "authors": "J. M. van den Hof",
+      "year": "1997",
+      "setting": "Continuous-time positive linear systems",
+      "observation": "Positive transfer response / shifted Markov parameters",
+      "quantity": "Positive realizability and positive realization order",
+      "result_kind": "Invariant-polyhedral-cone characterization",
+      "assumptions": [
+        "Nonnegative shifted Markov parameters",
+        "Backward-shift-invariant polyhedral cone",
+        "Order tied to cone generators and admissible shifts"
+      ],
+      "difference": "Positive response does not guarantee a strict cone with exactly three rays. The repository adds fixed reset incidence, reciprocal support and a global fixed-order entropy count.",
+      "access": "Full CWI journal PDF inspected at definitions and Theorems 3.1–4.2.",
+      "provenance": [
+        {
+          "path": "evidence/invariant-fiber-prior-art.md",
+          "label": "Section 5: Theorems 3.1–4.2, pp. 246–248; Definition 2.3 p. 245",
+          "url": "https://ir.cwi.nl/pub/127/0127D.pdf"
+        }
+      ]
+    },
+    {
+      "id": "paper_he_zhang_2006",
+      "group_id": "prior_ph_polytopes",
+      "title": "PH-Invariant Polytopes and Coxian Representations of Phase Type Distributions",
+      "authors": "Q.-M. He; H. Zhang",
+      "year": "2006",
+      "setting": "PH distributions and ordered Coxian realizations",
+      "observation": "Scalar absorption-time law",
+      "quantity": "Invariant polytopes and sparse positive representations",
+      "result_kind": "Constructive dynamic polytopes including three-mode triangles",
+      "assumptions": [
+        "PH generator and valid entrance distributions",
+        "Real eigenvalue/Jordan-block restrictions for the stated construction",
+        "Maximality concerns the constructed ordered family"
+      ],
+      "difference": "Dynamic invariant triangles are prior art. T3 requires all admissible two-port CTMC cones, reciprocal support and disconnected-support exhaustion, not only ordered Coxians.",
+      "access": "Full journal PDF available; definitions, Example 3.2, Theorem 4.1/notes and Example 6.1 inspected.",
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 7: pp. 389–391, 397–398 and 407–408",
+          "url": "https://www.engineering.uwaterloo.ca/~q7he/Z_PDF_PS_Published/2006_SM_PH_Polytope_HE_Zhang.pdf"
+        }
+      ]
+    },
+    {
+      "id": "paper_mond_smith_van_straten_2003",
+      "group_id": "prior_finite_fibers",
+      "title": "Stochastic factorizations, sandwiched simplices and the topology of the space of explanations",
+      "authors": "D. Mond; J. Smith; D. van Straten",
+      "year": "2003",
+      "setting": "Rank-minimal stochastic/nonnegative factorization",
+      "observation": "A finite nonnegative matrix",
+      "quantity": "Factorization fiber modulo scaling/permutation",
+      "result_kind": "Nested-simplex correspondence and finite isolated full-space examples",
+      "assumptions": [
+        "Factor size equals ordinary rank for the rank-three example",
+        "Correct scaling/permutation quotient",
+        "Full nested-triangle space distinguished from its boundary-vertex retract"
+      ],
+      "difference": "Eight isolated positive-factor explanations preempt novelty in finite fibers generally. The repository's scalar-dynamics lift is a separate deduction and does not provide a minimal three-hidden-mode, two-port bidirected CTMC or entropy separation.",
+      "access": "Full author-hosted journal PDF inspected. Section 5's full-space notation was visually checked by coordinator and independent reviewer; this was not a new geometric enumeration.",
+      "provenance": [
+        {
+          "path": "evidence/invariant-fiber-prior-art.md",
+          "label": "Sections 1–2: Theorem 2.4/Corollary 2.5; Section 3 retract; Section 5 p. 2842",
+          "url": "https://doi.org/10.1098/rspa.2003.1150"
+        }
+      ]
+    },
+    {
+      "id": "paper_krone_kubjas_2021",
+      "group_id": "prior_finite_fibers",
+      "title": "Uniqueness of nonnegative matrix factorizations by rigidity theory",
+      "authors": "R. Krone; K. Kubjas",
+      "year": "2021 journal; inspected arXiv v3 dated 2 September 2020",
+      "setting": "Nonnegative matrix factorizations with rank equal to inner size",
+      "observation": "One nonnegative matrix",
+      "quantity": "Local/global rigidity of factorizations",
+      "result_kind": "Infinitesimal rigidity criteria and isolated rank-three examples",
+      "assumptions": [
+        "Ordinary rank = nonnegative rank = r in the relevant setting",
+        "Active nonnegativity constraints",
+        "Added rows/columns in the global-rigidity construction"
+      ],
+      "difference": "Local rigidity does not count the original whole dynamic fiber. Adding observation rows/columns changes constraints; T3 keeps two visible ports and imposes semigroup invariance.",
+      "access": "Full primary preprint inspected at Sections 3–5, Proposition 4.2, Example 4.3, Corollary 4.7 and Proposition 5.3.",
+      "provenance": [
+        {
+          "path": "evidence/invariant-fiber-prior-art.md",
+          "label": "Section 3: rigidity theorem scope and added constraints",
+          "url": "https://arxiv.org/pdf/1902.02868v3"
+        },
+        {
+          "path": "evidence/three-state-cone-frontier.md",
+          "label": "Section 1: dynamic versus static constraints"
+        }
+      ]
+    },
+    {
+      "id": "paper_rizk_burke_walsh_2019",
+      "group_id": "prior_ph_finite_counts",
+      "title": "On the Non-uniqueness of Representations of Coxian Phase-Type Distributions",
+      "authors": "J. Rizk; K. Burke; C. Walsh",
+      "year": "Inspected arXiv v2, 23 July 2019",
+      "setting": "Coxian transient PH chains",
+      "observation": "Absorption-time distribution",
+      "quantity": "Equivalent Coxian representations",
+      "result_kind": "Fixed-order uniqueness by diagonal ordering and finite enumeration",
+      "assumptions": [
+        "Nonredundant PH law",
+        "Coxian initial state e1 and nonzero superdiagonals",
+        "A specified diagonal ordering"
+      ],
+      "difference": "Two Coxian representations do not exhaust all positive realizations and do not form a bidirected stationary entropy example. T3's unrestricted physical count has additional obligations.",
+      "access": "Full 20-page primary preprint inspected; journal publication/version not verified.",
+      "provenance": [
+        {
+          "path": "evidence/five-state-frontier-followup.md",
+          "label": "Theorem 1/Corollary 1; Theorem 2; Algorithm 1; Example 5 p. 15",
+          "url": "https://arxiv.org/pdf/1901.03849v2"
+        }
+      ]
+    },
+    {
+      "id": "paper_lindqvist_2023",
+      "group_id": "prior_ph_finite_counts",
+      "title": "Phase-type models for competing risks, with emphasis on identifiability issues",
+      "authors": "B. H. Lindqvist",
+      "year": "2023 journal; first online 8 February 2022",
+      "setting": "Competing-risk PH models and Coxian forms",
+      "observation": "Absorption time and cause-specific subdensities",
+      "quantity": "Equivalent PH representations with marked exits",
+      "result_kind": "Normalized transformations and exact two-representation example",
+      "assumptions": [
+        "Unmarked scalar PH model itself nonredundant",
+        "One fixed entrance distribution",
+        "Coxian restrictions for fixed-order uniqueness"
+      ],
+      "difference": "Resolving exit causes does not give the two known resets of the repository. The one-way transient model does not establish distinct stationary entropies.",
+      "access": "Full 24-page journal PDF inspected: Section 2.1, Theorems 4–5 and Example 5. Repeated Coxian results are not independent evidence from Rizk et al.",
+      "provenance": [
+        {
+          "path": "evidence/five-state-frontier-followup.md",
+          "label": "Theorem 4 p. 12; Theorem 5 pp. 12–13; Example 5 Eqs. (20)–(23)",
+          "url": "https://d-nb.info/1257579983/34"
+        }
+      ]
+    },
+    {
+      "id": "paper_wagner_timmer_2000",
+      "group_id": "prior_hidden_thermodynamics",
+      "title": "The Effects of Non-Identifiability on Testing for Detailed Balance in Aggregated Markov Models for Ion-Channel Gating",
+      "authors": "M. Wagner; J. Timmer",
+      "year": "2000",
+      "setting": "Aggregated continuous-time ion-channel Markov models",
+      "observation": "Open/closed aggregate dwell observations",
+      "quantity": "Detailed-balance identifiability",
+      "result_kind": "Exact equilibrium/nonequilibrium observational ambiguity",
+      "assumptions": [
+        "Topology-preserving local similarity and stated regularity",
+        "Four-state loop example with equal open dwell times",
+        "Aggregate-state observation"
+      ],
+      "difference": "Known exact hidden nonequilibrium does not automatically preserve a single prescribed resolved edge or determine the whole entropy upper range.",
+      "access": "Full author journal PDF inspected at pp. 2919–2920.",
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e008",
+          "label": "Criterion for non-identifiability and testing detailed balance",
+          "url": "https://jeti.uni-freiburg.de/papers/detailed_balance_printed.pdf"
+        }
+      ]
+    },
+    {
+      "id": "paper_ehrich_2021",
+      "group_id": "prior_hidden_thermodynamics",
+      "title": "Tightest bound on hidden entropy production from partially observed dynamics",
+      "authors": "J. Ehrich",
+      "year": "2021; inspected arXiv v2",
+      "setting": "Discrete-time masked Markov chains with two visible and two hidden states",
+      "observation": "All masked jump probabilities under the declared observation model",
+      "quantity": "Entropy over compatible hidden models",
+      "result_kind": "Matrix-factorization parameterization and entropy optimization",
+      "assumptions": [
+        "Known state count in the worked four-state setting",
+        "Specific discrete-time masking protocol",
+        "Physical nonnegative transition parameters"
+      ],
+      "difference": "The sampled maximum appears unbounded near a one-way boundary, but this is not a general proof. T3/T5 use different resolved-edge CTMC data and exact family/support arguments.",
+      "access": "Full v2 Section 4, Eqs. (39)–(49), Fig. 8 and Section 5 inspected; numerical source result remains labeled numerical.",
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e004",
+          "label": "Compatible-model optimization and four-state ambiguity",
+          "url": "https://arxiv.org/html/2105.08803v2"
+        }
+      ]
+    },
+    {
+      "id": "paper_siekmann_2026",
+      "group_id": "prior_hidden_thermodynamics",
+      "title": "Modelling ion channels with a view towards identifiability",
+      "authors": "I. Siekmann",
+      "year": "2026 journal; online 9 December 2025",
+      "setting": "Small aggregated CTMC ion-channel models",
+      "observation": "Binary open/closed aggregation",
+      "quantity": "Equivalent-rate geometry and detailed-balance feasibility",
+      "result_kind": "Explicit continuous small-state equivalence classes and boundary models",
+      "assumptions": [
+        "Given open/closed state counts",
+        "Aggregate rather than resolved-edge observations",
+        "Reduced-topology lists distinguished from encompassing continuous classes"
+      ],
+      "difference": "The introductory finite-model wording concerns reduced structures, not a finite unrestricted physical fiber. Its three-state class has continuous free rates and does not calculate the full entropy range.",
+      "access": "Full institutional author PDF inspected at Sections 3.4.1–3.4.4 and relevant introduction; canonical/physical distinction checked.",
+      "provenance": [
+        {
+          "path": "evidence/invariant-fiber-prior-art.md",
+          "label": "Section 4: Eqs. (52)–(55), Eq. (62), PDF pp. 22–25",
+          "url": "https://doi.org/10.1007/s11538-025-01558-3"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e010",
+          "label": "Small-network aggregate equivalence"
+        }
+      ]
+    },
+    {
+      "id": "paper_van_der_meer_ertel_seifert_2022",
+      "group_id": "prior_resolved_inference",
+      "title": "Thermodynamic Inference in Partially Accessible Markov Networks: A Unifying Perspective from Transition-Based Waiting Time Distributions",
+      "authors": "J. van der Meer; B. Ertel; U. Seifert",
+      "year": "2022; inspected arXiv HTML v2",
+      "setting": "Partially accessible Markov networks",
+      "observation": "Resolved next-transition/time kernels",
+      "quantity": "Lower entropy estimator and conditional exactness",
+      "result_kind": "Absorbing-process representation and thermodynamic inference",
+      "assumptions": [
+        "Correct time reversal of individually resolved marks",
+        "Complete waiting-law information",
+        "Specified structural conditions for saturation, including sufficiently observed unicycles"
+      ],
+      "difference": "Estimator exactness under a true-network assumption is not uniqueness over all larger compatible classes. The project classifies entire physical entropy fibers.",
+      "access": "Full relevant primary text inspected: Eq. (3), Sections III, IV.3, V.2, VI and appendices.",
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e001",
+          "label": "Resolved-edge kernels and estimator scope",
+          "url": "https://arxiv.org/html/2203.12020v2"
+        }
+      ]
+    },
+    {
+      "id": "paper_maier_seifert_van_der_meer_2025",
+      "group_id": "prior_resolved_inference",
+      "title": "From observed transitions to hidden paths in Markov networks",
+      "authors": "A. M. Maier; U. Seifert; J. van der Meer",
+      "year": "2025; inspected preprint v1",
+      "setting": "Partially observed Markov networks",
+      "observation": "Resolved transition-conditioned waiting-time data",
+      "quantity": "Hidden path lengths, path entropy and candidate network reconstruction",
+      "result_kind": "Path constraints and branching reconstruction procedure",
+      "assumptions": [
+        "Specified structural conditions for hidden-path inference",
+        "Selected inferred path properties",
+        "Graph-minimality criterion distinct from linear realization minimality"
+      ],
+      "difference": "Reconstructing candidate minimal networks is not a proof exhausting every generator with the full matrix kernel; T3 requires that global quantifier.",
+      "access": "Full relevant preprint HTML inspected at Sections III–VI, VII.2–VII.4 and VIII.",
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e003",
+          "label": "Path and minimal-network reconstruction",
+          "url": "https://arxiv.org/html/2504.16015v1"
+        }
+      ]
+    },
+    {
+      "id": "paper_zeraati_jafarpour_hinrichsen_2012",
+      "group_id": "prior_kl_singularity",
+      "title": "Entropy Production of Nonequilibrium Steady States with Irreversible Transitions",
+      "authors": "Zeraati; Jafarpour; Hinrichsen",
+      "year": "2012; inspected arXiv v1 dated 20 November 2012",
+      "setting": "Steady-state stochastic thermodynamics near irreversible transitions",
+      "observation": "Microscopic transitions observed for finite time",
+      "quantity": "Entropy singularity and finite-observation regularization",
+      "result_kind": "Logarithmic reverse-rate divergence and Bayesian regularization",
+      "assumptions": [
+        "Specified stationary entropy convention",
+        "Finite-observation treatment of unobserved backward events",
+        "Distinction between averaging logarithms and logging averages"
+      ],
+      "difference": "T4a keeps every intermediate CTMC bidirected, lets both added rates vanish, and preserves irreducible limit, state order, trace and bounded rates; the singularity mechanism is established.",
+      "access": "Full v1 including supplement read; failed HTML-v2 route did not yield a v2 proof read.",
+      "provenance": [
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Main Eq. (1); supplement Section 3, Eqs. (23)–(32)",
+          "url": "https://arxiv.org/pdf/1211.4701"
+        }
+      ]
+    },
+    {
+      "id": "paper_busiello_gupta_maritan_2020",
+      "group_id": "prior_kl_singularity",
+      "title": "Entropy production in systems with unidirectional transitions",
+      "authors": "Busiello; Gupta; Maritan",
+      "year": "2020",
+      "setting": "Stochastic systems with genuinely unidirectional transitions",
+      "observation": "Microscopic dynamics and fluxes",
+      "quantity": "Alternative finite entropy contribution for one-way transitions",
+      "result_kind": "Dynamics/flux-preserving limiting construction",
+      "assumptions": [
+        "Paper's alternative entropy convention",
+        "Fictitious reverse rate tends to infinity",
+        "One-way transitions are admitted in the target dynamics"
+      ],
+      "difference": "The repository evaluates ordinary stationary entropy only for finite reciprocal rates and takes a reverse rate to zero. It does not assign this alternative regularized value at the excluded boundary.",
+      "access": "Full institutional journal PDF inspected at Sections I–III, Eqs. (8)–(13), and bibliography [19].",
+      "provenance": [
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Distinct entropy convention and verified forward citation of Zeraati",
+          "url": "https://doi.org/10.1103/PhysRevResearch.2.023011"
+        }
+      ]
+    },
+    {
+      "id": "paper_sason_verdu_2015",
+      "group_id": "prior_kl_singularity",
+      "title": "Upper Bounds on the Relative Entropy and Rényi Divergence as a Function of Total Variation Distance for Finite Alphabets",
+      "authors": "I. Sason; S. Verdú",
+      "year": "2015",
+      "setting": "Finite-alphabet probability distributions",
+      "observation": "The pair of laws and their total variation distance",
+      "quantity": "KL and Rényi divergence upper bounds",
+      "result_kind": "Reverse bounds requiring reference-mass information",
+      "assumptions": [
+        "Finite alphabet",
+        "Positive minimum reference mass for the stated reverse bound",
+        "TV alone is not sufficient to bound KL"
+      ],
+      "difference": "The familiar TV/KL obstruction explains rare-reverse-flux sensitivity; it does not by itself enforce CTMC stationarity, trace, fixed order or exact observed-law equality.",
+      "access": "Full author PDF introduction, Theorem 1/Eqs. (10)–(11), proof and references inspected.",
+      "provenance": [
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Reverse-Pinsker failure and required reference mass",
+          "url": "https://webee.technion.ac.il/people/sason/ISSV-ITW15-Korea-paper.pdf"
+        }
+      ]
+    },
+    {
+      "id": "paper_sason_verdu_2016",
+      "group_id": "prior_kl_singularity",
+      "title": "f-Divergence Inequalities",
+      "authors": "I. Sason; S. Verdú",
+      "year": "2016 journal; inspected draft dated 6 December 2016",
+      "setting": "General probability divergence inequalities",
+      "observation": "Probability laws with additional relative-information controls",
+      "quantity": "f-divergence bounds",
+      "result_kind": "Regularity-dependent inequalities",
+      "assumptions": [
+        "Relative-information limits, Lipschitz restrictions or minimum reference masses as appropriate",
+        "Theorem-specific hypotheses",
+        "Version-specific theorem numbering"
+      ],
+      "difference": "T8 is an elementary physical regularity principle of this established kind; T5/T6 instead identify which CTMC observation classes defeat an upper ceiling.",
+      "access": "Full author preprint Section VI, Theorems 26–28, Remarks 27–35 and proof passages inspected; no early-version theorem numbering substituted.",
+      "provenance": [
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Inspected forward development of the 2015 paper",
+          "url": "https://arxiv.org/pdf/1508.00335"
+        }
+      ]
+    },
+    {
+      "id": "paper_van_erven_harremoes_2014",
+      "group_id": "prior_kl_singularity",
+      "title": "Rényi Divergence and Kullback–Leibler Divergence",
+      "authors": "T. van Erven; P. Harremoës",
+      "year": "2014",
+      "setting": "Topology and inequalities of probability divergences",
+      "observation": "Converging pairs of probability laws",
+      "quantity": "Rényi/KL continuity and lower semicontinuity",
+      "result_kind": "Setwise lower semicontinuity and restricted-order TV continuity",
+      "assumptions": [
+        "Positive divergence order for the lower-semicontinuity statement",
+        "Uniform-TV continuity statement concerns orders strictly between zero and one",
+        "The inspected source version's exact theorem numbers"
+      ],
+      "difference": "Upward entropy divergence at paired-zero edges does not contradict lower semicontinuity. T4 is not a new general divergence topology result.",
+      "access": "Full preprint Section III.D, Theorems 15–17 and proofs inspected; a search lead citing Theorem 10 was checked and rejected as the continuity locator.",
+      "provenance": [
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Continuity versus lower semicontinuity distinction",
+          "url": "https://arxiv.org/pdf/1206.2459"
+        }
+      ]
+    },
+    {
+      "id": "paper_nishiyama_hasegawa_2023",
+      "group_id": "prior_entropy_upper",
+      "title": "Upper bound for entropy production in Markov processes",
+      "authors": "T. Nishiyama; Y. Hasegawa",
+      "year": "2023",
+      "setting": "Stationary Markov processes",
+      "observation": "Microscopic activity A and maximal reciprocal rate ratio R",
+      "quantity": "Stationary entropy-production upper bound",
+      "result_kind": "σ≤A log(R)(R−1)/(R+1)",
+      "assumptions": [
+        "Stationarity",
+        "Finite maximum microscopic reciprocal rate ratio",
+        "Activity supplied or bounded"
+      ],
+      "difference": "Trace controls activity but not R. The repository's bounded-rate divergence does not violate this theorem; T8's simple ratio bound is weaker and credited.",
+      "access": "Full source PDF/relevant proof read and rechecked at Section II.A Eqs. (6)–(8), Appendix A and discussion.",
+      "provenance": [
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Upper-bound prerequisites",
+          "url": "https://doi.org/10.1103/PhysRevE.108.044139"
+        },
+        {
+          "path": "evidence/five-state-frontier-followup.md",
+          "label": "Inspected arXiv v2 dated 6 October 2023",
+          "url": "https://arxiv.org/pdf/2306.15251v2"
+        }
+      ]
+    },
+    {
+      "id": "paper_moss_2022",
+      "group_id": "prior_confidence_impossibility",
+      "title": "Infinite diameter confidence sets in Hedges' publication bias model",
+      "authors": "J. Moss",
+      "year": "2022; published 22 April 2022",
+      "setting": "Uniform confidence-set impossibility in a statistical model",
+      "observation": "Experiment distributions approaching a limit",
+      "quantity": "Confidence-set diameter and unboundedness",
+      "result_kind": "Gleser–Hwang-type theorem",
+      "assumptions": [
+        "Uniform modelwise coverage",
+        "Converging distributions with diverging parameter size",
+        "Support condition for conclusions at other distributions"
+      ],
+      "difference": "T7 applies the established TV-transfer mechanism to microscopic CTMC-indexed entropy and stationary finite horizons; it is not a new statistical impossibility principle.",
+      "access": "Full primary Section 3 Theorem 4 and appendix proof inspected by coordinator and independent verifier. Older Gleser–Hwang/Bahadur–Savage originals remain unread.",
+      "provenance": [
+        {
+          "path": "evidence/two-point-entropy-positioning.md",
+          "label": "Statistical mechanism and exact source limits",
+          "url": "https://doi.org/10.1007/s42952-022-00169-1"
+        }
+      ]
+    },
+    {
+      "id": "paper_abraham_gassiat_naulet_2023",
+      "group_id": "prior_hmm_stability",
+      "title": "Fundamental Limits for Learning Hidden Markov Model Parameters",
+      "authors": "K. Abraham; E. Gassiat; Z. Naulet",
+      "year": "2023 journal; original arXiv June 2021",
+      "setting": "Stationary two-hidden-state HMM with multinomial emissions",
+      "observation": "Emission sequences",
+      "quantity": "Parameter recovery and minimax learnability",
+      "result_kind": "Conditioning-dependent inverse and statistical bounds",
+      "assumptions": [
+        "Ergodicity and nondegenerate transition structure",
+        "Separated emission laws",
+        "Additional positive emission masses and near-independent restrictions for specified KL estimates"
+      ],
+      "difference": "Its KL compares observation laws, not physical forward/reverse path entropy. T2 uses fixed resets; the tree sequence can have continuous rate recovery while entropy diverges.",
+      "access": "Full author preprint available; Sections 1–2, Theorem 1, Propositions 1–2 and relevant proof passages read, not all 36 pages. Author-copy version date unspecified.",
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 9: theorem hypotheses and physical distinction",
+          "url": "https://doi.org/10.1109/TIT.2022.3213429"
+        }
+      ]
+    },
+    {
+      "id": "paper_abraham_gassiat_naulet_2025",
+      "group_id": "prior_hmm_stability",
+      "title": "Frontiers to the learning of nonparametric hidden Markov models",
+      "authors": "K. Abraham; E. Gassiat; Z. Naulet",
+      "year": "2025",
+      "setting": "HMMs with nonparametric emission laws",
+      "observation": "Emission sequences",
+      "quantity": "Inverse learnability and minimax recovery",
+      "result_kind": "Nonparametric extension of the earlier frontier",
+      "assumptions": [
+        "The theorem's transition/emission separation conditions",
+        "Additional lower emission bound for the cited KL extension",
+        "Nonparametric model and sampling assumptions"
+      ],
+      "difference": "The verified forward extension does not classify fixed-trace CTMC entropy fibers or supply the all-N resolved-pair ceiling criterion.",
+      "access": "Full 75-page PDF available; introduction, Theorem 3, discussion p. 19, Appendix B Proposition 11 and references inspected, not all proofs.",
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 10: verified actual forward citation and access scope",
+          "url": "https://jmlr.org/papers/v26/24-2230.html"
+        }
+      ]
+    },
+    {
+      "id": "paper_larget_1998_unread",
+      "group_id": "prior_larget_gap",
+      "title": "A canonical representation for aggregated Markov processes",
+      "authors": "B. Larget",
+      "year": "1998",
+      "setting": "Discrete- and continuous-time aggregated Markov processes",
+      "observation": "A deterministic function of the microscopic Markov state",
+      "quantity": "Canonical equivalence/identifiable parameterization, as described by abstract",
+      "result_kind": "Abstract-reported canonical representation; full theorem unverified",
+      "assumptions": [
+        "Regularity assumptions are stated in the abstract but their exact content has not been read",
+        "No physical positivity or exceptional-fiber theorem is inferred"
+      ],
+      "difference": "Canonical uniqueness alone is not physical generator uniqueness. Uninspected exceptional examples or stronger hypotheses could affect attribution; their absence is not claimed.",
+      "access": "Original abstract/references only despite several documented routes. Berkeley 1994 dissertation record is metadata, not access to the thesis or paper proof.",
+      "provenance": [
+        {
+          "path": "evidence/finite-fiber-prior-art.md",
+          "label": "Outstanding original-source gap: Larget",
+          "url": "https://doi.org/10.1239/jap/1032192850"
+        },
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "New routes and precise remaining risk"
+        }
+      ]
+    },
+    {
+      "id": "paper_skinner_dunkel_prl_2021",
+      "group_id": "prior_lower_bounds",
+      "title": "Estimating Entropy Production from Waiting Time Distributions",
+      "authors": "D. J. Skinner; J. Dunkel",
+      "year": "2021",
+      "setting": "Partially observed stochastic systems with metastates",
+      "observation": "Waiting-time distributions and practical dwell-time moments",
+      "quantity": "Minimum compatible entropy / lower bound",
+      "result_kind": "Compatible-model lower-bound formulation",
+      "assumptions": [
+        "Binary-metastate dwell distribution in the full-distribution formulation",
+        "Specified observed statistics",
+        "Practical moment reductions differ from complete data"
+      ],
+      "difference": "A lower entropy bound does not determine the supremum or the full exact entropy image. Metastate dwells are not the complete resolved next-edge/time kernel.",
+      "access": "Full primary author PDF inspected, especially Eqs. (3)–(4). Separate PNAS paper is not merged into this record.",
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e005",
+          "label": "Source-specific PRL formulation within E005",
+          "url": "https://math.mit.edu/~dunkel/Papers/2021SkDu_PRL.pdf"
+        }
+      ]
+    },
+    {
+      "id": "paper_biddle_2026",
+      "group_id": "prior_cycle_inference",
+      "title": "A method for calculating entropy production without knowing transition rates or dwell times",
+      "authors": "Biddle",
+      "year": "Inspected arXiv v1 26 May 2026; journal issue dated 15 October 2026",
+      "setting": "Markov networks with observable cycle families and chords",
+      "observation": "Forward/reverse cycle-family counts, chord currents and trajectory duration",
+      "quantity": "Exact entropy production",
+      "result_kind": "Cycle-based conditional reconstruction",
+      "assumptions": [
+        "Required cycle families and chords remain observable",
+        "Graph/data structure specified by the reconstruction",
+        "Total duration supplies the time scale"
+      ],
+      "difference": "A lone resolved pair with unknown hidden topology need not provide these cycle observables. The source does not count T3's whole physical fiber or imply a local ceiling in T6's class.",
+      "access": "Full arXiv v1 Sections 2–4.2 and Eqs. (10)–(16) inspected. At retrieval the journal issue was future while the preprint and publisher record were accessible.",
+      "provenance": [
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Cycle observability requirements and version dates",
+          "url": "https://arxiv.org/html/2605.27635v1"
+        }
+      ]
+    }
+  ]
+}

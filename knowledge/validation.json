@@ -1,0 +1,27 @@
+{
+  "meaning": "Structural integrity and provenance audit. A clean graph does not verify a proof or establish novelty.",
+  "checks": {
+    "nodes": 141,
+    "typed_edges": 419,
+    "logical_dependency_dag": true,
+    "views": 12,
+    "report_sections_mapped": 7,
+    "report_coverage_method": "Human-reviewed section/claim mapping plus source hash drift detection; not automatic semantic completeness.",
+    "source_snapshots": 59
+  },
+  "errors": [],
+  "warnings": [],
+  "scientific_risks": [
+    {
+      "node": "risk_novelty",
+      "title": "A matching prior physical theorem could change attribution",
+      "summary": "No inspected source was shown to imply the exact two-point physical entropy fiber or the complete fixed-N ceiling criterion; matching exceptional results in inaccessible originals remain a specific risk."
+    },
+    {
+      "node": "risk_global_proof",
+      "title": "Global support exhaustion must remain auditable",
+      "summary": "The endpoint count rests on a long conventional proof covering connected and disconnected hidden supports, all envelope equality cases, endpoint existence and entropy separation."
+    }
+  ],
+  "passed": true
+}

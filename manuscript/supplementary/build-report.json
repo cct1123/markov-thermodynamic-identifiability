@@ -1,0 +1,36 @@
+{
+  "executed_at_utc": "2026-09-11T02:22:55.499674+00:00",
+  "engine": "Tectonic 0.17.0",
+  "bundle": "https://relay.fullyjustified.net/default_bundle_v33.tar",
+  "source_date_epoch": "1789084800",
+  "commands": [
+    {
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\tmp\\tectonic\\tectonic.exe",
+        "--bundle",
+        "https://relay.fullyjustified.net/default_bundle_v33.tar",
+        "--keep-logs",
+        "--keep-intermediates",
+        "--only-cached",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "stdout": "note: using only cached resource files\nnote: Running TeX ...\nnote: Running BibTeX on main.aux ...\nnote: warnings were issued by BibTeX; use --print and/or --keep-logs for details.\nnote: Rerunning TeX because bibtex was run ...\nnote: Running xdvipdfmx ...\nnote: Writing `mainNotes.bib` (104 B)\nnote: Writing `main.log` (14.5693359375 KiB)\nnote: Writing `main.aux` (15.1826171875 KiB)\nnote: Writing `main.pdf` (224.2236328125 KiB)\nnote: Writing `main.out` (6.2919921875 KiB)\nnote: Writing `main.blg` (940 B)\nnote: Writing `main.bbl` (12.298828125 KiB)\n",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+    }
+  ],
+  "sha256": {
+    "main.tex": "e2ccb71f0fab5f6bfb7f10bad5020c4941e62104da19841f4ec7372b99804283",
+    "references.bib": "ddcbc047548c952ba5b272a4ad801733260c84dc8500e6cc719fe0f891dd2533",
+    "supplementary/proofs.tex": "a1c9143bf6215a1e0cccd12c31003b84f520da5a7001f1c7e262f5f4ac52f7cf",
+    "figures/balanced-fiber.pdf": "9a4eaa3af2743d8308f81ed98ec18010f01489cfbc3c6ce025d7bc80d315040e",
+    "figures/three-state-instability.pdf": "e2a17cb2e9926346606e5f84dd51585fc388d42715c760148d8ae8e0ab722803",
+    "main.pdf": "720e007d87fdf8c9a3ea740d93f6885a5d6c16531db805e371b8578b61754a3b"
+  },
+  "validation": {
+    "compiled": true,
+    "no_undefined_references_or_citations": true,
+    "no_overfull_boxes": true
+  },
+  "log_warnings": []
+}

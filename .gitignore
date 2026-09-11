@@ -26,5 +26,13 @@ __pycache__/
 .ruff_cache/
 .cache/
 
+# Local manuscript compiler, page renders, and extracted replay workspaces
+/tmp/
+/manuscript/*.aux
+/manuscript/*.blg
+/manuscript/*.log
+/manuscript/*.out
+/manuscript/*Notes.bib
+
 # Keep scientific inputs, analysis artifacts, outputs, and dependency lockfiles
 # visible to Git; add narrow exclusions only when a real workflow needs them.

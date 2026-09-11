@@ -8,6 +8,10 @@ For new work, the [scientific stack guide](../docs/research-stack.md) adds an is
 
 | Artifact | Purpose |
 | --- | --- |
+| [publication-theorems.md](publication-theorems.md) | Current rigorous definitions and T1–T8: exact fibers, cap-free three-state inversion, all-N local ceilings, statistical consequences and corrected sufficient conditions |
+| [publication-endpoint-audit.md](publication-endpoint-audit.md) | Independent global endpoint proof review, exact cone/path agreement, boundary cases, assumption weakening and intercepted historical-script replays |
+| [publication-stability-audit.md](publication-stability-audit.md) | Cap-free three-state Laplace inverse, sparse-boundary theorem, exact fixed-count stability criterion and targeted counterexamples |
+| [publication-legacy-audit.md](publication-legacy-audit.md) | Rigorous inventory of earlier classifications, constructions, exceptional strata and failed generalizations; distinguishes fresh checks from historical evidence |
 | [formulation.md](formulation.md) | Model, full joint data, admissible classes, entropy image, finite exact kernel certificate |
 | [small-network-audit.md](small-network-audit.md) | At-most-three-state recovery; lumpable and minimal four-state examples |
 | [compatibility-orbit.md](compatibility-orbit.md) | Minimal hidden-similarity parameterization and fixed full-diamond classification |
@@ -35,9 +39,9 @@ For new work, the [scientific stack guide](../docs/research-stack.md) adds an is
 | [one-hidden-robustness-audit.md](one-hidden-robustness-audit.md) | Tree/positive-triangle local stability classification under cap three; distinction from globally honest confidence limits |
 | [three-state-precision-audit.md](three-state-precision-audit.md) | Globally unique two-state zero-deficit data have unbounded finite-precision neighborhoods with a third state |
 
-The current synthesis is [REPORT.md](../outputs/REPORT.md). The later proofs resolve the earlier four-state question and several five-state subclasses. The balanced quartic endpoint now proves the existence of a minimal five-state bounded-nonunique entropy fiber; the general five/six-state classification and publication novelty remain unresolved.
+The current synthesis is [REPORT.md](../outputs/REPORT.md). The publication audit supports a narrowly scoped manuscript centered on the exact two-point entropy fiber and the sharp fixed-N local-ceiling criterion. The [paper structure](../outputs/PAPER-STRUCTURE.md) specifies the theorem sequence and proof package. The general five/six-state exact classification remains open. Originality is a bounded judgment, with precise prior-art comparisons and access gaps in the [realization memo](../evidence/publication-realization-novelty.md) and [thermodynamic memo](../evidence/publication-thermodynamics-novelty.md).
 
-The finite-precision continuation also proves that exact finite fibers need not yield robust entropy upper ceilings, even with fixed state count, trace and bounded rates. Three-state positive triangles supply a local continuity exception under a common rate cap; the exact and approximate questions remain distinct. Independent audits and failed attempts accompany the constructive proofs. [E054–E058](../evidence/RECORDS.md#e054)
+Exact finite fibers need not yield robust entropy upper ceilings, even with fixed state count, trace and bounded rates. The fresh three-state Laplace inverse removes the earlier common-rate-cap assumption for joint-kernel continuity: the generator inverse is locally Lipschitz even at trees, whereas entropy is locally Lipschitz only at positive triangles under unknown support. The separate stationary-window continuity proof still uses a rate cap. Historical conclusions and failed attempts remain preserved, with these refinements in [E059–E062](../evidence/RECORDS.md#e059).
 
 ## Reproduce
 
@@ -59,6 +63,7 @@ Accepted runs used Python 3.9.12, NumPy 2.0.1 and SciPy 1.13.1 on Windows. Each 
 
 | Script | Recorded output | Checks and evidence |
 | --- | --- | --- |
+| [check_publication_audit.py](check_publication_audit.py) | [publication-audit-checks.json](../outputs/publication-audit-checks.json) | Six independent 160-digit direct-resolvent inverse checks including both leaves and disparate rates; three exact alternative trace reconstructions; twelve direct stationary/entropy checks of the sparse-boundary construction at N=3,4,5. [E060–E061](../evidence/RECORDS.md#e060) |
 | [check_small_networks.py](check_small_networks.py) | [small-network-checks.json](small-network-checks.json) | Small-network reconstruction, stationary laws, normalization, minimality and all-time equality; independent exponentials at 66 times; entropy formulas and two negative controls. [E020](../evidence/RECORDS.md#e020) |
 | [check_four_state_classification.py](check_four_state_classification.py) | [four-state-classification-checks.json](four-state-classification-checks.json) | Three exact divergent boundaries, five support openings, two signed-grid uniqueness controls and a nonminimal guard. [E026](../evidence/RECORDS.md#e026) |
 | [check_state_splitting.py](check_state_splitting.py) | [state-splitting-checks.json](state-splitting-checks.json) | Four-to-five-state cloning, stationary aggregation, exact kernels and entropy slope; two nonminimal lumped families. [E029](../evidence/RECORDS.md#e029) |
@@ -80,6 +85,8 @@ Accepted runs used Python 3.9.12, NumPy 2.0.1 and SciPy 1.13.1 on Windows. Each 
 For the new balanced-boundary scripts use `.venv\Scripts\python.exe -B analysis/<script>.py` from root and the [research environment](../docs/research-stack.md). The accepted run used Python 3.9.12, SymPy 1.14.0, mpmath 1.3.0, NumPy 2.0.1 and SciPy 1.13.1. Exact derivations have no random seed; the bounded discovery script records seed 20260910. Each writes only its listed new output. The number-field certificate uses exact root/sign and log-remainder enclosures; high precision alone is not the proof. The independent endpoint replay is separately preserved in [balanced-fold-independent-replay.json](../outputs/balanced-fold-independent-replay.json).
 
 The two finite-precision scripts use the same root-relative command and environment. No search or random seed is used. They preserve old outputs and write only their listed JSON, including execution-time script hashes. The three-state audits and [four-state independent check](finite-precision-independent-check.md) also contain separately executed embedded calculations. Continuum sign, coupling, divergence, compactness and coverage arguments are conventional proofs in the notes; high-precision and quadrature values are independent diagnostics. None of these checks certifies publication novelty.
+
+For the publication audit run `.venv\Scripts\python.exe -B analysis/check_publication_audit.py` from root in the same pinned environment. This deterministic checker writes only its new output and records its source hash, commands, precision and tolerances. The exact embedded checks in the endpoint and stability publication notes were also executed independently; [publication-independent-replays.json](../outputs/publication-independent-replays.json) records the extracted source-block hashes and output. The endpoint note separately documents four historical script replays with file writes intercepted, preserving accepted outputs. The legacy inventory identifies which older proofs/scripts were read and which saved runs were inspected; it does not imply that every historical computation was rerun.
 
 Inputs and rational or quadratic-algebraic parameter choices are embedded in the scripts and motivated in the linked proofs. No external dataset is used. Exact checks are deterministic; only the separate discovery probes use seeded random starts. Rates and entropy rates have inverse-time units, with Boltzmann's constant one. Numerical tolerances are explicit in each script.
 

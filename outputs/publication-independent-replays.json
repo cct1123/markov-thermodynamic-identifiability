@@ -1,0 +1,18 @@
+{
+  "executed_at": "2026-09-11T01:14:08.160880+00:00",
+  "method": "Root replay of separately derived cone/path and three-Laplace exact checks; no accepted output writes.",
+  "results": [
+    {
+      "note": "analysis/publication-endpoint-audit.md",
+      "embedded_sha256": "689dfe8500f7a843cdbb507032523159edc4411ee93313544ec87b83234a3845",
+      "stdout": "PASS exact cone/path equality, cancellation, invertibility and minimality minors\n",
+      "passed": true
+    },
+    {
+      "note": "analysis/publication-stability-audit.md",
+      "embedded_sha256": "c1556afc6063a06063a492b9853534c4ca1631ce4ed4330bdf7f2ed520e9d7e3",
+      "stdout": "{\n  \"executed_at\": \"2026-09-11T01:14:08.160880+00:00\",\n  \"python\": \"3.9.12\",\n  \"sympy\": \"1.14.0\",\n  \"embedded_source_sha256\": \"c1556afc6063a06063a492b9853534c4ca1631ce4ed4330bdf7f2ed520e9d7e3\",\n  \"direct_resolvent_three_laplace_inverse\": true,\n  \"inverse_rational_cases\": 5,\n  \"both_leaf_orientations_and_fast_hidden_case\": true,\n  \"reciprocal_cubic_trace_identity\": true,\n  \"compensated_tree_stationarity_current_trace\": true,\n  \"accepted_script_hash_checks\": [\n    {\n      \"script\": \"analysis/check_three_state_precision.py\",\n      \"sha256\": \"026f0ea82f3df3e7ef3212bb705fb5ef6e04d128f64316404d416f46565529fd\",\n      \"output\": \"outputs/three-state-precision-checks.json\"\n    },\n    {\n      \"script\": \"analysis/check_finite_precision_instability.py\",\n      \"sha256\": \"f4aaac3e9e4d6554250a8425c3f43c9cf6f1ec50f138400d1f9ebe92b4930747\",\n      \"output\": \"outputs/finite-precision-checks.json\"\n    }\n  ],\n  \"all_exact_checks_passed\": true\n}\n",
+      "passed": true
+    }
+  ]
+}

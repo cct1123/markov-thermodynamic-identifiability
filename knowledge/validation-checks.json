@@ -1,0 +1,49 @@
+{
+  "command": ".venv/Scripts/python.exe -B knowledge/check_validation.py",
+  "validator_sha256": "18d9059f6fb922e386a5231641a3835c707f1751f3baad5161429688e0cdb92f",
+  "graph_sha256": "ceffecc5a1ea7572314d20a01e7cf1129cb7f1378c72bcd4516cbbe607238104",
+  "tests": [
+    {
+      "name": "Unsupported theorem",
+      "detected": true
+    },
+    {
+      "name": "Missing theorem assumptions",
+      "detected": true
+    },
+    {
+      "name": "Falsified statement used as proof",
+      "detected": true
+    },
+    {
+      "name": "Missing novelty comparison",
+      "detected": true
+    },
+    {
+      "name": "Metadata promoted to independent science",
+      "detected": true
+    },
+    {
+      "name": "Unresolved live contradiction",
+      "detected": true
+    },
+    {
+      "name": "Orphan evidence",
+      "detected": true
+    },
+    {
+      "name": "Unmotivated open question",
+      "detected": true
+    },
+    {
+      "name": "Report claim absent from graph",
+      "detected": true
+    },
+    {
+      "name": "Unsupported formal-proof badge",
+      "detected": true
+    }
+  ],
+  "passed": true,
+  "meaning": "Injected graph corruptions were detected. No scientific statement was mutated on disk or re-proved."
+}

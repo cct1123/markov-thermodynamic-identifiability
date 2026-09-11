@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1130" height="672" viewBox="0 0 1130 672" role="img" aria-labelledby="title desc">
+<title id="title">How much dissipation can remain hidden?</title><desc id="desc">One resolved transition pair leads to two inverse questions: what exact data identify, and whether any nonzero tolerance permits a finite upper bound.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#8a948f"/></marker></defs>
+<rect width="100%" height="100%" fill="#fafaf6"/>
+<text x="24" y="25" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#21372f">How much dissipation can remain hidden?</text>
+<path d="M134.0,209 L134.0,241" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>uses_method: Specify precisely what the observer measures.</title></path>
+<path d="M134.0,209 L134.0,371" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>motivates: The objective is the entropy image of every compatible physical model.</title></path>
+<path d="M516,95.0 C546,95.0 538,225.0 568,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: The exact entropy image can have exactly two finite values.</title></path>
+<path d="M516,485.0 C546,485.0 538,225.0 568,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: The local observed-law envelope can nevertheless be unbounded.</title></path>
+<path d="M516,95.0 C546,95.0 538,355.0 568,355.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: Exhaustive physical count and entropy separation are the first central candidate contribution.</title></path>
+<path d="M516,485.0 C546,485.0 538,355.0 568,355.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: The all-N local-ceiling criterion is the companion candidate contribution.</title></path>
+<path d="M840,160.0 C814.0,160.0 814.0,355.0 788,355.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>limits: Readiness and plausible originality remain bounded by source coverage.</title></path>
+<path d="M840,290.0 C814.0,290.0 814.0,355.0 788,355.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>limits: The conventional global proof must remain transparent and challengeable.</title></path>
+<path d="M788,355.0 C818,355.0 810,420.0 840,420.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>motivates: The accepted publication case justifies assembling the proof-first manuscript core.</title></path>
+<path d="M950.0,209 L950.0,371" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>limits: Attach exact primary comparisons and retain gaps; do not claim novelty from failed searches.</title></path>
+<path d="M950.0,339 L950.0,371" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>motivates: A reader must be able to audit connected/disconnected supports and certificates.</title></path>
+<path d="M406.0,404 L406.0,436" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: This recorded proof, calculation or provenance check supports only its explicitly stated scope.</title></path>
+<path d="M244,420.0 C274,420.0 266,95.0 296,95.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>motivates: Classify the complete entropy image, including bounded finite ambiguity.</title></path>
+<path d="M516,225.0 C546,225.0 538,225.0 568,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: Even an exactly unique and stably recovered generator need not give stable entropy.</title></path>
+<path d="M516,355.0 C546,355.0 538,225.0 568,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>limits: Positive three-state triangles provide a local stable exception.</title></path>
+<path d="M516,485.0 C546,485.0 538,225.0 568,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>generalizes: The fixed-count criterion separates positive triangles from all N≥4 sources.</title></path>
+<path d="M678.0,274 L678.0,306" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: Exact identified sets and their local upper stability answer complementary physical questions.</title></path>
+<path d="M788,355.0 C818,355.0 810,420.0 840,420.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>next_action: Prepare the already saved self-contained proof core; no new broad exploration is needed for this scoped manuscript.</title></path>
+<g><title>Determine the full range of microscopic steady-state entropy production compatible with exact transition-to-transition observations.</title><rect x="24" y="111" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="111" width="4" height="98" rx="2" fill="#477296"/>
+<text x="37" y="129" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#477296">DEFINITION</text>
+<text x="37" y="153" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">What can one visible edge</text>
+<text x="37" y="171" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">reveal?</text>
+</g>
+<g><title>Each detected jump resets to a known endpoint; retain the next mark and its waiting time jointly.</title><rect x="24" y="241" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="241" width="4" height="98" rx="2" fill="#477296"/>
+<text x="37" y="259" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#477296">DEFINITION</text>
+<text x="37" y="283" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Observe the joint kernel</text>
+<text x="37" y="301" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Ψ_Q(t)</text>
+</g>
+<g><title>Project a compatible generator fiber through the entropy functional.</title><rect x="24" y="371" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="371" width="4" height="98" rx="2" fill="#477296"/>
+<text x="37" y="389" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#477296">DEFINITION</text>
+<text x="37" y="413" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">All compatible entropy</text>
+<text x="37" y="431" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">values S_C(D)</text>
+</g>
+<g><title>The balanced theta family has unbounded, two-point, then singleton entropy fibers across an exact quartic threshold.</title><rect x="296" y="46" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="46" width="4" height="98" rx="2" fill="#157763"/>
+<text x="309" y="64" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="309" y="88" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Five-state boundary:</text>
+<text x="309" y="106" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">exactly two entropy values</text>
+</g>
+<g><title>A uniquely identified minimal-three-state tree is approached by same-trace, rate-bounded triangles with divergent entropy.</title><rect x="296" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="176" width="4" height="98" rx="2" fill="#157763"/>
+<text x="309" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="309" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Identified three-state</text>
+<text x="309" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">rates; divergent entropy</text>
+<text x="309" y="254" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">nearby</text>
+</g>
+<g><title>A strictly positive three-state triangle has locally Lipschitz entropy in row TV.</title><rect x="296" y="306" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="306" width="4" height="98" rx="2" fill="#157763"/>
+<text x="309" y="324" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="309" y="348" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Positive triangles: locally</text>
+<text x="309" y="366" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Lipschitz entropy</text>
+</g>
+<g><title>For one resolved pair, a finite local entropy ceiling exists exactly at N=2 or a complete N=3 triangle.</title><rect x="296" y="436" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="436" width="4" height="98" rx="2" fill="#157763"/>
+<text x="309" y="454" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="309" y="478" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Local ceiling iff N=2 or</text>
+<text x="309" y="496" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">complete N=3</text>
+</g>
+<g><title>A source can have one or two exact entropy values while every positive observation tolerance admits arbitrarily large entropy.</title><rect x="568" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="176" width="4" height="98" rx="2" fill="#477296"/>
+<text x="581" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#477296">INTERPRETATION</text>
+<text x="581" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Exact ambiguity and</text>
+<text x="581" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">observational instability</text>
+<text x="581" y="254" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">are different</text>
+</g>
+<g><title>The narrow publication case is the exhaustive two-point physical entropy fiber and sharp balanced transition, together with the all-N resolved-pair local-ceiling criterion.</title><rect x="568" y="306" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="306" width="4" height="98" rx="2" fill="#526357"/>
+<text x="581" y="324" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#526357">INTERPRETATION</text>
+<text x="581" y="348" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Candidate manuscript</text>
+<text x="581" y="366" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">contribution</text>
+</g>
+<g><title>No inspected source was shown to imply the exact two-point physical entropy fiber or the complete fixed-N ceiling criterion; matching exceptional results in inaccessible originals remain a specific risk.</title><rect x="840" y="111" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="111" width="4" height="98" rx="2" fill="#987325"/>
+<text x="853" y="129" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#987325">UNRESOLVED</text>
+<text x="853" y="153" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">A matching prior physical</text>
+<text x="853" y="171" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">theorem could change</text>
+<text x="853" y="189" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">attribution</text>
+</g>
+<g><title>The endpoint count rests on a long conventional proof covering connected and disconnected hidden supports, all envelope equality cases, endpoint existence and entropy separation.</title><rect x="840" y="241" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="241" width="4" height="98" rx="2" fill="#987325"/>
+<text x="853" y="259" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#987325">INTERPRETATION</text>
+<text x="853" y="283" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Global support exhaustion</text>
+<text x="853" y="301" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">must remain auditable</text>
+</g>
+<g><title>The complete manuscript is ready for expert human review. Check Appendix B&#x27;s global support exhaustion and its endpoint certificate, then finalize attribution and submission details.</title><rect x="840" y="371" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="371" width="4" height="98" rx="2" fill="#526357"/>
+<text x="853" y="389" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#526357">INTERPRETATION</text>
+<text x="853" y="413" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Next: expert review of the</text>
+<text x="853" y="431" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">manuscript</text>
+</g>
+<text x="24" y="602" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Proof, numerical checks and novelty have separate statuses. Arrows use the relations in graph.json.</text>
+<text x="24" y="623" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Interactive companion: select a node to read assumptions, typed relationships and exact provenance.</text></svg>

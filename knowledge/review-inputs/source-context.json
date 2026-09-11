@@ -1,0 +1,1459 @@
+{
+  "nodes": [
+    {
+      "id": "prior_realization_equivalence",
+      "type": "literature",
+      "title": "Positive-model equivalence is established machinery",
+      "status": "established_prior_result",
+      "summary": "Normalized similarities and positivity constraints describe complete same-order realization sets under the relevant minimality assumptions; their semialgebraicity is established.",
+      "intuition": "The same observable matrix response can be expressed in different hidden coordinate systems, but only some coordinates yield physical rates.",
+      "why_it_matters": "T1 specializes known realization theory to fixed resolved event maps; the novelty case requires additional physical support exhaustion.",
+      "limitations": [
+        "Positive minimal order and linear/quasi minimal order can differ.",
+        "A normalized similarity may have signed entries; physical rates still must be nonnegative and reciprocal.",
+        "A semialgebraic description does not itself count the physical fiber."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 1: Vanluyten et al., Proposition 2 and Theorem 2, p. 414",
+          "url": "https://homes.esat.kuleuven.be/~sistawww/smc/jwillems/Articles/JournalArticles/2008.3.pdf"
+        },
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 2: Horváth–Telek, Theorem 3, preprint p. 8",
+          "url": "https://doi.org/10.1016/j.peva.2007.06.001"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e012",
+          "label": "Established marked RAP similarity and minimality"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Vanluyten, Willems and De Moor; Horváth and Telek; Buchholz and Telek",
+        "year": "2007–2013",
+        "setting": "Positive Mealy HMMs and continuous-time MAP/RAP realizations",
+        "observation": "Output strings or joint marked interarrival laws",
+        "quantity": "Equivalent representations and minimal order",
+        "result_kind": "Normalized similarity/intertwining and semialgebraic representation sets",
+        "assumptions": [
+          "Fixed representation dimension",
+          "Relevant quasi/rational minimality and stationary-vector hypotheses",
+          "Transformed positivity"
+        ],
+        "difference": "The repository pins rank-one microscopic event/reset maps and additionally imposes bidirectional support and stationary entropy.",
+        "access": "Full Vanluyten 2008 journal and Horváth–Telek 2007 preprint obtained; Buchholz–Telek 2011 preprint theorem passages inspected."
+      }
+    },
+    {
+      "id": "prior_map_identifiability",
+      "type": "literature",
+      "title": "Even marked arrival models can have continuous ambiguity",
+      "status": "established_prior_result",
+      "summary": "Two-state MAPs have continuous families with identical joint interarrival laws; BMAP examples retain ambiguity when batch-size marks are observed.",
+      "intuition": "A mark may leave uncertainty about the internal phase when it pools multiple microscopic events.",
+      "why_it_matters": "Observing marks does not generically identify a hidden generator; the physical reset structure in T2 is substantive.",
+      "limitations": [
+        "The displayed families have denominator and positivity restrictions; zero strata require separate checks.",
+        "BMAP marks are batch sizes, not prescribed single-edge resets.",
+        "The 2012 preprint omits lengthy rational expressions; the 2016 journal successor was abstract-only."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Sections 3–4: MAP Theorems 4.1–4.2 and BMAP Definition 1/Proposition 2/Theorem 1",
+          "url": "https://doi.org/10.1239/jap/1285335400"
+        },
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "BMAP preprint and journal access distinction",
+          "url": "https://doi.org/10.1007/s11009-014-9401-z"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Ramírez-Cobo, Lillo and Wiper; Rodríguez, Lillo and Ramírez-Cobo",
+        "year": "2010; 2012 preprint / 2016 journal",
+        "setting": "Stationary two-phase MAP and BMAP",
+        "observation": "All joint interarrival times, additionally batch-size marks for BMAP",
+        "quantity": "Parameter identifiability",
+        "result_kind": "Explicit continuous equivalent families",
+        "assumptions": [
+          "General nonnegative arrival matrices may include self-arrivals",
+          "All-law equality",
+          "Admissibility inequalities"
+        ],
+        "difference": "Single-channel x↔y marks pin physical endpoints; generic MAP/BMAP marks do not.",
+        "access": "MAP journal and BMAP May 2012 full text read; successor journal abstract/references only."
+      }
+    },
+    {
+      "id": "prior_map_canonical",
+      "type": "literature",
+      "title": "Canonical inversion is not physical uniqueness",
+      "status": "established_prior_result",
+      "summary": "Second-order matrix-exponential processes have a Markovian canonical representation recoverable from three moments and lag-one correlation.",
+      "intuition": "Selecting one canonical coordinate chart can remove redundant parameters without removing alternative physical models.",
+      "why_it_matters": "The three-Laplace physical inverse is a useful specialization, not a new principle of finite rational inversion.",
+      "limitations": [
+        "Two phases are not the same as two visible ports.",
+        "Canonical representatives need not preserve the repository's fixed event maps or entropy.",
+        "Source-dependent regularity must not be promoted to a uniform condition number."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 5: Bodrog et al., Definition 1, Theorem 3 and Section 6",
+          "url": "https://doi.org/10.1016/j.ejor.2007.06.020"
+        },
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Section 6 distinguishes likelihood underflow from population inverse discontinuity"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Bodrog, Heindl, Horváth and Telek",
+        "year": "2008",
+        "setting": "Second-order matrix-exponential processes and MAP2",
+        "observation": "Stationary interarrival law and correlations",
+        "quantity": "Canonical parameters",
+        "result_kind": "Constructive moment/correlation inversion",
+        "assumptions": [
+          "Second order",
+          "Canonical-form positivity and correlation regimes"
+        ],
+        "difference": "T2 recovers all six physical rates, including leaf boundaries, from three bounded Laplace arguments under resolved resets.",
+        "access": "Full author-uploaded preprint theorem and reconstruction passages read; upload version date unspecified."
+      }
+    },
+    {
+      "id": "prior_ph_polytopes",
+      "type": "literature",
+      "title": "Invariant-cone and PH-triangle methods predate this work",
+      "status": "established_prior_result",
+      "summary": "Continuous-time positive realizability uses invariant polyhedral cones; PH literature constructs dynamic invariant triangles and ordered Coxian polytopes.",
+      "intuition": "Positive input/output response is only part of realization: the hidden flow must preserve the cone between observations.",
+      "why_it_matters": "The endpoint's contribution is its sharp global envelope and equality/support analysis, not the use of triangles.",
+      "limitations": [
+        "A cone with more rays may increase positive realization order.",
+        "Ordered Coxian maximality is restricted to that family.",
+        "Two-port reciprocal CTMC constraints are additional to scalar PH absorption."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/invariant-fiber-prior-art.md",
+          "label": "Section 5: van den Hof, Theorems 3.1–4.2, pp. 246–248",
+          "url": "https://ir.cwi.nl/pub/127/0127D.pdf"
+        },
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Sections 7–8: He–Zhang invariant polytopes and Coxian order",
+          "url": "https://www.engineering.uwaterloo.ca/~q7he/Z_PDF_PS_Published/2006_SM_PH_Polytope_HE_Zhang.pdf"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "van den Hof; He and Zhang",
+        "year": "1997; 2006; 2008",
+        "setting": "Continuous-time positive linear systems and PH representations",
+        "observation": "Positive transfer/absorption response",
+        "quantity": "Positive realization and Coxian order",
+        "result_kind": "Invariant-polyhedral-cone conditions and constructive polytopes",
+        "assumptions": [
+          "Prescribed response and semigroup invariance",
+          "Order determined by cone generators",
+          "Real-pole/Jordan restrictions for stated Coxian constructions"
+        ],
+        "difference": "The repository exhausts all admissible three-ray cones and disconnected hidden supports for a fixed bidirected two-port CTMC fiber.",
+        "access": "Full author/institutional PDFs; theorem/example passages read."
+      }
+    },
+    {
+      "id": "prior_finite_fibers",
+      "type": "literature",
+      "title": "Finite positive-realization fibers are known",
+      "status": "established_prior_result",
+      "summary": "Mond–Smith–van Straten give eight isolated full-space rank-three stochastic factorizations. The repository's audited scalar-dynamics lift transfers this finiteness to minimal continuous-time positive realizations.",
+      "intuition": "An observable factorization can admit several isolated explanations; finiteness is not peculiar to entropy inference.",
+      "why_it_matters": "This is the strongest reason to narrow novelty to the exact physical entropy fiber rather than finite positive realizations generally.",
+      "limitations": [
+        "The eight points are in the full simplex space; the boundary-vertex retract alone would not establish cardinality.",
+        "The scalar lift is a repository deduction, not a CTMC theorem attributed to Mond et al.",
+        "With two ports, scalar hidden dynamics has minimal degree at most two; it cannot reproduce minimal hidden dimension three.",
+        "Irreducible bidirectional CTMC incidence and entropy separation are not supplied by the static result."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/invariant-fiber-prior-art.md",
+          "label": "Sections 1–2: full-space count, visual symbol check, and exact scalar lift",
+          "url": "https://doi.org/10.1098/rspa.2003.1150"
+        },
+        {
+          "path": "evidence/three-state-cone-frontier.md",
+          "label": "Sections 1–2: rank-three topology and rigidity"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e045",
+          "label": "Finite topology and rigidity precedent"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Mond, Smith and van Straten; related rigidity by Krone and Kubjas",
+        "year": "2003; 2021",
+        "setting": "Rank-minimal nonnegative/stochastic factorization",
+        "observation": "One finite nonnegative matrix",
+        "quantity": "Factorization fiber modulo positive scaling/permutation",
+        "result_kind": "Finite isolated alternatives and rigidity",
+        "assumptions": [
+          "Factor size equals ordinary rank in the cited rank-three example",
+          "Correct quotient",
+          "Full-space versus boundary-space distinction"
+        ],
+        "difference": "The theta theorem adds non-scalar dynamics, fixed two-port resets, reciprocal rates, full support exhaustion and exactly two distinct entropy values.",
+        "access": "Full primary PDFs previously inspected; consequential Mond full-space notation independently checked in a rendered page."
+      }
+    },
+    {
+      "id": "prior_ph_finite_counts",
+      "type": "literature",
+      "title": "Two Coxian representations do not count an unrestricted fiber",
+      "status": "established_prior_result",
+      "summary": "Coxian and competing-risk PH papers already exhibit two distinct representations with the same absorption laws and enumerate diagonal-order alternatives.",
+      "intuition": "A finite list inside a restricted topology family need not exhaust every physical model of that order.",
+      "why_it_matters": "The endpoint theorem must count all allowed bidirected competitors, not just two chosen representations.",
+      "limitations": [
+        "One-way transient phases do not define the same stationary entropy problem.",
+        "A single entrance with several absorption causes is not the two-reset excursion kernel.",
+        "Nonredundancy of the unmarked PH distribution is a stated hypothesis."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/five-state-frontier-followup.md",
+          "label": "Rizk et al., Theorem 2/Algorithm 1/Example 5",
+          "url": "https://arxiv.org/pdf/1901.03849v2"
+        },
+        {
+          "path": "evidence/five-state-frontier-followup.md",
+          "label": "Lindqvist, Theorems 4–5 and Example 5",
+          "url": "https://doi.org/10.1007/s10985-022-09547-7"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Rizk, Burke and Walsh; Lindqvist",
+        "year": "2019 preprint; 2023 journal (online 2022)",
+        "setting": "Coxian PH and cause-specific competing risks",
+        "observation": "Absorption time and absorption cause",
+        "quantity": "Equivalent restricted representations",
+        "result_kind": "Finite order enumeration and explicit two-representation examples",
+        "assumptions": [
+          "Coxian structure",
+          "Fixed diagonal ordering for uniqueness",
+          "Unmarked scalar nonredundancy"
+        ],
+        "difference": "T3 concerns the entire stationary bidirected physical fiber at a state cap with known microscopic resets.",
+        "access": "Full primary preprint and full journal PDF inspected."
+      }
+    },
+    {
+      "id": "prior_hidden_thermodynamics",
+      "type": "literature",
+      "title": "Hidden equilibrium and nonequilibrium ambiguity is established",
+      "status": "established_prior_result",
+      "summary": "Aggregated CTMCs can share observations while differing in detailed balance; discrete-time masked models already show broad entropy variation and sampled growth near one-way boundaries.",
+      "intuition": "The observed process can hide circulation in microscopic routes.",
+      "why_it_matters": "The contribution cannot be framed as the discovery that partial observation hides dissipation.",
+      "limitations": [
+        "Ehrich's apparently unbounded sampled maximum is numerical evidence, not a general divergence proof.",
+        "State aggregation differs from observing only one resolved edge.",
+        "Finite reduced-topology lists may lie inside continuous equivalence classes."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e008",
+          "label": "Wagner–Timmer exact equilibrium/nonequilibrium ambiguity",
+          "url": "https://jeti.uni-freiburg.de/papers/detailed_balance_printed.pdf"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e004",
+          "label": "Ehrich's compatible-model entropy optimization",
+          "url": "https://arxiv.org/html/2105.08803v2"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e010",
+          "label": "Siekmann's continuous small-state aggregate equivalence"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Wagner and Timmer; Ehrich; Siekmann",
+        "year": "2000; 2021; 2026",
+        "setting": "Aggregated CTMCs and discrete-time masked Markov chains",
+        "observation": "Aggregate dwell/transition records",
+        "quantity": "Detailed balance and entropy across compatible models",
+        "result_kind": "Exact thermodynamic ambiguity plus numerical upper-range exploration",
+        "assumptions": [
+          "Specified aggregation and topology/count in each source",
+          "Regularity for local similarity arguments"
+        ],
+        "difference": "T3 globally counts an exceptional resolved-edge physical fiber; T5/T6 supply universal neighborhood quantifiers at fixed trace.",
+        "access": "Relevant full primary texts inspected; evidence status remains separate for exact and sampled results."
+      }
+    },
+    {
+      "id": "prior_resolved_inference",
+      "type": "literature",
+      "title": "Resolved waiting-time thermodynamic inference is established",
+      "status": "established_prior_result",
+      "summary": "Resolved transition-conditioned kernels support lower entropy estimators, observed-rate recovery and hidden-path constraints.",
+      "intuition": "Waiting times retain information about unobserved excursions between known event endpoints.",
+      "why_it_matters": "The data model and boundary-rate identities are prior infrastructure; the project asks for the whole compatible entropy image.",
+      "limitations": [
+        "Estimator saturation under a true-network assumption need not imply uniqueness over larger model classes.",
+        "Graph-minimal reconstruction differs from linear controllable/observable minimality.",
+        "Known paths or topology can be necessary for stronger inference statements."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e001",
+          "label": "van der Meer–Ertel–Seifert 2022, Eq. (3) and Sections III–VI",
+          "url": "https://doi.org/10.1103/PhysRevX.12.031025"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e002",
+          "label": "Maier et al. 2024, Eqs. (11)–(14)",
+          "url": "https://doi.org/10.1007/s10955-024-03315-7"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e003",
+          "label": "Maier et al. 2025, hidden-path reconstruction",
+          "url": "https://arxiv.org/html/2504.16015v1"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "van der Meer, Ertel and Seifert; Maier and collaborators",
+        "year": "2022–2025",
+        "setting": "Partially accessible Markov networks",
+        "observation": "Resolved transition-to-transition waiting-time distributions",
+        "quantity": "Lower entropy bounds, observed kinetics and hidden paths",
+        "result_kind": "Absorbing-process representation and conditional reconstruction",
+        "assumptions": [
+          "Correct resolved time reversal",
+          "Absolute waiting-law information",
+          "Additional structure for saturation/reconstruction"
+        ],
+        "difference": "The repository classifies every generator sharing the full kernel under an explicit state budget and unknown reciprocal support.",
+        "access": "Relevant full primary sections inspected and individually recorded in E001–E003."
+      }
+    },
+    {
+      "id": "prior_kl_singularity",
+      "type": "literature",
+      "title": "Small TV does not upper-bound relative entropy",
+      "status": "established_prior_result",
+      "summary": "Vanishing reverse rates can cause logarithmic entropy divergence; arbitrarily small total variation can coexist with arbitrarily large KL divergence.",
+      "intuition": "A very rare reverse event can carry a very large log likelihood ratio.",
+      "why_it_matters": "Sparse-edge instability realizes a known information singularity under exact CTMC restrictions; it is not a new reverse-Pinsker failure.",
+      "limitations": [
+        "Lower semicontinuity does not prohibit upward divergence.",
+        "Genuinely one-way regularized entropy conventions differ from the repository's finite reciprocal-rate limit.",
+        "General information inequalities alone do not preserve CTMC trace or exact observed fibers."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Zeraati et al. 2012, Eq. (1) and supplement Eqs. (23)–(32)",
+          "url": "https://arxiv.org/pdf/1211.4701"
+        },
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Sason–Verdú 2015 Theorem 1; 2016 Section VI",
+          "url": "https://webee.technion.ac.il/people/sason/ISSV-ITW15-Korea-paper.pdf"
+        },
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "van Erven–Harremoës Theorems 15–17",
+          "url": "https://arxiv.org/pdf/1206.2459"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Zeraati, Jafarpour and Hinrichsen; Sason and Verdú; van Erven and Harremoës",
+        "year": "2012–2016",
+        "setting": "Stochastic entropy production and divergence inequalities",
+        "observation": "Microscopic transitions or probability distributions",
+        "quantity": "Entropy production and KL/Rényi divergence",
+        "result_kind": "Boundary singularity and regularity-dependent upper inequalities",
+        "assumptions": [
+          "Positive reference masses or relative-information bounds for reverse inequalities",
+          "Specified entropy convention"
+        ],
+        "difference": "T4/T4a impose bidirectionality, irreducible limit, fixed order/trace and controlled rates; T5 additionally controls the observation fiber.",
+        "access": "Specified full primary theorem/proof passages inspected in the saved audit."
+      }
+    },
+    {
+      "id": "prior_entropy_upper",
+      "type": "literature",
+      "title": "Entropy upper bounds need microscopic asymmetry information",
+      "status": "established_prior_result",
+      "summary": "A known bound gives σ ≤ A log(R)(R−1)/(R+1), with A stationary activity and R the maximum reciprocal rate ratio.",
+      "intuition": "Bounded jump activity limits how often events occur; a rate ratio limits how irreversible each event can be.",
+      "why_it_matters": "Trace or upper rates alone do not control the hidden ratio needed by the bound.",
+      "limitations": [
+        "Partial observation may not determine R.",
+        "A ratio bound without an activity bound does not give a rate-independent entropy ceiling.",
+        "T8's elementary ratio bound is weaker and is not a new information inequality."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Nishiyama–Hasegawa 2023, Section II.A Eqs. (6)–(8), Appendix A",
+          "url": "https://doi.org/10.1103/PhysRevE.108.044139"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e037",
+          "label": "Previously inspected upper-bound assumptions"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Nishiyama and Hasegawa",
+        "year": "2023",
+        "setting": "Stationary Markov processes",
+        "observation": "Microscopic activity and maximal rate ratio are supplied",
+        "quantity": "Entropy-production upper bound",
+        "result_kind": "Analytic activity/asymmetry inequality",
+        "assumptions": [
+          "Finite reciprocal rate ratio R",
+          "Stationary activity A"
+        ],
+        "difference": "The repository's fixed-trace families keep activity bounded while R diverges, so they do not violate this bound.",
+        "access": "Full primary PDF and proof passages inspected/rechecked."
+      }
+    },
+    {
+      "id": "prior_confidence_impossibility",
+      "type": "literature",
+      "title": "Uniform upper-limit impossibility has statistical precedent",
+      "status": "established_prior_result",
+      "summary": "Converging experiment laws with diverging parameter size force uniformly valid confidence sets or upper limits to become unbounded.",
+      "intuition": "If high-entropy alternatives are statistically indistinguishable, an honest upper limit cannot consistently rule them out.",
+      "why_it_matters": "T7 applies an established TV-transfer mechanism to the constructed microscopic model classes.",
+      "limitations": [
+        "Uniform modelwise finite-sample coverage is essential.",
+        "Pointwise asymptotic coverage, restricted priors or a growing horizon are different questions.",
+        "Older Gleser–Hwang/Bahadur–Savage originals were not read; Moss's inspected theorem is the direct precedent."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/two-point-entropy-positioning.md",
+          "label": "Statistical mechanism: Moss Theorem 4 and appendix",
+          "url": "https://doi.org/10.1007/s42952-022-00169-1"
+        },
+        {
+          "path": "analysis/finite-precision-independent-check.md",
+          "label": "Primary statistical analogy and source limits"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Moss; Gleser–Hwang-type antecedents",
+        "year": "2022 inspected primary theorem",
+        "setting": "Uniform confidence sets in a statistical model",
+        "observation": "Finite experiment distributions",
+        "quantity": "Confidence-set diameter / extended-real upper limits",
+        "result_kind": "Impossibility through converging laws and diverging parameters",
+        "assumptions": [
+          "Measurable confidence statistic",
+          "Uniform modelwise coverage",
+          "Converging laws and divergent target",
+          "Support conditions for transfer to other distributions"
+        ],
+        "difference": "T7 supplies concrete stationary CTMC sequences and keeps its microscopic-model indexing and finite-horizon assumptions explicit.",
+        "access": "Moss full theorem and proof inspected; older originals remain an explicit source gap."
+      }
+    },
+    {
+      "id": "prior_hmm_stability",
+      "type": "literature",
+      "title": "Identifiability and stable learning are distinct in HMM theory",
+      "status": "established_prior_result",
+      "summary": "Quantitative HMM learning bounds depend on distance from transition and emission degeneracies; later work extends the frontier to nonparametric emissions.",
+      "intuition": "A unique parameterization can still become difficult to recover as observable distinctions collapse.",
+      "why_it_matters": "Inverse stability is established territory, but the tree example is different: its rates converge while entropy diverges.",
+      "limitations": [
+        "Two-state emission HMMs do not use prescribed physical edge resets.",
+        "KL between model observation laws is not automatically stationary thermodynamic entropy.",
+        "Source-dependent inverse bounds are not uniform across degeneracies."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Sections 9–10: Abraham–Gassiat–Naulet, Theorem 1 and Propositions 1–2",
+          "url": "https://doi.org/10.1109/TIT.2022.3213429"
+        },
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Verified 2025 forward extension",
+          "url": "https://jmlr.org/papers/v26/24-2230.html"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Abraham, Gassiat and Naulet",
+        "year": "2021 preprint / 2023 journal; 2025 extension",
+        "setting": "Stationary two-hidden-state emission HMMs",
+        "observation": "Multinomial or nonparametric emissions",
+        "quantity": "Parameter recovery and minimax learnability",
+        "result_kind": "Conditioning-sensitive inverse and statistical bounds",
+        "assumptions": [
+          "Ergodicity and transition nondegeneracy",
+          "Separated emissions",
+          "Additional positivity for specified KL bounds"
+        ],
+        "difference": "T2 uses known reset geometry; T4a shows an entropy-functional failure despite a locally Lipschitz physical inverse.",
+        "access": "Full primary texts available; selected theorem/proof passages read, not every page of the long proofs."
+      }
+    },
+    {
+      "id": "prior_larget_gap",
+      "type": "literature",
+      "title": "Larget's original theorem remains a specific access gap",
+      "status": "unresolved",
+      "summary": "The inspected abstract reports canonical aggregate representations under regularity conditions, but the original hypotheses and exceptional examples remain unread.",
+      "intuition": "A unique canonical representative is not automatically a unique physical model.",
+      "why_it_matters": "The missing original could change attribution or reveal an exceptional-fiber constraint; failed retrieval is not evidence of novelty.",
+      "limitations": [
+        "Abstract-only source support must not be promoted to a full theorem read.",
+        "New preprint, Berkeley dissertation and bibliography routes did not yield the original.",
+        "Related Kienker, Rydén, Förster–Nagy and Helmke-original gaps remain documented."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/finite-fiber-prior-art.md",
+          "label": "Outstanding original-source gap: Larget",
+          "url": "https://doi.org/10.1239/jap/1032192850"
+        },
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Citation trail, failed routes and precise residual risk"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e062",
+          "label": "Novelty assessment retains source gaps"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Larget",
+        "year": "1998; 1994 dissertation metadata",
+        "setting": "Continuous/discrete-time aggregated Markov processes",
+        "observation": "A deterministic function of the Markov state",
+        "quantity": "Canonical equivalence and identifiable parameterization",
+        "result_kind": "Abstract-reported canonical representation; full exceptional hypotheses unverified",
+        "assumptions": [
+          "Uninspected regularity conditions"
+        ],
+        "difference": "Whether stronger exceptional physical constraints transfer to the resolved-edge class is unverified; canonical uniqueness alone does not give T3.",
+        "access": "Original abstract/references only; dissertation record is metadata. Do not interpret the gap as nonexistence of prior results."
+      }
+    },
+    {
+      "id": "prior_lower_bounds",
+      "type": "literature",
+      "title": "Lower estimators do not settle the entropy supremum",
+      "status": "established_prior_result",
+      "summary": "Compatible-model optimization and waiting-time statistics already yield improved lower entropy bounds; finite-data estimators have separate resolution/statistical limits.",
+      "intuition": "A guaranteed minimum dissipation and a finite maximum dissipation answer different questions.",
+      "why_it_matters": "The local upper-ceiling obstruction does not invalidate useful lower estimates or topology-restricted inference.",
+      "limitations": [
+        "Selected counts/moments or metastate dwells differ from the entire resolved joint kernel.",
+        "Numerical fitting does not exhaust all topologies.",
+        "Finite-sample estimates can exceed their asymptotic lower-bound guarantees."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e005",
+          "label": "Skinner–Dunkel minimum over compatible models",
+          "url": "https://math.mit.edu/~dunkel/Papers/2021SkDu_PRL.pdf"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e006",
+          "label": "Nitzan–Ghosal–Bisker conditional dwell fitting",
+          "url": "https://arxiv.org/pdf/2212.01783v1"
+        },
+        {
+          "path": "evidence/two-point-entropy-positioning.md",
+          "label": "Fritz–Ertel–Seifert finite resolution/statistics",
+          "url": "https://doi.org/10.1103/PhysRevE.111.044106"
+        },
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Baiesi et al. lower-bound and missing-reverse-flux assumptions"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Skinner and Dunkel; Nitzan, Ghosal and Bisker; Fritz, Ertel and Seifert; Baiesi, Nishiyama and Falasco",
+        "year": "2021–2025",
+        "setting": "Partially observed stochastic thermodynamics",
+        "observation": "Selected transition/dwell statistics, moments or finite records",
+        "quantity": "Lower entropy estimates",
+        "result_kind": "Compatible-model minimization and lower estimators",
+        "assumptions": [
+          "Data/topology restrictions vary by theorem",
+          "Asymptotic versus empirical estimator distinction"
+        ],
+        "difference": "The repository asks for exact full entropy images and robust upper envelopes in a different declared compatibility class.",
+        "access": "Relevant full primary sections inspected; detailed versions and source-specific assumptions retained in linked records."
+      }
+    },
+    {
+      "id": "prior_cycle_inference",
+      "type": "literature",
+      "title": "Cycle-based exact inference requires additional observables",
+      "status": "established_prior_result",
+      "summary": "A 2026 method reconstructs entropy from cycle-family forward/reverse counts and chord currents, with hidden-state extensions when those quantities remain observable.",
+      "intuition": "Knowing the relevant cycle currents and affinities can determine dissipation without knowing every rate.",
+      "why_it_matters": "Its title does not remove the need for graph and observable-cycle structure absent from one unknown-topology resolved pair.",
+      "limitations": [
+        "One resolved edge need not provide the required cycle families and chords.",
+        "Trajectory duration still supplies the physical time scale.",
+        "The inspected preprint predates the listed future journal issue; version/date distinctions are preserved."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Biddle 2026, Sections 2–4.2, Eqs. (10)–(16)",
+          "url": "https://arxiv.org/html/2605.27635v1"
+        }
+      ],
+      "level": 2,
+      "literature": {
+        "authors": "Biddle",
+        "year": "May 2026 preprint; journal issue listed October 2026",
+        "setting": "Markov networks with observable cycle families/chords",
+        "observation": "Cycle-family orientations, chord currents and trajectory duration",
+        "quantity": "Exact entropy production",
+        "result_kind": "Conditional entropy reconstruction",
+        "assumptions": [
+          "Required cycle families and chords observable",
+          "Appropriate graph structure",
+          "Known time scale"
+        ],
+        "difference": "T3/T6 impose only one resolved pair and quantify over unknown hidden support; the necessary cycle observables are not assumed.",
+        "access": "Full arXiv v1 read at specified sections; journal issue date was future at retrieval."
+      }
+    },
+    {
+      "id": "cex_minimality_cure",
+      "type": "counterexample",
+      "title": "Rejected: minimality restores thermodynamic uniqueness",
+      "status": "falsified",
+      "summary": "The symmetric complete four-state Q0 has entropy zero and full linear order four. At ε=1/4 the exact normalized hidden similarity gives Q=[[-6,1,3/2,7/2],[1,-10,3,6],[5/3,11/3,-29/4,23/12],[3,5,3/4,-35/4]], with the same all-time kernel and σ=(1/16)log(529/154)>0; ε→2/3 produces unbounded entropy.",
+      "intuition": "Rejected claim: Every linearly minimal compatible realization has unique entropy.",
+      "why_it_matters": "This rules out removing hidden redundancy as a general cure.",
+      "limitations": [
+        "Exactly four states, known resolved pair, complete bidirected support.",
+        "Reverse rates approach zero only at an excluded limit; every model used is finite and bidirected."
+      ],
+      "provenance": [
+        {
+          "path": "analysis/small-network-audit.md",
+          "label": "Section 3: minimal complete four-state family"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e019",
+          "label": "Minimal ambiguity and executed checks"
+        }
+      ],
+      "level": 2,
+      "statement": "Wrong: Every linearly minimal compatible realization has unique entropy.\nCounterexample: The symmetric complete four-state Q0 has entropy zero and full linear order four. At ε=1/4 the exact normalized hidden similarity gives Q=[[-6,1,3/2,7/2],[1,-10,3,6],[5/3,11/3,-29/4,23/12],[3,5,3/4,-35/4]], with the same all-time kernel and σ=(1/16)log(529/154)>0; ε→2/3 produces unbounded entropy.\nCorrected scope: Minimality restricts competitors to a similarity orbit; positivity can still admit a nontrivial physical entropy family."
+    },
+    {
+      "id": "cex_local_isolation",
+      "type": "counterexample",
+      "title": "Rejected: local isolation proves global uniqueness",
+      "status": "falsified",
+      "summary": "Theta(3,3) is actually isolated by an exact positive tangent dual and nonsingular chart, yet U=(1/1000)[[871,-390,519],[623,790,-413],[-183,133,1050]] yields a distant complete generator with the same kernel. det U=34813/31250 and its minimum offdiagonal rate is 139/500; a further exact family has divergent entropy.",
+      "intuition": "Rejected claim: A locally isolated physical generator is the only compatible generator.",
+      "why_it_matters": "This was a decisive reason to stop treating continuation searches as whole-fiber proofs.",
+      "limitations": [
+        "The generator fiber is disconnected; no disconnectedness of its entropy image is asserted."
+      ],
+      "provenance": [
+        {
+          "path": "analysis/theta-global-audit.md",
+          "label": "Sections 1–3: actual isolation, rational distant model and divergence"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e035",
+          "label": "Disconnected compatible-generator counterexample"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "d007",
+          "label": "Reject local continuation as a global method"
+        }
+      ],
+      "level": 2,
+      "statement": "Wrong: A locally isolated physical generator is the only compatible generator.\nCounterexample: Theta(3,3) is actually isolated by an exact positive tangent dual and nonsingular chart, yet U=(1/1000)[[871,-390,519],[623,790,-413],[-183,133,1050]] yields a distant complete generator with the same kernel. det U=34813/31250 and its minimum offdiagonal rate is 139/500; a further exact family has divergent entropy.\nCorrected scope: Local certificates exclude nearby models only; disconnected physical components require global support analysis."
+    },
+    {
+      "id": "cex_first_order_threshold",
+      "type": "counterexample",
+      "title": "Rejected: the first-order opening threshold is sharp",
+      "status": "falsified",
+      "summary": "A fixed exact rational normalized similarity gives complete generators for every z in [2109/200,21091/2000]=[10.545,10.5455], an interval crossing zc≈10.5452497911. Every offdiagonal is strictly positive and the full kernel is preserved.",
+      "intuition": "Rejected claim: No connected hidden realization exists at or above zc=(11+sqrt(1120/11))/2.",
+      "why_it_matters": "Failure of one local opening direction did not establish global nonexistence.",
+      "limitations": [
+        "The witness interval alone does not locate z*.",
+        "Displayed tiny margins are illustrations of exact rational positivity, not tolerance-based certificates."
+      ],
+      "provenance": [
+        {
+          "path": "analysis/balanced-boundary-witness.md",
+          "label": "Exact rational witness, interval positivity and second-order opening"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e050",
+          "label": "Falsified local-threshold hypothesis"
+        }
+      ],
+      "level": 2,
+      "statement": "Wrong: No connected hidden realization exists at or above zc=(11+sqrt(1120/11))/2.\nCounterexample: A fixed exact rational normalized similarity gives complete generators for every z in [2109/200,21091/2000]=[10.545,10.5455], an interval crossing zc≈10.5452497911. Every offdiagonal is strictly positive and the full kernel is preserved.\nCorrected scope: The sharp balanced boundary is the later quartic root z*≈10.5571496687, proved by the global cone envelope and equality analysis."
+    },
+    {
+      "id": "cex_finite_hankel",
+      "type": "counterexample",
+      "title": "Rejected: finite Hankel positivity implies physical feasibility",
+      "status": "falsified",
+      "summary": "At theta(100,100), every finite truncation of the uniformized three-mode hidden response has positive inner-dimension-three factors for a sufficiently small truncation-dependent ε. Nevertheless the physical cap-five generator is globally unique; the proposed similarity has hidden rate ε(-197+194ε)/(1-ε²)<0 for 0<ε<1.",
+      "intuition": "Rejected claim: Strictly positive factors of each finite block Hankel truncation imply a strict same-order CTMC realization.",
+      "why_it_matters": "Static factorization cannot replace the exact semigroup constraint.",
+      "limitations": [
+        "The factorization concerns the hidden response of order three; the full marked kernel has minimal order five."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/three-state-cone-frontier.md",
+          "label": "Section 3: finite-Hankel construction and negative hidden rate"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e046",
+          "label": "Exact static-versus-dynamic counterexample"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e048",
+          "label": "Independent global uniqueness proof"
+        }
+      ],
+      "level": 2,
+      "statement": "Wrong: Strictly positive factors of each finite block Hankel truncation imply a strict same-order CTMC realization.\nCounterexample: At theta(100,100), every finite truncation of the uniformized three-mode hidden response has positive inner-dimension-three factors for a sufficiently small truncation-dependent ε. Nevertheless the physical cap-five generator is globally unique; the proposed similarity has hidden rate ε(-197+194ε)/(1-ε²)<0 for 0<ε<1.\nCorrected scope: Dynamic cone invariance and generator inequalities must also hold. The finite-truncation quantifier does not provide one common physical similarity for all times."
+    },
+    {
+      "id": "cex_exact_implies_stable",
+      "type": "counterexample",
+      "title": "Rejected: exact rate identification gives a finite local entropy ceiling",
+      "status": "falsified",
+      "summary": "The unit three-state tree is approached by Q(e,k)=[[-1-e,1,e],[1,-2+k,1-k],[k,1-e,-1+e-k]], 0<k<e<1/2. Every model is uniquely identified at cap three and has trace -4, rates ≤1 and minimal order three. With k=exp(-1/e²), Q→Q0 but eσ→1/3.",
+      "intuition": "Rejected claim: An exactly identified and continuously recovered generator has locally bounded entropy.",
+      "why_it_matters": "This separates failure of entropy continuity from failure of generator recovery.",
+      "limitations": [
+        "At fixed small e, k→0 proves an unbounded supremum within a fixed tolerance; the diagonal path proves convergence with divergence.",
+        "A two-state source under an enlarged cap three is a different boundary from fixed N=2."
+      ],
+      "provenance": [
+        {
+          "path": "analysis/three-state-fixed-trace-audit.md",
+          "label": "Exact family, entropy formula, minimality and TV limits"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e057",
+          "label": "Smallest fixed-trace instability"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e060",
+          "label": "Cap-free locally Lipschitz inverse"
+        }
+      ],
+      "level": 2,
+      "statement": "Wrong: An exactly identified and continuously recovered generator has locally bounded entropy.\nCounterexample: The unit three-state tree is approached by Q(e,k)=[[-1-e,1,e],[1,-2+k,1-k],[k,1-e,-1+e-k]], 0<k<e<1/2. Every model is uniquely identified at cap three and has trace -4, rates ≤1 and minimal order three. With k=exp(-1/e²), Q→Q0 but eσ→1/3.\nCorrected scope: The inverse remains locally Lipschitz at the tree; the entropy functional is singular at a paired-zero edge. Positive triangles instead have locally Lipschitz entropy."
+    },
+    {
+      "id": "cex_compact_limit_support",
+      "type": "counterexample",
+      "title": "Rejected: compact inverse limits alone control entropy",
+      "status": "falsified",
+      "summary": "The divergent three-state chord family converges to the singleton unit tree, a compact irreducible limit set with positive rates on its own support. New edge rates vanish at unequal speeds and carry divergent entropy.",
+      "intuition": "Rejected claim: Approaching a compact set of irreducible generators is sufficient for entropy continuity or a finite ceiling.",
+      "why_it_matters": "Compactness does not prevent a support change from hiding an arbitrarily large logarithm.",
+      "limitations": [
+        "This falsifies a provisional weaker condition, not the final T8 statement."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e061",
+          "label": "Counterexample and corrected regularity condition"
+        },
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "6-statistical-consequence-and-sufficient-regularity-conditions",
+          "label": "T8: support-controlled compact inverse range"
+        }
+      ],
+      "level": 2,
+      "statement": "Wrong: Approaching a compact set of irreducible generators is sufficient for entropy continuity or a finite ceiling.\nCounterexample: The divergent three-state chord family converges to the singleton unit tree, a compact irreducible limit set with positive rates on its own support. New edge rates vanish at unequal speeds and carry divergent entropy.\nCorrected scope: T8 additionally requires approaching supports eventually equal the fixed support of the compact limit set; alternatively supply enough activity/rate-ratio control."
+    },
+    {
+      "id": "cex_ratio_without_activity",
+      "type": "counterexample",
+      "title": "Rejected: a rate-ratio bound alone caps entropy",
+      "status": "falsified",
+      "summary": "On a three-cycle, clockwise rates 2c and reverse rates c have ratio R=2 for every c>0, but σ=c log 2→∞ as c→∞.",
+      "intuition": "Rejected claim: A uniform bound on reciprocal rate ratios gives a uniform entropy-rate upper bound without a time/activity constraint.",
+      "why_it_matters": "Entropy is a rate per unit time, so bounded asymmetry alone does not bound its frequency.",
+      "limitations": [
+        "This family changes trace; it is not a counterexample to the fixed-trace theorems."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e061",
+          "label": "Ratio-only counterexample"
+        },
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "6-statistical-consequence-and-sufficient-regularity-conditions",
+          "label": "T8 rate-ratio/activity sufficient bound"
+        },
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Nishiyama–Hasegawa stronger established inequality"
+        }
+      ],
+      "level": 2,
+      "statement": "Wrong: A uniform bound on reciprocal rate ratios gives a uniform entropy-rate upper bound without a time/activity constraint.\nCounterexample: On a three-cycle, clockwise rates 2c and reverse rates c have ratio R=2 for every c>0, but σ=c log 2→∞ as c→∞.\nCorrected scope: Control both activity and ratio: for example σ≤Amax log R; trace or an upper rate cap can bound activity."
+    },
+    {
+      "id": "cex_arbitrary_tight_cap",
+      "type": "counterexample",
+      "title": "Rejected: the all-N criterion survives every extra rate cap",
+      "status": "falsified",
+      "summary": "For N=4, fixed trace -12 and all twelve offdiagonal rates ≤1 force every rate to equal one. The restricted class is a singleton with zero entropy, despite two fully hidden states for one observed pair.",
+      "intuition": "Rejected claim: Two fully hidden states always defeat local entropy ceilings even under any extra cap containing the source.",
+      "why_it_matters": "The quantifier over admissible competitors is part of the theorem, not an implementation detail.",
+      "limitations": [
+        "The unrestricted finite-rate and exact-trace/observed-rate versions of T6 remain proved."
+      ],
+      "provenance": [
+        {
+          "path": "analysis/publication-stability-audit.md",
+          "label": "Section 5: explicit tight-cap counterexample"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e061",
+          "label": "Falsified strengthening of the local-ceiling criterion"
+        }
+      ],
+      "level": 2,
+      "statement": "Wrong: Two fully hidden states always defeat local entropy ceilings even under any extra cap containing the source.\nCounterexample: For N=4, fixed trace -12 and all twelve offdiagonal rates ≤1 force every rate to equal one. The restricted class is a singleton with zero entropy, despite two fully hidden states for one observed pair.\nCorrected scope: T5 uses the sufficient cap τ=-tr Q0, and T6 applies without an arbitrary additional tighter cap. Extra restrictions can change the model class."
+    },
+    {
+      "id": "story_interpretation",
+      "type": "interpretation",
+      "title": "Exact ambiguity and observational instability are different",
+      "status": "interpretation",
+      "summary": "A source can have one or two exact entropy values while every positive observation tolerance admits arbitrarily large entropy.",
+      "intuition": "The exact fiber asks what fits perfectly; the upper envelope asks what remains possible after any tolerance.",
+      "why_it_matters": "This connects the exceptional five-state result to the general fixed-N classification.",
+      "limitations": [
+        "The distinction between identifiability and stability is established background.",
+        "Entrywise generator closeness and observed-law closeness are different topologies."
+      ],
+      "provenance": [
+        {
+          "path": "outputs/REPORT.md",
+          "label": "Exact identified sets versus robust ceilings"
+        },
+        {
+          "path": "analysis/publication-theorems.md",
+          "label": "T3, T4 and T6 exact quantifiers"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "publication_claim",
+      "type": "interpretation",
+      "title": "Candidate manuscript contribution",
+      "status": "interpretation",
+      "summary": "The narrow publication case is the exhaustive two-point physical entropy fiber and sharp balanced transition, together with the all-N resolved-pair local-ceiling criterion.",
+      "intuition": "A complete exceptional example and a general robustness theorem answer complementary questions.",
+      "why_it_matters": "This is the accepted reason to prepare a theorem manuscript rather than gather more generic examples.",
+      "limitations": [
+        "Originality is provisional; no finite search certifies absence of prior work.",
+        "Manuscript readiness is not submission readiness or predicted acceptance.",
+        "Finite positive fibers, KL singularity and generic confidence impossibility are not new."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e062",
+          "label": "Accepted bounded publication assessment"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "d023",
+          "label": "Manuscript-preparation decision"
+        },
+        {
+          "path": "outputs/PAPER-STRUCTURE.md",
+          "label": "Central claim and theorem sequence"
+        }
+      ],
+      "level": 1,
+      "novelty": {
+        "status": "provisional",
+        "summary": "Plausible specific physical theorem contribution, conditional on proof audits and limited source coverage.",
+        "comparisons": [
+          "prior_finite_fibers",
+          "prior_ph_polytopes",
+          "prior_realization_equivalence",
+          "prior_hidden_thermodynamics",
+          "prior_kl_singularity"
+        ]
+      }
+    },
+    {
+      "id": "risk_novelty",
+      "type": "risk",
+      "title": "A matching prior physical theorem could change attribution",
+      "status": "unresolved",
+      "summary": "No inspected source was shown to imply the exact two-point physical entropy fiber or the complete fixed-N ceiling criterion; matching exceptional results in inaccessible originals remain a specific risk.",
+      "intuition": "Shared machinery does not establish anticipation, and failed searches do not establish originality.",
+      "why_it_matters": "The manuscript must attach exact hypothesis comparisons and preserve access limitations.",
+      "limitations": [
+        "Larget and other named original-source gaps remain open.",
+        "Absence of matching wording is not evidence of novelty.",
+        "Expert scrutiny may alter attribution or significance."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e062",
+          "label": "Primary-source comparison and unresolved originality"
+        },
+        {
+          "path": "evidence/publication-realization-novelty.md",
+          "label": "Readiness judgment and exact remaining Larget risk"
+        },
+        {
+          "path": "evidence/publication-thermodynamics-novelty.md",
+          "label": "Theorem-by-theorem comparison"
+        }
+      ],
+      "level": 1,
+      "novelty": {
+        "status": "unestablished",
+        "summary": "No novelty certificate; a matching theorem or construction is the discriminating evidence.",
+        "comparisons": [
+          "prior_larget_gap",
+          "prior_realization_equivalence",
+          "prior_finite_fibers",
+          "prior_hidden_thermodynamics"
+        ]
+      }
+    },
+    {
+      "id": "risk_global_proof",
+      "type": "risk",
+      "title": "Global support exhaustion must remain auditable",
+      "status": "interpretation",
+      "summary": "The endpoint count rests on a long conventional proof covering connected and disconnected hidden supports, all envelope equality cases, endpoint existence and entropy separation.",
+      "intuition": "A single omitted admissible support could change an exact two-point claim.",
+      "why_it_matters": "The proof core must let a reader verify exhaustion without trusting optimizer non-discovery or project chronology.",
+      "limitations": [
+        "The accepted theorem is conventionally proved and independently checked, not formally verified.",
+        "Replays share source dependencies; agreement alone is not an independent global proof.",
+        "A concrete counterexample or omitted case would reopen mathematical status; none is presently recorded."
+      ],
+      "provenance": [
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e059",
+          "label": "Whole-proof audit and independent construction"
+        },
+        {
+          "path": "analysis/publication-endpoint-audit.md",
+          "label": "Support exhaustion, denominators, equality and independent cone/path match"
+        },
+        {
+          "path": "outputs/PAPER-STRUCTURE.md",
+          "label": "Appendices C–E proof obligations"
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": "open_exact_classification",
+      "type": "frontier",
+      "title": "General five- and six-state exact fibers remain open",
+      "status": "unresolved",
+      "summary": "The repository does not classify every admissible exact entropy fiber for arbitrary five- or six-state networks with one resolved pair.",
+      "intuition": "Small state budgets can impose global geometric restrictions that pairwise constructions do not exhaust.",
+      "why_it_matters": "This is a scientific frontier beyond the balanced theorem, not a missing requirement for the current manuscript.",
+      "limitations": [
+        "The all-N theorem concerns local upper envelopes, not every exact fiber.",
+        "Existing four-state and sparse-five subclasses are solved under their specific assumptions.",
+        "No broad enumeration is the saved next action."
+      ],
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "7-evidence-status-and-open-statements",
+          "label": "Section 7: open statements"
+        },
+        {
+          "path": "analysis/publication-legacy-audit.md",
+          "label": "Precise inventory and dependency limits"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "d023",
+          "label": "Scope and stopping decision"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "open_theta_classification",
+      "type": "frontier",
+      "title": "Off-balanced theta classification is incomplete",
+      "status": "unresolved",
+      "summary": "The full two-parameter theta(a,b) plane has proved constructive and uniqueness regions, but lacks a complete exact-fiber classification.",
+      "intuition": "The balanced ray is sharp; off the ray the available inequalities remain sufficient bounds.",
+      "why_it_matters": "This identifies the precise family frontier without downgrading the completed balanced theorem.",
+      "limitations": [
+        "Repeated-pole and rank-loss strata already have separate accepted results.",
+        "Sufficient coordinate thresholds are not universal phase boundaries.",
+        "Further searches are not authorized by creating this map."
+      ],
+      "provenance": [
+        {
+          "path": "analysis/publication-legacy-audit.md",
+          "label": "Theta strata, constructive regions and open sufficient uniqueness inequalities"
+        },
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "7-evidence-status-and-open-statements",
+          "label": "Section 7: full two-parameter classification remains open"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e041",
+          "label": "Earlier constructive regions and support reduction"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e048",
+          "label": "Fast open uniqueness region"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "open_window_continuity",
+      "type": "frontier",
+      "title": "Cap-free stationary-window continuity remains open",
+      "status": "unresolved",
+      "summary": "At positive three-state sources, removing the common rate cap from continuity based on one stationary finite observation window has not been proved.",
+      "intuition": "Three bounded Laplace tests use entire waiting-time row laws; one finite stationary window is a different experiment.",
+      "why_it_matters": "The cap-free T2/T2a result must not be silently transferred to finite-window data.",
+      "limitations": [
+        "The existing finite-window positive result with a common rate cap remains valid.",
+        "The finite-window instability sequences and confidence consequences are independently established.",
+        "A fixed horizon H>0 is assumed; an increasing horizon is another problem."
+      ],
+      "provenance": [
+        {
+          "path": "analysis/publication-stability-audit.md",
+          "label": "Section 5: stationary finite windows and unresolved cap removal"
+        },
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "3-three-state-identifiability-and-cap-free-continuity",
+          "label": "T2a and open statements"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e060",
+          "label": "Joint-kernel strengthening versus window limitation"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "open_observation_incidence",
+      "type": "frontier",
+      "title": "Other observation and channel conventions need separate theory",
+      "status": "unresolved",
+      "summary": "Unknown or blurred event incidence, multiple thermodynamic channels and other resolved-edge sets are outside the current complete one-pair criterion.",
+      "intuition": "Changing what an event identifies changes both the inverse map and the entropy being inferred.",
+      "why_it_matters": "The map must present these as different scientific questions, not omitted cases inside T3 or T6.",
+      "limitations": [
+        "T5 already permits general reverse-closed resolved marks when two states are outside every endpoint.",
+        "Coarse-graining may not commute with physical time reversal.",
+        "The generator-level functional need not include dissipation hidden inside parallel channels."
+      ],
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "label": "Common definitions and open statements"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e013",
+          "label": "Time reversal and observation convention"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e014",
+          "label": "Blurred observations"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e015",
+          "label": "Channel ambiguity"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "open_transform_minimum",
+      "type": "frontier",
+      "title": "The optimal number of Laplace arguments is unknown",
+      "status": "unresolved",
+      "summary": "Any three distinct positive Laplace arguments suffice for the local physical three-state inverse, but the minimal number of arguments has not been established.",
+      "intuition": "A sufficient reconstruction formula does not prove that fewer measurements are impossible.",
+      "why_it_matters": "This is a narrow optional inverse-problem question, not a dependency of the stability classification.",
+      "limitations": [
+        "No lower-bound claim on transform sample count is accepted.",
+        "The complete 2×2 transform is available at each argument.",
+        "Do not confuse number of arguments with number of scalar data entries."
+      ],
+      "provenance": [
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "3-three-state-identifiability-and-cap-free-continuity",
+          "label": "T2/T2a note on three arguments"
+        },
+        {
+          "path": "analysis/publication-theorems.md",
+          "anchor": "7-evidence-status-and-open-statements",
+          "label": "Section 7: optimal count open"
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": "next_proof_core",
+      "type": "interpretation",
+      "title": "Next action: assemble the self-contained proof core",
+      "status": "interpretation",
+      "summary": "Assemble the theorem-and-proof manuscript core for the balanced exact fiber and all-N local-ceiling criterion, with exact primary-work comparisons.",
+      "intuition": "The scientific results exist; the next work is to make every support case and certificate independently readable.",
+      "why_it_matters": "This is the single saved next action and is distinct from the open scientific frontiers.",
+      "limitations": [
+        "No new broad research, speculative examples, commit or push is part of this action.",
+        "Do not begin with polished introduction prose or another numerical sweep.",
+        "Completion requires all support cases, exceptional strata and exact certificates accessible without reconstructing chronology."
+      ],
+      "provenance": [
+        {
+          "path": "STATE.md",
+          "label": "Single best next action"
+        },
+        {
+          "path": "outputs/PAPER-STRUCTURE.md",
+          "label": "Single next action and proof appendices"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "d023",
+          "label": "Accepted next action and stopping rationale"
+        }
+      ],
+      "level": 1
+    }
+  ],
+  "edges": [
+    {
+      "source": "prior_realization_equivalence",
+      "target": "theorem_t1",
+      "relation": "provides_background_for",
+      "explanation": "The minimal hidden orbit specializes established normalized realization equivalence."
+    },
+    {
+      "source": "prior_map_identifiability",
+      "target": "theorem_t2",
+      "relation": "limits_interpretation_of",
+      "explanation": "Generic marks need not identify a generator; T2 uses fixed physical reset geometry."
+    },
+    {
+      "source": "prior_map_canonical",
+      "target": "theorem_t2",
+      "relation": "provides_background_for",
+      "explanation": "Finite rational/canonical reconstruction is established; T2 recovers actual physical rates."
+    },
+    {
+      "source": "prior_ph_polytopes",
+      "target": "theorem_t3",
+      "relation": "provides_background_for",
+      "explanation": "Invariant polytope machinery precedes the global physical support count."
+    },
+    {
+      "source": "prior_finite_fibers",
+      "target": "publication_claim",
+      "relation": "limits_interpretation_of",
+      "explanation": "Finiteness alone is not the novelty claim."
+    },
+    {
+      "source": "prior_finite_fibers",
+      "target": "theorem_t3",
+      "relation": "compares_with",
+      "explanation": "Static finite fibers do not supply the two-port bidirected entropy theorem."
+    },
+    {
+      "source": "prior_ph_finite_counts",
+      "target": "theorem_t3",
+      "relation": "compares_with",
+      "explanation": "Two restricted Coxian representations do not exhaust the admissible stationary fiber."
+    },
+    {
+      "source": "prior_hidden_thermodynamics",
+      "target": "theorem_t5",
+      "relation": "provides_background_for",
+      "explanation": "Hidden thermodynamic ambiguity is known; T5 adds every-source fixed-trace neighborhood quantifiers."
+    },
+    {
+      "source": "prior_resolved_inference",
+      "target": "theorem_t1",
+      "relation": "provides_background_for",
+      "explanation": "Resolved absorbing-process kernels and observed-rate recovery are established infrastructure."
+    },
+    {
+      "source": "prior_resolved_inference",
+      "target": "theorem_t3",
+      "relation": "compares_with",
+      "explanation": "Conditional inference/saturation differs from full unknown-support entropy-fiber exhaustion."
+    },
+    {
+      "source": "prior_kl_singularity",
+      "target": "theorem_t4",
+      "relation": "provides_background_for",
+      "explanation": "Opening a paired-zero edge realizes a known logarithmic singularity."
+    },
+    {
+      "source": "prior_kl_singularity",
+      "target": "theorem_t4a",
+      "relation": "limits_interpretation_of",
+      "explanation": "The smallest fixed-trace example is not a new KL singularity mechanism."
+    },
+    {
+      "source": "prior_entropy_upper",
+      "target": "theorem_t8",
+      "relation": "provides_background_for",
+      "explanation": "A stronger known activity/rate-ratio bound supplies the missing regularity context."
+    },
+    {
+      "source": "prior_confidence_impossibility",
+      "target": "theorem_t7",
+      "relation": "provides_background_for",
+      "explanation": "The uniform upper-limit implication is established statistical reasoning applied to CTMC sequences."
+    },
+    {
+      "source": "prior_hmm_stability",
+      "target": "theorem_t2a",
+      "relation": "compares_with",
+      "explanation": "Generic HMM inverse frontiers differ from entropy continuity under resolved resets."
+    },
+    {
+      "source": "prior_larget_gap",
+      "target": "risk_novelty",
+      "relation": "supports",
+      "explanation": "Uninspected exceptional assumptions/examples remain a concrete attribution risk."
+    },
+    {
+      "source": "prior_lower_bounds",
+      "target": "theorem_t7",
+      "relation": "limits_interpretation_of",
+      "explanation": "Upper-confidence impossibility does not invalidate lower estimators or restricted inference."
+    },
+    {
+      "source": "prior_cycle_inference",
+      "target": "theorem_t6",
+      "relation": "compares_with",
+      "explanation": "Cycle-based exact reconstruction assumes extra observables absent from one resolved pair."
+    },
+    {
+      "source": "cex_minimality_cure",
+      "target": "theorem_t1",
+      "relation": "clarifies",
+      "explanation": "Minimality gives a similarity orbit, not a unique physical entropy."
+    },
+    {
+      "source": "cex_local_isolation",
+      "target": "risk_global_proof",
+      "relation": "supports",
+      "explanation": "A locally isolated source can have distant admissible components."
+    },
+    {
+      "source": "cex_first_order_threshold",
+      "target": "theorem_t3",
+      "relation": "motivates",
+      "explanation": "The failed first-order boundary was replaced by exact global envelope analysis."
+    },
+    {
+      "source": "cex_finite_hankel",
+      "target": "prior_ph_polytopes",
+      "relation": "clarifies",
+      "explanation": "Dynamic invariance is additional to every finite positive factorization."
+    },
+    {
+      "source": "cex_exact_implies_stable",
+      "target": "story_interpretation",
+      "relation": "supports",
+      "explanation": "A continuous physical inverse can coexist with unbounded nearby entropy."
+    },
+    {
+      "source": "cex_exact_implies_stable",
+      "target": "theorem_t4a",
+      "relation": "witness_for",
+      "explanation": "The exact fixed-trace three-state family is the concrete witness."
+    },
+    {
+      "source": "cex_compact_limit_support",
+      "target": "theorem_t8",
+      "relation": "corrected_by",
+      "explanation": "Final T8 requires eventual support equality as well as compact inverse limits."
+    },
+    {
+      "source": "cex_ratio_without_activity",
+      "target": "theorem_t8",
+      "relation": "corrected_by",
+      "explanation": "Activity and ratio must both be controlled."
+    },
+    {
+      "source": "cex_arbitrary_tight_cap",
+      "target": "theorem_t6",
+      "relation": "limits_interpretation_of",
+      "explanation": "An additional tight cap changes the declared competitor class."
+    },
+    {
+      "source": "theorem_t3",
+      "target": "story_interpretation",
+      "relation": "supports",
+      "explanation": "The exact entropy image can have exactly two finite values."
+    },
+    {
+      "source": "theorem_t6",
+      "target": "story_interpretation",
+      "relation": "supports",
+      "explanation": "The local observed-law envelope can nevertheless be unbounded."
+    },
+    {
+      "source": "theorem_t3",
+      "target": "publication_claim",
+      "relation": "supports",
+      "explanation": "Exhaustive physical count and entropy separation are the first central candidate contribution."
+    },
+    {
+      "source": "theorem_t6",
+      "target": "publication_claim",
+      "relation": "supports",
+      "explanation": "The all-N local-ceiling criterion is the companion candidate contribution."
+    },
+    {
+      "source": "risk_novelty",
+      "target": "publication_claim",
+      "relation": "qualifies",
+      "explanation": "Readiness and plausible originality remain bounded by source coverage."
+    },
+    {
+      "source": "risk_global_proof",
+      "target": "publication_claim",
+      "relation": "qualifies",
+      "explanation": "The conventional global proof must remain transparent and challengeable."
+    },
+    {
+      "source": "publication_claim",
+      "target": "next_proof_core",
+      "relation": "motivates",
+      "explanation": "The accepted publication case justifies assembling the proof-first manuscript core."
+    },
+    {
+      "source": "open_theta_classification",
+      "target": "open_exact_classification",
+      "relation": "part_of",
+      "explanation": "The off-balanced family is one unresolved part of the broader exact-fiber program."
+    },
+    {
+      "source": "open_window_continuity",
+      "target": "theorem_t2a",
+      "relation": "limits_interpretation_of",
+      "explanation": "Cap-free joint-kernel continuity is not yet a cap-free fixed-window theorem."
+    },
+    {
+      "source": "open_observation_incidence",
+      "target": "theorem_t6",
+      "relation": "limits_interpretation_of",
+      "explanation": "The complete criterion is for one known resolved pair and the stated channel convention."
+    },
+    {
+      "source": "open_transform_minimum",
+      "target": "theorem_t2",
+      "relation": "limits_interpretation_of",
+      "explanation": "Three arguments are sufficient; optimality is not claimed."
+    },
+    {
+      "source": "risk_novelty",
+      "target": "next_proof_core",
+      "relation": "qualifies",
+      "explanation": "Attach exact primary comparisons and retain gaps; do not claim novelty from failed searches."
+    },
+    {
+      "source": "risk_global_proof",
+      "target": "next_proof_core",
+      "relation": "motivates",
+      "explanation": "A reader must be able to audit connected/disconnected supports and certificates."
+    }
+  ]
+}

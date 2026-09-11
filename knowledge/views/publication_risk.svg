@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1402" height="542" viewBox="0 0 1402 542" role="img" aria-labelledby="title desc">
+<title id="title">A skeptical view of the publication case</title><desc id="desc">The main risk is not a recorded contradictory result. It is an omitted physical support, an incorrectly transferred assumption, or a genuinely matching prior theorem.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#8a948f"/></marker></defs>
+<rect width="100%" height="100%" fill="#fafaf6"/>
+<text x="24" y="25" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#21372f">A skeptical view of the publication case</text>
+<path d="M840,225.0 C542.0,225.0 542.0,225.0 244,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>limits: Finiteness alone is not the novelty claim.</title></path>
+<text x="542.0" y="221.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">limits</text>
+<path d="M840,355.0 C814.0,355.0 814.0,225.0 788,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: Uninspected exceptional assumptions/examples remain a concrete attribution risk.</title></path>
+<text x="814.0" y="286.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
+<path d="M568,225.0 C406.0,225.0 406.0,225.0 244,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>limits: Readiness and plausible originality remain bounded by source coverage.</title></path>
+<text x="406.0" y="221.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">limits</text>
+<path d="M568,95.0 C406.0,95.0 406.0,225.0 244,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>limits: The conventional global proof must remain transparent and challengeable.</title></path>
+<text x="406.0" y="156.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">limits</text>
+<path d="M244,225.0 C678.0,225.0 678.0,225.0 1112,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>motivates: The accepted publication case justifies assembling the proof-first manuscript core.</title></path>
+<text x="678.0" y="221.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">motivates</text>
+<path d="M788,225.0 C950.0,225.0 950.0,225.0 1112,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>limits: Attach exact primary comparisons and retain gaps; do not claim novelty from failed searches.</title></path>
+<text x="950.0" y="221.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">limits</text>
+<path d="M788,95.0 C950.0,95.0 950.0,225.0 1112,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>motivates: A reader must be able to audit connected/disconnected supports and certificates.</title></path>
+<text x="950.0" y="156.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">motivates</text>
+<path d="M840,95.0 C678.0,95.0 678.0,225.0 516,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>assumes: Retained statement scope, not a universal necessity assertion. This is an explicitly listed condition of this statement; its necessity or weakening is explained in the claim and assumption panels.</title></path>
+<text x="678.0" y="156.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">assumes</text>
+<path d="M840,95.0 C678.0,95.0 678.0,95.0 516,95.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>assumes: Retained statement scope, not a universal necessity assertion. This is an explicitly listed condition of this statement; its necessity or weakening is explained in the claim and assumption panels.</title></path>
+<text x="678.0" y="91.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">assumes</text>
+<path d="M244,225.0 C542.0,225.0 542.0,225.0 840,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>novelty_compared_with: Plausible specific physical theorem contribution, conditional on proof audits and limited source coverage.</title></path>
+<text x="542.0" y="221.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">novelty compared with</text>
+<path d="M788,225.0 C818,225.0 810,355.0 840,355.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>novelty_compared_with: No novelty certificate; a matching theorem or construction is the discriminating evidence.</title></path>
+<text x="814.0" y="286.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">novelty compared with</text>
+<path d="M788,225.0 C818,225.0 810,225.0 840,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>novelty_compared_with: No novelty certificate; a matching theorem or construction is the discriminating evidence.</title></path>
+<text x="814.0" y="221.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">novelty compared with</text>
+<path d="M244,225.0 C678.0,225.0 678.0,225.0 1112,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>next_action: Prepare the already saved self-contained proof core; no new broad exploration is needed for this scoped manuscript.</title></path>
+<text x="678.0" y="221.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">next action</text>
+<g><title>The narrow publication case is the exhaustive two-point physical entropy fiber and sharp balanced transition, together with the all-N resolved-pair local-ceiling criterion.</title><rect x="24" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="176" width="4" height="98" rx="2" fill="#526357"/>
+<text x="37" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#526357">INTERPRETATION</text>
+<text x="37" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Candidate manuscript</text>
+<text x="37" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">contribution</text>
+</g>
+<g><title>Competitors have at most five states for the balanced-theta result.</title><rect x="296" y="46" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="46" width="4" height="98" rx="2" fill="#9b7431"/>
+<text x="309" y="64" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#9b7431">ASSUMPTION</text>
+<text x="309" y="88" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Five-state cap</text>
+</g>
+<g><title>Only x→y and y→x are individually observed, with known endpoints.</title><rect x="296" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="176" width="4" height="98" rx="2" fill="#9b7431"/>
+<text x="309" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#9b7431">ASSUMPTION</text>
+<text x="309" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">One known resolved pair</text>
+</g>
+<g><title>Every connected reciprocal support allowed by the declared state count is admissible.</title><rect x="296" y="306" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="306" width="4" height="98" rx="2" fill="#9b7431"/>
+<text x="309" y="324" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#9b7431">ASSUMPTION</text>
+<text x="309" y="348" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Unknown competitor topology</text>
+</g>
+<g><title>The endpoint count rests on a long conventional proof covering connected and disconnected hidden supports, all envelope equality cases, endpoint existence and entropy separation.</title><rect x="568" y="46" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="46" width="4" height="98" rx="2" fill="#987325"/>
+<text x="581" y="64" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#987325">INTERPRETATION</text>
+<text x="581" y="88" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Global support exhaustion</text>
+<text x="581" y="106" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">must remain auditable</text>
+</g>
+<g><title>No inspected source was shown to imply the exact two-point physical entropy fiber or the complete fixed-N ceiling criterion; matching exceptional results in inaccessible originals remain a specific risk.</title><rect x="568" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="176" width="4" height="98" rx="2" fill="#987325"/>
+<text x="581" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#987325">UNRESOLVED</text>
+<text x="581" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">A matching prior physical</text>
+<text x="581" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">theorem could change</text>
+<text x="581" y="254" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">attribution</text>
+</g>
+<g><title>For N=4, fixed trace -12 and all twelve offdiagonal rates ≤1 force every rate to equal one. The restricted class is a singleton with zero entropy, despite two fully hidden states for one observed pair.</title><rect x="568" y="306" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="306" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="581" y="324" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">PROVED</text>
+<text x="581" y="348" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">A tight cap freezes the</text>
+<text x="581" y="366" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">four-state class</text>
+</g>
+<g><title>Minimality, two connectivity classes, exact feasibility and entropy separation form a complete proof.</title><rect x="840" y="46" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="46" width="4" height="98" rx="2" fill="#577582"/>
+<text x="853" y="64" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#577582">PROVED</text>
+<text x="853" y="88" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Global proof of the</text>
+<text x="853" y="106" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">balanced fiber</text>
+</g>
+<g><title>Mond–Smith–van Straten give eight isolated full-space rank-three stochastic factorizations. The repository&#x27;s audited scalar-dynamics lift transfers this finiteness to minimal continuous-time positive realizations.</title><rect x="840" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="176" width="4" height="98" rx="2" fill="#7b629b"/>
+<text x="853" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#7b629b">KNOWN PRIOR RESULT</text>
+<text x="853" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Finite positive-realization</text>
+<text x="853" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">fibers are known</text>
+</g>
+<g><title>The inspected abstract reports canonical aggregate representations under regularity conditions, but the original hypotheses and exceptional examples remain unread.</title><rect x="840" y="306" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="306" width="4" height="98" rx="2" fill="#7b629b"/>
+<text x="853" y="324" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#7b629b">UNRESOLVED</text>
+<text x="853" y="348" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Larget&#x27;s original theorem</text>
+<text x="853" y="366" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">remains a specific access</text>
+<text x="853" y="384" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">gap</text>
+</g>
+<g><title>The complete manuscript is ready for expert human review. Check Appendix B&#x27;s global support exhaustion and its endpoint certificate, then finalize attribution and submission details.</title><rect x="1112" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="1112" y="176" width="4" height="98" rx="2" fill="#526357"/>
+<text x="1125" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#526357">INTERPRETATION</text>
+<text x="1125" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Next: expert review of the</text>
+<text x="1125" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">manuscript</text>
+</g>
+<text x="24" y="472" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Proof, numerical checks and novelty have separate statuses. Arrows use the relations in graph.json.</text>
+<text x="24" y="493" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Interactive companion: select a node to read assumptions, typed relationships and exact provenance.</text></svg>

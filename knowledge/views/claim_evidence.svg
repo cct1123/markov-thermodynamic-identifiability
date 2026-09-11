@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1130" height="412" viewBox="0 0 1130 412" role="img" aria-labelledby="title desc">
+<title id="title">A claim is stronger than a successful calculation</title><desc id="desc">Select a claim. Proof, symbolic identity, saved independent verification and numerical discovery are separate evidence roles; raw provenance appears only when you request it.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#8a948f"/></marker></defs>
+<rect width="100%" height="100%" fill="#fafaf6"/>
+<text x="24" y="25" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#21372f">A claim is stronger than a successful calculation</text>
+<path d="M516,95.0 C546,95.0 538,160.0 568,160.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: This recorded proof, calculation or provenance check supports only its explicitly stated scope.</title></path>
+<text x="542.0" y="123.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
+<path d="M244,95.0 C406.0,95.0 406.0,160.0 568,160.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: This recorded proof, calculation or provenance check supports only its explicitly stated scope.</title></path>
+<text x="406.0" y="123.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
+<path d="M244,225.0 C406.0,225.0 406.0,160.0 568,160.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: This recorded proof, calculation or provenance check supports only its explicitly stated scope.</title></path>
+<text x="406.0" y="188.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
+<path d="M568,160.0 C542.0,160.0 542.0,225.0 516,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>verified_by: Independent route with the exact scope and limitations stated in the linked check.</title></path>
+<text x="542.0" y="188.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">verified by</text>
+<path d="M244,95.0 C274,95.0 266,95.0 296,95.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: This recorded proof, calculation or provenance check supports only its explicitly stated scope.</title></path>
+<text x="270.0" y="91.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
+<path d="M244,225.0 C274,225.0 266,95.0 296,95.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: This recorded proof, calculation or provenance check supports only its explicitly stated scope.</title></path>
+<text x="270.0" y="156.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
+<path d="M406.0,144 L406.0,176" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>verified_by: Independent route with the exact scope and limitations stated in the linked check.</title></path>
+<text x="410.0" y="156.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">verified by</text>
+<path d="M244,95.0 C274,95.0 266,225.0 296,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>verified_by: Independent route with the exact scope and limitations stated in the linked check.</title></path>
+<text x="270.0" y="156.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">verified by</text>
+<path d="M244,225.0 C274,225.0 266,225.0 296,225.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>verified_by: Independent route with the exact scope and limitations stated in the linked check.</title></path>
+<text x="270.0" y="221.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">verified by</text>
+<g><title>Every connected hidden realization satisfies a quadratic inequality whose discriminant supplies the exact quartic threshold.</title><rect x="24" y="46" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="46" width="4" height="98" rx="2" fill="#157763"/>
+<text x="37" y="64" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="37" y="88" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Sharp invariant-triangle</text>
+<text x="37" y="106" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">envelope</text>
+</g>
+<g><title>Residue signs and reciprocal incidence eliminate every disconnected assignment except the source.</title><rect x="24" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="176" width="4" height="98" rx="2" fill="#157763"/>
+<text x="37" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="37" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Disconnected theta supports</text>
+<text x="37" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">are pinned</text>
+</g>
+<g><title>Minimality, two connectivity classes, exact feasibility and entropy separation form a complete proof.</title><rect x="296" y="46" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="46" width="4" height="98" rx="2" fill="#577582"/>
+<text x="309" y="64" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#577582">PROVED</text>
+<text x="309" y="88" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Global proof of the</text>
+<text x="309" y="106" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">balanced fiber</text>
+</g>
+<g><title>A separately derived cone generator matches the path witness exactly; certified entropy intervals are reproduced.</title><rect x="296" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="176" width="4" height="98" rx="2" fill="#577582"/>
+<text x="309" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#577582">INDEPENDENT CHECK</text>
+<text x="309" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Independent exact endpoint</text>
+<text x="309" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">reconstruction and audit</text>
+</g>
+<g><title>The balanced theta family has unbounded, two-point, then singleton entropy fibers across an exact quartic threshold.</title><rect x="568" y="111" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="111" width="4" height="98" rx="2" fill="#157763"/>
+<text x="581" y="129" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="581" y="153" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Five-state boundary:</text>
+<text x="581" y="171" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">exactly two entropy values</text>
+</g>
+<g><title>Twenty-six seeded runs located useful leads near the balanced boundary; exact verification and global exclusion are separate.</title><rect x="840" y="46" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="46" width="4" height="98" rx="2" fill="#577582"/>
+<text x="853" y="64" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#577582">NUMERICAL</text>
+<text x="853" y="88" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Seeded discovery near the</text>
+<text x="853" y="106" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">fold</text>
+</g>
+<g><title>No scientific theorem in this repository is formally verified.</title><rect x="840" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="176" width="4" height="98" rx="2" fill="#577582"/>
+<text x="853" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#577582">UNRESOLVED</text>
+<text x="853" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Formal layer: uncompiled</text>
+<text x="853" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">scaffold</text>
+</g>
+<text x="24" y="342" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Proof, numerical checks and novelty have separate statuses. Arrows use the relations in graph.json.</text>
+<text x="24" y="363" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Interactive companion: select a node to read assumptions, typed relationships and exact provenance.</text></svg>

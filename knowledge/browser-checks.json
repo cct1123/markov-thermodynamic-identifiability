@@ -1,0 +1,210 @@
+{
+  "command": "node knowledge/check_browser.mjs",
+  "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "browserVersion": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.36",
+    "revision": "@507c6ee3e2f3b2ca0e660547e5b9ea4820c67f4c",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.10"
+  },
+  "node": "v24.14.1",
+  "source_hashes": {
+    "graph.json": "ceffecc5a1ea7572314d20a01e7cf1129cb7f1378c72bcd4516cbbe607238104",
+    "interactive/index.html": "aefaf0bff75cb234bd6ce15d48ca08be4d026c5748849159937d389104c8a55e",
+    "interactive/app.js": "3f686813046655a91516852343af887c4f6f9f67fceb7f4b05074f7b2a9a5088",
+    "interactive/style.css": "14aa5bd170f6c4119da268ad2f46ba29ce5a9fa7aadc70597f86d8b7f772d423",
+    "interactive/data.js": "ad1c3e44a8633d7320fe472e403581fbc380e2e5ae2df952bb4896d760d278be",
+    "check_browser.mjs": "5fb3173fe33843e0c00cae3a20b7d834ad7b250b412db573bd3967f0dc8211c4"
+  },
+  "transport": "Local file URL; isolated headless profile; loopback CDP",
+  "results": [
+    {
+      "name": "offline data and first view",
+      "passed": true
+    },
+    {
+      "name": "view research_overview",
+      "passed": true,
+      "detail": {
+        "title": "How much dissipation can remain hidden?",
+        "count": 12,
+        "geometry": false
+      }
+    },
+    {
+      "name": "view concept_map",
+      "passed": true,
+      "detail": {
+        "title": "From microscopic rates to an entropy set",
+        "count": 12,
+        "geometry": false
+      }
+    },
+    {
+      "name": "view theorem_dependencies",
+      "passed": true,
+      "detail": {
+        "title": "What each theorem actually uses",
+        "count": 15,
+        "geometry": false
+      }
+    },
+    {
+      "name": "view claim_evidence",
+      "passed": true,
+      "detail": {
+        "title": "A claim is stronger than a successful calculation",
+        "count": 6,
+        "geometry": false
+      }
+    },
+    {
+      "name": "view research_evolution",
+      "passed": true,
+      "detail": {
+        "title": "Failures changed the shape of the theory",
+        "count": 11,
+        "geometry": false
+      }
+    },
+    {
+      "name": "view falsification_map",
+      "passed": true,
+      "detail": {
+        "title": "Keep the rejected statements visible",
+        "count": 21,
+        "geometry": false
+      }
+    },
+    {
+      "name": "view literature_novelty",
+      "passed": true,
+      "detail": {
+        "title": "The novelty claim is deliberately narrow",
+        "count": 12,
+        "geometry": false
+      }
+    },
+    {
+      "name": "view assumption_sensitivity",
+      "passed": true,
+      "detail": {
+        "title": "Changing the model class changes the answer",
+        "count": 12,
+        "geometry": false
+      }
+    },
+    {
+      "name": "view parameter_geometry",
+      "passed": true,
+      "detail": {
+        "title": "Same data, different entropy geometry",
+        "count": 4,
+        "geometry": true
+      }
+    },
+    {
+      "name": "view open_frontier",
+      "passed": true,
+      "detail": {
+        "title": "What is settled—and what is still open",
+        "count": 10,
+        "geometry": false
+      }
+    },
+    {
+      "name": "view scientific_story",
+      "passed": true,
+      "detail": {
+        "title": "Exact knowledge can still be thermodynamically fragile",
+        "count": 9,
+        "geometry": false
+      }
+    },
+    {
+      "name": "view publication_risk",
+      "passed": true,
+      "detail": {
+        "title": "A skeptical view of the publication case",
+        "count": 11,
+        "geometry": false
+      }
+    },
+    {
+      "name": "exact theorem detail",
+      "passed": true
+    },
+    {
+      "name": "evidence drilldown",
+      "passed": true
+    },
+    {
+      "name": "exact provenance excerpt",
+      "passed": true
+    },
+    {
+      "name": "individual paper links",
+      "passed": true
+    },
+    {
+      "name": "paper-specific scope and attribution",
+      "passed": true
+    },
+    {
+      "name": "claim focus changes graph",
+      "passed": true
+    },
+    {
+      "name": "global semantic search",
+      "passed": true
+    },
+    {
+      "name": "status filter dims other roles",
+      "passed": true
+    },
+    {
+      "name": "unbounded geometry regime",
+      "passed": true
+    },
+    {
+      "name": "exact two-point geometry regime",
+      "passed": true
+    },
+    {
+      "name": "graph checks disclose limits",
+      "passed": true
+    },
+    {
+      "name": "mobile has readable list alternative",
+      "passed": true
+    },
+    {
+      "name": "mobile list applies the evidence-status filter",
+      "passed": true
+    },
+    {
+      "name": "mobile graph toggle",
+      "passed": true
+    },
+    {
+      "name": "mobile page width",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "local figures load",
+      "passed": true
+    },
+    {
+      "name": "no uncaught JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "exceptions": [],
+  "passed": true
+}

@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="858" height="1192" viewBox="0 0 858 1192" role="img" aria-labelledby="title desc">
+<title id="title">Keep the rejected statements visible</title><desc id="desc">Eight exact failures prevent common overgeneralizations. Red “FALSIFIED” nodes are the old claims; red-role “PROVED” nodes are their verified counterexamples.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#8a948f"/></marker></defs>
+<rect width="100%" height="100%" fill="#fafaf6"/>
+<text x="24" y="25" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#21372f">Keep the rejected statements visible</text>
+<path d="M516,355.0 C546,355.0 538,420.0 568,420.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>motivates: The failed first-order boundary was replaced by exact global envelope analysis.</title></path>
+<text x="542.0" y="383.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">motivates</text>
+<path d="M568,810.0 C406.0,810.0 406.0,745.0 244,745.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>revises: Eventual support equality is required in the sufficient compact-inverse condition.</title></path>
+<text x="406.0" y="773.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">revises</text>
+<path d="M568,810.0 C406.0,810.0 406.0,875.0 244,875.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>revises: An activity bound must accompany the rate-ratio bound.</title></path>
+<text x="406.0" y="838.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">revises</text>
+<path d="M516,1005.0 C546,1005.0 538,680.0 568,680.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>limits: An additional tight cap changes the declared competitor class.</title></path>
+<text x="542.0" y="838.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">limits</text>
+<path d="M296,95.0 C270.0,95.0 270.0,95.0 244,95.0" fill="none" stroke="#b44844" stroke-width="1.2" marker-end="url(#arrow)"><title>falsifies: The exact witness defeats the rejected statement under its own claimed scope; the corrected scope is preserved in the witness.</title></path>
+<text x="270.0" y="91.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">falsifies</text>
+<path d="M296,225.0 C270.0,225.0 270.0,225.0 244,225.0" fill="none" stroke="#b44844" stroke-width="1.2" marker-end="url(#arrow)"><title>falsifies: The exact witness defeats the rejected statement under its own claimed scope; the corrected scope is preserved in the witness.</title></path>
+<text x="270.0" y="221.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">falsifies</text>
+<path d="M296,355.0 C270.0,355.0 270.0,355.0 244,355.0" fill="none" stroke="#b44844" stroke-width="1.2" marker-end="url(#arrow)"><title>falsifies: The exact witness defeats the rejected statement under its own claimed scope; the corrected scope is preserved in the witness.</title></path>
+<text x="270.0" y="351.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">falsifies</text>
+<path d="M296,485.0 C270.0,485.0 270.0,485.0 244,485.0" fill="none" stroke="#b44844" stroke-width="1.2" marker-end="url(#arrow)"><title>falsifies: The exact witness defeats the rejected statement under its own claimed scope; the corrected scope is preserved in the witness.</title></path>
+<text x="270.0" y="481.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">falsifies</text>
+<path d="M296,615.0 C270.0,615.0 270.0,615.0 244,615.0" fill="none" stroke="#b44844" stroke-width="1.2" marker-end="url(#arrow)"><title>falsifies: The exact witness defeats the rejected statement under its own claimed scope; the corrected scope is preserved in the witness.</title></path>
+<text x="270.0" y="611.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">falsifies</text>
+<path d="M296,745.0 C270.0,745.0 270.0,745.0 244,745.0" fill="none" stroke="#b44844" stroke-width="1.2" marker-end="url(#arrow)"><title>falsifies: The exact witness defeats the rejected statement under its own claimed scope; the corrected scope is preserved in the witness.</title></path>
+<text x="270.0" y="741.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">falsifies</text>
+<path d="M296,875.0 C270.0,875.0 270.0,875.0 244,875.0" fill="none" stroke="#b44844" stroke-width="1.2" marker-end="url(#arrow)"><title>falsifies: The exact witness defeats the rejected statement under its own claimed scope; the corrected scope is preserved in the witness.</title></path>
+<text x="270.0" y="871.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">falsifies</text>
+<path d="M296,1005.0 C270.0,1005.0 270.0,1005.0 244,1005.0" fill="none" stroke="#b44844" stroke-width="1.2" marker-end="url(#arrow)"><title>falsifies: The exact witness defeats the rejected statement under its own claimed scope; the corrected scope is preserved in the witness.</title></path>
+<text x="270.0" y="1001.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">falsifies</text>
+<path d="M678.0,339 L678.0,371" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: This recorded proof, calculation or provenance check supports only its explicitly stated scope.</title></path>
+<text x="682.0" y="351.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
+<path d="M678.0,599 L678.0,631" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: This recorded proof, calculation or provenance check supports only its explicitly stated scope.</title></path>
+<text x="682.0" y="611.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
+<path d="M516,225.0 C546,225.0 538,420.0 568,420.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>motivates: Whole-support exhaustion is needed to count a fiber.</title></path>
+<text x="542.0" y="318.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">motivates</text>
+<path d="M568,420.0 C406.0,420.0 406.0,355.0 244,355.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>revises: The sharp endpoint is a different quartic root and is established globally.</title></path>
+<text x="406.0" y="383.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">revises</text>
+<path d="M568,680.0 C406.0,680.0 406.0,615.0 244,615.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>revises: The correct local-ceiling criterion depends on state count and support.</title></path>
+<text x="406.0" y="643.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">revises</text>
+<g><title>Every linearly minimal compatible realization has unique entropy.</title><rect x="24" y="46" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="46" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="37" y="64" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">FALSIFIED</text>
+<text x="37" y="88" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Rejected: minimality</text>
+<text x="37" y="106" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">restores thermodynamic</text>
+<text x="37" y="124" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">uniqueness</text>
+</g>
+<g><title>A locally isolated physical generator is the only compatible generator.</title><rect x="24" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="176" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="37" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">FALSIFIED</text>
+<text x="37" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Rejected: local isolation</text>
+<text x="37" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">proves global uniqueness</text>
+</g>
+<g><title>No connected hidden realization exists at or above zc=(11+sqrt(1120/11))/2.</title><rect x="24" y="306" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="306" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="37" y="324" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">FALSIFIED</text>
+<text x="37" y="348" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Rejected: the first-order</text>
+<text x="37" y="366" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">opening threshold is sharp</text>
+</g>
+<g><title>Strictly positive factors of each finite block Hankel truncation imply a strict same-order CTMC realization.</title><rect x="24" y="436" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="436" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="37" y="454" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">FALSIFIED</text>
+<text x="37" y="478" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Rejected: finite Hankel</text>
+<text x="37" y="496" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">positivity implies physical</text>
+<text x="37" y="514" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">feasibility</text>
+</g>
+<g><title>An exactly identified and continuously recovered generator has locally bounded entropy.</title><rect x="24" y="566" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="566" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="37" y="584" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">FALSIFIED</text>
+<text x="37" y="608" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Rejected: exact rate</text>
+<text x="37" y="626" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">identification gives a</text>
+<text x="37" y="644" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">finite local entropy</text>
+</g>
+<g><title>Approaching a compact set of irreducible generators is sufficient for entropy continuity or a finite ceiling.</title><rect x="24" y="696" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="696" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="37" y="714" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">FALSIFIED</text>
+<text x="37" y="738" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Rejected: compact inverse</text>
+<text x="37" y="756" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">limits alone control</text>
+<text x="37" y="774" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">entropy</text>
+</g>
+<g><title>A uniform bound on reciprocal rate ratios gives a uniform entropy-rate upper bound without a time/activity constraint.</title><rect x="24" y="826" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="826" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="37" y="844" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">FALSIFIED</text>
+<text x="37" y="868" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Rejected: a rate-ratio</text>
+<text x="37" y="886" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">bound alone caps entropy</text>
+</g>
+<g><title>Two fully hidden states always defeat local entropy ceilings even under any extra cap containing the source.</title><rect x="24" y="956" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="956" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="37" y="974" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">FALSIFIED</text>
+<text x="37" y="998" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Rejected: the all-N</text>
+<text x="37" y="1016" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">criterion survives every</text>
+<text x="37" y="1034" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">extra rate cap</text>
+</g>
+<g><title>The symmetric complete four-state Q0 has entropy zero and full linear order four. At ε=1/4 the exact normalized hidden similarity gives Q=[[-6,1,3/2,7/2],[1,-10,3,6],[5/3,11/3,-29/4,23/12],[3,5,3/4,-35/4]], with the same all-time kernel and σ=(1/16)log(529/154)&gt;0; ε→2/3 produces unbounded entropy.</title><rect x="296" y="46" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="46" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="309" y="64" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">PROVED</text>
+<text x="309" y="88" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Minimal four-state</text>
+<text x="309" y="106" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">ambiguity</text>
+</g>
+<g><title>Theta(3,3) is actually isolated by an exact positive tangent dual and nonsingular chart, yet U=(1/1000)[[871,-390,519],[623,790,-413],[-183,133,1050]] yields a distant complete generator with the same kernel. det U=34813/31250 and its minimum offdiagonal rate is 139/500; a further exact family has divergent entropy.</title><rect x="296" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="176" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="309" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">PROVED</text>
+<text x="309" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">An isolated model with a</text>
+<text x="309" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">distant alternative</text>
+</g>
+<g><title>A fixed exact rational normalized similarity gives complete generators for every z in [2109/200,21091/2000]=[10.545,10.5455], an interval crossing zc≈10.5452497911. Every offdiagonal is strictly positive and the full kernel is preserved.</title><rect x="296" y="306" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="306" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="309" y="324" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">PROVED</text>
+<text x="309" y="348" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Exact witness beyond the</text>
+<text x="309" y="366" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">local threshold</text>
+</g>
+<g><title>At theta(100,100), every finite truncation of the uniformized three-mode hidden response has positive inner-dimension-three factors for a sufficiently small truncation-dependent ε. Nevertheless the physical cap-five generator is globally unique; the proposed similarity has hidden rate ε(-197+194ε)/(1-ε²)&lt;0 for 0&lt;ε&lt;1.</title><rect x="296" y="436" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="436" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="309" y="454" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">PROVED</text>
+<text x="309" y="478" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Positive factors with a</text>
+<text x="309" y="496" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">negative hidden rate</text>
+</g>
+<g><title>The unit three-state tree is approached by Q(e,k)=[[-1-e,1,e],[1,-2+k,1-k],[k,1-e,-1+e-k]], 0&lt;k&lt;e&lt;1/2. Every model is uniquely identified at cap three and has trace -4, rates ≤1 and minimal order three. With k=exp(-1/e²), Q→Q0 but eσ→1/3.</title><rect x="296" y="566" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="566" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="309" y="584" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">PROVED</text>
+<text x="309" y="608" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Identified rates; divergent</text>
+<text x="309" y="626" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">entropy</text>
+</g>
+<g><title>The divergent three-state chord family converges to the singleton unit tree, a compact irreducible limit set with positive rates on its own support. New edge rates vanish at unequal speeds and carry divergent entropy.</title><rect x="296" y="696" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="696" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="309" y="714" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">PROVED</text>
+<text x="309" y="738" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">A compact tree limit with</text>
+<text x="309" y="756" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">divergent entropy</text>
+</g>
+<g><title>On a three-cycle, clockwise rates 2c and reverse rates c have ratio R=2 for every c&gt;0, but σ=c log 2→∞ as c→∞.</title><rect x="296" y="826" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="826" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="309" y="844" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">PROVED</text>
+<text x="309" y="868" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Fixed ratios; an</text>
+<text x="309" y="886" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">accelerating cycle</text>
+</g>
+<g><title>For N=4, fixed trace -12 and all twelve offdiagonal rates ≤1 force every rate to equal one. The restricted class is a singleton with zero entropy, despite two fully hidden states for one observed pair.</title><rect x="296" y="956" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="296" y="956" width="4" height="98" rx="2" fill="#b44844"/>
+<text x="309" y="974" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#b44844">PROVED</text>
+<text x="309" y="998" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">A tight cap freezes the</text>
+<text x="309" y="1016" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">four-state class</text>
+</g>
+<g><title>Every four-state exact entropy fiber is singleton or unbounded; unknown support has only two unique incidence classes.</title><rect x="568" y="241" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="241" width="4" height="98" rx="2" fill="#157763"/>
+<text x="581" y="259" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="581" y="283" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Legacy · Complete four-</text>
+<text x="581" y="301" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">state entropy dichotomies</text>
+</g>
+<g><title>The balanced theta family has unbounded, two-point, then singleton entropy fibers across an exact quartic threshold.</title><rect x="568" y="371" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="371" width="4" height="98" rx="2" fill="#157763"/>
+<text x="581" y="389" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="581" y="413" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Five-state boundary:</text>
+<text x="581" y="431" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">exactly two entropy values</text>
+</g>
+<g><title>A strictly positive three-state triangle has locally Lipschitz entropy in row TV.</title><rect x="568" y="501" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="501" width="4" height="98" rx="2" fill="#157763"/>
+<text x="581" y="519" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="581" y="543" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Positive triangles: locally</text>
+<text x="581" y="561" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Lipschitz entropy</text>
+</g>
+<g><title>For one resolved pair, a finite local entropy ceiling exists exactly at N=2 or a complete N=3 triangle.</title><rect x="568" y="631" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="631" width="4" height="98" rx="2" fill="#157763"/>
+<text x="581" y="649" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="581" y="673" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Local ceiling iff N=2 or</text>
+<text x="581" y="691" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">complete N=3</text>
+</g>
+<g><title>Compact inverse control suffices only when disappearing new edges are also excluded.</title><rect x="568" y="761" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="761" width="4" height="98" rx="2" fill="#157763"/>
+<text x="581" y="779" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
+<text x="581" y="803" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">T8 · Support-controlled</text>
+<text x="581" y="821" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">inverse ranges give finite</text>
+<text x="581" y="839" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">ceilings</text>
+</g>
+<text x="24" y="1122" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Proof, numerical checks and novelty have separate statuses. Arrows use the relations in graph.json.</text>
+<text x="24" y="1143" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Interactive companion: select a node to read assumptions, typed relationships and exact provenance.</text></svg>

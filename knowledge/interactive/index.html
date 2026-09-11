@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Research atlas · Thermodynamic identifiability</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="data.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<header class="masthead"><a class="brand" href="#view=research_overview"><span class="brand-mark" aria-hidden="true">∑</span><span>RESEARCH ATLAS<small>Thermodynamic identifiability</small></span></a><div class="header-right"><span class="checkpoint">Validated research · September 2026</span><button id="health-button" class="quiet">Map checks</button></div></header>
+<div class="workspace">
+  <aside class="navigation" aria-label="Research views">
+    <div class="nav-caption">EXPLORE THE SCIENCE</div><nav id="views"></nav>
+    <div class="nav-note"><strong>One visible edge.<br>Many possible worlds.</strong><p>Trace what is proved, what failed, and what still needs scrutiny.</p><a href="../../outputs/REPORT.md" target="_blank" rel="noopener">Read the audited report ↗</a></div>
+  </aside>
+  <main>
+    <section class="view-heading"><div><div id="view-kicker" class="eyebrow"></div><h1 id="view-title"></h1><p id="view-description"></p></div><button id="export-view" class="quiet" title="Open the curated default SVG for this view; a changed claim focus is not exported">Static default ↗</button></section>
+    <div class="toolbar">
+      <label class="search-label"><span class="sr-only">Search all scientific entities</span><input id="search" type="search" placeholder="Find a theorem, assumption, failure…" autocomplete="off"></label>
+      <label><span class="sr-only">Filter status</span><select id="status-filter"><option value="">All evidence statuses</option><option value="analytically_proved">Analytically proved</option><option value="numerical_observation">Numerical observation</option><option value="established_prior_result">Established prior result</option><option value="falsified">Falsified</option><option value="unresolved">Unresolved</option><option value="assumption">Assumptions</option></select></label>
+      <label id="claim-focus-label" hidden><span class="sr-only">Focus a claim</span><select id="claim-focus"></select></label>
+      <button id="toggle-representation" aria-pressed="false">List</button>
+      <div class="zoom-controls" aria-label="Graph zoom"><button id="zoom-out" aria-label="Zoom out">−</button><button id="zoom-fit">Fit</button><button id="zoom-in" aria-label="Zoom in">+</button></div>
+    </div>
+    <div id="search-results" class="search-results" hidden></div>
+    <section id="geometry" hidden aria-label="Parameter geometry">
+      <div class="geometry-switch"><div><h2>One exact slice of the inverse problem</h2><p>The diagram classifies entropy sets. It does not represent a continuous bounded interval.</p></div><div class="regime-controls"><button data-regime="below">0 &lt; z &lt; z*</button><button data-regime="fold" aria-pressed="true">z = z*</button><button data-regime="above">z &gt; z*</button></div></div>
+      <div class="fiber-schematic" role="img" aria-label="Schematic map from generators to common observations and entropy values"><div><span class="eyebrow">GENERATOR FIBER</span><div id="fiber-models"></div></div><span class="mapping-arrow" aria-hidden="true">→</span><div><span class="eyebrow">SAME EXACT OBSERVATION</span><strong>Ψ(t), all t ≥ 0</strong><small>Known resolved x↔y; at most 5 states</small></div><span class="mapping-arrow" aria-hidden="true">→</span><div><span class="eyebrow">ENTROPY IDENTIFIED SET</span><strong id="fiber-entropy"></strong><small id="fiber-note"></small></div></div>
+      <p class="figure-note">Schematic fiber geometry. z* is defined by the unique positive quartic root; selecting the endpoint uses the exact theorem case, not a floating-point equality test.</p>
+      <img class="quantitative-figure" src="../views/parameter_geometry.svg" alt="Two reproducible plots of the exact three-state family: e times entropy tends to one third as e tends to zero, while the row-TV upper bound tends to zero.">
+      <p class="figure-note">Quantitative illustration of a proved limit · <a href="../views/geometry-data.json" target="_blank">100-digit values and provenance</a> · <a href="../build.py" target="_blank">Generation script</a>. The bound shown is min(1,4e); a plot is not the divergence proof.</p>
+    </section>
+    <div id="graph-stage" class="graph-stage" tabindex="0" aria-label="Scientific knowledge map; select a node for details">
+      <svg id="graph" role="img" aria-labelledby="graph-title graph-desc"><title id="graph-title"></title><desc id="graph-desc"></desc></svg>
+    </div>
+    <section id="node-list" class="node-list" hidden aria-label="Accessible entity list for this view"></section>
+    <div class="legend" aria-label="Visual legend"><span><i class="definition"></i>Definitions</span><span><i class="assumption"></i>Assumptions</span><span><i class="result"></i>Results</span><span><i class="evidence"></i>Checks</span><span><i class="prior"></i>Prior work</span><span><i class="failure"></i>Failures</span><span><i class="frontier"></i>Open / risk</span><small>Color = scientific role. The written badge = evidence status. No formal project proof is claimed.</small></div>
+    <div class="map-footer"><span id="view-count"></span><span>Select a node for intuition → statement → evidence → original source.</span></div>
+    <section id="view-reading" class="view-reading"></section>
+  </main>
+</div>
+<aside id="detail" class="detail" hidden aria-label="Selected scientific claim">
+  <div class="detail-top"><span id="detail-type" class="eyebrow"></span><button id="close-detail" class="quiet" aria-label="Close detail panel">Close ×</button></div>
+  <span id="detail-status" class="status-badge"></span><h2 id="detail-title"></h2><p id="detail-summary" class="detail-summary"></p>
+  <div class="detail-tabs" role="tablist" aria-label="Detail level"><button role="tab" aria-selected="true" data-tab="understand">Understand</button><button role="tab" aria-selected="false" data-tab="evidence">Evidence</button><button role="tab" aria-selected="false" data-tab="sources">Provenance</button></div>
+  <div id="detail-body"></div>
+</aside>
+<dialog id="health-dialog"><button id="close-health" class="quiet">Close ×</button><h2>What the map can check</h2><p>These checks detect missing structure and stale provenance. They do not verify the mathematics or establish novelty.</p><div id="health-content"></div><a href="../validation.json" target="_blank">Full machine-readable validation ↗</a></dialog>
+<noscript>This local research atlas requires JavaScript for drill-down. Static SVG views are in knowledge/views; graph.json contains all scientific statements and provenance.</noscript>
+</body></html>
