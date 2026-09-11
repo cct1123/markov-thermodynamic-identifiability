@@ -29,8 +29,15 @@ For new work, the [scientific stack guide](../docs/research-stack.md) adds an is
 | [balanced-boundary-witness.md](balanced-boundary-witness.md) | Exact rational counterexample to the proposed first-order threshold; independent cone and endpoint audits |
 | [balanced-cone-bound.md](balanced-cone-bound.md) | Sharp global balanced-theta exclusion and rigid endpoint triangle |
 | [theta-balanced-boundary.md](theta-balanced-boundary.md) | Exact quartic endpoint, complete two-model fiber and certified differing entropy |
+| [entropy-neighborhood-audit.md](entropy-neighborhood-audit.md) | Every positive observational neighborhood is entropy-unbounded with two fully hidden states; exact trace, bounded rates and finite-horizon coverage consequence |
+| [finite-precision-instability.md](finite-precision-instability.md) | Explicit four-state exact-kernel families approaching a uniquely identified source; independent coupling and entropy checks |
+| [three-state-fixed-trace-audit.md](three-state-fixed-trace-audit.md) | Smallest fixed minimal dimension for instability, preserving trace −4 and rate cap one |
+| [one-hidden-robustness-audit.md](one-hidden-robustness-audit.md) | Tree/positive-triangle local stability classification under cap three; distinction from globally honest confidence limits |
+| [three-state-precision-audit.md](three-state-precision-audit.md) | Globally unique two-state zero-deficit data have unbounded finite-precision neighborhoods with a third state |
 
 The current synthesis is [REPORT.md](../outputs/REPORT.md). The later proofs resolve the earlier four-state question and several five-state subclasses. The balanced quartic endpoint now proves the existence of a minimal five-state bounded-nonunique entropy fiber; the general five/six-state classification and publication novelty remain unresolved.
+
+The finite-precision continuation also proves that exact finite fibers need not yield robust entropy upper ceilings, even with fixed state count, trace and bounded rates. Three-state positive triangles supply a local continuity exception under a common rate cap; the exact and approximate questions remain distinct. Independent audits and failed attempts accompany the constructive proofs. [E054–E058](../evidence/RECORDS.md#e054)
 
 ## Reproduce
 
@@ -67,8 +74,12 @@ Accepted runs used Python 3.9.12, NumPy 2.0.1 and SciPy 1.13.1 on Windows. Each 
 | [check_balanced_cone_bound.py](check_balanced_cone_bound.py) | [balanced-cone-bound-checks.json](balanced-cone-bound-checks.json) | Exact generic envelope, discriminant and root/sign isolation supporting the global proof. [E051](../evidence/RECORDS.md#e051) |
 | [check_balanced_cone_sufficiency.py](check_balanced_cone_sufficiency.py) | [balanced-cone-sufficiency-checks.json](balanced-cone-sufficiency-checks.json) | Exact interval margins supporting complete realizations throughout the remaining subcritical interval. [E052](../evidence/RECORDS.md#e052) |
 | [check_balanced_fold.py](check_balanced_fold.py) | [balanced-fold-checks.json](../outputs/balanced-fold-checks.json) | Exact algebraic endpoint, reciprocal path support, ten marked derivatives, stationary laws and rational entropy enclosures; independent numerical checks. [E051](../evidence/RECORDS.md#e051) |
+| [check_finite_precision_instability.py](check_finite_precision_instability.py) | [finite-precision-checks.json](../outputs/finite-precision-checks.json) | Generic four-state identities, 12 rational all-time certificates/direct entropy checks and three semigroup TV diagnostics. [E056](../evidence/RECORDS.md#e056) |
+| [check_three_state_precision.py](check_three_state_precision.py) | [three-state-precision-checks.json](../outputs/three-state-precision-checks.json) | Three explicit three-state families, stationary currents, exact rank/reconstruction identities, fixed-trace checks and 15 independent 100-digit stationary solves. [E057](../evidence/RECORDS.md#e057), [E058](../evidence/RECORDS.md#e058) |
 
 For the new balanced-boundary scripts use `.venv\Scripts\python.exe -B analysis/<script>.py` from root and the [research environment](../docs/research-stack.md). The accepted run used Python 3.9.12, SymPy 1.14.0, mpmath 1.3.0, NumPy 2.0.1 and SciPy 1.13.1. Exact derivations have no random seed; the bounded discovery script records seed 20260910. Each writes only its listed new output. The number-field certificate uses exact root/sign and log-remainder enclosures; high precision alone is not the proof. The independent endpoint replay is separately preserved in [balanced-fold-independent-replay.json](../outputs/balanced-fold-independent-replay.json).
+
+The two finite-precision scripts use the same root-relative command and environment. No search or random seed is used. They preserve old outputs and write only their listed JSON, including execution-time script hashes. The three-state audits and [four-state independent check](finite-precision-independent-check.md) also contain separately executed embedded calculations. Continuum sign, coupling, divergence, compactness and coverage arguments are conventional proofs in the notes; high-precision and quadrature values are independent diagnostics. None of these checks certifies publication novelty.
 
 Inputs and rational or quadratic-algebraic parameter choices are embedded in the scripts and motivated in the linked proofs. No external dataset is used. Exact checks are deterministic; only the separate discovery probes use seeded random starts. Rates and entropy rates have inverse-time units, with Boltzmann's constant one. Numerical tolerances are explicit in each script.
 

@@ -1,0 +1,281 @@
+{
+  "kind": "exact witness and numerical cross-check; no optimizer or formal proof",
+  "executed_at_utc": "2026-09-10T23:45:38.678384+00:00",
+  "command": ".venv/Scripts/python.exe -B analysis/check_finite_precision_instability.py",
+  "environment": {
+    "python": "3.9.12",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "numpy": "2.0.1",
+    "scipy": "1.13.1",
+    "platform": "Windows-10-10.0.22631-SP0"
+  },
+  "script_sha256": "f4aaac3e9e4d6554250a8425c3f43c9cf6f1ec50f138400d1f9ebe92b4930747",
+  "assumptions": "0 < epsilon < 1/2; 0 <= t < epsilon; unknown bidirected topology; exactly four states; only x<->y observed; stationary finite-horizon sampling for statistical corollary",
+  "q0": [
+    [
+      "-2",
+      "1",
+      "1",
+      "0"
+    ],
+    [
+      "1",
+      "-2",
+      "0",
+      "1"
+    ],
+    [
+      "1",
+      "0",
+      "-2",
+      "1"
+    ],
+    [
+      "0",
+      "1",
+      "1",
+      "-2"
+    ]
+  ],
+  "perturbation_C": [
+    [
+      "-1",
+      "0",
+      "0",
+      "1"
+    ],
+    [
+      "0",
+      "-1",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "-1",
+      "0"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "-1"
+    ]
+  ],
+  "target": [
+    [
+      "-epsilon - 2",
+      "1",
+      "1 - t",
+      "epsilon + t"
+    ],
+    [
+      "1",
+      "-epsilon - 2",
+      "-epsilon*(t - 1)",
+      "epsilon*t + 1"
+    ],
+    [
+      "(epsilon*t - 1)/(t - 1)",
+      "(-epsilon + t)/(t - 1)",
+      "-epsilon - t - 2",
+      "t + 1"
+    ],
+    [
+      "epsilon",
+      "1",
+      "1 - t",
+      "-epsilon + t - 2"
+    ]
+  ],
+  "stationary": [
+    [
+      "1/4",
+      "1/4",
+      "1/4 - t/4",
+      "t/4 + 1/4"
+    ]
+  ],
+  "current": [
+    [
+      "0",
+      "0",
+      "t*(epsilon - 1)/4",
+      "-t*(epsilon - 1)/4"
+    ],
+    [
+      "0",
+      "0",
+      "-t*(epsilon - 1)/4",
+      "t*(epsilon - 1)/4"
+    ],
+    [
+      "-t*(epsilon - 1)/4",
+      "t*(epsilon - 1)/4",
+      "0",
+      "0"
+    ],
+    [
+      "t*(epsilon - 1)/4",
+      "-t*(epsilon - 1)/4",
+      "0",
+      "0"
+    ]
+  ],
+  "source_minimal_ranks": [
+    4,
+    4
+  ],
+  "source_path_delay_derivatives": [
+    "0",
+    "0",
+    "0",
+    "1"
+  ],
+  "source_mean_next_event_times": [
+    "2",
+    "2",
+    "3",
+    "3"
+  ],
+  "exact_similarity_and_stationary_observed_path_identities": true,
+  "entropy_formula": "t*(1 - epsilon)/4 * log((epsilon + t)*(-epsilon*t + 1)/((epsilon - t)*(epsilon*t + 1)))",
+  "divergence_coefficient": "-epsilon*(epsilon - 1)/4",
+  "uniform_rate_bound": "all off-diagonal rates <= 1+epsilon < 3/2",
+  "kernel_tv_bound": "2*epsilon, analytically from extra-jump coupling",
+  "stationary_observed_record_tv_bound": "epsilon*H for every fixed physical horizon H",
+  "rational_and_high_precision_cases": [
+    {
+      "epsilon": "1/4",
+      "t": "9/40",
+      "gap_digits": 1,
+      "entropy_100dps": "0.1194674105133966649232090607851964073170057088088744069477018873437182612752734199194014251734824656",
+      "formula_residual": "8.929588994392773298560808971135476245718046834553114540743170650215879968021392153714437670782593982e-103",
+      "max_rate": "49/40"
+    },
+    {
+      "epsilon": "1/4",
+      "t": "999/4000",
+      "gap_digits": 3,
+      "entropy_100dps": "0.3500573117141845385014364183811865615049779598816761786483199660874710916144118058317196733126536402",
+      "formula_residual": "0.0",
+      "max_rate": "4999/4000"
+    },
+    {
+      "epsilon": "1/4",
+      "t": "99999999/400000000",
+      "gap_digits": 8,
+      "entropy_100dps": "0.890093652559057450191125081164316181805137197395418426184382452808344776996803034974217177361738001",
+      "formula_residual": "7.143671195514218638848647176908380996574437467642491632594536520172703974417113722971550136626075185e-102",
+      "max_rate": "499999999/400000000"
+    },
+    {
+      "epsilon": "1/4",
+      "t": "99999999999999999999/400000000000000000000",
+      "gap_digits": 20,
+      "entropy_100dps": "2.185297776444696233205636994237826405280595246528781653869254584587962912318934728455199967772778165",
+      "formula_residual": "0.0",
+      "max_rate": "499999999999999999999/400000000000000000000"
+    },
+    {
+      "epsilon": "1/100",
+      "t": "9/1000",
+      "gap_digits": 1,
+      "entropy_100dps": "0.00655833687609216355966484733859975357272591773264644794898945627133776194557610257225417720638837621",
+      "formula_residual": "1.674297936448644993480151682087901796072133781478708976389344496915477494004011028821457063271736372e-103",
+      "max_rate": "1009/1000"
+    },
+    {
+      "epsilon": "1/100",
+      "t": "999/100000",
+      "gap_digits": 3,
+      "entropy_100dps": "0.01879169077161395825723050453930661852748904733758706299253961095745116760887002082240926167801657138",
+      "formula_residual": "0.0",
+      "max_rate": "100999/100000"
+    },
+    {
+      "epsilon": "1/100",
+      "t": "99999999/10000000000",
+      "gap_digits": 8,
+      "entropy_100dps": "0.04730622862773397814550328866550388163856879863967426598799867730562885168619043010745826398518168813",
+      "formula_residual": "4.464794497196386649280404485567738122859023417276557270371585325107939984010696076857218835391296991e-103",
+      "max_rate": "10099999999/10000000000"
+    },
+    {
+      "epsilon": "1/100",
+      "t": "99999999999999999999/10000000000000000000000",
+      "gap_digits": 20,
+      "entropy_100dps": "0.1156930063750894759985190263936634557359808052988109857438969193489181994869574546647258400512417584",
+      "formula_residual": "1.785917798878554659712161794227095249143609366910622908148634130043175993604278430742887534156518796e-102",
+      "max_rate": "10099999999999999999999/10000000000000000000000"
+    },
+    {
+      "epsilon": "1/1000",
+      "t": "9/10000",
+      "gap_digits": 1,
+      "entropy_100dps": "0.0006618358669471366542892884910025391878766318927416014808818040729990502279522681729301080375643390362",
+      "formula_residual": "3.488120700934677069750316004349795408483612044747310367477801035240578112508356310044702215149450774e-104",
+      "max_rate": "10009/10000"
+    },
+    {
+      "epsilon": "1/1000",
+      "t": "999/1000000",
+      "gap_digits": 3,
+      "entropy_100dps": "0.001896301784056933940790388556286061329075301735068887437488172059722701120387939239029085134327729711",
+      "formula_residual": "1.39524828037387082790012640173991816339344481789892414699112041409623124500334252401788088605978031e-104",
+      "max_rate": "1000999/1000000"
+    },
+    {
+      "epsilon": "1/1000",
+      "t": "99999999/100000000000",
+      "gap_digits": 8,
+      "entropy_100dps": "0.004773677975661424375424479549316932861873521414831829926381357755850147140580518576454576327020698242",
+      "formula_residual": "0.0",
+      "max_rate": "100099999999/100000000000"
+    },
+    {
+      "epsilon": "1/1000",
+      "t": "99999999999999999999/100000000000000000000000",
+      "gap_digits": 20,
+      "entropy_100dps": "0.0116745255483501045324123270379939778695240591780902821136562121004253113072684887321288356557317446",
+      "formula_residual": "0.0",
+      "max_rate": "100099999999999999999999/100000000000000000000000"
+    }
+  ],
+  "numerical_tv_cross_checks": [
+    {
+      "epsilon": "1/4",
+      "row_tv_quadrature": [
+        0.06138236433272031,
+        0.06138236433272035
+      ],
+      "quadrature_error_estimate": 1.2464892522441195e-11,
+      "analytic_coupling_upper_bound": "1/2"
+    },
+    {
+      "epsilon": "1/100",
+      "row_tv_quadrature": [
+        0.0032462746003820873,
+        0.0032462746003821034
+      ],
+      "quadrature_error_estimate": 5.042592292350802e-12,
+      "analytic_coupling_upper_bound": "1/50"
+    },
+    {
+      "epsilon": "1/1000",
+      "row_tv_quadrature": [
+        0.0003286390810831915,
+        0.00032863908108322605
+      ],
+      "quadrature_error_estimate": 8.540487987947301e-12,
+      "analytic_coupling_upper_bound": "1/500"
+    }
+  ],
+  "limitation": "Quadrature and high precision are diagnostics. Continuum inequalities, divergence and uniform-confidence impossibility use the accompanying conventional proof. No novelty or formal-verification claim.",
+  "failed_attempts": [
+    "Initial run stopped at a structural SymPy equality comparing differently factored versions of epsilon*(1-epsilon)/4. Replaced this and the analogous rate-cap assertion by exact rational-function difference checks; no mathematical formula changed."
+  ],
+  "all_checks_passed": true
+}

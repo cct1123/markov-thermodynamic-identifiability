@@ -1,12 +1,14 @@
-# Thermodynamic identifiability: exact results and the five-state frontier
+# Thermodynamic identifiability: exact fibers and finite-precision instability
 
-**Research synthesis, 2026-09-10 UTC. A minimal five-state kernel can have a bounded, non-singleton entropy-production fiber under a five-state cap and unknown bidirected topology.** At an exactly specified balanced-theta parameter, the full compatible set contains exactly two generators up to hidden labels, and their entropy rates are rigorously different. This resolves the previously open existence question in this workspace; general five-state classification and publication novelty remain unestablished. [Endpoint proof and certificate](../analysis/theta-balanced-boundary.md), [E051](../evidence/RECORDS.md#e051).
+**Research synthesis, 2026-09-11 UTC. A minimal five-state kernel can have a bounded, non-singleton entropy-production fiber under a five-state cap and unknown bidirected topology.** At an exactly specified balanced-theta parameter, the full compatible set contains exactly two generators up to hidden labels, and their entropy rates are rigorously different. This resolves the previously open existence question in this workspace; general five-state classification and publication novelty remain unestablished. [Endpoint proof and certificate](../analysis/theta-balanced-boundary.md), [E051](../evidence/RECORDS.md#e051).
 
 The parameter is the unique positive root **z_*≈10.5571496686650** of **352z⁴−3168z³−4644z²−11340z−7623=0**. Its two entropy rates are approximately **0.062946400237** and **0.065579685967**, with disjoint exact rational enclosures. For every z>z_*, the balanced source is globally unique. The new invariant-triangle envelope exhausts all connected hidden graphs; existing disconnected-hidden rigidity covers the rest. The root and endpoint witness were derived independently through hidden-path algebra. The earlier bound z≥40 remains valid but is superseded on this ray. [Cone proof](../analysis/balanced-cone-bound.md).
 
 The whole balanced entropy ray is now classified: **unbounded for 0<z<z_***, **two finite values at z=z_***, and **a singleton for z>z_***. Below the fold, a strict triangle construction overlaps the prior unbounded region and closes the remaining interval. [E052](../evidence/RECORDS.md#e052).
 
 The initial conjecture that the first-order opening threshold was globally sharp was explicitly falsified by an exact rational complete realization. Failed searches do not enter the exclusion proof. The human [research brief](../PROJECT.md) is preserved; this is a working synthesis, not a paper draft or a formally verified theorem.
+
+**Exact finite entropy ceilings need not survive any positive observational tolerance.** At every source with two fully hidden states, unknown competitor topology and no reverse-rate floor, arbitrarily close joint waiting-time laws admit unbounded entropy while keeping the state count, observed rates and generator trace fixed. All microscopic rates remain bounded. A stationary finite-record consequence is that a uniformly valid upper confidence limit must be infinite with probability at least its nominal coverage, even at an exactly identifiable source. The conventional proof and explicit four-state witness were independently checked. [E055](../evidence/RECORDS.md#e055), [E056](../evidence/RECORDS.md#e056).
 
 ## Precise question
 
@@ -31,7 +33,7 @@ $$
 
 A feasible entropy set is a singleton, bounded but non-singleton, or unbounded above. Empty compatibility means inconsistent data and assumptions. Exact state count, state cap, fixed topology, unknown topology, unrestricted finite cardinality and minimal-realization restrictions define different classes. There is no common positive lower rate cutoff.
 
-The [formulation](../analysis/formulation.md) defines the observation process and stationary frequencies precisely. Resolved marks reset the state, making the full kernel sufficient for the observed event process. Equality of Markov parameters through order n+n′−1 certifies all-time equality for a candidate pair of dimensions n,n′. These are exact-statistics results; numerical stability requires separate work. [E016](../evidence/RECORDS.md#e016).
+The [formulation](../analysis/formulation.md) defines the observation process and stationary frequencies precisely. Resolved marks reset the state, making the full kernel sufficient for the observed event process. Equality of Markov parameters through order n+n′−1 certifies all-time equality for a candidate pair of dimensions n,n′. The exact classification and the separate finite-precision results below answer different questions. [E016](../evidence/RECORDS.md#e016).
 
 ## Frontier and prior-art constraints
 
@@ -43,7 +45,7 @@ The [formulation](../analysis/formulation.md) defines the observation process an
 | Known non-identifiability | Exact hidden similarities, equilibrium ambiguity, one-way boundaries, finite Coxian alternatives and numerical growing entropy over equivalence classes | Neither ambiguity nor local/global distinctions in general realization theory are new. [E008](../evidence/RECORDS.md#e008), [E010](../evidence/RECORDS.md#e010), [E025](../evidence/RECORDS.md#e025), [E037](../evidence/RECORDS.md#e037) |
 | Established mathematical machinery | Positive matrix realizations and invariant polyhedral cones | A cone with extra rays can require extra states; strict input/output factors and the fixed order must be checked. [E040](../evidence/RECORDS.md#e040) |
 | Established factorization geometry | Rank-three nested triangles, disconnected factorization spaces and infinitesimal/local rigidity | Static factorization does not impose dynamical invariance. [E045](../evidence/RECORDS.md#e045), [E046](../evidence/RECORDS.md#e046) |
-| Unresolved here | Full entropy images for general minimal five-state kernels, global positive-realization components, and finite-data stability | The checked examples and subclasses do not settle these questions. [D007](../evidence/RECORDS.md#d007) |
+| Unresolved here | Full entropy images for general minimal five-state kernels and global positive-realization components | The checked examples and subclasses do not settle these questions. [D007](../evidence/RECORDS.md#d007) |
 | Candidate contributions | Complete four-state classification; five-state coexistence of isolation and unbounded alternatives; global uniqueness regions; an exact two-point entropy fiber at the sharp balanced-theta boundary | Publication novelty remains conditional on theorem-level comparison, including finite positive-realization alternatives. [E030](../evidence/RECORDS.md#e030), [E035](../evidence/RECORDS.md#e035), [E048](../evidence/RECORDS.md#e048), [E051](../evidence/RECORDS.md#e051) |
 
 [Ehrich (2021)](https://arxiv.org/html/2105.08803v2), section 4, exactly parameterizes a four-state discrete-time aggregate-equivalence class and reports growing sampled entropy with a near-one-way mechanism. [Wagner–Timmer (2000)](https://doi.org/10.1016/S0006-3495(00)76529-5) establishes exact equilibrium ambiguity; [Siekmann (2026)](https://doi.org/10.1007/s11538-025-01558-3), Eq. (62), explicitly constructs equivalent one-way CTMC boundaries. These are strong antecedents, with different observation assumptions.
@@ -57,6 +59,8 @@ Closed minimal orbits and endpoint inverse-Jacobi reconstruction are established
 [Van den Hof (1997)](https://ir.cwi.nl/pub/127/0127D.pdf), Theorems 3.1 and 4.2, supplies continuous-time invariant-cone existence and minimality conditions. For the minimal theta fiber, a common trace-based shift reduces complete CTMC feasibility exactly to a strict order-three discrete-time matrix realization; normalization follows automatically. The primary theorem does not guarantee the required three-ray cone. Förster–Nagy's strict-realization theorem is a close lead, but its full dimension and input/output hypotheses remain an access gap. [Primary-source assessment](../evidence/positive-realization-frontier.md), [E040](../evidence/RECORDS.md#e040).
 
 [Krone–Kubjas](https://arxiv.org/pdf/1902.02868v3), Propositions 4.2 and 5.3, gives an infinitesimal-to-local rigidity implication and a boundary criterion quantified over every rank-size factorization. [Mond–Smith–van Straten](https://doi.org/10.1098/rspa.2003.1150), Theorems 2.4 and 4.9, supplies nested-simplex geometry and disconnected rank-three factorization spaces. These results constrain novelty, but neither imposes the operator invariance used below. The [focused frontier memo](../evidence/three-state-cone-frontier.md) records full-text locators and further abstract-only realization leads. [E045](../evidence/RECORDS.md#e045).
+
+The renewed theorem-level comparison narrows the novelty claim further: finite minimal positive-realization fibers have a static-factorization precedent and an elementary continuous-time lift. The possible contribution is the complete **physical entropy** fiber under the specific bidirected, resolved-edge and state-cap restrictions. A canonical representative is not a count of that fiber. The general statistical impossibility argument also has established antecedents. Primary-source locators, the challenged full-space versus boundary-space interpretation, and remaining access gaps are preserved in [E054](../evidence/RECORDS.md#e054) and the [positioning memo](../evidence/two-point-entropy-positioning.md). No absence of located prior art is treated as novelty evidence.
 
 ## The finite endpoint and sharp balanced boundary
 
@@ -156,6 +160,34 @@ Every member remains minimal of dimension five and has the same complete observe
 
 The witness was discovered by a bounded numerical search with thirteen starts, then replaced by an exact rational certificate. Only two starts found the distant positive component; local successful termination often returned the isolated model. The mathematical conclusion uses exact signs, stationary equations, rank and kernel identities, not optimizer status. [E036](../evidence/RECORDS.md#e036).
 
+## Finite-precision failure and its smallest counterexample
+
+Measure observational error by the maximum row total variation between the complete joint next-mark/time laws. For a source Q with two fully hidden states, the [neighborhood theorem](../analysis/entropy-neighborhood-audit.md) constructs, for every tolerance and every finite target entropy, a complete bidirected model at that distance and above that target. State count, observed rates and trace remain exactly fixed; every microscopic rate is at most `-tr Q`. A trace-preserving completion makes a hidden pair available for the established exact boundary construction. Integrated semigroup and independent coupling arguments prove the observation bound. This applies to the exact five-state finite fiber above without contradicting its exact classification. [E055](../evidence/RECORDS.md#e055).
+
+The failure already occurs at the smallest possible fixed minimal dimension, three. Observe only the unit-rate pair x↔y and use
+
+\[
+Q_{e,k}=\begin{pmatrix}
+-1-e&1&e\\1&-2+k&1-k\\k&1-e&-1+e-k
+\end{pmatrix},\qquad 0<k<e<\tfrac12.
+\]
+
+Every rate is at most one, the trace is exactly −4, and every model has minimal order three. The source `Q0=Q(0,0)` is the equilibrium tree x−y−h and is globally unique under cap three. Let `Z=3+e+2k-e²-ek-k²`. Direct stationary-cycle algebra gives
+
+\[
+\sigma(Q_{e,k})=
+\frac{(e-k)(1-e-k)}{Z}
+\log\frac{e(1-e)}{k(1-k)}.
+\]
+
+For `k=exp(-1/e²)`, this grows as `1/(3e)` while `Q(e,k)` converges entrywise to Q0. Joint-kernel row TV is below `4e`; stationary observed-window TV is at most `11e/18+2eH` on every fixed finite horizon H. For each fixed small e, taking k to zero gives arbitrarily high entropy within these same bounds. Every exact cap-three fiber along this construction is a singleton. Thus the inverse generator can be continuous while its entropy is not: an absent edge opens with forward and reverse rates vanishing at vastly different speeds. This mechanism also affects fully observed finite microscopic records, so it is not a phenomenon unique to hidden-state inference. [Exact proof](../analysis/three-state-fixed-trace-audit.md), [independent executable checks](three-state-precision-checks.json), [E057](../evidence/RECORDS.md#e057).
+
+With a common finite rate cap and at most three states, a strictly positive triangle is different. Compactness, continuity of matrix exponentials and the exact three-state derivative reconstruction force any observationally convergent sequence to converge to its source generator. All six source rates are positive, so entropy is continuous there. At a tree, arbitrary nearby entropy remains unbounded. With cap two entropy is always zero; with cap three, even two-state equilibrium data have an unbounded observational neighborhood when trace is not separately fixed. These statements concern local population-law stability. They do not give a uniform conditioning constant over all triangles. [One-hidden-state audit](../analysis/one-hidden-robustness-audit.md), [two-state source audit](../analysis/three-state-precision-audit.md), [E058](../evidence/RECORDS.md#e058).
+
+For stationary sampling on `[0,H]`, let U be any upper confidence limit with coverage at least `1-alpha` for **every** admissible model in the stated class. A sequence of divergent entropies whose finite-record laws converge in TV forces `P_Q0(U=+infinity)>=1-alpha`. This holds at the three-state tree even restricting to trace −4 and rates at most one. The general hidden-pair theorem gives the same conclusion at every source satisfying its premises. At locally stable positive triangles, global coverage over the entire cap-three class still forces an infinite output with positive probability, by domination of the tree's alternating-record law. Local entropy continuity and globally honest finite-sample inference are different requirements. [Confidence proof](../analysis/finite-precision-instability.md#consequence-for-uniform-finite-sample-upper-confidence-limits), [support-transfer audit](../analysis/one-hidden-robustness-audit.md), [E056](../evidence/RECORDS.md#e056), [E058](../evidence/RECORDS.md#e058).
+
+These results do not invalidate lower entropy estimators or pointwise asymptotic methods in restricted classes. Known sparse topology or a uniform positive reverse-rate floor changes the problem. In particular, if every present rate lies in `[m,M]`, `m>0`, stationary cancellation bounds entropy by the stationary jump activity times `log(M/m)`. A rate upper bound alone supplies no such floor. Population TV neighborhoods are not empirical-TV confidence balls for continuous waiting times.
+
 ## What is now classified
 
 | Admissible class and condition | Proved outcome |
@@ -194,7 +226,7 @@ A proposed finite ambiguity obtained by reallocating hidden-response residues be
 
 The corrected computational provenance retains unsuccessful optimizer starts, an inappropriate initial eigenvalue diagnostic and bound-clipping warnings. The old theta(100,100) search was inconclusive; the new global proof supplies the exclusion. A proposed local-opening extension still fails: every source in `alpha<s<=7` is locally isolated, including points with distant alternatives. No broad graph enumeration or large inference framework was built. [E036](../evidence/RECORDS.md#e036), [E042](../evidence/RECORDS.md#e042), [E048](../evidence/RECORDS.md#e048).
 
-The results do not establish entropy minima for every unbounded fiber, finite-sample stability, unknown mark incidence, blurred observations, or channel-resolved dissipation. Bounded rate closure alone is insufficient, and a common positive lower rate cutoff would define a different problem.
+The results do not establish entropy minima for every unbounded fiber, a complete stability theory under prescribed topologies, unknown mark incidence, blurred observations, or channel-resolved dissipation. The finite-precision impossibility results above use their explicitly stated observation, rate-domain and coverage assumptions. Bounded rate closure alone is insufficient, and a common positive lower rate cutoff defines a different problem.
 
 The final maintenance review found no further flaw in the global proof. It clarified that the dimension-three Hankel result concerns the uniformized hidden response, replayed the new certificates and pruned disposable bytecode. Scientific outputs were unchanged. [E049](../evidence/RECORDS.md#e049).
 
@@ -202,6 +234,8 @@ The final maintenance review found no further flaw in the global proof. It clari
 
 The saved balanced-boundary action is complete. The upper exclusion, physical endpoint, globally finite two-model fiber, differing entropy values and subcritical unbounded interval are proved within the explicit model class. The new result answers the bounded-nonunique **existence** question; it does not give a general decision procedure for every five-state kernel.
 
-The strongest remaining checks for a future authorized run are theorem-level comparison with finite positive-realization/aggregate-equivalence results and further independent review of the endpoint theorem. Publication novelty has not been established; the earlier full-source gaps remain. No new literature search or formal proof was performed in this narrowly mathematical continuation.
+The renewed autonomous continuation completed a bounded primary-source comparison and the finite-precision results above. The smallest counterexample, its exact-trace strengthening, the general two-hidden-state theorem and the positive-triangle exception are conventionally proved and independently checked. Failed retrievals, algebra-checker issues and an incomplete code extraction remain recorded. No formal verification or publication novelty is claimed. [E054–E058](../evidence/RECORDS.md#e054).
 
-The conventional proof has been independently reviewed and the exact certificates replayed, but its conclusions remain conditional on the stated row-CTMC, bidirected-support, known-mark and five-state-cap assumptions. Changing the cap, observation incidence, channels or finite-statistics setting is a different problem. General two-parameter theta classification, robustness to measurement error, and the broader five/six-state program remain unresolved. [STATE.md](../STATE.md) and [D015](../evidence/RECORDS.md#d015) preserve the completed scope and reopening conditions.
+The stopping reason is diminishing returns in the completed directions: more numerical examples cannot strengthen a dimension-minimal construction or replace the analytic classifications, and broad citation searches have not supplied a specifically matching physical theorem. The main remaining risk is novelty. The single best next action is to obtain Larget's original canonical-equivalence theorem via a new accessible route and compare its actual physical positivity, fixed-order and observation hypotheses against the exact two-point fiber. The [source audit](../evidence/finite-fiber-prior-art.md#outstanding-original-source-gap-larget) records precise preprint leads and existing failures; lack of access is not evidence of novelty.
+
+General two-parameter theta classification and the full five/six-state exact-fiber program remain unresolved. A new concrete primary result, a proof objection or changed assumptions can justify reopening; the report does not mark those broader objectives solved. All assignments are complete and the repository is resumable through [STATE.md](../STATE.md) and [D020](../evidence/RECORDS.md#d020). No commit or push was performed in this continuation.

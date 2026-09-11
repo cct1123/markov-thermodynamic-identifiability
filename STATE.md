@@ -2,9 +2,10 @@
 
 Agent-maintained checkpoint, not a live process indicator.
 
-- **Research status:** finished for the saved balanced-theta boundary action. The general five/six-state program is not finished. [Report](outputs/REPORT.md), [D015](evidence/RECORDS.md#d015)
-- **Last checkpoint:** 2026-09-10 23:29:31 UTC. Review, exact replays, repository checks and pruning completed; changes committed locally as e7a1af4. Automatic approval review rejected the push. [E053](evidence/RECORDS.md#e053), [D016](evidence/RECORDS.md#d016)
-- **Scope:** D014 completed only D012's balanced parameter gap. The current action reviews and publishes that result and the research stack; it does not reopen research. PROJECT.md is preserved.
+- **Research status:** finished at the current verified frontier; further broad work in the completed directions has low expected value. The general five/six-state program and publication novelty remain unresolved. [Report](outputs/REPORT.md), [stopping decision D020](evidence/RECORDS.md#d020)
+- **Last research checkpoint:** 2026-09-11 00:04 UTC (2026-09-10 America/Chicago). Completed prior-art comparison, the general robustness theorem, the smallest fixed-trace counterexample and the one-hidden-state stability classification; independently verified and saved E054–E058. Final link/provenance checks and temporary-file cleanup passed.
+- **Publication review:** 2026-09-11 00:48 UTC. The user's subsequent “commit and push” authorizes publication to the configured `origin/main`, superseding the research run's no-publication instruction. Both new checkers reproduced their accepted outputs without changing them. This is maintenance; research remains finished. [D021](evidence/RECORDS.md#d021)
+- **Scope:** preserve PROJECT.md, historical proofs and the saved scientific next action. Publication status is recorded by Git history and the upstream reference; no new investigation is authorized by the maintenance request.
 
 ## Accepted answer
 
@@ -22,6 +23,12 @@ At z_*, exactly two generators exist up to hidden labels: the source and one con
 
 Confidence rests on global analytic support exhaustion, an independently derived matching quartic, an exact algebraic endpoint with ten marked derivatives, rigorous rational entropy bounds, and independent proof/code review. This is conventionally proved and computationally checked, **not formally verified**. Publication novelty is unestablished; prior source-access gaps remain.
 
+**New robustness theorem:** at any source with two fully hidden states, every positive joint-kernel TV neighborhood contains arbitrarily high finite entropy at the same state count, observed rates and exact trace. All rates share a finite cap. Under stationary finite-horizon sampling, any modelwise uniformly valid upper confidence limit must be infinite with probability at least its coverage at the source. This includes exactly identifiable and finite-fiber sources. [General proof](analysis/entropy-neighborhood-audit.md), [explicit checked witness](analysis/finite-precision-instability.md), [E055](evidence/RECORDS.md#e055), [E056](evidence/RECORDS.md#e056)
+
+**Smallest counterexample:** a minimal-three-state equilibrium tree is approached by uniquely identified triangles with exact trace −4, all rates at most one and entropy asymptotic to `1/(3e)`. This preserves source order. In contrast, strictly positive three-state triangles have locally continuous entropy under a common rate cap. The sparse failure is entropy discontinuity, even though the generator inverse remains continuous. [Fixed-trace proof](analysis/three-state-fixed-trace-audit.md), [local classification](analysis/one-hidden-robustness-audit.md), [E057](evidence/RECORDS.md#e057), [E058](evidence/RECORDS.md#e058)
+
+Assumptions: unknown competitor topology, no positive reverse-rate floor, fully resolved marks, and uniform finite-sample coverage for the statistical statement. Local continuity does not imply a globally honest almost-surely finite confidence limit. Exact identities, independent stationary solves, coupling and compactness supply the evidence; numerical convergence alone does not prove the results.
+
 ## Evidence and rejected shortcut
 
 The initial hypothesis that the first-order threshold z_c≈10.54524979109513 was sharp was falsified by an exact rational complete witness on [10.545,10.5455]. A second-order opening explains the failure. [E050](evidence/RECORDS.md#e050)
@@ -30,8 +37,12 @@ The global cone envelope proves exclusion above z_* and uniquely forces the endp
 
 Prior results remain accepted: four-state singleton/unbounded classification, state splitting, theta unbounded regions and the open two-parameter uniqueness region. A sixth state makes this endpoint's entropy unbounded by splitting. The subcritical entropy classification does not assert connected hidden support on the exceptional slow-pole line. Local isolation, finite Hankel positivity and bounded rate closure remain insufficient shortcuts. [D007](evidence/RECORDS.md#d007), [D009](evidence/RECORDS.md#d009), [E028](evidence/RECORDS.md#e028), [E046](evidence/RECORDS.md#e046)
 
-## Handoff and resumption condition
+## Current uncertainty and next action
 
-All review assignments are complete. Five exact boundary scripts replayed with matching mathematical outputs; historical scientific artifacts and failed attempts were preserved. Publication alone is blocked: automatic approval review requires explicit confirmation to upload the reviewed research and infrastructure commits to `git@github.com:cct1123/markov-thermodynamic-identifiability.git` on `main`. After confirmation, push normally and verify the remote; do not repeat research. [Publication decision](evidence/RECORDS.md#d016)
+The primary-source comparison is complete within its bounded scope. Finite positive-realization fibers and general confidence-set impossibility are known antecedents. Only the specific physical entropy statements remain potential contributions. Missing originals and the lack of a matching located theorem do not establish novelty. [E054](evidence/RECORDS.md#e054), [positioning](evidence/two-point-entropy-positioning.md)
 
-The saved boundary question is settled; do not repeat its search. If a new research run is authorized, the single most useful next action is **theorem-level prior-art comparison and further independent review of the exact two-point entropy theorem**, particularly finite positive-realization and aggregate-equivalence results. No new literature search occurred in this scoped continuation. General two-parameter classification and finite-data robustness are separate future scopes. Reopen this boundary only for a concrete proof objection, new contrary evidence or changed model assumptions. [D015](evidence/RECORDS.md#d015)
+**Single best next action:** obtain Larget's original canonical-equivalence theorem through a genuinely new accessible route, starting from the exact preprint leads in the [finite-fiber audit](evidence/finite-fiber-prior-art.md#outstanding-original-source-gap-larget), and compare its physical positivity, order, observation and exceptional-fiber assumptions directly against E051. A matching full physical-fiber result would alter the publication claim. Do not equate canonical uniqueness with physical uniqueness or treat failed retrieval as absence. [D020](evidence/RECORDS.md#d020)
+
+**Main risk:** publication novelty; general realization finiteness and confidence-set impossibility are already known, and the three-state sparse entropy discontinuity is not specific to hidden observation. Only the precise physical theorem combination is a candidate contribution. Broader exact classification needs new global insight; repeated threshold searches and additional unmotivated examples are not the next action.
+
+All bounded assignments are complete and incorporated. Two new root checkers and separate embedded replays passed; source hashes, links, historical evidence and the human brief were checked. Failed algebra/extraction/retrieval attempts remain in the linked notes. No research work is running. D016 and the no-publication outcome in D020 describe earlier requests; D021 records the subsequent publication authorization.
