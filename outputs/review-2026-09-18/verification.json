@@ -1,0 +1,36 @@
+{
+  "executed_at_utc": "2026-09-18T23:39:01.883765+00:00",
+  "scope": "Repository review, reproducibility and delivery checks; no new mathematical proof or literature-wide novelty claim.",
+  "workflow": {
+    "manifest": "outputs/review-2026-09-18/reproduction.json",
+    "jobs_passed": 13,
+    "tests_passed": 36,
+    "seeded_trajectories": 900
+  },
+  "staged_checkout": {
+    "command": "git checkout-index --all --prefix=C:/projects/markov-thermodynamic-identifiability/tmp/review-index-final/",
+    "baseline_hashes_verified": 23,
+    "reproduction_hashes_verified": 30,
+    "source_validation_passed": true,
+    "scientific_input_hashes_verified": 39,
+    "scope": "Baseline and scientific/build payloads; final documentation and receipt additions do not change those bytes."
+  },
+  "pdf": {
+    "before_sha256": "3b72270f2043185f90983cf54e542ba46b0cd301d73542bc31768a27ee63720a",
+    "after_sha256": "4f942038591fc403629d1eacadf666b733d2ad245ad563290f25d1e30a4f9c9a",
+    "pages": 55,
+    "render_command": "pdftoppm -scale-to 1400 -png INPUT.pdf PREFIX",
+    "changed_pages": [
+      2
+    ],
+    "unchanged_pages_pixel_identical": 54,
+    "visually_inspected_changed_page": 2,
+    "visual_result": "No clipping, overlap, broken text or layout defect observed.",
+    "after_whitespace_cleanup_build": "Passed; PDF bytes unchanged."
+  },
+  "historical_receipts_preserved": [
+    "outputs/correctness-2026-09-15/reproduction-2026-09-15.json",
+    "outputs/correctness-2026-09-15/repository-audit-2026-09-15.json"
+  ],
+  "all_checks_passed": true
+}

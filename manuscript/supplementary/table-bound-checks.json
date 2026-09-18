@@ -1,5 +1,5 @@
 {
-  "executed_at_utc": "2026-09-11T02:16:52.894325+00:00",
+  "executed_at_utc": "2026-09-18T23:35:48.220241+00:00",
   "command_from_root": ".venv/Scripts/python.exe -B manuscript/scripts/check_table_bounds.py",
   "environment": {
     "python": "3.9.12",
@@ -26,7 +26,7 @@
     "bottom_right_invariance_via_tangency": "120"
   },
   "captured_shifted_checker_result": {
-    "executed_at": "2026-09-11T02:16:52.817241+00:00",
+    "executed_at": "2026-09-18T23:35:48.150876+00:00",
     "command_from_root": ".\\.venv\\Scripts\\python.exe -B analysis/check_balanced_cone_sufficiency.py",
     "environment": {
       "python": "3.9.12",

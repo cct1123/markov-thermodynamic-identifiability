@@ -1,0 +1,37 @@
+\subsection{A quantitative rare-rate testing obstruction}\label{sec:rare}
+The boundary family gives an exponential cost for a precisely specified testing problem. The asymptote in Eq.~\eqref{eq:treelimit} implies
+\begin{equation}
+ \frac{\log(1/k)}{\sig(Q(e,k))^2}\longrightarrow9,
+ \qquad k=\exp(-1/e^2).\label{eq:lograre}
+\end{equation}
+This is a logarithmic equivalence, not the multiplicative claim
+$k\sim\exp(-9\sig^2)$; subleading entropy terms matter inside an exponential.
+
+\begin{proposition}[Testing independently variable reverse rates]\label{prop:rare}
+Fix $p>1$ and $0<\gamma<1$. Compare stationary records of
+$Q_1=Q(e,k)$ and $Q_p=Q(e,k^p)$, where $k=\exp(-1/e^2)$ and $0<e<1/2$.
+If a test, even one observing the full microscopic trajectory on $[0,H]$, has sum of its two error probabilities at most $\gamma$, then
+\begin{equation}
+ H\ge\frac{1-\gamma}{k-k^p}-1.\label{eq:rareH}
+\end{equation}
+The same necessary bound holds for the resolved-pair record. As $e\downarrow0$, $\sig(Q_p)/\sig(Q_1)\to p$ and the logarithm of the right side divided by $\sig(Q_1)^2$ tends to $9$ (or $9/p^2$ when expressed using $\sig(Q_p)^2$).
+\end{proposition}
+\begin{proof}
+On $0\le k\le e<1/2$, the stationary weights in Proposition~\ref{prop:tree} give
+\begin{equation}
+ \left\|\frac{\partial\pi}{\partial k}\right\|_{\TV}
+ \le\frac{3-2k}{Z}\le1.
+\end{equation}
+Indeed $Z=3+e(1-e)+k(2-e-k)\ge3$, and applying the quotient rule to the three weights gives the first bound. Changing $k$ to $k^p$ changes one outgoing rate in each of rows $y,h$, with maximum common/excess-clock separation hazard $k-k^p$. Couple the stationary initial laws maximally and then the clocks. The full-path TV distance is at most $(1+H)(k-k^p)$. Observation cannot increase this distance. The sum of testing errors is at least one minus TV, proving Eq.~\eqref{eq:rareH}. Substitution into Eq.~\eqref{eq:treeentropy} yields $e\sig(Q_p)\to p/3$.
+\end{proof}
+
+Consequently, for every fixed $c<9$ an eventual lower bound of the form $C\exp(c\sig(Q_1)^2)$ follows, with $C>0$ and a sufficiently small-$e$ domain. Both alternatives retain the observed rates, trace and upper rate cap. This is a lower bound for separating alternatives with a fixed multiplicative entropy gap; it is not an achievable upper bound for estimating entropy from marked data. Rejection with prescribed error probabilities of a high-entropy alternative separated from the true entropy requires such a test.
+
+There is also a direct rare-event diagnostic. If the reverse microscopic transition $h\to x$ were itself counted, stationarity gives
+\begin{equation}
+ \mathbb E N_{h\to x}(H)=\pi_h kH,\qquad
+ \Pr\{N_{h\to x}(H)\ge1\}\le\pi_h kH.
+\end{equation}
+Thus detection probability at least $1-\beta$ requires $H\ge(1-\beta)/(\pi_h k)$, with $\pi_h\to1/3$. The observed-event intensity tends to $2/3$, so the corresponding expected observed-event count has the same exponential order. A stationary intensity is not an assertion that rare counts are exactly Poisson. The hidden reverse jump is unavailable to our actual detector; the full-path testing bound already accounts for that information loss.
+
+The class assumption is decisive. If the exact relation $k=\exp(-1/e^2)$ is imposed as known prior information for \emph{every} competitor, $Q(e,k^p)$ with $p>1$ is excluded. Then estimating the more common entrance rate $e$ can determine entropy through that prior, without directly detecting a reverse jump. Nor does comparing only $Q(e,k)$ with the limiting tree establish an exponential cost: the tree differs in rates of order $e$. The quantitative obstruction requires an independently variable small reverse rate, as allowed in the declared generator class.

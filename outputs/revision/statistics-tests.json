@@ -1,0 +1,20 @@
+{
+  "kind": "independent numerical validation tests, not proof certificates",
+  "executed_at_utc": "2026-09-14T19:50:57.005866+00:00",
+  "command": [
+    "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "analysis.revision.test_inference",
+    "-v"
+  ],
+  "returncode": 0,
+  "output": "test_absolute_inverse_regular_at_tree_relative_inverse_degrades (analysis.revision.test_inference.InferenceTests) ... ok\ntest_entropy_cycle_against_stationary_edge_sum (analysis.revision.test_inference.InferenceTests) ... ok\ntest_entropy_gradient_complex_step (analysis.revision.test_inference.InferenceTests) ... ok\ntest_full_six_rate_jacobian_complex_step (analysis.revision.test_inference.InferenceTests) ... ok\ntest_noiseless_recovery_all_six_unknown_rates (analysis.revision.test_inference.InferenceTests) ... ok\ntest_resolvent_against_time_domain_quadrature (analysis.revision.test_inference.InferenceTests) ... ok\ntest_stationary_marked_trajectory_against_exact_joint_moments (analysis.revision.test_inference.InferenceTests) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.281s\n\nOK\n",
+  "source_sha256": {
+    "analysis/revision/inference.py": "772d47daf43b243bf5479fdc05d3e12dd4d5f955bb94d4c0790b943299b4db25",
+    "analysis/revision/test_inference.py": "6b02204b5a91f28560844d3d8e722ec2a8974304a0efe4a48da0713156a568ad",
+    "analysis/revision/STATISTICS.md": "88db047555c77d783d33786a0ff10432124a32f789829e5d62c2f0ad6c3769b6",
+    "analysis/revision/statistics-section.tex": "cdb595e97277a20cf8b6e700e54dd0c9d9e02d6a1599cfa2f1acd3ef34a6841a"
+  }
+}

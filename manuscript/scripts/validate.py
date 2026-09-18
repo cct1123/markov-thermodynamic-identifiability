@@ -9,15 +9,44 @@ import re
 ROOT = Path(__file__).resolve().parents[2]
 M = ROOT / 'manuscript'
 
+
+def validate_computational_manifest(manifest):
+    """Reject successful-looking receipts whose checked inputs have changed."""
+    assert manifest['all_checks_passed']
+    assert manifest['historical_outputs_unchanged']
+    assert manifest['replays'], 'No scientific replays recorded'
+    expected = {
+        'manuscript/scripts/reproduce.py': manifest['reproduction_script_sha256'],
+    }
+    for replay in manifest['replays']:
+        assert replay['assertions_passed'], replay['script']
+        assert replay['historical_scientific_payload_identical'], replay['script']
+        assert not replay['changed_scientific_paths'], replay['script']
+        expected[replay['script']] = replay['script_sha256']
+        expected[replay['historical_output']] = replay['historical_output_sha256']
+    cone = manifest['independent_cone_path_check']
+    assert cone['assertions_passed']
+    assert manifest['independent_three_state_check']['assertions_passed']
+    expected[cone['source']] = cone['source_sha256']
+    # Check both maps separately so an inconsistent replay hash cannot be
+    # hidden by an overlapping entry in historical_output_hashes.
+    for hashes in (expected, manifest['historical_output_hashes']):
+        for path, digest in hashes.items():
+            assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest() == digest, path
+    return len(set(expected) | set(manifest['historical_output_hashes']))
+
+
 def main():
-    tex_files = [M/'main.tex', M/'supplementary/proofs.tex']
+    if not __debug__:
+        raise SystemExit('Assertions must be enabled; do not use python -O.')
+    tex_files = [M/'main.tex', *sorted((M/'supplementary').glob('*.tex'))]
     sources = '\n'.join(p.read_text(encoding='utf-8') for p in tex_files)
     labels = re.findall(r'\\label\{([^}]+)\}', sources)
     assert len(labels) == len(set(labels)), 'duplicate LaTeX labels'
     references = re.findall(r'\\(?:eqref|ref)\{([^}]+)\}', sources)
     assert not set(references)-set(labels), set(references)-set(labels)
     bib = (M/'references.bib').read_text(encoding='utf-8')
-    keys = re.findall(r'@article\{([^,]+),', bib)
+    keys = re.findall(r'@(?:article|book|incollection|inproceedings|misc)\{([^,]+),', bib, re.I)
     assert len(keys) == len(set(keys))
     citations = {key.strip() for group in re.findall(r'\\cite\{([^}]+)\}', sources) for key in group.split(',')}
     assert citations == set(keys), {'unused': set(keys)-citations, 'missing': citations-set(keys)}
@@ -40,21 +69,33 @@ def main():
     assert all(build['validation'].values())
     manifest = json.loads((M/'supplementary/computational-results.json').read_text())
     # The computational manifest is preserved in full; its assertions were
-    # executed by reproduce.py. This validator only checks its source identity.
+    # executed by reproduce.py. Check the receipt and all recorded input hashes;
+    # this validates provenance without claiming to rerun those calculations.
+    scientific_hashes_checked = validate_computational_manifest(manifest)
     manuscript_md = [M/'README.md', ROOT/'analysis/manuscript-audit.md',
                      ROOT/'outputs/PUBLICATION-READINESS.md']
     links = []
+    outer_archive_links = []
     for p in manuscript_md:
         for target in re.findall(r'(?<!!)\[[^\]]*\]\(([^)]+)\)', p.read_text(encoding='utf-8')):
             if re.match(r'https?://|mailto:|#', target):
                 continue
             target = target.split('#')[0]
-            assert (p.parent/target).resolve().exists(), (p, target)
+            resolved = (p.parent/target).resolve()
+            # A delivered ZIP cannot contain itself. In a fresh extraction,
+            # permit only that specific link when the package manifest exists.
+            if (resolved == ROOT/'outputs/manuscript-package.zip'
+                    and not resolved.exists() and (ROOT/'PACKAGE-MANIFEST.json').is_file()):
+                outer_archive_links.append(target)
+                continue
+            assert resolved.exists(), (p, target)
             links.append(target)
     report = {'executed_at_utc': datetime.now(timezone.utc).isoformat(),
               'latex_labels': len(labels), 'latex_references': len(references),
               'verified_bibliography_entries_all_cited': len(keys),
               'python_sources_parsed': parsed, 'local_document_links_checked': len(links),
+              'outer_archive_links_recognized_in_extraction': outer_archive_links,
+              'scientific_input_hashes_checked': scientific_hashes_checked,
               'build_hashes_match': True, 'all_checks_passed': True,
               'scope': 'Source/package validation, not an independent proof or web-source verification.'}
     (M/'supplementary/package-validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')

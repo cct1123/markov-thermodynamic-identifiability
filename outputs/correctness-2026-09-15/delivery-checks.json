@@ -1,0 +1,12 @@
+{
+  "time_utc": "2026-09-15T14:25:38.317909+00:00",
+  "pdf_sha256": "3b72270f2043185f90983cf54e542ba46b0cd301d73542bc31768a27ee63720a",
+  "pages_rendered_and_visually_inspected": 55,
+  "rendering": "Poppler pdftoppm 85 dpi; all five contact sheets inspected, with full-size additional inspection of pages 21,27,43,47",
+  "layout_result": "No clipped equations, tables, figures, overlap, missing glyphs or unreadable labels observed. One initial overfull paragraph was repaired before this render.",
+  "source_build_validation": "Passed, all references/citations resolve; 31 cited bibliography entries; no overfull boxes.",
+  "tests": 28,
+  "workflow_jobs": 13,
+  "local_links_checked": 218,
+  "verification_scope": "Visual and structural QA, not proof verification. Final PDF hash matches the inspected render."
+}

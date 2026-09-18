@@ -1,0 +1,167 @@
+\section{Observation graphs and physical priors}\label{sec:graphpriors}
+
+\subsection{Coverage of microscopic vertices}
+Let $\mathcal O$ be a nonempty reverse-closed set of individually resolved
+microscopic transitions on a fixed, known vertex set $V$. Each observed
+transition has a positive rate and known endpoints. The observation graph
+has vertices $V$ and the undirected pairs underlying $\mathcal O$ as edges.
+A vertex is covered if it is incident to an observed edge; an uncovered
+vertex is fully hidden. Writing $E$ for the sum of observed jump matrices,
+we retain $T=Q-E$, $R_I=e_{\mathrm{dest}(I)}^T$, and
+$B_J=q_J e_{\mathrm{orig}(J)}$. The joint kernel is $Re^{Tt}B$.
+
+\begin{proposition}[Recovery under full vertex coverage]\label{prop:coverage}
+If every microscopic vertex is covered, two distinct positive Laplace
+arguments determine the generator uniquely on the declared vertex set,
+even when the observed rates are unknown. The inverse on admissible data
+is rational and locally Lipschitz. It is therefore locally Lipschitz in
+maximum row total variation and continuous under weak row-law convergence,
+without a common rate cap. One positive argument suffices if all observed
+rates are known.
+\end{proposition}
+\begin{proof}
+For each vertex $i$, choose an observed mark $I_i$ ending at $i$ and an
+observed mark $J_i$ beginning at $i$. Put $D=\diag(q_{J_i})$ and select
+the square submatrix $F(\lambda)_{ij}=\widehat\Psi_{I_i,J_j}(\lambda)$.
+Then
+\begin{equation}
+ F(\lambda)=(\lambda I-T)^{-1}D.
+\end{equation}
+For $M_k=F(\lambda_k)^{-1}$ and $\lambda_1\ne\lambda_2$,
+\begin{equation}
+ M_2-M_1=(\lambda_2-\lambda_1)D^{-1},\quad
+ D=(\lambda_2-\lambda_1)(M_2-M_1)^{-1},\quad
+ T=\lambda_1 I-DM_1.\label{eq:coverageinverse}
+\end{equation}
+For an additional observed mark $J$, let $f_J$ be its measured column
+restricted to rows $I_i$. The identity
+$(\lambda_1I-T)f_J=q_J e_{\mathrm{orig}(J)}$ recovers its rate.
+Thus $Q=T+E$ is determined. The inverses have nonzero denominators at
+every admissible source. They remain smooth in a neighborhood, and the
+Laplace measurements are bounded continuous tests of the row laws.
+When the observed rates are known, $D$ and $E$ are known and the last
+formula in~\eqref{eq:coverageinverse} needs only one argument.
+\end{proof}
+
+At a complete source, Proposition~\ref{prop:coverage} also gives a locally
+Lipschitz entropy inverse and a finite local upper ceiling. The same is
+true at an irreducible sparse source if competitors have the same known
+support. This condition requires fewer observations than all physical
+edges: observing $1\leftrightarrow2$ and $2\leftrightarrow3$ covers a
+complete three-state network while leaving $1\leftrightarrow3$ hidden.
+One unobserved reciprocal pair is therefore not sufficient for unbounded
+entropy inference.
+
+The support condition remains consequential. Start from the unit tree
+$1\leftrightarrow2\leftrightarrow3$ and observe both tree edges. Open
+the unobserved pair at rates $q_{13}=e$ and
+$q_{31}=\exp(-1/e^2)$, keeping all four old rates fixed. The generators
+and their joint row laws converge to the tree, whereas the new pair
+contributes $\sig\sim1/(3e)$. Full vertex coverage identifies every
+generator in the sequence but does not make entropy continuous across
+this newly opening support. This variant changes the trace by a
+vanishing amount; a trace-preserving version needs unobserved rate slack.
+
+At the other extreme, the existing hidden-pair construction applies
+whenever two vertices are uncovered: its similarity fixes every observed
+jump matrix, including when many edges are observed. Unknown support
+then allows unbounded entropy in every joint-kernel neighborhood at fixed
+dimension, observed rates and trace. These are two sufficient graph
+criteria; they do not exhaust arbitrary observation graphs with exactly
+one uncovered vertex. Nor do they extend directly to lumped states or
+blurred transition labels. A macrostate event need not reset to a known
+microscopic state, and consecutive waiting laws then need not determine
+the entire observed path law~\cite{SkinnerDunkel2021PNAS,Bruno2005,FritzSeifert2026}.
+
+\subsection{Kinetic and thermodynamic regularization}
+Let
+\begin{equation}
+ \mathcal K(Q)=\sum_i\pi_i\sum_{j\ne i}q_{ij},\qquad
+ a_{\max}(Q)=\max_{q_{ij}>0}\left|\log\frac{q_{ij}}{q_{ji}}\right|.
+\end{equation}
+Here $\mathcal K$ is the microscopic activity, in inverse-time units;
+$a_{\max}$ is dimensionless. Stationary cancellation gives the elementary
+bound $\sig\le\mathcal K a_{\max}$. A sharper established steady-state
+bound is~\cite{NishiyamaHasegawa2023}
+\begin{equation}
+ \sig(Q)\le\mathcal K(Q)a_{\max}(Q)
+           \tanh\!\left(\frac{a_{\max}(Q)}2\right).\label{eq:sharpprior}
+\end{equation}
+The right side is zero at $a_{\max}=0$. Thus an activity ceiling
+$\mathcal K\le K_0$ and an affinity ceiling $a_{\max}\le a_0$ give a
+uniform finite entropy bound. An observed-event activity ceiling is not
+by itself a ceiling on microscopic activity. If all supported rates lie
+between $m>0$ and $M$, then
+$\mathcal K\le(N-1)M$ and $a_{\max}\le\log(M/m)$; a fixed trace
+$-\tr Q=\tau$ also gives $\mathcal K\le\tau$.
+
+A rate ceiling alone fails by Proposition~\ref{prop:tree}. Conversely, an
+affinity ceiling alone does not control arbitrarily fast dissipative
+cycles. A rate floor alone also fails. In fact even a floor together with
+an activity ceiling is insufficient: take $q_{12}=c\ge1$ and all five
+other rates of a complete three-state chain equal to one. Direct
+stationary solution gives
+\begin{equation}
+ \pi=\left(\frac1{c+2},\frac{2c+1}{3(c+2)},\frac13\right),\quad
+ \mathcal K=\frac{3(c+1)}{c+2}<3,\quad
+ \sig=\frac{c-1}{3(c+2)}\log c\longrightarrow\infty.
+\end{equation}
+The fast rate acts at a rarely occupied state. These priors therefore
+control different quantities and cannot be interchanged.
+
+There is a separate continuity statement at the generator level. On a
+fixed connected support with $m\le q_{ij}\le M$, $Q\mapsto\sig(Q)$ is
+uniformly Lipschitz on the compact admissible class. With a fixed
+affinity bound, entropy is continuous under entrywise convergence to an
+irreducible generator even if reciprocal pairs disappear: contributions
+from pairs positive at the limit are smooth, and each disappearing
+directed term is bounded in magnitude by $a_0\pi_iq_{ij}\to0$.
+Locally the corresponding bounded-ratio cone even gives Lipschitz
+continuity, since the derivatives of $x\log(x/y)$ are bounded when
+$x/y$ stays in a compact positive interval. These conclusions concern
+the entropy functional. They do not imply generator identification or
+good conditioning of a partially observed inverse, and a compact
+parameter class alone need not make entropy single valued on an exact
+fiber. If entropy is identifiable throughout such a compact class, its
+induced function on the observed image is continuous by the compact
+quotient argument; a quantitative inverse bound still needs additional
+analysis.
+
+\subsection{Physical interpretation and measurement limitations}
+The theorems concern the stationary network entropy-production
+functional of an even-state CTMC with one channel per ordered pair.
+They require no specified reservoir realization. Interpretation as
+physical dissipation requires correctly resolved thermodynamic states
+and channels obeying local detailed balance~\cite{Esposito2012}.
+For a channel with intrinsic state entropies $s_i$, the rate ratio may
+take the form
+\begin{equation}
+ \log\frac{q_{ij}^{\alpha}}{q_{ji}^{\alpha}}
+ =\Delta s_{\mathrm{res}}^{\alpha}+s_j-s_i.
+\end{equation}
+At stationarity the mean state-entropy increment vanishes, so total and
+medium entropy-production rates agree with the usual environmental
+sign convention; their trajectory quantities differ by a boundary term.
+The generator alone does not determine a unique heat current or
+reservoir decomposition. Aggregating parallel channels can conceal
+additional physical dissipation even when all state transitions are seen.
+
+In the sparse-boundary construction, the vanishing reverse rate entails
+an unbounded edge rate affinity and hence an unbounded per-transition
+thermodynamic bias under local detailed balance. A fixed affinity prior
+excludes that limit. Rate ceilings and floors are kinetic assumptions;
+their ratio constrains the thermodynamic bias. A cycle affinity is the
+sum of edge rate affinities and is distinct from a bound on each edge.
+
+Finally, timestamp bins, missed events, uncertain endpoints and blurred
+labels require an explicit observation model. Finite timing resolution
+with every event retained is different from detector dead time; the
+former is the setting of the finite-resolution comparison in
+Ref.~\cite{FritzErtelSeifert2025}. A known noisy processing of the same
+records contracts total variation and cannot eliminate an existing
+indistinguishability obstruction. Such processing may also remove the
+reset structure needed for our reconstruction. For general coarse or
+semi-Markov observations, the time reverse must be induced from the
+microscopic experiment; a naive reversal can create spurious
+irreversibility when coarse-graining and time reversal do not
+commute~\cite{Blom2024,BiskerReply2024}.

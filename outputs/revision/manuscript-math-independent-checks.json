@@ -1,0 +1,131 @@
+{
+  "kind": "reproduced exact algebra and rigorous interval computation",
+  "time_utc": "2026-09-18T23:35:49.114362+00:00",
+  "command": ".venv/Scripts/python.exe -B analysis/manuscript-math-independent-check.py",
+  "environment": {
+    "python": "3.9.12",
+    "sympy": "1.14.0"
+  },
+  "script_sha256": "c13ebb957bd22313619b3a6e70a5777ddf35da33365a41cc3a3e3c2a67862f90",
+  "input_sha256": {
+    "analysis/balanced-cone-bound.md": "0ec3a676775a849833517cdb65e879800548be10f30f09c8c7a5af1418867c6f",
+    "analysis/theta-family-construction-audit.md": "748c2d46166375327e9b2180a4e37e8c992475e4288a3a82d7e5010d5b1c21a4",
+    "analysis/publication-stability-audit.md": "7f74783d32f7507bf0773fdca6d399844a0c3aa2a66895c73cd905a8fdadbb3f",
+    "analysis/entropy-neighborhood-audit.md": "fc78634ab4b3775f5878cbfeaa7fb7dd3cd0a21d7b552865f0a0b7198dee5c6c"
+  },
+  "method": "Exact symbolic identities; rational intervals rounded outward at 24 decimal places after each operation; shifted polynomial evaluation. No historical check imports, numerical grid, optimizer, or RNG.",
+  "root_interval": [
+    "527857483433/50000000000",
+    "1055714966867/100000000000"
+  ],
+  "sqrt6_interval": [
+    "612372435695794524549321/250000000000000000000000",
+    "489897948556635619639457/200000000000000000000000"
+  ],
+  "geometric_parameter_interval": [
+    "21/2",
+    "1055714966867/100000000000"
+  ],
+  "f_over_geometric_interval": [
+    [
+      "-520929/1000000",
+      "979493/500000"
+    ],
+    [
+      "1374127/250000",
+      "853029/125000"
+    ],
+    [
+      "-7249459/500000",
+      "-14094697/1000000"
+    ]
+  ],
+  "f_at_root_interval": [
+    [
+      "-520929/1000000",
+      "-16279/31250"
+    ],
+    [
+      "1374127/250000",
+      "5496509/1000000"
+    ],
+    [
+      "-7249459/500000",
+      "-14498917/1000000"
+    ]
+  ],
+  "strict_margins": {
+    "t": [
+      "47387/250000",
+      "121043/500000"
+    ],
+    "epsilon": [
+      "7123/125000",
+      "38243/500000"
+    ],
+    "1-epsilon": [
+      "461757/500000",
+      "117877/125000"
+    ],
+    "c-1": [
+      "145457/125000",
+      "630329/500000"
+    ],
+    "bottom-left-output": [
+      "41157/62500",
+      "681839/1000000"
+    ],
+    "right-right-output": [
+      "34383461/200000",
+      "24173023/100000"
+    ],
+    "B-above-left-lower": [
+      "4494217/500000",
+      "2272073/250000"
+    ],
+    "A-below-upper": [
+      "58014821/500000",
+      "8768171/50000"
+    ],
+    "left-origin": [
+      "7621/250000",
+      "39561/1000000"
+    ],
+    "right-origin": [
+      "62743147/500000",
+      "7153901/40000"
+    ],
+    "bottom-left-inward": [
+      "70719/1000000",
+      "47217/500000"
+    ],
+    "bottom-right-inward": [
+      "125526529/1000000",
+      "89451199/500000"
+    ]
+  },
+  "apex_margin": [
+    "14259/1000000",
+    "713/50000"
+  ],
+  "checks": {
+    "all_minimality_minors": true,
+    "quartic_discriminant": true,
+    "unique_positive_root": true,
+    "strict_cone_margins": true,
+    "simplified_balanced_covering": true,
+    "hidden_pair_shear": true,
+    "direct_three_laplace_inverse": true
+  },
+  "all_checks_passed": true,
+  "earlier_attempt": "First run stopped at a syntactic SymPy expression-equality assertion comparing factored and expanded identical polynomials. Replaced it by exact expanded-zero checks; no mathematical discrepancy.",
+  "limits": "Checks identities and interval signs. Global support exhaustion and divergence follow from the separately reviewed conventional proofs, not this script. Not formal verification.",
+  "replay": {
+    "command": "python -B analysis/revision/replay_independent.py",
+    "wrapper_sha256": "d29de3cebfc572019e2cd1ec781b26fe62cce0aca740ead56bd969a8f95ac3c5",
+    "historical_output_sha256": "3e4509ac9c325e30dc1d434e9f6c4e86ac01aefff6f4a856a52fc7620eeecfb9",
+    "historical_output_unchanged": true,
+    "scientific_payload_identical": true,
+    "method": "Execute the unchanged checker with only its receipt write intercepted; compare every output field except execution time against the accepted receipt."
+  }
+}

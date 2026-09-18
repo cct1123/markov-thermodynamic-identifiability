@@ -1,3 +1,7 @@
+## September 2026 scientific revision
+
+The [current revision report](../REVISION_NOTES.md) maps claims to proofs and checks. The 15 September [global proof repair](correctness/GLOBAL-INDEPENDENT.md), [two-point reconstruction](correctness/LAPLACE-TWO.md), [compact-prior proof](correctness/COMPACT-PRIORS.md) and [targeted primary comparison](correctness/PRIMARY-COMPARISON.md) supplement the retained [statistics](revision/STATISTICS.md), [rare-rate testing](revision/RARE-EVENT.md), [continuation](revision/CONTINUATION.md) and [graph results](revision/GRAPH-REGULARIZATION.md). Run `python -B reproduce_all.py` from the root. The earlier audit and entries below are dated provenance, not substitutes for the expanded current proof.
+
 # Reproducible analysis
 
 The recorded investigation uses exact derivations, small deterministic checks and bounded seeded discovery probes. Those results do not rely on graph enumeration or a general inference framework.

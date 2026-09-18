@@ -1,0 +1,154 @@
+\section{A transverse perturbation of the five-state feasibility boundary}\label{app:unfolding}
+The algebraic boundary of the balanced example is not destroyed by a small
+asymmetry of the fast hidden state's exits.  Define $Q(z,\delta)$ from
+Eq.~\eqref{eq:theta} by replacing its last row with
+\begin{equation}
+ (z+\delta,z-\delta,0,0,-2z),\qquad z>|\delta|.
+\end{equation}
+The hidden pole locations and output wedge remain fixed as $\delta$ varies;
+the fast-pole input residue changes.  This perturbation is neither a time
+rescaling nor a hidden permutation.
+
+\begin{proposition}[Local persistence of the feasibility transition]\label{prop:unfolding}
+In the reciprocal irreducible class with at most five states, there is a
+smooth critical curve $z_*(\delta)$ through $(\zs,0)$.  In a neighborhood of
+that point the compatible entropy fiber is unbounded for $z<z_*(\delta)$,
+has exactly two distinct finite values at $z=z_*(\delta)$, and has a unique
+generator for $z>z_*(\delta)$, up to hidden permutations.  The curve satisfies
+\begin{align}
+ \mathcal P_\delta(z)={}&\mathcal P(z)-(20160z+14112)\delta\nonumber\\
+ &-(352z^2-3168z+15768)\delta^2=0,\label{eq:perturbedP}\\
+ z_*'(0)={}&\frac{20160\zs+14112}{\mathcal P'(\zs)}
+ \simeq0.4650042.\label{eq:perturbedslope}
+\end{align}
+This is a local statement for the specified perturbation, not a generic
+classification of five-state networks.
+\end{proposition}
+
+\begin{proof}
+In Appendix~\ref{app:cone} replace only $A$ and $B_0$ by
+\begin{equation}
+ A=z+\delta,\qquad B_0=(z-\delta)/r_y.
+\end{equation}
+The other modal constants, the flow, and the wedge are unchanged.
+Minimality persists: one hidden reachability minor and the observability
+minor are
+\begin{align}
+ \det(Y_1,Y_2,HY_1)&=-9(4\delta z-19\delta+4z^2-9z),\\
+ \det\begin{pmatrix}X_{1,:}\\X_{2,:}\\(XH)_{2,:}\end{pmatrix}
+ &=-14(22z+19).
+\end{align}
+They remain nonzero near the critical point.  The disconnected-support
+argument is unchanged: the two fixed slow residues determine their pair,
+and the fast singleton has exits $(z+\delta,z-\delta)$.
+
+The envelope coefficients~\eqref{eq:fcoeff} were derived for independent
+input heights.  Their discriminant now obeys the exact identity
+\begin{equation}
+ \Delta(z,\delta):=f_1^2-4f_0f_2
+ =-\left(\frac{11}{1200}+\frac{11\sqrt6}{4200}\right)
+ \left(z+\frac{19}{22}\right)^2\frac{\mathcal P_\delta(z)}{352}.
+ \label{eq:perturbeddisc}
+\end{equation}
+For completeness, the accompanying rational interval certificate verifies
+the strict reductions and construction margins on the entire rectangle
+\begin{equation}
+ \mathcal R=[10.55,10.565]\times[-0.005,0.005].\label{eq:unfoldrect}
+\end{equation}
+In particular $A>B_0>2$, $a>7/10$,
+\begin{equation}
+ A-\frac{L}{a}\left[m+\frac{B_0+1}{R_w}\right]>6.691,
+ \qquad
+ \frac{L(m+1)}{L+R_w}-\frac1{k-R_w/A}>0.0182.
+\end{equation}
+These are uniform reductions for every candidate triangle: they exclude
+negative bottom abscissas and place the bottom to the right of the wedge
+apex.  The same envelope maximizations therefore apply to all connected
+supports.  The certificate also gives $-f_0>0.102$, $f_1>5.267$,
+$-f_2>14.445$, and strictly positive versions of every nonactive margin
+listed in Table~\ref{tab:margins}.  Its exact rational endpoints, rather
+than these shortened decimal summaries, establish the signs.
+
+Furthermore $\partial_z\mathcal P_\delta>486081$ on $\mathcal R$, and
+$\mathcal P_\delta$ has opposite signs at its two $z$ endpoints uniformly
+in $\delta$.  Thus each $|\delta|\le0.005$ has one critical root in the
+rectangle.  Nonzero $\partial_z\mathcal P_\delta$ gives a smooth root
+curve.  At $\delta=0$ this also follows from
+\begin{equation}
+ \mathcal P'(10+x)=1408x^3+32736x^2+223032x+353380>0
+ \quad(x\ge0),
+\end{equation}
+which proves~\eqref{eq:perturbedslope} without a floating-point rank test.
+
+Above the curve $\Delta<0$, so the envelope is negative everywhere and
+all connected supports are excluded.  At the curve its sole zero is
+$t_c=-f_1/(2f_2)>0$.  Equality fixes one triangle and its unique positive
+normalization.  The active input/output and tangent-face equalities
+delete the same three reciprocal pairs as in the balanced endpoint;
+the strictly positive remaining margins prove existence and positivity
+of all remaining rates.  Below the curve, $\Delta>0$ and
+$F(t_c)=-\Delta/(4f_2)>0$.  The three successive vertex changes in
+Appendix~\ref{app:subcritical} again give a complete positive realization.
+Its exact-law hidden-pair shear makes entropy unbounded.
+
+This proves the corresponding generator statements on $\mathcal R$.
+At the critical curve the source and the path have fixed reciprocal
+supports and strictly positive present rates, so their stationary laws
+and entropy rates depend continuously on $\delta$.  The strictly positive
+certified entropy gap at $\delta=0$ therefore remains positive in a
+possibly smaller neighborhood.  This establishes the stated two-value
+entropy assertion; the geometry certificate alone is not an interval
+certificate for that entropy gap on all of $\mathcal R$.
+\end{proof}
+
+The reduced boundary equation has the exact normal form
+\begin{equation}
+ F(t;z,\delta)=f_2(t-t_c)^2-\frac{\Delta}{4f_2},
+ \qquad t_c=-\frac{f_1}{2f_2},\quad f_2<0.\label{eq:foldnormal}
+\end{equation}
+Its two active-boundary path roots merge with square-root scaling as
+$\Delta\downarrow0$.  This is a nondegenerate fold of the boundary
+equation.  The full feasible set has a complete-realization continuum
+below the curve and the source persists on both sides; it is therefore
+not a saddle-node of two isolated positive realizations.  No conclusion
+about arbitrary perturbations of the source rates or hidden dimension
+follows from this one unfolding.
+
+\begin{figure*}[t]
+ \includegraphics[width=\textwidth]{figures/realization-geometry.pdf}
+ \caption{Geometry at the critical balanced parameter.  The invariant
+ triangle lies inside the output wedge and contains the two input points
+ (red).  The vertical coordinate has been rescaled by its maximum vertex
+ height; this invertible rescaling preserves incidences and invariance.
+ Panel (b) enlarges the input region.  Active input, output and tangent
+ constraints determine the reciprocal path realization.}
+ \label{fig:realizationgeometry}
+\end{figure*}
+
+\begin{figure*}[t]
+ \includegraphics[width=\textwidth]{figures/continuation.pdf}
+ \caption{Specified exit-asymmetry unfolding.  (a) Numerical continuation
+ of the boundary over $-0.5\le\delta\le0.5$; the narrow highlighted strip
+ is the range with the exact geometric certificate~\eqref{eq:unfoldrect}.
+ (b) Source and path entropy at the numerical boundary.
+ (c) The envelope numerator is nonnegative precisely between its two
+ boundary roots below the critical parameter.  The wider curves are
+ numerical diagnostics, not global off-balanced support exhaustion.}
+ \label{fig:continuation}
+\end{figure*}
+
+The deterministic continuation uses 41 $\delta$ nodes at spacing $0.025$,
+80-digit arithmetic, and offsets $z-z_*(\delta)=\pm0.001$.  At all these
+nodes it finds two, one, and zero admissible \emph{active-boundary path
+candidates} below, at, and above the curve.  These are not counts of all
+positive realizations outside the proved rectangle.  Complete positive
+realizations are separately constructed below each node.  The generator
+orbit Jacobian has numerical rank six, whereas the six active-zero
+constraint Jacobian has rank six on either path branch and rank five at
+their merger, using relative singular-value tolerance $10^{-10}$.
+Present critical rates remain above $0.1645$ in this grid.  Structural
+zeros are checked below $10^{-65}$ without clipping; exact all-time
+equality comes from the modal similarity identity.  Independent
+120-digit recomputation at $\delta=-0.5,0,0.5$, direct matrix-exponential
+checks, and the historical exact path-witness comparison are recorded
+with source hashes, commands, precision and all numerical outputs.

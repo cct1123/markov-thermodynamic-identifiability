@@ -1,0 +1,49 @@
+{
+  "time_utc": "2026-09-18T23:35:54.262811+00:00",
+  "command": "python -B analysis/correctness/mechanism.py",
+  "versions": {
+    "python": "3.9.12",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "source_sha256": "014f8282f1ec3466887b729f7f0ba49574e97d97267df0a3db9a8b9764796d2c",
+  "inputs": {
+    "explicit_generator": "Matrix([[-6, 1, 2 - 2*e, 2*e + 3], [2, -9, 3 - 3*e, 3*e + 4], [(4 - 6*e)/(1 - e), 5, -4*e - 15, (6 - 4*e**2)/(1 - e)], [6, 5, 4 - 4*e, 4*e - 15]])",
+    "parameter_domain": "0 <= e < 2/3",
+    "observed_marks": "x->y and y->x; known endpoints; full joint waiting kernels"
+  },
+  "exact_checks": {
+    "row_normalization": true,
+    "full_resolvent_equivalence": true,
+    "stationarity": true,
+    "single_vanishing_reverse_flux": true
+  },
+  "stationary_base": [
+    "557/1420",
+    "87/355",
+    "111/710",
+    "293/1420"
+  ],
+  "entropy_logarithmic_coefficient": "557/2130",
+  "numeric_check": "Independent 160-digit stationary LU and edge flux entropy; no rate clipping.",
+  "numeric_diagnostics": [
+    {
+      "delta_power": 10,
+      "entropy": "5.844290914103473729839408297627957455951537599116448956946628030948261540628925067581763825482276799",
+      "entropy_over_log": "0.2538143294632450153286589578223709819879935200503409348976106798235095129975953783671762313562388604"
+    },
+    {
+      "delta_power": 30,
+      "entropy": "17.88691905334605552099727490727957046182633831919512990739668573961109367061224288625312915369217851",
+      "entropy_over_log": "0.2589396747706109607290440495603190639827896143589508279595314052478830675441366698670947158511610268"
+    },
+    {
+      "delta_power": 60,
+      "entropy": "35.950861261764132225194757164461314648903568695374086035874735832714818885480442189747656367471225",
+      "entropy_over_log": "0.2602210110942256681579492548271805743673008479879610207705989698029272105701028808259743364508225067"
+    }
+  ],
+  "seed": null,
+  "scope": "Exact illustrative family plus flux-limit check, not exhaustive classification. General attainable half-line follows from the intermediate value theorem on the already proved divergent path.",
+  "all_checks_passed": true
+}

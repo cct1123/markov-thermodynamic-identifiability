@@ -17,7 +17,7 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parents[2]
 ROOT_FILES = {"AGENTS.md", "ARCHITECTURE.md", "PROJECT.md", "README.md", "STATE.md",
-              ".gitattributes", ".gitignore"}
+              ".gitattributes", ".gitignore", "reproduce_all.py", "REVISION_NOTES.md"}
 TREES = {"analysis", "docs", "evidence", "formal", "knowledge", "manuscript", "outputs"}
 SKIP_DIRS = {".git", ".venv", "venv", ".cache", ".browser-qa", "__pycache__", ".pytest_cache",
              ".mypy_cache", ".ruff_cache", ".lake", "node_modules", "tmp", "temp",
@@ -33,7 +33,15 @@ REQUIRED = {
     "manuscript/scripts/reproduce.py", "manuscript/scripts/check_table_bounds.py",
     "manuscript/scripts/package.py", "manuscript/supplementary/computational-results.json",
     "manuscript/supplementary/table-bound-checks.json", "manuscript/figures/balanced-fiber.pdf",
-    "manuscript/figures/three-state-instability.pdf",
+    "manuscript/figures/three-state-instability.pdf", "reproduce_all.py", "REVISION_NOTES.md",
+    "analysis/revision/inference.py", "analysis/revision/continuation.py",
+    "analysis/revision/rare_event.py", "outputs/revision/statistics.json",
+    "outputs/revision/continuation.json", "outputs/revision/rare-event.json",
+    "analysis/correctness/global_independent.py", "analysis/correctness/laplace_two.py",
+    "analysis/correctness/test_laplace_two.py", "analysis/correctness/mechanism.py",
+    "manuscript/supplementary/laplace-two.tex", "manuscript/supplementary/compact-priors.tex",
+    "manuscript/supplementary/moment-confidence.tex",
+    "outputs/correctness-2026-09-15/reproduction.json",
 }
 
 
@@ -104,7 +112,7 @@ def main():
                 "preserves_root_relative_paths": True,
                 "excluded": "Git metadata, environments, credentials/prompt history, caches, temporary/compiler binaries, auxiliary build files, duplicate manuscript PNG exports and QA page images",
                 "reproduction": ["python -m venv .venv", "python -m pip install -r analysis/requirements-research.txt",
-                                 "python -B manuscript/scripts/reproduce.py", "python -B manuscript/scripts/check_table_bounds.py"],
+                                 "python -B reproduce_all.py"],
                 "note": "Use the virtual environment's Python for package installation and reproduction; build instructions are in manuscript/README.md. Proof status is conventional plus exact computational support, not formal verification."}
     manifest_bytes = (json.dumps(manifest, indent=2)+"\n").encode("utf-8")
     destination.parent.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,25 @@
+{
+  "time_utc": "2026-09-15T14:29:21.537692+00:00",
+  "preflight_archive_sha256": "2df10286cdfbb783da34587ce303d61074079819188f10218e267bcd2d5502df",
+  "preflight_payloads_hash_verified": 288,
+  "fresh_directory": "tmp/correctness-fresh",
+  "fresh_run_manifest": "outputs/correctness-2026-09-15/archive-reproduction.json",
+  "all_13_jobs_passed": true,
+  "tests": 28,
+  "trajectory_replicates": 900,
+  "scientific_payloads_equal": [
+    "outputs/revision/statistics.json",
+    "outputs/revision/continuation.json",
+    "outputs/revision/rare-event.json",
+    "outputs/revision/graph-checks.json",
+    "outputs/correctness-2026-09-15/global-independent.json",
+    "outputs/correctness-2026-09-15/laplace-two.json",
+    "outputs/correctness-2026-09-15/mechanism.json"
+  ],
+  "comparison_rules": "Recursive equality of every field except execution timestamps (executed_at,executed_at_utc,time_utc) and duplicate historical stdout; actual root path normalized to {ROOT}. All retained structured scientific values, input/source hashes, ranks, fitted rates, entropy bounds, seeds, statuses and numerical diagnostics compared.",
+  "pdf_byte_identical": true,
+  "pdf_sha256": "3b72270f2043185f90983cf54e542ba46b0cd301d73542bc31768a27ee63720a",
+  "source_and_pdf_payloads_unchanged_since_replayed_preflight": 95,
+  "environment_limitation": "Reused the same installed Python environment and cached Tectonic bundle; no new platform or dependency installation was tested. Final archive is regenerated after receipt/document updates; all scientific code, TeX, bibliography and PDFs remain the replayed bytes.",
+  "all_checks_passed": true
+}

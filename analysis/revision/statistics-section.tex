@@ -1,0 +1,224 @@
+% First part belongs immediately after the three-state inverse theorem.
+\subsection{Conditioning of the three-state inverse}\label{subsec:conditioning}
+
+Local Lipschitz inversion is a pointwise statement. To quantify its constants,
+write $\theta=(r,s,a,c,b,d)$ and let $\phi(\theta)\in\mathbb R^{12}$ collect
+the joint transform entries at three distinct positive arguments. With
+$K_\lambda=(\lambda I-T)^{-1}$, its full six-rate derivative is
+\begin{equation}
+ \partial_j\widehat\Psi(\lambda)
+ =RK_\lambda(\partial_jT)K_\lambda B
+   +RK_\lambda(\partial_jB).\label{eq:transform-jacobian}
+\end{equation}
+The second term is essential when the observed rates $r,s$ are unknown.
+Absolute-rate errors are governed by $J_\theta=D\phi$, whereas relative-rate
+errors are governed by $J_{\log}=J_\theta\operatorname{diag}(\theta)$.
+These describe different inverse questions. Raw singular values carry time
+units; logarithmic coordinates are dimensionless in the fixed time convention.
+
+The rational inverse in Theorem~\ref{thm:inverse} has a derivative that is a
+left inverse of $J_\theta$. This remains true at an irreducible tree by
+continuity from the positive interior. Consequently the raw derivative has
+rank six there. Sparse limits need not make absolute-rate recovery ill
+conditioned. For example, at the unit tree and $\lambda=(0.2,1,5)$, its smallest
+singular value is approximately $0.00744$.
+
+For the family~\eqref{eq:treefamily}, fix $0<e<1/2$ and let $k\downarrow0$.
+The rational formulas also remain nonsingular at this irreducible one-way
+limit, although the limiting model itself is outside our reciprocal class.
+Thus $J_\theta$ converges to a full-rank matrix while
+\begin{equation}
+ s_{\min}(J_{\log})=\Theta(k),\qquad
+ \operatorname{cond}(J_{\log})=\Theta(k^{-1}).\label{eq:log-conditioning}
+\end{equation}
+Indeed $s_{\min}(J_\theta D)\ge s_{\min}(J_\theta)\min_jD_{jj}$ for
+$D=\operatorname{diag}(\theta)$, and testing the unit $b$ coordinate gives
+the matching upper bound. The other five rate coordinates stay positive,
+so the limiting nullspace of $J_{\log}$ is exactly the $b=k$ direction.
+Its weakest right singular vector converges to that direction, up to sign.
+Meanwhile $\partial_b\sig=-J_0(e)/b+O(\log(1/b))$, with
+$J_0(e)=e(1-e)/(3+e-e^2)>0$. Relative-rate and entropy sensitivity therefore
+diverge even where absolute-rate inversion remains regular.
+
+The choice of Laplace arguments also matters. As three distinct arguments
+coalesce, the limiting repeated transform matrix has at most four independent
+entries for six rates, so a singular value tends to zero. Arguments all tending
+to zero or infinity similarly lose informative variation. Hence ``any three
+distinct positive points'' guarantees exact recoverability, with no uniform
+conditioning guarantee over designs or sources.
+
+\begin{figure}[t]
+ \centering
+ \includegraphics[width=\textwidth]{figures/conditioning.pdf}
+ \caption{Conditioning of all six unknown three-state rates. (a) Log-rate
+ condition number for $(\lambda_1,\lambda_2,\lambda_3)=(c/v,c,cv)$ at
+ $(r,s,a,c,b,d)=(1.2,0.8,0.9,0.4,0.3,1.1)$; the horizontal $c$ denotes the
+ Laplace center, not the rate coordinate. Nearly coincident points and
+ inappropriate scales degrade inversion. (b) At fixed $e=0.2$ in
+ Eq.~\eqref{eq:treefamily}, the raw minimum singular value stays positive as
+ $k$ decreases, whereas its log-rate counterpart scales as $k$.
+ (c) The weakest log-rate direction tends to the reverse-rate coordinate
+ $b=k$. Panels (b,c) use $\lambda=(0.2,1,5)$. These unweighted Euclidean
+ diagnostics are not Fisher information; statistical noise must also be
+ considered.}\label{fig:conditioning}
+\end{figure}
+
+We compared all 165 triples from
+$\{0.025,0.05,0.1,0.2,0.5,1,2,5,10,20,40\}$ at the reference in
+Fig.~\ref{fig:conditioning}. The largest minimum log singular value occurs
+at $(0.2,0.5,5)$. The smallest oracle asymptotic entropy standard error for
+the moment estimator below instead occurs at $(0.025,10,20)$: its
+$\mathrm{SE}\sqrt n$ is $1.176$, compared with $1.238$ for $(0.2,1,5)$.
+The better entropy design has a worse Euclidean condition number.
+These are finite-grid comparisons at one reference, not universal optima.
+A practical starting point is a separated logarithmic triple spanning a
+pilot waiting-time scale, followed by a covariance-aware assessment of the
+target uncertainty. Design selection from the same data needs its own
+selection correction or an independent pilot.
+
+% SPLIT: CONSTRUCTIVE INFERENCE
+% Remaining part belongs in the finite-record section, after impossibility.
+\subsection{Constructive finite-data inference}\label{subsec:constructive-inference}
+
+The finite-record obstruction does not preclude useful pointwise inference
+at a well-resolved interior model. Here we estimate all six rates from the
+observed pair alone. Discard the censored interval before the first mark and
+record $n$ complete inter-mark intervals. This stops at a random horizon;
+it differs from the fixed-window experiment of Corollary~\ref{cor:confidence}.
+For incoming mark $I_m$ and outgoing mark $J_m$, the empirical joint moments are
+\begin{equation}
+ \widehat\mu_{I,jL}
+ =\frac1{n_I}\sum_{m:I_m=I}
+ e^{-\lambda_j\tau_m}\mathbf1\{J_m=L\},
+ \qquad n_I=\sum_m\mathbf1\{I_m=I\}.\label{eq:empirical-laplace}
+\end{equation}
+We fit all twelve moments by nonlinear least squares over six positive
+log-rate coordinates, calculate the stationary entropy of the fitted
+generator, and estimate uncertainty by a sandwich delta method.
+
+Successive mark rows are dependent. Nevertheless the centered row features
+\begin{equation}
+ Z_m^{(I)}=\mathbf1\{I_m=I\}(X_m-\mu_I),\qquad
+ X_m=(e^{-\lambda_j\tau_m}\mathbf1\{J_m=L\})_{j,L},
+\end{equation}
+are bounded martingale differences: the incoming mark resets the known
+microscopic state. Cross-time covariances vanish, and the two row blocks
+have disjoint indicators at a common time. At a fixed complete positive
+generator the bounded martingale central limit theorem and ergodicity give
+\begin{gather}
+ \sqrt n(\widehat\mu-\mu)\ \Rightarrow\ N(0,\Omega),\qquad
+ \Omega=\operatorname{blockdiag}(C_I/p_I),\label{eq:moment-clt}\\
+ p_+=\frac{\pi_xr}{\pi_xr+\pi_ys},\qquad p_-=1-p_+,\\
+ (C_I)_{jL,\ell M}
+ =\mathbf1\{L=M\}\widehat\Psi_{IL}(\lambda_j+\lambda_\ell)
+  -\widehat\Psi_{IL}(\lambda_j)\widehat\Psi_{IM}(\lambda_\ell).
+ \label{eq:moment-covariance}
+\end{gather}
+Replacing $C_I/(np_I)$ by the empirical within-row feature covariance divided
+by $n_I$ gives a consistent estimate $\widehat C$ of the moment covariance.
+This argument does not assume independent successive marks or independence
+conditional on the random row counts.
+
+For a consistent interior fit, let
+$A=(J_{\log}^T J_{\log})^{-1}J_{\log}^T$ and
+$g_{\log}=\operatorname{diag}(\theta)\nabla_\theta\sig$. The estimated
+entropy variance is
+\begin{equation}
+ \widehat V_\sig=g_{\log}^T A\widehat C A^Tg_{\log}.
+ \label{eq:entropy-delta}
+\end{equation}
+An SVD implementation avoids forming the squared-condition normal equations.
+The interval $\widehat\sig\pm1.96\sqrt{\widehat V_\sig}$, intersected with
+$[0,\infty)$, has only pointwise asymptotic justification at an interior
+nonequilibrium truth. At equilibrium the first entropy derivative vanishes;
+near a sparse boundary the approximation need not be accurate. A global
+moment minimizer on a fixed compact positive rate box is consistent by exact
+injectivity and uniform criterion convergence. Our multistart numerical
+optimizer is not a certificate of global minimization.
+
+For an explicit implementation we impose the numerical rate box
+$[10^{-14},20]$, use $\lambda=(0.2,1,5)$, three fixed starting points,
+analytic derivatives, and stopping tolerances $10^{-10}$. The box is a stated
+computational restriction, not physical evidence for a reverse-rate floor.
+We flag estimates at its boundary or with unresolved logarithmic rank.
+A separate practical warning suppresses a suggested interval if either
+same-mark count is below 20; this threshold is a heuristic, not a coverage
+theorem. It addresses a concrete failure: zero observed $++$ events give
+zero empirical variance for those moment features despite positive true
+variance when $b>0$.
+
+We simulated 100 independent stationary CTMC trajectories per model and
+sample size, for $n=500,5000,20000$. Only resolved marks and their times enter
+the fit. The interior model is $(1.2,0.8,0.9,0.4,0.3,1.1)$, with
+$\sig=0.20195$; the two sparse examples are $Q(0.2,0.01)$ and
+$Q(0.2,e^{-25})$, with entropies $0.13143$ and $1.17303$. All true rates
+exceed the numerical lower bound. Table~\ref{tab:finite-data} reports all
+point estimates, including boundary fits, and the raw delta calibration
+before the additional same-mark warning. Missing intervals are not counted
+as successful coverage.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{llrrrrr}
+\toprule
+Model & $n$ & Bias & Variance & RMSE & Interior & Covered\\
+\midrule
+Interior & 500 & $-0.00047$ & $0.00271$ & $0.0518$ & 100 & 95\\
+ & 5000 & $-0.00054$ & $0.000317$ & $0.0177$ & 100 & 96\\
+ & 20000 & $0.00098$ & $0.0000869$ & $0.00933$ & 100 & 93\\
+$b=0.01$ & 500 & $0.0977$ & $0.134$ & $0.378$ & 93 & 88\\
+ & 5000 & $0.00152$ & $0.000303$ & $0.0174$ & 100 & 94\\
+ & 20000 & $-0.00007$ & $0.0000620$ & $0.00783$ & 100 & 95\\
+$b=e^{-25}$ & 500 & $-0.336$ & $0.463$ & $0.756$ & 54 & 4\\
+ & 5000 & $-0.315$ & $0.371$ & $0.683$ & 55 & 9\\
+ & 20000 & $-0.227$ & $0.357$ & $0.637$ & 50 & 7\\
+\bottomrule
+\end{tabular}
+\caption{Monte Carlo inference from 100 trajectories in each cell. ``Interior''
+counts successful nonboundary fits with resolved logarithmic rank; ``Covered''
+counts their raw 95\% delta intervals containing the truth. Dividing by the
+interior count gives conditional coverage; dividing by 100 also penalizes
+missing intervals. For example, the last row has 14\% conditional coverage
+and 7\% covered-and-interior fraction. A Wilson 95\% interval for the Monte
+Carlo coverage is $[0.888,0.978]$ for 95/100 and $[0.0695,0.262]$ for 7/50.
+Bias and variance include every point estimate.}\label{tab:finite-data}
+\end{table}
+
+At the interior truth, 5000 records give 8.8\% relative entropy RMSE; 20000
+give 4.6\% and a median interval width of $0.0343$. The oracle asymptotic
+calculation predicts roughly $1.44\times10^4$ records for a 95\% half-width
+of 10\% of this entropy, which is a planning estimate rather than a
+finite-sample guarantee. At $b=0.01$, 20000 records give 6.0\% relative RMSE.
+All 900 selected optimizations converged, but this did not imply reliable
+entropy inference. For $b=e^{-25}$, 45--50\% of fits reach the lower floor
+and lose numerical rank; the remaining raw intervals have only 7--16\%
+conditional coverage. Every rare-case trajectory has zero microscopic
+$h\to x$ jumps and zero observed $++$ pairs. The former is a simulation
+diagnostic unavailable to inference; the latter suppresses all suggested
+intervals under the practical count warning. At 20000 records the median
+maximum fitted moment residual is only $5.8\times10^{-4}$, yet the entropy
+RMSE remains $0.64$. Small observable residuals do not establish accurate
+rare-rate or entropy estimates.
+
+\begin{figure}[t]
+ \centering
+ \includegraphics[width=\textwidth]{figures/finite-data.pdf}
+ \caption{Constructive inference and its failure near a sparse boundary.
+ Each point uses 100 actual CTMC trajectories with the parameters in
+ Table~\ref{tab:finite-data}. (a) Entropy RMSE includes boundary fits.
+ (b) Fraction of fits permitting an interior delta calculation.
+ (c) Raw interval coverage conditional on those fits, before the extra
+ rare-mark warning; the dashed line is 95\%. The rare-reverse case is
+ poorly calibrated even after numerical boundary exclusion. The
+ machine-readable output includes bias, variance, Wilson coverage intervals,
+ all fitted rates, event counts, optimization statuses, and deterministic
+ seeds.}\label{fig:finite-data}
+\end{figure}
+
+This pipeline demonstrates useful inference in regular examples and exposes
+its failure when a reverse rate is unresolved. It does not establish
+uniform finite-sample coverage, an efficient estimator, or an optimal
+sample-complexity exponent. Weighted moments or a full marked-trajectory
+likelihood can change efficiency, while honest upper uncertainty near the
+singular boundary still requires explicit additional information.

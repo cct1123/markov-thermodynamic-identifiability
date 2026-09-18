@@ -1,0 +1,16 @@
+{
+  "executed_at_utc": "2026-09-18T23:35:55.346176+00:00",
+  "command": "python -B analysis/revision/graph_checks.py",
+  "versions": {
+    "python": "3.9.12",
+    "sympy": "1.14.0"
+  },
+  "source_sha256": "61aa179aa7f81a3472a326c04e89b0eec72239dbef76e3c8bdff91ed97368cec",
+  "inputs": "embedded rational four-state covered graph with redundant observed marks; symbolic c>=1 example",
+  "arithmetic": "exact SymPy rational and symbolic; no tolerances or random seeds",
+  "checks": {
+    "covered_graph_inverse": true,
+    "stationary_floor_activity_counterexample": true
+  },
+  "scope": "Finite checks supplement conventional general proofs; not formal verification."
+}

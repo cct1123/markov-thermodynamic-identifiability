@@ -1,0 +1,31 @@
+{
+  "kind": "publication figure styling from saved scientific payload; no Monte Carlo rerun",
+  "executed_at_utc": "2026-09-14T19:50:30.544949+00:00",
+  "command": ".venv/Scripts/python.exe -B -m analysis.revision.inference --figures-only",
+  "input": "outputs\\revision\\statistics.json",
+  "input_sha256": "ae8e81543f7fd7031ffda02e72a3c87a9ba098b64d11ac58dbac41e188d8ae2e",
+  "original_payload_bytes_unchanged": true,
+  "script_sha256": "772d47daf43b243bf5479fdc05d3e12dd4d5f955bb94d4c0790b943299b4db25",
+  "environment": {
+    "python": "3.9.12",
+    "numpy": "2.0.1",
+    "scipy": "1.13.1",
+    "matplotlib": "3.9.4"
+  },
+  "style": {
+    "figure_inches": [
+      10.0,
+      3.6
+    ],
+    "font_points": 12,
+    "legend_points": 11,
+    "png_dpi": 250,
+    "pdf_creation_and_modification_dates": null
+  },
+  "artifact_sha256": {
+    "manuscript\\figures\\conditioning.pdf": "8f35636f242e7f973daf516735fd1a47ccb22d1d33e2d903736a498bc477af6a",
+    "manuscript\\figures\\conditioning.png": "327cfbfd5203f0d5eb3df1181474eb7463a610f737cb4e18534042a2bbb1ae0b",
+    "manuscript\\figures\\finite-data.pdf": "a261ed2bffcbad2df33e069e10150a12f04557561101300e1365093d6116558d",
+    "manuscript\\figures\\finite-data.png": "7e6f7d17197a984fb072dafaa43d1838a9dbf3c93b9fba9003b1a7272a19526a"
+  }
+}

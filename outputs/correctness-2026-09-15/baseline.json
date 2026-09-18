@@ -1,0 +1,32 @@
+{
+  "time_utc": "2026-09-15T13:59:44.266415+00:00",
+  "commit": "015bcd4c54c993f19ddf2841e852ca0f14b2f1d9",
+  "branch": "main",
+  "working_tree_before": " M README.md\n M STATE.md\n M analysis/README.md\n M evidence/RECORDS.md\n M manuscript/README.md\n M manuscript/figures/balanced-fiber.pdf\n M manuscript/figures/balanced-fiber.svg\n M manuscript/figures/three-state-instability.pdf\n M manuscript/figures/three-state-instability.svg\n M manuscript/main.bbl\n M manuscript/main.pdf\n M manuscript/main.tex\n M manuscript/references.bib\n M manuscript/scripts/README.md\n M manuscript/scripts/build.py\n M manuscript/scripts/package.py\n M manuscript/scripts/validate.py\n M manuscript/supplementary/build-report.json\n M manuscript/supplementary/computational-results.json\n M manuscript/supplementary/package-validation.json\n M manuscript/supplementary/proofs.tex\n M manuscript/supplementary/table-bound-checks.json\n M outputs/PUBLICATION-READINESS.md\n M outputs/REPORT.md\n M outputs/manuscript-package.zip\n?? REVISION_NOTES.md\n?? analysis/revision/\n?? manuscript/figures/conditioning.pdf\n?? manuscript/figures/conditioning.png\n?? manuscript/figures/continuation.pdf\n?? manuscript/figures/continuation.png\n?? manuscript/figures/continuation.svg\n?? manuscript/figures/finite-data.pdf\n?? manuscript/figures/finite-data.png\n?? manuscript/figures/realization-geometry.pdf\n?? manuscript/figures/realization-geometry.png\n?? manuscript/figures/realization-geometry.svg\n?? manuscript/supplementary/conditioning.tex\n?? manuscript/supplementary/continuation.tex\n?? manuscript/supplementary/inference.tex\n?? manuscript/supplementary/literature-comparison.tex\n?? manuscript/supplementary/observation-graph.tex\n?? manuscript/supplementary/rare-event.tex\n?? outputs/correctness-2026-09-15/\n?? outputs/revision/\n?? reproduce_all.py\n",
+  "files_sha256": {
+    "STATE.md": "73728e3f63088e620848011ee1a4b5bc1ff462105542eccd326223dde1740223",
+    "REVISION_NOTES.md": "fc49893f39bb5a26705dc33b133b5d4f3a20dd5e7b3c7a8b3940dee0b7de3743",
+    "README.md": "a75ecb4c62408d5066f3925cbdc03afdec5f016029aee809ea632978da704831",
+    "outputs/REPORT.md": "be33c9c66eb3da5e5c28171d311cdbcda3ed47d473f62f415addf39666413fc1",
+    "outputs/PUBLICATION-READINESS.md": "f2a0407670d572ba17a281f827feedc3930eb1b1f1ffe1e1f03edc4198ce6ea1",
+    "reproduce_all.py": "efbed45070da49c16e10791d74857b6c7d343d8b902243ee194dbc5cd993b6ef",
+    "analysis/revision/audit_repository.py": "6e95138d87d9c910be94637910aab798e37b2c72c98bae083dadcf1e1b4aea3f",
+    "manuscript/main.tex": "18aee56ef12e7ee9c040c685eb336cff15bc24213a9887f4b3ae49bdaf2460a7",
+    "manuscript/main.pdf": "7f4945b86fb2dbbeb27f1f748db5afff776a6666068d85ff2cee64abacec2f5e",
+    "manuscript/references.bib": "fca265578135bed026eb2d5313f3320d4d78b757ce7bb50fda92b9796d28ffd7",
+    "manuscript/README.md": "45bb1382c45606f44e6652e40a34522db723788cd817c955a685065e2ebb8c25",
+    "manuscript/supplementary/conditioning.tex": "d9a4e5f0c7fddfee1fe096c98524bdecdc519550326abc36c1a8bc0f0ed2319b",
+    "manuscript/supplementary/continuation.tex": "10b1b508047f392c30dfb83cd57ed3bb532d2cc1a47668f5eca4e2d5e75bba4a",
+    "manuscript/supplementary/inference.tex": "29e7f79914ca5eb1752af8e19ac11ccba5ac9b9b245c8b3c81c450825c1888db",
+    "manuscript/supplementary/literature-comparison.tex": "33f450589e2db5c63bc6e64943d84c0294ed73ac48f83e3990ee426765a3103e",
+    "manuscript/supplementary/observation-graph.tex": "75a1cab82ae2d5d5d737b1a3bd63f9b9b4e52d14b1214c1a39423edf704b0aa0",
+    "manuscript/supplementary/proofs.tex": "5a778d97773f6326f72d4eef8a6acb6ec40b503f500d2f63cefe628f1d9ef204",
+    "manuscript/supplementary/rare-event.tex": "39821b51e97270902bb42c19a630fa18f73078582418c4f2383be87f8d2c97d9",
+    "manuscript/scripts/build.py": "c526b3f603fee310e45a7e6dd5b1db74f2957350b72f304ce80f81ebd1c5a873",
+    "manuscript/scripts/check_table_bounds.py": "1ba6657dc734a84bedfc767abb89e3611ebf0479752d91793ea2920c03ae10c8",
+    "manuscript/scripts/package.py": "65b98f88d09db91f82d944b225583d3f058fe2d6362eb6595aedf75ea958d739",
+    "manuscript/scripts/reproduce.py": "c27f1e09b619c2dc70cd45131ec76612a9eacd91ca183a14b9d6c33aee691adf",
+    "manuscript/scripts/validate.py": "111e4e1e132a51689fe6e57c00092e3fe16b7a5ea1b7ed984021fb27a23dcfe6"
+  },
+  "scope": "Preserve working-tree Sept14 revision before Sept15 correctness work; prior reviews are leads, not authoritative proofs."
+}

@@ -1,5 +1,5 @@
 {
-  "executed_at_utc": "2026-09-11T02:36:46.772899+00:00",
+  "executed_at_utc": "2026-09-18T23:35:45.534762+00:00",
   "command_from_root": ".venv/Scripts/python.exe -B manuscript/scripts/reproduce.py",
   "environment": {
     "python": "3.9.12",
@@ -17,14 +17,14 @@
     {
       "script": "analysis/check_small_networks.py",
       "script_sha256": "1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6",
-      "elapsed_seconds": 0.749,
+      "elapsed_seconds": 0.368,
       "historical_output": "analysis/small-network-checks.json",
       "historical_output_sha256": "4ef422eb6703f043f52210363d0ac77b90b209b1345ffa2e2ba8bc4604af31b3",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-11T02:36:00.602174+00:00",
+        "executed_at": "2026-09-18T23:35:12.510773+00:00",
         "environment": {
           "python": "3.9.12",
           "numpy": "2.0.1",
@@ -158,19 +158,19 @@
         },
         "limitation": "Finite checks validate the artifacts; all-time equality, minimality, and unboundedness rely on the accompanying exact arguments. No exhaustive topology search or novelty claim."
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-11T02:36:00.602174+00:00\",\n  \"environment\": {\n    \"python\": \"3.9.12\",\n    \"numpy\": \"2.0.1\",\n    \"scipy\": \"1.13.1\",\n    \"platform\": \"Windows-10-10.0.22631-SP0\"\n  },\n  \"script_sha256\": \"1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6\",\n  \"inputs\": \"Exact rational rates embedded in this script; no random sampling.\",\n  \"checks\": {\n    \"three_state_cases\": 4,\n    \"two_state_case\": true,\n    \"lumped_exact_derivative_orders\": [\n      0,\n      6\n    ],\n    \"minimal_exact_derivative_orders\": [\n      0,\n      7\n    ],\n    \"controllability_rank\": 4,\n    \"observability_rank\": 4,\n    \"numerical_time_grid_points\": 66,\n    \"negative_controls\": 2\n  },\n  \"generator_negative_controls\": {\n    \"disconnected_positive_stationary_rejected\": true\n  },\n  \"lumpable_family\": [\n    {\n      \"u\": \"1\",\n      \"entropy\": 0.0\n    },\n    {\n      \"u\": \"1/2\",\n      \"entropy\": 0.06866326804175685\n    },\n    {\n      \"u\": \"1/10\",\n      \"entropy\": 0.33124938515622454\n    },\n    {\n      \"u\": \"1/1000\",\n      \"entropy\": 0.9491002415207374\n    }\n  ],\n  \"minimal_family\": [\n    {\n      \"parameter\": \"0\",\n      \"entropy\": 0.0,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 0.0,\n      \"mean_interevent_time\": 2.0,\n      \"vanishing_reverse_rate\": \"2\",\n      \"opposing_flux\": \"1/2\"\n    },\n    {\n      \"parameter\": \"1/4\",\n      \"entropy\": 0.07712723934029189,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 4.0245584642661925e-16,\n      \"mean_interevent_time\": 2.000000000000001,\n      \"vanishing_reverse_rate\": \"5/3\",\n      \"opposing_flux\": \"3/8\"\n    },\n    {\n      \"parameter\": \"1/2\",\n      \"entropy\": 0.35777511011618357,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 3.0531133177191805e-16,\n      \"mean_interevent_time\": 1.9999999999999996,\n      \"vanishing_reverse_rate\": \"1\",\n      \"opposing_flux\": \"1/4\"\n    },\n    {\n      \"parameter\": \"1997/3000\",\n      \"entropy\": 1.4584195539439502,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 3.3306690738754696e-16,\n      \"mean_interevent_time\": 2.0,\n      \"vanishing_reverse_rate\": \"9/1003\",\n      \"opposing_flux\": \"1003/6000\"\n    },\n    {\n      \"parameter\": \"1999997/3000000\",\n      \"entropy\": 2.613097152847446,\n      \"formula_residual\": 8.881784197001252e-16,\n      \"maximum_kernel_residual\": 2.498001805406602e-16,\n      \"mean_interevent_time\": 2.0000000000000013,\n      \"vanishing_reverse_rate\": \"9/1000003\",\n      \"opposing_flux\": \"1000003/6000000\"\n    },\n    {\n      \"parameter\": \"1999999999997/3000000000000\",\n      \"entropy\": 4.915687369247452,\n      \"formula_residual\": 8.881784197001252e-16,\n      \"maximum_kernel_residual\": 2.3592239273284576e-16,\n      \"mean_interevent_time\": 1.9999999999999964,\n      \"vanishing_reverse_rate\": \"9/1000000000003\",\n      \"opposing_flux\": \"1000000000003/6000000000000\"\n    }\n  ],\n  \"fixed_diamond\": {\n    \"distinct_escape_rates\": [\n      4,\n      3\n    ],\n    \"identifiable_example_entropy\": 0.019682772238260413,\n    \"repeated_escape_family\": [\n      {\n        \"parameter\": \"0\",\n        \"entropy\": 0.0,\n        \"vanishing_reverse_rate\": \"1\"\n      },\n      {\n        \"parameter\": \"1/4\",\n        \"entropy\": 0.05295611627420023,\n        \"vanishing_reverse_rate\": \"2/3\"\n      },\n      {\n        \"parameter\": \"499/1000\",\n        \"entropy\": 0.7980252110110211,\n        \"vanishing_reverse_rate\": \"2/501\"\n      },\n      {\n        \"parameter\": \"499999999/1000000000\",\n        \"entropy\": 2.5265550216027757,\n        \"vanishing_reverse_rate\": \"2/500000001\"\n      }\n    ],\n    \"general_equal_escape_factorizations_checked\": 2\n  },\n  \"limitation\": \"Finite checks validate the artifacts; all-time equality, minimality, and unboundedness rely on the accompanying exact arguments. No exhaustive topology search or novelty claim.\"\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:35:12.510773+00:00\",\n  \"environment\": {\n    \"python\": \"3.9.12\",\n    \"numpy\": \"2.0.1\",\n    \"scipy\": \"1.13.1\",\n    \"platform\": \"Windows-10-10.0.22631-SP0\"\n  },\n  \"script_sha256\": \"1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6\",\n  \"inputs\": \"Exact rational rates embedded in this script; no random sampling.\",\n  \"checks\": {\n    \"three_state_cases\": 4,\n    \"two_state_case\": true,\n    \"lumped_exact_derivative_orders\": [\n      0,\n      6\n    ],\n    \"minimal_exact_derivative_orders\": [\n      0,\n      7\n    ],\n    \"controllability_rank\": 4,\n    \"observability_rank\": 4,\n    \"numerical_time_grid_points\": 66,\n    \"negative_controls\": 2\n  },\n  \"generator_negative_controls\": {\n    \"disconnected_positive_stationary_rejected\": true\n  },\n  \"lumpable_family\": [\n    {\n      \"u\": \"1\",\n      \"entropy\": 0.0\n    },\n    {\n      \"u\": \"1/2\",\n      \"entropy\": 0.06866326804175685\n    },\n    {\n      \"u\": \"1/10\",\n      \"entropy\": 0.33124938515622454\n    },\n    {\n      \"u\": \"1/1000\",\n      \"entropy\": 0.9491002415207374\n    }\n  ],\n  \"minimal_family\": [\n    {\n      \"parameter\": \"0\",\n      \"entropy\": 0.0,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 0.0,\n      \"mean_interevent_time\": 2.0,\n      \"vanishing_reverse_rate\": \"2\",\n      \"opposing_flux\": \"1/2\"\n    },\n    {\n      \"parameter\": \"1/4\",\n      \"entropy\": 0.07712723934029189,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 4.0245584642661925e-16,\n      \"mean_interevent_time\": 2.000000000000001,\n      \"vanishing_reverse_rate\": \"5/3\",\n      \"opposing_flux\": \"3/8\"\n    },\n    {\n      \"parameter\": \"1/2\",\n      \"entropy\": 0.35777511011618357,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 3.0531133177191805e-16,\n      \"mean_interevent_time\": 1.9999999999999996,\n      \"vanishing_reverse_rate\": \"1\",\n      \"opposing_flux\": \"1/4\"\n    },\n    {\n      \"parameter\": \"1997/3000\",\n      \"entropy\": 1.4584195539439502,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 3.3306690738754696e-16,\n      \"mean_interevent_time\": 2.0,\n      \"vanishing_reverse_rate\": \"9/1003\",\n      \"opposing_flux\": \"1003/6000\"\n    },\n    {\n      \"parameter\": \"1999997/3000000\",\n      \"entropy\": 2.613097152847446,\n      \"formula_residual\": 8.881784197001252e-16,\n      \"maximum_kernel_residual\": 2.498001805406602e-16,\n      \"mean_interevent_time\": 2.0000000000000013,\n      \"vanishing_reverse_rate\": \"9/1000003\",\n      \"opposing_flux\": \"1000003/6000000\"\n    },\n    {\n      \"parameter\": \"1999999999997/3000000000000\",\n      \"entropy\": 4.915687369247452,\n      \"formula_residual\": 8.881784197001252e-16,\n      \"maximum_kernel_residual\": 2.3592239273284576e-16,\n      \"mean_interevent_time\": 1.9999999999999964,\n      \"vanishing_reverse_rate\": \"9/1000000000003\",\n      \"opposing_flux\": \"1000000000003/6000000000000\"\n    }\n  ],\n  \"fixed_diamond\": {\n    \"distinct_escape_rates\": [\n      4,\n      3\n    ],\n    \"identifiable_example_entropy\": 0.019682772238260413,\n    \"repeated_escape_family\": [\n      {\n        \"parameter\": \"0\",\n        \"entropy\": 0.0,\n        \"vanishing_reverse_rate\": \"1\"\n      },\n      {\n        \"parameter\": \"1/4\",\n        \"entropy\": 0.05295611627420023,\n        \"vanishing_reverse_rate\": \"2/3\"\n      },\n      {\n        \"parameter\": \"499/1000\",\n        \"entropy\": 0.7980252110110211,\n        \"vanishing_reverse_rate\": \"2/501\"\n      },\n      {\n        \"parameter\": \"499999999/1000000000\",\n        \"entropy\": 2.5265550216027757,\n        \"vanishing_reverse_rate\": \"2/500000001\"\n      }\n    ],\n    \"general_equal_escape_factorizations_checked\": 2\n  },\n  \"limitation\": \"Finite checks validate the artifacts; all-time equality, minimality, and unboundedness rely on the accompanying exact arguments. No exhaustive topology search or novelty claim.\"\n}\n"
     },
     {
       "script": "analysis/check_four_state_classification.py",
       "script_sha256": "cbcc7efb6b46623574758af2706de3249419eca99112203fdc1c50ecb34d3d2c",
-      "elapsed_seconds": 0.55,
+      "elapsed_seconds": 0.497,
       "historical_output": "analysis/four-state-classification-checks.json",
       "historical_output_sha256": "6f7b1a3ba9d9cbfada2d4fbd91c2b5d0c5f0886c4bf6c92779349405016de74b",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-11T02:36:01.181978+00:00",
+        "executed_at": "2026-09-18T23:35:13.029345+00:00",
         "environment": {
           "python": "3.9.12",
           "numpy": "2.0.1",
@@ -774,19 +774,19 @@
         ],
         "limitation": "Representative exact and numerical checks; theorem coverage comes from the proofs, not sampling. Novelty unestablished."
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-11T02:36:01.181978+00:00\",\n  \"boundary_witnesses\": 3,\n  \"support_openings\": 5,\n  \"unique_grid_models\": 2,\n  \"maximum_kernel_residual\": 2.498001805406602e-16,\n  \"nonminimal_ranks\": [\n    3,\n    4\n  ]\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:35:13.029345+00:00\",\n  \"boundary_witnesses\": 3,\n  \"support_openings\": 5,\n  \"unique_grid_models\": 2,\n  \"maximum_kernel_residual\": 2.498001805406602e-16,\n  \"nonminimal_ranks\": [\n    3,\n    4\n  ]\n}\n"
     },
     {
       "script": "analysis/check_observable_criterion.py",
       "script_sha256": "40af86e70e5f3a522d8f2a92196a13e59879b706694a5b84a965c625012af51b",
-      "elapsed_seconds": 0.041,
+      "elapsed_seconds": 0.04,
       "historical_output": "analysis/observable-criterion-checks.json",
       "historical_output_sha256": "c07ab47ce215664b681c2de2ebf57b534ff934284b6dad0b934e2b83ce7842a5",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-11T02:36:01.223794+00:00",
+        "executed_at": "2026-09-18T23:35:13.062804+00:00",
         "environment": {
           "python": "3.9.12",
           "numpy": "2.0.1",
@@ -1118,19 +1118,19 @@
         ],
         "limitation": "Representative algebraic checks; general coverage uses the analytic classification, not enumeration."
       },
-      "stdout": "{\n  \"cases\": 9,\n  \"reconstructed\": 4,\n  \"executed_at\": \"2026-09-11T02:36:01.223794+00:00\",\n  \"all_checks_passed\": true\n}\n"
+      "stdout": "{\n  \"cases\": 9,\n  \"reconstructed\": 4,\n  \"executed_at\": \"2026-09-18T23:35:13.062804+00:00\",\n  \"all_checks_passed\": true\n}\n"
     },
     {
       "script": "analysis/check_state_splitting.py",
       "script_sha256": "9d925a943330513022a690111761336ff9cb2835916a026405a373a96653bc27",
-      "elapsed_seconds": 0.042,
+      "elapsed_seconds": 0.035,
       "historical_output": "analysis/state-splitting-checks.json",
       "historical_output_sha256": "b1ec22a909cebd4b3ce536162eb992d8a6363b5819f905a425d54d777eb29692",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-11T02:36:01.265244+00:00",
+        "executed_at": "2026-09-18T23:35:13.094375+00:00",
         "environment": {
           "python": "3.9.12",
           "numpy": "2.0.1",
@@ -1330,19 +1330,19 @@
         ],
         "limitation": "Exact representative intertwining and derivative certificates; general coverage and divergence use the proofs. Novelty unestablished."
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-11T02:36:01.265244+00:00\",\n  \"state_split_counts\": [\n    4,\n    5\n  ],\n  \"split_log_coefficient\": \"11/60\",\n  \"nonminimal_families\": 2,\n  \"all_checks_passed\": true\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:35:13.094375+00:00\",\n  \"state_split_counts\": [\n    4,\n    5\n  ],\n  \"split_log_coefficient\": \"11/60\",\n  \"nonminimal_families\": 2,\n  \"all_checks_passed\": true\n}\n"
     },
     {
       "script": "analysis/check_five_state_extensions.py",
       "script_sha256": "4f5ba7179e1af63f2115fbfb6bf98d672d6e8105a4730e8ef58c873c2ab0368d",
-      "elapsed_seconds": 0.218,
+      "elapsed_seconds": 0.198,
       "historical_output": "analysis/five-state-extension-checks.json",
       "historical_output_sha256": "1c1e70b6e7449bd4d98eb1b9e49ae40ab5b47bdf2cb52faeec313b3f61f0f534",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-11T02:36:01.427855+00:00",
+        "executed_at": "2026-09-18T23:35:13.256109+00:00",
         "environment": {
           "python": "3.9.12",
           "numpy": "2.0.1",
@@ -1873,19 +1873,19 @@
         "correction": "The initial unsaved probe used eigvalsh on a nonsymmetric hidden block. This diagnostic was corrected to eigvals; exact tangent matrices and LP results were unaffected.",
         "limitation": "General results use the linked proofs; no full five-state classification or novelty claim."
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-11T02:36:01.427855+00:00\",\n  \"all_checks_passed\": true,\n  \"cycle_state_counts\": [\n    5,\n    6\n  ],\n  \"isolated_tangent_rank\": 6,\n  \"exact_complete_graph_opening\": true\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:35:13.256109+00:00\",\n  \"all_checks_passed\": true,\n  \"cycle_state_counts\": [\n    5,\n    6\n  ],\n  \"isolated_tangent_rank\": 6,\n  \"exact_complete_graph_opening\": true\n}\n"
     },
     {
       "script": "analysis/check_theta_residue_construction.py",
       "script_sha256": "df7d9a893580d489ae94902b42e15337560d6926c6a50f681ec2fda9b4347b34",
-      "elapsed_seconds": 0.549,
+      "elapsed_seconds": 0.468,
       "historical_output": "outputs/theta-residue-checks.json",
       "historical_output_sha256": "f78a4fd3d319e7aaf221cfb2cb66e8967ec12da4f2f3e164a9b56b0316cb966f",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-11T02:36:02.024760+00:00",
+        "executed_at": "2026-09-18T23:35:13.768427+00:00",
         "environment": {
           "python": "3.9.12",
           "platform": "Windows-10-10.0.22631-SP0",
@@ -5215,19 +5215,19 @@
         "scope": "Exact representative validation of the stated residue construction. No full theta-plane or topology classification and no novelty claim.",
         "all_checks_passed": true
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-11T02:36:02.024760+00:00\",\n  \"all_checks_passed\": true,\n  \"cases\": [\n    {\n      \"name\": \"theta_3_3\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.04282448455937082,\n      \"candidate_entropy\": 0.3723131576586089\n    },\n    {\n      \"name\": \"slow_coincidence_minimal\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.4478132174907096,\n      \"candidate_entropy\": 3.7079822887045046\n    },\n    {\n      \"name\": \"exceptional_nonminimal\",\n      \"ranks\": {\n        \"controllability\": 4,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.06476235202450442,\n      \"candidate_entropy\": 0.37922089521223074\n    },\n    {\n      \"name\": \"fast_coincidence\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.8521473750593244,\n      \"candidate_entropy\": 1.70355394813969\n    },\n    {\n      \"name\": \"slow_line_outside_direct_region\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 1.8918506114907785,\n      \"candidate_entropy\": 2.2605179000694475\n    }\n  ],\n  \"output\": \"C:\\\\projects\\\\markov-thermodynamic-identifiability\\\\outputs\\\\theta-residue-checks.json\"\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:35:13.768427+00:00\",\n  \"all_checks_passed\": true,\n  \"cases\": [\n    {\n      \"name\": \"theta_3_3\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.04282448455937082,\n      \"candidate_entropy\": 0.3723131576586089\n    },\n    {\n      \"name\": \"slow_coincidence_minimal\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.4478132174907096,\n      \"candidate_entropy\": 3.7079822887045046\n    },\n    {\n      \"name\": \"exceptional_nonminimal\",\n      \"ranks\": {\n        \"controllability\": 4,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.06476235202450442,\n      \"candidate_entropy\": 0.37922089521223074\n    },\n    {\n      \"name\": \"fast_coincidence\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.8521473750593244,\n      \"candidate_entropy\": 1.70355394813969\n    },\n    {\n      \"name\": \"slow_line_outside_direct_region\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 1.8918506114907785,\n      \"candidate_entropy\": 2.2605179000694475\n    }\n  ],\n  \"output\": \"C:\\\\projects\\\\markov-thermodynamic-identifiability\\\\outputs\\\\theta-residue-checks.json\"\n}\n"
     },
     {
       "script": "analysis/check_theta_fast_spectral.py",
       "script_sha256": "192c0c5a37bdd40bf665f6346b639e02ad92cdd424010658d54afde5067c6c9b",
-      "elapsed_seconds": 0.12,
+      "elapsed_seconds": 0.105,
       "historical_output": "outputs/check_theta_fast_spectral.json",
       "historical_output_sha256": "1272bad18cee1b07f53c12542f50e333311a43436fc10351ae4194f4d8dbc19c",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-11T02:36:02.151545+00:00",
+        "executed_at": "2026-09-18T23:35:13.877484+00:00",
         "environment": {
           "python": "3.9.12",
           "platform": "Windows-10-10.0.22631-SP0",
@@ -5954,19 +5954,19 @@
         "scope": "Exact arithmetic support for the analytic invariant-triangle exclusion; no finite sampling or optimizer-based nonexistence claim.",
         "all_exact_checks_passed": true
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-11T02:36:02.151545+00:00\",\n  \"all_exact_checks_passed\": true,\n  \"balanced_rates\": [\n    100,\n    40\n  ],\n  \"output\": \"C:\\\\projects\\\\markov-thermodynamic-identifiability\\\\outputs\\\\check_theta_fast_spectral.json\"\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:35:13.877484+00:00\",\n  \"all_exact_checks_passed\": true,\n  \"balanced_rates\": [\n    100,\n    40\n  ],\n  \"output\": \"C:\\\\projects\\\\markov-thermodynamic-identifiability\\\\outputs\\\\check_theta_fast_spectral.json\"\n}\n"
     },
     {
       "script": "analysis/check_balanced_boundary_witness.py",
       "script_sha256": "5f21e13a8268273fdc2b3a937fed2f078a6736beb02cd7f19c9ad75ec675aa15",
-      "elapsed_seconds": 0.453,
+      "elapsed_seconds": 0.396,
       "historical_output": "outputs/balanced-boundary-witness.json",
       "historical_output_sha256": "c917b0bf18ea1bee01b04b1e24b8d130ca76c653bbde3512591213d9b66548e9",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "created_utc": "2026-09-11T02:36:02.277888+00:00",
+        "created_utc": "2026-09-18T23:35:13.979614+00:00",
         "command": ".\\.venv\\Scripts\\python.exe -B analysis/check_balanced_boundary_witness.py",
         "environment": {
           "python": "3.9.12",
@@ -6426,7 +6426,7 @@
     {
       "script": "analysis/derive_balanced_path.py",
       "script_sha256": "4fc6839878d804990cfa4a8bfa2346cf8fbf395d9967d33f277b0693310243a5",
-      "elapsed_seconds": 31.105,
+      "elapsed_seconds": 28.245,
       "historical_output": "analysis/balanced-path-polynomial.json",
       "historical_output_sha256": "975783f31653c189e9aeb45926cb2777841d28c6b61e16a210fe3658f60d2473",
       "assertions_passed": true,
@@ -6434,7 +6434,7 @@
       "changed_scientific_paths": [],
       "captured_result": {
         "kind": "exact symbolic necessary path equation, no global exclusion",
-        "executed_at_utc": "2026-09-11T02:36:33.691489+00:00",
+        "executed_at_utc": "2026-09-18T23:35:42.494184+00:00",
         "python": "3.9.12",
         "sympy": "1.14.0",
         "script_sha256": "4fc6839878d804990cfa4a8bfa2346cf8fbf395d9967d33f277b0693310243a5",
@@ -6459,14 +6459,14 @@
     {
       "script": "analysis/check_balanced_cone_bound.py",
       "script_sha256": "f1247b3f17f9b3f641c3d041500009acce74e721ee2aa1cf316517afbadf2c9b",
-      "elapsed_seconds": 0.91,
+      "elapsed_seconds": 0.818,
       "historical_output": "analysis/balanced-cone-bound-checks.json",
       "historical_output_sha256": "52bba21fdf8dfb301948a0c14341019564a1a4577c41b5a77fcc89f7878c028d",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-11T02:36:34.616801+00:00",
+        "executed_at": "2026-09-18T23:35:43.329604+00:00",
         "command_from_root": ".\\.venv\\Scripts\\python.exe -B analysis/check_balanced_cone_bound.py",
         "environment": {
           "python": "3.9.12",
@@ -6587,14 +6587,14 @@
     {
       "script": "analysis/check_balanced_cone_sufficiency.py",
       "script_sha256": "0d27522282f0012ecc76ec3b82b68f5946c7e5d05a8a91c99937303fb23e1e2e",
-      "elapsed_seconds": 0.311,
+      "elapsed_seconds": 0.275,
       "historical_output": "analysis/balanced-cone-sufficiency-checks.json",
       "historical_output_sha256": "d6553877a337062fced350922eacbfaa31dcdacfa7360ae85c01a8edf1ed3fe9",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-11T02:36:34.932787+00:00",
+        "executed_at": "2026-09-18T23:35:43.611186+00:00",
         "command_from_root": ".\\.venv\\Scripts\\python.exe -B analysis/check_balanced_cone_sufficiency.py",
         "environment": {
           "python": "3.9.12",
@@ -6863,7 +6863,7 @@
     {
       "script": "analysis/check_balanced_fold.py",
       "script_sha256": "74ea7faa7caa6ad20f0df0ce2ba16b197a283a79d4e058639a04a657a2f02c81",
-      "elapsed_seconds": 0.691,
+      "elapsed_seconds": 0.584,
       "historical_output": "outputs/balanced-fold-checks.json",
       "historical_output_sha256": "a854889cd532ea094c8f8eeac88cd736223e5725d0611ec43649380cd90e9be8",
       "assertions_passed": true,
@@ -6871,7 +6871,7 @@
       "changed_scientific_paths": [],
       "captured_result": {
         "kind": "reproduced exact algebraic calculation with rigorous sign/log bounds",
-        "executed_at_utc": "2026-09-11T02:36:35.531973+00:00",
+        "executed_at_utc": "2026-09-18T23:35:44.115241+00:00",
         "command": ".venv/Scripts/python.exe -B analysis/check_balanced_fold.py",
         "environment": {
           "python": "3.9.12",
@@ -7363,7 +7363,7 @@
     {
       "script": "analysis/check_finite_precision_instability.py",
       "script_sha256": "f4aaac3e9e4d6554250a8425c3f43c9cf6f1ec50f138400d1f9ebe92b4930747",
-      "elapsed_seconds": 10.613,
+      "elapsed_seconds": 0.857,
       "historical_output": "outputs/finite-precision-checks.json",
       "historical_output_sha256": "804e1968c8dd9ae629332a88724652ef945705eb10a40f363f9ee82d4e9a8c15",
       "assertions_passed": true,
@@ -7371,7 +7371,7 @@
       "changed_scientific_paths": [],
       "captured_result": {
         "kind": "exact witness and numerical cross-check; no optimizer or formal proof",
-        "executed_at_utc": "2026-09-11T02:36:46.233082+00:00",
+        "executed_at_utc": "2026-09-18T23:35:45.050575+00:00",
         "command": ".venv/Scripts/python.exe -B analysis/check_finite_precision_instability.py",
         "environment": {
           "python": "3.9.12",
@@ -7655,7 +7655,7 @@
     {
       "script": "analysis/check_three_state_precision.py",
       "script_sha256": "026f0ea82f3df3e7ef3212bb705fb5ef6e04d128f64316404d416f46565529fd",
-      "elapsed_seconds": 0.224,
+      "elapsed_seconds": 0.202,
       "historical_output": "outputs/three-state-precision-checks.json",
       "historical_output_sha256": "0bcb55b7a5f1111c1c293349c6e343e5652e88a2984113cad524d8bb369076ac",
       "assertions_passed": true,
@@ -7664,7 +7664,7 @@
       "captured_result": {
         "all_checks_passed": true,
         "kind": "exact identities and independent high-precision stationary solve; conventional limit proofs are in the notes",
-        "executed_at_utc": "2026-09-11T02:36:46.462598+00:00",
+        "executed_at_utc": "2026-09-18T23:35:45.257119+00:00",
         "command": ".venv/Scripts/python.exe -B analysis/check_three_state_precision.py",
         "environment": {
           "python": "3.9.12",
@@ -8001,14 +8001,14 @@
     {
       "script": "analysis/check_publication_audit.py",
       "script_sha256": "60aad165964932f88937dc2f5234b45e7677308bcff08874e701a6d7c233b563",
-      "elapsed_seconds": 0.048,
+      "elapsed_seconds": 0.042,
       "historical_output": "outputs/publication-audit-checks.json",
       "historical_output_sha256": "8813ff3a612386e516513ed870b5b689447f1447f6c68eef7c18932579843967",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-11T02:36:46.509536+00:00",
+        "executed_at": "2026-09-18T23:35:45.300293+00:00",
         "command": ".\\.venv\\Scripts\\python.exe -B analysis/check_publication_audit.py",
         "python": "3.9.12",
         "sympy": "1.14.0",
@@ -9392,6 +9392,48 @@
         "freshly_replayed": true
       },
       {
+        "path": "analysis/correctness/global_independent.py",
+        "sha256": "e552709ea59932c5eeebb52237b807a40e3b3ad49d60aaf44013af5ef3f84810",
+        "syntax_valid": true,
+        "description": "Independent algebra supporting the Sept 15 global five-state proof audit.\n\nRun from root:\n    .venv/Scripts/python.exe -B analysis/correctness/global_independent.py\n\nThe continuum exclusion is the conventional proof in GLOBAL-INDEPENDENT.md.\nThis script checks identities, sign certificates and the finite hidden-support\npartition; it is not an optimizer, global feasibility solver or formal proof.\nHistorical calculations are replayed with JSON writes intercepted and are\nexplicitly labeled re-executions, not independent mathematical evidence.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/correctness/laplace_two.py",
+        "sha256": "2456867750bbb2f30c255a1a533872d04e78c7acf42b05c7f7e0a7078272cf95",
+        "syntax_valid": true,
+        "description": "Exact two/three-Laplace-point audit, independent of the numerical estimator.\n\nRun: .venv/Scripts/python.exe -B -m analysis.correctness.laplace_two\nRate tuples IN THIS MODULE use the user's order (r,s,a,b,c,d), unlike the\nolder numerical inference module's (r,s,a,c,b,d). Generators are explicit.\nAll arithmetic is exact SymPy arithmetic; no tolerance or random search.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/correctness/mechanism.py",
+        "sha256": "014f8282f1ec3466887b729f7f0ba49574e97d97267df0a3db9a8b9764796d2c",
+        "syntax_valid": true,
+        "description": "Independent exact-kernel and flux checks for a complete-support divergent path.\n\nRun: python -B analysis/correctness/mechanism.py\nThe four-state rates below are explicit inputs, not generated by the orbit helper.\nThe general half-line statement follows analytically from continuity and divergence;\nthis example checks the mechanism and does not classify any whole entropy set.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/correctness/test_entrypoints.py",
+        "sha256": "c51d375644ef15d2ecfcb7c5f001b9b22e0de683395906ae4b4a4688855cace1",
+        "syntax_valid": true,
+        "description": "Check that proof entrypoints cannot claim success with assertions disabled.\n\nEach CLI runs from an isolated temporary copy, so a guard regression cannot\noverwrite an accepted receipt or manuscript figure in the research workspace.\nRun: python -B -m unittest analysis.correctness.test_entrypoints -v",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/correctness/test_laplace_two.py",
+        "sha256": "5e223efbc46eeb5ec8159f1005a8cf4c96464a7e883941fb52a0d57c50f42db4",
+        "syntax_valid": true,
+        "description": "Exact regression tests against full generators and independently fixed data.\n\nRun: python -B -m unittest analysis.correctness.test_laplace_two -v\nAll tuples here use (r,s,a,b,c,d), explicitly matching the user's proposal.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/correctness/test_validation.py",
+        "sha256": "7d0982caf58d465c978d26d14ecc13c11734315385d454f27c3e75ffe7efb9a7",
+        "syntax_valid": true,
+        "description": "Regression checks for stale or unsuccessful scientific replay receipts.",
+        "freshly_replayed": false
+      },
+      {
         "path": "analysis/derive_balanced_path.py",
         "sha256": "4fc6839878d804990cfa4a8bfa2346cf8fbf395d9967d33f277b0693310243a5",
         "syntax_valid": true,
@@ -9452,6 +9494,62 @@
         "sha256": "8d10b57563809b45b3e08179dc40b4bc25b5c97e2cefa4c14142bb9c58e8d944",
         "syntax_valid": true,
         "description": "Write small reproducible run manifests without capturing environment secrets.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/revision/audit_repository.py",
+        "sha256": "471932f806b5ec1efe2601cb6567ab2ea6d7cd183f9b4da1d1420092a1129f90",
+        "syntax_valid": true,
+        "description": "Read/inventory repository payloads and verify preserved theorem/output content.\n\nStructural coverage and hashes do not constitute a semantic proof review.\nRun from root: python -B analysis/revision/audit_repository.py",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/revision/continuation.py",
+        "sha256": "03713c6291bc11747cd8d4cf6c44eba39f92b14726688daea3d6b25fedfd8561",
+        "syntax_valid": true,
+        "description": "Exact local unfolding certificate and bounded numerical continuation.\n\nRun from root: .venv/Scripts/python.exe -B analysis/revision/continuation.py\nThe exact interval rectangle supports a local theorem; the wider continuation\ngrid is a diagnostic, not an exhaustive classification of off-balanced models.\nHistorical files are read only. No stochastic input or optimizer is used.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/revision/graph_checks.py",
+        "sha256": "61aa179aa7f81a3472a326c04e89b0eec72239dbef76e3c8bdff91ed97368cec",
+        "syntax_valid": true,
+        "description": "Exact covered-vertex inversion and floor/activity counterexample.\nRun from root: python -B analysis/revision/graph_checks.py\nEmbedded rational inputs; no random seed or numerical tolerance.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/revision/inference.py",
+        "sha256": "772d47daf43b243bf5479fdc05d3e12dd4d5f955bb94d4c0790b943299b4db25",
+        "syntax_valid": true,
+        "description": "Full-six-rate conditioning and finite-record inference for one resolved pair.\n\nReproduce: .venv/Scripts/python.exe -B -m analysis.revision.inference --replicates 100\nThe numerical rate box is an explicit estimator constraint, not a theorem prior.\nNo accepted historical output is modified. See STATISTICS.md for assumptions.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/revision/rare_event.py",
+        "sha256": "8d790b15d8335b94655ab0cd6d1ee968488c398a2d3b9cfc1cd6c2ef5d92e083",
+        "syntax_valid": true,
+        "description": "Exact identities and high-precision diagnostics for the rare-rate testing bound.\n\nRun from root: python -B analysis/revision/rare_event.py\nNo stochastic inputs. No tiny rate is converted to binary64 or clipped.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/revision/replay_independent.py",
+        "sha256": "d29de3cebfc572019e2cd1ec781b26fe62cce0aca740ead56bd969a8f95ac3c5",
+        "syntax_valid": true,
+        "description": "Replay the existing independent checker without replacing its accepted output.\n\nRun from the repository root: python -B analysis/revision/replay_independent.py\nOnly the checker receipt is redirected; its original code and inputs are unchanged.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/revision/test_continuation.py",
+        "sha256": "50f2e5b9fcde1ff24457985fad018d00b2ba2b632ad7aa38e160c93e0331c533",
+        "syntax_valid": true,
+        "description": "Independent checks for the perturbed five-state construction.\n\nRun: .venv/Scripts/python.exe -B -m unittest analysis.revision.test_continuation",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/revision/test_inference.py",
+        "sha256": "6b02204b5a91f28560844d3d8e722ec2a8974304a0efe4a48da0713156a568ad",
+        "syntax_valid": true,
+        "description": "Independent numerical checks; run python -B -m unittest analysis.revision.test_inference -v.",
         "freshly_replayed": false
       }
     ],
@@ -9958,29 +10056,21 @@
   "all_checks_passed": true,
   "historical_outputs_unchanged": true,
   "figure_sha256": {
-    "manuscript/figures/balanced-fiber.pdf": "9a4eaa3af2743d8308f81ed98ec18010f01489cfbc3c6ce025d7bc80d315040e",
+    "manuscript/figures/balanced-fiber.pdf": "4d22133a84b1f31b6fb4fdb580eae7501c50b331394405a4052d06b8d3c6dcdc",
     "manuscript/figures/balanced-fiber.png": "a65c402d3887245d2dc2c138c76ea495aae279d0783fda9eb909ed9b44c019cd",
-    "manuscript/figures/balanced-fiber.svg": "0acc9781d7031903ea9b74d250f3f25d9e328d47859da3d77832ac43dc83d7e7",
-    "manuscript/figures/three-state-instability.pdf": "e2a17cb2e9926346606e5f84dd51585fc388d42715c760148d8ae8e0ab722803",
+    "manuscript/figures/balanced-fiber.svg": "c63e33d584b06bb22a08f34a82bef1f0dceb2f38ad57f5f03c007d7ec703a158",
+    "manuscript/figures/conditioning.pdf": "8f35636f242e7f973daf516735fd1a47ccb22d1d33e2d903736a498bc477af6a",
+    "manuscript/figures/conditioning.png": "327cfbfd5203f0d5eb3df1181474eb7463a610f737cb4e18534042a2bbb1ae0b",
+    "manuscript/figures/continuation.pdf": "86ad3078faae4613206408867c09d8d68cdc2d5bad97b6a69e73fde79d791467",
+    "manuscript/figures/continuation.png": "4acb78374a167e97d1d5fa62f6a8a763cdc34180b35158d09732721d9a1c51ac",
+    "manuscript/figures/continuation.svg": "13888e679d2bf388175fce8b747e6cf83c1c847e1a0855e7ac805c911cc33704",
+    "manuscript/figures/finite-data.pdf": "a261ed2bffcbad2df33e069e10150a12f04557561101300e1365093d6116558d",
+    "manuscript/figures/finite-data.png": "7e6f7d17197a984fb072dafaa43d1838a9dbf3c93b9fba9003b1a7272a19526a",
+    "manuscript/figures/realization-geometry.pdf": "c7448737cc1ea92fa64e4983e845fafbbe992a7bf855d99db3c6bead933ad591",
+    "manuscript/figures/realization-geometry.png": "f990ba4c7f8ae59806051cfd5c9e3e6f7b7bd8cad20cf214a48f10c90b830447",
+    "manuscript/figures/realization-geometry.svg": "a356653abe52d61c82f7c82b3894a7667bf6a4792c209e66aaf5b85abecc1571",
+    "manuscript/figures/three-state-instability.pdf": "b6760b0fe51f823a3c121b28cc151efd531d2bf788d291e2cadbb3e24827fcb9",
     "manuscript/figures/three-state-instability.png": "1ead6cf6f4252181eb67b85fd2b1ad6b799a301728f63b73ceda8194e497b3b2",
-    "manuscript/figures/three-state-instability.svg": "859fca531a2770de6394958a5c8e11e83d2895e6ddf085de17eef7224d4ee36f"
-  },
-  "replayed_figure_sha256": {
-    "manuscript/figures/balanced-fiber.pdf": "da44c98080f3ccd58daa541b3883e7dc9851140f212bccab92b0e4e5fb1d9a42",
-    "manuscript/figures/balanced-fiber.png": "a65c402d3887245d2dc2c138c76ea495aae279d0783fda9eb909ed9b44c019cd",
-    "manuscript/figures/balanced-fiber.svg": "0acc9781d7031903ea9b74d250f3f25d9e328d47859da3d77832ac43dc83d7e7",
-    "manuscript/figures/three-state-instability.pdf": "cc309ffa9678a0e82b98cf6aa844f397bd1057bdd54e0f59ca480553542e0926",
-    "manuscript/figures/three-state-instability.png": "1ead6cf6f4252181eb67b85fd2b1ad6b799a301728f63b73ceda8194e497b3b2",
-    "manuscript/figures/three-state-instability.svg": "859fca531a2770de6394958a5c8e11e83d2895e6ddf085de17eef7224d4ee36f"
-  },
-  "figure_metadata_handoff": {
-    "recorded_at_utc": "2026-09-11T02:39:10.421892+00:00",
-    "method": "The final replay regenerated identical PDF figure content with fresh CreationDate fields. Replacing only the fourteen CreationDate digits recovered the exact SHA-256 hashes in the successful, visually checked build report. Those validated PDF files are delivered; raw replay hashes are retained separately. No graphics or numerical data were changed.",
-    "restored_local_creation_dates": {
-      "balanced-fiber.pdf": "20260910212117-05:00",
-      "three-state-instability.pdf": "20260910212118-05:00"
-    },
-    "current_figure_sha256_key": "figure_sha256",
-    "raw_replay_figure_sha256_key": "replayed_figure_sha256"
+    "manuscript/figures/three-state-instability.svg": "a2ad7a7ffd6943dad8162a8f596064f15f6f4a87a2258bdb46325eeb458c82fb"
   }
 }

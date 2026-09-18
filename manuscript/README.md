@@ -1,68 +1,79 @@
-# Exact entropy-production fibers and local upper bounds
+# Revised manuscript and reproduction
 
-This is a complete research-article draft for **expert human review**, prepared in a readable one-column Physical Review E / REVTeX style. Essential proofs are incorporated in the main PDF as Appendices A–F. The manuscript states the full balanced five-state entropy-fiber theorem and the sharp fixed-count local upper-ceiling criterion; it does not claim a general five/six-state classification or literature-wide priority.
+**Thermodynamic identifiability and unstable entropy inference under partial observation**
 
-- [Compiled manuscript](main.pdf)
-- [LaTeX source](main.tex) and [bibliography](references.bib)
-- [Proof appendices](supplementary/proofs.tex)
-- [Publication-readiness assessment](../outputs/PUBLICATION-READINESS.md)
-- [Audit and claim-to-evidence map](../analysis/manuscript-audit.md)
+This is a complete research draft for expert human review in a readable one-column REVTeX format. The main text now prioritizes exact recovery, entropy instability, the sharp local-ceiling criterion, finite-data inference and physical priors. The special five-state construction and its new transverse perturbation follow those results. Essential proofs are included as Appendices A–G; the 15 September revision expands A/B and adds three main-text propositions.
 
-Author names and affiliations remain explicitly unfilled. The draft discloses substantive Codex assistance and pending expert human verification. Human authors must finalize authorship, funding, disclosure, scientific approval, and the actual data/code-access arrangement before submitting. Nothing has been submitted, committed, or pushed in this manuscript task.
+- [Compiled article](main.pdf), [main source](main.tex), [bibliography](references.bib)
+- [Expanded global proof and retained constructions](supplementary/proofs.tex)
+- [Revision notes](../REVISION_NOTES.md), [current claim/proof/test map](../REVISION_NOTES.md)
+- [Targeted primary comparison](../analysis/correctness/PRIMARY-COMPARISON.md), [earlier source ledger](../analysis/revision/LITERATURE.md)
+- [Readiness assessment](../outputs/PUBLICATION-READINESS.md)
 
-## Build the paper
+There are six publication figures and 31 cited references. No mathematical claim is formally verified. New numerical results are explicitly distinguished from exact certificates and conventional proofs. Author names/affiliations, funding, final disclosure and expert scientific approval remain human responsibilities. This revision performs no submission or upload.
 
-Use a TeX distribution containing `revtex4-2`, AMS packages, `graphicx`, `booktabs`, `hyperref`, and BibTeX. Run from the repository root:
+## One-command reproduction
+
+Use a scientific environment with [requirements-research.txt](../analysis/requirements-research.txt). The recorded Windows environment uses Python 3.9.12, NumPy 2.0.1, SciPy 1.13.1, SymPy 1.14.0, mpmath 1.3.0 and Matplotlib 3.9.4. [Full recorded lock](../analysis/requirements-lock-py39-windows.txt). Existing users should reuse the environment; a newer platform needs compatible versions and its own validation rather than assuming bitwise portability.
+
+From the repository root, with assertions enabled:
+
+```text
+python -B reproduce_all.py
+```
+
+On the original Windows workspace replace `python` with `.venv/Scripts/python.exe`. The command regenerates 15 preserved scientific replays with writes intercepted; exact appendix interval and independent manuscript checks; new global-envelope, two-point, complete-support mechanism, rare-rate, graph and local unfolding checks; wider numerical continuation; conditioning grids and 900 seeded CTMC trajectories; 36 tests; and all six figures. It preserves the 22 accepted historical scientific JSON outputs. One old replay includes deterministic linear-programming diagnostics; no optimizer or sampled graph set proves a nonexistence theorem.
+
+The [full run manifest](../outputs/correctness-2026-09-15/reproduction.json) records commands, times, versions, outputs and hashes. The exact historical [manifest](supplementary/computational-results.json) retains all replay payloads. New experiment details are in [statistics](../analysis/revision/STATISTICS.md), [continuation](../analysis/revision/CONTINUATION.md), [rare-rate proof](../analysis/revision/RARE-EVENT.md), and [graph/priors](../analysis/revision/GRAPH-REGULARIZATION.md).
+
+The inference pipeline observes the microscopic pair only, estimates joint Laplace moments, fits all six unknown rates and computes stationary entropy and sandwich uncertainty. Its positive rate box is an explicit computational restriction. Coverage is pointwise asymptotic and fails badly in the rare-reverse example; boundary/rank failures and a heuristic rare-count warning are exposed, not hidden from denominators.
+
+## Build
+
+Install a TeX distribution with REVTeX and AMS packages, graphicx, booktabs and hyperref. The driver selects Tectonic on PATH or standard pdfLaTeX/BibTeX:
 
 ```text
 python manuscript/scripts/build.py
+python -B reproduce_all.py --build --tectonic /path/to/tectonic --offline
 ```
 
-The script selects Tectonic on PATH, otherwise pdfLaTeX and BibTeX. With a specified Tectonic binary:
+The accepted local build uses Tectonic 0.17.0 and its official v33 cached bundle. Omit `--offline` only when resources need to be retrieved. The compiler archive used here was downloaded from the official release and checked against its published SHA-256. Compiler binaries, downloaded caches and temporary page renders are excluded from the package.
+
+The driver halts on undefined references/citations and overfull boxes; [build-report.json](supplementary/build-report.json) records all supplementary source and figure hashes. The PDF uses a fixed source epoch; its metadata creation date is not the scientific revision date. Different distributions may produce different PDF bytes. The saved `.bbl` supports editorial portability.
+
+A conventional build from `manuscript/` is `pdflatex main.tex`, `bibtex main`, then two more `pdflatex main.tex` passes, with halt-on-error and noninteractive flags as appropriate. The final PDF is also rendered with Poppler and visually inspected; successful LaTeX compilation alone does not establish good layout.
+
+## Individual analyses and redraws
 
 ```text
-python manuscript/scripts/build.py --tectonic /path/to/tectonic
+python -B analysis/correctness/global_independent.py
+python -B -m analysis.correctness.laplace_two
+python -B analysis/correctness/mechanism.py
+python -B analysis/revision/rare_event.py
+python -B analysis/revision/graph_checks.py
+python -B analysis/revision/continuation.py
+python -B -m analysis.revision.inference --replicates 100
+python -B -m unittest analysis.capabilities.test_tools analysis.revision.test_inference analysis.revision.test_continuation analysis.correctness.test_laplace_two analysis.correctness.test_validation analysis.correctness.test_entrypoints -v
 ```
 
-The verified build uses Tectonic 0.17.0 and its official v33 resource bundle, containing REVTeX 4.2e, LaTeX 2021-11-15 and BibTeX 0.99d. The source also follows the currently documented REVTeX 4.2 interface; no claim is made that the bundled 4.2e is the latest release. Tectonic retrieves standard TeX resources on the first build. Add `--offline` after they are cached. The resource URL is explicit because the environment's default-bundle discovery initially failed. A conventional build from `manuscript/` is:
+The original certificate figures and both new numerical figure sets can be redrawn from their saved payloads:
 
 ```text
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-bibtex main
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
+python -B manuscript/scripts/reproduce.py --figures-only
+python -B analysis/revision/continuation.py --figures-only
+python -B -m analysis.revision.inference --figures-only
 ```
 
-The build driver halts on failed compilation, undefined references/citations or overfull boxes and writes [build provenance](supplementary/build-report.json). It fixes the PDF source epoch; identical output bytes across different TeX distributions are not promised. The saved `.bbl` is included for editorial portability. Compiler binaries and downloaded TeX caches are excluded from the archive.
+Figure-only mode does not constitute a new scientific replay. The conditioning and finite-data figures have separate redraw provenance; their original scientific payload remains unchanged. The boundary normal form and local sign rectangle are exact proof support; the 41-node wider continuation, numerical ranks and large-parameter entropy values are diagnostics.
 
-## Reproduce the science and figures
-
-Extract the complete `outputs/manuscript-package.zip`, preserving its root-relative directory structure. Copying only `manuscript/` is sufficient to compile its existing figures but **not** to rerun the scientific checks, which deliberately reuse preserved `analysis/` scripts and proof artifacts.
-
-Create an environment and install [research requirements](../analysis/requirements-research.txt), using that environment's Python. Tested versions: Python 3.9.12, NumPy 2.0.1, SciPy 1.13.1, SymPy 1.14.0, mpmath 1.3.0, Matplotlib 3.9.4. The complete Windows lock is [here](../analysis/requirements-lock-py39-windows.txt). From the extracted root:
-
-```text
-python -B manuscript/scripts/reproduce.py
-python -B manuscript/scripts/check_table_bounds.py
-python -B analysis/manuscript-math-independent-check.py
-```
-
-On the original Windows workspace these commands used `.venv/Scripts/python.exe`. Do not use Python `-O`: assertions are part of the checks. The full driver replays 15 historical scientific scripts with their output writes intercepted, compares scientific payloads, verifies preservation of 22 existing JSON files, reconstructs the endpoint independently in cone coordinates, and computes the two publication figures. One legacy replay includes five linear-programming diagnostics; those diagnostics do not establish the nonexistence theorem. The final conventional proofs and exact certificates have no optimizer-dependent exclusion step. More details are in [scripts/README.md](scripts/README.md).
-
-[Computational results](supplementary/computational-results.json), [table bounds](supplementary/table-bound-checks.json), and [independent mathematical checks](../outputs/manuscript-math-independent-checks.json) retain input rules, versions, hashes, precision, tolerances and outputs. The high-precision figures illustrate analytic limits; they are not numerical proofs of unboundedness. No Lean/formal-verification claim is made.
-
-The paper has two reproducible publication figures, available as vector PDF and SVG. PNG exports in the workspace are conveniences and are omitted from the archive. Educational knowledge-map graphics and generic capability examples remain separate from publication figures.
-
-## Rebuild the archival package
-
-After the final scientific and PDF checks, run:
+## Package and preservation
 
 ```text
 python -B manuscript/scripts/package.py
 ```
 
-This produces `outputs/manuscript-package.zip`, including the surrounding research dependencies, scientific provenance, draft and compiled PDF. `PACKAGE-MANIFEST.json` inside the archive lists every payload's SHA-256. The script tests ZIP integrity and verifies every archived hash. `--list` previews contents. It excludes environments, credentials/prompt history, Git metadata, compiler/cache files and temporary page renders. It performs no upload or Git operation.
+This writes [outputs/manuscript-package.zip](../outputs/manuscript-package.zip), with root-relative research dependencies and a verified per-file SHA-256 manifest. Extract the complete archive to rerun the science. Copying only `manuscript/` permits compilation with the supplied figures, but omits scientific dependencies. The archival package excludes Git metadata, environments, prompt history, compiler/cache files and page renders.
 
-A [fresh-extraction replay](supplementary/archive-replay-checks.json) passed all scientific checks and reproduced a byte-identical PDF using the same installed Python environment and cached Tectonic resources. This verifies root-relative dependency packaging; it is not a test on a separately provisioned operating system.
+The [pre-correctness baseline](../outputs/correctness-2026-09-15/baseline/) preserves the earlier revision. The [repository audit](../outputs/correctness-2026-09-15/repository-audit.json) checks six original statements, preserved baseline hashes, retained Appendices C–G, accepted JSON bytes, source parsing and inventory. Appendices A/B are intentionally expanded; these structural checks do not replace mathematical review. The prior [archive replay](supplementary/archive-replay-checks.json) describes the September 11 package. Current correctness verification is separately recorded under `outputs/correctness-2026-09-15/`; the 14 September results remain under `outputs/revision/` and must not be inferred from that old replay.
 
-The final [readiness report](../outputs/PUBLICATION-READINESS.md) distinguishes verified results from residual originality and expert-proof-review risk. The inaccessible-original caveats in the [citation audit](../analysis/manuscript-literature-review.md) remain visible; bibliography verification is not an exhaustive novelty certificate.
+The 15 September [fresh-extraction replay](../outputs/correctness-2026-09-15/archive-replay.json) passed all 13 jobs and reproduced that revision's identical 55-page PDF. Its [visual inspection and delivery checks](../outputs/correctness-2026-09-15/delivery-checks.json) covered every page. The subsequent [18 September review and verification](../outputs/review-2026-09-18/REVIEW.md) records the latest safeguards, 36-test workflow and PDF check. These runs reuse the installed Windows environment; cross-platform provisioning was not tested.

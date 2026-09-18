@@ -1,68 +1,65 @@
 # Markov thermodynamic identifiability
 
-When do complete waiting-time statistics between observed transitions determine a Markov network's dissipation? This repository contains theoretical results, exact and numerical checks, and a complete manuscript on thermodynamic identifiability in partially observed finite-state continuous-time Markov chains.
+Exact recovery of partially observed Markov dynamics does not by itself guarantee stable or bounded inference of microscopic entropy production. This repository combines conventional proofs, exact computational certificates, reproducible numerical studies and a revised research manuscript.
 
-**Central result:** exact observations can restrict entropy production to exactly two values, while arbitrarily small observational uncertainty still permits arbitrarily large entropy production. Exact identifiability and stable upper inference are different properties.
+## Read the revised paper
 
-## Read the paper
+**Thermodynamic identifiability and unstable entropy inference under partial observation**
 
-**Exact entropy-production fibers and local upper bounds in partially observed Markov networks**
+- [Manuscript PDF](manuscript/main.pdf) and [LaTeX/build guide](manuscript/README.md)
+- [Revision notes and remaining questions](REVISION_NOTES.md)
+- [Current claim, proof and test map](REVISION_NOTES.md)
+- [Targeted primary-source comparison](analysis/correctness/PRIMARY-COMPARISON.md), with the [earlier access ledger](analysis/revision/LITERATURE.md)
+- [Reproducibility archive](outputs/manuscript-package.zip)
+- [Publication-readiness assessment](outputs/PUBLICATION-READINESS.md)
 
-- [Manuscript PDF](manuscript/main.pdf) — 29 pages, including the full proof appendices.
-- [LaTeX source and build guide](manuscript/README.md) — verified bibliography, two reproducible figures, and computational provenance.
-- [Complete reproduction archive](outputs/manuscript-package.zip) — preserves the surrounding scientific dependencies and includes a per-file SHA-256 manifest.
-- [Publication-readiness assessment](outputs/PUBLICATION-READINESS.md) — contribution, closest prior work, limitations, and remaining review risks.
+The draft is prepared for **expert human review**. Proof status is conventional, with exact algebraic/interval support and separately labeled numerical experiments; it is not formally verified. Author and submission details remain pending. The [baseline](outputs/revision/baseline/) preserves the earlier article.
 
-**Status: ready for expert human review.** The results have conventional proofs supported by exact algebraic/interval checks and numerical cross-checks; they are not formally verified. Originality remains provisional relative to the inspected literature. Expert assessment of the global support-exhaustion proof is the highest-value next check, and author details and final submission decisions remain pending.
+## Scientific results
 
-## Main results
+The primary experiment observes a known microscopic reverse transition pair in a finite irreducible CTMC with reciprocal, otherwise unknown support. It retains complete joint next-mark/waiting-time laws and their absolute time scale. The stationary network entropy functional has a physical dissipation interpretation only with appropriate state/channel resolution and local detailed balance.
 
-The central observation model resolves one known microscopic transition pair in a finite irreducible CTMC. Support is reciprocal but otherwise unknown, states are even under time reversal, and each ordered state pair has one kinetic channel. Observations retain the full joint next-transition mark and waiting-time law, including its absolute time scale. The [mathematical specification](analysis/publication-theorems.md) gives the precise model classes and quantifiers.
+- **Exact recovery versus conditioning:** two distinct positive Laplace points identify complete three-state triangles; three are sufficient generally and necessary in the uncalibrated worst case. The absolute-rate inverse remains regular at trees, while relative-rate conditioning and entropy sensitivity can diverge near rare reverse rates.
+- **Sharp local ceiling:** with exactly N states and one resolved pair, a finite local entropy upper bound exists precisely for N=2 or a complete N=3 source. Negative cases persist with observed rates and trace fixed. A tighter individual cap or known support can change the admissible class.
+- **Finite data:** a constructive six-rate estimator and martingale-sandwich uncertainty calculation are tested on 900 actual CTMC trajectories. Interior examples permit useful inference; a rare-reverse example exposes serious interval failure despite small residuals. A separate finite-n moment confidence rectangle now has a sequential martingale proof; empirical waiting-law TV is explicitly unsuitable.
+- **Quantitative impossibility:** testing independently variable reverse rates with a fixed multiplicative entropy gap can require an exponentially long observation horizon, even with complete microscopic paths. This is not a theorem for a known one-parameter rate prior.
+- **Graph coverage and physical priors:** two Laplace points recover Q when observed reciprocal edges cover every vertex. Microscopic activity plus an affinity ceiling bounds entropy. Neither an upper rate cap alone nor a rate floor plus activity alone suffices. A finite state cap and closed supported-rate interval [m,M] give attained upper entropy maxima converging as tolerance shrinks at fixed feasible data.
 
-For an explicit balanced five-state family, the **entire compatible entropy set** under a five-state cap has a sharp transition:
+The five-state construction proves the following entropy-set properties under a five-state cap:
 
-| Parameter | Compatible entropy-production rates |
+| Balanced parameter | Compatible entropy |
 | --- | --- |
-| $0<z<z_*$ | Unbounded above |
-| $z=z_*$ | Exactly two distinct finite values |
-| $z>z_*$ | One value, with a unique physical generator up to hidden-state relabeling |
+| 0 < z < z* | Contains an attainable half-line; the complete set is not characterized |
+| z = z* | Exactly two distinct finite values |
+| z > z* | Singleton, with a unique physical generator |
 
-The threshold $z_*\approx10.5571496686650$ is the unique positive root of $352z^4-3168z^3-4644z^2-11340z-7623=0$. The classification exhausts all admissible supports, including exceptional parameter cases. Allowing a sixth state makes the entropy set unbounded through an exact data-preserving construction. [Proofs and evidence](evidence/RECORDS.md#e051)
+A nontrivial exit-asymmetry perturbation now has a proved local critical curve and a separately labeled wider numerical continuation. The transition is a fold of boundary constraints; the full subcritical fiber has a continuum. Allowing a sixth total state makes the exact fiber unbounded. Fixed count, state cap and minimal realization restrictions must always be stated.
 
-![The balanced five-state source, its second endpoint realization, and the unbounded / two-value / unique classification.](manuscript/figures/balanced-fiber.png)
+## Reproduce all essential results
 
-Two further results explain the distinction between exact identification and stability:
+Use the project's isolated scientific Python environment. The tested baseline is Python 3.9.12 on Windows with [pinned dependencies](analysis/requirements-research.txt); this is a reproducibility record, not a recommendation to install an obsolete interpreter on a new machine. From the repository root:
 
-- **Sharp local upper-bound criterion.** With exactly $N$ states and unknown reciprocal support, a finite entropy upper ceiling on some joint-kernel neighborhood exists precisely for $N=2$, or for $N=3$ with a complete source triangle. Every source with $N\ge4$ has unbounded entropy in every positive observational neighborhood, even with observed rates and trace fixed. An additional arbitrary tight rate cap or known topology can change this conclusion. [Evidence](evidence/RECORDS.md#e061)
-- **Stable rates can coexist with unstable entropy.** At every irreducible three-state source, three positive Laplace arguments give a locally Lipschitz generator inverse in joint-kernel row total variation, without a prior rate cap. Entropy is locally Lipschitz at positive triangles but can diverge near trees despite generator convergence. The explicit tree example preserves trace $-4$ and rates at most one. [Inverse result](evidence/RECORDS.md#e060), [counterexample](evidence/RECORDS.md#e057)
-
-The balanced-family classification does not settle arbitrary five- or six-state exact fibers. Cap-free positive continuity for stationary finite-window observations also remains open. Failed conjectures, boundary cases, inaccessible-source caveats, and prior-work comparisons are retained in the [research report](outputs/REPORT.md) and [claim-to-evidence audit](analysis/manuscript-audit.md).
-
-## Reproduce the results
-
-Clone the repository or extract the complete archive, preserving its directory structure. Reading the paper and proof notes requires no scientific packages. To rerun the checks, use an isolated Python environment; the recorded environment uses Python 3.9.12 and the [pinned research requirements](analysis/requirements-research.txt).
-
-From the repository root in PowerShell:
-
-```powershell
-python -m venv .venv
-.venv/Scripts/python.exe -m pip install -r analysis/requirements-research.txt
-.venv/Scripts/python.exe -B analysis/manuscript-math-independent-check.py
-.venv/Scripts/python.exe -B manuscript/scripts/reproduce.py
-.venv/Scripts/python.exe -B manuscript/scripts/check_table_bounds.py
+```text
+python -B reproduce_all.py
 ```
 
-On macOS/Linux, use `.venv/bin/python` instead of `.venv/Scripts/python.exe`; the recorded verification environment is Windows. Do not use Python `-O`, because assertions are part of the checks.
+This runs the preserved exact certificates and independent checks, new global-envelope/two-point/mechanism checks and rare-rate/graph/unfolding calculations, conditioning grids, 900 seeded trajectories, 36 tests and all six manuscript figures. It records commands, versions, source hashes and outcomes in [reproduction.json](outputs/correctness-2026-09-15/reproduction.json). Historical accepted scientific outputs are protected. Numerical continuation, Monte Carlo and exact proof-support calculations have distinct status labels.
 
-The reproduction driver replays 15 scientific scripts with historical output writes intercepted, compares their scientific payloads, checks preservation of existing JSON outputs, and regenerates the publication figures. All 15 replays and 12 printed rational table bounds passed. A [fresh-extraction check](manuscript/supplementary/archive-replay-checks.json) reproduced the PDF byte for byte using the same installed runtime and cached TeX resources. These checks support reproducibility; the global mathematical claims rest on the proofs.
+To also compile and validate the paper with an installed Tectonic and cached resources:
 
-To compile the paper, install Tectonic or a TeX distribution with REVTeX and BibTeX, then run `python manuscript/scripts/build.py`. The [manuscript guide](manuscript/README.md) documents the tested compiler, build options, validation, and archive creation. The [scientific stack guide](docs/research-stack.md) covers additional research tools.
+```text
+python -B reproduce_all.py --build --tectonic /path/to/tectonic --offline
+```
+
+On the original Windows workspace use `.venv/Scripts/python.exe` in place of `python`. On another platform use that environment's Python; the pinned Windows runtime has not been independently provisioned on every platform. Do not use `-O`, which disables scientific assertions. A standard pdfLaTeX/BibTeX build is also supported. See [manuscript/README.md](manuscript/README.md) for setup, individual analyses, figure-only redraws and packaging.
+
+The [research report](outputs/REPORT.md) gives the current synthesis. Unknown dimensions, arbitrary observation graphs, missed events and optimal rare-event inference remain specific open problems, not solved by this reproduction workflow.
 
 ## Explore the research atlas
 
 The [interactive knowledge atlas](knowledge/README.md) connects claims, assumptions, proofs, calculations, counterexamples, and prior work across 12 views. After cloning or extracting the repository, open `knowledge/interactive/index.html` locally; it has no network dependencies. On GitHub, start with the [static overview](knowledge/views/research_overview.svg) or [scientific story](knowledge/views/scientific_story.svg).
 
-The atlas provides navigation and provenance, not additional proof or novelty certification. Its source of truth is the linked evidence and mathematical artifacts.
+The atlas is a historical navigation aid and does not yet depict the 15 September additions. The current manuscript and revision notes take precedence; the atlas supplies no additional proof or novelty certification. Its source of truth is the linked evidence and mathematical artifacts.
 
 ## Start or resume
 

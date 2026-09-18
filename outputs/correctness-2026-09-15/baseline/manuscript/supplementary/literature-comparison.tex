@@ -1,0 +1,39 @@
+\subsection{Relation to inference and realization literature}
+Much thermodynamic inference asks for a lower bound: the least microscopic
+dissipation compatible with observed currents, coarse transitions, or
+waiting times. Thermodynamic uncertainty relations constrain this least
+cost from current fluctuations~\cite{BaratoSeifert2015,Gingrich2016};
+semi-Markov and waiting-time methods use further temporal
+information~\cite{Martinez2019,vanDerMeer2022,Harunari2022}.
+Compatible-model minimization makes the lower-bound problem
+explicit~\cite{SkinnerDunkel2021PNAS,SkinnerDunkel2021PRL,Ehrich2021,Nitzan2023}.
+Our question concerns the upper end of the same type of inverse problem:
+can observations exclude arbitrarily large microscopic entropy production?
+A valid lower bound, even one that is sharp under a chosen topology, does
+not answer that question over a larger model class.
+
+Finite observation is a separate limitation. Recent work compares
+waiting-time and current estimators under finite statistics, blurred
+labels and temporal binning~\cite{FritzErtelSeifert2025}. Spatial lumping
+and blurred transitions reveal additional resolution-dependent
+dissipative scales~\cite{YuHarunari2024}.
+We instead analyze reconstruction of microscopic rates and the resulting
+entropy uncertainty within a specified identifiable class. The distinction
+between structural identification and statistical learnability is already
+well developed for hidden Markov models~\cite{Gassiat2016,Abraham2023}.
+Our sparse-boundary example isolates another obstruction: the rate inverse
+can remain continuous while the entropy functional becomes singular.
+
+The observation model matters mathematically and physically. Aggregated
+Markov models admit equivalent canonical representations that need not
+preserve nonnegative microscopic rates~\cite{Bruno2005}; positive HMM, MAP
+and phase-type realization theory provides related similarity and cone
+methods~\cite{Vanluyten2008,HorvathTelek2007,HeZhang2006,HeZhang2008}.
+General coarse trajectories need not have our resolved-edge reset
+property. Their physical time reverse also requires care when the
+coarse-graining is nonlocal in time~\cite{Blom2024,BiskerReply2024}.
+Recent continuous-space estimators address observations without
+microscopic reset events~\cite{FritzSeifert2026}; those experiments are
+outside the finite-state inverse problem considered here.
+
+Hidden entropy and its fluctuation relations also depend on the microscopic time-reversal convention~\cite{KawaguchiNakayama2013}; they do not provide an upper ceiling from our partial waiting laws.

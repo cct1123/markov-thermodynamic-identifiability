@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{15}%
+\begin{thebibliography}{31}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -190,6 +190,190 @@
   {journal} {\bibinfo  {journal} {IEEE Trans. Inf. Theory}\ }\textbf {\bibinfo
   {volume} {62}},\ \bibinfo {pages} {5973} (\bibinfo {year} {2016})},\ \Eprint
   {https://arxiv.org/abs/1508.00335} {arXiv:1508.00335} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Barato}\ and\ \citenamefont
+  {Seifert}(2015)}]{BaratoSeifert2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~C.}\ \bibnamefont
+  {Barato}}\ and\ \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont
+  {Seifert}},\ }\bibfield  {title} {\bibinfo {title} {Thermodynamic uncertainty
+  relation for biomolecular processes},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.114.158101} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {114}},\
+  \bibinfo {pages} {158101} (\bibinfo {year} {2015})},\ \Eprint
+  {https://arxiv.org/abs/1502.05944} {arXiv:1502.05944} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gingrich}\ \emph {et~al.}(2016)\citenamefont
+  {Gingrich}, \citenamefont {Horowitz}, \citenamefont {Perunov},\ and\
+  \citenamefont {England}}]{Gingrich2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~R.}\ \bibnamefont
+  {Gingrich}}, \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Horowitz}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Perunov}},\
+  and\ \bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont {England}},\
+  }\bibfield  {title} {\bibinfo {title} {Dissipation bounds all steady-state
+  current fluctuations},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.116.120601} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {116}},\
+  \bibinfo {pages} {120601} (\bibinfo {year} {2016})},\ \Eprint
+  {https://arxiv.org/abs/1512.02212} {arXiv:1512.02212} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mart{\'i}nez}\ \emph {et~al.}(2019)\citenamefont
+  {Mart{\'i}nez}, \citenamefont {Bisker}, \citenamefont {Horowitz},\ and\
+  \citenamefont {Parrondo}}]{Martinez2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~A.}\ \bibnamefont
+  {Mart{\'i}nez}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Bisker}}, \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Horowitz}},\ and\ \bibinfo {author} {\bibfnamefont {J.~M.~R.}\ \bibnamefont
+  {Parrondo}},\ }\bibfield  {title} {\bibinfo {title} {Inferring broken
+  detailed balance in the absence of observable currents},\ }\href
+  {https://doi.org/10.1038/s41467-019-11051-w} {\bibfield  {journal} {\bibinfo
+  {journal} {Nat. Commun.}\ }\textbf {\bibinfo {volume} {10}},\ \bibinfo
+  {pages} {3542} (\bibinfo {year} {2019})},\ \Eprint
+  {https://arxiv.org/abs/1809.02084} {arXiv:1809.02084} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Skinner}\ and\ \citenamefont
+  {Dunkel}(2021{\natexlab{a}})}]{SkinnerDunkel2021PNAS}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
+  {Skinner}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Dunkel}},\ }\bibfield  {title} {\bibinfo {title} {Improved bounds on entropy
+  production in living systems},\ }\href
+  {https://doi.org/10.1073/pnas.2024300118} {\bibfield  {journal} {\bibinfo
+  {journal} {Proc. Natl. Acad. Sci. U.S.A.}\ }\textbf {\bibinfo {volume}
+  {118}},\ \bibinfo {pages} {e2024300118} (\bibinfo {year}
+  {2021}{\natexlab{a}})},\ \Eprint {https://arxiv.org/abs/2011.08765}
+  {arXiv:2011.08765} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Skinner}\ and\ \citenamefont
+  {Dunkel}(2021{\natexlab{b}})}]{SkinnerDunkel2021PRL}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
+  {Skinner}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Dunkel}},\ }\bibfield  {title} {\bibinfo {title} {Estimating entropy
+  production from waiting time distributions},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.127.198101} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {127}},\
+  \bibinfo {pages} {198101} (\bibinfo {year} {2021}{\natexlab{b}})},\ \Eprint
+  {https://arxiv.org/abs/2105.08681} {arXiv:2105.08681} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fritz}\ \emph {et~al.}(2025)\citenamefont {Fritz},
+  \citenamefont {Ertel},\ and\ \citenamefont
+  {Seifert}}]{FritzErtelSeifert2025}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~H.}\ \bibnamefont
+  {Fritz}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Ertel}},\ and\
+  \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {Seifert}},\ }\bibfield
+  {title} {\bibinfo {title} {Entropy estimation for partially accessible
+  {Markov} networks based on imperfect observations: Role of finite resolution
+  and finite statistics},\ }\href {https://doi.org/10.1103/PhysRevE.111.044106}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo
+  {volume} {111}},\ \bibinfo {pages} {044106} (\bibinfo {year} {2025})},\
+  \Eprint {https://arxiv.org/abs/2412.04102} {arXiv:2412.04102} \BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Yu}\ and\ \citenamefont
+  {Harunari}(2024)}]{YuHarunari2024}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Q.}~\bibnamefont
+  {Yu}}\ and\ \bibinfo {author} {\bibfnamefont {P.~E.}\ \bibnamefont
+  {Harunari}},\ }\bibfield  {title} {\bibinfo {title} {Dissipation at limited
+  resolutions: Power law and detection of hidden dissipative scales},\ }\href
+  {https://doi.org/10.1088/1742-5468/ad8152} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Stat. Mech.: Theory Exp.}\ }\textbf {\bibinfo {volume}
+  {2024}},\ \bibinfo {pages} {103201}},\ \Eprint
+  {https://arxiv.org/abs/2407.13707} {arXiv:2407.13707} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gassiat}\ \emph {et~al.}(2016)\citenamefont
+  {Gassiat}, \citenamefont {Cleynen},\ and\ \citenamefont
+  {Robin}}]{Gassiat2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Gassiat}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Cleynen}},\
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Robin}},\ }\bibfield
+   {title} {\bibinfo {title} {Inference in finite state space non parametric
+  hidden {Markov} models and applications},\ }\href
+  {https://doi.org/10.1007/s11222-014-9523-8} {\bibfield  {journal} {\bibinfo
+  {journal} {Stat. Comput.}\ }\textbf {\bibinfo {volume} {26}},\ \bibinfo
+  {pages} {61} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Abraham}\ \emph {et~al.}(2023)\citenamefont
+  {Abraham}, \citenamefont {Gassiat},\ and\ \citenamefont
+  {Naulet}}]{Abraham2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Abraham}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Gassiat}},\
+  and\ \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Naulet}},\
+  }\bibfield  {title} {\bibinfo {title} {Fundamental limits for learning hidden
+  {Markov} model parameters},\ }\href
+  {https://doi.org/10.1109/TIT.2022.3213429} {\bibfield  {journal} {\bibinfo
+  {journal} {IEEE Trans. Inf. Theory}\ }\textbf {\bibinfo {volume} {69}},\
+  \bibinfo {pages} {1777} (\bibinfo {year} {2023})},\ \Eprint
+  {https://arxiv.org/abs/2106.12936} {arXiv:2106.12936} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bruno}\ \emph {et~al.}(2005)\citenamefont {Bruno},
+  \citenamefont {Yang},\ and\ \citenamefont {Pearson}}]{Bruno2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~J.}\ \bibnamefont
+  {Bruno}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Yang}},\ and\
+  \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont {Pearson}},\
+  }\bibfield  {title} {\bibinfo {title} {Using independent open-to-closed
+  transitions to simplify aggregated {Markov} models of ion channel gating
+  kinetics},\ }\href {https://doi.org/10.1073/pnas.0409110102} {\bibfield
+  {journal} {\bibinfo  {journal} {Proc. Natl. Acad. Sci. U.S.A.}\ }\textbf
+  {\bibinfo {volume} {102}},\ \bibinfo {pages} {6326} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {He}\ and\ \citenamefont {Zhang}(2008)}]{HeZhang2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Q.-M.}\ \bibnamefont
+  {He}}\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Zhang}},\
+  }\bibfield  {title} {\bibinfo {title} {An algorithm for computing minimal
+  {Coxian} representations},\ }\href {https://doi.org/10.1287/ijoc.1070.0228}
+  {\bibfield  {journal} {\bibinfo  {journal} {INFORMS J. Comput.}\ }\textbf
+  {\bibinfo {volume} {20}},\ \bibinfo {pages} {179} (\bibinfo {year}
+  {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Blom}\ \emph {et~al.}(2024)\citenamefont {Blom},
+  \citenamefont {Song}, \citenamefont {Vouga}, \citenamefont {Godec},\ and\
+  \citenamefont {Makarov}}]{Blom2024}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Blom}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Song}}, \bibinfo
+  {author} {\bibfnamefont {E.}~\bibnamefont {Vouga}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Godec}},\ and\ \bibinfo {author}
+  {\bibfnamefont {D.~E.}\ \bibnamefont {Makarov}},\ }\bibfield  {title}
+  {\bibinfo {title} {Milestoning estimators of dissipation in systems observed
+  at a coarse resolution},\ }\href {https://doi.org/10.1073/pnas.2318333121}
+  {\bibfield  {journal} {\bibinfo  {journal} {Proc. Natl. Acad. Sci. U.S.A.}\
+  }\textbf {\bibinfo {volume} {121}},\ \bibinfo {pages} {e2318333121} (\bibinfo
+  {year} {2024})},\ \Eprint {https://arxiv.org/abs/2310.06833}
+  {arXiv:2310.06833} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bisker}\ \emph {et~al.}(2024)\citenamefont {Bisker},
+  \citenamefont {Mart{\'i}nez}, \citenamefont {Horowitz},\ and\ \citenamefont
+  {Parrondo}}]{BiskerReply2024}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Bisker}}, \bibinfo {author} {\bibfnamefont {I.~A.}\ \bibnamefont
+  {Mart{\'i}nez}}, \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Horowitz}},\ and\ \bibinfo {author} {\bibfnamefont {J.~M.~R.}\ \bibnamefont
+  {Parrondo}},\ }\bibfield  {title} {\bibinfo {title} {Reply to: Comment on
+  ``inferring broken detailed balance in the absence of observable
+  currents''},\ }\href {https://doi.org/10.1038/s41467-024-52603-z} {\bibfield
+  {journal} {\bibinfo  {journal} {Nat. Commun.}\ }\textbf {\bibinfo {volume}
+  {15}},\ \bibinfo {pages} {8679} (\bibinfo {year} {2024})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Fritz}\ and\ \citenamefont
+  {Seifert}(2026)}]{FritzSeifert2026}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~H.}\ \bibnamefont
+  {Fritz}}\ and\ \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont
+  {Seifert}},\ }\bibfield  {title} {\bibinfo {title} {Waiting-time-based
+  entropy estimators in continuous space without {Markovian} events},\ }\href
+  {https://doi.org/10.1103/zj2b-w93z} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume} {114}},\ \bibinfo
+  {pages} {034109} (\bibinfo {year} {2026})},\ \Eprint
+  {https://arxiv.org/abs/2603.05170} {arXiv:2603.05170} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kawaguchi}\ and\ \citenamefont
+  {Nakayama}(2013)}]{KawaguchiNakayama2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Kawaguchi}}\ and\ \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Nakayama}},\ }\bibfield  {title} {\bibinfo {title} {Fluctuation theorem for
+  hidden entropy production},\ }\href
+  {https://doi.org/10.1103/PhysRevE.88.022147} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume} {88}},\ \bibinfo
+  {pages} {022147} (\bibinfo {year} {2013})},\ \Eprint
+  {https://arxiv.org/abs/1209.6333} {arXiv:1209.6333} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Schnakenberg}(1976)}]{Schnakenberg1976}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
@@ -217,4 +401,13 @@
   {https://doi.org/10.1007/s42952-022-00169-1} {\bibfield  {journal} {\bibinfo
   {journal} {J. Korean Stat. Soc.}\ }\textbf {\bibinfo {volume} {51}},\
   \bibinfo {pages} {946} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Esposito}(2012)}]{Esposito2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Esposito}},\ }\bibfield  {title} {\bibinfo {title} {Stochastic
+  thermodynamics under coarse graining},\ }\href
+  {https://doi.org/10.1103/PhysRevE.85.041125} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume} {85}},\ \bibinfo
+  {pages} {041125} (\bibinfo {year} {2012})},\ \Eprint
+  {https://arxiv.org/abs/1112.5410} {arXiv:1112.5410} \BibitemShut {NoStop}%
 \end{thebibliography}%

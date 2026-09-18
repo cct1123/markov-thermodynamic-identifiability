@@ -1,0 +1,173 @@
+{
+  "started_at_utc": "2026-09-15T13:59:44.965646+00:00",
+  "python": "3.9.12",
+  "command": [
+    "python",
+    "-B",
+    "reproduce_all.py",
+    "--build",
+    "--tectonic",
+    "tmp/tectonic/tectonic.exe",
+    "--offline"
+  ],
+  "proof_status": "Conventional proofs with exact support; numerical experiments separately labeled.",
+  "jobs": [
+    {
+      "scope": "exact historical proof support",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "manuscript/scripts/reproduce.py"
+      ],
+      "seconds": 50.2190575,
+      "returncode": 0,
+      "stdout": "Replaying check_small_networks.py\nReplaying check_four_state_classification.py\nReplaying check_observable_criterion.py\nReplaying check_state_splitting.py\nReplaying check_five_state_extensions.py\nReplaying check_theta_residue_construction.py\nReplaying check_theta_fast_spectral.py\nReplaying check_balanced_boundary_witness.py\nReplaying derive_balanced_path.py\nReplaying check_balanced_cone_bound.py\nReplaying check_balanced_cone_sufficiency.py\nReplaying check_balanced_fold.py\nReplaying check_finite_precision_instability.py\nReplaying check_three_state_precision.py\nReplaying check_publication_audit.py\nChecking the independent cone-to-path reconstruction\n{\n  \"all_checks_passed\": true,\n  \"replayed_scripts\": 15,\n  \"historical_outputs_unchanged\": true,\n  \"changed_payloads\": [],\n  \"output\": \"C:\\\\projects\\\\markov-thermodynamic-identifiability\\\\manuscript\\\\supplementary\\\\computational-results.json\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "scope": "exact appendix interval bounds",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "manuscript/scripts/check_table_bounds.py"
+      ],
+      "seconds": 0.9666177000000005,
+      "returncode": 0,
+      "stdout": "PASS all 12 printed lower bounds; historical writes intercepted\n",
+      "stderr": ""
+    },
+    {
+      "scope": "independent exact and interval audit",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "analysis/revision/replay_independent.py"
+      ],
+      "seconds": 0.9859320000000054,
+      "returncode": 0,
+      "stdout": "Independent exact/interval audit passed; historical receipt preserved; outputs/revision/manuscript-math-independent-checks.json\n",
+      "stderr": ""
+    },
+    {
+      "scope": "exact rare-rate identities and high-precision checks",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "analysis/revision/rare_event.py"
+      ],
+      "seconds": 0.5275363000000013,
+      "returncode": 0,
+      "stdout": "Rare-event exact identities and 100-digit checks passed: outputs\\revision\\rare-event.json\n",
+      "stderr": ""
+    },
+    {
+      "scope": "exact graph inverse and physical-prior counterexample",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "analysis/revision/graph_checks.py"
+      ],
+      "seconds": 0.5760079999999945,
+      "returncode": 0,
+      "stdout": "3.9.12 1.14.0\ncovered-graph exact inverse: PASS; floor/activity counterexample: PASS\n",
+      "stderr": ""
+    },
+    {
+      "scope": "exact local unfolding and numerical continuation",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "analysis/revision/continuation.py"
+      ],
+      "seconds": 6.491126999999999,
+      "returncode": 0,
+      "stdout": "{\n  \"all_checks_passed\": true,\n  \"output\": \"C:\\\\projects\\\\markov-thermodynamic-identifiability\\\\outputs\\\\revision\\\\continuation.json\",\n  \"critical_slope_at_zero\": \"0.46500421354020694504509969955759402195544362336670876318665834314007976791213545\",\n  \"local_certificate_rectangle\": {\n    \"z\": [\n      \"10.55\",\n      \"10.565\"\n    ],\n    \"delta\": [\n      \"-0.005\",\n      \"0.005\"\n    ]\n  },\n  \"continued_nodes\": 41\n}\n",
+      "stderr": ""
+    },
+    {
+      "scope": "illustrative conditioning and 900 finite trajectories",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "analysis.revision.inference",
+        "--replicates",
+        "100"
+      ],
+      "seconds": 42.622221700000004,
+      "returncode": 0,
+      "stdout": "{\"model\": \"interior\", \"n_records\": 500, \"truth_entropy\": 0.20195187637486287, \"summary\": {\"bias\": -0.0004668605185108865, \"variance\": 0.002712294989993949, \"rmse\": 0.05182074872903472, \"entropy_quantiles_05_50_95\": [0.13304152157946075, 0.19555733375070972, 0.2720536548252592], \"rate_bias\": [0.02782464059205214, 0.019138820166558768, 0.08161781202168861, 0.10346640515793204, 0.11287678884001057, 0.11622206724672379], \"rate_variance\": [0.02649073629055611, 0.01884630835635096, 0.09707000429268153, 0.1396736722660479, 0.11582862061042455, 0.2330151081753965], \"optimizer_failure_count\": 0, \"boundary_fit_count\": 0, \"rank_unresolved_count\": 0, \"interior_interval_count\": 100, \"rare_mark_warning_count\": 99, \"screened_delta_interval_count\": 1, \"interior_covered_count\": 95, \"conditional_interior_coverage\": 0.95, \"conditional_coverage_wilson95\": [0.8882495307680808, 0.9784563208456319], \"covered_and_interior_fraction\": 0.95, \"raw_wald_coverage_ignoring_boundary_validity\": 0.95, \"median_interior_interval_width\": 0.21454303448169715, \"median_duration\": 757.6767601398016, \"no_hidden_reverse_count\": 0, \"median_moment_residual_max\": 0.0034787467800836483}}\n{\"model\": \"interior\", \"n_records\": 5000, \"truth_entropy\": 0.20195187637486287, \"summary\": {\"bias\": -0.0005435164821257221, \"variance\": 0.00031732534621009914, \"rmse\": 0.01773266767619414, \"entropy_quantiles_05_50_95\": [0.17622462655324864, 0.20069648271941132, 0.23203425571575237], \"rate_bias\": [0.004405868916349309, 0.004384188804861244, 0.005865643791536979, 0.01702758579768504, 0.006381753089724995, 0.009383529847146743], \"rate_variance\": [0.002179282309480132, 0.0020871298480750074, 0.006582240451028824, 0.010994416154913238, 0.005076260667603123, 0.014002754874023183], \"optimizer_failure_count\": 0, \"boundary_fit_count\": 0, \"rank_unresolved_count\": 0, \"interior_interval_count\": 100, \"rare_mark_warning_count\": 0, \"screened_delta_interval_count\": 100, \"interior_covered_count\": 96, \"conditional_interior_coverage\": 0.96, \"conditional_coverage_wilson95\": [0.9016292856411208, 0.9843366960084523], \"covered_and_interior_fraction\": 0.96, \"raw_wald_coverage_ignoring_boundary_validity\": 0.96, \"median_interior_interval_width\": 0.0683205052353161, \"median_duration\": 7561.537149721027, \"no_hidden_reverse_count\": 0, \"median_moment_residual_max\": 0.0012349379987042983}}\n{\"model\": \"interior\", \"n_records\": 20000, \"truth_entropy\": 0.20195187637486287, \"summary\": {\"bias\": 0.000979127760319165, \"variance\": 8.687236914530587e-05, \"rmse\": 0.009325359865703863, \"entropy_quantiles_05_50_95\": [0.18880523824466858, 0.20173982505366145, 0.21964490864729433], \"rate_bias\": [-0.0027039876155543485, 0.00029745068191155966, -0.0040821016897624185, 0.00707123804196963, 0.00077280037349442, 0.016723607450787048], \"rate_variance\": [0.0004639596738894353, 0.0004586549363764971, 0.0014264843372684365, 0.0028278901094478596, 0.0012102786223810228, 0.0035356960851655283], \"optimizer_failure_count\": 0, \"boundary_fit_count\": 0, \"rank_unresolved_count\": 0, \"interior_interval_count\": 100, \"rare_mark_warning_count\": 0, \"screened_delta_interval_count\": 100, \"interior_covered_count\": 93, \"conditional_interior_coverage\": 0.93, \"conditional_coverage_wilson95\": [0.8625048526092651, 0.9656807389327273], \"covered_and_interior_fraction\": 0.93, \"raw_wald_coverage_ignoring_boundary_validity\": 0.93, \"median_interior_interval_width\": 0.03429744922632236, \"median_duration\": 30203.770511880062, \"no_hidden_reverse_count\": 0, \"median_moment_residual_max\": 0.0005833454712093622}}\n{\"model\": \"moderately_sparse\", \"n_records\": 500, \"truth_entropy\": 0.13143085767953736, \"summary\": {\"bias\": 0.09773555738619172, \"variance\": 0.1343940953757952, \"rmse\": 0.3776273210450044, \"entropy_quantiles_05_50_95\": [0.0770735268067935, 0.12085132660403117, 1.3840687906485354], \"rate_bias\": [0.016202066332646092, -0.017694944927103884, 0.0021515394081154937, 0.01721611276265933, 0.002772385335088532, 0.03729763535446351], \"rate_variance\": [0.009136691867587005, 0.026536557687341436, 0.0011413352428311485, 0.16946127246057566, 8.839901253891101e-05, 0.05852354272893255], \"optimizer_failure_count\": 0, \"boundary_fit_count\": 7, \"rank_unresolved_count\": 7, \"interior_interval_count\": 93, \"rare_mark_warning_count\": 100, \"screened_delta_interval_count\": 0, \"interior_covered_count\": 88, \"conditional_interior_coverage\": 0.946236559139785, \"conditional_coverage_wilson95\": [0.8802516127823959, 0.9768193257469159], \"covered_and_interior_fraction\": 0.88, \"raw_wald_coverage_ignoring_boundary_validity\": 0.88, \"median_interior_interval_width\": 0.17234669748619358, \"median_duration\": 888.3407718068133, \"no_hidden_reverse_count\": 1, \"median_moment_residual_max\": 0.003526472534889108}}\n{\"model\": \"moderately_sparse\", \"n_records\": 5000, \"truth_entropy\": 0.13143085767953736, \"summary\": {\"bias\": 0.0015152888668648057, \"variance\": 0.00030331829144424283, \"rmse\": 0.017394861565411916, \"entropy_quantiles_05_50_95\": [0.10715228816693638, 0.1296802952112795, 0.16349491482622658], \"rate_bias\": [-0.003014472297170445, 0.0013582554432662874, -0.0011302280399307363, 0.002836137396634242, 7.040525543662579e-05, 0.0014798167398717421], \"rate_variance\": [0.0008830166021148647, 0.003122555308684687, 0.00014056760218915287, 0.021498581084757745, 6.470975560063033e-06, 0.004759610476681753], \"optimizer_failure_count\": 0, \"boundary_fit_count\": 0, \"rank_unresolved_count\": 0, \"interior_interval_count\": 100, \"rare_mark_warning_count\": 24, \"screened_delta_interval_count\": 76, \"interior_covered_count\": 94, \"conditional_interior_coverage\": 0.94, \"conditional_coverage_wilson95\": [0.8752318455410406, 0.9722138760368118], \"covered_and_interior_fraction\": 0.94, \"raw_wald_coverage_ignoring_boundary_validity\": 0.94, \"median_interior_interval_width\": 0.0607824785864358, \"median_duration\": 8889.164453910687, \"no_hidden_reverse_count\": 0, \"median_moment_residual_max\": 0.001413547189283727}}\n{\"model\": \"moderately_sparse\", \"n_records\": 20000, \"truth_entropy\": 0.13143085767953736, \"summary\": {\"bias\": -7.357406846444925e-05, \"variance\": 6.196635758368384e-05, \"rmse\": 0.00783275859141576, \"entropy_quantiles_05_50_95\": [0.11913865049185114, 0.13057556608243404, 0.14354850211817344], \"rate_bias\": [4.322111459620359e-05, -0.004598889800947137, 0.0002585801936560994, -0.004158643315046784, 0.00016384385346585213, 0.0026279900180641302], \"rate_variance\": [0.00021251218169353957, 0.0007060521078690285, 4.00152740749671e-05, 0.005166909970534019, 1.739633090966755e-06, 0.0012567508339165572], \"optimizer_failure_count\": 0, \"boundary_fit_count\": 0, \"rank_unresolved_count\": 0, \"interior_interval_count\": 100, \"rare_mark_warning_count\": 0, \"screened_delta_interval_count\": 100, \"interior_covered_count\": 95, \"conditional_interior_coverage\": 0.95, \"conditional_coverage_wilson95\": [0.8882495307680808, 0.9784563208456319], \"covered_and_interior_fraction\": 0.95, \"raw_wald_coverage_ignoring_boundary_validity\": 0.95, \"median_interior_interval_width\": 0.030837944070987333, \"median_duration\": 35487.535226267166, \"no_hidden_reverse_count\": 0, \"median_moment_residual_max\": 0.0007393457387414454}}\n{\"model\": \"rare_reverse\", \"n_records\": 500, \"truth_entropy\": 1.1730338498263992, \"summary\": {\"bias\": -0.3358741226005172, \"variance\": 0.46340702233069103, \"rmse\": 0.7560319955795861, \"entropy_quantiles_05_50_95\": [0.1591842088740507, 0.35381645165703535, 1.8381475289273228], \"rate_bias\": [0.007840472246986918, 0.0024001150574401997, -0.0006106703641530209, 0.09426082965980542, 0.001197597898249752, 0.059561288772493226], \"rate_variance\": [0.008817938715900331, 0.032844118203895205, 0.0014465698748797105, 0.31520783371914785, 4.703665602354978e-06, 0.06436068286456338], \"optimizer_failure_count\": 0, \"boundary_fit_count\": 46, \"rank_unresolved_count\": 46, \"interior_interval_count\": 54, \"rare_mark_warning_count\": 100, \"screened_delta_interval_count\": 0, \"interior_covered_count\": 4, \"conditional_interior_coverage\": 0.07407407407407407, \"conditional_coverage_wilson95\": [0.02918152776550481, 0.1755411583859995], \"covered_and_interior_fraction\": 0.04, \"raw_wald_coverage_ignoring_boundary_validity\": 0.04, \"median_interior_interval_width\": 0.3230374590696934, \"median_duration\": 906.8831903252025, \"no_hidden_reverse_count\": 100, \"median_moment_residual_max\": 0.00456202473803656}}\n{\"model\": \"rare_reverse\", \"n_records\": 5000, \"truth_entropy\": 1.1730338498263992, \"summary\": {\"bias\": -0.31547970449557283, \"variance\": 0.3713214657701579, \"rmse\": 0.6834732584827808, \"entropy_quantiles_05_50_95\": [0.2391419682653677, 0.42689408008812624, 1.6180148941883998], \"rate_bias\": [-0.0031794985529305375, -0.00099797251669842, -0.0004254619675443383, 0.007116665498164365, 0.00030950827724246825, 0.0004797686056084993], \"rate_variance\": [0.0006476432417474071, 0.003280660604466868, 0.00015797805651345702, 0.02295891590621823, 1.8001577244504208e-07, 0.0055155540608684776], \"optimizer_failure_count\": 0, \"boundary_fit_count\": 45, \"rank_unresolved_count\": 45, \"interior_interval_count\": 55, \"rare_mark_warning_count\": 100, \"screened_delta_interval_count\": 0, \"interior_covered_count\": 9, \"conditional_interior_coverage\": 0.16363636363636364, \"conditional_coverage_wilson95\": [0.08855420336092283, 0.2826374573905716], \"covered_and_interior_fraction\": 0.09, \"raw_wald_coverage_ignoring_boundary_validity\": 0.09, \"median_interior_interval_width\": 0.27193787317817086, \"median_duration\": 9006.95500482103, \"no_hidden_reverse_count\": 100, \"median_moment_residual_max\": 0.0014420614367615797}}\n{\"model\": \"rare_reverse\", \"n_records\": 20000, \"truth_entropy\": 1.1730338498263992, \"summary\": {\"bias\": -0.22735809676553742, \"variance\": 0.3573539846267212, \"rmse\": 0.6367669502614763, \"entropy_quantiles_05_50_95\": [0.2866747873691725, 1.170174302171222, 1.5811844500731216], \"rate_bias\": [-0.0011704971623351934, -0.0038541461391260468, -0.00045400737870332497, -0.003014945294653071, 0.00013409508540906752, 0.003700212453169427], \"rate_variance\": [0.00020696126537264096, 0.0005137438573880645, 3.1064272443207994e-05, 0.0037973131093499155, 4.210974967411867e-08, 0.0011020061041342043], \"optimizer_failure_count\": 0, \"boundary_fit_count\": 50, \"rank_unresolved_count\": 50, \"interior_interval_count\": 50, \"rare_mark_warning_count\": 100, \"screened_delta_interval_count\": 0, \"interior_covered_count\": 7, \"conditional_interior_coverage\": 0.14, \"conditional_coverage_wilson95\": [0.06950833427016294, 0.2618619371058554], \"covered_and_interior_fraction\": 0.07, \"raw_wald_coverage_ignoring_boundary_validity\": 0.07, \"median_interior_interval_width\": 0.3023722511543744, \"median_duration\": 35902.12802788381, \"no_hidden_reverse_count\": 100, \"median_moment_residual_max\": 0.0005753394528062311}}\n{\"output\": \"outputs\\\\revision\\\\statistics.json\", \"conditioning_designs\": 165}\n",
+      "stderr": ""
+    },
+    {
+      "scope": "unit and independent numerical checks",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "analysis.capabilities.test_tools",
+        "analysis.revision.test_inference",
+        "analysis.revision.test_continuation",
+        "-v"
+      ],
+      "seconds": 3.711414000000005,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_absent_edges_and_one_way_edges (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_conversion_cannot_silently_erase_support (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_exact_inputs_and_precision_context (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_ill_conditioning_has_an_exact_fallback (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_reducibility_is_not_positive_stationarity (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_time_units_and_flux_entropy (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_validation_does_not_hide_small_rates_or_bad_rows (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_atlas_against_independent_labelled_enumeration (analysis.capabilities.test_tools.GraphTests) ... ok\ntest_observation_orbits_preserve_non_equivalent_patterns (analysis.capabilities.test_tools.GraphTests) ... ok\ntest_absolute_inverse_regular_at_tree_relative_inverse_degrades (analysis.revision.test_inference.InferenceTests) ... ok\ntest_entropy_cycle_against_stationary_edge_sum (analysis.revision.test_inference.InferenceTests) ... ok\ntest_entropy_gradient_complex_step (analysis.revision.test_inference.InferenceTests) ... ok\ntest_full_six_rate_jacobian_complex_step (analysis.revision.test_inference.InferenceTests) ... ok\ntest_noiseless_recovery_all_six_unknown_rates (analysis.revision.test_inference.InferenceTests) ... ok\ntest_resolvent_against_time_domain_quadrature (analysis.revision.test_inference.InferenceTests) ... ok\ntest_stationary_marked_trajectory_against_exact_joint_moments (analysis.revision.test_inference.InferenceTests) ... ok\ntest_critical_triangle_matches_preserved_exact_path_witness (analysis.revision.test_continuation.ContinuationTests) ... ok\ntest_exact_interval_arithmetic_and_denominator_domain (analysis.revision.test_continuation.ContinuationTests) ... ok\ntest_generic_envelope_identity_independent_of_theta_constants (analysis.revision.test_continuation.ContinuationTests) ... ok\ntest_offbalanced_root_slope_and_rate_data_agreement (analysis.revision.test_continuation.ContinuationTests) ... ok\ntest_uniform_interval_certificate_has_strict_margins (analysis.revision.test_continuation.ContinuationTests) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 2.426s\n\nOK\n"
+    },
+    {
+      "scope": "manuscript compilation",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "manuscript/scripts/build.py",
+        "--tectonic",
+        "tmp/tectonic/tectonic.exe",
+        "--offline"
+      ],
+      "seconds": 2.629864900000001,
+      "returncode": 0,
+      "stdout": "Compiled manuscript/main.pdf; build provenance: manuscript\\supplementary\\build-report.json\n",
+      "stderr": ""
+    },
+    {
+      "scope": "source and build validation",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "manuscript/scripts/validate.py"
+      ],
+      "seconds": 0.16931430000001058,
+      "returncode": 0,
+      "stdout": "{\n  \"executed_at_utc\": \"2026-09-15T14:01:33.863849+00:00\",\n  \"latex_labels\": 112,\n  \"latex_references\": 110,\n  \"verified_bibliography_entries_all_cited\": 31,\n  \"local_document_links_checked\": 74,\n  \"outer_archive_links_recognized_in_extraction\": [],\n  \"build_hashes_match\": true,\n  \"all_checks_passed\": true,\n  \"scope\": \"Source/package validation, not an independent proof or web-source verification.\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "all_passed": true,
+  "driver_sha256": "efbed45070da49c16e10791d74857b6c7d343d8b902243ee194dbc5cd993b6ef",
+  "finished_at_utc": "2026-09-15T14:01:33.870246+00:00",
+  "output_sha256": {
+    "PROJECT.md": "5a230d0844b9149c2716114c1e40fb4cde92dc6b0c67105d59916fcea82b3964",
+    "reproduce_all.py": "efbed45070da49c16e10791d74857b6c7d343d8b902243ee194dbc5cd993b6ef",
+    "analysis/revision/audit_repository.py": "6e95138d87d9c910be94637910aab798e37b2c72c98bae083dadcf1e1b4aea3f",
+    "analysis/revision/continuation.py": "5744a7be8cfa7120c4ed873b6012ff5fdb5f19c54bd8972e75aca77e4a22d755",
+    "analysis/revision/graph_checks.py": "d88ded2c34979daffec6d06c197e7b58578096d02e3a56877efaaec9067d69f9",
+    "analysis/revision/inference.py": "772d47daf43b243bf5479fdc05d3e12dd4d5f955bb94d4c0790b943299b4db25",
+    "analysis/revision/rare_event.py": "bedc843e4534470a3f7309df38ecc8adaf825d9b4757472ce38457c2de9d9a46",
+    "analysis/revision/replay_independent.py": "d8f9ae76bfbb10d90c0736eb8dc95dc56ff64f18bd6c4009cbd0d4d1046eb99e",
+    "analysis/revision/test_continuation.py": "50f2e5b9fcde1ff24457985fad018d00b2ba2b632ad7aa38e160c93e0331c533",
+    "analysis/revision/test_inference.py": "6b02204b5a91f28560844d3d8e722ec2a8974304a0efe4a48da0713156a568ad",
+    "manuscript/figures/balanced-fiber.pdf": "bbb8f2d801bad37521c7d984baa4796350fe8dbff648ec8e0dd7b13998cc41a6",
+    "manuscript/figures/conditioning.pdf": "8f35636f242e7f973daf516735fd1a47ccb22d1d33e2d903736a498bc477af6a",
+    "manuscript/figures/continuation.pdf": "d039c179ccfdee12be06c4a6eeac03f1889f124738d281bdc6d44203c3aba948",
+    "manuscript/figures/finite-data.pdf": "a261ed2bffcbad2df33e069e10150a12f04557561101300e1365093d6116558d",
+    "manuscript/figures/realization-geometry.pdf": "62096fae1296d6c76f924c4e2f3f523436d73ae259772bc23e7cbd828c563a4f",
+    "manuscript/figures/three-state-instability.pdf": "a1ab5e09e6e076c4e1834ded492b28317309ac8e616bb6d50212c835ee7e5e08",
+    "outputs/revision/statistics.json": "14812ea7e12c10fa4b82f9fedeb9739121fe158d36b7c20a675d38776569246a",
+    "outputs/revision/continuation.json": "14e0a533763674d72f6e307c2432261749fa86ad47acae3157577f9d479b0196",
+    "outputs/revision/rare-event.json": "d6262cf79a00d5498b19c4389c9ea52abb7d662310c1996923440e337927806f",
+    "outputs/revision/graph-checks.json": "86062a768dcbfd586bd0ddf0ee2bec1024e7facbb21fc17193a8c8b1ab496be4",
+    "manuscript/main.pdf": "7f4945b86fb2dbbeb27f1f748db5afff776a6666068d85ff2cee64abacec2f5e"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "all_exact_checks_passed": true,
+  "kind": "exact algebraic identities and explicit counterexamples; conventional proof, not formal verification",
+  "executed_at_utc": "2026-09-18T23:35:53.698175+00:00",
+  "command": ".venv/Scripts/python.exe -B -m analysis.correctness.laplace_two",
+  "environment": {
+    "python": "3.9.12",
+    "sympy": "1.14.0",
+    "platform": "Windows-10-10.0.22631-SP0"
+  },
+  "source_sha256": "2456867750bbb2f30c255a1a533872d04e78c7acf42b05c7f7e0a7078272cf95",
+  "parameter_order": [
+    "r",
+    "s",
+    "a",
+    "b",
+    "c",
+    "d"
+  ],
+  "domains": "r,s>0; connected reciprocal 3-state support; lambda_2>lambda_1>0. Generic symbolic triangle check uses a,b,c,d>0. Leaf beta family requires beta>0,u(beta)>0; explicit family 0<beta<7.",
+  "randomness": "none",
+  "precision": "exact symbolic/rational arithmetic; no numeric tolerances",
+  "generic_schur_inverse": [
+    [
+      "(a*d + a*lambda + b*lambda + b*r + d*lambda + d*r + lambda**2 + lambda*r)/(b*r + d*r + lambda*r)",
+      "-a*d/(b*r + d*r + lambda*r)"
+    ],
+    [
+      "-b*c/(b*s + d*s + lambda*s)",
+      "(b*c + b*lambda + b*s + c*lambda + d*lambda + d*s + lambda**2 + lambda*s)/(b*s + d*s + lambda*s)"
+    ]
+  ],
+  "generic_two_point_reconstruction": [
+    "r",
+    "s",
+    "a",
+    "b",
+    "c",
+    "d"
+  ],
+  "leaf_counterexamples": [
+    {
+      "rates_user_order": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      "generator": [
+        [
+          "-2",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "-1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "-1"
+        ]
+      ],
+      "full_transform": [
+        [
+          "0",
+          "1/(lambda + 1)"
+        ],
+        [
+          "(lambda + 1)/(lambda**2 + 3*lambda + 1)",
+          "0"
+        ]
+      ],
+      "at_lambda_1": [
+        [
+          "0",
+          "1/2"
+        ],
+        [
+          "2/5",
+          "0"
+        ]
+      ],
+      "at_lambda_2": [
+        [
+          "0",
+          "1/3"
+        ],
+        [
+          "3/11",
+          "0"
+        ]
+      ],
+      "at_lambda_3": [
+        [
+          "0",
+          "1/4"
+        ],
+        [
+          "4/19",
+          "0"
+        ]
+      ],
+      "stationary": [
+        "1/3",
+        "1/3",
+        "1/3"
+      ],
+      "mark_intensities": [
+        "1/3",
+        "1/3"
+      ],
+      "total_mark_intensity": "2/3",
+      "trace": "-4",
+      "network_entropy": "0 (reciprocal tree / detailed balance)"
+    },
+    {
+      "rates_user_order": [
+        "6/5",
+        "1",
+        "12/5",
+        "2",
+        "0",
+        "0"
+      ],
+      "generator": [
+        [
+          "-18/5",
+          "6/5",
+          "12/5"
+        ],
+        [
+          "1",
+          "-1",
+          "0"
+        ],
+        [
+          "2",
+          "0",
+          "-2"
+        ]
+      ],
+      "full_transform": [
+        [
+          "0",
+          "1/(lambda + 1)"
+        ],
+        [
+          "(6*lambda + 12)/(5*lambda**2 + 28*lambda + 12)",
+          "0"
+        ]
+      ],
+      "at_lambda_1": [
+        [
+          "0",
+          "1/2"
+        ],
+        [
+          "2/5",
+          "0"
+        ]
+      ],
+      "at_lambda_2": [
+        [
+          "0",
+          "1/3"
+        ],
+        [
+          "3/11",
+          "0"
+        ]
+      ],
+      "at_lambda_3": [
+        [
+          "0",
+          "1/4"
+        ],
+        [
+          "10/47",
+          "0"
+        ]
+      ],
+      "stationary": [
+        "5/17",
+        "6/17",
+        "6/17"
+      ],
+      "mark_intensities": [
+        "6/17",
+        "6/17"
+      ],
+      "total_mark_intensity": "12/17",
+      "trace": "-33/5",
+      "network_entropy": "0 (reciprocal tree / detailed balance)"
+    }
+  ],
+  "full_law_difference": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "(-lambda**3 + 3*lambda**2 - 2*lambda)/(5*lambda**4 + 43*lambda**3 + 101*lambda**2 + 64*lambda + 12)",
+      "0"
+    ]
+  ],
+  "explicit_two_point_leaf_family": [
+    "-6/(beta - 7)",
+    "1",
+    "(-beta**2 - 3*beta - 2)/(beta - 7)",
+    "beta",
+    "0",
+    "0"
+  ],
+  "explicit_family_each_mark_intensity": "3*beta/(8*beta + 1)",
+  "generic_two_point_leaf_family": [
+    "(b**2*r + b*lambda_1*r + b*lambda_2*r + lambda_1*lambda_2*r)/(a*b - a*beta + b**2 + b*lambda_1 + b*lambda_2 + lambda_1*lambda_2)",
+    "s",
+    "(a*beta**2 + a*beta*lambda_1 + a*beta*lambda_2 + a*lambda_1*lambda_2)/(a*b - a*beta + b**2 + b*lambda_1 + b*lambda_2 + lambda_1*lambda_2)",
+    "beta",
+    "0",
+    "0"
+  ],
+  "exact_jacobian_ranks": {
+    "one_point_complete": 4,
+    "two_points_complete": 6,
+    "two_points_leaf": 5,
+    "three_points_leaf": 6,
+    "two_point_leaf_null_tangent_user_order": [
+      "1/6",
+      "0",
+      "1",
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  "one_point_complete_counterexample": {
+    "first": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "second": [
+      "2",
+      "2",
+      "3",
+      "2/5",
+      "3",
+      "2/5"
+    ],
+    "data_at_1": [
+      [
+        "1/21",
+        "8/21"
+      ],
+      [
+        "8/21",
+        "1/21"
+      ]
+    ]
+  },
+  "calibration": "Leaf pair distinguished by r, absolute stationary mark intensities, trace, or a third positive transform. Both have s=1, normalized mark proportions (1/2,1/2), entropy=0. No full-law equivalence is claimed.",
+  "empirical_TV_and_moment_rectangle": "Analytic measure-theoretic and martingale arguments in LAPLACE-TWO.md; not claims certified by this symbolic script."
+}

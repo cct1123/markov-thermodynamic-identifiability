@@ -1,0 +1,449 @@
+% Replacement text for Appendices A and B. The coordinator owns integration.
+% Existing equation and section labels are retained where possible.
+\section{Observation equivalence and minimum order}\label{app:realization}
+A matrix realization $(R,T,B)$ is minimal if its reachable space
+$\operatorname{span}\{T^jBv:j\ge0\}$ is the whole state space and its
+unobservable space $\{v:RT^jv=0\text{ for all }j\ge0\}$ is zero.
+These are linear conditions; they impose no sign restriction on a change
+of realization coordinates.
+
+\begin{lemma}[Finite equality certificate and pinned similarity]\label{lem:orbit}
+Realizations of dimensions $n,n'$ have the same all-time kernel if and only
+if $RT^jB=R'T'^jB'$ for $0\le j<n+n'$. Equivalent minimal realizations have
+equal dimensions and a unique similarity intertwining their input,
+generator and output maps. For the resolved reverse pair in
+Sec.~\ref{sec:model}, after fixing the visible order this similarity has
+the form
+\begin{equation}
+ S=\diag(I_2,U),\qquad U\1=\1,\qquad Q'=S^{-1}QS.\label{eq:orbit}
+\end{equation}
+Conversely, every such similarity yielding an admissible generator
+preserves the complete kernel. The entries of $U$ need not be nonnegative.
+\end{lemma}
+\begin{proof}
+Apply Cayley--Hamilton to $\diag(T,T')$. Vanishing of the first $n+n'$
+differences forces every subsequent difference to vanish, and the
+convergent exponential series gives all-time equality. Differentiation at
+zero proves the converse.
+
+For minimal realizations define
+\begin{equation}
+ S\left(\sum_jT'^jB'v_j\right)=\sum_jT^jBv_j.
+\end{equation}
+If the vector on the left is zero, equality of Markov parameters makes
+every $RT^\ell$ applied to the vector on the right zero; source
+observability makes that vector zero. The same argument in reverse gives
+an inverse. Reachability then gives $SB'=B$, $ST'=TS$, $RS=R'$, and
+uniqueness. A sufficiently large block Hankel matrix $(RT^{i+j}B)_{i,j}$
+has rank equal to the minimal dimension. Every realization of the same
+kernel factors this matrix through its state space, so a competing
+dimension cannot be smaller.
+
+The zero-time data determine $q_{xy}=\psi_{-,+}(0)$ and
+$q_{yx}=\psi_{+,-}(0)$. After putting the same two visible states first,
+the reset maps coincide and the columns of $B=B'$ are positive multiples
+of the two visible coordinate vectors. Thus $SB=B$ pins the visible
+columns of $S$, and $RS=R$ pins its visible rows. This proves the block
+form of $S$.
+
+The killed generator $T$ is invertible. Indeed, in a finite irreducible
+chain each initial state has a positive probability of producing an
+observed jump in some common finite time. Taking the minimum over the
+finitely many states gives a strictly positive probability. The Markov
+property then bounds survival geometrically over successive intervals,
+so $e^{Tt}\to0$ and $T$ is Hurwitz. Since $T\1=-B\1$,
+\begin{equation}
+ TS\1=ST'\1=-SB\1=-B\1=T\1,
+\end{equation}
+and invertibility gives $S\1=\1$. The observed jump matrices have nonzero
+entries only in the fixed visible block, so they commute with $S$.
+Consequently the similarity for $T$ is also the stated similarity for
+$Q$. Direct substitution in $Re^{Tt}B$ proves sufficiency.
+\end{proof}
+
+For the balanced source the hidden blocks are
+\begin{equation}
+ X=\begin{pmatrix}2&0&8\\0&7&11\end{pmatrix},\quad
+ Y=\begin{pmatrix}3&0\\0&6\\z&z\end{pmatrix},\quad
+ H=\begin{pmatrix}-7&4&0\\5&-11&0\\0&0&-2z\end{pmatrix}.
+ \label{eq:blocks}
+\end{equation}
+Writing $Y_j$ for its columns, direct determinants give
+\begin{align}
+ \det(Y_1,Y_2,HY_1)&=-9z(4z-9),\\
+ \det(Y_1,Y_2,HY_2)&=-18z(2z-3),\\
+ \det\begin{pmatrix}X_{1,:}\\X_{2,:}\\(XH)_{2,:}\end{pmatrix}
+ &=-14(22z+19).
+\end{align}
+For $z>0$ the first two cannot vanish simultaneously and the last never
+vanishes. Hence $(H,Y)$ is reachable and $(X,H)$ observable, both with
+hidden dimension three.
+
+To pass from hidden to full minimality, write
+$T=\left(\begin{smallmatrix}A_{\rm kill}&X\\Y&H\end{smallmatrix}\right)$.
+The columns of $B$ span the visible plane. Applying $T$ to that plane and
+subtracting the visible component puts $(0,Y_j)^T$ in the full reachable
+space. If $(0,h)^T$ is in that space, applying $T$ and subtracting its
+visible component puts $(0,Hh)^T$ there as well. Hidden reachability thus
+gives full reachability. If a full vector is unobservable, $Rv=0$ first
+forces its visible coordinates to vanish. Successive output equations
+then give $XH^jv_H=0$ for every $j$, forcing $v_H=0$ by hidden
+observability. Therefore the full minimal order is five for every $z>0$,
+including repeated hidden poles and $z=2$. The cap makes every competitor
+exactly five dimensional and minimal.
+
+The observed rates and first derivatives determine the visible generator
+block $A$, including the killed visible diagonals. After the known row
+permutation and rate division, the observed Laplace matrix determines
+the visible principal block $K(\lambda)$ of $(\lambda I-T)^{-1}$. For
+$\lambda>0$, both $\lambda I-H$ and $\lambda I-T$ are invertible, and
+the Schur complement gives
+\begin{equation}
+ X(\lambda I-H)^{-1}Y
+ =\lambda I-A_{\rm kill}-K(\lambda)^{-1}.\label{eq:htransfer}
+\end{equation}
+Thus every competitor has the same matrix-valued hidden transfer.
+Fitting its scalar entries separately would discard this common
+realization constraint.
+
+\section{Global support exhaustion and the invariant triangle}\label{app:cone}
+\subsection{Modal coordinates and every disconnected hidden support}
+Put $\rho=\sqrt6$, $\alpha=9-2\rho$, $\beta=9+2\rho$,
+$r_y=4(\rho-1)/5$, and
+\begin{gather}
+ D=\diag(-\alpha,-\beta,-2z),\quad X_m=(p,q,v),\quad
+ Y_m=\begin{pmatrix}r\\f\\w\end{pmatrix},\label{eq:modal}\\
+ p=\binom{3+\rho/2}{35\rho/8},\quad
+ q=\binom{3-\rho/2}{-35\rho/8},\quad v=\binom8{11},\\
+ r=(1,r_y),\quad f=(1,-4(\rho+1)/5),\quad w=(z,z).
+\end{gather}
+Direct multiplication gives
+\begin{equation}
+ X(\lambda I-H)^{-1}Y
+ =\frac{pr}{\lambda+\alpha}+\frac{qf}{\lambda+\beta}
+  +\frac{vw}{\lambda+2z}.\label{eq:residues}
+\end{equation}
+Here $pr$ and $vw$ are strictly positive rank-one residues, whereas $qf$
+has negative off-diagonal entries. In this appendix $z\ge21/2$, so all
+three poles are distinct and $2z>\beta>\alpha>0$.
+
+Reciprocity makes hidden connected components the irreducible blocks of
+$H'$. On three hidden states there are precisely three component-size
+possibilities: $(1,1,1)$, $(2,1)$, and $(3)$. In a disconnected case,
+each eigenvalue belongs to exactly one component, since the spectrum is
+simple. Every mode has its displayed nonzero transfer residue, by
+minimality. A singleton contributes a nonnegative outer-product residue.
+Three singletons, or a singleton at $-\beta$, are consequently impossible.
+If the singleton were at $-\alpha$, the remaining irreducible pair would
+have dominant eigenvalue $-\beta$. Its transfer residue there is
+$(X'r_P)(\ell_P^TY')/(\ell_P^Tr_P)\ge0$ by its positive Perron vectors,
+again contradicting $qf$. Thus the singleton must have eigenvalue $-2z$.
+
+The remaining pair has zeroth transfer moment
+$pr+qf=\diag(6,42)$. For either of its states, reciprocal visible support
+makes a positive off-diagonal contribution equivalent to attachment to
+both visible states. Nonnegativity therefore forbids a shared visible
+neighbor. The two positive diagonal moments require one state attached
+only to $x$ and the other only to $y$; neither can lack visible
+attachment. Denote their entrance rates by $x_1,x_2$, exits by $y_1,y_2$,
+and internal rates by $h_0,k_0$. The zeroth and first moments give
+\begin{gather}
+ x_1y_1=6,\quad x_2y_2=42,\quad y_1+h_0=7,\quad y_2+k_0=11,\\
+ x_1h_0y_2=48,\qquad x_2k_0y_1=105.
+\end{gather}
+All denominators in the following elimination are positive physical
+rates. Multiplying the off-diagonal equations and dividing by the two
+diagonal equations gives $h_0k_0=20$. Dividing the first off-diagonal
+equation by $x_1y_1=6$ gives
+$h_0(11-k_0)=8(7-h_0)$, or $19h_0-h_0k_0=56$. Hence
+\begin{equation}
+ (h_0,k_0,y_1,y_2,x_1,x_2)=(4,5,3,6,2,7).
+\end{equation}
+The fast singleton's residue fixes its entrance/exit product; its exit
+sum $2z$ removes the remaining scalar freedom and gives entrances
+$(8,11)^T$ and exits $(z,z)$. This exhausts all disconnected hidden
+supports and leaves exactly the source, up to hidden permutations.
+
+\subsection{Connected supports produce finite nondegenerate triangles}
+For a connected hidden support, the hidden block similarity provides a
+real invertible $V$ such that
+\begin{equation}
+ H'=V^{-1}DV\text{ is irreducible Metzler},\qquad
+ X'=X_mV\ge0,\qquad Y'=V^{-1}Y_m\ge0.
+\end{equation}
+The Perron right eigenvector $b=V^{-1}e_1$ has a common strict sign.
+Since $X'b=p>0$, that sign is positive. The left Perron eigenvector
+$a_P^T=e_1^TV$ also has a common strict sign; $a_P^Tb=1$ makes it
+positive. Write $s_i=(a_P)_i>0$ for the first coordinate of column $i$ of
+$V$. Sectioning the invariant cone $V\mathbb R_+^3$ at first coordinate
+one therefore gives exactly the convex hull of the three columns
+$V_{:,i}/s_i=(1,u_i,v_i)^T$. Their affine independence follows from
+$\det V\ne0$. Moreover
+\begin{equation}
+ e_1=\sum_i b_is_i\frac{V_{:,i}}{s_i},\qquad
+ b_is_i>0,\quad\sum_i b_is_i=1,
+\end{equation}
+so the planar origin lies strictly inside this finite triangle. This
+argument covers arbitrarily ill-conditioned but invertible similarities;
+it assumes no common compactness bound. A zero-first-coordinate ray is
+impossible in this connected branch, and disconnected supports have
+already been handled separately.
+
+Since $e^{Dt}V=Ve^{H't}$ and $e^{H't}\ge0$, the cone is invariant.
+Sectioning after division by the positive first-coordinate contraction,
+and rescaling time by $\beta-\alpha$, gives the planar flow
+\begin{equation}
+ (u,v)\longmapsto(e^{-t}u,e^{-kt}v),\qquad
+ k=\frac{2z-9+2\rho}{4\rho}>1.\label{eq:flow}
+\end{equation}
+Nonnegative input barycentric coordinates and output values mean the
+triangle contains $(1,A),(-m,B_0)$ and is contained in the wedge
+\begin{gather}
+ A=z,\quad B_0=z/r_y,\quad m=(7+2\rho)/5,\\
+ L=(3-\rho/2)/8,\quad R_w=35\rho/88,\\
+ v\ge L(-m-u),\qquad v\ge R_w(u-1).\label{eq:wedge}
+\end{gather}
+
+\subsection{Vertex signs, boundary cases and the reflected inequality}
+A wedge point with nonpositive height has abscissa in $[-m,1]$.
+If the triangle had only one positive-height vertex with abscissa $u_0$,
+positive height at input abscissa $1$ would require $u_0\ge1$: otherwise
+every convex combination using that vertex with positive weight has
+abscissa less than one. The other positive input similarly requires
+$u_0\le-m$, a contradiction. The interior origin requires a
+negative-height vertex. Thus the three vertex heights consist of two
+strictly positive values and one strictly negative value; zero-height
+vertices are excluded. The negative vertex is strictly inside the
+abscissa interval, and the two positive vertices must extend to either
+end. Consequently they can be labeled
+\begin{equation}
+ (-\ell,P),\quad(c,Q_v),\quad(d,-W),\quad
+ \ell\ge m,\ c\ge1,\ -m<d<1,\ P,Q_v,W>0.\label{eq:vertices}
+\end{equation}
+At this stage $\ell=m$, $c=1$, and $d=0$ have not been discarded.
+Put $a=k-1>0$. Wedge membership gives
+\begin{align}
+ P&\ge L(\ell-m),\qquad Q_v\ge R_w(c-1),\nonumber\\
+ W&\le\min\{L(m+d),R_w(1-d)\}<1.\label{eq:ineq1}
+\end{align}
+The last strict inequality follows from
+$W<L(m+1)<(1/4)(7/2)=7/8$. Lower-face velocities at the two upper
+vertices give
+\begin{equation}
+ (a\ell+kd)P\le\ell W,\qquad
+ (ac-kd)Q_v\le cW.\label{eq:ineq2}
+\end{equation}
+Input containment above and below the relevant edges gives
+\begin{align}
+ B_0&\le H_c:=\frac{(c+m)P+(\ell-m)Q_v}{\ell+c},\label{eq:height}\\
+ A&\le\frac{(c-1)P+(\ell+1)Q_v}{\ell+c},\label{eq:upperA}\\
+ (Q_v+W)(1-d)&\le(A+W)(c-d),\label{eq:lowerA}\\
+ (P+W)(d+m)&\le(B_0+W)(\ell+d).\label{eq:lowerB}
+\end{align}
+All geometric denominators here are strictly positive.
+
+If $d<0$, the second inequality~\eqref{eq:ineq2} gives $Q_v<W/a$.
+Using explicitly the right-output inequality in~\eqref{eq:ineq1} and
+then~\eqref{eq:lowerB}, one obtains
+\begin{align}
+ A&\le Q_v+\frac{(c-1)P}{\ell+c}
+ \le Q_v\left(1+\frac{P}{R_w(\ell+c)}\right)\nonumber\\
+ &<\frac{W}{a}\left(1+\frac{B_0+W}{R_w(m+d)}\right)
+ \le\frac{L}{a}\left(m+d+\frac{B_0+W}{R_w}\right)\nonumber\\
+ &<\frac{L}{a}\left(m+\frac{B_0+1}{R_w}\right)
+ <\frac{25/8+(25/18)(z+1)}{z-7}.
+\end{align}
+In the middle step, $(P+W)/(\ell+c)<(B_0+W)/(m+d)$ follows from
+$\ell+d<\ell+c$. The final comparison uses
+$m<5/2$, $L<1/4$, $R_w>9/10$, $B_0<z$ and $a>(z-7)/5$.
+The last fraction is below $z=A$ for $z\ge10$, since clearing the
+positive denominator gives
+\begin{equation}
+ 72(z-10)^2+836(z-10)+835>0.
+\end{equation}
+This contradiction excludes $d<0$.
+
+For $d\ge0$, $a>7/10$ and~\eqref{eq:ineq2} imply
+$P\le W/a<10/7<2<B_0<A$. Upper containment gives $Q_v\ge A$ and
+$\ell>m$: otherwise $B_0\le H_c=P$. Since $aQ_v-W>0$, the equivalent
+inequality $c(aQ_v-W)\le kdQ_v$ also excludes $d=0$. Write
+$\epsilon=1-d>0$. From $c\ge1$ and the same inequality,
+\begin{equation}
+ \epsilon\le\frac{A+W}{kA}
+ \le\frac{A+R_w\epsilon}{kA},\qquad
+ \epsilon\le\frac1{k-R_w/A}.\label{eq:apexbound}
+\end{equation}
+The denominator is positive. The wedge apex satisfies
+\begin{equation}
+ d_0=\frac{R_w-Lm}{L+R_w}>0,\qquad
+ 1-d_0=\frac{L(m+1)}{L+R_w}.
+\end{equation}
+At $z=21/2$ the latter expression exceeds the last bound
+in~\eqref{eq:apexbound} by more than $0.014259$, as certified by rational
+evaluation in $\mathbb Q(\sqrt6)$. Since $k-R_w/z$ increases with $z$,
+every candidate has $d>d_0$. The tighter bottom bound is therefore
+$W\le R_w\epsilon$, with equality allowed.
+
+\subsection{The global envelope, including both sides of its pole}
+Fix $d,W$ from a feasible triangle. The left bounds imply
+\begin{equation}
+ L(\ell-m)\le g(\ell):=\frac{\ell W}{a\ell+kd}.
+\end{equation}
+Here $g'>0$, $g''<0$, and the left-intersection equation for
+$\ell_*=m+t$ is a quadratic in $t$ with positive leading coefficient and
+negative constant. It has precisely one positive root. Thus
+\begin{equation}
+ \ell\le\ell_*,\quad P\le P_*:=Lt=g(m+t),\qquad
+ Lt[a(m+t)+kd]=(m+t)W.\label{eq:leftmax}
+\end{equation}
+In particular $P_*<W/a<2$. The partial derivatives
+\begin{equation}
+ \frac{\partial H_c}{\partial P}=\frac{c+m}{\ell+c}>0,
+ \qquad
+ \frac{\partial H_c}{\partial\ell}
+ =\frac{(c+m)(Q_v-P)}{(\ell+c)^2}>0
+\end{equation}
+remain strict when $P$ is increased to $P_*$ and $\ell$ to $\ell_*$,
+because $Q_v\ge A>2$. This replacement is an upper-bound relaxation;
+it need not retain every unused constraint. Equality in this relaxation
+forces both $P=P_*$ and $\ell=\ell_*$.
+
+For the right vertex set
+\begin{equation}
+ \mathcal L(c)=\frac{A+W}{\epsilon}(c-d)-W,
+ \qquad \mathcal H(c)=\frac{cW}{ac-kd}.
+\end{equation}
+The line bounds $Q_v$ for every $c\ge1$. When $c\le kd/a$, the
+invariance inequality has nonpositive left coefficient and imposes no
+additional bound; one must not divide by it. When $c>kd/a$, it gives
+$Q_v\le\mathcal H(c)$. The relevant crossover is
+\begin{equation}
+ c_* =\frac{k}{a}\left[d+\frac{W\epsilon}{A+W}\right],\qquad
+ Q_*^v=\frac{Ad+W}{a\epsilon}.\label{eq:rightmax}
+\end{equation}
+Indeed $c_*-kd/a=kW\epsilon/[a(A+W)]>0$, and on the positive-denominator
+branch the exact factorization is
+\begin{equation}
+ \mathcal L(c)-\mathcal H(c)
+ =\frac{a(A+W)(c-d)(c-c_*)}{\epsilon(ac-kd)}.
+\end{equation}
+The other algebraic intersection $c=d$ lies outside $c\ge1$.
+Therefore the active bound is the line up to $c_*$ and the hyperbola
+afterward, including the possible interval below the pole. If $c_*<1$,
+the hyperbola at $c=1$ is less than $\mathcal L(1)=A$, and decreases for
+larger $c$, contradicting $Q_v\ge A$. Hence $c_*\ge1$ and $Q_*^v\ge A$.
+
+Write $t=\ell_*-m>0$. At fixed left maximum,
+\begin{equation}
+ H_c=P_*+\frac{t(Q_v-P_*)}{\ell_*+c},\qquad
+ \partial_{Q_v}H_c=\frac{t}{\ell_*+c}>0.
+\end{equation}
+Along the line its derivative with respect to $c$ is
+\begin{equation}
+ \frac{t[(A+W)(\ell_*+d)/\epsilon+W+P_*]}{(\ell_*+c)^2}>0.
+\end{equation}
+Along the hyperbola,
+\begin{equation}
+ \frac{dH_c}{dc}
+ =\frac{t(P_*-\mathcal H(c))}{(\ell_*+c)^2}
+ -\frac{tWkd}{(\ell_*+c)(ac-kd)^2}<0,
+\end{equation}
+because $\mathcal H(c)>W/a>P_*$. Thus the unique right maximum is
+$(c_*,Q_*^v)$, and equality forces both coordinates to have those values.
+
+It remains to increase $W$ at fixed $d$. Put
+$r_c=c_*/Q_*^v=k\epsilon/(A+W)$; the resulting envelope is
+\begin{equation}
+ H_* =\frac{t[Lm+(1+Lr_c)Q_*^v]}{m+t+r_cQ_*^v}.\label{eq:envelope}
+\end{equation}
+Implicit differentiation of~\eqref{eq:leftmax} gives $dt/dW>0$, since
+the derivative of its left-minus-right expression with respect to $t$,
+after using the equality, is
+\begin{equation}
+ L\left[a(m+t)+\frac{kdm}{m+t}\right]>0.
+\end{equation}
+Also $dQ_*^v/dW=1/(a\epsilon)>0$ and $dr_c/dW<0$.
+For $H_*(t,Q,r)$, the three relevant partial derivatives have numerators
+\begin{equation}
+ [Lm+(1+Lr)Q](m+rQ),\quad t(m+t+Lrt),\quad tQ(Lt-Q),
+\end{equation}
+over the common positive square $(m+t+rQ)^2$. Their signs are positive,
+positive, and negative. These signs hold throughout increasing $W$ to
+$R_w\epsilon$, since $Lt<W/a<2<A\le Q_*^v$. Thus the increase is
+strict, and the final bound is attained only at $W=R_w\epsilon$.
+
+\subsection{Discriminant exclusion and propagation of every equality}
+After the last saturation, put $J=am+k$ and solve
+\eqref{eq:leftmax} for $\epsilon$:
+\begin{equation}
+ \epsilon=\frac{Lt(J+at)}{R_wm+(kL+R_w)t},\qquad
+ H_*-B_0=\frac{f_0+f_1t+f_2t^2}{(J+at)^2}.\label{eq:quadratic}
+\end{equation}
+All denominators are positive. Direct rational substitution gives
+\begin{align}
+ f_0&=AR_wm/L-B_0J^2,\\
+ f_1&=A(R_w/L+k-am)+LJ^2+R_wJ-2B_0Ja,\\
+ f_2&=a[LJ+R_w-A(1+Lk/R_w)-B_0a].\label{eq:fcoeff}
+\end{align}
+In particular
+\begin{align}
+ f_0&=-\frac{19+9\rho}{100}z\left(z^2-11z+\frac{211}{44}\right),\label{eq:f0}\\
+ f_1^2-4f_0f_2
+ &=-\left(\frac{11}{1200}+\frac{11\rho}{4200}\right)
+ \left(z+\frac{19}{22}\right)^2\frac{\mathcal P(z)}{352}.
+ \label{eq:discriminant}
+\end{align}
+Descartes' rule and opposite signs at zero and positive infinity imply
+that $\mathcal P$ has exactly one positive root. Rational endpoint signs
+isolate it in $(10.55714966866,10.55714966867)$. The positive root of the
+quadratic in~\eqref{eq:f0} is below this interval: that quadratic is
+positive at the lower endpoint and strictly increasing there and
+above. Hence for every $z>\zs$, $f_0<0$ and the discriminant is negative.
+The quadratic has no real zero and is negative at zero, so it is
+negative everywhere. The necessary envelope bound excludes every
+connected hidden support, without any boundedness assumption on the
+candidate triangle coordinates.
+
+At $z=\zs$, exact interval evaluation gives
+\begin{equation}
+ -0.520929<f_0<-0.520928,\quad
+ 5.496508<f_1<5.496509,\quad
+ -14.498918<f_2<-14.498917.
+\end{equation}
+The numerator is nonpositive and vanishes only at
+$t_*=-f_1/(2f_2)>0$. Start with any feasible triangle and follow the
+three upper-bound relaxations above. Its original upper input height is
+at least $B_0$; its final saturated height is at most $B_0$. Therefore
+every relaxation is equality. Strict increase under $W$ saturation
+first forces the original $W=R_w(1-d)$. The final numerator forces
+$t=t_*$. Equation~\eqref{eq:quadratic} now fixes $\epsilon$ and hence
+$d,W$ uniquely. Equality in the left and right relaxations fixes
+$(\ell,P)=(m+t_*,Lt_*)$ and $(c,Q_v)=(c_*,Q_*^v)$.
+This explicitly rules out equality lost in any intermediate relaxation.
+
+The left and bottom vertices lie on the left and right output faces.
+Input $(1,A)$ lies on the opposite lower-right edge, and input
+$(-m,B_0)$ lies on the opposite upper edge. The paired input/output
+equalities remove the same two visible reciprocal pairs. The two
+lower-face tangencies remove both directions between the upper
+vertices. These are necessary exact zeros; positivity of the remaining
+rates is an additional existence check, not a consequence of the zeros
+alone.
+
+Finally a fixed triangle leaves no free positive column scaling. For
+its sectioned vertex matrix $V$, set
+$\bar H=V^{-1}DV$, $\bar Y=V^{-1}Y_m$, $\bar X=X_mV$.
+If its columns are rescaled by a positive vector $w$, hidden row
+normalization requires $\bar H w+\bar Y\1=0$. Since all three hidden
+eigenvalues are nonzero, there is exactly one possible scaling:
+\begin{equation}
+ w=-\bar H^{-1}\bar Y\1,\quad W_d=\diag(w),\quad
+ H'=W_d^{-1}\bar HW_d,\quad X'=\bar XW_d,\quad
+ Y'=W_d^{-1}\bar Y.\label{eq:normalize}
+\end{equation}
+Hidden permutation is the only remaining coordinate freedom. Thus the
+equality triangle gives at most one physical connected-hidden generator.
+Appendix~\ref{app:certificate} supplies its existence, positive scaling,
+exact reciprocal support and entropy separation independently. Together
+with the disconnected classification, this proves the endpoint and
+supercritical conclusions over the entire stated model class.

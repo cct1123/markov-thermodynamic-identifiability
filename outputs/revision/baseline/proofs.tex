@@ -1,0 +1,379 @@
+\section{Observation equivalence and minimum order}\label{app:realization}
+A realization $(R,T,B)$ is minimal when the columns of $T^jB$, $j\ge0$, span its state space and $RT^jv=0$ for every $j\ge0$ implies $v=0$. A sufficiently large block Hankel matrix $(RT^{i+j}B)_{i,j}$ then has rank equal to the state dimension. Any competing realization factors this same matrix through its own state space, proving the minimum-order assertion without a pole-count shortcut.
+
+\begin{lemma}[Finite certificate and pinned similarity]\label{lem:orbit}
+Two realizations of dimensions $n,n'$ have the same all-time kernel if and only if their Markov parameters $RT^jB$ agree for $0\le j<n+n'$. Equivalent minimal realizations have the same dimension and a unique invertible similarity. For the resolved pair of Sec.~\ref{sec:model}, it has the form
+\begin{equation}
+ S=\diag(I_2,U),\quad U\1=\1,\quad Q'=S^{-1}QS.\label{eq:orbit}
+\end{equation}
+Conversely, every such similarity yielding an admissible generator preserves the complete kernel. Entries of $U$ need not be nonnegative.
+\end{lemma}
+\begin{proof}
+Apply Cayley--Hamilton to $\diag(T,T')$: zero differences of the first $n+n'$ parameters force all subsequent differences to vanish. The convergent exponential series then gives all-time equality; the converse follows by differentiation. For minimal realizations define, on reachable vectors,
+\begin{equation}
+ S\left(\sum_jT'^jB'v_j\right)=\sum_jT^jBv_j.
+\end{equation}
+Equality of parameters and observability make this well defined; reversing the argument gives its inverse. Controllability gives $SB'=B$, $ST'=TS$, and $RS=R'$, and uniqueness. The zero-time data give $q_{xy}=\psi_{-,+}(0)$ and $q_{yx}=\psi_{+,-}(0)$. The common $R,B$ therefore pin every visible row and column of $S$, giving its block form. Since $T\1=-B\1$ and $T$ is invertible, $TS\1=ST'\1=-SB\1=T\1$ implies $S\1=\1$. The observed matrices act only on the fixed visible coordinates, hence $Q'=S^{-1}QS$. Direct substitution proves the converse.
+\end{proof}
+This is the realization-basis argument specialized to the event maps; its positive-model antecedents are discussed in Sec.~I~\cite{Vanluyten2008,HorvathTelek2007}.
+
+For the balanced source, the hidden blocks are
+\begin{equation}
+ X=\begin{pmatrix}2&0&8\\0&7&11\end{pmatrix},\quad
+ Y=\begin{pmatrix}3&0\\0&6\\z&z\end{pmatrix},\quad
+ H=\begin{pmatrix}-7&4&0\\5&-11&0\\0&0&-2z\end{pmatrix}.\label{eq:blocks}
+\end{equation}
+Writing $Y_j$ for its columns, direct determinants give
+\begin{align}
+ \det(Y_1,Y_2,HY_1)&=-9z(4z-9),\\
+ \det(Y_1,Y_2,HY_2)&=-18z(2z-3),\\
+ \det\begin{pmatrix}X_{1,:}\\X_{2,:}\\(XH)_{2,:}\end{pmatrix}&=-14(22z+19).
+\end{align}
+For $z>0$ the first two cannot both vanish and the last never vanishes. Thus the hidden transfer has reachable and observable order three. The visible plane is directly selected by $R$ and $B$. Subtracting its contributions in successive powers of $T$ leaves the hidden reachability and observability spaces just computed, so the full order is five. This includes both hidden-pole coincidences and $z=2$. The cap forces every competitor to have exactly five states and be minimal.
+
+The observations also determine the visible block $A$: their zero-time values give the observed rates and first derivatives give the killed visible diagonals. Write $A_{\mathrm{kill}}=A-(E_++E_-)_{VV}$. After row permutation and division by observed rates they determine the visible resolvent $K(\lambda)$. Its Schur complement determines
+\begin{equation}
+ X(\lambda I-H)^{-1}Y=\lambda I-A_{\mathrm{kill}}-K(\lambda)^{-1}.\label{eq:htransfer}
+\end{equation}
+This is a matrix-valued constraint shared by all competitors. Treating its entries as unrelated scalar phase-type fits would lose it.
+
+\section{Global support exhaustion and the invariant triangle}\label{app:cone}
+\subsection{Modal data and disconnected hidden supports}
+Let $\rho=\sqrt6$, $\alpha=9-2\rho$, $\beta=9+2\rho$, $r_y=4(\rho-1)/5$, and set
+\begin{gather}
+ D=\diag(-\alpha,-\beta,-2z),\quad X_m=(p,q,v),\quad
+ Y_m=\begin{pmatrix}r\\f\\w\end{pmatrix},\label{eq:modal}\\
+ p=\binom{3+\rho/2}{35\rho/8},\quad
+ q=\binom{3-\rho/2}{-35\rho/8},\quad v=\binom8{11},\\
+ r=(1,r_y),\quad f=(1,-4(\rho+1)/5),\quad w=(z,z).
+\end{gather}
+Direct multiplication yields
+\begin{equation}
+ X(\lambda I-H)^{-1}Y
+ =\frac{pr}{\lambda+\alpha}+\frac{qf}{\lambda+\beta}+\frac{vw}{\lambda+2z}.\label{eq:residues}
+\end{equation}
+The residues $pr,vw$ are strictly positive and rank one; $qf$ has negative off-diagonal entries. At $z\ge\zs$ the three poles are distinct and $2z>\beta$.
+
+A disconnected bidirected hidden support on three states consists of three singletons or a pair and a singleton. Singletons have nonnegative outer-product residues, excluding three singletons and a singleton at $\beta$. A singleton at $\alpha$ leaves a pair with dominant eigenvalue $-\beta$; its Perron transfer residue is nonnegative, again impossible. The singleton must carry $-2z$.
+
+The remaining pair has zeroth response $pr+qf=\diag(6,42)$. Nonnegativity and reciprocal visible incidence force its two states to attach separately to $x$ and $y$: a state attached to both would give positive off-diagonal response. Write entrances $x_1,x_2$, exits $y_1,y_2$, and internal rates $h_0,k_0$. Zeroth and first moments, with row sums, give
+\begin{gather}
+ x_1y_1=6,\quad x_2y_2=42,\quad y_1+h_0=7,\quad y_2+k_0=11,\\
+ x_1h_0y_2=48,\qquad x_2k_0y_1=105.
+\end{gather}
+Hence $h_0k_0=20$ and $19h_0-h_0k_0=56$, giving $h_0=4$, $k_0=5$, $y_1=3$, $y_2=6$, $x_1=2$, $x_2=7$. The singleton's residue and exit sum give entrances $(8,11)^T$ and exits $(z,z)$. Thus this branch contains only the source.
+
+\subsection{All connected hidden supports give finite triangles}
+Throughout the connected-case argument take $z\ge21/2$, so $2z>\beta$ and the modal spectrum is distinct. For a connected hidden support, minimality gives an invertible real $V$ with $H'=V^{-1}DV$ Metzler irreducible, $X'=X_mV\ge0$, and $Y'=V^{-1}Y_m\ge0$. The right Perron eigenvector $V^{-1}e_1$ at $-\alpha$ is positive: its sign is fixed by $X'V^{-1}e_1=p>0$. The left eigenvector $e_1^TV$ is then positive as well, since its product with that right eigenvector is one. Every column of $V$ has positive first coordinate. Sectioning $V\mathbb R_+^3$ at that coordinate equal to one gives a finite nondegenerate triangle with the origin strictly inside. Positively rescale its columns to $(1,u_i,v_i)^T$.
+
+After rescaling time by $\beta-\alpha$, the section is invariant under
+\begin{equation}
+ (u,v)\mapsto(e^{-t}u,e^{-kt}v),\qquad
+ k=\frac{2z-9+2\rho}{4\rho}.\label{eq:flow}
+\end{equation}
+It contains inputs $(1,A)$ and $(-m,B_0)$ and lies in an output wedge, where
+\begin{gather}
+ A=z,\quad B_0=z/r_y,\quad m=(7+2\rho)/5,\\
+ L=(3-\rho/2)/8,\quad R_w=35\rho/88,\quad
+ v\ge L(-m-u),\quad v\ge R_w(u-1).\label{eq:wedge}
+\end{gather}
+These are direct consequences of $Y'\ge0$, $X'\ge0$, and semigroup positivity. No sign constraint on $V$ itself was imposed. A ray with zero first coordinate is impossible in this irreducible branch; the disconnected branch was already treated separately.
+
+Any wedge point of nonpositive height has abscissa between $-m$ and $1$. A triangle with only one positive-height vertex could not contain both positive-height inputs: the same vertex would have to extend beyond both ends of that interval. The interior origin forces a negative-height vertex. Thus the vertices can be labeled
+\begin{equation}
+ (-\ell,P),\quad(c,Q_v),\quad(d,-W),\qquad
+ \ell\ge m,\ c\ge1,\ -m<d<1,\ P,Q_v,W>0.\label{eq:vertices}
+\end{equation}
+Put $a=k-1$. The output, lower-face invariance, upper containment, and lower containment conditions include
+\begin{align}
+ &P\ge L(\ell-m),\quad W\le\min\{L(m+d),R_w(1-d)\}<1,\label{eq:ineq1}\\
+ &(a\ell+kd)P\le\ell W,\qquad(ac-kd)Q_v\le cW,\label{eq:ineq2}\\
+ &B_0\le H_c:=\frac{(c+m)P+(\ell-m)Q_v}{\ell+c},\label{eq:height}\\
+ &A\le\frac{(c-1)P+(\ell+1)Q_v}{\ell+c},\label{eq:upperA}\\
+ &(Q_v+W)(1-d)\le(A+W)(c-d),\label{eq:lowerA}\\
+ &(P+W)(d+m)\le(B_0+W)(\ell+d).\label{eq:lowerB}
+\end{align}
+For example, differentiating the lower-left supporting line along~\eqref{eq:flow} at $(-\ell,P)$ gives the first inequality~\eqref{eq:ineq2}. All displayed geometric denominators are positive.
+
+We now restrict to $z\ge21/2$, sufficient for the threshold and above. If $d<0$, the reflected use of~\eqref{eq:ineq1},~\eqref{eq:ineq2},~\eqref{eq:upperA}, and~\eqref{eq:lowerB} gives
+\begin{equation}
+ A<\frac{L}{a}\left[m+\frac{B_0+1}{R_w}\right]
+ <\frac{25/8+(25/18)(z+1)}{z-7}.
+\end{equation}
+The latter is smaller than $z$ for $z\ge10$, because its reversed difference has numerator
+$72(z-10)^2+836(z-10)+835>0$. Here we used $m<5/2$, $L<1/4$, $R_w>9/10$, $B_0<z$, and $a>(z-7)/5$. Thus $d\ge0$. Now $a>7/10$ and~\eqref{eq:ineq2} give $P<10/7<2<B_0<A$. Equations~\eqref{eq:height}--\eqref{eq:upperA} imply $Q_v\ge A$ and $\ell>m$.
+
+Write $\epsilon=1-d$. Since $aQ_v-W>0$, the second inequality~\eqref{eq:ineq2} and $c\ge1$ imply
+\begin{equation}
+ \epsilon\le\frac{A+W}{kA}\le\frac{A+R_w\epsilon}{kA},\qquad
+ \epsilon\le\frac1{k-R_w/A}.\label{eq:apexbound}
+\end{equation}
+The wedge apex has
+\begin{equation}
+ d_0=\frac{R_w-Lm}{L+R_w}>0,\qquad
+ 1-d_0=\frac{L(m+1)}{L+R_w}.
+\end{equation}
+At $z=21/2$, the last fraction minus the bound in~\eqref{eq:apexbound} exceeds $0.014259$ by rational evaluation with $\rho^2=6$ and $\rho>0$. Since $k-R_w/z$ increases, $d>d_0$ throughout the range. Therefore the active bottom constraint is $W\le R_w\epsilon$.
+
+\subsection{Global envelope and its unique equality case}
+At fixed $d,W$, the left inequalities imply
+\begin{equation}
+ L(\ell-m)\le g(\ell):=\frac{\ell W}{a\ell+kd}.
+\end{equation}
+Since $d>0$, $g$ increases strictly and is concave. There is one intersection $\ell_*=m+t$, $t>0$, with
+\begin{equation}
+ P_*=Lt=g(m+t),\qquad Lt[a(m+t)+kd]=(m+t)W.\label{eq:leftmax}
+\end{equation}
+The corresponding quadratic in $t$ has positive leading coefficient and negative constant. All admissible $\ell,P$ satisfy $\ell\le\ell_*$, $P\le P_*$. In~\eqref{eq:height}, both partial derivatives in $P$ and $\ell$ are strictly positive when $Q_v>P$; explicitly they are $(c+m)/(\ell+c)$ and $(c+m)(Q_v-P)/(\ell+c)^2$. Replacing the left vertex by its maximum therefore bounds every feasible triangle, even if a relaxed triangle violates an unused constraint.
+
+For the right vertex,~\eqref{eq:lowerA} bounds $Q_v$ by an increasing line,
+$Q_v\le (A+W)(c-d)/\epsilon-W$. On $ac-kd>0$,~\eqref{eq:ineq2} gives the decreasing hyperbola $Q_v\le cW/(ac-kd)$. The relevant intersection is
+\begin{equation}
+ c_* =\frac{k}{a}\left[d+\frac{W\epsilon}{A+W}\right],\qquad
+ Q_*^v=\frac{Ad+W}{a\epsilon}.\label{eq:rightmax}
+\end{equation}
+It lies strictly beyond the pole $kd/a$. The other algebraic intersection is $c=d<1$ and is outside the domain. If $c_*<1$, the hyperbola at $c=1$ is below $A$, contradicting $Q_v\ge A$. Along the line, $H_c$ increases in $c$, with derivative numerator $(\ell_*-m)[(A+W)(\ell_*+d)/\epsilon+W+P_*]>0$. Along the hyperbola it decreases whenever $Q_v>P_*$; a point with $Q_v\le P_*$ cannot attain $B_0>2$. Thus the unique maximal right choice is~\eqref{eq:rightmax}.
+
+Set $r_c=c_*/Q_*^v=k\epsilon/(A+W)$. The resulting envelope is
+\begin{equation}
+ H_* =\frac{t[Lm+(1+Lr_c)Q_*^v]}{m+t+r_cQ_*^v}.\label{eq:envelope}
+\end{equation}
+As $W$ increases, $t$ and $Q_*^v$ increase strictly and $r_c$ decreases strictly. The partial derivatives of~\eqref{eq:envelope} with respect to $t,Q_*^v$ are positive; its derivative in $r_c$ has sign $Lt-Q_*^v<0$. These signs persist up to $W=R_w\epsilon$, since $Lt<2<A\le Q_*^v$. Hence the final maximum uses $W=R_w\epsilon$.
+
+Let $J=am+k$. Equations~\eqref{eq:leftmax} and $W=R_w\epsilon$ give
+\begin{equation}
+ \epsilon=\frac{Lt(J+at)}{R_wm+(kL+R_w)t},\qquad
+ H_*-B_0=\frac{f_0+f_1t+f_2t^2}{(J+at)^2},\label{eq:quadratic}
+\end{equation}
+where
+\begin{align}
+ f_0&=AR_wm/L-B_0J^2,\\
+ f_1&=A(R_w/L+k-am)+LJ^2+R_wJ-2B_0Ja,\\
+ f_2&=a[LJ+R_w-A(1+Lk/R_w)-B_0a].\label{eq:fcoeff}
+\end{align}
+These identities follow by direct rational substitution, with no optimization assumptions. The coefficients obey
+\begin{align}
+ f_0&=-\frac{19+9\rho}{100}z\left(z^2-11z+\frac{211}{44}\right),\label{eq:f0}\\
+ f_1^2-4f_0f_2
+ &=-\left(\frac{11}{1200}+\frac{11\rho}{4200}\right)
+ \left(z+\frac{19}{22}\right)^2\frac{\mathcal P(z)}{352}.\label{eq:discriminant}
+\end{align}
+Descartes' rule, $\mathcal P(0)<0$, and $\mathcal P(z)\to+\infty$ as $z\to+\infty$ give a unique positive root. Rational evaluation isolates it in $(10.55714966866,10.55714966867)$. The larger root of the quadratic in~\eqref{eq:f0} is below this interval. Thus for $z>\zs$, $f_0<0$ and the discriminant is negative; the quadratic in~\eqref{eq:quadratic} is strictly negative everywhere. This excludes every connected support.
+
+At $z=\zs$, exact root-interval evaluation gives
+\begin{equation}
+ -0.520929<f_0<-0.520928,\quad
+ 5.496508<f_1<5.496509,\quad
+ -14.498918<f_2<-14.498917.
+\end{equation}
+The quadratic is nonpositive and has its sole zero at $t_*=-f_1/(2f_2)>0$. Feasibility requires equality throughout the chain $B_0\le H_c\le H_*\le B_0$. Strictness of every maximization fixes the unique vertices through~\eqref{eq:leftmax},~\eqref{eq:rightmax}, and~\eqref{eq:quadratic}. The left and bottom vertices lie on the left and right output faces, respectively. Input $(1,A)$ lies on the lower-right edge, input $(-m,B_0)$ on the upper edge, and both upper-vertex lower-face derivatives vanish. These paired input/output zeros eliminate one visible pair at each of two vertices; the two tangencies eliminate both directions between the upper vertices. The resulting support is precisely the hidden path specified below.
+
+The unique triangle gives at most one normalized generator, not merely one cone. For its vertex matrix $V$, put $\bar H=V^{-1}DV$, $\bar Y=V^{-1}Y_m$, $\bar X=X_mV$. Column rescaling is fixed uniquely by
+\begin{equation}
+ w=-\bar H^{-1}\bar Y\1,\quad W_d=\diag(w),\quad
+ H'=W_d^{-1}\bar HW_d,\quad X'=\bar XW_d,\quad Y'=W_d^{-1}\bar Y.\label{eq:normalize}
+\end{equation}
+All hidden eigenvalues are nonzero. Existence, positive scaling, and entropy separation are supplied independently in Appendix~\ref{app:certificate}; they do not follow merely from equality in a necessary bound.
+
+\section{Exact endpoint construction and entropy certificate}\label{app:certificate}
+An explicit rational definition avoids using rounded rates. In the following equations evaluate all expressions at $z=\zs$. Define
+\begin{equation}
+ C=\begin{pmatrix}3&0&1\\0&6&1\\z&z&1\end{pmatrix},\quad D_c=C^{-1}HC,
+\end{equation}
+where $H$ is~\eqref{eq:blocks}. Use one-based indices and set
+\begin{equation}
+ (a_1,a_2,b_1,b_2,c_1,c_2)
+ =((D_c)_{22},(D_c)_{21},(D_c)_{12},(D_c)_{11},(D_c)_{32},(D_c)_{31}).
+\end{equation}
+Let
+\begin{align}
+ a_p(z)&=100z^4-840z^3+3741z^2-6867z+3978,\\
+ b_p(z)&=-408z^4-2916z^3+8766z^2+3105z-12474,\\
+ c_p(z)&=2412z^4-5724z^3+891z^2+3402z.
+\end{align}
+They satisfy the independent physical-path discriminant identity
+\begin{equation}
+ b_p^2-4a_pc_p=-567(z-2)^2(2z-3)^2\mathcal P(z).\label{eq:pathdisc}
+\end{equation}
+Set
+\begin{gather}
+ u=-\frac{b_p}{2a_p},\qquad v=-\frac{u(a_2u+c_2)}{u^2+a_1u+c_1},\\
+ p_x=(42+11z)/18,\quad p_y=11z/18,\quad
+ q_x=8z/10,\quad q_y=(6+8z)/10,\\
+ c_p'=\frac{p_x-u}{p_y},\qquad d_p'=\frac{q_y-v}{q_x},\qquad
+ A_p=\frac{u+c_p'v}{1-c_p'd_p'},\quad
+ B_p=\frac{v+d_p'u}{1-c_p'd_p'}.\label{eq:pathcoordinates}
+\end{gather}
+The primed $c_p',d_p'$ are chart coordinates, not the polynomial $c_p(z)$. Finally define
+\begin{equation}
+ C'=\begin{pmatrix}0&u&1\\v&0&1\\B_p&A_p&1\end{pmatrix},\quad
+ U=C(C')^{-1},\quad S=\diag(I_2,U),\quad Q_*=S^{-1}Q(\zs)S.\label{eq:target}
+\end{equation}
+The hidden order is $(a,b,c)$: a $y$-only endpoint, an $x$-only center, and a shared endpoint. The seven reciprocal edges are $xy,xb,xc,ya,yc,ab,bc$. All other off-diagonals are exactly zero. For orientation,
+\begin{equation}
+ Q_*\simeq\begin{pmatrix}
+ -11&1&0&1.86553087&8.13446913\\
+ 2&-20&6.92248992&0&11.07751008\\
+ 0&6.22824145&-11.27299011&5.04474866&0\\
+ 2.77737298&0&3.73491843&-6.73129745&0.21900604\\
+ 10.48328058&10.38263173&0&0.24409946&-21.11001177
+ \end{pmatrix}.
+\end{equation}
+This rounded matrix is not the equality certificate.
+
+The following is a finite, reproducible algebraic admissibility check. Work in the real field $\mathbb Q(\zs)$ with $\mathcal P(\zs)=0$, reducing each element to a polynomial of degree at most three. Isolate the positive root in
+\begin{equation}
+ \left[\frac{6329583361674357233}{599554194108037085},
+ \frac{5875360061222171594}{556529010729195633}\right].\label{eq:rootinterval}
+\end{equation}
+The interval has width below $10^{-35}$; opposite polynomial signs and unique positivity select the embedding. Rational interval evaluation verifies that $\det C=18-9z$, $a_p$, $u^2+a_1u+c_1$, $p_y,q_x$, $1-c_p'd_p'$, and $\det C'$ are all nonzero. Reduce~\eqref{eq:target} exactly: $U\1=\1$, row sums vanish, the six absent off-diagonal entries are zero, and the fourteen remaining off-diagonals are positive. Their enclosures lie strictly between $1/5$ and $12$. The stated seven-edge graph is connected. This suffices for admissibility. The package supplies every reduced coefficient, making these finite checks repeatable without solving a new realization problem.
+
+Compute the unique normalized stationary vectors by exact reduced linear solves. Both are positive and satisfy $\pi_* =\pi S$. Directly verify $RT^jB=RT_*^jB$ for $j=0,\ldots,9$; Lemma~\ref{lem:orbit} gives all-time equality independently of the displayed similarity. As a separate coordinate check, the equality triangle in Appendix~\ref{app:cone}, normalized by~\eqref{eq:normalize}, agrees coefficientwise with~\eqref{eq:target} after swapping its last two hidden vertices. This computation uses pairs $a+b\sqrt6$ over $\mathbb Q(\zs)$; every final $\sqrt6$ coefficient cancels.
+
+Entropy separation also needs a certificate, since different generators need not have different entropy. Evaluate stationary currents and positive flux ratios with rational intervals from~\eqref{eq:rootinterval}. To bound a logarithm, reduce its positive rational endpoints by powers of two into $[1,2]$. For $t=(x-1)/(x+1)\in[0,1/3]$ use
+\begin{equation}
+ \log x=2\sum_{j=0}^{n-1}\frac{t^{2j+1}}{2j+1}+R_n,\qquad
+ 0\le R_n\le\frac{2t^{2n+1}}{(2n+1)(1-t^2)},\quad n=24.\label{eq:logbound}
+\end{equation}
+Bound $\log2$ by the same formula. Interval arithmetic accounts for the signs of powers-of-two shifts, currents, and products, and sums once per unordered present edge. It gives~\eqref{eq:sig1}--\eqref{eq:sig2} and
+\begin{equation}
+ 0.002633285729\le\sig(Q_*)-\sig(Q(\zs))\le0.002633285730.
+\end{equation}
+These are rational enclosures, not precision-based equality tests. Together with Appendix~\ref{app:cone}, they finish the endpoint and supercritical parts of Theorem~\ref{thm:balanced}.
+
+\section{An exact entropy-divergent hidden-pair orbit}\label{app:pair}
+Take fully hidden states $h,k$ with the same external neighbor set $J$, and different full external exit rows $Y_h,Y_k$. Let $m_0=q_{hk}$, $n_0=q_{kh}$, and let
+\begin{equation}
+ \lambda_h=m_0+\sum_{i\in J}Y_{hi},\qquad
+ \lambda_k=n_0+\sum_{i\in J}Y_{ki}
+\end{equation}
+be their \emph{total} escape rates. Assume either $m_0,n_0>0$, or $m_0=n_0=0$ with $\lambda_h=\lambda_k$. The external rows include all other hidden states, not only visible endpoints.
+
+Exchange $h,k$ if necessary so that $r_*:=\min_{i\in J}Y_{hi}/Y_{ki}\in(0,1)$. Such an orientation exists because the rows differ and their supported entries are positive. Embed
+\begin{equation}
+ U_e=\begin{pmatrix}1-e&e\\0&1\end{pmatrix},\qquad 0\le e<r_*,
+\end{equation}
+as the hidden block of $S_e$. The transformed outside entrances and exits are
+\begin{align}
+ q'_{ih}&=(1-e)q_{ih},&q'_{ik}&=q_{ik}+eq_{ih},\\
+ q'_{hi}&=(Y_{hi}-eY_{ki})/(1-e),&q'_{ki}&=Y_{ki}.
+\end{align}
+They retain their reciprocal support before $r_*$. For an adjacent pair,
+\begin{equation}
+ q'_{kh}=n_0(1-e),\qquad
+ q'_{hk}=\frac{f(e)}{1-e},\quad
+ f(e)=m_0+e(\lambda_k-\lambda_h)-n_0e^2.\label{eq:shear}
+\end{equation}
+Let $e_*$ be the first zero of $f$ in $(0,r_*]$, if present, and otherwise $r_*$. Then $0<e_*\le r_*<1$, and all generators before $e_*$ retain the original support. For the unjoined equal-escape pair the hidden block is scalar and unchanged; take $e_*=r_*$.
+
+Normalized similarity preserves the exact kernel. The stationary law is explicitly
+\begin{equation}
+ \pi'_i=\pi_i\ (i\notin\{h,k\}),\quad
+ \pi'_h=(1-e)\pi_h,\quad\pi'_k=\pi_k+e\pi_h.\label{eq:pipair}
+\end{equation}
+Every stationary mass has a positive finite limit and all rates remain bounded because $e_*<1$. If $f(e_*)=0$, the $h\to k$ flux vanishes while its reverse tends to $(\pi_k+e_*\pi_h)n_0(1-e_*)>0$. If $e_*=r_*$, an external exit $h\to i$ vanishes while its reverse tends to $\pi_i(1-r_*)q_{ih}>0$. This also covers simultaneous zeros. The corresponding nonnegative entropy term diverges, and other terms cannot cancel it. The endpoint itself need not be admitted or have a unique stationary law;~\eqref{eq:pipair} gives the necessary limits before the boundary.
+
+For a minimal realization, equal full external exit rows are impossible: the codimension-one subspace of vectors with equal $h,k$ entries is invariant under $T$ and contains every column of $B$. Reachability would fail. Thus every pair in a complete minimal realization meets the unequal-row requirement. This observation is used below, while Lemma~\ref{lem:neighborhood} creates unequal rows explicitly and does not assume minimality.
+
+\section{Complete subcritical coverage, including repeated poles}\label{app:subcritical}
+We give four covering constructions. Each preserves the hidden transfer exactly and yields a pair to which Appendix~\ref{app:pair} applies.
+
+\subsection{Below the slow pole}
+Take $0<z<\alpha/2$. Let $d_s=2(\rho-1)$. In hidden order $(h,k,l)$ set
+\begin{equation}
+ K_{hl}=-4,\quad K_{kl}=-d_s,\quad K_{lh}=5,\quad K_{lk}=d_s,\quad
+ K_{hk}=K_{kh}=0,
+\end{equation}
+and fix diagonals by $K\1=0$. Under $U=I+\epsilon K$, the derivative of the transformed generator is the commutator with embedded $K$. The four missing hidden rates have derivatives $(\alpha-2z)(4,d_s,5,d_s)>0$; the missing visible incidences $(xk,yh,hy,kx)$ have derivatives $(8d_s,55,4z,d_sz)>0$. For sufficiently small $\epsilon>0$, $U$ is invertible, all missing pairs open, and existing positive rates remain positive. The target is complete and minimal, hence has an entropy-divergent hidden pair. This interval includes the path-chart singularity $z=2$.
+
+\subsection{Between the hidden poles}
+Take $\alpha/2\le z\le\beta/2$. Put $s_0=2z$, $d_s=2(\rho-1)$, and $\Delta=4\rho$. Factor the two relevant residues as
+\begin{equation}
+ Z_{s_0}=\binom8{11}(z,z),\qquad
+ Z_\beta=\binom{2d_s}{-35}\frac{(3,-24/d_s)}{\Delta}.
+\end{equation}
+Choose midpoints in the nonempty intervals
+\begin{equation}
+ \frac{24}{d_s\Delta z}<t<\frac4{d_s},\qquad
+ \frac3{\Delta z}<u<\frac{11}{35}.\label{eq:twomodeintervals}
+\end{equation}
+They are nonempty because $z>\rho/4$ and $z>35\rho/88$, both already true at $\alpha/2$. For $P_2=\left(\begin{smallmatrix}1&1\\-t&u\end{smallmatrix}\right)$, use
+\begin{align}
+ \bar X&=\begin{pmatrix}8-2d_st&8+2d_su\\11+35t&11-35u\end{pmatrix}>0,\\
+ \bar Y&=\frac1{t+u}\begin{pmatrix}uz-3/\Delta&uz+24/(d_s\Delta)\\tz+3/\Delta&tz-24/(d_s\Delta)\end{pmatrix}>0,\\
+ \bar H&=\frac1{t+u}\begin{pmatrix}-s_0u-\beta t&u(\beta-s_0)\\t(\beta-s_0)&-s_0t-\beta u\end{pmatrix}.
+\end{align}
+These are obtained by similarity from modes $-s_0,-\beta$. The stable Metzler $\bar H$ has two positive off-diagonals for $s_0<\beta$, and is $-\beta I$ at equality. Normalize by~\eqref{eq:normalize}, giving a pair with strictly positive visible incidences. Its exit matrix has rank two because the modal exit rows are a positive row and a mixed-sign row; their independence is preserved.
+
+For the remaining residue write
+\begin{equation}
+ Z_\alpha=cg,\quad c=\binom{2(d_s+4)}{35},\quad
+ g=(3,24/(d_s+4))/\Delta.
+\end{equation}
+A singleton with entrance $(g\1)c/\alpha$ and exit $\alpha g/(g\1)$ realizes it. Adjoin it without hidden links to the pair, retaining the source visible block. Hidden row normalization and equality of the transfer at zero give the source's visible hidden-entry totals $(10,18)^T$, so visible rows also normalize. The full generator is irreducible through its visible links. The pair has unequal external exits, is adjacent for $s_0<\beta$, and unjoined with equal escapes at $s_0=\beta$. Appendix~\ref{app:pair} applies in both cases. All transfer identities remain valid when poles coincide: the residues simply add. Thus both endpoints, including $s_0=\alpha$, are covered without a distinct-pole assumption.
+
+\subsection{An explicit fast opening}
+Take $\beta/2\le z\le21/2$. Put $M_s=2z-11>0$, $L_s=M_s+4$, and define
+\begin{gather}
+ v_{max}=7z/33,\quad
+ q=\tfrac12\left(M_s/5+96v_{max}/(zM_s)\right),\quad
+ v=\tfrac12\left(zqM_s/96+v_{max}\right),\\
+ u=\tfrac12(zq/24+4v/M_s),\quad
+ p=\tfrac12(-4u-zq/6),\quad
+ r=\tfrac12(11v/7+z/3).
+\end{gather}
+Use hidden off-diagonals $(K_{hk},K_{hl},K_{kh},K_{kl},K_{lh},K_{lk})=(p,q,r,-1,-v,u)$ and $K\1=0$. Since $L_sM_s\ge20$ and $11M_s^2\le1100<1120$, the midpoint intervals are strict:
+\begin{gather}
+ q>M_s/5,\quad v<7z/33,\quad zq/24<u<4v/M_s,\\
+ -4u<p<-zq/6,\qquad11v/7<r<z/3.
+\end{gather}
+The eight missing-rate derivatives, ordered $(xk,yh,hy,hl,kx,kl,lh,lk)$, are
+\begin{equation}
+ (2p+8u,\ 7r-11v,\ -6p-zq,\ L_sq-4,\ -3r+z,\ 5q-M_s,\ L_sv-5u,\ 4v-M_su),
+\end{equation}
+all positive. Thus $I+\epsilon K$ opens a complete realization for small $\epsilon>0$, with exact observation and subsequent entropy divergence as above. This argument needs neither an exit chart nor an assumption that failure of a first-order opening implies global rigidity.
+
+\subsection{Strict triangles up to the fold}
+Take $21/2\le z<\zs$. Use the quantities of Appendix~\ref{app:cone} and set $t=-f_1/(2f_2)$. On the entire rational interval
+\begin{equation}
+ I=[10.5,10.55714966867],\label{eq:wholeinterval}
+\end{equation}
+rational interval evaluation gives $f_1>5$ and $f_2<-14$. For $z<\zs$, the positive discriminant in~\eqref{eq:discriminant} gives
+\begin{equation}
+ f_0+f_1t+f_2t^2=-\frac{f_1^2-4f_0f_2}{4f_2}>0.
+\end{equation}
+Define $\epsilon,d,W,\ell,P,c,Q_v$ by~\eqref{eq:quadratic}, $d=1-\epsilon$, $W=R_w\epsilon$, $\ell=m+t$, $P=Lt$, and~\eqref{eq:rightmax}. Then $B_0<H_*$ is strict upper-input slack. The remaining geometric signs hold throughout $I$; Table~\ref{tab:margins} gives conservative rational lower bounds. To reproduce them, enclose $\rho$ between the exact decimal rationals $2.449489742783178098197284$ and $2.449489742783178098197285$, whose squares straddle six. Shift polynomial coefficients by $z=21/2+\xi$, and apply rational interval operations, rounded outward to 24 decimal places after each operation, with $0\le\xi\le0.05714966867$. No parameter sampling establishes these bounds.
+
+\begin{table}[ht]
+\caption{Strict rational lower bounds valid on the whole interval~\eqref{eq:wholeinterval}, with $p_\ell=(P+W)/(\ell+d)$, $q_r=(Q_v+W)/(c-d)$. The upper-input-$B_0$ slack is not listed because it vanishes at the fold.}\label{tab:margins}
+\begin{ruledtabular}
+\begin{tabular}{lc@{\qquad}lc}
+Quantity & Lower bound & Quantity & Lower bound\\
+\hline
+$t$ & $18/100$ & $\epsilon$ & $5/100$\\
+$1-\epsilon$ & $9/10$ & $c-1$ & $1$\\
+$L(m+d)-W$ & $6/10$ & $Q_v-R_w(c-1)$ & $170$\\
+$B_0+W-p_\ell(d+m)$ & $8$ & $[(c-1)P+(\ell+1)Q_v]/(\ell+c)-A$ & $100$\\
+$W-p_\ell d$ & $3/100$ & $W+q_r d$ & $120$\\
+$kW-p_\ell d$ & $7/100$ & $kW+q_r d$ & $120$
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+For completeness, the left and right lower-face tangencies imply $p_\ell\ell=kP$ and $q_rc=kQ_v$. Therefore the lower-face margins of the origin are $W-p_\ell d=aP>0$ and $W+q_rd=aQ_v>0$. The upper edge is above the origin, so the triangle is nondegenerate with an interior origin. The inward derivatives at the bottom vertex are $a(W+P)>0$ and $a(W+Q_v)>0$. The upper-edge inward derivatives at its endpoints have positive numerators $[a\ell+kc]P+\ell Q_v$ and $[k\ell+ac]Q_v+cP$. The two remaining derivatives vanish by tangency. These vertex-face conditions suffice for invariance under the linear flow.
+
+The initial triangle is nonnegative but can have one-way support. Make three small changes for each fixed $z<\zs$. First decrease $W$ while holding $d$ fixed, recomputing~\eqref{eq:leftmax} and~\eqref{eq:rightmax}; all strict margins persist and the bottom output becomes strict. Next decrease $\ell$ slightly and take $P$ to be the midpoint of $L(\ell-m)$ and $\ell W/(a\ell+kd)$; both left output and left inward inequalities become strict. Finally keep $c=c_*$ and decrease $Q_v$ slightly; since $ac-kd>0$, both the right inward inequality and the lower containment of $(1,A)$ become strict. All other strict inequalities persist by continuity. Only finitely many conditions are involved, so successive sufficiently small positive choices exist; no uniform size as $z\uparrow\zs$ is claimed.
+
+The final triangle has strictly positive input barycentric coordinates, output values, and all off-diagonal inward derivatives. At vertex $j$, the derivative of each initially zero barycentric coordinate $i\ne j$ is $(\bar H)_{ij}$ up to the positive time-rescaling factor; thus strict inward derivatives give positive off-diagonals. Consequently $\bar X>0$, $\bar Y>0$, and every off-diagonal of the stable $\bar H$ is positive. The normalization vector in~\eqref{eq:normalize} is positive because $-\bar H^{-1}>0$. Hidden row sums vanish and transfer equality at zero fixes the visible row sums. This is a complete five-state physical generator with the same all-time observation. It is minimal by Appendix~\ref{app:realization}, so its hidden pair meets Appendix~\ref{app:pair}. The four intervals cover all $0<z<\zs$, completing Theorem~\ref{thm:balanced}.
+
+\section{Why one additional state changes the exact answer}\label{app:split}
+Let $h$ be fully hidden in any irreducible generator. Replace it by $h_1,h_2$; keep rates among outside states, split each incoming rate as $\theta_iq_{ih}$ and $(1-\theta_i)q_{ih}$ with $0<\theta_i<1$, and give both clones the original outgoing rates $q_{hj}$ to every outside $j$. Set internal rates $q_{h_1h_2}=m>0$ and $q_{h_2h_1}=n>0$, with $n$ fixed. Normalize all rows. Every positive $m$ gives connected reciprocal support with the same observed edges.
+
+For the aggregation matrix $C$ merging the clones, $\widetilde Q C=CQ$. Because no mark touches $h$, also $\widetilde T C=CT$, $\widetilde B=CB$, and $\widetilde R C=R$. Therefore $\widetilde\Psi(t)=\widetilde R e^{\widetilde Tt}CB=Re^{Tt}B$ exactly. This is strong lumping applied to the killed generator, not just agreement of stationary probabilities.
+
+Put $\lambda=\sum_{j\ne h}q_{hj}$ and $\alpha_c=\sum_{i\ne h}\pi_i\theta_iq_{ih}/\pi_h\in(0,\lambda)$. Outside stationary probabilities remain $\pi_i$, and clone probabilities are
+\begin{equation}
+ \widetilde\pi_{h_1}=\pi_h\frac{\alpha_c+n}{\lambda+m+n},\qquad
+ \widetilde\pi_{h_2}=\pi_h\frac{\lambda+m-\alpha_c}{\lambda+m+n}.
+\end{equation}
+Both have positive limits as $m\downarrow0$. The first internal flux tends to zero and the reverse tends to $\pi_hn(\lambda-\alpha_c)/(\lambda+n)>0$, so entropy diverges while rates remain uniformly bounded above. Applied to $Q(\zs)$, this proves unboundedness with six states. These enlarged realizations are nonminimal for the common marked kernel. This appendix asserts sufficiency of one extra state, not a general necessary state budget.

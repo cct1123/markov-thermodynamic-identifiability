@@ -1,0 +1,77 @@
+% First part belongs immediately after the three-state inverse theorem.
+\subsection{Conditioning of the three-state inverse}\label{subsec:conditioning}
+
+Local Lipschitz inversion is a pointwise statement. To quantify its constants,
+write $\theta=(r,s,a,c,b,d)$ and let $\phi(\theta)\in\mathbb R^{12}$ collect
+the joint transform entries at three distinct positive arguments. With
+$K_\lambda=(\lambda I-T)^{-1}$, its full six-rate derivative is
+\begin{equation}
+ \partial_j\widehat\Psi(\lambda)
+ =RK_\lambda(\partial_jT)K_\lambda B
+   +RK_\lambda(\partial_jB).\label{eq:transform-jacobian}
+\end{equation}
+The second term is essential when the observed rates $r,s$ are unknown.
+Absolute-rate errors are governed by $J_\theta=D\phi$, whereas relative-rate
+errors are governed by $J_{\log}=J_\theta\operatorname{diag}(\theta)$.
+These describe different inverse questions. Raw singular values carry time
+units; logarithmic coordinates are dimensionless in the fixed time convention.
+
+The rational inverse in Theorem~\ref{thm:inverse} has a derivative that is a
+left inverse of $J_\theta$. This remains true at an irreducible tree by
+continuity from the positive interior. Consequently the raw derivative has
+rank six there. Sparse limits need not make absolute-rate recovery ill
+conditioned. For example, at the unit tree and $\lambda=(0.2,1,5)$, its smallest
+singular value is approximately $0.00744$.
+
+For the family~\eqref{eq:treefamily}, fix $0<e<1/2$ and let $k\downarrow0$.
+The rational formulas also remain nonsingular at this irreducible one-way
+limit, although the limiting model itself is outside our reciprocal class.
+Thus $J_\theta$ converges to a full-rank matrix while
+\begin{equation}
+ s_{\min}(J_{\log})=\Theta(k),\qquad
+ \operatorname{cond}(J_{\log})=\Theta(k^{-1}).\label{eq:log-conditioning}
+\end{equation}
+Indeed $s_{\min}(J_\theta D)\ge s_{\min}(J_\theta)\min_jD_{jj}$ for
+$D=\operatorname{diag}(\theta)$, and testing the unit $b$ coordinate gives
+the matching upper bound. The other five rate coordinates stay positive,
+so the limiting nullspace of $J_{\log}$ is exactly the $b=k$ direction.
+Its weakest right singular vector converges to that direction, up to sign.
+Meanwhile $\partial_b\sig=-J_0(e)/b+O(\log(1/b))$, with
+$J_0(e)=e(1-e)/(3+e-e^2)>0$. Relative-rate and entropy sensitivity therefore
+diverge even where absolute-rate inversion remains regular.
+
+The choice of Laplace arguments also matters. As three distinct arguments
+coalesce, the limiting repeated transform matrix has at most four independent
+entries for six rates, so a singular value tends to zero. Arguments all tending
+to zero or infinity similarly lose informative variation. Hence ``any three
+distinct positive points'' guarantees exact recoverability, with no uniform
+conditioning guarantee over designs or sources.
+
+\begin{figure}[t]
+ \centering
+ \includegraphics[width=\textwidth]{figures/conditioning.pdf}
+ \caption{Conditioning of all six unknown three-state rates. (a) Log-rate
+ condition number for $(\lambda_1,\lambda_2,\lambda_3)=(c/v,c,cv)$ at
+ $(r,s,a,c,b,d)=(1.2,0.8,0.9,0.4,0.3,1.1)$; the horizontal $c$ denotes the
+ Laplace center, not the rate coordinate. Nearly coincident points and
+ inappropriate scales degrade inversion. (b) At fixed $e=0.2$ in
+ Eq.~\eqref{eq:treefamily}, the raw minimum singular value stays positive as
+ $k$ decreases, whereas its log-rate counterpart scales as $k$.
+ (c) The weakest log-rate direction tends to the reverse-rate coordinate
+ $b=k$. Panels (b,c) use $\lambda=(0.2,1,5)$. These unweighted Euclidean
+ diagnostics are not Fisher information; statistical noise must also be
+ considered.}\label{fig:conditioning}
+\end{figure}
+
+We compared all 165 triples from
+$\{0.025,0.05,0.1,0.2,0.5,1,2,5,10,20,40\}$ at the reference in
+Fig.~\ref{fig:conditioning}. The largest minimum log singular value occurs
+at $(0.2,0.5,5)$. The smallest oracle asymptotic entropy standard error for
+the moment estimator below instead occurs at $(0.025,10,20)$: its
+$\mathrm{SE}\sqrt n$ is $1.176$, compared with $1.238$ for $(0.2,1,5)$.
+The better entropy design has a worse Euclidean condition number.
+These are finite-grid comparisons at one reference, not universal optima.
+A practical starting point is a separated logarithmic triple spanning a
+pilot waiting-time scale, followed by a covariance-aware assessment of the
+target uncertainty. Design selection from the same data needs its own
+selection correction or an independent pilot.

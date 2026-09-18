@@ -16,6 +16,10 @@ knowledge/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-e
 manuscript/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 outputs/publication-*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 outputs/manuscript-*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Baseline copies are immutable evidence, including mixed line endings.
+# Their hashes must survive Git add/checkout on every platform.
+outputs/revision/baseline/** -text -whitespace
+outputs/correctness-2026-09-15/baseline/** -text -whitespace
 # Matplotlib emits intentional separators in generated SVG path data.
 knowledge/views/parameter_geometry.svg -whitespace
 manuscript/figures/*.svg -whitespace

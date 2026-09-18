@@ -1,3 +1,7 @@
+# Full revised workflow
+
+The root command `python -B reproduce_all.py` includes the original workflow below plus global-envelope, two-point inverse, complete-support mechanism, graph, rare-rate and unfolding checks; conditioning, 900 seeded trajectories, six figures and 36 tests. Add `--build --tectonic /path/to/tectonic --offline` for the manuscript. See [build guide](../README.md), [revision notes](../../REVISION_NOTES.md) and [current run manifest](../../outputs/correctness-2026-09-15/reproduction.json). The historical descriptions below retain their original scope.
+
 # Computational reproduction
 
 Run from the repository root, with assertions enabled:

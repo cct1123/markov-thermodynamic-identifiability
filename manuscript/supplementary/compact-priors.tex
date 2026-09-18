@@ -1,0 +1,92 @@
+\subsection{Compact physical priors and shrinking data tolerance}
+\label{subsec:compact-priors}
+Fix a state cap $\bar n\ge2$, the named microscopic endpoints of the
+resolved reverse pair, and $0<m<M<\infty$. Let $\mathcal C_{\rm reg}$ contain the
+connected reciprocal generators with $2\le N\le\bar n$ for which every
+supported rate belongs to $[m,M]$. Absent reciprocal pairs are allowed;
+the observed pair is present with its declared incidence. The values of
+its rates may be unknown. Equip this class with the finite disjoint-union
+topology over dimensions and the usual matrix topology within each
+dimension. Hidden-state relabeling does not change the conclusions.
+
+\begin{proposition}[Attained upper bounds under compact priors]
+\label{prop:compact-priors}
+The class $\mathcal C_{\rm reg}$ is compact, its joint waiting-law map is continuous
+in maximum row total variation, and its stationary entropy functional is
+continuous. For feasible exact data $D\in\Obs(\mathcal C_{\rm reg})$ define
+\begin{equation}
+ U_D(\eta)=\max\{\sig(Q):Q\in\mathcal C_{\rm reg},
+                      d(\Obs(Q),D)\le\eta\},\qquad\eta\ge0.
+ \label{eq:compact-upper}
+\end{equation}
+Every maximum exists and is finite, and
+\begin{equation}
+ U_D(\eta)\downarrow U_D(0)\qquad(\eta\downarrow0).
+ \label{eq:compact-limit}
+\end{equation}
+The assertion also holds with a metric generating weak convergence of
+the joint row laws in place of $d$.
+\end{proposition}
+\begin{proof}
+For each fixed dimension and connected reciprocal support, supported
+ordered rates range over a closed finite box and diagonals are fixed by
+row sums. There are only finitely many such supports and dimensions.
+Their union is compact. In a converging fixed-dimensional sequence,
+each off-diagonal lies in $\{0\}\cup[m,M]$, so its support is eventually
+constant. The limit retains a connected support and is irreducible.
+
+Here is an explicit common waiting-time tail. Set
+\begin{equation}
+ \nu=(\bar n-1)M,\qquad t_0=1/\nu,\qquad
+ b=\frac{e^{-1}}{\bar n!}\left(\frac m\nu\right)^{\bar n}>0.
+\end{equation}
+Append an absorbing state reached at any observed jump and uniformize
+at rate $\nu$. From every state, a path to absorption uses at most
+$\bar n$ transitions, each with uniformized probability at least
+$m/\nu$. Absorption earlier on the path also counts. The event of
+exactly $\bar n$ Poisson steps in time $t_0$ therefore gives absorption
+probability at least $b$. Repeating the bound by the Markov property,
+\begin{equation}
+ \sup_{Q\in\mathcal C_{\rm reg},i}
+ \Pr_i^Q\{\tau_{\rm mark}>t\}
+ \le(1-b)^{\lfloor t/t_0\rfloor}.
+ \label{eq:compact-tail}
+\end{equation}
+On a finite time interval, continuity of the matrix exponential gives
+uniform convergence of $Re^{T_Qt}B_Q$. Equation~\eqref{eq:compact-tail}
+controls the discarded probability tails uniformly. Splitting the
+row-TV integral at a large finite time proves continuity of $\Obs$.
+The normalized stationary solution and the entropy sum are continuous
+on each support box, because the stationary distribution and supported
+rates stay positive. Finite union gives continuity on $\mathcal C_{\rm reg}$.
+
+The constraint set in Eq.~\eqref{eq:compact-upper} is nonempty and
+compact, so its maximum is attained. These sets shrink with $\eta$,
+and their maxima are bounded below by $U_D(0)$. For any
+$\eta_j\downarrow0$, extract a convergent subsequence of maximizers.
+Its limit belongs to the exact fiber by observation continuity; entropy
+continuity makes the limiting value at most $U_D(0)$. This proves
+Eq.~\eqref{eq:compact-limit}. Row-TV continuity also implies weak
+continuity, so the same compactness argument applies to a metric for
+weak convergence.
+\end{proof}
+
+An explicit data-independent bound follows by setting $A=\log(M/m)$.
+Microscopic activity is at most $(\bar n-1)M$, so the established
+activity--affinity bound~\cite{NishiyamaHasegawa2023} gives
+\begin{equation}
+ U_D(\eta)\le(\bar n-1)M A\tanh(A/2).
+\end{equation}
+The prior bounds make the constrained upper value finite; they do not
+make the compatible generator or its entropy unique. The proposition
+holds the feasible center $D$ fixed and shrinks its tolerance. It does
+not assert two-sided continuity as $D$ varies, good inverse conditioning,
+or a global certificate for a numerical optimizer. Closed tolerance
+balls are used for attainment; an open ball may have only a supremum.
+
+Finally, this deterministic statement is not a confidence-set
+construction. Raw empirical waiting laws are atomic and have row-TV
+distance one from the continuous model laws. A practical use therefore
+requires a justified fitted-density TV region or a weaker metric or
+measurement region with its own statistical coverage. The rate floor,
+rate ceiling and state cap remain explicit physical assumptions.

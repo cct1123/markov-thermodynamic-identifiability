@@ -1,5 +1,5 @@
 {
-  "executed_at_utc": "2026-09-11T02:22:55.499674+00:00",
+  "executed_at_utc": "2026-09-18T23:37:10.338014+00:00",
   "engine": "Tectonic 0.17.0",
   "bundle": "https://relay.fullyjustified.net/default_bundle_v33.tar",
   "source_date_epoch": "1789084800",
@@ -15,22 +15,37 @@
         "main.tex"
       ],
       "returncode": 0,
-      "stdout": "note: using only cached resource files\nnote: Running TeX ...\nnote: Running BibTeX on main.aux ...\nnote: warnings were issued by BibTeX; use --print and/or --keep-logs for details.\nnote: Rerunning TeX because bibtex was run ...\nnote: Running xdvipdfmx ...\nnote: Writing `mainNotes.bib` (104 B)\nnote: Writing `main.log` (14.5693359375 KiB)\nnote: Writing `main.aux` (15.1826171875 KiB)\nnote: Writing `main.pdf` (224.2236328125 KiB)\nnote: Writing `main.out` (6.2919921875 KiB)\nnote: Writing `main.blg` (940 B)\nnote: Writing `main.bbl` (12.298828125 KiB)\n",
-      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\n"
+      "stdout": "note: using only cached resource files\nnote: Running TeX ...\nnote: Running BibTeX on main.aux ...\nnote: warnings were issued by BibTeX; use --print and/or --keep-logs for details.\nnote: Rerunning TeX because bibtex was run ...\nnote: Running xdvipdfmx ...\nnote: Writing `main.log` (15.4462890625 KiB)\nnote: Writing `main.bbl` (24.2041015625 KiB)\nnote: Writing `main.aux` (31.01953125 KiB)\nnote: Writing `mainNotes.bib` (104 B)\nnote: Writing `main.out` (11.0625 KiB)\nnote: Writing `main.blg` (984 B)\nnote: Writing `main.pdf` (464.9931640625 KiB)\n",
+      "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\nwarning: main.tex:423: Underfull \\hbox (badness 10000) in paragraph at lines 423--423\nwarning: main.tex:423: Underfull \\hbox (badness 10000) in paragraph at lines 423--423\nwarning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.\n"
     }
   ],
   "sha256": {
-    "main.tex": "e2ccb71f0fab5f6bfb7f10bad5020c4941e62104da19841f4ec7372b99804283",
-    "references.bib": "ddcbc047548c952ba5b272a4ad801733260c84dc8500e6cc719fe0f891dd2533",
-    "supplementary/proofs.tex": "a1c9143bf6215a1e0cccd12c31003b84f520da5a7001f1c7e262f5f4ac52f7cf",
-    "figures/balanced-fiber.pdf": "9a4eaa3af2743d8308f81ed98ec18010f01489cfbc3c6ce025d7bc80d315040e",
-    "figures/three-state-instability.pdf": "e2a17cb2e9926346606e5f84dd51585fc388d42715c760148d8ae8e0ab722803",
-    "main.pdf": "720e007d87fdf8c9a3ea740d93f6885a5d6c16531db805e371b8578b61754a3b"
+    "main.tex": "cdac9599fbcf9cbf421363366c3adbba68357f697b86758938febc563ccaabd9",
+    "references.bib": "fca265578135bed026eb2d5313f3320d4d78b757ce7bb50fda92b9796d28ffd7",
+    "main.pdf": "4f942038591fc403629d1eacadf666b733d2ad245ad563290f25d1e30a4f9c9a",
+    "supplementary/compact-priors.tex": "7528faa9b93a599d851adb49adbb737c2f56cb423492b949259674073701bbc4",
+    "supplementary/conditioning.tex": "72a6145dcebdf159cf245b34f3a3a7e427ef5caddc5a6515ccc15e97700ad6ce",
+    "supplementary/continuation.tex": "10b1b508047f392c30dfb83cd57ed3bb532d2cc1a47668f5eca4e2d5e75bba4a",
+    "supplementary/inference.tex": "29e7f79914ca5eb1752af8e19ac11ccba5ac9b9b245c8b3c81c450825c1888db",
+    "supplementary/laplace-two.tex": "7882e32a5417d71f6e3c57d51a68c39e5b4d3c0bf4d4deadc1a92b799cd13ba0",
+    "supplementary/literature-comparison.tex": "86d4c4918748c0021cb000412c7a38399e3111dfdc39c05a1630aac90676455f",
+    "supplementary/moment-confidence.tex": "c4e790a99c8b7c033d24f9e9f93037c64fe82ebaebda6c6115124b16b7ec832e",
+    "supplementary/observation-graph.tex": "ff2f752fca8334b83c805f9a7c625754cac664cebda75c520f75402d4c1ab3e4",
+    "supplementary/proofs.tex": "85cb49ac206c9ad0802002d37bc16072bc96339fbe89b1f6c0a6e42d4d5f73ab",
+    "supplementary/rare-event.tex": "39821b51e97270902bb42c19a630fa18f73078582418c4f2383be87f8d2c97d9",
+    "figures/balanced-fiber.pdf": "4d22133a84b1f31b6fb4fdb580eae7501c50b331394405a4052d06b8d3c6dcdc",
+    "figures/conditioning.pdf": "8f35636f242e7f973daf516735fd1a47ccb22d1d33e2d903736a498bc477af6a",
+    "figures/continuation.pdf": "1d7f1e5572909f5fc4b84be6ec3b779a8c888dea6538574b9b46237603b78881",
+    "figures/finite-data.pdf": "a261ed2bffcbad2df33e069e10150a12f04557561101300e1365093d6116558d",
+    "figures/realization-geometry.pdf": "d1ba402377b3b480b8dae320f890fcc6da135312b48cd31de6ab70aef984a361",
+    "figures/three-state-instability.pdf": "b6760b0fe51f823a3c121b28cc151efd531d2bf788d291e2cadbb3e24827fcb9"
   },
   "validation": {
     "compiled": true,
     "no_undefined_references_or_citations": true,
     "no_overfull_boxes": true
   },
-  "log_warnings": []
+  "log_warnings": [
+    "Underfull \\hbox (badness 10000) in paragraph at lines 423--423"
+  ]
 }

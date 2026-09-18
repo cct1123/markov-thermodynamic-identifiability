@@ -1,0 +1,81 @@
+
+% Place this part in the finite-record section near the operational estimator.
+\subsection{True-law distance and finite-record confidence sets}
+\label{subsec:empirical-topology}
+
+The observation topology in the stability theorems is a distance between
+\emph{true} row laws. It is not the total-variation estimation error of a raw
+empirical measure. For every finite nonempty row,
+$\widehat\mu_I=n_I^{-1}\sum_{m:I_m=I}\delta_{(\tau_m,J_m)}$ is atomic, while
+the CTMC row law has a density in time. The finite set of observed atoms has
+empirical probability one and true probability zero, so
+\begin{equation}
+ \TV(\widehat\mu_I,\mu_I)=1.\label{eq:empirical-tv-one}
+\end{equation}
+Weak convergence and convergence of bounded Laplace tests remain possible.
+The moment estimator above uses precisely those bounded tests and therefore
+does not assume a shrinking empirical-TV error. A smoothing or detector model
+would need its own error analysis.
+
+An elementary confidence rectangle gives a finite-sample alternative to
+the pointwise delta approximation.
+\begin{proposition}[Sequential moment confidence rectangle]
+\label{prop:moment-rectangle}
+Fix $K$ positive Laplace arguments in advance, $0<\alpha<1$, and a deterministic
+number $n\ge1$ of complete inter-mark intervals. Let $d_{\rm mom}=4K$ and
+\begin{equation}
+ t_{n,\alpha}=\sqrt{\frac n2\log\frac{2d_{\rm mom}}\alpha}.
+\end{equation}
+For the empirical joint moments~\eqref{eq:empirical-laplace},
+\begin{equation}
+ \mathbb P_Q\left\{
+ \left|\widehat\mu_{I,jL}-\widehat\Psi_{Q,IL}(\lambda_j)\right|
+ \le\frac{t_{n,\alpha}}{n_I}
+ \ \text{for all }(I,j,L)\text{ with }n_I>0\right\}\ge1-\alpha.
+ \label{eq:finite-moment-rectangle}
+\end{equation}
+Rows with $n_I=0$ impose no constraint. Stationarity of the initial mark is
+unnecessary; the exact CTMC and resolved-reset observation assumptions suffice.
+\end{proposition}
+\begin{proof}
+Let $\mathcal F_0$ contain the first observed mark and let $\mathcal F_m$
+include the next $m$ complete marked intervals. Then $I_m$ is
+$\mathcal F_{m-1}$-measurable. For one fixed coordinate define
+\begin{equation}
+ Z_m=\mathbf1\{I_m=I\}
+ \left(e^{-\lambda_j\tau_m}\mathbf1\{J_m=L\}
+       -\widehat\Psi_{Q,IL}(\lambda_j)\right).
+\end{equation}
+The reset property gives $\mathbb E[Z_m\mid\mathcal F_{m-1}]=0$.
+Conditionally, $Z_m$ lies in an interval of length at most one, so
+conditional Hoeffding's lemma yields
+$\mathbb E[e^{\eta Z_m}\mid\mathcal F_{m-1}]\le e^{\eta^2/8}$.
+Iteration and Chernoff's bound, optimized at $\eta=4t/n$, imply
+\begin{equation}
+ \mathbb P_Q\left\{\left|\sum_{m=1}^nZ_m\right|>t\right\}
+ \le2e^{-2t^2/n}.
+\end{equation}
+Union over $d_{\rm mom}$ coordinates and use
+$\sum_mZ_m=n_I(\widehat\mu_{I,jL}-\widehat\Psi_{Q,IL}(\lambda_j))$
+for nonempty rows. The argument neither assumes independent successive rows
+nor conditions on their random counts.
+\end{proof}
+
+Intersecting the simultaneous rectangle with a declared microscopic model
+class gives a confidence set for the generator with coverage at least
+$1-\alpha$. Its full entropy image, or a certified enclosing interval,
+inherits this coverage and may have an infinite upper endpoint. Finding a
+large feasible entropy by numerical optimization does not certify that
+endpoint from above. The bound is conservative and does not establish
+efficient inversion or an efficient estimator. It applies to fixed $n$
+complete intervals and preselected arguments; an adaptive stopping rule,
+same-record design selection, terminal censoring at fixed physical time,
+or missed events requires additional analysis.
+
+The existing simulations already use actual sequential CTMC records and
+dependence-aware moment covariance. Their reported bias, variance, and
+Monte Carlo coverage remain operationally meaningful. Their Wald intervals
+and low-count warning retain the stated pointwise or heuristic status;
+Eq.~\eqref{eq:finite-moment-rectangle} is a separate finite-sample
+confidence-set construction, not a retroactive coverage guarantee for those
+intervals.

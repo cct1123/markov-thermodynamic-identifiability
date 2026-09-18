@@ -1,0 +1,74 @@
+\section{Observation graphs beyond one resolved pair}\label{sec:graphpriors}
+
+\subsection{Coverage of microscopic vertices}
+Let $\mathcal O$ be a nonempty reverse-closed set of individually resolved
+microscopic transitions on a fixed, known vertex set $V$. Each observed
+transition has a positive rate and known endpoints. The observation graph
+has vertices $V$ and the undirected pairs underlying $\mathcal O$ as edges.
+A vertex is covered if it is incident to an observed edge; an uncovered
+vertex is fully hidden. Writing $E$ for the sum of observed jump matrices,
+we retain $T=Q-E$, $R_I=e_{\mathrm{dest}(I)}^T$, and
+$B_J=q_J e_{\mathrm{orig}(J)}$. The joint kernel is $Re^{Tt}B$.
+
+\begin{proposition}[Recovery under full vertex coverage]\label{prop:coverage}
+If every microscopic vertex is covered, two distinct positive Laplace
+arguments determine the generator uniquely on the declared vertex set,
+even when the observed rates are unknown. The inverse on admissible data
+is rational and locally Lipschitz. It is therefore locally Lipschitz in
+maximum row total variation and continuous under weak row-law convergence,
+without a common rate cap. One positive argument suffices if all observed
+rates are known.
+\end{proposition}
+\begin{proof}
+For each vertex $i$, choose an observed mark $I_i$ ending at $i$ and an
+observed mark $J_i$ beginning at $i$. Put $D=\diag(q_{J_i})$ and select
+the square submatrix $F(\lambda)_{ij}=\widehat\Psi_{I_i,J_j}(\lambda)$.
+Then
+\begin{equation}
+ F(\lambda)=(\lambda I-T)^{-1}D.
+\end{equation}
+For $M_k=F(\lambda_k)^{-1}$ and $\lambda_1\ne\lambda_2$,
+\begin{equation}
+ M_2-M_1=(\lambda_2-\lambda_1)D^{-1},\quad
+ D=(\lambda_2-\lambda_1)(M_2-M_1)^{-1},\quad
+ T=\lambda_1 I-DM_1.\label{eq:coverageinverse}
+\end{equation}
+For an additional observed mark $J$, let $f_J$ be its measured column
+restricted to rows $I_i$. The identity
+$(\lambda_1I-T)f_J=q_J e_{\mathrm{orig}(J)}$ recovers its rate.
+Thus $Q=T+E$ is determined. The inverses have nonzero denominators at
+every admissible source. They remain smooth in a neighborhood, and the
+Laplace measurements are bounded continuous tests of the row laws.
+When the observed rates are known, $D$ and $E$ are known and the last
+formula in~\eqref{eq:coverageinverse} needs only one argument.
+\end{proof}
+
+At a complete source, Proposition~\ref{prop:coverage} also gives a locally
+Lipschitz entropy inverse and a finite local upper ceiling. The same is
+true at an irreducible sparse source if competitors have the same known
+support. This condition requires fewer observations than all physical
+edges: observing $1\leftrightarrow2$ and $2\leftrightarrow3$ covers a
+complete three-state network while leaving $1\leftrightarrow3$ hidden.
+One unobserved reciprocal pair is therefore not sufficient for unbounded
+entropy inference.
+
+The support condition remains consequential. Start from the unit tree
+$1\leftrightarrow2\leftrightarrow3$ and observe both tree edges. Open
+the unobserved pair at rates $q_{13}=e$ and
+$q_{31}=\exp(-1/e^2)$, keeping all four old rates fixed. The generators
+and their joint row laws converge to the tree, whereas the new pair
+contributes $\sig\sim1/(3e)$. Full vertex coverage identifies every
+generator in the sequence but does not make entropy continuous across
+this newly opening support. This variant changes the trace by a
+vanishing amount; a trace-preserving version needs unobserved rate slack.
+
+At the other extreme, the existing hidden-pair construction applies
+whenever two vertices are uncovered: its similarity fixes every observed
+jump matrix, including when many edges are observed. Unknown support
+then allows unbounded entropy in every joint-kernel neighborhood at fixed
+dimension, observed rates and trace. These are two sufficient graph
+criteria; they do not exhaust arbitrary observation graphs with exactly
+one uncovered vertex. Nor do they extend directly to lumped states or
+blurred transition labels. A macrostate event need not reset to a known
+microscopic state, and consecutive waiting laws then need not determine
+the entire observed path law~\cite{SkinnerDunkel2021PNAS,Bruno2005,FritzSeifert2026}.

@@ -1,0 +1,443 @@
+\documentclass[aps,pre,onecolumn,11pt,longbibliography,notitlepage]{revtex4-2}
+\usepackage{amsmath,amssymb,amsthm,bm,graphicx,booktabs}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\C}{\mathcal C}
+\newcommand{\Obs}{\mathcal O}
+\newcommand{\F}{\mathcal F}
+\newcommand{\Ent}{\mathcal S}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\sig}{\sigma}
+\newcommand{\zs}{z_*}
+\begin{document}
+\title{Thermodynamic identifiability and unstable entropy inference under partial observation}
+\author{Author information to be supplied}
+\noaffiliation
+\date{14 September 2026}
+\begin{abstract}
+Exact identifiability of partially observed Markov dynamics does not by itself guarantee stable inference or a finite upper bound on microscopic entropy production. For finite irreducible continuous-time Markov chains with one resolved reverse pair, three distinct positive Laplace arguments identify every three-state generator. We distinguish this exact inverse from relative-rate conditioning and finite-trajectory estimation. Near a sparse boundary, generators and their observed laws converge while the stationary network entropy-production rate diverges, even with fixed trace and a common upper rate cap. More generally, at fixed state count and unknown reciprocal support, a finite local entropy ceiling exists precisely for two states or a complete three-state source. We derive an exponential observation-time lower bound for testing independently variable rare reverse rates and implement a constrained finite-data inference pipeline. A five-state family supplies an exactly exhausted nontrivial entropy fiber: unbounded, two-point, then singleton. A nontrivial perturbation clarifies its boundary-feasibility transition without asserting a generic saddle-node of the whole realization set. Observation-graph coverage and activity--affinity bounds specify information and physical assumptions that can restore control. All exact results retain explicit dimension and support constraints; numerical estimation and continuation are distinguished from proof.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+Partial observations can reveal broken time-reversal symmetry without resolving every dissipative transition. Waiting times between visible jumps retain information about hidden excursions and can improve lower bounds on entropy production~\cite{vanDerMeer2022,Harunari2022,Maier2025}. We ask the complementary question: can these observations exclude arbitrarily large microscopic entropy production? An upper bound matters whenever a low observed irreversibility, or a well-fitting reconstructed model, is used to argue that little dissipation remains hidden.
+
+Five questions must be separated. Do exact observations determine the generator? Do they determine its entropy production even if the generator is ambiguous? Is the compatible entropy set bounded? Does a small observational error give a small change, or at least a finite ceiling? Finally, can a finite trajectory support useful estimates and uncertainty intervals? An affirmative answer to the first question need not answer the last three. The rate-to-entropy map can itself become singular as a reverse flux vanishes, while the observation inverse introduces additional ambiguity.
+
+Our central result is a sharp local upper-ceiling criterion for one resolved microscopic reverse pair, fixed state count, and unknown reciprocal support. A finite ceiling in a neighborhood of the joint waiting laws exists exactly for two states or a complete three-state source. The criterion remains true with observed rates and trace fixed. This general statement organizes the paper. A cap-free three-Laplace inverse provides the positive three-state result; a sparse family separates stable absolute-rate recovery from unstable entropy. Its rare-rate alternatives also yield an exponential lower bound on the duration needed to distinguish a fixed multiplicative entropy gap. We complement these results with numerical conditioning and finite-trajectory inference, retaining their statistical and model-class limitations.
+
+The physical and mathematical antecedents are substantial. Data processing bounds observed path irreversibility by microscopic entropy production~\cite{vanDerMeer2022,Harunari2022}; hidden nonequilibrium and compatible-model minimization already underlie partial-observation lower bounds~\cite{WagnerTimmer2000,Ehrich2021,Nitzan2023}. Similarity descriptions of hidden Markov and Markov arrival models, phase-type invariant polytopes, and finite nonnegative factorization ambiguity provide established realization tools~\cite{Vanluyten2008,HorvathTelek2007,HeZhang2006,Mond2003}. Neither positive-realization ambiguity nor relative-entropy singularity is new~\cite{Zeraati2012,SasonVerdu2016}. Our claims concern the precise physical model classes and their entire entropy image or local upper envelope, rather than new general realization theory.
+
+An explicit five-state family remains a second exact result, presented after the general stability and inference results. Its full entropy fiber changes from unbounded to exactly two values and then to a unique generator. The proof exhausts reciprocal physical supports; finite numerical search does not establish the count. A two-parameter extension tests how the threshold persists and distinguishes the fold of boundary constraints from the continuum of interior realizations. Adding one nonminimal hidden state destroys the finite fiber. This dimensional dependence is part of the conclusion, not an auxiliary qualification. The appendices preserve the full global proof and exact certificates; the expanded source comparison and numerical methods document what is and is not established.
+
+\input{supplementary/literature-comparison.tex}
+
+\section{Model, observations, and identified sets}\label{sec:model}
+Fix a physical time unit and two named states $x,y$. For $N\ge2$, let $\C_N$ consist of row generators $Q$ on $\{x,y,h_1,\ldots,h_{N-2}\}$ with $Q\1=0$, nonnegative off-diagonal entries, connected reciprocal support
+\begin{equation}
+ q_{ij}>0\quad\Longleftrightarrow\quad q_{ji}>0,\qquad i\ne j,
+\end{equation}
+and $r=q_{xy}>0$, $s=q_{yx}>0$. Every rate is finite. There is no common rate floor or upper bound unless stated, and competing support graphs are unknown. Set $\C_{\le m}=\bigcup_{N=2}^m\C_N$. A fixed count and a cap are different assumptions.
+
+There is one kinetic channel per ordered state pair, the generator is time independent, and all states are even under time reversal. The generator entropy-production functional is
+\begin{align}
+ \sig(Q)&=\sum_{i<j:q_{ij}>0}(F_{ij}-F_{ji})\log\frac{F_{ij}}{F_{ji}},
+ &F_{ij}&=\pi_iq_{ij},\label{eq:entropy}\\
+ &=\sum_{i\ne j:q_{ij}>0}\pi_iq_{ij}\log\frac{q_{ij}}{q_{ji}},\label{eq:directed}
+\end{align}
+where $\pi Q=0$, $\pi\1=1$ is the unique positive stationary distribution. Equation~\eqref{eq:directed} follows by stationary cancellation of the $\log\pi_i$ terms. We use natural logarithms and $k_B=1$, so $\sig$ has inverse-time units. A paired absent edge contributes zero. Every member of $\C_N$ has finite nonnegative entropy, zero exactly at detailed balance. This is the usual finite-network convention~\cite{Schnakenberg1976,NishiyamaHasegawa2023}; interpreting it as all physical dissipation additionally requires resolved thermodynamic channels and local detailed balance. Parallel unresolved channels or odd variables require a different model.
+
+Observe only marks $+=(x,y)$ and $-=(y,x)$, with known endpoints. Define
+\begin{gather}
+ E_+=r e_xe_y^T,\quad E_-=s e_ye_x^T,\quad T=Q-E_+-E_-,\\
+ R=\begin{pmatrix}e_y^T\\e_x^T\end{pmatrix},\qquad B=(r e_x,s e_y).
+\end{gather}
+Crucially, $T$ retains the diagonals of $Q$. Killing at a marked jump makes $T$ transient. The observation is the matrix of joint next-mark/time densities
+\begin{equation}
+ \Obs(Q)=\Psi_Q(t)=R e^{Tt}B,\qquad
+ \widehat\Psi_Q(\lambda)=R(\lambda I-T)^{-1}B,\quad\lambda>0.\label{eq:obs}
+\end{equation}
+Each row is a probability measure $\mu_I(dt,J)=\psi_{IJ}(t)dt$ on $[0,\infty)\times\{+,-\}$. Individual entries need not integrate to one. Absolute time and joint amplitudes are part of the data. The reset property determines all successive marked-event laws from these rows~\cite{vanDerMeer2022,Harunari2022}.
+
+Two models are observationally equivalent when their two row laws agree, equivalently when $\Psi_Q(t)=\Psi_{Q'}(t)$ for every $t\ge0$. Physical models are identified only under permutations of hidden states fixing $x,y$. For a declared class $\C$, define
+\begin{equation}
+ \F_{\C}(D)=\{[Q]_{\rm lab}:Q\in\C,\ \Obs(Q)=D\},\qquad
+ \Ent_{\C}(D)=\{\sig(Q):[Q]_{\rm lab}\in\F_{\C}(D)\}.\label{eq:fibers}
+\end{equation}
+Generator identification means $|\F_\C(D)|=1$; thermodynamic identification means $|\Ent_\C(D)|=1$. A bounded nonunique entropy fiber has more than one value and finite supremum. An unbounded fiber contains arbitrarily large \emph{finite} values; no model with a one-way edge is admitted.
+
+For approximate data we use maximum row total variation,
+\begin{equation}
+ d(D,D')=\max_I\frac12\sum_J\int_0^\infty
+ |\psi_{IJ}(t)-\psi'_{IJ}(t)|\,dt.\label{eq:tv}
+\end{equation}
+We also consider the product weak topology of the two row probability measures. A \emph{finite local upper ceiling} at $D$ in $\C$ means that some $\eta>0$ satisfies
+\begin{equation}
+ \sup\{\sig(P):P\in\C,\ d(\Obs(P),D)<\eta\}<\infty.\label{eq:ceiling}
+\end{equation}
+Its weak version replaces the ball by an open neighborhood. This property is defined even when exact entropy is multivalued. At an identifiable source, convergence of entropy along all observationally convergent models is stronger than a finite ceiling. Stationary records on a fixed time window form a separate experiment, treated in Sec.~\ref{sec:records}.
+
+
+\begin{table}[ht]
+\caption{Properties of an inverse problem for a declared model class. Conditioning requires a parameterization and data scale; finite-sample inference additionally requires a sampling experiment.}\label{tab:hierarchy}
+\begin{ruledtabular}
+\begin{tabular}{ll}
+Property & Requirement\\\hline
+Generator identification & The generator fiber has one element\\
+Entropy identification & The entropy fiber has one value\\
+Exact boundedness & The exact entropy fiber has finite supremum\\
+Local upper ceiling & A positive data neighborhood has finite entropy supremum\\
+Continuity & Entropy converges along admissible converging data\\
+Conditioning & Quantitative sensitivity to perturbations in specified coordinates\\
+Finite-sample estimation & Error and coverage controlled under a sampling model
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+The dimension assumption must accompany every identified set. A fixed-dimensional class, a state cap, and a class of linearly minimal realizations are different restrictions. The smallest positive realization can in general require more states than the minimal linear order. For our particular five-state family those orders coincide, so its cap may be replaced by linear minimality or by requiring a minimum-size positive realization. This equality is proved for that family, not assumed for arbitrary kernels. With unrestricted hidden dimension a fully hidden state can be split into copies, preserving the complete marked law while generating unbounded entropy (Appendix~\ref{app:split}).
+
+At stationarity Eq.~\eqref{eq:entropy} is both the pathwise Markov irreversibility rate and the mean total network entropy-production rate. The stationary system-entropy derivative vanishes, so the corresponding medium-entropy rate agrees with Eq.~\eqref{eq:directed}. These are mathematical identities of the specified CTMC. Interpreting each rate ratio as reservoir entropy requires local detailed balance and correct microscopic state and channel resolution; a sum of parallel channels generally loses that information. The generator alone need not specify unique heat currents or heat dissipation in physical energy units.
+
+\section{Exact three-state recovery and conditioning}\label{sec:three}
+Three states isolate the difference between recovering rates and recovering entropy. There is only one hidden state, so no nontrivial hidden similarity remains, but this algebraic observation alone would not establish stability.
+
+\begin{theorem}[Three positive Laplace arguments]\label{thm:inverse}
+For every $Q_0\in\C_3$ and any $0<\lambda_1<\lambda_2<\lambda_3$, the three matrices $\widehat\Psi_{Q_0}(\lambda_j)$ determine $Q_0$ uniquely within $\C_{\le3}$. On admissible data near these matrices, the inverse is rational with nonzero denominators and locally Lipschitz. Consequently weak convergence of joint row laws to $\Obs(Q_0)$ among models in $\C_{\le3}$ implies eventual dimension three and entrywise convergence to $Q_0$. In row TV the inverse is locally Lipschitz. At a complete three-state source, entropy is also locally Lipschitz in row TV and continuous under weak row convergence.
+\end{theorem}
+
+\begin{proof}
+Write
+\begin{equation}
+ Q=\begin{pmatrix}-r-a&r&a\\s&-s-c&c\\b&d&-b-d\end{pmatrix},\qquad h=b+d>0.\label{eq:three}
+\end{equation}
+Reciprocity and irreducibility imply $a+c>0$. Let $P$ interchange the two mark rows, $F(\lambda)=P\widehat\Psi(\lambda)$, and $M(\lambda)=F(\lambda)^{-1}$. The visible resolvent $K$ satisfies $F=K\diag(r,s)$ and
+\begin{equation}
+ K^{-1}=\diag(\lambda+r+a,\lambda+s+c)
+ -\frac1{\lambda+h}\binom a c(b,d).\label{eq:schur3}
+\end{equation}
+This is a nonsingular strictly row diagonally dominant matrix for $\lambda>0$. Hence
+\begin{equation}
+ G_x(\lambda):=\frac{(M\1)_x-1}{\lambda}=\frac1r+\frac{a/r}{\lambda+h},\quad
+ G_y(\lambda)=\frac1s+\frac{c/s}{\lambda+h}.\label{eq:Grow}
+\end{equation}
+Select a row with positive \emph{source} entrance and write it as $G=u+v/(\lambda+h)$, $v>0$. If $G_j=G(\lambda_j)$, then
+\begin{equation}
+ \mathcal R=\frac{G_1-G_2}{G_2-G_3}\frac{\lambda_3-\lambda_2}{\lambda_2-\lambda_1}
+ =\frac{\lambda_3+h}{\lambda_1+h}>1,\qquad
+ h=\frac{\lambda_3-\mathcal R\lambda_1}{\mathcal R-1}.\label{eq:recoverh}
+\end{equation}
+For each row set
+\begin{equation}
+ v_i=(G_i(\lambda_1)-G_i(\lambda_2))
+ \frac{(\lambda_1+h)(\lambda_2+h)}{\lambda_2-\lambda_1},\qquad
+ u_i=G_i(\lambda_1)-\frac{v_i}{\lambda_1+h}.
+\end{equation}
+Then $r=1/u_x$, $s=1/u_y$, $a=v_x/u_x$, and $c=v_y/u_y$. If $a_0>0$, use
+\begin{equation}
+ d=-rM_{xy}(\lambda_1)(\lambda_1+h)/a,\qquad b=h-d.\label{eq:branch}
+\end{equation}
+Otherwise $c_0>0$ and use $b=-sM_{yx}(\lambda_1)(\lambda_1+h)/c$, $d=h-b$. Keep the source-selected branch throughout its neighborhood. No formula divides by an entrance vanishing at a leaf.
+
+All denominators are nonzero at the source and remain so locally. The inverse is therefore locally Lipschitz as a function of the finitely many transform entries. Those entries are bounded continuous tests of row laws and are Lipschitz in TV. Two-state data have both $G$ rows constant and cannot approach the selected nonzero source differences. At a complete source the recovered rates stay bounded away from zero, and the normalized stationary solution and~\eqref{eq:entropy} are smooth. This proves the entropy statements as well.
+\end{proof}
+
+No trace or rate cap is assumed in this reconstruction. The result does not assert that three arguments are the fewest possible, or that differentiation of noisy waiting-time laws is continuous.
+
+\input{supplementary/conditioning.tex}
+
+\section{Entropy instability near sparse boundaries}\label{sec:sparse}
+\begin{proposition}[A fixed-trace three-state boundary]\label{prop:tree}
+For $0<k<e<1/2$, let
+\begin{equation}
+ Q(e,k)=\begin{pmatrix}
+ -1-e&1&e\\1&-2+k&1-k\\k&1-e&-1+e-k
+ \end{pmatrix}.\label{eq:treefamily}
+\end{equation}
+These generators have trace $-4$, off-diagonal rates at most one, and observed rates $r=s=1$. Each exact kernel uniquely determines its generator in $\C_{\le3}$. With $Z=3+e+2k-e^2-ek-k^2$,
+\begin{equation}
+ \sig(Q(e,k))=\frac{(e-k)(1-e-k)}{Z}
+ \log\frac{e(1-e)}{k(1-k)}.\label{eq:treeentropy}
+\end{equation}
+Their row distance from the unit tree $Q(0,0)$ is below $4e$. Along $k=\exp(-1/e^2)$, as $e\downarrow0$,
+\begin{equation}
+ Q(e,k)\longrightarrow Q(0,0),\qquad e\sig(Q(e,k))\longrightarrow\frac13.\label{eq:treelimit}
+\end{equation}
+Every positive observation neighborhood of the tree has unbounded entropy even with the stated trace and rate cap.
+\end{proposition}
+
+\begin{proof}
+The unnormalized stationary weights are
+\begin{equation}
+ (w_x,w_y,w_h)=(1-e+2k-k^2,\ 1+k-e^2,\ 1-k+2e-ek).
+\end{equation}
+They sum to $Z$ and solve $wQ=0$. Along the cycle $x\to h\to y\to x$, each edge current is $(e-k)(1-e-k)/Z$, and the cycle affinity is the logarithm in~\eqref{eq:treeentropy}. This proves the entropy identity. The source's mean next-mark times from $(x,y,h)$ are $(1,2,3)$. Common/excess-clock coupling has separation hazard at most $e+k$, hence row TV is at most $2(e+k)<4e$. In~\eqref{eq:treeentropy}, $Z\to3$ and $\log(1/k)=1/e^2$, giving~\eqref{eq:treelimit}. Alternatively, first fix any sufficiently small $e>0$, then let $k\downarrow0$: the logarithmic coefficient tends to $e(1-e)/(3+e-e^2)>0$. This proves an infinite supremum in a fixed neighborhood. The two limiting statements are distinct.
+\end{proof}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=.92\textwidth]{figures/three-state-instability.pdf}
+\caption{The deterministic family~\eqref{eq:treefamily} with $k=\exp(-1/e^2)$; the figure uses $\epsilon=e$ and $\kappa=k$. The rates converge to the unit tree and the analytic row-TV upper bound $2(e+k)$ tends to zero, while entropy diverges with asymptote $1/(3e)$. The plotted TV line is a bound, not a measured distance. All finite-parameter models retain strictly positive reverse rates, observed rates one, trace $-4$, and off-diagonal rates at most one. Arbitrary-precision evaluation avoids replacing the small reverse rate by zero.}\label{fig:tree}
+\end{figure}
+
+More generally, at any noncomplete $Q_0\in\C_N$, open a missing pair at rates $e$ and $\exp(-1/e^2)$ and subtract their sum from an existing positive unobserved ordered rate. For small $e$ this preserves connected reciprocal support, observed rates, trace, and the original maximum rate. Stationarity varies continuously, so the new edge contributes asymptotically $\pi_i^0/e$. Thus generator-level entropy is locally upper bounded exactly at complete sources. A complete generator nevertheless need not give observational upper boundedness when more hidden states are present.
+
+\section{A sharp criterion for finite local upper ceilings}\label{sec:ceiling}
+For a source $Q_0$, denote by $\C_N(Q_0;r,s,\tau)$ the subclass fixing its two observed rates and $\tau=-\tr Q_0$. No further individual rate restriction is implicit.
+
+\begin{theorem}[Fixed-count local criterion]\label{thm:ceiling}
+For $Q_0\in\C_N$ with one observed reverse pair and unknown competitor topology, a finite local entropy upper ceiling exists in $\C_N$ if and only if
+\begin{equation}
+ N=2\quad\hbox{or}\quad N=3\ \hbox{and $Q_0$ has complete support}.\label{eq:criterion}
+\end{equation}
+The same criterion holds in $\C_N(Q_0;r,s,\tau)$ and in the product weak topology of joint row laws.
+\end{theorem}
+
+The large-$N$ part follows from a more general constructive statement. For a finite set of resolved marks, extend~\eqref{eq:obs} by $R_I=e_{\mathrm{target}(I)}^T$ and $B_J=q_J e_{\mathrm{source}(J)}$, with $T=Q-\sum_J E_J$. Extend~\eqref{eq:tv} by maximizing over all previous marks and summing over all next marks.
+\begin{lemma}[Two fully hidden states]\label{lem:neighborhood}
+Allow any nonempty reverse-closed set of individually resolved observed edges on a fixed state set. Suppose two distinct states are absent from every observed endpoint. For every source $Q_0$, every $\eta>0$, and every finite $L$, there is a complete bidirected generator $Q'$ with the same state count, every observed rate, and trace, such that
+\begin{equation}
+ d(\Obs(Q'),\Obs(Q_0))<\eta,\qquad\sig(Q')>L.
+\end{equation}
+Every off-diagonal rate of the constructed models is at most $\tau=-\tr Q_0$. No minimality assumption is needed.
+\end{lemma}
+
+\begin{proof}
+Let $h,k$ be fully hidden and $\mathcal U$ the unobserved ordered pairs. Their source rate mass $u=\sum_{(i,j)\in\mathcal U}q^0_{ij}$ is positive. Give each such pair weight one except $(h,x)$, for one observed endpoint $x$, which receives weight two. Define $G$ by retaining the observed rates, assigning unobserved rate $u w_{ij}/\sum_{\mathcal U}w_{ij}$, and normalizing rows. Then $G$ is complete and has the same trace as $Q_0$. Put $P_\epsilon=(1-\epsilon)Q_0+\epsilon G$. For all sufficiently small $\epsilon>0$ it is complete and the full external exit rows of $h,k$ differ. Indeed their difference is $(1-\epsilon)v+\epsilon w$ with $w\ne0$, so it is nonzero near zero whether $v$ vanishes or not.
+
+Let $T_0=Q_0-E$, where $E$ is the sum of marked matrices. All marked matrices, $R$, and $B$ stay fixed. Positivity of the killed semigroups, Duhamel's identity, and $\int_0^\infty e^{(P_\epsilon-E)t}B\1\,dt=\1$ give
+\begin{equation}
+ d(\Obs(P_\epsilon),\Obs(Q_0))
+ \le\frac\epsilon2\max_I[R(-T_0)^{-1}|G-Q_0|\1]_I.\label{eq:duhamel}
+\end{equation}
+The constant is finite. Appendix~\ref{app:pair} gives an exact hidden-pair similarity orbit of each fixed $P_\epsilon$ that preserves its complete marked kernel and approaches a one-way limiting flux with positive opposing flux. Its entropy diverges. First choose $\epsilon$ to make~\eqref{eq:duhamel} smaller than $\eta$, then choose a member of this fixed orbit with entropy above $L$. Similarity retains trace, and nonnegative rates sum to $\tau$, giving the claimed common upper cap. The order of choices does not require any uniform lower bound on the divergence coefficient as $\epsilon\to0$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:ceiling}]
+Two-state chains have zero stationary current and entropy. At a complete three-state source, Theorem~\ref{thm:inverse} gives local entropy regularity, hence a finite ceiling, in either data topology; restricting the class preserves it. Every three-state tree admits the missing-pair construction after Proposition~\ref{prop:tree}. There is a positive unobserved edge to compensate, so observed rates and trace remain fixed. The same coupling used there gives row-TV convergence and divergent entropy. For $N\ge4$, one observed pair leaves at least two fully hidden states, and Lemma~\ref{lem:neighborhood} applies. TV convergence implies weak convergence, so these negative cases also exclude a weak neighborhood ceiling.
+\end{proof}
+
+\begin{table}[t]
+\caption{Local upper boundedness under unknown bidirected support and fixed state count. The observation column uses joint waiting laws for one resolved pair.}\label{tab:criterion}
+\begin{ruledtabular}
+\begin{tabular}{lll}
+Source & Entrywise-generator neighborhood & Observation neighborhood\\
+\hline
+$N=2$ & Yes & Yes\\
+$N=3$, complete & Yes & Yes\\
+$N=3$, tree & No & No\\
+$N\ge4$, complete & Yes & No\\
+$N\ge4$, noncomplete & No & No
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+The cap supplied by the construction is $\tau$, not every upper cap containing the source. For example, at $N=4$, trace $-12$ and $q_{ij}\le1$ force all twelve rates to equal one. That restricted class is a singleton despite two fully hidden states. Known sparse topology and positive reverse-rate information can likewise change the conclusion.
+
+\section{Finite records and statistical inference}\label{sec:records}
+Let $\mathbb P_{Q}^{H}$ denote the stationary observed-record law on $[0,H]$, including empty records and both censored ends. The divergent constructions above also give, at their negative-case sources,
+\begin{equation}
+ \sig(Q_n)\to\infty,\qquad\TV(\mathbb P_{Q_n}^{H},\mathbb P_{Q_0}^{H})\to0
+ \quad\text{for each fixed }H>0.\label{eq:window}
+\end{equation}
+For the sparse sequence this follows from stationary-distribution continuity and common/excess-clock coupling. For the hidden-pair sequence, the completion $P_\epsilon\to Q_0$ has the same property, and each subsequent similarity preserves the stationary marked-record law exactly. To see the latter, use $\pi'=\pi S$, $S\1=\1$, and $SE_J=E_JS$ in each record density
+\begin{equation}
+ \pi e^{Tt_1}E_{J_1}e^{T(t_2-t_1)}\cdots E_{J_n}e^{T(H-t_n)}\1.\label{eq:likelihood}
+\end{equation}
+All similarities cancel, also for $n=0$. For~\eqref{eq:treefamily} a quantitative bound is
+\begin{equation}
+ \TV(\mathbb P_{Q(e,k)}^{H},\mathbb P_{Q(0,0)}^{H})
+ \le\frac{(e-k)(5+e-k)}{3Z}+(e+k)H
+ \le\frac{11e}{18}+2eH.\label{eq:windowtree}
+\end{equation}
+These statements establish convergence in a distinct experiment, not by an assumed implication from row TV alone.
+
+\begin{corollary}[Uniform upper-confidence obstruction]\label{cor:confidence}
+Suppose a model class contains a sequence~\eqref{eq:window}. Let $U$ be a measurable extended-real function of the stationary record on a fixed $H>0$, possibly with independent randomization. If, for $0<\alpha<1$,
+\begin{equation}
+ \mathbb P_Q^H\{U\ge\sig(Q)\}\ge1-\alpha\quad\text{for every model in the class},
+\end{equation}
+then $\mathbb P_{Q_0}^H\{U=+\infty\}\ge1-\alpha$.
+\end{corollary}
+\begin{proof}
+For every finite $L$, eventually $\sig(Q_n)>L$. Transfer the coverage inequality through TV convergence to obtain $\mathbb P_{Q_0}^H\{U>L\}\ge1-\alpha$. Let $L\uparrow\infty$ and use continuity from above. Adjoining an independent random seed leaves TV convergence unchanged.
+\end{proof}
+This is an application of the established confidence-set impossibility mechanism~\cite{Moss2022}, with the required physical sequences supplied here. It concerns uniform finite-sample coverage over the declared class. It does not settle pointwise asymptotics, Bayesian prior restrictions, or a horizon growing jointly with the sequence. We also do not infer a cap-free positive continuity theorem from one stationary finite window; Theorem~\ref{thm:inverse} concerns complete joint waiting laws.
+
+\input{supplementary/rare-event.tex}
+\input{supplementary/inference.tex}
+
+\section{Physical regularization and upper bounds}\label{sec:regularization}
+Let
+\begin{equation}
+ \mathcal K(Q)=\sum_i\pi_i\sum_{j\ne i}q_{ij},\qquad
+ a_{\max}(Q)=\max_{q_{ij}>0}\left|\log\frac{q_{ij}}{q_{ji}}\right|.
+\end{equation}
+Here $\mathcal K$ is the microscopic activity, in inverse-time units;
+$a_{\max}$ is dimensionless. Stationary cancellation gives the elementary
+bound $\sig\le\mathcal K a_{\max}$. A sharper established steady-state
+bound is~\cite{NishiyamaHasegawa2023}
+\begin{equation}
+ \sig(Q)\le\mathcal K(Q)a_{\max}(Q)
+           \tanh\!\left(\frac{a_{\max}(Q)}2\right).\label{eq:sharpprior}
+\end{equation}
+The right side is zero at $a_{\max}=0$. Thus an activity ceiling
+$\mathcal K\le K_0$ and an affinity ceiling $a_{\max}\le a_0$ give a
+uniform finite entropy bound. An observed-event activity ceiling is not
+by itself a ceiling on microscopic activity. If all supported rates lie
+between $m>0$ and $M$, then
+$\mathcal K\le(N-1)M$ and $a_{\max}\le\log(M/m)$; a fixed trace
+$-\tr Q=\tau$ also gives $\mathcal K\le\tau$.
+
+A rate ceiling alone fails by Proposition~\ref{prop:tree}. Conversely, an
+affinity ceiling alone does not control arbitrarily fast dissipative
+cycles. A rate floor alone also fails. In fact even a floor together with
+an activity ceiling is insufficient: take $q_{12}=c\ge1$ and all five
+other rates of a complete three-state chain equal to one. Direct
+stationary solution gives
+\begin{equation}
+ \pi=\left(\frac1{c+2},\frac{2c+1}{3(c+2)},\frac13\right),\quad
+ \mathcal K=\frac{3(c+1)}{c+2}<3,\quad
+ \sig=\frac{c-1}{3(c+2)}\log c\longrightarrow\infty.
+\end{equation}
+The fast rate acts at a rarely occupied state. These priors therefore
+control different quantities and cannot be interchanged.
+
+There is a separate continuity statement at the generator level. On a
+fixed connected support with $m\le q_{ij}\le M$, $Q\mapsto\sig(Q)$ is
+uniformly Lipschitz on the compact admissible class. With a fixed
+affinity bound, entropy is continuous under entrywise convergence to an
+irreducible generator even if reciprocal pairs disappear: contributions
+from pairs positive at the limit are smooth, and each disappearing
+directed term is bounded in magnitude by $a_0\pi_iq_{ij}\to0$.
+Locally the corresponding bounded-ratio cone even gives Lipschitz
+continuity, since the derivatives of $x\log(x/y)$ are bounded when
+$x/y$ stays in a compact positive interval. These conclusions concern
+the entropy functional. They do not imply generator identification or
+good conditioning of a partially observed inverse, and a compact
+parameter class alone need not make entropy single valued on an exact
+fiber. If entropy is identifiable throughout such a compact class, its
+induced function on the observed image is continuous by the compact
+quotient argument; a quantitative inverse bound still needs additional
+analysis.
+
+\subsection{Physical interpretation and measurement limitations}
+The theorems concern the stationary network entropy-production
+functional of an even-state CTMC with one channel per ordered pair.
+They require no specified reservoir realization. Interpretation as
+physical dissipation requires correctly resolved thermodynamic states
+and channels obeying local detailed balance~\cite{Esposito2012}.
+For a channel with intrinsic state entropies $s_i$, the rate ratio may
+take the form
+\begin{equation}
+ \log\frac{q_{ij}^{\alpha}}{q_{ji}^{\alpha}}
+ =\Delta s_{\mathrm{res}}^{\alpha}+s_j-s_i.
+\end{equation}
+At stationarity, total and medium entropy rates agree because the mean
+state-entropy increment vanishes. We use the usual environmental sign
+convention; the trajectory quantities differ by a boundary term.
+The generator alone does not determine a unique heat current or
+reservoir decomposition. Aggregating parallel channels can conceal
+additional physical dissipation even when all state transitions are seen.
+
+In the sparse-boundary construction, the vanishing reverse rate entails
+an unbounded edge rate affinity and hence an unbounded per-transition
+thermodynamic bias under local detailed balance. A fixed affinity prior
+excludes that limit. Rate ceilings and floors are kinetic assumptions;
+their ratio constrains the thermodynamic bias. A cycle affinity is the
+sum of edge rate affinities and is distinct from a bound on each edge.
+
+Finally, timestamp bins, missed events, uncertain endpoints and blurred
+labels require an explicit observation model. Finite timing resolution
+with every event retained is different from detector dead time; the
+former is the setting of the finite-resolution comparison in
+Ref.~\cite{FritzErtelSeifert2025}. A known noisy processing of the same
+records contracts total variation and cannot eliminate an existing
+indistinguishability obstruction. Such processing may also remove the
+reset structure needed for our reconstruction. For general coarse or
+semi-Markov observations, the time reverse must be induced from the
+microscopic experiment; a naive reversal can create spurious
+irreversibility when coarse-graining and time reversal do not
+commute~\cite{Blom2024,BiskerReply2024}.
+
+\section{An exactly two-point entropy fiber}\label{sec:balanced}
+The following family displays all three exact entropy regimes within a single fixed-dimensional inverse problem. Rates are expressed in the time unit of Sec.~\ref{sec:model}. Linear minimality means that the columns of $T^jB$ span the state space and that $RT^jv=0$ for every $j\ge0$ forces $v=0$. The minimal linear order is the least dimension of any matrix realization of the kernel; physical positivity is an additional constraint.
+\begin{theorem}[Balanced five-state fiber]\label{thm:balanced}
+In state order $(x,y,h,k,l)$, let
+\begin{equation}
+ Q(z)=\begin{pmatrix}
+ -11&1&2&0&8\\2&-20&0&7&11\\3&0&-7&4&0\\
+ 0&6&5&-11&0\\z&z&0&0&-2z
+ \end{pmatrix},\qquad z>0.\label{eq:theta}
+\end{equation}
+Let $\zs$ be the unique positive root of
+\begin{equation}
+ \mathcal P(z)=352z^4-3168z^3-4644z^2-11340z-7623.\label{eq:quartic}
+\end{equation}
+Every $\Psi_{Q(z)}$ has minimal linear realization dimension five. In $\C_{\le5}$ its entropy fiber is unbounded for $0<z<\zs$, contains exactly two distinct finite values at $z=\zs$, and is a singleton with a unique physical generator for $z>\zs$. At $\zs$, the two generators are $Q(\zs)$ and the algebraic generator $Q_*$ defined in Appendix~\ref{app:certificate}. Their entropy values satisfy the rational enclosures
+\begin{align}
+ 0.062946400236&\le\sig(Q(\zs))\le0.062946400237,\label{eq:sig1}\\
+ 0.065579685966&\le\sig(Q_*)\le0.065579685967.\label{eq:sig2}
+\end{align}
+Here $\zs=10.5571496686650\ldots$ is an illustrative decimal approximation.
+\end{theorem}
+
+The assertion at $\zs$ is stronger than exhibiting two observationally equivalent models. It excludes every third physical generator under the cap, including any on a different bidirected support. The source has six reciprocal edges; the alternative has seven and a connected hidden path (Fig.~\ref{fig:fiber}). Thus hidden relabeling cannot explain their difference. Above the threshold even the physical generator is unique, although its observation will have no finite local entropy upper ceiling by Theorem~\ref{thm:ceiling}.
+
+\begin{figure}[b]
+\centering
+\includegraphics[width=.92\textwidth]{figures/balanced-fiber.pdf}
+\caption{Exact classification for the family~\eqref{eq:theta} under a five-state cap. The strip denotes properties of the entire entropy fiber, not a numerically optimized maximum. At the algebraic threshold the source and the connected-hidden alternative are the only physical realizations up to hidden labels. Paired arrows denote reciprocal support, not equal rates; only $x\leftrightarrow y$ is observed. Entropy values in the figure are rounded; Eqs.~\eqref{eq:sig1}--\eqref{eq:sig2} give certified intervals.}\label{fig:fiber}
+\end{figure}
+
+\begin{proof}[Proof structure]
+The marked kernel fixes the visible block and the hidden transfer $X(\lambda I-H)^{-1}Y$ for the partition $Q=\left(\begin{smallmatrix}A&X\\Y&H\end{smallmatrix}\right)$. Minimality and the state cap force every competitor into a normalized hidden-similarity orbit; Appendix~\ref{app:realization} proves this reduction. A disconnected hidden support can realize the fast-parameter data only as the source, by a residue-sign and reciprocity argument (Appendix~\ref{app:cone}). Every connected hidden support gives a finite invariant triangle after Perron normalization. Global containment and inward-flow inequalities reduce feasibility to a quadratic whose discriminant is a negative positive-factor multiple of $\mathcal P(z)$. Above $\zs$ this excludes every connected realization. At $\zs$, equality forces a single triangle and hence at most one normalized generator. Appendix~\ref{app:certificate} independently constructs that generator, verifies physical feasibility, and separates its entropy from the source using rigorous logarithm bounds. Finally, Appendix~\ref{app:subcritical} covers all $0<z<\zs$ by exact positive realizations with a hidden pair whose entropy-divergent similarity orbit is proved in Appendix~\ref{app:pair}. These arguments establish the whole fiber, not a count from a finite search.
+\end{proof}
+
+The cap has physical content. It excludes additional nonminimal states invisible to the linear realization. Splitting one fully hidden state of~\eqref{eq:theta} into two strongly lumpable copies preserves the complete marked kernel and permits entropy divergence on their internal edge (Appendix~\ref{app:split}). Thus one additional state makes the endpoint entropy fiber unbounded. Conversely, the cap can be replaced by requiring all competing realizations to be linearly minimal. No separate upper rate cap is needed in the exact fiber: similarity fixes $-\tr Q=49+2z$, which bounds each nonnegative off-diagonal rate. We make no general classification claim for arbitrary five- or six-state data.
+
+\input{supplementary/continuation.tex}
+\input{supplementary/observation-graph.tex}
+
+\section{Discussion and limitations}\label{sec:limitations}
+The local-ceiling theorem separates three sources of difficulty. Exact observation can admit distinct physical generators; absolute-rate inversion can be poorly conditioned at an unfortunate observation scale; and even a regular rate inverse need not make entropy continuous near a sparse boundary. The numerical inference pipeline addresses pointwise estimation within a declared positive rate box. It supplies neither a uniformly valid finite upper confidence limit over the unrestricted class nor a universal sample-size prescription.
+
+Dimension is essential. The five-state classification applies to a known cap or a justified minimality restriction. A sixth state makes its exact fiber unbounded. When the dimension is unknown, the observed linear order supplies a lower bound on realization size, not an upper bound on physical complexity. Additional microscopic information is needed to exclude nonminimal hidden channels. The perturbed feasibility calculation supports a local continuation statement for a specified family, not typicality under arbitrary rate or observation perturbations. Arbitrary five- and six-state exact fibers remain unclassified.
+
+The observation model assumes a stationary, time-homogeneous, finite-state CTMC, exact event times, known microscopic endpoints and correctly resolved transition labels. The waiting-law kernel describes the law following an event; a fixed stationary window includes both censored ends and has its own likelihood. Finite bandwidth, timestamp rounding, detector noise and missed events change the experiment. Missed events change the waiting kernel; detector memory, blurred labels or uncertain event identity can also invalidate the reset model. An accurately resolved microscopic jump still resets its endpoint even if earlier jumps were missed. More samples do not repair an incorrect detector model. Uncertain labels or lumped states require a different observation map. Finite temporal resolution and lost events must not be conflated.
+
+Nonstationarity, continuous hidden degrees of freedom, memory and non-Markovian kinetics can invalidate the finite-dimensional representation. Local detailed balance, reservoir temperatures or chemical work, state parity under time reversal, and thermodynamic channel resolution are additional physical assumptions. We therefore distinguish the stationary network entropy functional from a claim of fully measured physical dissipation. Upper rate information is kinetic; controlling affinities constrains reservoir entropy only under those physical assumptions.
+
+The exact conventional proofs, computational certificates and literature comparison support a focused theoretical contribution. They do not certify literature-wide priority or substitute for expert review of the global support exhaustion. A matching physical-realization theorem, a concrete proof objection, or experimentally justified support, affinity or dimension information could change the appropriate claim or inference class.
+
+\section{Computational details and reproducibility}\label{sec:methods}
+The universal claims are established by the proofs in this article. Computation verifies exact identities, admissibility, and the rational entropy enclosures; numerical plots illustrate proved limits. There is no external dataset and no numerical optimization or graph enumeration used as a nonexistence proof.
+
+OpenAI Codex, a GPT-6-based research and coding assistant, was used for literature retrieval, derivation and code preparation, manuscript drafting, and separate mathematical, citation, and reproducibility reviews. The checks below identify the executed validation; agreement between assistant reviews is not treated as independent scientific evidence. Expert human review remains pending.
+
+The supplied package contains the source code and accepted outputs required for these checks. Exact arithmetic uses rational numbers and the real field $\mathbb Q(\zs)$, with $\mathbb Q(\sqrt6)$ for the cone. Signs are evaluated in a specified real embedding through rational isolating intervals, not from leading polynomial coefficients. The endpoint checker validates all denominator exclusions, support zeros, positive rates, normalization, stationarity, and ten exact Markov-parameter matrices. Its independent cone and physical-path constructions agree coefficientwise. Appendix~\ref{app:certificate} specifies the logarithm remainder bounds.
+
+The deterministic reproduction driver replays the principal symbolic certificates with output writes redirected, preserving historical artifacts. It independently checks the three-state stationary weights, cycle current, trace, inverse identities, and deterministic high-precision values. The original certificate figures use fixed parameter grids. New conditioning, continuation and Monte Carlo figures are numerical results with explicit parameter choices, precision, deterministic seeds, optimizer settings and tolerances. They are stored separately from exact proof-support outputs; finite grids do not establish genericity or uniform coverage. The accompanying manifest records commands, dependency versions, source hashes, and exact checks versus numerical diagnostics. Discovery searches preserved in the research repository are historical leads and are unnecessary for the certificates. No result is claimed formally verified; the repository's Lean scaffold is not a verification of these theorems.
+
+
+The root-level command \mbox{python reproduce\_all.py} regenerates the essential exact checks, inference diagnostics, continuation and publication figures. The optional build flag compiles this manuscript. The finite-data and continuation implementations include tests against independent derivatives, exact transforms or algebraic identities. Source hashes and machine-readable outcomes distinguish completed runs from illustrative or exploratory evidence. All historic accepted scientific payloads are retained.
+
+\section{Conclusion}
+Exact recovery of partially observed Markov dynamics does not guarantee a stable or finite upper inference of microscopic entropy production. With one resolved reverse pair and unknown reciprocal support, the fixed-count local-ceiling criterion is sharp. Statistical conditioning, rare reverse rates, model dimension and physically justified activity--affinity restrictions determine what that exact theorem permits an experiment to infer. The five-state two-point fiber is an explicit exhausted construction within this broader distinction, not a generic template for every hidden network.
+
+\begin{acknowledgments}
+This draft was prepared with substantive assistance from OpenAI Codex for research auditing, mathematical and computational checking, literature verification, and manuscript composition. This disclosure does not assign authorship or replace expert human verification and responsibility. Author names, affiliations, funding, and the final disclosure require completion by the human authors before submission.
+\end{acknowledgments}
+\noindent\textbf{Data availability.}
+All inputs are specified analytic generators. The accompanying reproducibility package supplies the LaTeX sources, figure scripts, exact-check scripts, and machine-readable outputs. The authors should select the final public archive or other journal-compliant access arrangement before submission; no public deposit is asserted in this draft.
+
+\appendix
+\input{supplementary/proofs.tex}
+\raggedright
+\bibliography{references}
+\end{document}
