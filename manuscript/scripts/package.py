@@ -42,6 +42,11 @@ REQUIRED = {
     "manuscript/supplementary/laplace-two.tex", "manuscript/supplementary/compact-priors.tex",
     "manuscript/supplementary/moment-confidence.tex",
     "outputs/correctness-2026-09-15/reproduction.json",
+    "analysis/correctness/test_laplace_entropy.py",
+    "analysis/correctness/replay_supplied_review.py",
+    "evidence/supplied/2026-09-18/two_laplace_counterexample.py",
+    "evidence/supplied/2026-09-18/independent_checks.json",
+    "evidence/supplied/2026-09-18/manifest.json",
 }
 
 

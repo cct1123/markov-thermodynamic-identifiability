@@ -22,7 +22,7 @@ From the repository root, with assertions enabled:
 python -B reproduce_all.py
 ```
 
-On the original Windows workspace replace `python` with `.venv/Scripts/python.exe`. The command regenerates 15 preserved scientific replays with writes intercepted; exact appendix interval and independent manuscript checks; new global-envelope, two-point, complete-support mechanism, rare-rate, graph and local unfolding checks; wider numerical continuation; conditioning grids and 900 seeded CTMC trajectories; 36 tests; and all six figures. It preserves the 22 accepted historical scientific JSON outputs. One old replay includes deterministic linear-programming diagnostics; no optimizer or sampled graph set proves a nonexistence theorem.
+On the original Windows workspace replace `python` with `.venv/Scripts/python.exe`. The command regenerates 15 preserved scientific replays with writes intercepted; exact appendix interval and independent manuscript checks; new global-envelope, two-point, complete-support mechanism, rare-rate, graph and local unfolding checks; wider numerical continuation; conditioning grids and 900 seeded CTMC trajectories; 39 tests; and all six figures. It preserves the 22 accepted historical scientific JSON outputs. One old replay includes deterministic linear-programming diagnostics; no optimizer or sampled graph set proves a nonexistence theorem.
 
 The [full run manifest](../outputs/correctness-2026-09-15/reproduction.json) records commands, times, versions, outputs and hashes. The exact historical [manifest](supplementary/computational-results.json) retains all replay payloads. New experiment details are in [statistics](../analysis/revision/STATISTICS.md), [continuation](../analysis/revision/CONTINUATION.md), [rare-rate proof](../analysis/revision/RARE-EVENT.md), and [graph/priors](../analysis/revision/GRAPH-REGULARIZATION.md).
 
@@ -53,7 +53,7 @@ python -B analysis/revision/rare_event.py
 python -B analysis/revision/graph_checks.py
 python -B analysis/revision/continuation.py
 python -B -m analysis.revision.inference --replicates 100
-python -B -m unittest analysis.capabilities.test_tools analysis.revision.test_inference analysis.revision.test_continuation analysis.correctness.test_laplace_two analysis.correctness.test_validation analysis.correctness.test_entrypoints -v
+python -B -m unittest analysis.capabilities.test_tools analysis.revision.test_inference analysis.revision.test_continuation analysis.correctness.test_laplace_two analysis.correctness.test_laplace_entropy analysis.correctness.test_validation analysis.correctness.test_entrypoints -v
 ```
 
 The original certificate figures and both new numerical figure sets can be redrawn from their saved payloads:
@@ -77,3 +77,5 @@ This writes [outputs/manuscript-package.zip](../outputs/manuscript-package.zip),
 The [pre-correctness baseline](../outputs/correctness-2026-09-15/baseline/) preserves the earlier revision. The [repository audit](../outputs/correctness-2026-09-15/repository-audit.json) checks six original statements, preserved baseline hashes, retained Appendices C–G, accepted JSON bytes, source parsing and inventory. Appendices A/B are intentionally expanded; these structural checks do not replace mathematical review. The prior [archive replay](supplementary/archive-replay-checks.json) describes the September 11 package. Current correctness verification is separately recorded under `outputs/correctness-2026-09-15/`; the 14 September results remain under `outputs/revision/` and must not be inferred from that old replay.
 
 The 15 September [fresh-extraction replay](../outputs/correctness-2026-09-15/archive-replay.json) passed all 13 jobs and reproduced that revision's identical 55-page PDF. Its [visual inspection and delivery checks](../outputs/correctness-2026-09-15/delivery-checks.json) covered every page. The subsequent [18 September review and verification](../outputs/review-2026-09-18/REVIEW.md) records the latest safeguards, 36-test workflow and PDF check. These runs reuse the installed Windows environment; cross-platform provisioning was not tested.
+
+The later [supplied counterexample review](../outputs/laplace-review-2026-09-18/REVIEW.md) adds the explicit two-point entropy corollary, clarifies matrix row order and prunes duplicate exposition. The current workflow has 14 jobs and 39 tests, including the preserved supplied script replay and three direct stratum tests. The manuscript remains 55 pages.

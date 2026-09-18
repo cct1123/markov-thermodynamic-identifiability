@@ -273,7 +273,7 @@
       "historical_output_sha256": "52bba21fdf8dfb301948a0c14341019564a1a4577c41b5a77fcc89f7878c028d",
       "fresh_assertions_passed": true,
       "captured_result": {
-        "executed_at": "2026-09-18T23:35:51.063414+00:00",
+        "executed_at": "2026-09-18T23:47:25.321253+00:00",
         "command_from_root": ".\\.venv\\Scripts\\python.exe -B analysis/check_balanced_cone_bound.py",
         "environment": {
           "python": "3.9.12",
@@ -399,7 +399,7 @@
       "historical_output_sha256": "d6553877a337062fced350922eacbfaa31dcdacfa7360ae85c01a8edf1ed3fe9",
       "fresh_assertions_passed": true,
       "captured_result": {
-        "executed_at": "2026-09-18T23:35:51.428413+00:00",
+        "executed_at": "2026-09-18T23:47:25.666581+00:00",
         "command_from_root": ".\\.venv\\Scripts\\python.exe -B analysis/check_balanced_cone_sufficiency.py",
         "environment": {
           "python": "3.9.12",
@@ -674,7 +674,7 @@
       "fresh_assertions_passed": true,
       "captured_result": {
         "kind": "reproduced exact algebraic calculation with rigorous sign/log bounds",
-        "executed_at_utc": "2026-09-18T23:35:52.167234+00:00",
+        "executed_at_utc": "2026-09-18T23:47:26.370018+00:00",
         "command": ".venv/Scripts/python.exe -B analysis/check_balanced_fold.py",
         "environment": {
           "python": "3.9.12",

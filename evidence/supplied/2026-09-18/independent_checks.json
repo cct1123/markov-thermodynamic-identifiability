@@ -1,0 +1,56 @@
+{
+  "minors": [
+    "-9*z*(4*z - 9)",
+    "-18*z*(2*z - 3)",
+    "-14*(22*z + 19)"
+  ],
+  "cone_discriminant_identity": true,
+  "path_discriminant_identity": true,
+  "three_state_weights": [
+    "-eps - kap**2 + 2*kap + 1",
+    "-eps**2 + kap + 1",
+    "-eps*kap + 2*eps - kap + 1"
+  ],
+  "three_state_stationarity_exact": true,
+  "endpoint_high_precision": {
+    "precision_digits": 90,
+    "z_star": "10.55714966866497068801877270373327981958675346948185970291980226757625",
+    "sigma_source": "0.06294640023687435291168695376481921703721475096854253481335563715579201",
+    "sigma_target": "0.06557968596684144565189188529635402981055501665651113750400978214588659",
+    "delta_sigma": "0.002633285729967092740204931531534812773340265687968602690654144990094577",
+    "max_tested_resolvent_discrepancy": "2.454546733e-91",
+    "scope": "High precision numerical checks, not a global support-exhaustion proof or interval certificate."
+  },
+  "three_laplace_inverse_test_errors": {
+    "complete": 5.684341886080802e-14,
+    "x_leaf": 3.552713678800501e-15,
+    "y_leaf": 5.950795411990839e-14
+  },
+  "two_laplace_counterexample": {
+    "Q_A": "Matrix([[-2, 1, 1], [1, -1, 0], [1, 0, -1]])",
+    "Q_B": "Matrix([[-18/5, 6/5, 12/5], [1, -1, 0], [2, 0, -2]])",
+    "equal_at_1": true,
+    "equal_at_2": true,
+    "different_at_3": true,
+    "scope": "Observed r,s not independently fixed; within the all-three-state inverse problem.",
+    "F_1": "Matrix([[2/5, 0], [0, 1/2]])",
+    "F_2": "Matrix([[3/11, 0], [0, 1/3]])",
+    "F_A_3": "Matrix([[4/19, 0], [0, 1/4]])",
+    "F_B_3": "Matrix([[10/47, 0], [0, 1/4]])"
+  },
+  "review_scope": {
+    "repository": "cct1123/markov-thermodynamic-identifiability",
+    "public_commit_reviewed": "015bcd4c54c993f19ddf2841e852ca0f14b2f1d9",
+    "method": "Independent symbolic and numerical calculations from displayed manuscript definitions; source-code inspection.",
+    "not_performed": [
+      "Full execution of the repository reproduction suite",
+      "Formal verification of global support exhaustion",
+      "Independent rigorous interval certification of endpoint entropy"
+    ]
+  },
+  "two_laplace_entropy_identification": {
+    "complete_triangle_exact_two_point_recovery_test": true,
+    "claim": "Within C_<=3 with one resolved reciprocal pair and unknown observed rates, two positive distinct matrix Laplace evaluations determine entropy: nonzero cross entries imply a complete triangle, where the inverse is unique; zero cross entries imply a tree or two-state chain, whose stationary entropy is zero.",
+    "scope": "Independent derivation during review, not an established priority claim; no entropy continuity at tree boundaries follows."
+  }
+}

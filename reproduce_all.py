@@ -35,6 +35,7 @@ def main():
         ('independent exact and interval audit', ['analysis/revision/replay_independent.py']),
         ('global coverage algebra and protected endpoint replays', ['analysis/correctness/global_independent.py']),
         ('exact two-point inverse and full-matrix counterexamples', ['-m','analysis.correctness.laplace_two']),
+        ('supplied leaf counterexample and matrix convention', ['analysis/correctness/replay_supplied_review.py']),
         ('complete-support exact ambiguity and entropy limit', ['analysis/correctness/mechanism.py']),
         ('exact rare-rate identities and high-precision checks', ['analysis/revision/rare_event.py']),
         ('exact graph inverse and physical-prior counterexample', ['analysis/revision/graph_checks.py']),
@@ -42,7 +43,8 @@ def main():
         ('illustrative conditioning and 900 finite trajectories', ['-m','analysis.revision.inference','--replicates','100']),
         ('unit and independent numerical checks', ['-m','unittest','analysis.capabilities.test_tools',
           'analysis.revision.test_inference','analysis.revision.test_continuation',
-          'analysis.correctness.test_laplace_two','analysis.correctness.test_validation',
+          'analysis.correctness.test_laplace_two','analysis.correctness.test_laplace_entropy',
+          'analysis.correctness.test_validation',
           'analysis.correctness.test_entrypoints','-v']),
     ]
     if args.build:
@@ -80,6 +82,7 @@ def main():
               ROOT/'outputs/revision/rare-event.json', ROOT/'outputs/revision/graph-checks.json']
     files += [ROOT/'outputs/correctness-2026-09-15'/name for name in
               ('global-independent.json','laplace-two.json','mechanism.json')]
+    files += [ROOT/'outputs/laplace-review-2026-09-18/supplied-replay.json']
     if args.build:
         files += [ROOT/'manuscript/main.pdf']
     report.update(all_passed=True,finished_at_utc=datetime.now(timezone.utc).isoformat(),

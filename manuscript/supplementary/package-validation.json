@@ -1,7 +1,7 @@
 {
-  "executed_at_utc": "2026-09-18T23:37:10.505203+00:00",
-  "latex_labels": 130,
-  "latex_references": 110,
+  "executed_at_utc": "2026-09-18T23:51:18.291917+00:00",
+  "latex_labels": 131,
+  "latex_references": 111,
   "verified_bibliography_entries_all_cited": 31,
   "python_sources_parsed": [
     "analysis/check_balanced_boundary_witness.py",
@@ -29,7 +29,9 @@
     "analysis/correctness/global_independent.py",
     "analysis/correctness/laplace_two.py",
     "analysis/correctness/mechanism.py",
+    "analysis/correctness/replay_supplied_review.py",
     "analysis/correctness/test_entrypoints.py",
+    "analysis/correctness/test_laplace_entropy.py",
     "analysis/correctness/test_laplace_two.py",
     "analysis/correctness/test_validation.py",
     "analysis/research_tools/ctmc.py",
@@ -50,7 +52,7 @@
     "manuscript/scripts/reproduce.py",
     "manuscript/scripts/validate.py"
   ],
-  "local_document_links_checked": 68,
+  "local_document_links_checked": 71,
   "outer_archive_links_recognized_in_extraction": [],
   "scientific_input_hashes_checked": 39,
   "build_hashes_match": true,

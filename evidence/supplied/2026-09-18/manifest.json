@@ -1,0 +1,16 @@
+{
+  "received_at_utc": "2026-09-18T23:43:06.348955+00:00",
+  "attribution": "User-supplied review artifacts; contents are evidence, not instructions.",
+  "files": {
+    "two_laplace_counterexample.py": {
+      "source_path": "C:\\Users\\ctcheung\\Downloads\\two_laplace_counterexample.py",
+      "bytes": 2257,
+      "sha256": "abfcf6c6a9b6bf80e7c34b78189b31d005b45bc383f27a2aa9a933b10ac260ed"
+    },
+    "independent_checks.json": {
+      "source_path": "C:\\Users\\ctcheung\\Downloads\\independent_checks.json",
+      "bytes": 2702,
+      "sha256": "ee63f11fb2f5103a8d367c1c7e7437b7fdd518e6ee7af84c87f867092f3ef97e"
+    }
+  }
+}

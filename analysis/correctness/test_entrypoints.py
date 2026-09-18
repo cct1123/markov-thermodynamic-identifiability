@@ -23,6 +23,7 @@ ENTRYPOINTS = (
     "analysis/correctness/global_independent.py",
     "analysis/correctness/laplace_two.py",
     "analysis/correctness/mechanism.py",
+    "analysis/correctness/replay_supplied_review.py",
 )
 GUARD_MESSAGE = "Assertions must be enabled; do not use python -O or PYTHONOPTIMIZE."
 

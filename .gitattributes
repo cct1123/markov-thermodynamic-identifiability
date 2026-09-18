@@ -20,6 +20,8 @@ outputs/manuscript-*.json -text whitespace=blank-at-eol,blank-at-eof,space-befor
 # Their hashes must survive Git add/checkout on every platform.
 outputs/revision/baseline/** -text -whitespace
 outputs/correctness-2026-09-15/baseline/** -text -whitespace
+# Preserve the exact bytes of user-supplied review evidence.
+evidence/supplied/** -text -whitespace
 # Matplotlib emits intentional separators in generated SVG path data.
 knowledge/views/parameter_geometry.svg -whitespace
 manuscript/figures/*.svg -whitespace

@@ -8,7 +8,7 @@ Exact recovery of partially observed Markov dynamics does not by itself guarante
 
 - [Manuscript PDF](manuscript/main.pdf) and [LaTeX/build guide](manuscript/README.md)
 - [Revision notes and remaining questions](REVISION_NOTES.md)
-- [Current claim, proof and test map](REVISION_NOTES.md)
+- [Supplied counterexample review and entropy corollary](outputs/laplace-review-2026-09-18/REVIEW.md)
 - [Targeted primary-source comparison](analysis/correctness/PRIMARY-COMPARISON.md), with the [earlier access ledger](analysis/revision/LITERATURE.md)
 - [Reproducibility archive](outputs/manuscript-package.zip)
 - [Publication-readiness assessment](outputs/PUBLICATION-READINESS.md)
@@ -19,7 +19,7 @@ The draft is prepared for **expert human review**. Proof status is conventional,
 
 The primary experiment observes a known microscopic reverse transition pair in a finite irreducible CTMC with reciprocal, otherwise unknown support. It retains complete joint next-mark/waiting-time laws and their absolute time scale. The stationary network entropy functional has a physical dissipation interpretation only with appropriate state/channel resolution and local detailed balance.
 
-- **Exact recovery versus conditioning:** two distinct positive Laplace points identify complete three-state triangles; three are sufficient generally and necessary in the uncalibrated worst case. The absolute-rate inverse remains regular at trees, while relative-rate conditioning and entropy sensitivity can diverge near rare reverse rates.
+- **Exact recovery versus conditioning:** two distinct positive Laplace points identify entropy throughout the class with at most three states and recover complete-triangle generators. Three are sufficient for generator recovery generally and necessary in the uncalibrated worst case. The absolute-rate inverse remains regular at trees, while relative-rate conditioning and entropy sensitivity can diverge near rare reverse rates.
 - **Sharp local ceiling:** with exactly N states and one resolved pair, a finite local entropy upper bound exists precisely for N=2 or a complete N=3 source. Negative cases persist with observed rates and trace fixed. A tighter individual cap or known support can change the admissible class.
 - **Finite data:** a constructive six-rate estimator and martingale-sandwich uncertainty calculation are tested on 900 actual CTMC trajectories. Interior examples permit useful inference; a rare-reverse example exposes serious interval failure despite small residuals. A separate finite-n moment confidence rectangle now has a sequential martingale proof; empirical waiting-law TV is explicitly unsuitable.
 - **Quantitative impossibility:** testing independently variable reverse rates with a fixed multiplicative entropy gap can require an exponentially long observation horizon, even with complete microscopic paths. This is not a theorem for a known one-parameter rate prior.
@@ -43,7 +43,7 @@ Use the project's isolated scientific Python environment. The tested baseline is
 python -B reproduce_all.py
 ```
 
-This runs the preserved exact certificates and independent checks, new global-envelope/two-point/mechanism checks and rare-rate/graph/unfolding calculations, conditioning grids, 900 seeded trajectories, 36 tests and all six manuscript figures. It records commands, versions, source hashes and outcomes in [reproduction.json](outputs/correctness-2026-09-15/reproduction.json). Historical accepted scientific outputs are protected. Numerical continuation, Monte Carlo and exact proof-support calculations have distinct status labels.
+This runs the preserved exact certificates and independent checks, new global-envelope/two-point/mechanism checks and rare-rate/graph/unfolding calculations, conditioning grids, 900 seeded trajectories, 39 tests and all six manuscript figures. It records commands, versions, source hashes and outcomes in [reproduction.json](outputs/correctness-2026-09-15/reproduction.json). Historical accepted scientific outputs are protected. Numerical continuation, Monte Carlo and exact proof-support calculations have distinct status labels.
 
 To also compile and validate the paper with an installed Tectonic and cached resources:
 

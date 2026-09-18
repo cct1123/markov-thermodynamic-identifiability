@@ -1,0 +1,50 @@
+{
+  "executed_at_utc": "2026-09-18T23:47:28.483464+00:00",
+  "command": "python -B analysis/correctness/replay_supplied_review.py",
+  "environment": {
+    "python": "3.9.12",
+    "sympy": "1.14.0"
+  },
+  "wrapper_sha256": "b96504e6be81ed1abd25ab8df5373a335cd506a65ae69fd5a7ef33b7d2ea1b24",
+  "supplied_file_hashes": {
+    "two_laplace_counterexample.py": "abfcf6c6a9b6bf80e7c34b78189b31d005b45bc383f27a2aa9a933b10ac260ed",
+    "independent_checks.json": "ee63f11fb2f5103a8d367c1c7e7437b7fdd518e6ee7af84c87f867092f3ef97e"
+  },
+  "supplied_script_stdout": "lambda=1: common F=Matrix([[2/5, 0], [0, 1/2]])\nlambda=2: common F=Matrix([[3/11, 0], [0, 1/3]])\nlambda=3: F_A=Matrix([[4/19, 0], [0, 1/4]]); F_B=Matrix([[10/47, 0], [0, 1/4]])\nGeneral two-point leaf construction: both identities verified.\nPositivity persists locally at a source with u>0, v>0, h>0.\nNot a counterexample with separately fixed observed rates.\n",
+  "exact_matrix_checks": [
+    {
+      "model": 1,
+      "lambda": 1,
+      "F": "Matrix([[2/5, 0], [0, 1/2]])"
+    },
+    {
+      "model": 1,
+      "lambda": 2,
+      "F": "Matrix([[3/11, 0], [0, 1/3]])"
+    },
+    {
+      "model": 1,
+      "lambda": 3,
+      "F": "Matrix([[4/19, 0], [0, 1/4]])"
+    },
+    {
+      "model": 2,
+      "lambda": 1,
+      "F": "Matrix([[2/5, 0], [0, 1/2]])"
+    },
+    {
+      "model": 2,
+      "lambda": 2,
+      "F": "Matrix([[3/11, 0], [0, 1/3]])"
+    },
+    {
+      "model": 2,
+      "lambda": 3,
+      "F": "Matrix([[10/47, 0], [0, 1/4]])"
+    }
+  ],
+  "convention": "Supplied F = P times manuscript Psi_hat. Tree F off-diagonals vanish; Psi_hat off-diagonals do not.",
+  "other_JSON_fields": "Attributed user-supplied review results; not reproduced by this wrapper. In particular endpoint decimals are not interval certificates.",
+  "entropy_status": "Conventional support/detailed-balance proof in the manuscript, supported by test_laplace_entropy.py; not inferred from numerical endpoint checks.",
+  "all_checks_passed": true
+}

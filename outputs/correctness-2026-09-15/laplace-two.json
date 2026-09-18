@@ -1,7 +1,7 @@
 {
   "all_exact_checks_passed": true,
   "kind": "exact algebraic identities and explicit counterexamples; conventional proof, not formal verification",
-  "executed_at_utc": "2026-09-18T23:35:53.698175+00:00",
+  "executed_at_utc": "2026-09-18T23:47:27.950008+00:00",
   "command": ".venv/Scripts/python.exe -B -m analysis.correctness.laplace_two",
   "environment": {
     "python": "3.9.12",

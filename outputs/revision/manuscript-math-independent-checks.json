@@ -1,6 +1,6 @@
 {
   "kind": "reproduced exact algebra and rigorous interval computation",
-  "time_utc": "2026-09-18T23:35:49.114362+00:00",
+  "time_utc": "2026-09-18T23:47:23.401172+00:00",
   "command": ".venv/Scripts/python.exe -B analysis/manuscript-math-independent-check.py",
   "environment": {
     "python": "3.9.12",

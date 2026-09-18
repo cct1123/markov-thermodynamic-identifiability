@@ -1,5 +1,5 @@
 % Place this refinement after the existing three-point reconstruction proof.
-\subsection{Two points for triangles and a sharp worst case}\label{subsec:two-laplace}
+\subsection{Two-point entropy identification and generator ambiguity}\label{subsec:two-laplace}
 
 \begin{proposition}[Two arguments for complete triangles]\label{prop:two-laplace}
 For every complete $Q\in\C_3$ and any $0<\lambda_1<\lambda_2$, the two full
@@ -30,7 +30,23 @@ have $ad>0$, which forces its complete support. It is therefore recovered
 by the same rational formulas, proving uniqueness in the full stated cap.
 \end{proof}
 
-Three points remain necessary in the worst case for uncalibrated rates.
+\begin{corollary}[Two arguments identify entropy]\label{cor:two-laplace-entropy}
+For every $Q\in\C_{\le3}$ and any $0<\lambda_1<\lambda_2$, the two full
+Laplace matrices determine $\sig(Q)$ uniquely within $\C_{\le3}$,
+without separately calibrating the observed rates.
+\end{corollary}
+\begin{proof}
+A nonzero off-diagonal of $M=(P\widehat\Psi)^{-1}$ forces complete
+three-state support, so Proposition~\ref{prop:two-laplace} recovers $Q$.
+Otherwise every compatible model is a reciprocal tree or two-state chain.
+Stationarity across each edge cut gives zero current, hence $\sig=0$.
+\end{proof}
+The zero pattern refers to $M$, equivalently the off-diagonals of
+$F=P\widehat\Psi$, not the off-diagonals of $\widehat\Psi$.
+Exact entropy identification does not imply continuity at tree boundaries.
+
+Three points remain necessary in the worst case for \emph{generator recovery}
+with uncalibrated rates.
 At a hidden leaf attached to $x$, $r,s,a,b>0$ and $c=d=0$, so both
 off-diagonals in Eq.~\eqref{eq:two-offdiagonal} vanish. The remaining tests are
 $G_x(\lambda)=u+v/(\lambda+b)$, with $u=1/r$, $v=a/r>0$, and $G_y=1/s$.
@@ -48,7 +64,7 @@ Every $\beta>0$ with $u_\beta>0$ yields a leaf generator with
 having the same two full matrices. An open interval around the source
 $\beta=b$ is admissible, and $u_\beta'=-D$ makes the generators distinct.
 The $y$-leaf is symmetric. Together with Theorem~\ref{thm:inverse}, this
-establishes a worst-case minimum of three positive arguments. In the present
+establishes a worst-case minimum of three positive arguments for generator recovery. In the present
 reciprocal three-state model with the observed $x$--$y$ pair present, the two
 leaf attachments are the only noncomplete irreducible supports; the conclusion
 is not a classification of arbitrary sparse larger networks.
@@ -88,13 +104,7 @@ $r,s$ are known, subtracting the appropriate constant from $G_i$ lets the
 ratio of two nonzero residual tests recover $h$ even at a leaf. Two positive
 arguments then suffice for every three-state source in that calibrated class.
 
-One argument is insufficient in general even at complete support: in tuple
-order $(r,s,a,b,c,d)$, $(1,1,1,1,1,1)$ and $(2,2,3,2/5,3,2/5)$ share at
-$\lambda=1$ the full matrix
-$\bigl(\begin{smallmatrix}1/21&8/21\\8/21&1/21\end{smallmatrix}\bigr)$
-but differ at $\lambda=2$. Exact symbolic checks of these statements use the
-full three-state generators. They also give Jacobian ranks six for two
-points at a triangle, five for two points at the displayed leaf, and six
-for three points there. Thus the two-point refinement supplies no uniform
-raw-rate conditioning guarantee near leaf boundaries; the three-point
-stability result retains its separate role.
+The accompanying exact audit retains the one-point generator counterexample
+and Jacobian diagnostics. That equilibrium example does not establish that
+two arguments are necessary for entropy identification. The three-point
+stability theorem retains its separate role near leaf boundaries.
