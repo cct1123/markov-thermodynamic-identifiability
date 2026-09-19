@@ -1,8 +1,10 @@
 # Research knowledge atlas
 
+**19 September 2026 update:** the current map includes the [coverage research loop](../outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md): finite-transform recovery, the complete-source exact entropy dichotomy, arbitrary-observation local ceilings and the calibrated exception. It records Burgarth's prior recovery theorem and the unresolved finite-frequency comparison. The overview, scientific story, novelty, frontier and skeptical views reflect this extension. The older creation/QA history below remains dated evidence; current validation is in [validation.json](validation.json), and the new scientific status is in [STATE.md](STATE.md).
+
 Open the [interactive atlas](interactive/index.html). It runs directly from a local file, with no network dependencies or account. The [executive SVG](views/research_overview.svg) and [scientific story](views/scientific_story.svg) are useful starting points for static review.
 
-The atlas is a claim-centered interface to the completed scientific audit: **141 semantic entities, 419 typed relationships and 12 coordinated views**, including 30 individual paper records beneath 15 prior-work groups. The source of truth remains the [mathematical specification](../analysis/publication-theorems.md), [evidence records](../evidence/RECORDS.md), proofs and [report](../outputs/REPORT.md). The map does not create a new theorem or certify novelty. Concurrent manuscript preparation is preserved and is not interpreted as new scientific evidence.
+The atlas contains **154 semantic entities, 486 typed relationships and 12 coordinated views**. The [proof addendum](../outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md), [earlier mathematical specification](../analysis/publication-theorems.md), [evidence records](../evidence/RECORDS.md) and [report](../outputs/REPORT.md) remain authoritative. Map validation checks structure and provenance; it does not prove mathematics or certify novelty.
 
 ## Read at four depths
 
@@ -23,7 +25,7 @@ The written badge carries evidence status; color carries scientific role. An ana
 | D · Claim and evidence | Proof versus symbolic/numerical checks and raw provenance | [SVG](views/claim_evidence.svg) |
 | E · Research evolution | Failures that changed the interpretation | [SVG](views/research_evolution.svg) |
 | F · Counterexamples | Eight rejected claims, exact witnesses and corrected scope | [SVG](views/falsification_map.svg) |
-| G · Literature and novelty | Fifteen prior-work groups, with 30 individual papers available through drill-down and search | [SVG](views/literature_novelty.svg) |
+| G · Literature and novelty | Primary papers, closest-prior comparisons and unresolved attribution | [SVG](views/literature_novelty.svg) |
 | H · Assumption sensitivity | State count, topology, positivity, trace, caps and observation experiment | [SVG](views/assumption_sensitivity.svg) |
 | I · Fibers and geometry | Schematic balanced entropy sets plus the actual three-state limit | [Quantitative SVG](views/parameter_geometry.svg), [PNG](views/parameter_geometry.png), [data](views/geometry-data.json) |
 | J · Open frontier | Settled fixed-count stability versus unresolved exact/observation classes | [SVG](views/open_frontier.svg) |
@@ -32,9 +34,9 @@ The written badge carries evidence status; color carries scientific role. An ana
 
 ## The scientific story
 
-The whole balanced five-state entropy fiber has a sharp unbounded / two-point / unique transition. Yet a perfect inverse fit need not give a finite entropy upper ceiling under any nonzero observation tolerance. A three-state tree already demonstrates a singular entropy functional despite locally Lipschitz rate recovery. Two fully hidden states introduce a second obstruction: observational ambiguity even near a complete source. The fixed-N criterion is settled for one known resolved pair and unknown bidirected topology; it is not a claim about every state cap, every extra rate constraint or every observation model.
+At complete sources, covering all but at most one vertex gives generator uniqueness; two uncovered vertices permit an exact entropy half-line. Sparse supports create a different obstruction: accurate generator recovery need not give a finite entropy ceiling. Fixed dimension, unknown support and the calibrated zero-budget exception remain explicit. The exceptional five-state entropy fiber is a separate result.
 
-The publication case remains provisional. Finite positive fibers, relative-entropy singularities and general confidence-limit impossibility are known mechanisms. A specifically matching prior physical theorem, particularly among the named source gaps, could change attribution. The long global endpoint exhaustion remains the main target for expert scrutiny. The saved highest-value action is the self-contained proof core for the two central results, currently being pursued by the concurrent manuscript task.
+The publication case remains provisional. Burgarth anticipates related all-time recovery, and finite-frequency attribution remains incomplete. Next actions are source comparison, article integration and conditioning-aware design; no concurrent manuscript worker is active. The long five-state support-exhaustion proof remains open to expert scrutiny.
 
 ## Rebuild and validate
 

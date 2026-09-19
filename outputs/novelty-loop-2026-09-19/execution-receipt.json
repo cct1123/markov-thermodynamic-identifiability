@@ -1,0 +1,56 @@
+{
+  "scientific": [
+    {
+      "name": "one-hidden-independent",
+      "cmd": ".\\.venv\\Scripts\\python.exe -B analysis/novelty_loop/one_hidden_independent.py",
+      "exit_code": 0,
+      "wall_time_seconds": 0.7039145
+    },
+    {
+      "name": "referee-exact-checks",
+      "cmd": ".\\.venv\\Scripts\\python.exe -B outputs/novelty-loop-2026-09-19/referee_checks.py",
+      "exit_code": 0,
+      "wall_time_seconds": 0.8261559
+    },
+    {
+      "name": "coverage-crosscheck",
+      "cmd": ".\\.venv\\Scripts\\python.exe -B analysis/novelty_loop/coverage_crosscheck.py",
+      "exit_code": 0,
+      "wall_time_seconds": 0.7422028
+    }
+  ],
+  "delivery": [
+    {
+      "name": "atlas-adversarial-validation",
+      "cmd": ".\\.venv\\Scripts\\python.exe -B knowledge/check_validation.py",
+      "exit_code": 0,
+      "wall_time_seconds": 3.6226628
+    },
+    {
+      "name": "atlas-javascript-syntax",
+      "cmd": "node --check knowledge/interactive/app.js",
+      "exit_code": 0,
+      "wall_time_seconds": 0.0000198
+    },
+    {
+      "name": "atlas-browser-script-syntax",
+      "cmd": "node --check knowledge/check_browser.mjs",
+      "exit_code": 0,
+      "wall_time_seconds": 0.0000146
+    },
+    {
+      "name": "diff-whitespace",
+      "cmd": "git diff --check",
+      "exit_code": 0,
+      "wall_time_seconds": 0.1652278
+    }
+  ],
+  "browser": {
+    "cmd": "node knowledge/check_browser.mjs",
+    "exit_code": 0,
+    "wall_time_seconds": 1.3747384999999999,
+    "checks": 30,
+    "mode": "approved isolated offline headless browser",
+    "earlier_sandbox_attempt": "Failed to expose debugging port; no scientific failure."
+  }
+}

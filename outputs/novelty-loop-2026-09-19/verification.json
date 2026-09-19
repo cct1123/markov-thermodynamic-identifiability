@@ -1,0 +1,145 @@
+{
+  "status": "passed",
+  "timestamp_utc": "2026-09-19T06:18:45.873899+00:00",
+  "baseline_commit": "c7ff789b2e9db090935b5bf16eb9a8d775f833c2",
+  "scope": "Prune, repair assertion guards, verify and commit/push the reviewed coverage research addendum. No new theorem changes.",
+  "historical_research_receipt": {
+    "path": "outputs/novelty-loop-2026-09-19/research-verification.json",
+    "sha256": "67bcacdb2b507668a6dbb7ecf7e0c048e61531ac1613568fd4dc3c7efa17a9c0",
+    "scope": "Original pre-pruning snapshot. Its old artifact fingerprints are historical; current fingerprints are below. The removed duplicate is recoverable from Git as recorded under pruning."
+  },
+  "pruning": {
+    "narrative": [
+      {
+        "path": "outputs\\REPORT.md",
+        "bytes_before": 10848,
+        "bytes_after": 6776
+      },
+      {
+        "path": "outputs\\novelty-loop-2026-09-19\\PLAN.md",
+        "bytes_before": 6256,
+        "bytes_after": 2989
+      }
+    ],
+    "removed_duplicate": {
+      "path": "outputs\\novelty-loop-2026-09-19\\PRIOR-SYNTHESIS.md",
+      "sha256": "e4f1d7343bb79359d2f946e91eda194385dc4438fc93244b5e074bd373836b9f",
+      "recovery": "git show c7ff789b2e9db090935b5bf16eb9a8d775f833c2:outputs/REPORT.md",
+      "reason": "Exact duplicate with broken relative links at its copied location; canonical Git source is retained."
+    }
+  },
+  "parameter_svg": "Restored HEAD after exact comparison modulo dc:date and generated m/p IDs; scientific geometry unchanged.",
+  "independent_review": "Read-only pre-push review found the assertion-mode regression, broken copied-report links and stale README claims; all addressed.",
+  "scientific_replays": [
+    {
+      "script": "analysis/novelty_loop/one_hidden_independent.py",
+      "script_sha256": "9c5a1b4b656480c3f2757559fed72c16fb7bde2a4c00da77c6b73dd38fecb1b1",
+      "output": "outputs/novelty-loop-2026-09-19/one-hidden-independent.json",
+      "output_sha256": "8d2b2eeade4988a0a8a2b6282c72ec94f7e36af5791b991f69dbb0506d41b0ad",
+      "scientific_payload_unchanged": true,
+      "before_sha256": "b18e06328cd5d747b54f4213040d19190d783c7bc2fa90e189fe001402667e2c"
+    },
+    {
+      "script": "outputs/novelty-loop-2026-09-19/referee_checks.py",
+      "script_sha256": "021216ffb36df401c4d4d77c60cf52a286b5ee6178daf6f3cc86b252e48a23ba",
+      "output": "outputs/novelty-loop-2026-09-19/referee_checks.json",
+      "output_sha256": "5b67a6e9bca7b33223322f4d583a1bcd9fa29e96ed5eb5b2a62daf007a5ad1e5",
+      "scientific_payload_unchanged": true,
+      "before_sha256": "650e384e3e8360aa709c3b98bbb825327905ccd966689a56800ee4b8da8db237"
+    },
+    {
+      "script": "analysis/novelty_loop/coverage_crosscheck.py",
+      "script_sha256": "1b53d07f44b4165e723419759cc217e24587e786102c323eaa31894e27e0a0d7",
+      "output": "outputs/novelty-loop-2026-09-19/coverage-crosscheck.json",
+      "output_sha256": "5bdbf67c1ec9062285381e778b93792cc37304d89c2a370f0b5621a732eb9718",
+      "scientific_payload_unchanged": true,
+      "before_sha256": "1b8fcf7549fdfed2518cb0ad9b0d6e09312b8a6e5b11ea2f9bc83e6842e1b383"
+    }
+  ],
+  "optimized_entrypoints": {
+    "test_module": "analysis.correctness.test_entrypoints",
+    "tests_passed": 2,
+    "entrypoints": 12,
+    "modes": [
+      "-O",
+      "PYTHONOPTIMIZE=1"
+    ],
+    "no_output_writes": true
+  },
+  "proof_sha256": "2717696b2f5ab9c3d6b62a6e05277289855140ba16dcb1d54038701092a94089",
+  "proof_unchanged_from_research_review": true,
+  "local_links_and_anchors_checked": 104,
+  "atlas": {
+    "source_fingerprints": 67,
+    "errors": [],
+    "warnings": [],
+    "corruption_checks_passed": 10,
+    "browser_checks_passed": 30
+  },
+  "preserved_baseline_artifacts": [
+    {
+      "path": "PROJECT.md",
+      "sha256": "5a230d0844b9149c2716114c1e40fb4cde92dc6b0c67105d59916fcea82b3964",
+      "matches_baseline_bytes": true
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "b3b3b769274a8ccb78641d36e6f91508191cc902162b48f870e73f9fdec74c5d",
+      "matches_baseline_bytes": true
+    },
+    {
+      "path": "manuscript/main.pdf",
+      "sha256": "7c522568918e804d854fe62050579b2999d7d3880d4657b70a584bde23250c1c",
+      "matches_baseline_bytes": true
+    },
+    {
+      "path": "outputs/manuscript-package.zip",
+      "sha256": "c135b34dfd8a15ad0e844a00953a899ebe11e8203f5a00257a753cf052c831ab",
+      "matches_baseline_bytes": true
+    }
+  ],
+  "artifact_sha256": {
+    "outputs/novelty-loop-2026-09-19/coverage-crosscheck.json": "5bdbf67c1ec9062285381e778b93792cc37304d89c2a370f0b5621a732eb9718",
+    "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md": "2717696b2f5ab9c3d6b62a6e05277289855140ba16dcb1d54038701092a94089",
+    "outputs/novelty-loop-2026-09-19/execution-receipt.json": "60a01d0bbf7741d4d23eb24f25ec15dcc148c7c99792edab8d482847b2fc2454",
+    "outputs/novelty-loop-2026-09-19/LITERATURE.md": "ec8565d4db218b16ab7547dbf1cdfc8a70a27feabf4f66f35456543cc3af0548",
+    "outputs/novelty-loop-2026-09-19/one-hidden-independent.json": "8d2b2eeade4988a0a8a2b6282c72ec94f7e36af5791b991f69dbb0506d41b0ad",
+    "outputs/novelty-loop-2026-09-19/ONE-HIDDEN-INDEPENDENT.md": "2d6bfdbf968e1dd3016228190cc7411f0dd8df760462899139f2a17e07f9338d",
+    "outputs/novelty-loop-2026-09-19/PLAN.md": "0a50164f76630979806dd4c947d35c14ba0afa351da35c41394b136663c0edca",
+    "outputs/novelty-loop-2026-09-19/REFEREE.md": "d590acba81cda7f51e957e95df32b5c44f40753dd0b81e952ce8cef29e941999",
+    "outputs/novelty-loop-2026-09-19/referee_checks.json": "5b67a6e9bca7b33223322f4d583a1bcd9fa29e96ed5eb5b2a62daf007a5ad1e5",
+    "outputs/novelty-loop-2026-09-19/referee_checks.py": "021216ffb36df401c4d4d77c60cf52a286b5ee6178daf6f3cc86b252e48a23ba",
+    "outputs/novelty-loop-2026-09-19/research-verification.json": "67bcacdb2b507668a6dbb7ecf7e0c048e61531ac1613568fd4dc3c7efa17a9c0",
+    "analysis/novelty_loop/coverage_crosscheck.py": "1b53d07f44b4165e723419759cc217e24587e786102c323eaa31894e27e0a0d7",
+    "analysis/novelty_loop/one_hidden_independent.py": "9c5a1b4b656480c3f2757559fed72c16fb7bde2a4c00da77c6b73dd38fecb1b1",
+    "analysis/novelty_loop/README.md": "d99dfa2e2862d70b1768646d0dba6cc1cb944f45d6a27a5e5d5f4c6f4a2b0f5d",
+    ".gitattributes": "51d97be2519b1ea7508a8a9d31f5c63bd3478e5d9425a1dea2f0d3002a840f15",
+    "STATE.md": "9e43662212a17afd3042748933a5db2a2381e524e619b8a4ee179996b8150b4c",
+    "evidence/RECORDS.md": "0d0ad73350365562238ae0967dcefaf622f52714f572d9f3b2107912c371e9e5",
+    "analysis/correctness/test_entrypoints.py": "47474cd6e26cfe66b7a1a746c8a07f5797e9342cba3740beba51fc1d286a3cd2",
+    "outputs/REPORT.md": "57f9942ad5e951d54d2f28a2b38168b5a670c31e22bd72344944ffba090aecb8",
+    "outputs/PUBLICATION-READINESS.md": "bc35d4ee4206b269cd09949a90c106bb2b5f6e4f773b0e8181b33f10f1727844",
+    "knowledge/README.md": "ab3664e5a913781b0bfa2674c85eb3ebd3e12a1238a55c2dff724b923cf6c314",
+    "knowledge/STATE.md": "b259c8102dd3aa5fd32e28e463037da0539fa00280c0668dd075d81ba2e47de6",
+    "knowledge/graph.json": "278d06072d1298d7e93a12e7722a753912a9197f71d0dfe69649ae97a043893e",
+    "knowledge/interactive/data.js": "3eb70024fcaa28888c0817411e38b955b01cbee89a089df7395d67feaed90e54",
+    "knowledge/validation.json": "2d965f59d83e48d65c06941ee27957120cf33cfdc3ef152217bcc041b35c62ab",
+    "knowledge/validation-checks.json": "523089d101ab6cb77384386d2f5c46ee31b2dcdc67b726f4f77a72b75ed43d0c",
+    "knowledge/browser-checks.json": "8727c90e889dc4f4501f9e5d5355f2e94af42a732febaf20ca22082e329c1c70"
+  },
+  "staged_checkout": {
+    "status": "passed",
+    "method": "Materialized all staged files with git checkout-index, then verified the delivery artifact hashes, preserved inputs and atlas source fingerprints.",
+    "artifact_hashes_checked": 27,
+    "atlas_source_fingerprints_checked": 67,
+    "optimized_entrypoint_tests_passed": 2,
+    "entrypoints_per_mode": 12,
+    "modes": ["-O", "PYTHONOPTIMIZE=1"],
+    "environment": "Same installed Python environment; staged copies of all repository code and data."
+  },
+  "limitations": [
+    "Independent conventional review and exact checks are not formal proof or priority certification.",
+    "Existing manuscript/PDF/archive remain the preceding version.",
+    "Historical full scientific/statistical workflow was not rerun; the three new scripts and targeted guard/atlas checks were rerun."
+  ]
+}

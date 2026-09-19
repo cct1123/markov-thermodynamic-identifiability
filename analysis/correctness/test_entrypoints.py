@@ -24,6 +24,9 @@ ENTRYPOINTS = (
     "analysis/correctness/laplace_two.py",
     "analysis/correctness/mechanism.py",
     "analysis/correctness/replay_supplied_review.py",
+    "analysis/novelty_loop/one_hidden_independent.py",
+    "analysis/novelty_loop/coverage_crosscheck.py",
+    "outputs/novelty-loop-2026-09-19/referee_checks.py",
 )
 GUARD_MESSAGE = "Assertions must be enabled; do not use python -O or PYTHONOPTIMIZE."
 

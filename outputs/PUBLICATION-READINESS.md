@@ -1,5 +1,7 @@
 # Publication-facing status — 15 September 2026
 
+**19 September research-loop update:** a separate [coverage theorem addendum](novelty-loop-2026-09-19/COVERAGE-THEOREM.md), [independent referee audit](novelty-loop-2026-09-19/REFEREE.md), and [primary-source comparison](novelty-loop-2026-09-19/LITERATURE.md) strengthen the research to arbitrary resolved observation graphs. The new proofs have independent conventional review and exact checks, with priority still provisional. They are not yet integrated into the PDF or reproduction archive described below. [Current synthesis and next steps](REPORT.md), [E081–E083](../evidence/RECORDS.md#e081).
+
 **19 September update:** [Second academic review response](supplied-verification-2026-09-19/RESPONSE.md) and [bounded verification](supplied-verification-2026-09-19/verification.json) supersede current-version references below: the driver now fails on scientific mismatches, all 41 tests pass, and the current 56-page PDF is visually checked. The older full-run and extraction statements remain dated historical evidence.
 The manuscript is a revised scientific draft for expert human review. The requested global proof repair and targeted additions are implemented; there is no claim of formal verification, literature-wide priority or human scientific approval.
 

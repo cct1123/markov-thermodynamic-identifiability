@@ -69,16 +69,16 @@
 <text x="581" y="348" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Local ceiling iff N=2 or</text>
 <text x="581" y="366" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">complete N=3</text>
 </g>
-<g><title>A source can have one or two exact entropy values while every positive observation tolerance admits arbitrarily large entropy.</title><rect x="840" y="111" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="111" width="4" height="98" rx="2" fill="#477296"/>
+<g><title>Sparse supports can have exact recovery but unbounded entropy nearby. Complete sources instead have an exact coverage dichotomy: unique with at most one uncovered vertex, or an attainable entropy half-line with at least two.</title><rect x="840" y="111" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="111" width="4" height="98" rx="2" fill="#477296"/>
 <text x="853" y="129" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#477296">INTERPRETATION</text>
 <text x="853" y="153" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Exact ambiguity and</text>
 <text x="853" y="171" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">observational instability</text>
 <text x="853" y="189" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">are different</text>
 </g>
-<g><title>The complete manuscript is ready for expert human review. Check Appendix B&#x27;s global support exhaustion and its endpoint certificate, then finalize attribution and submission details.</title><rect x="840" y="241" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="241" width="4" height="98" rx="2" fill="#526357"/>
+<g><title>Complete finite-frequency primary comparison, integrate the new proof package into the article, then study conditioning-aware observation design.</title><rect x="840" y="241" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="241" width="4" height="98" rx="2" fill="#526357"/>
 <text x="853" y="259" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#526357">INTERPRETATION</text>
-<text x="853" y="283" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Next: expert review of the</text>
-<text x="853" y="301" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">manuscript</text>
+<text x="853" y="283" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Next: attribution and</text>
+<text x="853" y="301" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">conditioning</text>
 </g>
 <text x="24" y="472" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Proof, numerical checks and novelty have separate statuses. Arrows use the relations in graph.json.</text>
 <text x="24" y="493" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Interactive companion: select a node to read assumptions, typed relationships and exact provenance.</text></svg>

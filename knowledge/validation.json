@@ -1,13 +1,13 @@
 {
   "meaning": "Structural integrity and provenance audit. A clean graph does not verify a proof or establish novelty.",
   "checks": {
-    "nodes": 141,
-    "typed_edges": 419,
+    "nodes": 154,
+    "typed_edges": 486,
     "logical_dependency_dag": true,
     "views": 12,
-    "report_sections_mapped": 7,
+    "report_sections_mapped": 5,
     "report_coverage_method": "Human-reviewed section/claim mapping plus source hash drift detection; not automatic semantic completeness.",
-    "source_snapshots": 59
+    "source_snapshots": 67
   },
   "errors": [],
   "warnings": [],
@@ -15,12 +15,17 @@
     {
       "node": "risk_novelty",
       "title": "A matching prior physical theorem could change attribution",
-      "summary": "No inspected source was shown to imply the exact two-point physical entropy fiber or the complete fixed-N ceiling criterion; matching exceptional results in inaccessible originals remain a specific risk."
+      "summary": "Burgarth substantially anticipates bare all-time one-hidden recovery. The precise coverage/entropy classification is differentiated by the bounded audit; priority against finite-frequency and other named source gaps remains open."
     },
     {
       "node": "risk_global_proof",
       "title": "Global support exhaustion must remain auditable",
       "summary": "The endpoint count rests on a long conventional proof covering connected and disconnected hidden supports, all envelope equality cases, endpoint existence and entropy separation."
+    },
+    {
+      "node": "risk_finite_frequency_priority",
+      "title": "Finite-frequency priority comparison remains incomplete",
+      "summary": "Loewner/generalized realization is close prior work; abstract-level access does not decide overlap with this physical two/three-point inverse."
     }
   ],
   "passed": true

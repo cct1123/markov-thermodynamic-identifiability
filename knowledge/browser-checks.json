@@ -10,12 +10,12 @@
   },
   "node": "v24.14.1",
   "source_hashes": {
-    "graph.json": "ceffecc5a1ea7572314d20a01e7cf1129cb7f1378c72bcd4516cbbe607238104",
+    "graph.json": "278d06072d1298d7e93a12e7722a753912a9197f71d0dfe69649ae97a043893e",
     "interactive/index.html": "aefaf0bff75cb234bd6ce15d48ca08be4d026c5748849159937d389104c8a55e",
     "interactive/app.js": "3f686813046655a91516852343af887c4f6f9f67fceb7f4b05074f7b2a9a5088",
     "interactive/style.css": "14aa5bd170f6c4119da268ad2f46ba29ce5a9fa7aadc70597f86d8b7f772d423",
-    "interactive/data.js": "ad1c3e44a8633d7320fe472e403581fbc380e2e5ae2df952bb4896d760d278be",
-    "check_browser.mjs": "5fb3173fe33843e0c00cae3a20b7d834ad7b250b412db573bd3967f0dc8211c4"
+    "interactive/data.js": "3eb70024fcaa28888c0817411e38b955b01cbee89a089df7395d67feaed90e54",
+    "check_browser.mjs": "91a6d06821028a9af7ecce2222da3f229b7d89ebec201c97e997690b100af2cd"
   },
   "transport": "Local file URL; isolated headless profile; loopback CDP",
   "results": [

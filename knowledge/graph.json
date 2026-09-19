@@ -2,7 +2,7 @@
   "schema_version": 1,
   "title": "Thermodynamic identifiability — semantic research atlas",
   "authority": "Derived interface to the reviewed repository; proofs and evidence records remain the source of truth.",
-  "review_scope": "Existing validated science only. No new research result, source retrieval, scientific replay or formal proof is claimed by map construction.",
+  "review_scope": "Derived interface updated for E081-E083/D035. New coverage proofs, independent checks and primary comparisons are scientific sources; atlas validation itself verifies structure and provenance, not mathematics.",
   "nodes": [
     {
       "id": "question_main",
@@ -390,10 +390,10 @@
       "status": "assumption",
       "summary": "A nonempty reverse-closed set of individually resolved transitions is specified.",
       "statement": "A nonempty reverse-closed set of individually resolved transitions is specified.",
-      "intuition": "T5 extends to this observation set only if at least two states lie outside every observed endpoint.",
-      "why_it_matters": "T5 extends to this observation set only if at least two states lie outside every observed endpoint.",
+      "intuition": "Known microscopic endpoints let observed transitions reset the process to a covered state.",
+      "why_it_matters": "Arbitrary reverse-closed sets now admit the coverage theorem; blurred marks remain outside it.",
       "limitations": [
-        "T5 extends to this observation set only if at least two states lie outside every observed endpoint."
+        "Absolute joint marked waiting laws and fixed microscopic labels are required."
       ],
       "level": 1,
       "provenance": [
@@ -401,6 +401,9 @@
           "path": "analysis/publication-theorems.md",
           "anchor": "1-common-definitions-and-quantifiers",
           "label": "Current mathematical definitions"
+        },
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
         }
       ],
       "assumption_kind": "Observation"
@@ -2053,8 +2056,8 @@
       ],
       "limitations": [
         "External neighborhoods include every other state, including other hidden states.",
-        "The unequal-row forward construction needs no minimality. Equal-row lumping is not silently asserted trace-preserving.",
-        "Pair incomparability or reverse escape ordering can block this method without proving global uniqueness."
+        "Pair incomparability or reverse escape ordering can block this method without proving global uniqueness.",
+        "The new complete-source theorem handles equal exit rows with an explicitly trace-preserving lumped pair; arbitrary sparse neighborhoods still require their stated conditions."
       ],
       "falsification_attempts": [
         "Both internal-rate-first and external-rate-first endpoints were checked.",
@@ -2075,6 +2078,10 @@
         {
           "path": "evidence/RECORDS.md",
           "anchor": "e032"
+        },
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md",
+          "anchor": "3-complete-sources-with-two-hidden-vertices-exhaustive-construction"
         }
       ],
       "level": 2,
@@ -3394,7 +3401,7 @@
       "type": "Concept",
       "title": "Exact ambiguity and observational instability are different",
       "status": "interpretation",
-      "summary": "A source can have one or two exact entropy values while every positive observation tolerance admits arbitrarily large entropy.",
+      "summary": "Sparse supports can have exact recovery but unbounded entropy nearby. Complete sources instead have an exact coverage dichotomy: unique with at most one uncovered vertex, or an attainable entropy half-line with at least two.",
       "intuition": "The exact fiber asks what fits perfectly; the upper envelope asks what remains possible after any tolerance.",
       "why_it_matters": "This connects the exceptional five-state result to the general fixed-N classification.",
       "limitations": [
@@ -3418,7 +3425,7 @@
       "type": "PublicationClaim",
       "title": "Candidate manuscript contribution",
       "status": "interpretation",
-      "summary": "The narrow publication case is the exhaustive two-point physical entropy fiber and sharp balanced transition, together with the all-N resolved-pair local-ceiling criterion.",
+      "summary": "The candidate contribution now combines the support-exhaustive five-state fiber with an arbitrary-observation exact complete-source dichotomy, sharp local ceilings and finite-measurement/design consequences.",
       "intuition": "A complete exceptional example and a general robustness theorem answer complementary questions.",
       "why_it_matters": "This is the accepted reason to prepare a theorem manuscript rather than gather more generic examples.",
       "limitations": [
@@ -3428,18 +3435,14 @@
       ],
       "provenance": [
         {
-          "path": "evidence/RECORDS.md",
-          "anchor": "e062",
-          "label": "Accepted bounded publication assessment"
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
+        },
+        {
+          "path": "outputs/novelty-loop-2026-09-19/LITERATURE.md"
         },
         {
           "path": "evidence/RECORDS.md",
-          "anchor": "d023",
-          "label": "Manuscript-preparation decision"
-        },
-        {
-          "path": "outputs/PAPER-STRUCTURE.md",
-          "label": "Central claim and theorem sequence"
+          "anchor": "d035"
         }
       ],
       "level": 0,
@@ -3451,7 +3454,8 @@
           "prior_ph_polytopes",
           "prior_realization_equivalence",
           "prior_hidden_thermodynamics",
-          "prior_kl_singularity"
+          "prior_kl_singularity",
+          "paper_burgarth_2018"
         ]
       }
     },
@@ -3460,7 +3464,7 @@
       "type": "NoveltyRisk",
       "title": "A matching prior physical theorem could change attribution",
       "status": "unresolved",
-      "summary": "No inspected source was shown to imply the exact two-point physical entropy fiber or the complete fixed-N ceiling criterion; matching exceptional results in inaccessible originals remain a specific risk.",
+      "summary": "Burgarth substantially anticipates bare all-time one-hidden recovery. The precise coverage/entropy classification is differentiated by the bounded audit; priority against finite-frequency and other named source gaps remains open.",
       "intuition": "Shared machinery does not establish anticipation, and failed searches do not establish originality.",
       "why_it_matters": "The manuscript must attach exact hypothesis comparisons and preserve access limitations.",
       "limitations": [
@@ -3481,6 +3485,9 @@
         {
           "path": "evidence/publication-thermodynamics-novelty.md",
           "label": "Theorem-by-theorem comparison"
+        },
+        {
+          "path": "outputs/novelty-loop-2026-09-19/LITERATURE.md"
         }
       ],
       "level": 1,
@@ -3491,7 +3498,8 @@
           "prior_larget_gap",
           "prior_realization_equivalence",
           "prior_finite_fibers",
-          "prior_hidden_thermodynamics"
+          "prior_hidden_thermodynamics",
+          "paper_burgarth_2018"
         ]
       }
     },
@@ -3628,13 +3636,12 @@
       "type": "OpenQuestion",
       "title": "Other observation and channel conventions need separate theory",
       "status": "unresolved",
-      "summary": "Unknown or blurred event incidence, multiple thermodynamic channels and other resolved-edge sets are outside the current complete one-pair criterion.",
+      "summary": "Arbitrary reverse-closed resolved-edge coverage is now classified for local ceilings. Blurred incidence, macrostates and unresolved thermodynamic channels still need separate theory.",
       "intuition": "Changing what an event identifies changes both the inverse map and the entropy being inferred.",
       "why_it_matters": "The map must present these as different scientific questions, not omitted cases inside T3 or T6.",
       "limitations": [
-        "T5 already permits general reverse-closed resolved marks when two states are outside every endpoint.",
-        "Coarse-graining may not commute with physical time reversal.",
-        "The generator-level functional need not include dissipation hidden inside parallel channels."
+        "The new coverage theorem retains known microscopic endpoints and a fixed labeled state set.",
+        "Exact sparse fibers with multiple hidden vertices are not classified."
       ],
       "provenance": [
         {
@@ -3655,6 +3662,9 @@
           "path": "evidence/RECORDS.md",
           "anchor": "e015",
           "label": "Channel ambiguity"
+        },
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
         }
       ],
       "level": 2
@@ -3662,26 +3672,21 @@
     {
       "id": "open_transform_minimum",
       "type": "OpenQuestion",
-      "title": "The optimal number of Laplace arguments is unknown",
+      "title": "Sparse two-point sufficiency still needs classification",
       "status": "unresolved",
-      "summary": "Any three distinct positive Laplace arguments suffice for the local physical three-state inverse, but the minimal number of arguments has not been established.",
+      "summary": "Three is worst-case sharp for one-hidden entropy at every N>=4; complete sources need only two. The full sparse incidence criterion and optimal conditioning remain open.",
       "intuition": "A sufficient reconstruction formula does not prove that fewer measurements are impossible.",
       "why_it_matters": "This is a narrow optional inverse-problem question, not a dependency of the stability classification.",
       "limitations": [
-        "No lower-bound claim on transform sample count is accepted.",
-        "The complete 2×2 transform is available at each argument.",
-        "Do not confuse number of arguments with number of scalar data entries."
+        "A sufficient observed-edge/hidden-neighbor condition is proved, not a necessary classification for all sparse patterns.",
+        "Full matrix amplitudes and known endpoints are essential."
       ],
       "provenance": [
         {
-          "path": "analysis/publication-theorems.md",
-          "anchor": "3-three-state-identifiability-and-cap-free-continuity",
-          "label": "T2/T2a note on three arguments"
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
         },
         {
-          "path": "analysis/publication-theorems.md",
-          "anchor": "7-evidence-status-and-open-statements",
-          "label": "Section 7: optimal count open"
+          "path": "outputs/novelty-loop-2026-09-19/ONE-HIDDEN-INDEPENDENT.md"
         }
       ],
       "level": 2
@@ -3689,34 +3694,29 @@
     {
       "id": "next_proof_core",
       "type": "ResearchAction",
-      "title": "Next action: expert manuscript review",
+      "title": "Next: attribution, article integration and conditioning",
       "status": "interpretation",
-      "summary": "The complete manuscript is ready for expert human review. Check Appendix B's global support exhaustion and its endpoint certificate, then finalize attribution and submission details.",
-      "intuition": "The self-contained proof core and reproducible package now exist; the next consequential check is expert assessment of the global argument.",
-      "why_it_matters": "This updates the completed D023 manuscript action while keeping unresolved scientific frontiers and originality risks visible.",
+      "summary": "Complete finite-frequency primary comparison, integrate the new proof package into the article, then study conditioning-aware observation design.",
+      "intuition": "The independent proof addendum is complete; the old manuscript remains the preceding version.",
+      "why_it_matters": "These actions can change the originality assessment and practical value without another generic numerical campaign.",
       "limitations": [
-        "Compilation, exact checks and assistant referee review do not imply human approval, formal verification or novelty certification.",
-        "Author names, affiliations, final disclosure and the real data/code access arrangement are pending.",
-        "A concrete proof objection or matching original theorem can change readiness; broad new exploration is not required by the completed manuscript task."
+        "The new coverage result is not yet in the compiled manuscript or its archive.",
+        "No source-priority certificate, formal verification or human scientific approval is claimed."
       ],
       "provenance": [
         {
           "path": "evidence/RECORDS.md",
-          "anchor": "d025",
-          "label": "Completed manuscript and current expert-review action"
+          "anchor": "d035"
         },
         {
-          "path": "outputs/PUBLICATION-READINESS.md",
-          "label": "Current manuscript readiness assessment"
+          "path": "outputs/novelty-loop-2026-09-19/PLAN.md"
         },
         {
-          "path": "evidence/RECORDS.md",
-          "anchor": "d023",
-          "label": "Historical manuscript-preparation action, now completed"
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
         }
       ],
       "level": 0,
-      "map_label": "Next: expert review of the manuscript"
+      "map_label": "Next: attribution and conditioning"
     },
     {
       "id": "hypothesis_minimality_cure",
@@ -5325,6 +5325,408 @@
           "path": "evidence/publication-thermodynamics-novelty.md",
           "label": "Cycle observability requirements and version dates",
           "url": "https://arxiv.org/html/2605.27635v1"
+        }
+      ]
+    },
+    {
+      "id": "proof_coverage_20260919",
+      "type": "EvidenceRecord",
+      "title": "Proof: coverage theorem package",
+      "status": "analytically_proved",
+      "summary": "Domain-aware rational inverse, complete-source shear/lumping dichotomy, sparse opening and calibrated exception.",
+      "level": 2,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e082"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e083"
+        }
+      ]
+    },
+    {
+      "id": "check_coverage_independent",
+      "type": "EvidenceRecord",
+      "title": "Independent coverage proof and exact checks",
+      "status": "independently_verified",
+      "summary": "Separate inverse derivations, final-draft referee audit, full-mark entropy witness, equal-row lumping and first internal shear boundary.",
+      "level": 2,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/REFEREE.md"
+        },
+        {
+          "path": "outputs/novelty-loop-2026-09-19/ONE-HIDDEN-INDEPENDENT.md"
+        },
+        {
+          "path": "outputs/novelty-loop-2026-09-19/referee_checks.json"
+        },
+        {
+          "path": "outputs/novelty-loop-2026-09-19/one-hidden-independent.json"
+        },
+        {
+          "path": "outputs/novelty-loop-2026-09-19/coverage-crosscheck.json"
+        }
+      ],
+      "verification_scope": "The final conventional proof is independently reviewed. Exact checks cover specified N4-N6 cases, arbitrary two-sample interpolation and the equal-exit boundary. Shared model and SymPy engine; no formal verification."
+    },
+    {
+      "id": "paper_burgarth_2018",
+      "type": "LiteratureSource",
+      "title": "Burgarth: zero forcing identifies Markov generators",
+      "status": "established_prior_result",
+      "summary": "Observed-state semigroups identify combinatorially symmetric CTMCs when covered vertices form a zero-forcing set; all but one vertices suffice.",
+      "level": 2,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/LITERATURE.md",
+          "url": "https://arxiv.org/pdf/1709.02932"
+        },
+        {
+          "path": "evidence/RECORDS.md",
+          "anchor": "e081"
+        }
+      ],
+      "literature": {
+        "authors": "Daniel K. Burgarth",
+        "year": "2018 (preprint 2017)",
+        "setting": "Finite CTMC with reciprocal support",
+        "observation": "Restricted ordinary semigroup at all times",
+        "quantity": "Physical generator",
+        "result_kind": "Constructive zero-forcing sufficient condition",
+        "assumptions": [
+          "Known observed vertices",
+          "Connected combinatorially symmetric generator"
+        ],
+        "difference": "Anticipates bare all-time one-hidden recovery. Does not itself supply the positive-Laplace two/three-point inverse, bounded-test continuity or exact entropy dichotomy.",
+        "access": "Full arXiv preprint read, Section5 Eq18/Theorem2; final journal PDF not verified."
+      }
+    },
+    {
+      "id": "theorem_coverage_inverse",
+      "type": "Theorem",
+      "title": "Coverage inverse: two or three positive transforms",
+      "status": "analytically_proved",
+      "summary": "At most one uncovered vertex allows a locally rational inverse with no rate priors.",
+      "level": 1,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
+        }
+      ],
+      "statement": "With no uncovered vertex, two distinct positive full transform matrices recover Q. With one, any three do; two suffice when an observed edge joins two hidden neighbors, including complete sources. Unknown observed rates and unknown support are allowed. The inverse is locally Lipschitz in finite measurements and row TV, and weakly continuous without a common rate cap. Three are worst-case sharp for entropy for every N>=4.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_fixed_n",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "proof_coverage_20260919"
+      ],
+      "independent_verification": [
+        "check_coverage_independent"
+      ],
+      "verification_scope": "Conventional source proof plus independent proof/scope review. Exact rational and symbolic examples verify stated cases; finite sampling does not establish universal quantifiers. No formal proof.",
+      "limitations": [
+        "Fixed labeled vertex set; extra hidden states, blurred marks, known sparse support and arbitrary extra tight bounds change the class.",
+        "Novelty remains provisional; the finite-frequency primary comparison is incomplete."
+      ],
+      "novelty": {
+        "status": "candidate_contribution",
+        "summary": "Precise coverage, finite-measurement and entropy classification; bare all-time recovery and hidden thermodynamic ambiguity have close antecedents.",
+        "comparisons": [
+          "paper_burgarth_2018",
+          "prior_map_identifiability",
+          "prior_realization_equivalence"
+        ]
+      }
+    },
+    {
+      "id": "theorem_complete_entropy",
+      "type": "Theorem",
+      "title": "Complete sources: unique or an exact entropy half-line",
+      "status": "analytically_proved",
+      "summary": "At most one uncovered vertex gives uniqueness; two or more give an exact attainable entropy half-line.",
+      "level": 1,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
+        }
+      ],
+      "statement": "At every complete source on fixed V, |H|<=1 gives a singleton generator fiber among unknown-support competitors. If |H|>=2, the exact entropy image contains [sigma(Q0),infinity), with observed rates and trace fixed and a bounded-rate complete path. Unequal and equal external exit rows exhaust sources, including nonminimal ones. A reversible complete source has exact image [0,infinity).",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_fixed_n",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "proof_coverage_20260919"
+      ],
+      "independent_verification": [
+        "check_coverage_independent"
+      ],
+      "verification_scope": "Conventional source proof plus independent proof/scope review. Exact rational and symbolic examples verify stated cases; finite sampling does not establish universal quantifiers. No formal proof.",
+      "limitations": [
+        "Fixed labeled vertex set; extra hidden states, blurred marks, known sparse support and arbitrary extra tight bounds change the class.",
+        "Novelty remains provisional; the finite-frequency primary comparison is incomplete."
+      ],
+      "novelty": {
+        "status": "candidate_contribution",
+        "summary": "Precise coverage, finite-measurement and entropy classification; bare all-time recovery and hidden thermodynamic ambiguity have close antecedents.",
+        "comparisons": [
+          "paper_burgarth_2018",
+          "prior_hidden_thermodynamics",
+          "prior_realization_equivalence"
+        ]
+      }
+    },
+    {
+      "id": "theorem_coverage_ceiling",
+      "type": "Theorem",
+      "title": "Local ceiling iff complete and at most one uncovered",
+      "status": "analytically_proved",
+      "summary": "A sharp local criterion now covers every reverse-closed resolved observation set.",
+      "level": 1,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
+        }
+      ],
+      "statement": "On fixed labeled V with unknown reciprocal support, a finite local upper entropy ceiling exists iff Q0 is complete and |H|<=1. This holds in row TV, weak topology and finite bounded-Laplace neighborhoods. With observed rates and trace fixed, add the exception U0=0, where the constrained class is a singleton.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_fixed_n",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "proof_coverage_20260919"
+      ],
+      "independent_verification": [
+        "check_coverage_independent"
+      ],
+      "verification_scope": "Conventional source proof plus independent proof/scope review. Exact rational and symbolic examples verify stated cases; finite sampling does not establish universal quantifiers. No formal proof.",
+      "limitations": [
+        "Fixed labeled vertex set; extra hidden states, blurred marks, known sparse support and arbitrary extra tight bounds change the class.",
+        "Novelty remains provisional; the finite-frequency primary comparison is incomplete."
+      ],
+      "novelty": {
+        "status": "candidate_contribution",
+        "summary": "Precise coverage, finite-measurement and entropy classification; bare all-time recovery and hidden thermodynamic ambiguity have close antecedents.",
+        "comparisons": [
+          "paper_burgarth_2018",
+          "prior_hidden_thermodynamics",
+          "prior_entropy_upper"
+        ]
+      }
+    },
+    {
+      "id": "corollary_sensor_coverage",
+      "type": "Theorem",
+      "title": "Minimum observations: floor(N/2) reverse pairs",
+      "status": "analytically_proved",
+      "summary": "At complete sources, successful designs cover at least N-1 vertices; a matching attains the minimum.",
+      "level": 1,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
+        }
+      ],
+      "statement": "For a complete N-state source, exact entropy identification and finite local ceilings are equivalent to covering at least N-1 vertices. Every observed pair covers at most two vertices; a matching proves the sharp minimum floor(N/2). Count alone does not suffice for a poorly placed design.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_fixed_n",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "proof_coverage_20260919"
+      ],
+      "independent_verification": [
+        "check_coverage_independent"
+      ],
+      "verification_scope": "Conventional source proof plus independent proof/scope review. Exact rational and symbolic examples verify stated cases; finite sampling does not establish universal quantifiers. No formal proof.",
+      "limitations": [
+        "Fixed labeled vertex set; extra hidden states, blurred marks, known sparse support and arbitrary extra tight bounds change the class.",
+        "Novelty remains provisional; the finite-frequency primary comparison is incomplete."
+      ],
+      "novelty": {
+        "status": "candidate_contribution",
+        "summary": "Precise coverage, finite-measurement and entropy classification; bare all-time recovery and hidden thermodynamic ambiguity have close antecedents.",
+        "comparisons": [
+          "paper_burgarth_2018",
+          "prior_resolved_inference"
+        ]
+      }
+    },
+    {
+      "id": "cex_two_laplace_entropy",
+      "type": "Counterexample",
+      "title": "Two Laplace samples can conceal entropy for every N>=4",
+      "status": "analytically_proved",
+      "summary": "Any prescribed two positive arguments admit an exact finite-summary entropy ambiguity; the full waiting laws differ.",
+      "level": 2,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
+        }
+      ],
+      "statement": "Any prescribed two positive arguments admit an exact finite-summary entropy ambiguity; the full waiting laws differ.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_fixed_n",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "proof_coverage_20260919"
+      ],
+      "independent_verification": [
+        "check_coverage_independent"
+      ],
+      "limitations": [
+        "Retain the precise finite-summary or calibrated model class."
+      ],
+      "novelty": {
+        "status": "supporting_result",
+        "summary": "Scope correction and exact witness, not a priority claim.",
+        "comparisons": [
+          "paper_burgarth_2018",
+          "prior_hidden_thermodynamics"
+        ]
+      }
+    },
+    {
+      "id": "cex_hidden_incidence_ceiling",
+      "type": "Counterexample",
+      "title": "Missing covered-covered pair defeats a ceiling",
+      "status": "analytically_proved",
+      "summary": "A sole hidden vertex can touch every covered vertex while a missing visible pair permits fixed-trace entropy divergence.",
+      "level": 2,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
+        }
+      ],
+      "statement": "A sole hidden vertex can touch every covered vertex while a missing visible pair permits fixed-trace entropy divergence.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_fixed_n",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "proof_coverage_20260919"
+      ],
+      "independent_verification": [
+        "check_coverage_independent"
+      ],
+      "limitations": [
+        "Retain the precise finite-summary or calibrated model class."
+      ],
+      "novelty": {
+        "status": "supporting_result",
+        "summary": "Scope correction and exact witness, not a priority claim.",
+        "comparisons": [
+          "paper_burgarth_2018",
+          "prior_hidden_thermodynamics"
+        ]
+      }
+    },
+    {
+      "id": "cex_zero_slack_ceiling",
+      "type": "Counterexample",
+      "title": "Zero unobserved rate slack freezes the calibrated class",
+      "status": "analytically_proved",
+      "summary": "A sparse connected source with all supported rates observed becomes a singleton when those rates and trace are fixed.",
+      "level": 2,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
+        }
+      ],
+      "statement": "A sparse connected source with all supported rates observed becomes a singleton when those rates and trace are fixed.",
+      "assumptions": [
+        "assume_finite_irreducible",
+        "assume_bidirected",
+        "assume_even_single_channel",
+        "assume_resolved_marks",
+        "assume_fixed_n",
+        "assume_unknown_support"
+      ],
+      "evidence": [
+        "proof_coverage_20260919"
+      ],
+      "independent_verification": [
+        "check_coverage_independent"
+      ],
+      "limitations": [
+        "Retain the precise finite-summary or calibrated model class."
+      ],
+      "novelty": {
+        "status": "supporting_result",
+        "summary": "Scope correction and exact witness, not a priority claim.",
+        "comparisons": [
+          "paper_burgarth_2018",
+          "prior_hidden_thermodynamics"
+        ]
+      }
+    },
+    {
+      "id": "hypothesis_hidden_incidence_ceiling",
+      "type": "TheoremCandidate",
+      "title": "Rejected: full hidden incidence suffices",
+      "status": "falsified",
+      "summary": "False when an unobserved covered-covered pair is absent.",
+      "level": 2,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
+        }
+      ]
+    },
+    {
+      "id": "hypothesis_calibrated_ceiling_no_slack",
+      "type": "TheoremCandidate",
+      "title": "Rejected: calibrated criterion needs no exception",
+      "status": "falsified",
+      "summary": "False when the total unobserved rate budget is zero.",
+      "level": 2,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md"
+        }
+      ]
+    },
+    {
+      "id": "risk_finite_frequency_priority",
+      "type": "NoveltyRisk",
+      "title": "Finite-frequency priority comparison remains incomplete",
+      "status": "unresolved",
+      "summary": "Loewner/generalized realization is close prior work; abstract-level access does not decide overlap with this physical two/three-point inverse.",
+      "level": 2,
+      "provenance": [
+        {
+          "path": "outputs/novelty-loop-2026-09-19/LITERATURE.md"
         }
       ]
     }
@@ -7843,6 +8245,408 @@
       "target": "prior_cycle_inference",
       "relation": "documents",
       "explanation": "Individual source attribution within this prior-result comparison. Read the paper-specific observation model, assumptions, version and access limitation; repeated lineage is not independent confirmation."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "proof_coverage_20260919",
+      "relation": "depends_on",
+      "explanation": "The linked full proof gives domains, exceptional cases, continuity and limits."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "check_coverage_independent",
+      "relation": "verified_by",
+      "explanation": "Independent review covers the final proof and exact examples; scope is stated explicitly."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "assume_finite_irreducible",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "assume_bidirected",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "assume_even_single_channel",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "assume_resolved_marks",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "assume_fixed_n",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "assume_unknown_support",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "paper_burgarth_2018",
+      "relation": "novelty_compared_with",
+      "explanation": "Compare exact hypotheses and data: finite measurements, fixed dimension, physical marks, completeness and minimality."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "prior_map_identifiability",
+      "relation": "novelty_compared_with",
+      "explanation": "Compare exact hypotheses and data: finite measurements, fixed dimension, physical marks, completeness and minimality."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "prior_realization_equivalence",
+      "relation": "novelty_compared_with",
+      "explanation": "Compare exact hypotheses and data: finite measurements, fixed dimension, physical marks, completeness and minimality."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "proof_coverage_20260919",
+      "relation": "depends_on",
+      "explanation": "The linked full proof gives domains, exceptional cases, continuity and limits."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "check_coverage_independent",
+      "relation": "verified_by",
+      "explanation": "Independent review covers the final proof and exact examples; scope is stated explicitly."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "assume_finite_irreducible",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "assume_bidirected",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "assume_even_single_channel",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "assume_resolved_marks",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "assume_fixed_n",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "assume_unknown_support",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "paper_burgarth_2018",
+      "relation": "novelty_compared_with",
+      "explanation": "Compare exact hypotheses and data: finite measurements, fixed dimension, physical marks, completeness and minimality."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "prior_hidden_thermodynamics",
+      "relation": "novelty_compared_with",
+      "explanation": "Compare exact hypotheses and data: finite measurements, fixed dimension, physical marks, completeness and minimality."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "prior_realization_equivalence",
+      "relation": "novelty_compared_with",
+      "explanation": "Compare exact hypotheses and data: finite measurements, fixed dimension, physical marks, completeness and minimality."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "proof_coverage_20260919",
+      "relation": "depends_on",
+      "explanation": "The linked full proof gives domains, exceptional cases, continuity and limits."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "check_coverage_independent",
+      "relation": "verified_by",
+      "explanation": "Independent review covers the final proof and exact examples; scope is stated explicitly."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "assume_finite_irreducible",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "assume_bidirected",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "assume_even_single_channel",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "assume_resolved_marks",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "assume_fixed_n",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "assume_unknown_support",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "paper_burgarth_2018",
+      "relation": "novelty_compared_with",
+      "explanation": "Compare exact hypotheses and data: finite measurements, fixed dimension, physical marks, completeness and minimality."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "prior_hidden_thermodynamics",
+      "relation": "novelty_compared_with",
+      "explanation": "Compare exact hypotheses and data: finite measurements, fixed dimension, physical marks, completeness and minimality."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "prior_entropy_upper",
+      "relation": "novelty_compared_with",
+      "explanation": "Compare exact hypotheses and data: finite measurements, fixed dimension, physical marks, completeness and minimality."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "proof_coverage_20260919",
+      "relation": "depends_on",
+      "explanation": "The linked full proof gives domains, exceptional cases, continuity and limits."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "check_coverage_independent",
+      "relation": "verified_by",
+      "explanation": "Independent review covers the final proof and exact examples; scope is stated explicitly."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "assume_finite_irreducible",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "assume_bidirected",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "assume_even_single_channel",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "assume_resolved_marks",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "assume_fixed_n",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "assume_unknown_support",
+      "relation": "assumes",
+      "explanation": "Retains this model/observation condition in the theorem statement."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "paper_burgarth_2018",
+      "relation": "novelty_compared_with",
+      "explanation": "Compare exact hypotheses and data: finite measurements, fixed dimension, physical marks, completeness and minimality."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "prior_resolved_inference",
+      "relation": "novelty_compared_with",
+      "explanation": "Compare exact hypotheses and data: finite measurements, fixed dimension, physical marks, completeness and minimality."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "theorem_coverage_inverse",
+      "relation": "depends_on",
+      "explanation": "The positive branch uses exact physical-generator recovery."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "lemma_hidden_pair",
+      "relation": "depends_on",
+      "explanation": "The unequal-exit branch extends the accepted physical hidden shear; the new proof separately handles equal exits."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "theorem_coverage_inverse",
+      "relation": "depends_on",
+      "explanation": "A finite rational inverse plus positive source rates gives a local entropy ceiling."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "theorem_complete_entropy",
+      "relation": "depends_on",
+      "explanation": "At least two uncovered vertices already permit exact unbounded entropy at every complete source."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "theorem_coverage_ceiling",
+      "relation": "depends_on",
+      "explanation": "Local ceilings at complete networks require at most one uncovered vertex."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "theorem_complete_entropy",
+      "relation": "depends_on",
+      "explanation": "Exact entropy identification has the same coverage condition at complete sources."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "theorem_t2",
+      "relation": "generalizes",
+      "explanation": "The scalar hidden-pole inverse extends from one observed pair to arbitrary covered sets."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "theorem_t6",
+      "relation": "generalizes",
+      "explanation": "For one observed pair the coverage condition reduces to N<=3; the old calibrated statement remains valid."
+    },
+    {
+      "source": "cex_two_laplace_entropy",
+      "target": "check_coverage_independent",
+      "relation": "verified_by",
+      "explanation": "Independent exact computations and conventional scope review support the witness."
+    },
+    {
+      "source": "cex_hidden_incidence_ceiling",
+      "target": "check_coverage_independent",
+      "relation": "verified_by",
+      "explanation": "Independent exact computations and conventional scope review support the witness."
+    },
+    {
+      "source": "cex_zero_slack_ceiling",
+      "target": "check_coverage_independent",
+      "relation": "verified_by",
+      "explanation": "Independent exact computations and conventional scope review support the witness."
+    },
+    {
+      "source": "cex_two_laplace_entropy",
+      "target": "theorem_coverage_inverse",
+      "relation": "supports",
+      "explanation": "Proves worst-case necessity of three positive arguments for entropy for every N>=4."
+    },
+    {
+      "source": "cex_hidden_incidence_ceiling",
+      "target": "hypothesis_hidden_incidence_ceiling",
+      "relation": "falsifies",
+      "explanation": "The explicit admissible construction contradicts this preliminary stronger statement."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "hypothesis_hidden_incidence_ceiling",
+      "relation": "revises",
+      "explanation": "The accepted criterion retains complete support and the calibrated zero-budget exception."
+    },
+    {
+      "source": "cex_zero_slack_ceiling",
+      "target": "hypothesis_calibrated_ceiling_no_slack",
+      "relation": "falsifies",
+      "explanation": "The explicit admissible construction contradicts this preliminary stronger statement."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "hypothesis_calibrated_ceiling_no_slack",
+      "relation": "revises",
+      "explanation": "The accepted criterion retains complete support and the calibrated zero-budget exception."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "risk_finite_frequency_priority",
+      "relation": "requires_review",
+      "explanation": "Detailed original-source comparison can change attribution without changing the proved algebra."
+    },
+    {
+      "source": "publication_claim",
+      "target": "risk_finite_frequency_priority",
+      "relation": "requires_review",
+      "explanation": "Detailed original-source comparison can change attribution without changing the proved algebra."
+    },
+    {
+      "source": "theorem_coverage_inverse",
+      "target": "open_transform_minimum",
+      "relation": "leaves_open",
+      "explanation": "The proved coverage/finite-data statement does not settle this remaining scope."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "open_observation_incidence",
+      "relation": "leaves_open",
+      "explanation": "The proved coverage/finite-data statement does not settle this remaining scope."
+    },
+    {
+      "source": "theorem_complete_entropy",
+      "target": "open_exact_classification",
+      "relation": "leaves_open",
+      "explanation": "The proved coverage/finite-data statement does not settle this remaining scope."
+    },
+    {
+      "source": "theorem_coverage_ceiling",
+      "target": "publication_claim",
+      "relation": "supports",
+      "explanation": "A general coverage theorem strengthens the candidate contribution beyond one-pair state counts."
+    },
+    {
+      "source": "corollary_sensor_coverage",
+      "target": "next_proof_core",
+      "relation": "next_action",
+      "explanation": "Among sufficient designs, conditioning and argument selection become the next operational question."
+    },
+    {
+      "source": "paper_burgarth_2018",
+      "target": "risk_novelty",
+      "relation": "limits",
+      "explanation": "Bare all-time one-hidden recovery cannot be treated as the principal novel claim."
     }
   ],
   "views": [
@@ -7851,7 +8655,7 @@
       "code": "A",
       "nav_title": "Research overview",
       "title": "How much dissipation can remain hidden?",
-      "description": "One resolved transition pair leads to two inverse questions: what exact data identify, and whether any nonzero tolerance permits a finite upper bound.",
+      "description": "Resolved observation coverage controls exact complete-source entropy fibers and local upper ceilings; the five-state sparse fiber remains a separate result.",
       "columns": [
         [
           "question_main",
@@ -7860,24 +8664,24 @@
         ],
         [
           "theorem_t3",
-          "theorem_t4a",
-          "theorem_t2a",
-          "theorem_t6"
+          "theorem_coverage_inverse",
+          "theorem_complete_entropy",
+          "theorem_coverage_ceiling"
         ],
         [
-          "story_interpretation",
+          "corollary_sensor_coverage",
           "publication_claim"
         ],
         [
           "risk_novelty",
-          "risk_global_proof",
+          "risk_finite_frequency_priority",
           "next_proof_core"
         ]
       ],
       "kicker": "LEVEL 0 · THE WHOLE PROJECT",
       "reading": {
         "title": "The answer in one minute",
-        "text": "The balanced five-state family has a rigorously exhausted two-point entropy fiber. Exact uniqueness does not guarantee stable entropy: a three-state tree is already a fixed-trace counterexample. With one resolved pair and exactly N states, a local upper ceiling exists only for N=2 or a complete three-state triangle. The candidate novelty is this precise physical theorem combination; the saved next step is a self-contained proof core."
+        "text": "At complete networks, all but at most one vertex must be covered: then two positive transform matrices recover Q. Two uncovered vertices permit an exact entropy half-line with fixed trace and observed rates. Sparse sources have no local ceiling when support can open, except for a calibrated zero-budget singleton. Novelty is separated from the proved mathematics."
       },
       "edge_relations": [
         "motivates",
@@ -8067,30 +8871,30 @@
       "description": "Closest known mechanisms surround the physical theorem candidates. Each paper node records its observation model, quantity, assumptions, exact difference and access status.",
       "columns": [
         [
-          "prior_finite_fibers",
-          "prior_ph_polytopes",
-          "prior_realization_equivalence"
+          "paper_burgarth_2018",
+          "prior_realization_equivalence",
+          "prior_hidden_thermodynamics"
         ],
         [
           "theorem_t3",
-          "theorem_t6",
-          "theorem_t4a"
+          "theorem_complete_entropy",
+          "theorem_coverage_ceiling"
         ],
         [
-          "prior_hidden_thermodynamics",
+          "prior_resolved_inference",
           "prior_kl_singularity",
           "prior_confidence_impossibility"
         ],
         [
           "publication_claim",
-          "risk_novelty",
+          "risk_finite_frequency_priority",
           "prior_larget_gap"
         ]
       ],
       "kicker": "LEVEL 1 · SCIENTIFIC STRUCTURE",
       "reading": {
         "title": "What is potentially new",
-        "text": "Finite positive-realization fibers, KL singularity, canonical reconstruction and statistical impossibility have antecedents. The bounded novelty case is the entire two-point physical entropy fiber with a sharp transition, plus the fixed-count local-ceiling criterion under the specified resolved observation. A missing matching phrase is not novelty evidence."
+        "text": "Credit zero forcing, normalized-similarity equivalence, hidden thermodynamic ambiguity and entropy singularity. The proposed advance is the precise coverage classification, finite bounded-measurement inverse and all-source complete-network entropy divergence. The bounded comparison does not certify priority."
       }
     },
     {
@@ -8152,12 +8956,12 @@
       "code": "J",
       "nav_title": "Open frontier",
       "title": "What is settled—and what is still open",
-      "description": "The general fixed-N local-ceiling question is settled in its declared class. Exact classifications off the balanced slice and altered observation experiments remain open.",
+      "description": "Coverage and complete-source exact dichotomies are now proved. Sparse exact images, observation changes, sparse two-point classification and conditioning remain open.",
       "columns": [
         [
-          "theorem_t3",
-          "theorem_t6",
-          "theorem_t2"
+          "theorem_complete_entropy",
+          "theorem_coverage_ceiling",
+          "theorem_coverage_inverse"
         ],
         [
           "open_exact_classification",
@@ -8174,7 +8978,7 @@
       "kicker": "LEVEL 1 · SCIENTIFIC STRUCTURE",
       "reading": {
         "title": "The single highest-value next action",
-        "text": "Prepare the self-contained theorem-and-proof core for the balanced entropy fiber and fixed-N stability criterion. A specifically matching primary theorem or a concrete proof objection would reopen the audit. Additional generic searches, unrelated examples and a full five-/six-state classification are not prerequisites for this scoped paper."
+        "text": "Prioritize finite-frequency source comparison and conditioning-aware observation design. The complete proof addendum exists; the prior manuscript requires editorial integration. A proposed finite-union entropy-image theorem needs its own proof and challenge."
       }
     },
     {
@@ -8193,9 +8997,9 @@
           "theorem_t3"
         ],
         [
-          "theorem_t4a",
-          "theorem_t2a",
-          "theorem_t6"
+          "theorem_coverage_inverse",
+          "theorem_complete_entropy",
+          "theorem_coverage_ceiling"
         ],
         [
           "story_interpretation",
@@ -8205,7 +9009,7 @@
       "kicker": "LEVEL 0 · CURRENT SCIENTIFIC STORY",
       "reading": {
         "title": "Two mechanisms, one careful interpretation",
-        "text": "Sparse support can make entropy singular even when the generator inverse stays locally Lipschitz. Hidden equivalence can destroy observational upper stability without entrywise convergence to a complete source. The positive three-state triangle is the local exception; exact and approximate inference are distinct questions."
+        "text": "At complete sources, coverage separates exact recovery from an exact unbounded entropy fiber. Sparse openings create a different obstruction: stable absolute rates can coexist with unbounded entropy under tiny errors. Fixed dimension, positive source support and calibration exceptions remain explicit."
       },
       "edge_relations": [
         "motivates",
@@ -8228,19 +9032,19 @@
           "publication_claim"
         ],
         [
-          "assume_cap_five",
-          "assume_resolved_pair",
+          "assume_fixed_n",
+          "assume_resolved_marks",
           "assume_unknown_support"
         ],
         [
           "risk_global_proof",
           "risk_novelty",
-          "cex_arbitrary_tight_cap"
+          "risk_finite_frequency_priority"
         ],
         [
-          "proof_endpoint",
-          "prior_finite_fibers",
-          "prior_larget_gap"
+          "paper_burgarth_2018",
+          "cex_zero_slack_ceiling",
+          "check_coverage_independent"
         ],
         [
           "next_proof_core"
@@ -8249,85 +9053,56 @@
       "kicker": "LEVEL 1 · SCIENTIFIC STRUCTURE",
       "reading": {
         "title": "Concrete reopening conditions",
-        "text": "A third admissible endpoint generator not equivalent by hidden labels, failure of a global equality/support case, a counterexample to the fixed-N criterion under its actual assumptions, or a matching prior physical theorem would materially change the paper. None is currently recorded. Extra tight caps and blurred incidence already delimit stronger claims."
+        "text": "Burgarth already covers related all-time recovery. The finite-frequency comparison is incomplete. The new complete-source theorem requires its exact observation, dimension and support assumptions, and the fixed-trace sparse exception must remain visible. No matching theorem or mathematical contradiction was found in the bounded audit; this is not a priority certificate."
       }
     }
   ],
   "report_coverage": [
     {
-      "locator": "## What has been proved",
+      "locator": "## What the new theorem establishes",
       "nodes": [
-        "question_main",
-        "concept_generator",
-        "concept_observation",
-        "concept_entropy",
-        "concept_identified_set",
-        "concept_stability"
+        "theorem_complete_entropy",
+        "theorem_coverage_ceiling",
+        "corollary_sensor_coverage",
+        "cex_zero_slack_ceiling"
       ]
     },
     {
-      "locator": "### The exact two-point result",
+      "locator": "## Finite measurements and a sharp counterexample",
       "nodes": [
-        "theorem_t3",
-        "legacy_four_state",
-        "legacy_splitting",
-        "lemma_cone_envelope",
-        "lemma_disconnected_rigidity"
+        "theorem_coverage_inverse",
+        "cex_two_laplace_entropy",
+        "theorem_t2"
       ]
     },
     {
-      "locator": "### Three states: stable inverse, possibly unstable entropy",
+      "locator": "## Mechanism, attempted falsification and independent checks",
       "nodes": [
-        "theorem_t2",
-        "theorem_t2a",
-        "theorem_t4a"
+        "proof_coverage_20260919",
+        "check_coverage_independent",
+        "lemma_hidden_pair",
+        "cex_hidden_incidence_ceiling",
+        "cex_zero_slack_ceiling"
       ]
     },
     {
-      "locator": "### The broader exact stability criterion",
-      "nodes": [
-        "theorem_t4",
-        "theorem_t5",
-        "theorem_t6",
-        "story_interpretation"
-      ]
-    },
-    {
-      "locator": "## Boundaries and targeted counterexamples",
-      "nodes": [
-        "cex_minimality_cure",
-        "cex_local_isolation",
-        "cex_first_order_threshold",
-        "cex_finite_hankel",
-        "cex_exact_implies_stable",
-        "cex_compact_limit_support",
-        "cex_ratio_without_activity",
-        "cex_arbitrary_tight_cap",
-        "theorem_t7",
-        "theorem_t8",
-        "weak_source_topology"
-      ]
-    },
-    {
-      "locator": "## Novelty and significance assessment",
+      "locator": "## Novelty assessment and improvement plan",
       "nodes": [
         "publication_claim",
-        "risk_novelty",
-        "prior_finite_fibers",
-        "prior_kl_singularity",
-        "prior_hmm_stability",
-        "prior_larget_gap"
+        "paper_burgarth_2018",
+        "prior_hidden_thermodynamics",
+        "risk_finite_frequency_priority",
+        "next_proof_core",
+        "open_transform_minimum"
       ]
     },
     {
-      "locator": "## Evidence status and resumable conclusion",
+      "locator": "## Preserved earlier results and delivery status",
       "nodes": [
-        "check_endpoint_independent",
-        "check_publication_independent",
-        "formal_scaffold",
-        "open_exact_classification",
-        "open_window_continuity",
-        "next_proof_core"
+        "theorem_t3",
+        "theorem_t6",
+        "legacy_splitting",
+        "open_exact_classification"
       ]
     }
   ],
@@ -8371,7 +9146,7 @@
     "analysis/theta-parameter-strata-audit.md": "1cebd471099d89cb6b0b2543da3fd09f5ce0c9712903148e02b6f258d0291197",
     "analysis/three-state-fixed-trace-audit.md": "9141e99b94e38587cde93034fa64a16201b4eaa6a9f0cf9a172706df10046ae4",
     "analysis/unknown-topology-audit.md": "434f2e176e9aa88b74b9d8029a73d3ee20aa9b6e461e9f9180e633216fc478c4",
-    "evidence/RECORDS.md": "ba5cb02cf6fe3a669fab76194dda58123b36d2a26f400492081bd9efe8ffbb41",
+    "evidence/RECORDS.md": "0d0ad73350365562238ae0967dcefaf622f52714f572d9f3b2107912c371e9e5",
     "evidence/finite-fiber-prior-art.md": "3ac5ca7e1b0a895a6d236f8c72677fd5cda5d82d6cc1b03d00e84ee55630690e",
     "evidence/five-state-frontier-followup.md": "f0ab2a087889cb08e64065a2474abeb2e2ad5ed75f612b982d62c114514fd483",
     "evidence/invariant-fiber-prior-art.md": "50710892daa2974d261f57fc67dc4fcf75b8a5e7f58018bd0fbb1d2c8b817529",
@@ -8382,20 +9157,28 @@
     "evidence/two-point-entropy-positioning.md": "8d486a05cdd51b79efa9834779e5215478214f9b47670673872e81afaaf70341",
     "formal/README.md": "50eb81791376927813f19a3a9251f81acf659bc302942073c8b558974ba36efc",
     "outputs/PAPER-STRUCTURE.md": "14cc0dcc8fc09a1fa145235dd429ea8b4ea692d49fc17982816f5c33563649f5",
-    "outputs/PUBLICATION-READINESS.md": "2b90dce8b760100cdb86e165e2ba3a530acbc05efd6310daf9c8263a6a63f141",
-    "outputs/REPORT.md": "4d6f535402e58b09fb2f6d9ac5e32888cf274a7629426c8436b5843802e1c67c",
+    "outputs/PUBLICATION-READINESS.md": "bc35d4ee4206b269cd09949a90c106bb2b5f6e4f773b0e8181b33f10f1727844",
+    "outputs/REPORT.md": "57f9942ad5e951d54d2f28a2b38168b5a670c31e22bd72344944ffba090aecb8",
     "outputs/balanced-fold-checks.json": "a854889cd532ea094c8f8eeac88cd736223e5725d0611ec43649380cd90e9be8",
     "outputs/balanced-fold-independent-replay.json": "a975f308cb0a294eb7e06846af2ee5c7232c6d81a996eaafa3c1e08d7ff0f0dd",
     "outputs/finite-precision-checks.json": "804e1968c8dd9ae629332a88724652ef945705eb10a40f363f9ee82d4e9a8c15",
+    "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md": "2717696b2f5ab9c3d6b62a6e05277289855140ba16dcb1d54038701092a94089",
+    "outputs/novelty-loop-2026-09-19/LITERATURE.md": "ec8565d4db218b16ab7547dbf1cdfc8a70a27feabf4f66f35456543cc3af0548",
+    "outputs/novelty-loop-2026-09-19/ONE-HIDDEN-INDEPENDENT.md": "2d6bfdbf968e1dd3016228190cc7411f0dd8df760462899139f2a17e07f9338d",
+    "outputs/novelty-loop-2026-09-19/PLAN.md": "0a50164f76630979806dd4c947d35c14ba0afa351da35c41394b136663c0edca",
+    "outputs/novelty-loop-2026-09-19/REFEREE.md": "d590acba81cda7f51e957e95df32b5c44f40753dd0b81e952ce8cef29e941999",
+    "outputs/novelty-loop-2026-09-19/coverage-crosscheck.json": "5bdbf67c1ec9062285381e778b93792cc37304d89c2a370f0b5621a732eb9718",
+    "outputs/novelty-loop-2026-09-19/one-hidden-independent.json": "8d2b2eeade4988a0a8a2b6282c72ec94f7e36af5791b991f69dbb0506d41b0ad",
+    "outputs/novelty-loop-2026-09-19/referee_checks.json": "5b67a6e9bca7b33223322f4d583a1bcd9fa29e96ed5eb5b2a62daf007a5ad1e5",
     "outputs/publication-audit-checks.json": "8813ff3a612386e516513ed870b5b689447f1447f6c68eef7c18932579843967",
     "outputs/publication-independent-replays.json": "d5f7bcde232cb906b0a73f0845db17e0d5aa0797766f6c7c14dd4cfd71750a48",
     "outputs/theta-residue-checks.json": "f78a4fd3d319e7aaf221cfb2cb66e8967ec12da4f2f3e164a9b56b0316cb966f",
     "outputs/three-state-precision-checks.json": "0bcb55b7a5f1111c1c293349c6e343e5652e88a2984113cad524d8bb369076ac"
   },
   "operational_context": {
-    "note": "Concurrent manuscript preparation was observed in STATE.md during mapping. This atlas describes the completed scientific audit; operational task progress is not treated as new scientific evidence.",
+    "note": "The completed coverage research cycle produces a separate proof addendum. The manuscript remains the preceding version; current state and report distinguish them.",
     "source": "STATE.md",
-    "excluded_from_scientific_hashes": "Volatile operational state; the next scientific action is anchored to D023 and PAPER-STRUCTURE.md."
+    "excluded_from_scientific_hashes": "Volatile STATE.md remains excluded; E081-E083/D035 anchor this cycle."
   },
-  "source_snapshot_reviewed_utc": "2026-09-11T02:37:26.622371+00:00"
+  "source_snapshot_reviewed_utc": "2026-09-19T06:16:55.609096+00:00"
 }

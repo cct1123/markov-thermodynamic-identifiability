@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "timestamp_utc": "2026-09-19T05:17:31.079967+00:00",
+  "baseline_commit": "c7ff789b2e9db090935b5bf16eb9a8d775f833c2",
+  "scientific_replays": [
+    {
+      "script": "analysis/novelty_loop/one_hidden_independent.py",
+      "sha256": "3c1a8049b158c1d43267748a0dd16438a8799be8b1f8281defab03e6bbe78b2f",
+      "output": "outputs/novelty-loop-2026-09-19/one-hidden-independent.json",
+      "output_sha256": "b18e06328cd5d747b54f4213040d19190d783c7bc2fa90e189fe001402667e2c"
+    },
+    {
+      "script": "outputs/novelty-loop-2026-09-19/referee_checks.py",
+      "sha256": "db17c280294256a60e56b235dee8c23265fb9d35538b012fa9a5c4607c65810a",
+      "output": "outputs/novelty-loop-2026-09-19/referee_checks.json",
+      "output_sha256": "650e384e3e8360aa709c3b98bbb825327905ccd966689a56800ee4b8da8db237"
+    },
+    {
+      "script": "analysis/novelty_loop/coverage_crosscheck.py",
+      "sha256": "4b563015ab1b05241739cbc6e0b1e3a505ac67bc1fc3f76653372a2fa93c95f6",
+      "output": "outputs/novelty-loop-2026-09-19/coverage-crosscheck.json",
+      "output_sha256": "1b8fcf7549fdfed2518cb0ad9b0d6e09312b8a6e5b11ea2f9bc83e6842e1b383"
+    }
+  ],
+  "execution_receipt": "outputs/novelty-loop-2026-09-19/execution-receipt.json",
+  "source_link_checks": 96,
+  "link_errors": [],
+  "link_check_method": "Resolve local Markdown links and anchors after stripping fenced and inline code. An initial naive match of bracketed inline algebra was rejected as a parser false positive.",
+  "prior_synthesis_original_link_base": "outputs/REPORT.md",
+  "final_proof_sha256": "2717696b2f5ab9c3d6b62a6e05277289855140ba16dcb1d54038701092a94089",
+  "referee_audited_proof_sha256": "5cbbea286800a33a8917b671b897850bfadc14ce76a5ddc2f6c0392cea58d5a6",
+  "post_referee_change": "Only the referee-recommended clarification of finite-measurement neighborhood radius; inverse and theorem mathematics unchanged. Verified by reversing this exact phrase and matching the audited hash.",
+  "preserved_baseline_artifacts": [
+    {
+      "path": "PROJECT.md",
+      "sha256": "5a230d0844b9149c2716114c1e40fb4cde92dc6b0c67105d59916fcea82b3964",
+      "matches_baseline_bytes": true
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "b3b3b769274a8ccb78641d36e6f91508191cc902162b48f870e73f9fdec74c5d",
+      "matches_baseline_bytes": true
+    },
+    {
+      "path": "manuscript/main.pdf",
+      "sha256": "7c522568918e804d854fe62050579b2999d7d3880d4657b70a584bde23250c1c",
+      "matches_baseline_bytes": true
+    },
+    {
+      "path": "outputs/manuscript-package.zip",
+      "sha256": "c135b34dfd8a15ad0e844a00953a899ebe11e8203f5a00257a753cf052c831ab",
+      "matches_baseline_bytes": true
+    }
+  ],
+  "tracked_edit_scope_checked": [
+    "STATE.md",
+    "evidence/RECORDS.md",
+    "knowledge/README.md",
+    "knowledge/STATE.md",
+    "knowledge/browser-checks.json",
+    "knowledge/check_browser.mjs",
+    "knowledge/graph.json",
+    "knowledge/interactive/data.js",
+    "knowledge/validation-checks.json",
+    "knowledge/validation.json",
+    "knowledge/views/atlas-dependencies.png",
+    "knowledge/views/atlas-literature.png",
+    "knowledge/views/atlas-mobile.png",
+    "knowledge/views/atlas-overview.png",
+    "knowledge/views/atlas-provenance.png",
+    "knowledge/views/literature_novelty.svg",
+    "knowledge/views/open_frontier.svg",
+    "knowledge/views/parameter_geometry.svg",
+    "knowledge/views/publication_risk.svg",
+    "knowledge/views/research_evolution.svg",
+    "knowledge/views/research_overview.svg",
+    "knowledge/views/scientific_story.svg",
+    "knowledge/views/theorem_dependencies.svg",
+    "outputs/PUBLICATION-READINESS.md",
+    "outputs/REPORT.md"
+  ],
+  "atlas": {
+    "nodes": 154,
+    "relationships": 486,
+    "reviewed_source_fingerprints": 67,
+    "errors": [],
+    "warnings": [],
+    "adversarial_checks": 10,
+    "browser_checks": 30,
+    "visually_inspected_screenshot_sha256": {
+      "atlas-overview.png": "4fd40b149138ff95c60aa77a09bb22c82c52a9368c13d714dcab26e0907ca555",
+      "atlas-skeptical.png": "220974010496b99c2cd678cf2eacb0d1ce77ebaca86a8469bada216bbfcda2b6"
+    }
+  },
+  "artifact_sha256": {
+    "outputs/novelty-loop-2026-09-19/coverage-crosscheck.json": "1b8fcf7549fdfed2518cb0ad9b0d6e09312b8a6e5b11ea2f9bc83e6842e1b383",
+    "outputs/novelty-loop-2026-09-19/COVERAGE-THEOREM.md": "2717696b2f5ab9c3d6b62a6e05277289855140ba16dcb1d54038701092a94089",
+    "outputs/novelty-loop-2026-09-19/execution-receipt.json": "60a01d0bbf7741d4d23eb24f25ec15dcc148c7c99792edab8d482847b2fc2454",
+    "outputs/novelty-loop-2026-09-19/LITERATURE.md": "ec8565d4db218b16ab7547dbf1cdfc8a70a27feabf4f66f35456543cc3af0548",
+    "outputs/novelty-loop-2026-09-19/one-hidden-independent.json": "b18e06328cd5d747b54f4213040d19190d783c7bc2fa90e189fe001402667e2c",
+    "outputs/novelty-loop-2026-09-19/ONE-HIDDEN-INDEPENDENT.md": "2d6bfdbf968e1dd3016228190cc7411f0dd8df760462899139f2a17e07f9338d",
+    "outputs/novelty-loop-2026-09-19/PLAN.md": "01f6648e89ab85678cd58c9ad1d21a50656c18e0731698be632c19c3d49cf53e",
+    "outputs/novelty-loop-2026-09-19/PRIOR-SYNTHESIS.md": "e4f1d7343bb79359d2f946e91eda194385dc4438fc93244b5e074bd373836b9f",
+    "outputs/novelty-loop-2026-09-19/REFEREE.md": "744dca6ea96eb1c1d3c1102bb4574134c7674472983e9010d3d1ca0036cd38db",
+    "outputs/novelty-loop-2026-09-19/referee_checks.json": "650e384e3e8360aa709c3b98bbb825327905ccd966689a56800ee4b8da8db237",
+    "outputs/novelty-loop-2026-09-19/referee_checks.py": "db17c280294256a60e56b235dee8c23265fb9d35538b012fa9a5c4607c65810a",
+    "analysis/novelty_loop/README.md": "306d0426cba2a70795aa1d6da573ade0a8ceafb1fdddb6f814421acde129af2e",
+    "analysis/novelty_loop/one_hidden_independent.py": "3c1a8049b158c1d43267748a0dd16438a8799be8b1f8281defab03e6bbe78b2f",
+    "analysis/novelty_loop/coverage_crosscheck.py": "4b563015ab1b05241739cbc6e0b1e3a505ac67bc1fc3f76653372a2fa93c95f6",
+    "outputs/REPORT.md": "12eba95bd08a590d3589d7cd3685e7720574d61e05e7e952be3700ccc95a3c24",
+    "outputs/PUBLICATION-READINESS.md": "bc35d4ee4206b269cd09949a90c106bb2b5f6e4f773b0e8181b33f10f1727844",
+    "STATE.md": "e94a87479ab69e6f6a5f45da08309d1e20c3ed773e9c847bc051a4f35c5a663e",
+    "knowledge/STATE.md": "c227246ade2f8492eab6699a449639adfa61752642115b1e0703223b3a39d8ee",
+    "knowledge/graph.json": "4e18aee49d57b3b48ae95bcf0ef3ced4216d6191753e7ca5646376339e9f5064",
+    "knowledge/validation.json": "2d965f59d83e48d65c06941ee27957120cf33cfdc3ef152217bcc041b35c62ab",
+    "knowledge/validation-checks.json": "8d4086866c0e5bc425dd1d23d3498c339438a6a752ede64cdbcad3f34b895e91",
+    "knowledge/browser-checks.json": "9bebc64c8bb040149cd3c0e5ef44f97c5ca48c9a170856aacec8f3ef3fe13225"
+  },
+  "limits": [
+    "Conventional proof with independent review and exact support, not formal verification.",
+    "Finite calculations and UI tests do not prove universal mathematics or certify novelty.",
+    "Finite-frequency primary comparison remains incomplete.",
+    "Existing manuscript/PDF/archive retained; new proof addendum not yet editorially integrated.",
+    "Historical 41-test/15-replay and 900-trajectory work was not rerun in this cycle.",
+    "No new commit, push, submission or recurring automation in this research cycle."
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "status": "exact checks passed; examples supplement the general proof",
+  "python": "3.9.12",
+  "sympy": "1.14.0",
+  "script_sha256": "021216ffb36df401c4d4d77c60cf52a286b5ee6178daf6f3cc86b252e48a23ba",
+  "seed": null,
+  "arithmetic": "exact rational and symbolic; no tolerance",
+  "reconstruction": [
+    {
+      "dimension": 4,
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "branch": 0,
+      "hidden_escape": "14",
+      "recovered_exactly": true
+    },
+    {
+      "dimension": 5,
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "branch": 0,
+      "hidden_escape": "14",
+      "recovered_exactly": true
+    },
+    {
+      "dimension": 6,
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "branch": 0,
+      "hidden_escape": "1",
+      "recovered_exactly": true
+    }
+  ],
+  "equal_exit_pair": {
+    "parameter_domain": "0 < m < 9",
+    "trace": "-52",
+    "all_time_transfer_derivative_zero": true,
+    "lumping_identity": true,
+    "limiting_reverse_internal_flux": "45/44",
+    "limiting_stationary_law": [
+      "5/12",
+      "1/4",
+      "29/132",
+      "5/44"
+    ]
+  },
+  "unequal_exit_pair_internal_boundary": {
+    "parameter_domain": "0 <= epsilon < sqrt(2402)-49",
+    "ratio_boundary": "1/2",
+    "first_internal_boundary": "-49 + sqrt(2402)",
+    "all_time_intertwining_identity": true,
+    "limiting_reverse_internal_flux": "-204341/3333 + 8401*sqrt(2402)/6666",
+    "trace": "-121"
+  },
+  "final_draft_entropy_witness": [
+    {
+      "dimension": 4,
+      "observed_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "full_matrix_shape": [
+        6,
+        6
+      ],
+      "equal_at_1_and_2": true,
+      "unequal_at_3": true,
+      "stationary_laws": [
+        [
+          "5/17",
+          "3/17",
+          "4/17",
+          "5/17"
+        ],
+        [
+          "25/97",
+          "18/97",
+          "24/97",
+          "30/97"
+        ]
+      ],
+      "entropy_log2_coefficients": [
+        "1/17",
+        "6/97"
+      ]
+    },
+    {
+      "dimension": 5,
+      "observed_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "full_matrix_shape": [
+        8,
+        8
+      ],
+      "equal_at_1_and_2": true,
+      "unequal_at_3": true,
+      "stationary_laws": [
+        [
+          "1/4",
+          "3/20",
+          "1/5",
+          "1/4",
+          "3/20"
+        ],
+        [
+          "5/23",
+          "18/115",
+          "24/115",
+          "6/23",
+          "18/115"
+        ]
+      ],
+      "entropy_log2_coefficients": [
+        "1/20",
+        "6/115"
+      ]
+    },
+    {
+      "dimension": 6,
+      "observed_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "full_matrix_shape": [
+        10,
+        10
+      ],
+      "equal_at_1_and_2": true,
+      "unequal_at_3": true,
+      "stationary_laws": [
+        [
+          "5/23",
+          "3/23",
+          "4/23",
+          "5/23",
+          "3/23",
+          "3/23"
+        ],
+        [
+          "25/133",
+          "18/133",
+          "24/133",
+          "30/133",
+          "18/133",
+          "18/133"
+        ]
+      ],
+      "entropy_log2_coefficients": [
+        "1/23",
+        "6/133"
+      ]
+    }
+  ],
+  "any_two_arguments_witness": {
+    "symbolic_interpolation_identity": true,
+    "symbolic_stationary_weights": true,
+    "strict_normalizer_derivative": "-10*b0*s1*s2/((s1+v0)*(s2+v0)*w^2)",
+    "domain": "s1,s2,a0,b0,v0>0; s1!=s2; w>0 near v0 with a(w)>0"
+  }
+}

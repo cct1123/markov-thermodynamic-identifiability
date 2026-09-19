@@ -16,6 +16,7 @@ knowledge/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-e
 manuscript/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 outputs/publication-*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 outputs/manuscript-*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/novelty-loop-2026-09-19/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 # Baseline copies are immutable evidence, including mixed line endings.
 # Their hashes must survive Git add/checkout on every platform.
 outputs/revision/baseline/** -text -whitespace

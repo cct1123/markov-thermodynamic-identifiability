@@ -1,7 +1,7 @@
 {
   "command": ".venv/Scripts/python.exe -B knowledge/check_validation.py",
   "validator_sha256": "18d9059f6fb922e386a5231641a3835c707f1751f3baad5161429688e0cdb92f",
-  "graph_sha256": "ceffecc5a1ea7572314d20a01e7cf1129cb7f1378c72bcd4516cbbe607238104",
+  "graph_sha256": "278d06072d1298d7e93a12e7722a753912a9197f71d0dfe69649ae97a043893e",
   "tests": [
     {
       "name": "Unsupported theorem",

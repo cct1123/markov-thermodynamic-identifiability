@@ -35,7 +35,7 @@ try{
  check('offline data and first view',await evaluate('window.RESEARCH_DATA.nodes.length>=100 && document.querySelectorAll(".map-node").length>=10'));
  await capture('atlas-overview');
  const views=await evaluate('window.RESEARCH_DATA.views.map(v=>v.id)');
- for(const id of views){await evaluate(`document.querySelector('[data-view="${id}"]').click()`);const result=await evaluate('({title:document.getElementById("view-title").textContent,count:document.querySelectorAll(".map-node").length,geometry:!document.getElementById("geometry").hidden})');check('view '+id,Boolean(result.title)&&(result.count>0||result.geometry),result);}
+ for(const id of views){await evaluate(`document.querySelector('[data-view="${id}"]').click()`);const result=await evaluate('({title:document.getElementById("view-title").textContent,count:document.querySelectorAll(".map-node").length,geometry:!document.getElementById("geometry").hidden})');check('view '+id,Boolean(result.title)&&(result.count>0||result.geometry),result);if(id==='publication_risk')await capture('atlas-skeptical');}
  await evaluate('document.querySelector("[data-view=research_overview]").click();document.querySelector("[data-node-id=theorem_t3]").dispatchEvent(new MouseEvent("click",{bubbles:true}))');
  check('exact theorem detail',await evaluate('!document.getElementById("detail").hidden && document.getElementById("detail-body").textContent.includes("352")'));
  await evaluate('document.querySelector("[data-tab=evidence]").click()');
@@ -67,7 +67,7 @@ try{
  await pause(100);
  check('mobile has readable list alternative',await evaluate('!document.getElementById("node-list").hidden && document.querySelectorAll(".entity-row").length>=10'));
  await evaluate('document.getElementById("status-filter").value="analytically_proved";document.getElementById("status-filter").dispatchEvent(new Event("change"))');
- check('mobile list applies the evidence-status filter',await evaluate('document.querySelectorAll(".entity-row").length===4 && Array.from(document.querySelectorAll(".entity-status")).every(e=>e.textContent==="PROVED")'));
+ check('mobile list applies the evidence-status filter',await evaluate('document.querySelectorAll(".entity-row").length===window.RESEARCH_DATA.views.find(v=>v.id==="research_overview").columns.flat().filter(id=>window.RESEARCH_DATA.nodes.find(n=>n.id===id).status==="analytically_proved").length && document.querySelectorAll(".entity-row").length>0 && Array.from(document.querySelectorAll(".entity-status")).every(e=>e.textContent==="PROVED")'));
  await evaluate('document.getElementById("status-filter").value="";document.getElementById("status-filter").dispatchEvent(new Event("change"))');
  await capture('atlas-mobile');
  await evaluate('document.getElementById("toggle-representation").click()');
@@ -78,7 +78,7 @@ try{
  check('no uncaught JavaScript exceptions',exceptions.length===0,exceptions);
  const sourceHashes={};for(const file of ['graph.json','interactive/index.html','interactive/app.js','interactive/style.css','interactive/data.js','check_browser.mjs'])sourceHashes[file]=createHash('sha256').update(await readFile(path.join(here,file))).digest('hex');
  await writeFile(path.join(here,'browser-checks.json'),JSON.stringify({command:'node knowledge/check_browser.mjs',browser:executable,browserVersion,node:process.version,source_hashes:sourceHashes,transport:'Local file URL; isolated headless profile; loopback CDP',results,exceptions,passed:true},null,2)+'\n');
- console.log(JSON.stringify({checks:results.length,passed:true,screenshots:['atlas-overview','atlas-provenance','atlas-literature','atlas-geometry','atlas-dependencies','atlas-mobile']},null,2));
+ console.log(JSON.stringify({checks:results.length,passed:true,screenshots:['atlas-overview','atlas-skeptical','atlas-provenance','atlas-literature','atlas-geometry','atlas-dependencies','atlas-mobile']},null,2));
 }finally{
  try{await call('Browser.close');}catch{}
  ws.close();child.kill();

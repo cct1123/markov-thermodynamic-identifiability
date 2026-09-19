@@ -9,18 +9,8 @@
 <text x="270.0" y="156.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">motivates</text>
 <path d="M516,290.0 C678.0,290.0 678.0,160.0 840,160.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: The exact entropy image can have exactly two finite values.</title></path>
 <text x="678.0" y="221.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
-<path d="M788,355.0 C818,355.0 810,160.0 840,160.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: The local observed-law envelope can nevertheless be unbounded.</title></path>
-<text x="814.0" y="253.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
-<path d="M678.0,274 L678.0,306" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: This recorded proof, calculation or provenance check supports only its explicitly stated scope.</title></path>
-<text x="682.0" y="286.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
 <path d="M406.0,209 L406.0,241" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>motivates: Classify the complete entropy image, including bounded finite ambiguity.</title></path>
 <text x="410.0" y="221.0" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">motivates</text>
-<path d="M788,95.0 C818,95.0 810,160.0 840,160.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>supports: Even an exactly unique and stably recovered generator need not give stable entropy.</title></path>
-<text x="814.0" y="123.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">supports</text>
-<path d="M788,225.0 C818,225.0 810,160.0 840,160.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>limits: Positive three-state triangles provide a local stable exception.</title></path>
-<text x="814.0" y="188.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">limits</text>
-<path d="M788,355.0 C818,355.0 810,160.0 840,160.0" fill="none" stroke="#a0aaa5" stroke-width="1.2" marker-end="url(#arrow)"><title>generalizes: The fixed-count criterion separates positive triangles from all N≥4 sources.</title></path>
-<text x="814.0" y="253.5" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8" fill="#51635b" style="paint-order:stroke;stroke:#fafaf6;stroke-width:4px">generalizes</text>
 <g><title>Determine the full range of microscopic steady-state entropy production compatible with exact transition-to-transition observations.</title><rect x="24" y="111" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="24" y="111" width="4" height="98" rx="2" fill="#477296"/>
 <text x="37" y="129" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#477296">DEFINITION</text>
 <text x="37" y="153" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">What can one visible edge</text>
@@ -41,32 +31,31 @@
 <text x="309" y="283" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Five-state boundary:</text>
 <text x="309" y="301" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">exactly two entropy values</text>
 </g>
-<g><title>A uniquely identified minimal-three-state tree is approached by same-trace, rate-bounded triangles with divergent entropy.</title><rect x="568" y="46" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="46" width="4" height="98" rx="2" fill="#157763"/>
+<g><title>At most one uncovered vertex allows a locally rational inverse with no rate priors.</title><rect x="568" y="46" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="46" width="4" height="98" rx="2" fill="#157763"/>
 <text x="581" y="64" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
-<text x="581" y="88" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Identified three-state</text>
-<text x="581" y="106" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">rates; divergent entropy</text>
-<text x="581" y="124" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">nearby</text>
+<text x="581" y="88" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Coverage inverse: two or</text>
+<text x="581" y="106" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">three positive transforms</text>
 </g>
-<g><title>A strictly positive three-state triangle has locally Lipschitz entropy in row TV.</title><rect x="568" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="176" width="4" height="98" rx="2" fill="#157763"/>
+<g><title>At most one uncovered vertex gives uniqueness; two or more give an exact attainable entropy half-line.</title><rect x="568" y="176" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="176" width="4" height="98" rx="2" fill="#157763"/>
 <text x="581" y="194" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
-<text x="581" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Positive triangles: locally</text>
-<text x="581" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Lipschitz entropy</text>
+<text x="581" y="218" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Complete sources: unique or</text>
+<text x="581" y="236" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">an exact entropy half-line</text>
 </g>
-<g><title>For one resolved pair, a finite local entropy ceiling exists exactly at N=2 or a complete N=3 triangle.</title><rect x="568" y="306" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="306" width="4" height="98" rx="2" fill="#157763"/>
+<g><title>A sharp local criterion now covers every reverse-closed resolved observation set.</title><rect x="568" y="306" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="568" y="306" width="4" height="98" rx="2" fill="#157763"/>
 <text x="581" y="324" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#157763">PROVED</text>
-<text x="581" y="348" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Local ceiling iff N=2 or</text>
-<text x="581" y="366" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">complete N=3</text>
+<text x="581" y="348" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Local ceiling iff complete</text>
+<text x="581" y="366" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">and at most one uncovered</text>
 </g>
-<g><title>A source can have one or two exact entropy values while every positive observation tolerance admits arbitrarily large entropy.</title><rect x="840" y="111" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="111" width="4" height="98" rx="2" fill="#477296"/>
+<g><title>Sparse supports can have exact recovery but unbounded entropy nearby. Complete sources instead have an exact coverage dichotomy: unique with at most one uncovered vertex, or an attainable entropy half-line with at least two.</title><rect x="840" y="111" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="111" width="4" height="98" rx="2" fill="#477296"/>
 <text x="853" y="129" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#477296">INTERPRETATION</text>
 <text x="853" y="153" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Exact ambiguity and</text>
 <text x="853" y="171" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">observational instability</text>
 <text x="853" y="189" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">are different</text>
 </g>
-<g><title>The complete manuscript is ready for expert human review. Check Appendix B&#x27;s global support exhaustion and its endpoint certificate, then finalize attribution and submission details.</title><rect x="840" y="241" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="241" width="4" height="98" rx="2" fill="#526357"/>
+<g><title>Complete finite-frequency primary comparison, integrate the new proof package into the article, then study conditioning-aware observation design.</title><rect x="840" y="241" width="220" height="98" rx="5" fill="white" stroke="#d4dcd5"/><rect x="840" y="241" width="4" height="98" rx="2" fill="#526357"/>
 <text x="853" y="259" font-family="DejaVu Sans,sans-serif" font-size="9" font-weight="bold" fill="#526357">INTERPRETATION</text>
-<text x="853" y="283" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Next: expert review of the</text>
-<text x="853" y="301" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">manuscript</text>
+<text x="853" y="283" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">Next: attribution and</text>
+<text x="853" y="301" font-family="DejaVu Sans,sans-serif" font-size="13" fill="#21372f">conditioning</text>
 </g>
 <text x="24" y="472" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Proof, numerical checks and novelty have separate statuses. Arrows use the relations in graph.json.</text>
 <text x="24" y="493" font-family="DejaVu Sans,sans-serif" font-size="11" fill="#51635b">Interactive companion: select a node to read assumptions, typed relationships and exact provenance.</text></svg>
