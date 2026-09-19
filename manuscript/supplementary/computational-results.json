@@ -1,5 +1,5 @@
 {
-  "executed_at_utc": "2026-09-18T23:47:19.719653+00:00",
+  "executed_at_utc": "2026-09-19T04:25:46.492377+00:00",
   "command_from_root": ".venv/Scripts/python.exe -B manuscript/scripts/reproduce.py",
   "environment": {
     "python": "3.9.12",
@@ -10,21 +10,21 @@
     "scipy": "1.13.1",
     "matplotlib": "3.9.4"
   },
-  "reproduction_script_sha256": "c27f1e09b619c2dc70cd45131ec76612a9eacd91ca183a14b9d6c33aee691adf",
+  "reproduction_script_sha256": "9471b99d423a44828f49055590260e33db2fcffae57cb928934236ef3c402dcd",
   "random_seed": null,
   "method": "Deterministic historical-script replays with Path.write_text intercepted; exact independent cone/path and three-state checks; high-precision direct stationary solves for figure data",
   "replays": [
     {
       "script": "analysis/check_small_networks.py",
       "script_sha256": "1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6",
-      "elapsed_seconds": 0.264,
+      "elapsed_seconds": 0.292,
       "historical_output": "analysis/small-network-checks.json",
       "historical_output_sha256": "4ef422eb6703f043f52210363d0ac77b90b209b1345ffa2e2ba8bc4604af31b3",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-18T23:46:47.533027+00:00",
+        "executed_at": "2026-09-19T04:25:11.808206+00:00",
         "environment": {
           "python": "3.9.12",
           "numpy": "2.0.1",
@@ -158,19 +158,19 @@
         },
         "limitation": "Finite checks validate the artifacts; all-time equality, minimality, and unboundedness rely on the accompanying exact arguments. No exhaustive topology search or novelty claim."
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:46:47.533027+00:00\",\n  \"environment\": {\n    \"python\": \"3.9.12\",\n    \"numpy\": \"2.0.1\",\n    \"scipy\": \"1.13.1\",\n    \"platform\": \"Windows-10-10.0.22631-SP0\"\n  },\n  \"script_sha256\": \"1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6\",\n  \"inputs\": \"Exact rational rates embedded in this script; no random sampling.\",\n  \"checks\": {\n    \"three_state_cases\": 4,\n    \"two_state_case\": true,\n    \"lumped_exact_derivative_orders\": [\n      0,\n      6\n    ],\n    \"minimal_exact_derivative_orders\": [\n      0,\n      7\n    ],\n    \"controllability_rank\": 4,\n    \"observability_rank\": 4,\n    \"numerical_time_grid_points\": 66,\n    \"negative_controls\": 2\n  },\n  \"generator_negative_controls\": {\n    \"disconnected_positive_stationary_rejected\": true\n  },\n  \"lumpable_family\": [\n    {\n      \"u\": \"1\",\n      \"entropy\": 0.0\n    },\n    {\n      \"u\": \"1/2\",\n      \"entropy\": 0.06866326804175685\n    },\n    {\n      \"u\": \"1/10\",\n      \"entropy\": 0.33124938515622454\n    },\n    {\n      \"u\": \"1/1000\",\n      \"entropy\": 0.9491002415207374\n    }\n  ],\n  \"minimal_family\": [\n    {\n      \"parameter\": \"0\",\n      \"entropy\": 0.0,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 0.0,\n      \"mean_interevent_time\": 2.0,\n      \"vanishing_reverse_rate\": \"2\",\n      \"opposing_flux\": \"1/2\"\n    },\n    {\n      \"parameter\": \"1/4\",\n      \"entropy\": 0.07712723934029189,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 4.0245584642661925e-16,\n      \"mean_interevent_time\": 2.000000000000001,\n      \"vanishing_reverse_rate\": \"5/3\",\n      \"opposing_flux\": \"3/8\"\n    },\n    {\n      \"parameter\": \"1/2\",\n      \"entropy\": 0.35777511011618357,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 3.0531133177191805e-16,\n      \"mean_interevent_time\": 1.9999999999999996,\n      \"vanishing_reverse_rate\": \"1\",\n      \"opposing_flux\": \"1/4\"\n    },\n    {\n      \"parameter\": \"1997/3000\",\n      \"entropy\": 1.4584195539439502,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 3.3306690738754696e-16,\n      \"mean_interevent_time\": 2.0,\n      \"vanishing_reverse_rate\": \"9/1003\",\n      \"opposing_flux\": \"1003/6000\"\n    },\n    {\n      \"parameter\": \"1999997/3000000\",\n      \"entropy\": 2.613097152847446,\n      \"formula_residual\": 8.881784197001252e-16,\n      \"maximum_kernel_residual\": 2.498001805406602e-16,\n      \"mean_interevent_time\": 2.0000000000000013,\n      \"vanishing_reverse_rate\": \"9/1000003\",\n      \"opposing_flux\": \"1000003/6000000\"\n    },\n    {\n      \"parameter\": \"1999999999997/3000000000000\",\n      \"entropy\": 4.915687369247452,\n      \"formula_residual\": 8.881784197001252e-16,\n      \"maximum_kernel_residual\": 2.3592239273284576e-16,\n      \"mean_interevent_time\": 1.9999999999999964,\n      \"vanishing_reverse_rate\": \"9/1000000000003\",\n      \"opposing_flux\": \"1000000000003/6000000000000\"\n    }\n  ],\n  \"fixed_diamond\": {\n    \"distinct_escape_rates\": [\n      4,\n      3\n    ],\n    \"identifiable_example_entropy\": 0.019682772238260413,\n    \"repeated_escape_family\": [\n      {\n        \"parameter\": \"0\",\n        \"entropy\": 0.0,\n        \"vanishing_reverse_rate\": \"1\"\n      },\n      {\n        \"parameter\": \"1/4\",\n        \"entropy\": 0.05295611627420023,\n        \"vanishing_reverse_rate\": \"2/3\"\n      },\n      {\n        \"parameter\": \"499/1000\",\n        \"entropy\": 0.7980252110110211,\n        \"vanishing_reverse_rate\": \"2/501\"\n      },\n      {\n        \"parameter\": \"499999999/1000000000\",\n        \"entropy\": 2.5265550216027757,\n        \"vanishing_reverse_rate\": \"2/500000001\"\n      }\n    ],\n    \"general_equal_escape_factorizations_checked\": 2\n  },\n  \"limitation\": \"Finite checks validate the artifacts; all-time equality, minimality, and unboundedness rely on the accompanying exact arguments. No exhaustive topology search or novelty claim.\"\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-19T04:25:11.808206+00:00\",\n  \"environment\": {\n    \"python\": \"3.9.12\",\n    \"numpy\": \"2.0.1\",\n    \"scipy\": \"1.13.1\",\n    \"platform\": \"Windows-10-10.0.22631-SP0\"\n  },\n  \"script_sha256\": \"1eb96cad1462049f19cbf32e301cb62e812a6ca663743577b0e5028579b48ab6\",\n  \"inputs\": \"Exact rational rates embedded in this script; no random sampling.\",\n  \"checks\": {\n    \"three_state_cases\": 4,\n    \"two_state_case\": true,\n    \"lumped_exact_derivative_orders\": [\n      0,\n      6\n    ],\n    \"minimal_exact_derivative_orders\": [\n      0,\n      7\n    ],\n    \"controllability_rank\": 4,\n    \"observability_rank\": 4,\n    \"numerical_time_grid_points\": 66,\n    \"negative_controls\": 2\n  },\n  \"generator_negative_controls\": {\n    \"disconnected_positive_stationary_rejected\": true\n  },\n  \"lumpable_family\": [\n    {\n      \"u\": \"1\",\n      \"entropy\": 0.0\n    },\n    {\n      \"u\": \"1/2\",\n      \"entropy\": 0.06866326804175685\n    },\n    {\n      \"u\": \"1/10\",\n      \"entropy\": 0.33124938515622454\n    },\n    {\n      \"u\": \"1/1000\",\n      \"entropy\": 0.9491002415207374\n    }\n  ],\n  \"minimal_family\": [\n    {\n      \"parameter\": \"0\",\n      \"entropy\": 0.0,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 0.0,\n      \"mean_interevent_time\": 2.0,\n      \"vanishing_reverse_rate\": \"2\",\n      \"opposing_flux\": \"1/2\"\n    },\n    {\n      \"parameter\": \"1/4\",\n      \"entropy\": 0.07712723934029189,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 4.0245584642661925e-16,\n      \"mean_interevent_time\": 2.000000000000001,\n      \"vanishing_reverse_rate\": \"5/3\",\n      \"opposing_flux\": \"3/8\"\n    },\n    {\n      \"parameter\": \"1/2\",\n      \"entropy\": 0.35777511011618357,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 3.0531133177191805e-16,\n      \"mean_interevent_time\": 1.9999999999999996,\n      \"vanishing_reverse_rate\": \"1\",\n      \"opposing_flux\": \"1/4\"\n    },\n    {\n      \"parameter\": \"1997/3000\",\n      \"entropy\": 1.4584195539439502,\n      \"formula_residual\": 0.0,\n      \"maximum_kernel_residual\": 3.3306690738754696e-16,\n      \"mean_interevent_time\": 2.0,\n      \"vanishing_reverse_rate\": \"9/1003\",\n      \"opposing_flux\": \"1003/6000\"\n    },\n    {\n      \"parameter\": \"1999997/3000000\",\n      \"entropy\": 2.613097152847446,\n      \"formula_residual\": 8.881784197001252e-16,\n      \"maximum_kernel_residual\": 2.498001805406602e-16,\n      \"mean_interevent_time\": 2.0000000000000013,\n      \"vanishing_reverse_rate\": \"9/1000003\",\n      \"opposing_flux\": \"1000003/6000000\"\n    },\n    {\n      \"parameter\": \"1999999999997/3000000000000\",\n      \"entropy\": 4.915687369247452,\n      \"formula_residual\": 8.881784197001252e-16,\n      \"maximum_kernel_residual\": 2.3592239273284576e-16,\n      \"mean_interevent_time\": 1.9999999999999964,\n      \"vanishing_reverse_rate\": \"9/1000000000003\",\n      \"opposing_flux\": \"1000000000003/6000000000000\"\n    }\n  ],\n  \"fixed_diamond\": {\n    \"distinct_escape_rates\": [\n      4,\n      3\n    ],\n    \"identifiable_example_entropy\": 0.019682772238260413,\n    \"repeated_escape_family\": [\n      {\n        \"parameter\": \"0\",\n        \"entropy\": 0.0,\n        \"vanishing_reverse_rate\": \"1\"\n      },\n      {\n        \"parameter\": \"1/4\",\n        \"entropy\": 0.05295611627420023,\n        \"vanishing_reverse_rate\": \"2/3\"\n      },\n      {\n        \"parameter\": \"499/1000\",\n        \"entropy\": 0.7980252110110211,\n        \"vanishing_reverse_rate\": \"2/501\"\n      },\n      {\n        \"parameter\": \"499999999/1000000000\",\n        \"entropy\": 2.5265550216027757,\n        \"vanishing_reverse_rate\": \"2/500000001\"\n      }\n    ],\n    \"general_equal_escape_factorizations_checked\": 2\n  },\n  \"limitation\": \"Finite checks validate the artifacts; all-time equality, minimality, and unboundedness rely on the accompanying exact arguments. No exhaustive topology search or novelty claim.\"\n}\n"
     },
     {
       "script": "analysis/check_four_state_classification.py",
       "script_sha256": "cbcc7efb6b46623574758af2706de3249419eca99112203fdc1c50ecb34d3d2c",
-      "elapsed_seconds": 0.457,
+      "elapsed_seconds": 0.496,
       "historical_output": "analysis/four-state-classification-checks.json",
       "historical_output_sha256": "6f7b1a3ba9d9cbfada2d4fbd91c2b5d0c5f0886c4bf6c92779349405016de74b",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-18T23:46:48.018222+00:00",
+        "executed_at": "2026-09-19T04:25:12.334015+00:00",
         "environment": {
           "python": "3.9.12",
           "numpy": "2.0.1",
@@ -774,19 +774,19 @@
         ],
         "limitation": "Representative exact and numerical checks; theorem coverage comes from the proofs, not sampling. Novelty unestablished."
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:46:48.018222+00:00\",\n  \"boundary_witnesses\": 3,\n  \"support_openings\": 5,\n  \"unique_grid_models\": 2,\n  \"maximum_kernel_residual\": 2.498001805406602e-16,\n  \"nonminimal_ranks\": [\n    3,\n    4\n  ]\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-19T04:25:12.334015+00:00\",\n  \"boundary_witnesses\": 3,\n  \"support_openings\": 5,\n  \"unique_grid_models\": 2,\n  \"maximum_kernel_residual\": 2.498001805406602e-16,\n  \"nonminimal_ranks\": [\n    3,\n    4\n  ]\n}\n"
     },
     {
       "script": "analysis/check_observable_criterion.py",
       "script_sha256": "40af86e70e5f3a522d8f2a92196a13e59879b706694a5b84a965c625012af51b",
-      "elapsed_seconds": 0.038,
+      "elapsed_seconds": 0.039,
       "historical_output": "analysis/observable-criterion-checks.json",
       "historical_output_sha256": "c07ab47ce215664b681c2de2ebf57b534ff934284b6dad0b934e2b83ce7842a5",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-18T23:46:48.063202+00:00",
+        "executed_at": "2026-09-19T04:25:12.373164+00:00",
         "environment": {
           "python": "3.9.12",
           "numpy": "2.0.1",
@@ -1118,19 +1118,19 @@
         ],
         "limitation": "Representative algebraic checks; general coverage uses the analytic classification, not enumeration."
       },
-      "stdout": "{\n  \"cases\": 9,\n  \"reconstructed\": 4,\n  \"executed_at\": \"2026-09-18T23:46:48.063202+00:00\",\n  \"all_checks_passed\": true\n}\n"
+      "stdout": "{\n  \"cases\": 9,\n  \"reconstructed\": 4,\n  \"executed_at\": \"2026-09-19T04:25:12.373164+00:00\",\n  \"all_checks_passed\": true\n}\n"
     },
     {
       "script": "analysis/check_state_splitting.py",
       "script_sha256": "9d925a943330513022a690111761336ff9cb2835916a026405a373a96653bc27",
-      "elapsed_seconds": 0.035,
+      "elapsed_seconds": 0.037,
       "historical_output": "analysis/state-splitting-checks.json",
       "historical_output_sha256": "b1ec22a909cebd4b3ce536162eb992d8a6363b5819f905a425d54d777eb29692",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-18T23:46:48.084669+00:00",
+        "executed_at": "2026-09-19T04:25:12.413050+00:00",
         "environment": {
           "python": "3.9.12",
           "numpy": "2.0.1",
@@ -1330,7 +1330,7 @@
         ],
         "limitation": "Exact representative intertwining and derivative certificates; general coverage and divergence use the proofs. Novelty unestablished."
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:46:48.084669+00:00\",\n  \"state_split_counts\": [\n    4,\n    5\n  ],\n  \"split_log_coefficient\": \"11/60\",\n  \"nonminimal_families\": 2,\n  \"all_checks_passed\": true\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-19T04:25:12.413050+00:00\",\n  \"state_split_counts\": [\n    4,\n    5\n  ],\n  \"split_log_coefficient\": \"11/60\",\n  \"nonminimal_families\": 2,\n  \"all_checks_passed\": true\n}\n"
     },
     {
       "script": "analysis/check_five_state_extensions.py",
@@ -1342,7 +1342,7 @@
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-18T23:46:48.237267+00:00",
+        "executed_at": "2026-09-19T04:25:12.550658+00:00",
         "environment": {
           "python": "3.9.12",
           "numpy": "2.0.1",
@@ -1873,19 +1873,19 @@
         "correction": "The initial unsaved probe used eigvalsh on a nonsymmetric hidden block. This diagnostic was corrected to eigvals; exact tangent matrices and LP results were unaffected.",
         "limitation": "General results use the linked proofs; no full five-state classification or novelty claim."
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:46:48.237267+00:00\",\n  \"all_checks_passed\": true,\n  \"cycle_state_counts\": [\n    5,\n    6\n  ],\n  \"isolated_tangent_rank\": 6,\n  \"exact_complete_graph_opening\": true\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-19T04:25:12.550658+00:00\",\n  \"all_checks_passed\": true,\n  \"cycle_state_counts\": [\n    5,\n    6\n  ],\n  \"isolated_tangent_rank\": 6,\n  \"exact_complete_graph_opening\": true\n}\n"
     },
     {
       "script": "analysis/check_theta_residue_construction.py",
       "script_sha256": "df7d9a893580d489ae94902b42e15337560d6926c6a50f681ec2fda9b4347b34",
-      "elapsed_seconds": 0.462,
+      "elapsed_seconds": 0.48,
       "historical_output": "outputs/theta-residue-checks.json",
       "historical_output_sha256": "f78a4fd3d319e7aaf221cfb2cb66e8967ec12da4f2f3e164a9b56b0316cb966f",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-18T23:46:48.729147+00:00",
+        "executed_at": "2026-09-19T04:25:13.072778+00:00",
         "environment": {
           "python": "3.9.12",
           "platform": "Windows-10-10.0.22631-SP0",
@@ -5215,19 +5215,19 @@
         "scope": "Exact representative validation of the stated residue construction. No full theta-plane or topology classification and no novelty claim.",
         "all_checks_passed": true
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:46:48.729147+00:00\",\n  \"all_checks_passed\": true,\n  \"cases\": [\n    {\n      \"name\": \"theta_3_3\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.04282448455937082,\n      \"candidate_entropy\": 0.3723131576586089\n    },\n    {\n      \"name\": \"slow_coincidence_minimal\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.4478132174907096,\n      \"candidate_entropy\": 3.7079822887045046\n    },\n    {\n      \"name\": \"exceptional_nonminimal\",\n      \"ranks\": {\n        \"controllability\": 4,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.06476235202450442,\n      \"candidate_entropy\": 0.37922089521223074\n    },\n    {\n      \"name\": \"fast_coincidence\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.8521473750593244,\n      \"candidate_entropy\": 1.70355394813969\n    },\n    {\n      \"name\": \"slow_line_outside_direct_region\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 1.8918506114907785,\n      \"candidate_entropy\": 2.2605179000694475\n    }\n  ],\n  \"output\": \"C:\\\\projects\\\\markov-thermodynamic-identifiability\\\\outputs\\\\theta-residue-checks.json\"\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-19T04:25:13.072778+00:00\",\n  \"all_checks_passed\": true,\n  \"cases\": [\n    {\n      \"name\": \"theta_3_3\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.04282448455937082,\n      \"candidate_entropy\": 0.3723131576586089\n    },\n    {\n      \"name\": \"slow_coincidence_minimal\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.4478132174907096,\n      \"candidate_entropy\": 3.7079822887045046\n    },\n    {\n      \"name\": \"exceptional_nonminimal\",\n      \"ranks\": {\n        \"controllability\": 4,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.06476235202450442,\n      \"candidate_entropy\": 0.37922089521223074\n    },\n    {\n      \"name\": \"fast_coincidence\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 0.8521473750593244,\n      \"candidate_entropy\": 1.70355394813969\n    },\n    {\n      \"name\": \"slow_line_outside_direct_region\",\n      \"ranks\": {\n        \"controllability\": 5,\n        \"observability\": 5\n      },\n      \"source_entropy\": 1.8918506114907785,\n      \"candidate_entropy\": 2.2605179000694475\n    }\n  ],\n  \"output\": \"C:\\\\projects\\\\markov-thermodynamic-identifiability\\\\outputs\\\\theta-residue-checks.json\"\n}\n"
     },
     {
       "script": "analysis/check_theta_fast_spectral.py",
       "script_sha256": "192c0c5a37bdd40bf665f6346b639e02ad92cdd424010658d54afde5067c6c9b",
-      "elapsed_seconds": 0.105,
+      "elapsed_seconds": 0.108,
       "historical_output": "outputs/check_theta_fast_spectral.json",
       "historical_output_sha256": "1272bad18cee1b07f53c12542f50e333311a43436fc10351ae4194f4d8dbc19c",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-18T23:46:48.849013+00:00",
+        "executed_at": "2026-09-19T04:25:13.184452+00:00",
         "environment": {
           "python": "3.9.12",
           "platform": "Windows-10-10.0.22631-SP0",
@@ -5954,19 +5954,19 @@
         "scope": "Exact arithmetic support for the analytic invariant-triangle exclusion; no finite sampling or optimizer-based nonexistence claim.",
         "all_exact_checks_passed": true
       },
-      "stdout": "{\n  \"executed_at\": \"2026-09-18T23:46:48.849013+00:00\",\n  \"all_exact_checks_passed\": true,\n  \"balanced_rates\": [\n    100,\n    40\n  ],\n  \"output\": \"C:\\\\projects\\\\markov-thermodynamic-identifiability\\\\outputs\\\\check_theta_fast_spectral.json\"\n}\n"
+      "stdout": "{\n  \"executed_at\": \"2026-09-19T04:25:13.184452+00:00\",\n  \"all_exact_checks_passed\": true,\n  \"balanced_rates\": [\n    100,\n    40\n  ],\n  \"output\": \"C:\\\\projects\\\\markov-thermodynamic-identifiability\\\\outputs\\\\check_theta_fast_spectral.json\"\n}\n"
     },
     {
       "script": "analysis/check_balanced_boundary_witness.py",
       "script_sha256": "5f21e13a8268273fdc2b3a937fed2f078a6736beb02cd7f19c9ad75ec675aa15",
-      "elapsed_seconds": 0.39,
+      "elapsed_seconds": 0.401,
       "historical_output": "outputs/balanced-boundary-witness.json",
       "historical_output_sha256": "c917b0bf18ea1bee01b04b1e24b8d130ca76c653bbde3512591213d9b66548e9",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "created_utc": "2026-09-18T23:46:48.964788+00:00",
+        "created_utc": "2026-09-19T04:25:13.300473+00:00",
         "command": ".\\.venv\\Scripts\\python.exe -B analysis/check_balanced_boundary_witness.py",
         "environment": {
           "python": "3.9.12",
@@ -6426,7 +6426,7 @@
     {
       "script": "analysis/derive_balanced_path.py",
       "script_sha256": "4fc6839878d804990cfa4a8bfa2346cf8fbf395d9967d33f277b0693310243a5",
-      "elapsed_seconds": 27.414,
+      "elapsed_seconds": 29.573,
       "historical_output": "analysis/balanced-path-polynomial.json",
       "historical_output_sha256": "975783f31653c189e9aeb45926cb2777841d28c6b61e16a210fe3658f60d2473",
       "assertions_passed": true,
@@ -6434,7 +6434,7 @@
       "changed_scientific_paths": [],
       "captured_result": {
         "kind": "exact symbolic necessary path equation, no global exclusion",
-        "executed_at_utc": "2026-09-18T23:47:16.633130+00:00",
+        "executed_at_utc": "2026-09-19T04:25:43.146314+00:00",
         "python": "3.9.12",
         "sympy": "1.14.0",
         "script_sha256": "4fc6839878d804990cfa4a8bfa2346cf8fbf395d9967d33f277b0693310243a5",
@@ -6459,14 +6459,14 @@
     {
       "script": "analysis/check_balanced_cone_bound.py",
       "script_sha256": "f1247b3f17f9b3f641c3d041500009acce74e721ee2aa1cf316517afbadf2c9b",
-      "elapsed_seconds": 0.833,
+      "elapsed_seconds": 0.873,
       "historical_output": "analysis/balanced-cone-bound-checks.json",
       "historical_output_sha256": "52bba21fdf8dfb301948a0c14341019564a1a4577c41b5a77fcc89f7878c028d",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-18T23:47:17.487902+00:00",
+        "executed_at": "2026-09-19T04:25:44.031759+00:00",
         "command_from_root": ".\\.venv\\Scripts\\python.exe -B analysis/check_balanced_cone_bound.py",
         "environment": {
           "python": "3.9.12",
@@ -6587,14 +6587,14 @@
     {
       "script": "analysis/check_balanced_cone_sufficiency.py",
       "script_sha256": "0d27522282f0012ecc76ec3b82b68f5946c7e5d05a8a91c99937303fb23e1e2e",
-      "elapsed_seconds": 0.277,
+      "elapsed_seconds": 0.284,
       "historical_output": "analysis/balanced-cone-sufficiency-checks.json",
       "historical_output_sha256": "d6553877a337062fced350922eacbfaa31dcdacfa7360ae85c01a8edf1ed3fe9",
       "assertions_passed": true,
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-18T23:47:17.768954+00:00",
+        "executed_at": "2026-09-19T04:25:44.321412+00:00",
         "command_from_root": ".\\.venv\\Scripts\\python.exe -B analysis/check_balanced_cone_sufficiency.py",
         "environment": {
           "python": "3.9.12",
@@ -6863,7 +6863,7 @@
     {
       "script": "analysis/check_balanced_fold.py",
       "script_sha256": "74ea7faa7caa6ad20f0df0ce2ba16b197a283a79d4e058639a04a657a2f02c81",
-      "elapsed_seconds": 0.606,
+      "elapsed_seconds": 0.624,
       "historical_output": "outputs/balanced-fold-checks.json",
       "historical_output_sha256": "a854889cd532ea094c8f8eeac88cd736223e5725d0611ec43649380cd90e9be8",
       "assertions_passed": true,
@@ -6871,7 +6871,7 @@
       "changed_scientific_paths": [],
       "captured_result": {
         "kind": "reproduced exact algebraic calculation with rigorous sign/log bounds",
-        "executed_at_utc": "2026-09-18T23:47:18.300756+00:00",
+        "executed_at_utc": "2026-09-19T04:25:44.865396+00:00",
         "command": ".venv/Scripts/python.exe -B analysis/check_balanced_fold.py",
         "environment": {
           "python": "3.9.12",
@@ -7363,7 +7363,7 @@
     {
       "script": "analysis/check_finite_precision_instability.py",
       "script_sha256": "f4aaac3e9e4d6554250a8425c3f43c9cf6f1ec50f138400d1f9ebe92b4930747",
-      "elapsed_seconds": 0.845,
+      "elapsed_seconds": 1.04,
       "historical_output": "outputs/finite-precision-checks.json",
       "historical_output_sha256": "804e1968c8dd9ae629332a88724652ef945705eb10a40f363f9ee82d4e9a8c15",
       "assertions_passed": true,
@@ -7371,7 +7371,7 @@
       "changed_scientific_paths": [],
       "captured_result": {
         "kind": "exact witness and numerical cross-check; no optimizer or formal proof",
-        "executed_at_utc": "2026-09-18T23:47:19.214703+00:00",
+        "executed_at_utc": "2026-09-19T04:25:45.978615+00:00",
         "command": ".venv/Scripts/python.exe -B analysis/check_finite_precision_instability.py",
         "environment": {
           "python": "3.9.12",
@@ -7655,7 +7655,7 @@
     {
       "script": "analysis/check_three_state_precision.py",
       "script_sha256": "026f0ea82f3df3e7ef3212bb705fb5ef6e04d128f64316404d416f46565529fd",
-      "elapsed_seconds": 0.214,
+      "elapsed_seconds": 0.224,
       "historical_output": "outputs/three-state-precision-checks.json",
       "historical_output_sha256": "0bcb55b7a5f1111c1c293349c6e343e5652e88a2984113cad524d8bb369076ac",
       "assertions_passed": true,
@@ -7664,7 +7664,7 @@
       "captured_result": {
         "all_checks_passed": true,
         "kind": "exact identities and independent high-precision stationary solve; conventional limit proofs are in the notes",
-        "executed_at_utc": "2026-09-18T23:47:19.434237+00:00",
+        "executed_at_utc": "2026-09-19T04:25:46.208973+00:00",
         "command": ".venv/Scripts/python.exe -B analysis/check_three_state_precision.py",
         "environment": {
           "python": "3.9.12",
@@ -8008,7 +8008,7 @@
       "historical_scientific_payload_identical": true,
       "changed_scientific_paths": [],
       "captured_result": {
-        "executed_at": "2026-09-18T23:47:19.466304+00:00",
+        "executed_at": "2026-09-19T04:25:46.255814+00:00",
         "command": ".\\.venv\\Scripts\\python.exe -B analysis/check_publication_audit.py",
         "python": "3.9.12",
         "sympy": "1.14.0",
@@ -9442,9 +9442,23 @@
       },
       {
         "path": "analysis/correctness/test_validation.py",
-        "sha256": "7d0982caf58d465c978d26d14ecc13c11734315385d454f27c3e75ffe7efb9a7",
+        "sha256": "05bf494a9ff51e757c065f427d764b1a2759d27df19ad461d216fdbdece9911b",
         "syntax_valid": true,
         "description": "Regression checks for stale or unsuccessful scientific replay receipts.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/correctness/verify_review_calculations.py",
+        "sha256": "03206b884e0bfa606b1b8077e0f397905cbf40f99959d693d40cd9211563882a",
+        "syntax_valid": true,
+        "description": "Fresh bounded check of supplied review calculations; never writes accepted outputs.\n\nRun from root: .venv/Scripts/python.exe -B analysis/correctness/verify_review_calculations.py\nExact definitions are transcribed from the cited manuscript/audits. Historical\ncheckers and accepted JSON results are neither imported nor executed. No RNG.\nHigh-precision endpoint checks are not new interval certificates.",
+        "freshly_replayed": false
+      },
+      {
+        "path": "analysis/correctness/verify_second_review.py",
+        "sha256": "a772894fbddf66b6eb347787219f8173075e5802ffe90a16c3ffd0eb23cdfef3",
+        "syntax_valid": true,
+        "description": "Bounded second-review verification; preserve accepted historical evidence.\n\nRun from root: .venv/Scripts/python.exe -B analysis/correctness/verify_second_review.py\nUses the installed Python environment and cached tmp/tectonic/tectonic.exe.\nThe separate verify_review_calculations.py handles the numerical review fields.",
         "freshly_replayed": false
       },
       {
@@ -10070,21 +10084,21 @@
   "all_checks_passed": true,
   "historical_outputs_unchanged": true,
   "figure_sha256": {
-    "manuscript/figures/balanced-fiber.pdf": "302dda47171274946c759c1b0ae067e7fac1a938285f5a18e9b787ce853ca90c",
+    "manuscript/figures/balanced-fiber.pdf": "41175290b90207061e67abc1e590d52debde6d3b26000ac77a563a67a1ffb594",
     "manuscript/figures/balanced-fiber.png": "a65c402d3887245d2dc2c138c76ea495aae279d0783fda9eb909ed9b44c019cd",
-    "manuscript/figures/balanced-fiber.svg": "012794767e4daa0642837924fc309f9811730f1924cba7e8cedf778516da4cdf",
+    "manuscript/figures/balanced-fiber.svg": "e41cdb5df5785bd0c710fb0fb470b2c9b1d43527fb1a3699dc57414e9b8bf399",
     "manuscript/figures/conditioning.pdf": "8f35636f242e7f973daf516735fd1a47ccb22d1d33e2d903736a498bc477af6a",
     "manuscript/figures/conditioning.png": "327cfbfd5203f0d5eb3df1181474eb7463a610f737cb4e18534042a2bbb1ae0b",
-    "manuscript/figures/continuation.pdf": "1d7f1e5572909f5fc4b84be6ec3b779a8c888dea6538574b9b46237603b78881",
+    "manuscript/figures/continuation.pdf": "bd7b2d2ae43e4cd5d0c5e5e3396599c83f1a6acdb984e9e0879c54acadaa67a2",
     "manuscript/figures/continuation.png": "4acb78374a167e97d1d5fa62f6a8a763cdc34180b35158d09732721d9a1c51ac",
-    "manuscript/figures/continuation.svg": "cd06e96018a7e0affe7ef747cf1a9ff3263a0964db0e93369167bea2a0fd433c",
+    "manuscript/figures/continuation.svg": "b3da5b150bfeae772f89655afc7047a26866e4eb07a6313b1eef9a723df6ce24",
     "manuscript/figures/finite-data.pdf": "a261ed2bffcbad2df33e069e10150a12f04557561101300e1365093d6116558d",
     "manuscript/figures/finite-data.png": "7e6f7d17197a984fb072dafaa43d1838a9dbf3c93b9fba9003b1a7272a19526a",
-    "manuscript/figures/realization-geometry.pdf": "d1ba402377b3b480b8dae320f890fcc6da135312b48cd31de6ab70aef984a361",
+    "manuscript/figures/realization-geometry.pdf": "d49ec360a1ee82a985dbc87db0992ed378e828da61169d60c94b3e9b9ffb2693",
     "manuscript/figures/realization-geometry.png": "f990ba4c7f8ae59806051cfd5c9e3e6f7b7bd8cad20cf214a48f10c90b830447",
-    "manuscript/figures/realization-geometry.svg": "6a171da140190628585c3014381d17d9f3016897b181ec5e1f5b1067ef95432c",
-    "manuscript/figures/three-state-instability.pdf": "1ff09c4a47a97ffc5447a33b525667619d11630802cc8e4ebbf9bd01b5beb952",
+    "manuscript/figures/realization-geometry.svg": "9ec8ec2f538e5fba0d2eedc2a82cdd959489aae6c761c244ddf223621e9408ee",
+    "manuscript/figures/three-state-instability.pdf": "1cd31f8cf3a090818af358f4b334abd43df20ae1ebe82ec3c62fa1046d6670b9",
     "manuscript/figures/three-state-instability.png": "1ead6cf6f4252181eb67b85fd2b1ad6b799a301728f63b73ceda8194e497b3b2",
-    "manuscript/figures/three-state-instability.svg": "f830f84ffc7067c5f8151f097454a6d9ef5af3cb554fc39e049f25e70f1b545a"
+    "manuscript/figures/three-state-instability.svg": "4529f0eae5476bcff1782749f40e8f7c457452b6699fef62ff8a355e69dbd588"
   }
 }

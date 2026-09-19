@@ -1,5 +1,7 @@
 # Correctness revision — 15 September 2026
 
+**19 September follow-up:** the [second academic review response](outputs/supplied-verification-2026-09-19/RESPONSE.md) records the remaining standalone-driver mismatch fix, exact and 80/120-digit checks, equality-condition table, scalar conditioning formulas and explicit hidden-path comparison. [Verification](outputs/supplied-verification-2026-09-19/verification.json) passes all 41 tests and the 15-script historical driver; the current PDF has 56 visually checked pages. The unchanged 900-trajectory campaign and older complete-workflow runs below retain their dates and scope.
+
 The later [18 September repository review](outputs/review-2026-09-18/REVIEW.md) repairs preservation and validation safeguards, clarifies one introductory phrase, and passes 36 tests plus the complete reproduction/build workflow. The historical account below describes the 15 September revision; current code, PDF and delivery verification include those subsequent maintenance fixes.
 
 The subsequent [supplied counterexample review](outputs/laplace-review-2026-09-18/REVIEW.md) makes the distinction explicit: two positive Laplace matrices identify entropy throughout the at-most-three-state class; three are necessary in the uncalibrated worst case only for generator recovery. The leaf example was already incorporated. Redundant one-point details were pruned from the article and retained in the exact audit; the new corollary has a conventional support proof and three additional exact tests.

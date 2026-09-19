@@ -1,0 +1,29 @@
+{
+  "completed_at_utc": "2026-09-19T04:33:46.262907+00:00",
+  "final_archive": {
+    "archive": "C:\\projects\\markov-thermodynamic-identifiability\\outputs\\manuscript-package.zip",
+    "file_count_including_manifest": 325,
+    "archive_bytes": 4312968,
+    "sha256": "d07a8ccf3f3076e80c4920ce3cc6888274d22463b97d014de599f2d9056ee3aa",
+    "integrity_verified": true
+  },
+  "fresh_extraction_checks": {
+    "verified_at_utc": "2026-09-19T04:33:10.353823+00:00",
+    "archive_sha256_tested": "70fa09b4f81d20d8ab320e4ed11299543d1bbf9310a05fd387c5bebeb044aa12",
+    "source_and_receipt_validation": {
+      "returncode": 0,
+      "stdout": "{\n  \"executed_at_utc\": \"2026-09-19T04:33:08.050119+00:00\",\n  \"latex_labels\": 134,\n  \"latex_references\": 117,\n  \"verified_bibliography_entries_all_cited\": 31,\n  \"local_document_links_checked\": 72,\n  \"outer_archive_links_recognized_in_extraction\": [\n    \"../outputs/manuscript-package.zip\",\n    \"manuscript-package.zip\"\n  ],\n  \"scientific_input_hashes_checked\": 39,\n  \"build_hashes_match\": true,\n  \"all_checks_passed\": true,\n  \"scope\": \"Source/package validation, not an independent proof or web-source verification.\"\n}\n",
+      "stderr": ""
+    },
+    "eight_validation_and_driver_regressions": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_missing_and_added_fields_are_not_ignored (analysis.correctness.test_validation.ReplayComparisonTests) ... ok\ntest_only_execution_time_is_ignored (analysis.correctness.test_validation.ReplayComparisonTests) ... ok\ntest_provenance_only_change_can_succeed (analysis.correctness.test_validation.ReproductionDriverTests) ... ok\ntest_scientific_value_change_exits_unsuccessfully (analysis.correctness.test_validation.ReproductionDriverTests) ... ok\ntest_changed_inputs_are_rejected (analysis.correctness.test_validation.ScientificManifestTests) ... ok\ntest_inconsistent_duplicate_hash_is_rejected (analysis.correctness.test_validation.ScientificManifestTests) ... ok\ntest_matching_inputs_pass (analysis.correctness.test_validation.ScientificManifestTests) ... ok\ntest_unsuccessful_receipt_is_rejected (analysis.correctness.test_validation.ScientificManifestTests) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 2.167s\n\nOK\n"
+    },
+    "scope": "Fresh extraction, source/receipt validation, and eight targeted driver/validator tests using the installed environment. No full simulation campaign or new environment provisioning."
+  },
+  "changes_since_extracted_archive": [
+    "STATE.md"
+  ],
+  "scope": "Final archive differs from the validated extraction only in the final state checkpoint. All scientific/code/PDF payloads are byte-identical. Package writer verifies every payload hash and ZIP integrity. No new environment provisioned or full extracted simulation run."
+}

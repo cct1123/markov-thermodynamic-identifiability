@@ -1,0 +1,319 @@
+Second academic review
+
+Paper: Exact entropy-production fibers and local upper bounds in partially observed Markov networks.
+
+I reviewed the current public manuscript, proof appendices, supporting mathematical notes, and reproduction driver. The latest public commit I could verify is 015bcd4, dated September 11, 2026; this assessment applies to that snapshot. I also performed fresh symbolic and high-precision calculations. I did not execute the full repository reproduction suite or assess the rendered PDF’s layout.
+
+Overall assessment
+
+Recommendation: focused major revision, with a credible publishable mathematical core.
+
+My assessment is more favorable on the mathematics than on submission readiness. I did not find a counterexample to the principal theorems, and several concerns from the earlier review are now addressed explicitly. In particular, I would no longer characterize the five-state result as merely a numerical construction lacking a global argument.
+
+The strongest contribution is not the particular quartic threshold by itself. It is the separation between:
+
+Exact identification: What entropy-production values are compatible with perfect observations?
+
+Locally bounded inference: Does a finite upper bound survive any positive observational tolerance?
+
+The manuscript gives a compelling example of the first question and a much more general answer to the second. Under its fixed-state-count, unknown-support observation model, the local upper-bound criterion is exceptionally sharp: two-state chains and complete three-state sources are the only positive cases.
+
+The remaining work should concentrate on claim precision, proof presentation, literature positioning, and a concrete reproducibility defect. I would not require a biological application or a large simulation study before considering this a legitimate theoretical contribution.
+
+1. What now looks mathematically convincing
+The five-state result is more than a fitted example
+
+Under the five-state cap, the stated transition is from an entropy set unbounded above, to exactly two finite values, to a unique compatible generator. The state cap is substantive: allowing a sixth physical state changes the conclusion through an observation-preserving splitting construction.
+
+I checked the displayed algebra rather than accepting the saved numerical outputs.
+
+For the threshold polynomial,
+
+$$ P(z)=352z^4-3168z^3-4644z^2-11340z-7623, $$
+
+my independent numerical root calculation gives
+
+$$ z_*=10.557149668664970688018772703733\ldots . $$
+
+Reconstructing the endpoint generators from the algebraic definitions and solving independently for their stationary distributions gives:
+
+Quantity	My independent calculation
+Source entropy production	\(0.06294640023687435291168695\ldots\)
+Alternative-generator entropy production	\(0.06557968596684144565189189\ldots\)
+Absolute separation	\(0.00263328572996709274020493\ldots\)
+Relative separation from the source	Approximately \(4.1834\%\)
+
+These agree with the manuscript’s certified intervals. My calculation is a high-precision numerical cross-check, not an independent interval certificate. The distinction matters.
+
+I also independently verified both discriminant identities symbolically: the invariant-triangle envelope discriminant and the separate endpoint-construction discriminant reduce to the stated multiples of \(P(z)\). The minimality minors also reproduce correctly:
+
+$$ -9z(4z-9),\qquad -18z(2z-3),\qquad -14(22z+19). $$
+
+The first two cannot vanish simultaneously at positive \(z\), while the third never vanishes there. This supports the claimed minimal realization order, including at the exceptional pole-coincidence parameters.
+
+The global proof addresses the right loopholes
+
+The important improvement is that the argument does not restrict the similarity matrix to be nonnegative or inspect only one convenient canonical form. It treats disconnected hidden supports separately, then uses the Perron-normalized invariant-triangle representation for connected supports. The endpoint argument also distinguishes uniqueness of the triangle from uniqueness of the normalized generator.
+
+That is the correct architecture for a global result.
+
+My remaining reservation is about how readily an independent referee can audit the argument, not a demonstrated missing family of realizations. A symbolic discriminant identity cannot establish global exhaustiveness by itself, but the manuscript now supplies a conventional proof around that identity. Those are different levels of evidence, and the review should acknowledge both.
+
+The three-state calculation supports the central conceptual message
+
+I independently checked the stationary weights and cycle-current identity for the three-state boundary family. They agree with the stated entropy expression.
+
+The important lesson is stronger than “hidden states make inference difficult”:
+
+A generator can be uniquely recoverable and converge regularly with the observed data, while its entropy production diverges.
+
+This identifies two distinct difficulties: ambiguity in reconstructing the generator, and singular behavior of the entropy functional near newly opening support. The three-state example isolates the second difficulty without relying on a large hidden realization space.
+
+I also tested the three-Laplace reconstruction numerically on a complete triangle and both hidden-leaf orientations. The reconstructed generators agreed with their inputs to approximately \(10^{-14}\) in those tests. That supports the formulas but, again, is not a substitute for their rational-inverse proof.
+
+2. The finite-record result is a substantial strength
+
+The manuscript now goes beyond an abstract distance between waiting-time kernels. It treats stationary records over a fixed interval, including empty records and censored ends, and establishes observational convergence for the divergent constructions in that experiment.
+
+The resulting confidence statement is powerful. If a class contains models with
+
+$$ \sigma(Q_n)\to\infty, \qquad \operatorname{TV}\!\left( \mathbb P_{Q_n}^{H},\mathbb P_{Q_0}^{H} \right)\to0, $$
+
+then a uniformly valid upper confidence limit must satisfy
+
+$$ \mathbb P_{Q_0}^{H}\{U=+\infty\}\ge 1-\alpha . $$
+
+This is a much clearer statistical consequence than simply saying that an inverse problem is ill-conditioned.
+
+I would emphasize the quantifiers in the main discussion. This concerns uniform coverage over the declared model class at a fixed finite horizon. It does not imply that pointwise estimation, a restricted Bayesian analysis, or every increasing-record-length procedure is impossible. The manuscript already makes these distinctions; they should survive any shortening of the paper.
+
+The associated proof strategy also avoids an important mistake: closeness of reset-conditioned waiting laws is not simply assumed to imply closeness of stationary finite records. The separate argument is necessary, and including it substantially improves the paper.
+
+3. Revisions I would require before submission
+A. Fix the reproduction driver’s misleading success condition
+
+This is a concrete software defect, not a speculative mathematical concern.
+
+In manuscript/scripts/reproduce.py, replay() computes differences between the historical and newly produced scientific payloads and records whether they agree. However, a nonempty difference list does not cause a failure. Later, the driver sets and prints "all_checks_passed": True unconditionally after the other checks. Consequently, a replay can pass its internal assertions, change a recorded scientific result, and still receive an overall success status. The protected-file hash check only verifies that historical files were not modified; it does not enforce scientific agreement.
+
+This does not show that the current mathematical results are wrong. It shows that the reproduction success flag does not establish everything a reader would reasonably infer from it.
+
+After collecting the replays, add an explicit validation step such as:
+
+mismatches = {
+    item["script"]: item["changed_scientific_paths"]
+    for item in replays
+    if not item["historical_scientific_payload_identical"]
+}
+
+if mismatches:
+    raise RuntimeError(
+        "Scientific replay mismatch:\n"
+        + json.dumps(mismatches, indent=2)
+    )
+
+Only issue a global success status after that validation.
+
+The essential regression test is simple: deliberately alter one scientific value in a historical payload and confirm that reproduction exits unsuccessfully. A provenance-only change should remain acceptable. Where floating-point differences are intentionally tolerated, define field-specific tolerances rather than allowing arbitrary mismatches.
+
+This is a small repair with a large effect on the credibility of the computational package.
+
+B. Narrow the “full entropy image” wording
+
+The discussion refers to an “exact calculation of the full entropy image.” That wording should be explicitly restricted to the regimes where the image is actually determined.
+
+For the subcritical regime, proving
+
+$$ \sup \mathcal S(D)=+\infty $$
+
+does not determine the entire set \(\mathcal S(D)\). It does not, by itself, identify its lower endpoint, possible gaps, or disconnected components.
+
+The theorem’s distinction between “unbounded above,” “exactly two values,” and “singleton” is appropriately careful. The surrounding prose should retain that distinction.
+
+A more accurate description would be:
+
+An exact classification of the endpoint and supercritical realization sets, together with a proof of subcritical entropy unboundedness.
+
+This is primarily a scope correction, not a demand to solve a substantially harder problem. There is no need to determine the entire subcritical image unless the manuscript retains that stronger claim.
+
+A small additional consequence may be available: a continuous physical similarity path along which entropy diverges necessarily covers every sufficiently large entropy value by the intermediate value theorem. That still does not determine the lower portion of the complete identified set, but it is more informative than unboundedness alone.
+
+C. Make the equality case easier to audit
+
+The endpoint theorem carries the paper’s most delicate burden. The manuscript now contains the necessary argument, but several transitions are compressed enough that a skeptical referee will spend considerable effort reconstructing them.
+
+In particular, Appendix B uses a short “reflected use” argument to exclude part of the geometric domain, and the uniqueness claim depends on equality throughout a sequence of envelope bounds.
+
+I recommend separating the argument into named results with explicit conclusions:
+
+Global representation. Every connected physical realization gives a triangle satisfying the necessary constraints.
+
+Envelope bound. Every such triangle is bounded by the displayed scalar quadratic expression.
+
+Equality rigidity. Equality forces each previously relaxed constraint to be saturated in the stated way.
+
+Physical realization. The resulting candidate actually satisfies all Markov and reciprocal-support requirements, and row normalization removes the remaining scaling freedom.
+
+The most important line to make visually prominent is
+
+$$ B_0\le H_c\le H_*\le B_0. $$
+
+For each equality, identify the precise strict-monotonicity or uniqueness statement that forces the associated geometric parameter. A compact equality-condition table would be more useful than another high-precision decimal output.
+
+I am not suggesting that a numerical search or formal proof assistant is required. I am asking for a conventional proof whose dependency structure is transparent enough that a referee can check it without navigating the research history.
+
+D. Position the novelty more explicitly against the closest prior work
+
+The current manuscript is appropriately cautious about claiming a new general realization theory. I would preserve that restraint.
+
+The most important comparison to sharpen is Ehrich’s 2021 compatible-model analysis. That paper already discusses a wide range of entropy productions compatible with masked observations and reports apparently unbounded maxima as a transition approaches effective irreversibility. Its example is in a different, discrete-time setting, and the upper-unboundedness observation is not the same as your analytic classification. Nevertheless, it is closer prior art than a generic lower-bound reference.
+
+Therefore, the contribution should not be framed as discovering that observationally compatible hidden models can have arbitrarily different or apparently unbounded dissipation.
+
+The sharper distinction is your combination of an explicit continuous-time construction, global treatment of admissible reciprocal supports, an exactly two-valued endpoint, and a necessary-and-sufficient local upper-bound criterion.
+
+A second comparison is with Maier, Seifert, and van der Meer’s work on observed transitions, hidden paths, and minimal-graph reconstruction. Their microscopic-path entropy bounds and graph-reconstruction questions are not the same as determining the stationary entropy-production image over all compatible generators. Also, “minimal graph” and “minimal linear realization” should not be allowed to sound interchangeable.
+
+Finally, Nishiyama and Hasegawa’s upper-bound result should be treated as a complementary result, not a competing claim that your impossibility theorem overturns. Their steady-state inequality is
+
+$$ \sigma\le A\log R\,\frac{R-1}{R+1}, $$
+
+where \(A\) is dynamical activity and \(R\) bounds reciprocal microscopic rate ratios. Those inputs are additional microscopic information, not quantities automatically constrained by your observation model.
+
+My novelty assessment is therefore favorable but bounded: the distinctive mathematical combination looks plausible relative to the primary sources inspected. That is not an exhaustive priority certification.
+
+E. Distinguish local well-posedness from useful numerical conditioning
+
+The locally Lipschitz three-state inverse is a meaningful result. However, “stable reconstruction” can easily sound stronger to an experimental reader than the theorem establishes. The constant is source-dependent; the current supporting analysis correctly acknowledges this.
+
+A short conditioning calculation would make this much clearer.
+
+Using the reconstruction variable
+
+$$ \mathcal R=\frac{\lambda_3+h}{\lambda_1+h}, \qquad h=\frac{\lambda_3-\mathcal R\lambda_1}{\mathcal R-1}, $$
+
+differentiation gives
+
+$$ \frac{\partial h}{\partial\mathcal R} = -\frac{(\lambda_1+h)^2}{\lambda_3-\lambda_1}. $$
+
+Thus hidden escape rates much faster than the chosen Laplace scales produce a potentially large amplification factor.
+
+Likewise, for
+
+$$ G(\lambda)=u+\frac{v}{\lambda+h}, $$
+
+the informative differences are
+
+$$ G(\lambda_i)-G(\lambda_j) = \frac{v(\lambda_j-\lambda_i)} {(\lambda_i+h)(\lambda_j+h)}. $$
+
+They become small for weak hidden-state entrance amplitudes or fast hidden dynamics.
+
+These observations do not undermine the theorem. They explain why a finite local inverse constant need not be experimentally favorable. I would add this calculation and, optionally, one condition-number plot. A full estimator-development project is unnecessary.
+
+4. A useful mathematical strengthening available from the current equations
+
+This is an addition I derived while checking the manuscript, not an objection to its correctness.
+
+The three-Laplace result can be sharpened differently for generator identification and entropy identification.
+
+Two evaluations suffice for a complete three-state generator
+
+Use the manuscript’s three-state parameterization,
+
+$$ Q= \begin{pmatrix} -r-a&r&a\\ s&-s-c&c\\ b&d&-b-d \end{pmatrix}, \qquad h=b+d, $$
+
+and let \(F(\lambda)\) be the row-reordered observed transform, with
+
+$$ M(\lambda)=F(\lambda)^{-1}. $$
+
+Its off-diagonal entry satisfies
+
+$$ M_{xy}(\lambda) = -\frac{ad}{r(\lambda+h)}. $$
+
+At a complete triangle, this is nonzero. Therefore two positive, distinct arguments give
+
+$$ K:= \frac{M_{xy}(\lambda_1)} {M_{xy}(\lambda_2)} = \frac{\lambda_2+h}{\lambda_1+h}, $$
+
+and hence
+
+$$ h=\frac{\lambda_2-K\lambda_1}{K-1}. $$
+
+Once \(h\) is known, the two values of each \(G\)-row determine its constant and pole amplitude. The remaining rates follow from the existing inverse formulas.
+
+I checked this reconstruction in exact rational arithmetic on a complete example. More importantly, the displayed equations provide the general algebraic argument.
+
+Two evaluations do not suffice for every three-state generator
+
+Consider the two reciprocal, irreducible tree generators
+
+$$ Q_A= \begin{pmatrix} -2&1&1\\ 1&-1&0\\ 1&0&-1 \end{pmatrix}, \qquad Q_B= \begin{pmatrix} -18/5&6/5&12/5\\ 1&-1&0\\ 2&0&-2 \end{pmatrix}, $$
+
+with the observed pair \(x\leftrightarrow y\).
+
+I verified symbolically that their reordered transforms satisfy
+
+$$ F_A(1)=F_B(1) = \begin{pmatrix} 2/5&0\\ 0&1/2 \end{pmatrix}, $$
+
+and
+
+$$ F_A(2)=F_B(2) = \begin{pmatrix} 3/11&0\\ 0&1/3 \end{pmatrix}. $$
+
+But at a third argument,
+
+$$ F_A(3)= \begin{pmatrix} 4/19&0\\ 0&1/4 \end{pmatrix}, \qquad F_B(3)= \begin{pmatrix} 10/47&0\\ 0&1/4 \end{pmatrix}. $$
+
+This is not specific to the choices \(1\) and \(2\). In the leaf subclass, the informative row has the form
+
+$$ G(\lambda)=u+\frac{v}{\lambda+h}. $$
+
+For any two fixed positive arguments, one can vary \(h\) locally and solve for positive \(u,v\) while keeping both observations unchanged. Consequently, three arguments are universally necessary for generator reconstruction from these transform samples alone, even though two suffice on complete triangles.
+
+The qualification is essential: the observed rates are not independently supplied in this comparison. The counterexample does not address a problem where those rates are separately fixed.
+
+Two evaluations nevertheless suffice for exact entropy identification under a three-state cap
+
+There is a further consequence directly relevant to the paper’s central distinction.
+
+Within the reciprocal class with at most three states, nonzero cross entries of \(F\) identify the complete-triangle case, where two evaluations recover the generator. Zero cross entries imply a tree or a two-state chain, whose stationary entropy production is zero.
+
+Therefore, a corollary available from the current equations is:
+
+Two distinct positive matrix-valued Laplace evaluations determine stationary entropy production within the class of reciprocal generators with at most three states, although they need not determine the generator.
+
+This does not restore entropy continuity at tree boundaries. It is another exact-identification-versus-stability distinction, making it a particularly natural addition to this paper.
+
+I would include it as a compact proposition or remark after the three-state inverse theorem. I am not asserting that this observation is new to the literature; it is a sharpening of the result currently presented.
+
+5. Physical interpretation: preserve the assumptions in the headline claims
+
+The paper now distinguishes the mathematical generator entropy functional from total physical dissipation, which additionally requires an appropriate thermodynamic interpretation and sufficiently resolved channels. It also explicitly assumes one resolved microscopic reverse pair rather than arbitrary coarse fluorescence or state labels. These are necessary qualifications, not cosmetic caveats.
+
+The most important physical message is:
+
+An upper bound on kinetic rates is not an upper bound on thermodynamic driving.
+
+In the divergent constructions, rates can remain finite and uniformly bounded above while a reverse rate becomes extremely small. The associated logarithmic affinity can therefore become arbitrarily large.
+
+A reader who knows a uniform bound on microscopic reciprocal rate ratios, together with a bound on activity, is imposing additional information that removes this particular route to divergence. The established activity–ratio upper bounds make this relationship explicit.
+
+Similarly, the state-count assumption should remain prominent. Minimal realization order gives a lower bound on the physical complexity required by the observations; it does not establish that additional, observationally redundant physical states are absent.
+
+I would present the result as a theorem about what follows from specified observations and structural assumptions, not as an unrestricted statement that thermodynamic inference from partial observations is impossible.
+
+Final recommendation
+
+I would prioritize the revisions as follows:
+
+Priority	Revision	Reason
+Required	Make scientific-payload mismatches fail reproduction	Repairs a concrete verification defect
+Required	Restrict “full entropy image” language	Aligns the prose with the proved scope
+Required	Make global equality rigidity easier to audit	Strengthens the presentation of the most delicate theorem
+Required	Sharpen comparison with compatible-model and hidden-path literature	Makes the novelty defensible
+Strongly recommended	Explain source-dependent conditioning	Prevents overinterpretation of “stable”
+Valuable addition	Add the two-versus-three Laplace distinction	Separates generator and entropy identification even more cleanly
+
+My bottom line: the revised paper has a substantial theoretical contribution and no demonstrated fatal mathematical flaw from this review. Its strongest case for publication is the combination of a globally controlled exact example, a sharp local upper-bound criterion, and a finite-record impossibility consequence. The next revision should make those results easier to verify and harder to overstate—not expand the project indiscriminately.
+
+The numerical and symbolic results from this review are recorded in 
+the independent check summary. The exact two-Laplace ambiguity example is available as a 
+standalone SymPy script.

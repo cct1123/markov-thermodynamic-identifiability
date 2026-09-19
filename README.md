@@ -43,7 +43,7 @@ Use the project's isolated scientific Python environment. The tested baseline is
 python -B reproduce_all.py
 ```
 
-This runs the preserved exact certificates and independent checks, new global-envelope/two-point/mechanism checks and rare-rate/graph/unfolding calculations, conditioning grids, 900 seeded trajectories, 39 tests and all six manuscript figures. It records commands, versions, source hashes and outcomes in [reproduction.json](outputs/correctness-2026-09-15/reproduction.json). Historical accepted scientific outputs are protected. Numerical continuation, Monte Carlo and exact proof-support calculations have distinct status labels.
+This runs the preserved exact certificates and independent checks, new global-envelope/two-point/mechanism checks and rare-rate/graph/unfolding calculations, conditioning grids, 900 seeded trajectories, 41 tests and all six manuscript figures. It records commands, versions, source hashes and outcomes in [reproduction.json](outputs/correctness-2026-09-15/reproduction.json). Historical accepted scientific outputs are protected. Numerical continuation, Monte Carlo and exact proof-support calculations have distinct status labels.
 
 To also compile and validate the paper with an installed Tectonic and cached resources:
 

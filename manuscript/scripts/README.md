@@ -1,6 +1,6 @@
 # Full revised workflow
 
-The root command `python -B reproduce_all.py` includes the original workflow below plus global-envelope, two-point inverse, complete-support mechanism, graph, rare-rate and unfolding checks; conditioning, 900 seeded trajectories, six figures and 39 tests. Add `--build --tectonic /path/to/tectonic --offline` for the manuscript. See [build guide](../README.md), [revision notes](../../REVISION_NOTES.md) and [current run manifest](../../outputs/correctness-2026-09-15/reproduction.json). The historical descriptions below retain their original scope.
+The root command `python -B reproduce_all.py` includes the original workflow below plus global-envelope, two-point inverse, complete-support mechanism, graph, rare-rate and unfolding checks; conditioning, 900 seeded trajectories, six figures and 41 tests. Add `--build --tectonic /path/to/tectonic --offline` for the manuscript. See [build guide](../README.md), [revision notes](../../REVISION_NOTES.md), the [last full workflow](../../outputs/correctness-2026-09-15/reproduction.json), and the [latest bounded review verification](../../outputs/supplied-verification-2026-09-19/verification.json). The latter runs all 41 tests and the 15-script driver without repeating the unchanged 900-trajectory campaign. The historical descriptions below retain their original scope.
 
 # Computational reproduction
 
@@ -25,6 +25,13 @@ files are hash-checked before and after the run and remain unchanged. The packag
 also includes an exact cone-to-path reconstruction from the endpoint audit and
 an independently coded symbolic check of the three-state fixed-trace family.
 Both use SymPy, so agreement does not supply an independent arithmetic engine.
+
+Every replay must also agree with its historical scientific payload. Only the
+driver's explicit provenance fields are excluded; scientific values and diagnostics
+are compared exactly, with no blanket floating-point tolerance. Any mismatch
+raises `RuntimeError` with its script and changed paths before figures or a new
+success receipt are written. The regression tests exercise this failure through
+the real standalone driver and separately accept a provenance-only change.
 
 The endpoint checks use exact number-field arithmetic, rational root isolation,
 explicit signs in the selected real embedding, and rational logarithm-series

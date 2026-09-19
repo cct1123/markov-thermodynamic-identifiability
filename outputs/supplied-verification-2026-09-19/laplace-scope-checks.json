@@ -1,0 +1,138 @@
+{
+  "all_exact_checks_passed": true,
+  "executed_at_utc": "2026-09-19T04:26:01.035560+00:00",
+  "command": ".venv/Scripts/python.exe -B outputs/supplied-verification-2026-09-19/laplace_scope_checks.py",
+  "environment": {
+    "python": "3.9.12",
+    "sympy": "1.14.0"
+  },
+  "source_sha256": "961b70cb23fc88ebf30e179abeaf92125559f14d46300bb41a4aa95ea873e36f",
+  "method": "Exact first-step equations and independent stationary-flux solve; no project imports; shared SymPy engine with project checks.",
+  "randomness": "none",
+  "precision": "exact rational and symbolic arithmetic; no tolerance",
+  "generic_domain": "All six rates positive; lambda_2>lambda_1>0; distinctness imposed in rational identities.",
+  "generic_inverse_cross_entries": [
+    "-a*d/(b*r + d*r + lambda*r)",
+    "-b*c/(b*s + d*s + lambda*s)"
+  ],
+  "generic_recovered_h": "b + d",
+  "generic_recovered_u": [
+    "1/r",
+    "1/s"
+  ],
+  "generic_recovered_v": [
+    "a/r",
+    "c/s"
+  ],
+  "symbolic_zero_entropy_strata": [
+    "x_leaf",
+    "y_leaf",
+    "two_state"
+  ],
+  "outside_cap_zero_cross_positive_entropy": {
+    "Q": [
+      [
+        "-4",
+        "1",
+        "2",
+        "1"
+      ],
+      [
+        "1",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "-3",
+        "2"
+      ],
+      [
+        "2",
+        "0",
+        "1",
+        "-3"
+      ]
+    ],
+    "F": [
+      [
+        "(lambda**2 + 6*lambda + 7)/(lambda**3 + 10*lambda**2 + 27*lambda + 7)",
+        "0"
+      ],
+      [
+        "0",
+        "1/(lambda + 1)"
+      ]
+    ],
+    "pi": [
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "entropy": "3*log(2)/4"
+  },
+  "one_point_entropy_counterexample": {
+    "Q_A": [
+      [
+        "-2",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "-3",
+        "2"
+      ],
+      [
+        "1",
+        "1",
+        "-2"
+      ]
+    ],
+    "Q_B": [
+      [
+        "-14/11",
+        "9/11",
+        "5/11"
+      ],
+      [
+        "1",
+        "-13/3",
+        "10/3"
+      ],
+      [
+        "1",
+        "3",
+        "-4"
+      ]
+    ],
+    "common_F_at_1": [
+      [
+        "5/13",
+        "1/26"
+      ],
+      [
+        "1/13",
+        "4/13"
+      ]
+    ],
+    "pi_A": [
+      "1/3",
+      "1/4",
+      "5/12"
+    ],
+    "pi_B": [
+      "11/25",
+      "153/550",
+      "31/110"
+    ],
+    "sigma_A": "log(2)/12",
+    "sigma_B": "9*log(2)/110",
+    "gap": "log(2)/660",
+    "F_at_2_differs": true
+  },
+  "limitations": "Not formal verification, not a novelty check, and not a complete audit of other supplied JSON fields. Outside-cap example refutes extension of the zero-pattern support classification; no claim that it matches a three-state law."
+}

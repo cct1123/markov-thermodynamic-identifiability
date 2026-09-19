@@ -1,0 +1,126 @@
+{
+  "started_at_utc": "2026-09-19T04:25:01.247555+00:00",
+  "command": ".venv/Scripts/python.exe -B analysis/correctness/verify_second_review.py",
+  "python": "3.9.12",
+  "script_sha256": "a772894fbddf66b6eb347787219f8173075e5802ffe90a16c3ffd0eb23cdfef3",
+  "protected_before": {
+    "PROJECT.md": "5a230d0844b9149c2716114c1e40fb4cde92dc6b0c67105d59916fcea82b3964",
+    "AGENTS.md": "b3b3b769274a8ccb78641d36e6f91508191cc902162b48f870e73f9fdec74c5d",
+    "analysis/balanced-boundary-probe.json": "6606053f9ca0f01d8abe3b355df9f5276a595123f5865ba325a2dd3f78166b35",
+    "analysis/balanced-cone-bound-checks.json": "52bba21fdf8dfb301948a0c14341019564a1a4577c41b5a77fcc89f7878c028d",
+    "analysis/balanced-cone-sufficiency-checks.json": "d6553877a337062fced350922eacbfaa31dcdacfa7360ae85c01a8edf1ed3fe9",
+    "analysis/balanced-path-polynomial.json": "975783f31653c189e9aeb45926cb2777841d28c6b61e16a210fe3658f60d2473",
+    "analysis/five-state-extension-checks.json": "1c1e70b6e7449bd4d98eb1b9e49ae40ab5b47bdf2cb52faeec313b3f61f0f534",
+    "analysis/four-state-classification-checks.json": "6f7b1a3ba9d9cbfada2d4fbd91c2b5d0c5f0886c4bf6c92779349405016de74b",
+    "analysis/observable-criterion-checks.json": "c07ab47ce215664b681c2de2ebf57b534ff934284b6dad0b934e2b83ce7842a5",
+    "analysis/small-network-checks.json": "4ef422eb6703f043f52210363d0ac77b90b209b1345ffa2e2ba8bc4604af31b3",
+    "analysis/state-splitting-checks.json": "b1ec22a909cebd4b3ce536162eb992d8a6363b5819f905a425d54d777eb29692",
+    "analysis/theta-compatibility-probe.json": "4dc9e6ef67c5734f1ebde45971c241110f7d361e862c04c446f173e708cbfd95",
+    "analysis/theta-fast-probe.json": "c3cebcc5f9f659702a5d338a32843e1ff941cfdeafccbf93f62b20e044f28085",
+    "outputs/balanced-boundary-witness.json": "c917b0bf18ea1bee01b04b1e24b8d130ca76c653bbde3512591213d9b66548e9",
+    "outputs/balanced-cone-sufficiency-independent-replay.json": "993910939606c90c0a0e787c80daf1a7f13b53c2c895dcd5bca62b5d1a42f6b8",
+    "outputs/balanced-fold-checks.json": "a854889cd532ea094c8f8eeac88cd736223e5725d0611ec43649380cd90e9be8",
+    "outputs/balanced-fold-independent-replay.json": "a975f308cb0a294eb7e06846af2ee5c7232c6d81a996eaafa3c1e08d7ff0f0dd",
+    "outputs/check_theta_fast_spectral.json": "1272bad18cee1b07f53c12542f50e333311a43436fc10351ae4194f4d8dbc19c",
+    "outputs/finite-precision-checks.json": "804e1968c8dd9ae629332a88724652ef945705eb10a40f363f9ee82d4e9a8c15",
+    "outputs/manuscript-math-independent-checks.json": "3e4509ac9c325e30dc1d434e9f6c4e86ac01aefff6f4a856a52fc7620eeecfb9",
+    "outputs/publication-audit-checks.json": "8813ff3a612386e516513ed870b5b689447f1447f6c68eef7c18932579843967",
+    "outputs/publication-independent-replays.json": "d5f7bcde232cb906b0a73f0845db17e0d5aa0797766f6c7c14dd4cfd71750a48",
+    "outputs/theta-residue-checks.json": "f78a4fd3d319e7aaf221cfb2cb66e8967ec12da4f2f3e164a9b56b0316cb966f",
+    "outputs/three-state-precision-checks.json": "0bcb55b7a5f1111c1c293349c6e343e5652e88a2984113cad524d8bb369076ac",
+    "evidence/supplied/2026-09-18/independent_checks.json": "ee63f11fb2f5103a8d367c1c7e7437b7fdd518e6ee7af84c87f867092f3ef97e",
+    "evidence/supplied/2026-09-18/manifest.json": "401158669b1880f0642cca72c96e87d0a340fede96b8693f408089ad24754604",
+    "evidence/supplied/2026-09-18/README.md": "c2eebed91c7408abc739387bc97c028a0f1af5ba26efdaec45fe0a7dcdde9721",
+    "evidence/supplied/2026-09-18/two_laplace_counterexample.py": "abfcf6c6a9b6bf80e7c34b78189b31d005b45bc383f27a2aa9a933b10ac260ed",
+    "evidence/supplied/2026-09-19/second-academic-review.txt": "5d59949181a0942c9226631a1814119cdbdd5a81e30c27fa1e79d9883e726fe5"
+  },
+  "jobs": [
+    {
+      "label": "supplied standalone script",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "evidence/supplied/2026-09-18/two_laplace_counterexample.py"
+      ],
+      "seconds": 0.4328223,
+      "returncode": 0,
+      "stdout": "lambda=1: common F=Matrix([[2/5, 0], [0, 1/2]])\nlambda=2: common F=Matrix([[3/11, 0], [0, 1/3]])\nlambda=3: F_A=Matrix([[4/19, 0], [0, 1/4]]); F_B=Matrix([[10/47, 0], [0, 1/4]])\nGeneral two-point leaf construction: both identities verified.\nPositivity persists locally at a source with u>0, v>0, h>0.\nNot a counterexample with separately fixed observed rates.\n",
+      "stderr": ""
+    },
+    {
+      "label": "41 regression and scientific tests",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "analysis.capabilities.test_tools",
+        "analysis.revision.test_inference",
+        "analysis.revision.test_continuation",
+        "analysis.correctness.test_laplace_two",
+        "analysis.correctness.test_laplace_entropy",
+        "analysis.correctness.test_validation",
+        "analysis.correctness.test_entrypoints",
+        "-v"
+      ],
+      "seconds": 9.1557093,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_absent_edges_and_one_way_edges (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_conversion_cannot_silently_erase_support (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_exact_inputs_and_precision_context (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_ill_conditioning_has_an_exact_fallback (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_reducibility_is_not_positive_stationarity (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_time_units_and_flux_entropy (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_validation_does_not_hide_small_rates_or_bad_rows (analysis.capabilities.test_tools.CTMCTests) ... ok\ntest_atlas_against_independent_labelled_enumeration (analysis.capabilities.test_tools.GraphTests) ... ok\ntest_observation_orbits_preserve_non_equivalent_patterns (analysis.capabilities.test_tools.GraphTests) ... ok\ntest_absolute_inverse_regular_at_tree_relative_inverse_degrades (analysis.revision.test_inference.InferenceTests) ... ok\ntest_entropy_cycle_against_stationary_edge_sum (analysis.revision.test_inference.InferenceTests) ... ok\ntest_entropy_gradient_complex_step (analysis.revision.test_inference.InferenceTests) ... ok\ntest_full_six_rate_jacobian_complex_step (analysis.revision.test_inference.InferenceTests) ... ok\ntest_noiseless_recovery_all_six_unknown_rates (analysis.revision.test_inference.InferenceTests) ... ok\ntest_resolvent_against_time_domain_quadrature (analysis.revision.test_inference.InferenceTests) ... ok\ntest_stationary_marked_trajectory_against_exact_joint_moments (analysis.revision.test_inference.InferenceTests) ... ok\ntest_critical_triangle_matches_preserved_exact_path_witness (analysis.revision.test_continuation.ContinuationTests) ... ok\ntest_exact_interval_arithmetic_and_denominator_domain (analysis.revision.test_continuation.ContinuationTests) ... ok\ntest_generic_envelope_identity_independent_of_theta_constants (analysis.revision.test_continuation.ContinuationTests) ... ok\ntest_offbalanced_root_slope_and_rate_data_agreement (analysis.revision.test_continuation.ContinuationTests) ... ok\ntest_uniform_interval_certificate_has_strict_margins (analysis.revision.test_continuation.ContinuationTests) ... ok\ntest_full_two_point_matrices_match_literal_rationals (analysis.correctness.test_laplace_two.TwoPointTests) ... ok\ntest_leaf_domain_and_calibrated_or_third_point_recovery (analysis.correctness.test_laplace_two.TwoPointTests) ... ok\ntest_one_point_does_not_identify_complete_triangles (analysis.correctness.test_laplace_two.TwoPointTests) ... ok\ntest_stationary_absolute_intensity_but_not_mark_fraction_distinguishes (analysis.correctness.test_laplace_two.TwoPointTests) ... ok\ntest_third_point_and_zero_time_rate_distinguish (analysis.correctness.test_laplace_two.TwoPointTests) ... ok\ntest_two_reconstructs_positive_triangles_at_noninteger_points (analysis.correctness.test_laplace_two.TwoPointTests) ... ok\ntest_user_order_and_generator_diagonal_retention (analysis.correctness.test_laplace_two.TwoPointTests) ... ok\ntest_symbolic_leaf_strata_have_zero_entropy (analysis.correctness.test_laplace_entropy.TwoPointEntropyTests) ... ok\ntest_symbolic_two_state_stratum_has_zero_entropy (analysis.correctness.test_laplace_entropy.TwoPointEntropyTests) ... ok\ntest_two_points_restore_triangle_generator_and_flux_entropy (analysis.correctness.test_laplace_entropy.TwoPointEntropyTests) ... ok\ntest_missing_and_added_fields_are_not_ignored (analysis.correctness.test_validation.ReplayComparisonTests) ... ok\ntest_only_execution_time_is_ignored (analysis.correctness.test_validation.ReplayComparisonTests) ... ok\ntest_provenance_only_change_can_succeed (analysis.correctness.test_validation.ReproductionDriverTests) ... ok\ntest_scientific_value_change_exits_unsuccessfully (analysis.correctness.test_validation.ReproductionDriverTests) ... ok\ntest_changed_inputs_are_rejected (analysis.correctness.test_validation.ScientificManifestTests) ... ok\ntest_inconsistent_duplicate_hash_is_rejected (analysis.correctness.test_validation.ScientificManifestTests) ... ok\ntest_matching_inputs_pass (analysis.correctness.test_validation.ScientificManifestTests) ... ok\ntest_unsuccessful_receipt_is_rejected (analysis.correctness.test_validation.ScientificManifestTests) ... ok\ntest_python_optimization_flag_rejected_before_output_writes (analysis.correctness.test_entrypoints.EntrypointTests) ... ok\ntest_pythonoptimize_environment_rejected_before_output_writes (analysis.correctness.test_entrypoints.EntrypointTests) ... ok\n\n----------------------------------------------------------------------\nRan 41 tests in 5.806s\n\nOK\n"
+    },
+    {
+      "label": "standalone driver and 15 historical scientific payload comparisons",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "manuscript/scripts/reproduce.py"
+      ],
+      "seconds": 37.653647799999995,
+      "returncode": 0,
+      "stdout": "Replaying check_small_networks.py\nReplaying check_four_state_classification.py\nReplaying check_observable_criterion.py\nReplaying check_state_splitting.py\nReplaying check_five_state_extensions.py\nReplaying check_theta_residue_construction.py\nReplaying check_theta_fast_spectral.py\nReplaying check_balanced_boundary_witness.py\nReplaying derive_balanced_path.py\nReplaying check_balanced_cone_bound.py\nReplaying check_balanced_cone_sufficiency.py\nReplaying check_balanced_fold.py\nReplaying check_finite_precision_instability.py\nReplaying check_three_state_precision.py\nReplaying check_publication_audit.py\nChecking the independent cone-to-path reconstruction\n{\n  \"all_checks_passed\": true,\n  \"replayed_scripts\": 15,\n  \"historical_outputs_unchanged\": true,\n  \"changed_payloads\": [],\n  \"output\": \"C:\\\\projects\\\\markov-thermodynamic-identifiability\\\\manuscript\\\\supplementary\\\\computational-results.json\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "manuscript compilation",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "manuscript/scripts/build.py",
+        "--tectonic",
+        "tmp/tectonic/tectonic.exe",
+        "--offline"
+      ],
+      "seconds": 3.3569128999999975,
+      "returncode": 0,
+      "stdout": "Compiled manuscript/main.pdf; build provenance: manuscript\\supplementary\\build-report.json\n",
+      "stderr": ""
+    },
+    {
+      "label": "source and receipt validation",
+      "command": [
+        "C:\\projects\\markov-thermodynamic-identifiability\\.venv\\Scripts\\python.exe",
+        "-B",
+        "manuscript/scripts/validate.py"
+      ],
+      "seconds": 0.16578610000000538,
+      "returncode": 0,
+      "stdout": "{\n  \"executed_at_utc\": \"2026-09-19T04:25:52.008849+00:00\",\n  \"latex_labels\": 134,\n  \"latex_references\": 117,\n  \"verified_bibliography_entries_all_cited\": 31,\n  \"local_document_links_checked\": 71,\n  \"outer_archive_links_recognized_in_extraction\": [],\n  \"scientific_input_hashes_checked\": 39,\n  \"build_hashes_match\": true,\n  \"all_checks_passed\": true,\n  \"scope\": \"Source/package validation, not an independent proof or web-source verification.\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "all_checks_passed": true,
+  "scope": "Second-review regression, exact replay, manuscript build and source validation. No new Monte Carlo campaign, formal proof, or priority certification.",
+  "protected_unchanged": true,
+  "completed_at_utc": "2026-09-19T04:25:52.018392+00:00",
+  "verified_file_sha256": {
+    "manuscript/scripts/reproduce.py": "9471b99d423a44828f49055590260e33db2fcffae57cb928934236ef3c402dcd",
+    "analysis/correctness/test_validation.py": "05bf494a9ff51e757c065f427d764b1a2759d27df19ad461d216fdbdece9911b",
+    "manuscript/supplementary/conditioning.tex": "c060918e1e9e0349326d96a1514936dcd778a581e24c5b682ea9a674eecc3243",
+    "manuscript/supplementary/proofs.tex": "a16e6955265d321fcff460c9fe62085b833fc5b9d1c22c36559177a6351fb789",
+    "manuscript/supplementary/literature-comparison.tex": "04f67ceb878ba4b1302861be68cb33b2e5f8d2ce132698021655c67a94c22ecb",
+    "manuscript/main.pdf": "7c522568918e804d854fe62050579b2999d7d3880d4657b70a584bde23250c1c",
+    "manuscript/supplementary/computational-results.json": "243c7e808317f901a56280e4f3f06e07fd89e69edb0713b607f4ef0ad602caf1",
+    "manuscript/supplementary/build-report.json": "7be43ab8c750d2e9b34b3baef43f1b538be3d5282bcecfce2b788f3b2edd49dd",
+    "manuscript/supplementary/package-validation.json": "bb16a3ba86a2e948c6c515b9b692c354b0bb58b977210c2550a869b3e0fc3a6e"
+  }
+}

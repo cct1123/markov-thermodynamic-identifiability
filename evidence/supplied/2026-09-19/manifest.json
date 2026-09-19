@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-09-19T04:28:08.809680+00:00",
+  "files": [
+    {
+      "source_path": "C:\\Users\\ctcheung\\Downloads\\independent_checks (1).json",
+      "preserved_path": "evidence/supplied/2026-09-18/independent_checks.json",
+      "sha256": "ee63f11fb2f5103a8d367c1c7e7437b7fdd518e6ee7af84c87f867092f3ef97e",
+      "byte_identical": true
+    },
+    {
+      "source_path": "C:\\Users\\ctcheung\\Downloads\\two_laplace_counterexample (1).py",
+      "preserved_path": "evidence/supplied/2026-09-18/two_laplace_counterexample.py",
+      "sha256": "abfcf6c6a9b6bf80e7c34b78189b31d005b45bc383f27a2aa9a933b10ac260ed",
+      "byte_identical": true
+    },
+    {
+      "source_path": "C:\\Users\\ctcheung\\.codex\\attachments\\6c3cc16d-bf72-4e09-8a0e-264cc6fcba46\\Pasted text.txt",
+      "preserved_path": "evidence/supplied/2026-09-19/second-academic-review.txt",
+      "sha256": "5d59949181a0942c9226631a1814119cdbdd5a81e30c27fa1e79d9883e726fe5",
+      "byte_identical": true
+    }
+  ],
+  "scope": "Supplied review and calculations are evidence to assess; only the current user request authorizes work."
+}

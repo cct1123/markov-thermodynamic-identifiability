@@ -1,0 +1,13 @@
+{
+  "baseline_commit": "a171f32",
+  "method": "The same isolated main/replay regression fixture was run with git show a171f32:manuscript/scripts/reproduce.py substituted for the current source. Only later independent math/figure jobs are stubbed.",
+  "historical_entropy": 8,
+  "replayed_entropy": 7,
+  "baseline_exit_code": 0,
+  "baseline_all_checks_passed": true,
+  "baseline_changed_scientific_paths": [
+    "/entropy"
+  ],
+  "finding": "Reproduced the standalone false-success defect in the current starting commit. The corrected-driver fixture rejects this case; verification.json records the passing regression.",
+  "stdout": "Replaying check_balanced_fold.py\nChecking the independent cone-to-path reconstruction\n{\n  \"all_checks_passed\": true,\n  \"replayed_scripts\": 1,\n  \"historical_outputs_unchanged\": true,\n  \"changed_payloads\": [\n    \"analysis/check_balanced_fold.py\"\n  ],\n  \"output\": \"C:\\\\Users\\\\ctcheung\\\\AppData\\\\Local\\\\Temp\\\\tmp8tm2kb4p\\\\manuscript\\\\supplementary\\\\computational-results.json\"\n}\n"
+}

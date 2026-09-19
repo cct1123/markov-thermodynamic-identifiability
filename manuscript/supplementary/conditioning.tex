@@ -47,6 +47,20 @@ to zero or infinity similarly lose informative variation. Hence ``any three
 distinct positive points'' guarantees exact recoverability, with no uniform
 conditioning guarantee over designs or sources.
 
+The scalar inverse already shows this source dependence. Differentiating
+Eq.~\eqref{eq:recoverh}, and taking differences in Eq.~\eqref{eq:Grow}, gives
+\begin{equation}
+ \frac{\partial h}{\partial\mathcal R}
+ =-\frac{(\lambda_1+h)^2}{\lambda_3-\lambda_1},\qquad
+ G(\lambda_i)-G(\lambda_j)
+ =\frac{v(\lambda_j-\lambda_i)}{(\lambda_i+h)(\lambda_j+h)}.
+ \label{eq:scalar-conditioning}
+\end{equation}
+Fast hidden escape relative to the sampled Laplace scales amplifies errors
+in $\mathcal R$. A small entrance amplitude $v$ or large $h$ also suppresses
+the differences used to form that ratio. Thus a finite local inverse
+constant need not give useful precision at an experimental noise level.
+
 \begin{figure}[t]
  \centering
  \includegraphics[width=\textwidth]{figures/conditioning.pdf}

@@ -1,0 +1,25 @@
+{
+  "final_archive": {
+    "archive": "C:\\projects\\markov-thermodynamic-identifiability\\outputs\\manuscript-package.zip",
+    "file_count_including_manifest": 327,
+    "archive_bytes": 4315805,
+    "sha256": "c135b34dfd8a15ad0e844a00953a899ebe11e8203f5a00257a753cf052c831ab",
+    "integrity_verified": true
+  },
+  "preceding_archive_verification": "archive-verification-before-git-review.json",
+  "prepush_review": {
+    "source_review": "No actionable findings; eight validation regressions pass.",
+    "scientific_and_pdf_hashes": "All nine final file hashes and 29 protected input hashes match the completed verification.",
+    "documentation_change": "Four Markdown files normalized to the repository LF checkout policy.",
+    "archive_inventory": 326
+  },
+  "scope": "Current archive rebuilt after Git review and documentation line-ending normalization. The archive contains the preceding dated archive receipt; this final packaging receipt is external to the archive to avoid a self-referential checksum. Scientific and PDF bytes are unchanged; the staged checkout also passes source/receipt validation and eight targeted regression tests with 50 hashes preserved.",
+  "staged_checkout_validation": {
+    "checked_at_utc": "2026-09-19T04:46:13.872227+00:00",
+    "checkout_command": "git checkout-index --all --prefix=tmp/second-review/git-checkout/",
+    "verified_hashes": 50,
+    "source_and_receipt_validation_passed": true,
+    "targeted_regression_tests_passed": 8,
+    "environment": "Existing installed .venv; no new platform provisioned."
+  }
+}

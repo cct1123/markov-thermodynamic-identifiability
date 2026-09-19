@@ -412,13 +412,39 @@ At $z=\zs$, exact interval evaluation gives
 The numerator is nonpositive and vanishes only at
 $t_*=-f_1/(2f_2)>0$. Start with any feasible triangle and follow the
 three upper-bound relaxations above. Its original upper input height is
-at least $B_0$; its final saturated height is at most $B_0$. Therefore
-every relaxation is equality. Strict increase under $W$ saturation
+at least $B_0$; its final saturated height is at most $B_0$. Writing
+$H_*^{\rm sat}$ for Eq.~\eqref{eq:envelope} after $W=R_w(1-d)$, the chain is
+\begin{equation}
+ B_0\le H_c\le H_*\le H_*^{\rm sat}\le B_0.
+ \label{eq:equality-chain}
+\end{equation}
+Thus every relaxation is equality. Strict increase under $W$ saturation
 first forces the original $W=R_w(1-d)$. The final numerator forces
 $t=t_*$. Equation~\eqref{eq:quadratic} now fixes $\epsilon$ and hence
 $d,W$ uniquely. Equality in the left and right relaxations fixes
 $(\ell,P)=(m+t_*,Lt_*)$ and $(c,Q_v)=(c_*,Q_*^v)$.
 This explicitly rules out equality lost in any intermediate relaxation.
+
+\begin{table}[htbp]
+\caption{Endpoint equality conditions. Every row is necessary for a physical
+triangle at $z=\zs$; existence is checked separately in
+Appendix~\ref{app:certificate}.}\label{tab:equality-rigidity}
+\begin{ruledtabular}
+\begin{tabular}{p{0.24\textwidth}p{0.68\textwidth}}
+Equality step & Reason and forced parameters\\
+$H_*=H_*^{\rm sat}$ & Strict increase with $W$ at fixed $d$ forces
+$W=R_w(1-d)$.\\
+$H_*^{\rm sat}=B_0$ & The quadratic has its sole zero at
+$t_*=-f_1/(2f_2)$; Eq.~\eqref{eq:quadratic} fixes $d$ and $W$.\\
+$H_c=H_*$ & Strict left-coordinate increase forces
+$(\ell,P)=(m+t_*,Lt_*)$; the unique right maximum forces
+$(c,Q_v)=(c_*,Q_*^v)$.\\
+$B_0=H_c$ & The upper input lies on the triangle's upper edge.\\
+Physical normalization & Eq.~\eqref{eq:normalize} uniquely fixes the
+column scaling; hidden permutation remains.\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
 
 The left and bottom vertices lie on the left and right output faces.
 Input $(1,A)$ lies on the opposite lower-right edge, and input

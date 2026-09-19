@@ -1,5 +1,6 @@
 # Publication-facing status — 15 September 2026
 
+**19 September update:** [Second academic review response](supplied-verification-2026-09-19/RESPONSE.md) and [bounded verification](supplied-verification-2026-09-19/verification.json) supersede current-version references below: the driver now fails on scientific mismatches, all 41 tests pass, and the current 56-page PDF is visually checked. The older full-run and extraction statements remain dated historical evidence.
 The manuscript is a revised scientific draft for expert human review. The requested global proof repair and targeted additions are implemented; there is no claim of formal verification, literature-wide priority or human scientific approval.
 
 The [revision report](../REVISION_NOTES.md) is the current claim/proof/test map. It supersedes the previous self-assessment, which is [preserved](correctness-2026-09-15/baseline/outputs/PUBLICATION-READINESS.md). The six original main statements remain verbatim. Appendices A/B are intentionally expanded; C–G retain their prior text with an added explicit mechanism example. All 22 accepted historical scientific JSON files remain unchanged.

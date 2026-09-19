@@ -111,6 +111,18 @@ def replay(name):
     }
 
 
+def require_matching_replays(replays):
+    """Fail before emitting a successful receipt for changed scientific data."""
+    mismatches = {
+        item["script"]: item["changed_scientific_paths"]
+        for item in replays
+        if (not item["historical_scientific_payload_identical"]
+            or item["changed_scientific_paths"])
+    }
+    if mismatches:
+        raise RuntimeError("Scientific replay mismatch:\n" + json.dumps(mismatches, indent=2))
+
+
 def embedded_cone_check():
     path = ROOT / "analysis/publication-endpoint-audit.md"
     blocks = re.findall(r"```python\s*\n(.*?)\n```", path.read_text(encoding="utf-8"), re.S)
@@ -338,6 +350,7 @@ def main():
     for name in REPLAYS:
         print("Replaying " + name, flush=True)
         replays.append(replay(name))
+    require_matching_replays(replays)
     print("Checking the independent cone-to-path reconstruction", flush=True)
     cone = embedded_cone_check()
     three = independent_three_state()
